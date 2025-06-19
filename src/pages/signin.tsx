@@ -1,12 +1,14 @@
-import * as React from "react";
-import { graphql, navigate, useStaticQuery } from "gatsby";
-import { useState } from "react";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
-// import { login } from "../utils/auth"
+import { navigate } from "gatsby";
+import React, { useState } from "react";
+
 const signin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const handleLogin = (e) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openModal = () => setIsOpen(true);
+  const closeModal = () => setIsOpen(false);
+   const handleLogin = (e) => {
     if (email === "admin" && password === "123@gmail.com") {
      localStorage.setItem("isLoggedIn", "true");
       navigate("/userguidance");
@@ -14,63 +16,79 @@ const signin = () => {
       alert("Invalid credentials");
     }
   };
-  
-  const data = useStaticQuery(graphql`
-    query {
-      bgImage: file(relativePath: { eq: "bg.jpg" }) {
-        childImageSharp {
-          gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
-        }
-      }
-    }
-  `);
-  const image = getImage(data.bgImage);
+
   return (
-    <div className="min-h-screen">
-      <div className="relative min-h-screen">
-        <GatsbyImage
-          image={image!}
-          alt="Background"
-          className="absolute inset-0 w-full h-full z-0"
-          style={{ objectFit: "cover" }}
-        />
-    <div className="flex min-h-screen bg-cover bg-center relative z-10">
-      <div className="bg-green-800  p-8 rounded-lg shadow-md w-full max-w-sm space-y-8 text-white">
-        <h2 className="text-4xl font-semibold text-left mb-6">Login</h2>
-      
-          <div>
-            <label className="block text-[24px] font-medium mb-1 ">Email address</label>
-            <input
-              type="email"
-              placeholder="hello@gmail.com"
-              value={email}
-              onChange={e => setEmail(e.target.value)}
-              required
-              className="w-full text-black font-semibold px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-green-500"
-            />
+    <>
+      {/* Button to open the modal */}
+      <button
+        onClick={openModal}
+        className="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition"
+      >
+        Open Modal
+      </button>
+
+      {/* Modal backdrop */}
+      {isOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+          {/* Modal content */}
+          <div className="bg-white rounded-lg p-6 w-full max-w-md shadow-lg relative">
+            <button
+              onClick={closeModal}
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-xl"
+            >
+              &times;
+            </button>
+            <h2 className="text-2xl font-semibold mb-4 text-gray-800">
+              Authentication
+            </h2>
+
+            <div className="space-y-4">
+              <div>
+                <label
+              
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  Email address
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500"
+                  placeholder="you@example.com"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+              </div>
+
+              <div>
+                <label
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  Password
+                </label>
+                <input
+                  type="password"
+                  id="password"
+                  className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500"
+                  placeholder="Enter your password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="w-full bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600 transition"
+              onClick={handleLogin}>
+                Submit
+              </button>
+            </div>
           </div>
-          <div>
-            <label className="block text-[24px] font-medium mb-1 ">Password</label>
-            <input
-              type="password"
-              placeholder="Your password"
-              value={password}
-              onChange={e => setPassword(e.target.value)}
-              required
-              className="w-full text-black font-semibold px-4 py-2 space-y-10 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-green-500"
-            />
-          </div>
-          <button
-            type="submit"
-            onClick={handleLogin}
-            className="w-full text-[20px] bg-[#be8b45] text-white py-2 rounded-md  transition duration-200"
-          >
-            Login
-          </button>
-      </div>
-    </div>
-    </div>
-    </div>
+        </div>
+      )}
+    </>
   );
 };
 
