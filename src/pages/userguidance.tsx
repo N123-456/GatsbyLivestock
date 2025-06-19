@@ -1,14 +1,48 @@
-import React from 'react'
-import PrivateRoute from '../components/Routes/PublicRoute'
+import React, { useEffect, useState } from "react";
+import SideNavBar from "../components/NavBar/SideNavBar";
+import Signin from "./signin";
 
-const userguidance = () => {
+const UserGuidance = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [isCheckingAuth, setIsCheckingAuth] = useState(true); // 👈 NEW
+
+  useEffect(() => {
+    const checkLogin = localStorage.getItem("isLoggedIn");
+    if (checkLogin === "true") {
+      setIsLoggedIn(true);
+    } else {
+      setShowModal(true);
+    }
+    setIsCheckingAuth(false); // ✅ done checking
+  }, []);
+
+  const handleModalClose = () => {
+    const checkLogin = localStorage.getItem("isLoggedIn");
+    if (checkLogin === "true") {
+      setIsLoggedIn(true);
+    }
+    setShowModal(false);
+  };
+
+  // 🚫 Don't render anything until auth check is done
+  if (isCheckingAuth) return null;
+
   return (
-    <PrivateRoute>
-    <div>
-      <h1>Welcome to User Guidance Page</h1>
-    </div>
-    </PrivateRoute>
-  )
-}
+    <>
+      {isLoggedIn ? (
+        <div className="flex flex-row min-h-screen">
+          <SideNavBar />
+          <main className="flex-1 p-6 bg-white overflow-y-auto">
+            <h1 className="text-2xl font-bold">User Guidance</h1>
+            <p className="mt-4 text-gray-700">This is protected content.</p>
+          </main>
+        </div>
+      ) : (
+        <Signin isOpen={showModal} onClose={handleModalClose} />
+      )}
+    </>
+  );
+};
 
-export default userguidance
+export default UserGuidance;

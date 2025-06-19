@@ -1,9 +1,9 @@
 import { graphql, Link, navigate, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import React from "react";
-import { IconLogin } from "@tabler/icons-react";
+import { IconLogin, IconLogout } from "@tabler/icons-react";
 
-const Header = () => {
+const Header = ({ onLoginClick }) => {
   const data = useStaticQuery(graphql`
     query {
       logo: file(relativePath: { eq: "livestock.jpg" }) {
@@ -32,7 +32,7 @@ const Header = () => {
           <p className="text-xl font-normal">Manager</p>
         </div>
       </div>
-      <div className="flex items-center space-x-10">
+      {/* <div className="flex items-center space-x-10"> */}
         {/* Nav Links */}
         <nav className="flex space-x-10 text-2xl font-semibold">
           <Link
@@ -62,13 +62,21 @@ const Header = () => {
         </nav>
 
         {/* Logout Button */}
-
-        <button className=" text-2xl font-semibold hover:text-white transition-colors duration-200">
-          <Link to='/signin'>
+         <div className="flex items-center space-x-6">
+        <button className=" text-2xl font-semibold hover:text-white transition-colors duration-200" onClick={onLoginClick}>
+        
             <IconLogin size={40} />
-          </Link>
+        
         </button>
-      </div>
+        <button className=" text-2xl font-semibold hover:text-white transition-colors duration-200" onClick={() => {
+    localStorage.removeItem("isLoggedIn"); //
+    navigate("/");}}>
+        
+            <IconLogout size={40} />
+        
+        </button>
+        </div>
+      {/* </div> */}
     </header>
   );
 };
