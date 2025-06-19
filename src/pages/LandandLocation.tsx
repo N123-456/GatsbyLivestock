@@ -1,7 +1,9 @@
 import * as React from "react"
+import { AppLayout } from "../components/AppShell/AppLayout";
 
 const LandandLocation = () => {
   return (
+    <AppLayout>
    <div className="min-h-screen bg-white px-8 py-12 font-sans text-black">
   <div className="max-w-5xl mx-auto">
     <h1 className="text-4xl font-bold text-gray-800 mb-6 flex items-center gap-2">
@@ -53,6 +55,7 @@ const LandandLocation = () => {
       </p>
       </div>
     </div>
+    </AppLayout>
   );
 };
 

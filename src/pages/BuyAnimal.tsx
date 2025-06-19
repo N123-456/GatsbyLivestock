@@ -1,7 +1,9 @@
 import * as React from "react"
+import { AppLayout } from "../components/AppShell/AppLayout";
 
 const BuyAnimal = () => {
   return (
+    <AppLayout>
     <div className=" bg-gray px-8 py-12 font-sans text-black">
       <div className="max-w-5xl mx-auto">
         <h1 className="text-4xl font-bold text-green-800 mb-6 flex items-center gap-2">
@@ -36,7 +38,7 @@ const BuyAnimal = () => {
         Expecting, Lactating, Laying, or Non-Laying, providing valuable insight
         into the productivity and current lifecycle stage of each animal.</p>
         
-       <h1 className="text-4xl font-bold text-gray-800 mt-6 mb-6 flex items-center gap-2">
+       <h1 className="text-4xl font-bold text-green-800 mt-6 mb-6 flex items-center gap-2">
           <span>Seller Information</span>
         </h1>
         <p className="text-gray-700 text-lg leading-relaxed mb-6 font-sans">
@@ -51,6 +53,7 @@ const BuyAnimal = () => {
         and reliable sourcing channels for livestock acquisition.</p>
       </div>
     </div>
+    </AppLayout>
   );
 };
 
