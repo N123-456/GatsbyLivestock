@@ -22,7 +22,7 @@ const Header = ({ onLoginClick }) => {
   const logoImage = getImage(data.logo);
 
   return (
-    <header className="h-[100px] bg-green-400 text-black flex items-center justify-between px-6 shadow-md border-b">
+    <header className="h-[100px] bg-primary-400 text-dark flex items-center justify-between px-6 shadow-md border-b">
       {/* Logo + Title */}
       <div className="flex items-center gap-4">
         {/* Logo Image */}
@@ -37,46 +37,39 @@ const Header = ({ onLoginClick }) => {
         <nav className="flex space-x-10 text-2xl font-semibold">
           <Link
             to="/"
-            className="hover:text-green-700 hover:text-white transition-colors duration-200"
+            className="hover:text-primary-700 hover:text-text-light transition-colors duration-200"
           >
             Home
           </Link>
           <Link
             to="/about"
-            className="hover:text-green-700 hover:text-white transition-colors duration-200"
+            className="hover:text-primary-700 hover:text-text-light transition-colors duration-200"
           >
             About Us
           </Link>
           <Link
             to="/userguidance"
-            className="hover:text-green-700 hover:text-white transition-colors duration-200"
+            className="hover:text-primary-700 hover:text-text-light transition-colors duration-200"
           >
             User Guidance
           </Link>
           <Link
             to="/contact"
-            className="hover:text-green-700 hover:text-white transition-colors duration-200"
+            className="hover:text-primary-700 hover:text-text-light transition-colors duration-200"
           >
             Contact
           </Link>
         </nav>
 
-        {/* Logout Button */}
+        {/* Login Button */}
          <div className="flex items-center space-x-6">
-        <button className=" text-2xl font-semibold hover:text-white transition-colors duration-200" onClick={onLoginClick}>
+        <button className=" text-2xl font-semibold hover:text-text-light transition-colors duration-200" onClick={onLoginClick}>
         
             <IconLogin size={40} />
         
         </button>
-        <button className=" text-2xl font-semibold hover:text-white transition-colors duration-200" onClick={() => {
-    localStorage.removeItem("isLoggedIn"); //
-    navigate("/");}}>
-        
-            <IconLogout size={40} />
-        
-        </button>
         </div>
-      {/* </div> */}
+     
     </header>
   );
 };

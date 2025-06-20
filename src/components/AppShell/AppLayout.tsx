@@ -13,7 +13,7 @@ const [showModal, setShowModal] = useState(false);
       <Header onLoginClick={() => setShowModal(true)}/>
       <Signin isOpen={showModal} onClose={() => setShowModal(false)} />
  
-        <main className="flex-1 p-6 bg-white overflow-y-auto">
+        <main className="flex-1 p-6 bg-light overflow-y-auto">
           {children}
         </main>
       

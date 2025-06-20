@@ -9,17 +9,22 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          light: colors.green[300], // Tailwind's green-300
-          DEFAULT: colors.green[400], // green-400
-          dark: colors.green[500], // green-500
+          300: colors.green[300], // built-in shade
+          400: colors.green[400], // built-in shade
+          500: colors.green[500], // built-in shade
+          700: colors.green[700],
         },
         sidebar: {
-          bg: colors.gray[50], // gray-50
-          border: colors.slate[200], // slate-200
+          50: colors.gray[50], // gray-50
+          200: colors.slate[200], // slate-200
         },
         text: {
           dark: colors.black,
           light: colors.white,
+        },
+        textsize: {
+          xl: "1.25rem",
+          "2xl": "1.5rem",
         },
       },
     },
