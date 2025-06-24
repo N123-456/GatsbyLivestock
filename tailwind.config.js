@@ -7,8 +7,14 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        niramit: ["Niramit", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
+      },
       colors: {
         primary: {
+          activelink: "#0F783B",
+          navlink: "#212724",
           300: colors.green[300], // built-in shade
           400: colors.green[400], // built-in shade
           500: colors.green[500], // built-in shade

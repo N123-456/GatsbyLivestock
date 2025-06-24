@@ -10,64 +10,63 @@ import {
   IconTrash,
   IconHeartPause,
   IconWallet,
+  IconChevronUp,
+  IconChevronDown,
+  IconChevronRight,
 } from "@tabler/icons-react";
 import { Code, Group } from "@mantine/core";
 
 import { Link } from "gatsby";
+import { useState } from "react";
 
-const SideNavBar = () => {
+
+const SideNavBar = ({ label, links, initiallyOpened = false,setActiveLabel, activeLabel }) => {
+
+ const [opened, setOpened] = React.useState(initiallyOpened);
+  const hasLinks = Array.isArray(links) && links.length > 0;
+const isActive = activeLabel === label;
+  const handleClick = () => {
+    if (hasLinks) {
+      setOpened((o) => !o);
+    } else {
+      setActiveLabel(label);
+    }
+  };
   return (
-    <div className="w-[300px] bg-sidebar-50 border-r border-sidebar-200 p-6">
-      <aside className="text-black">
-        {/* <h2 className="text-2xl font-bold mb-4 text-green-700">LFMS</h2> */}
-        <ul className="space-y-2 text-xl">
-          <li>
-            <Link
-              to="/"
-              className="flex gap-1 px-4 py-2 rounded-md hover:bg-primary-400 hover:text-text-light font-medium transition"
-            >
-              <IconHome size={25} className="text-[#be8b45]" />
-              Dashboard
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/BuyAnimal"
-              className="flex px-4 py-2 gap-1 rounded-md hover:bg-primary-400 hover:text-text-light font-medium transition"
-            >
-              <IconShoppingCart size={25} className="text-[#be8b45]" />
-              Animals
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/feeding"
-              className="flex gap-1 px-4 py-2 rounded-md hover:bg-primary-400 hover:text-text-light font-medium transition"
-            >
-              <IconBowl size={25} className="text-[#be8b45]" />
-              Feeding
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/vaccination"
-              className="flex gap-1 px-4 py-2 rounded-md hover:bg-primary-400 hover:text-text-light font-medium transition"
-            >
-              <IconRings size={25} className="text-[#be8b45]" />
-              Vaccination
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/reports"
-              className="flex gap-1 px-4 py-2 rounded-md hover:bg-green-400 hover:text-text-light font-medium transition"
-            >
-              <IconHeartPause size={25} className="text-[#be8b45]" />
-              Health Checkup
-            </Link>
-          </li>
+    <div>
+     <button
+      onClick={handleClick}
+        className={`flex items-center justify-between w-full px-4 py-2 text-left   ${isActive ? "text-primary-activelink border-l border-h-[2px] border-primary-activelink font-montserrat font-bold " : "text-primary-navlink font-montserrat font-bold hover:bg-gray-200"}`} 
+       
+      >
+        <div className="flex items-center gap-2">
+          
+          <span className="font-montserrat text-primary-navlink font-medium text[12px] border-b w-[220px] border-bg-[#DBDBDB]">{label}</span>
+        </div>
+        {hasLinks && (
+          opened ? (
+            <IconChevronDown className="w-4 h-4 text-gray-600" />
+          ) : (
+           <IconChevronRight className="w-4 h-4 text-gray-600" />
+          )
+        )}
+      </button>
+
+      {hasLinks && opened && (
+        <ul className="pl-8 mt-1 space-y-1 list-disc list-inside">
+          {links.map((link) => (
+            <li key={link.label} className="text-sm font-medium font-montserrat text-primary-navlink">
+              <Link
+                to={link.link || "#"}
+                className="hover:text-green-900 "
+                onClick={() => setActiveLabel(link.label)}
+              >
+                {link.label}
+              </Link>
+            </li>
+          ))}
         </ul>
-      </aside>
+      )}
     </div>
   );
 };
