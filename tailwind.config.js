@@ -13,8 +13,12 @@ module.exports = {
       },
       colors: {
         primary: {
-          activelink: "#0F783B",
-          navlink: "#212724",
+          pagebg:'#F3FBF2',
+          activelink: '#0F783B',
+          nlink: "#212724",
+          subheading:'#070707',
+          paragraph:'#434343',
+          line:'#C5E1CD',
           300: colors.green[300], // built-in shade
           400: colors.green[400], // built-in shade
           500: colors.green[500], // built-in shade

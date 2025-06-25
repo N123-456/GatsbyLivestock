@@ -6,7 +6,7 @@ const PrivateRoute = ({ children }) => {
   useEffect(() => {
     const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
     if (!isLoggedIn) {
-      navigate("/signin");
+      navigate("/");
     }
   }, []);
 

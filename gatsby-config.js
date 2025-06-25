@@ -22,8 +22,8 @@ module.exports = {
    resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `limelight`,
-          `source sans pro\:300,400,400i,700` // you can also specify font weights and styles
+          `limelight:300,400,400i,700`,
+        
         `niramit:200,300,400,500,600,700,200i,300i,400i,500i,600i,700i`,
         `montserrat:100,200,300,400,500,600,700,800,900`,
         ],
