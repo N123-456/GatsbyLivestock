@@ -65,7 +65,7 @@ const SideNavBar = ({
           onClick={handleClick}
           className={`flex items-center justify-between w-full px-4 py-4  text-left ${
     isActive
-      ? "text-primary-activelink font-montserrat py-2 font-bold border-l-2 h-[12px] pl-1 border-primary-activelink "
+      ? "text-primary-activelink font-montserrat py-2 font-bold pl-1 border-l h-[8px]  border-primary-activelink "
       : "text-primary-nlink font-montserrat font-medium py-2 "
   }`}
           

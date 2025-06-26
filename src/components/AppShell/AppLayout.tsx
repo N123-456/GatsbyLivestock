@@ -13,9 +13,9 @@ export function AppLayout({ children }: AppLayoutProps) {
 
   return (
     <>
-      <div className="flex flex-row min-h-screen">
+      <div className="flex min-h-screen">
         <Navbar />
-        <main className="flex-1 p-6 bg-light overflow-y-auto">{children}</main>
+        <main className="ml-80 flex-1 p-6 overflow-y-auto bg-primary-bg">{children}</main>
       </div>
     </>
   );

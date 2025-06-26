@@ -13,9 +13,9 @@ const Navbar = () => {
       label: "Farm Location",
 
       links: [
-        { label: "Add Location", link: "/farmlocation" },
-        { label: "Soil Test", link: "/farmlocation" },
-        { label: "Water Test", link: "/farmlocation" },
+        { label: "Add Location", link: "/addlocation" },
+        { label: "Soil Test", link: "/soiltest" },
+        { label: "Water Test", link: "/watertest" },
       ],
     },
     {
@@ -111,7 +111,7 @@ const Navbar = () => {
 
   const fmslogo = getImage(data.fmslogo);
   return (
-    <nav className="w-80 h-[7620px] bg-[#F3FBF2] shadow-lg p-4">
+    <nav className="fixed top-0 left-0 z-50 w-80 h-screen bg-[#F3FBF2] shadow-lg p-4">
       {/* Header */}
       <div className="mb-6">
         <div className="flex justify-between items-center space-x-2 border-b border-w-[207px] border-bg-[#DBDBDB] mb-4 pb-6">
