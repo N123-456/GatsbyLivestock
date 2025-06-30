@@ -151,7 +151,7 @@ const tasks = () => {
             Tasks Fields:
           </h2>
           <p className="text-primary-paragraph2 text-[19px] font-montserrat font-normal px-10">
-            <span className="text-orange-600 font-semibold">Title</span>: It
+            <span className="text-primary-pheading font-semibold">Title</span>: It
             will tell the name of the task to be done. (e.g. Ploughing)
             <br />{" "}
             <span className="text-primary-pheading font-semibold">Description</span>

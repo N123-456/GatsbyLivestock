@@ -111,7 +111,7 @@ const Navbar = () => {
 
   const fmslogo = getImage(data.fmslogo);
   return (
-    <nav className="fixed top-0 left-0 z-50 w-80 h-screen bg-[#F3FBF2] shadow-lg p-4">
+    <nav className="fixed top-0 left-0 z-50 w-80 h-[931px] bg-[#F3FBF2] shadow-lg p-4">
       {/* Header */}
       <div className="mb-6">
         <div className="flex justify-between items-center space-x-2 border-b border-w-[207px] border-bg-[#DBDBDB] mb-4 pb-6">
