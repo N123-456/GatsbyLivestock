@@ -76,19 +76,19 @@ const pesticides = () => {
           <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
             <p>For adding Pesticides:</p>
             <br />
-            <br />▪ Click on{" "}
+            <br />Click on{" "}
             <span className="text-primary-activelink font-semibold">
               "Planting"
             </span>
             tab.
             <br />
-            <p>▪Click on three dots against the crop you want to add pesticides data.</p>
-            <p>o Choose pesticides from the options.</p>
-            <p>o Click on “Add Fertilizer” button.</p>
-            <p>o Enter the required details as follows:</p>
-            <ul>
-                <li>▪ Enter the product details including product name, brand of the pesticide, when was the pesticide applied to the crop, how much effective was the pesticide i.e., pesticide efficiency in percentage.</li>
-                <li>▪ Now enter the usage details::</li>
+            <p>Click on three dots against the crop you want to add pesticides data.</p>
+            <p>Choose pesticides from the options.</p>
+            <p>Click on “Add Fertilizer” button.</p>
+            <p>Enter the required details as follows:</p><br/>
+            <ul className="list-disc text-primary-activelink">
+                <li>Enter the product details including product name, brand of the pesticide, when was the pesticide applied to the crop, how much effective was the pesticide i.e., pesticide efficiency in percentage.</li>
+                <li>Now enter the usage details:</li>
                 <ul>
                     <li>❖ If the pesticide you applied was taken from the inventory, choose the option “inventory”.</li>
                     <li>❖ Choose the inventory. </li>
@@ -113,11 +113,12 @@ const pesticides = () => {
                 />
               )}
             </div>
-                </ul>
+                </ul><br/>
+            
+            <li><p>Click on the submit button.</p></li>
+          <li> <p>Pesticides will be added successfully.</p></li> 
+           <li><p>If the pesticides was a new buy, in that case it was an expense so a transaction will be created.</p></li> 
             </ul>
-            <p>o Click on the submit button.</p>
-            <p>o Pesticides will be added successfully.</p>
-            <p>o If the pesticides was a new buy, in that case it was an expense so a transaction will be created.</p>
             <br /> 
             <div className="flex items-center pt-5 space-x-4">
             <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
@@ -131,7 +132,7 @@ const pesticides = () => {
               You can search the pesticides from the list of pesticides of locations
               present in the system. You can search based on either:
               <br />
-              <p>▪ Pesticide Name: You can search by the name of the pesticide.</p>{" "}
+              <p>Pesticide Name: You can search by the name of the pesticide.</p>{" "}
 
               <br />
               <p>
@@ -157,17 +158,17 @@ const pesticides = () => {
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
              If any pesticides application detail you want to change, you can easily edit the details. For that:
                 <br /><br/>
-                <ul className="pl-[15px]">
+                <ul className="pl-[15px] list-disc text-primary-activelink">
                   <li>
-                    ▪ Click on the edit icon against the pesticide you want to
+                    Click on the edit icon against the pesticide you want to
                     edit.
                   </li>
-                  <li>▪ pesticide details screen will open.</li>
-                  <li>▪ Click on the field you want to edit.</li>
-                  <li>▪ Make changes in the fields</li>
-                  <li>▪ Click on submit button.</li>
+                  <li>pesticide details screen will open.</li>
+                  <li>Click on the field you want to edit.</li>
+                  <li>Make changes in the fields</li>
+                  <li>Click on submit button.</li>
                   <li>
-                    ▪ pesticides details will be edited/updated successfully.
+                    pesticides details will be edited/updated successfully.
                   </li>
                 </ul>
               </div>
@@ -182,13 +183,13 @@ const pesticides = () => {
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
               If you want to delete any pesticide, you can easily do so.
                 <br /><br/>
-                <ul className="pl-[15px]">
+                <ul className="pl-[15px] list-disc text-primary-activelink">
                   <li>
-                    ▪	Click on the delete icon against the row you want to delete in the pesticide’s table.
+                    Click on the delete icon against the row you want to delete in the pesticide’s table.
                   </li>
-                  <li>▪	A dialogue box will appear to confirm whether you want to delete or not.</li>
-                  <li>▪	Click on delete button.</li>
-                  <li>▪	pesticide will be deleted successfully.</li>
+                  <li>A dialogue box will appear to confirm whether you want to delete or not.</li>
+                  <li>Click on delete button.</li>
+                  <li>pesticide will be deleted successfully.</li>
                 </ul>
               </div>
                <div className="pl-13 pt-8 flex justify-center">
@@ -210,14 +211,14 @@ const pesticides = () => {
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
              You can easily view the details of the fertilizer. For that:
                 <br /><br/>
-                <ul className="pl-[15px]">
+                <ul className="pl-[15px] list-disc text-primary-activelink">
                   <li>
-                    ▪	Hover on three dots.
+                    Hover on three dots.
                   </li>
-                  <li>▪Click on view button.</li>
-                  <li>▪Click on delete button.</li>
-                  <li>▪pesticide details page will open.</li>
-                  <li>▪Click on print button if you want to print the details of the fertilizer.</li>
+                  <li>Click on view button.</li>
+                  <li>Click on delete button.</li>
+                  <li>pesticide details page will open.</li>
+                  <li>Click on print button if you want to print the details of the fertilizer.</li>
                 </ul>
               </div>
                <div className="pl-13 pt-8 flex justify-center">

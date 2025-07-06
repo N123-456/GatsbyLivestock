@@ -76,16 +76,16 @@ const planting = () => {
           <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
             <p>For adding planting, you first need to have a farm location. So, if you haven’t have added yet first add the farm location. See the guide for adding farm location in the upper section of the document. After choosing the crop, most of the fields will be automatically filled based on predefined data, but you can modify them as per your need. So, for adding planting:</p>
             <br />
-            <br />▪ Click on{" "}
+            <br /> Click on{" "}
             <span className="text-primary-activelink font-semibold">
               "Add Planting"
             </span>
             button.
             <br />
-            ▪ Enter the required fields.
+            Enter the required fields.
             <br />
             <span className="text-primary-pheading font-semibold">
-            ⮚	Crop Type & Location:
+            Crop Type & Location:
             </span>
             : In the crop type and location, you will enter what crop you want to plant and on which farm location you want to plant. How the crop will be planted like 
             <br />
@@ -148,7 +148,7 @@ const planting = () => {
                 />
               )}
             </div>
-            <p className="font-semibold">⮚	Seed Details:</p>
+            <p className="font-semibold font-primary-pheading">Seed Details:</p>
             <ul className="text-primary-subheading font-normal text-[18px] font-montserrat">
               <li>
                ❖	Select the company that provided the seeds.
@@ -175,7 +175,7 @@ const planting = () => {
                 />
               )}
             </div><br/>
-            <p className="font-semibold">⮚ Planting Details.</p>
+            <p className="font-semibold font-primary-pheading">Planting Details.</p>
             <ul className=" font-normal">
               <li>❖	Select the unit of measurement for input (Centimetre, Meter, Inch, Feet).</li>
               <li>❖	Enter the specific variety of the crop you are planting.</li>
@@ -250,11 +250,11 @@ const planting = () => {
               You can search the location from the list of farms of locations
               present in the system. You can search based on either:
               <br />
-              <p>▪	Crop Name: You can search by the name of the crop.</p>{" "}
+              <p><span className="text-primary-pheading font-semibold">	Crop Name: </span>You can search by the name of the crop.</p>{" "}
               <p>
-                ▪	Growth Stage: You can filter out that how much crops are in a particular growth stage.
+                <span className="text-primary-pheading font-semibold">Growth Stage:</span> You can filter out that how much crops are in a particular growth stage.
               </p>
-              <p>▪	Upcoming Harvest: You can filter out which crop’s harvest are today, tomorrow, this week, next week, and next month.</p>
+              <p><span className="text-primary-pheading font-semibold">Upcoming Harvest:</span> You can filter out which crop’s harvest are today, tomorrow, this week, next week, and next month.</p>
               <br />
               <p>
               Then click on the Search button. Also, you can click on the refresh button to refresh the data.
@@ -280,17 +280,17 @@ const planting = () => {
                 If any planting details changes, you can easily edit the
                 details. For that:
                 <br /><br/>
-                <ul className="pl-[15px]">
+                <ul className="pl-[15px] list-disc text-primary-activelink">
                   <li>
-                    ▪ Click on the edit icon against the crop you want to
+                    Click on the edit icon against the crop you want to
                     edit.
                   </li>
-                  <li>▪ Planting details screen will open.</li>
-                  <li>▪ Click on the field you want to edit.</li>
-                  <li>▪ Make changes in the fields</li>
-                  <li>▪ Click on submit button.</li>
+                  <li>Planting details screen will open.</li>
+                  <li>Click on the field you want to edit.</li>
+                  <li>Make changes in the fields</li>
+                  <li>Click on submit button.</li>
                   <li>
-                    ▪ Planting details will be edited/updated successfully.
+                    Planting details will be edited/updated successfully.
                   </li>
                 </ul>
               </div>
@@ -305,13 +305,13 @@ const planting = () => {
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
               If you want to delete any crop planting, you can easily do so.
                 <br /><br/>
-                <ul className="pl-[15px]">
+                <ul className="pl-[15px] list-disc text-primary-activelink">
                   <li>
-                    ▪	Click on the delete icon against the row you want to delete in the planting’s table.
+                    Click on the delete icon against the row you want to delete in the planting’s table.
                   </li>
-                  <li>▪	A dialogue box will appear to confirm whether you want to delete or not.</li>
-                  <li>▪	Click on delete button.</li>
-                  <li>▪	Crop will be deleted successfully.</li>
+                  <li>A dialogue box will appear to confirm whether you want to delete or not.</li>
+                  <li>Click on delete button.</li>
+                  <li>Crop will be deleted successfully.</li>
                 </ul>
               </div>
                <div className="pl-13 pt-8 flex justify-center">
@@ -333,14 +333,14 @@ const planting = () => {
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
               You can easily view the details of the planting. For that:
                 <br /><br/>
-                <ul className="pl-[15px]">
+                <ul className="pl-[15px] list-disc text-primary-activelink">
                   <li>
-                    ▪	Hover on three dots.
+                    Hover on three dots.
                   </li>
-                  <li>▪Click on view button.</li>
-                  <li>▪Click on delete button.</li>
-                  <li>▪Crop details page will open.</li>
-                  <li>▪You can print the details of the Planting.</li>
+                  <li>Click on view button.</li>
+                  <li>Click on delete button.</li>
+                  <li>Crop details page will open.</li>
+                  <li>You can print the details of the Planting.</li>
                 </ul>
               </div>
                <div className="pl-13 pt-8 flex justify-center">

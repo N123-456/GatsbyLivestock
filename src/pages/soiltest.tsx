@@ -98,10 +98,13 @@ const soiltest = () => {
             For adding a soil test:
             <br />
             <br />
-            ▪Go to farm locations tab. ▪ Hover on three dots against the farm
-            location you want to add soil test. ▪ Click on soil test. ▪ Click on
-            “Add Soil Test” button.
-            <br />▪ Enter the required details including: <br />
+            <ul className="list-disc text-primary-activelink">
+           <li> Go to farm locations tab.</li>
+           <li> Hover on three dots against the farm.</li>
+            <li>location you want to add soil test.</li>
+           <li> Click on soil test.</li>
+            <li>Click on “Add Soil Test” button.</li></ul><br/>
+            <br />Enter the required details including: <br />
             <ul>
               <li>
                 <span className="text-primary-pheading font-semibold">
@@ -168,8 +171,8 @@ const soiltest = () => {
               </div>
 
               <li>Optionally, you can upload the soil test report document.</li>
-              <li>▪ Click on submit button.</li>
-              <li>▪ Soil test will be added successfully.</li>
+              <li>Click on submit button.</li>
+              <li>Soil test will be added successfully.</li>
             </ul>
             <div className="pl-13 pt-8 flex justify-center">
               {SDS && (
@@ -194,7 +197,7 @@ const soiltest = () => {
               in the system. You can search based on:
               <br />
               <p className="pl-[15px]">
-                ▪ Name: You can search by the name of the laboratory where the
+                Name: You can search by the name of the laboratory where the
                 test was performed.
               </p>{" "}
               <p>
@@ -218,24 +221,24 @@ const soiltest = () => {
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
               <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
-                ● Edit Soil Test:
+                Edit Soil Test:
               </h2>
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
                 If any soil test detail you want to change, you can easily edit
                 the details. For that:
                 <br />
                 <br />
-                <ul className="pl-[15px]">
+                <ul className="pl-[15px] list-disc text-primary-activelink">
                   <li>
-                    ▪ Click on the edit icon against the soil test you want to
+                    Click on the edit icon against the soil test you want to
                     edit.
                   </li>
-                  <li>▪ Soil Test details screen will open.</li>
-                  <li>▪ Click on the field you want to edit.</li>
-                  <li>▪ Make changes in the fields</li>
-                  <li>▪ Click on submit button.</li>
+                  <li>Soil Test details screen will open.</li>
+                  <li>Click on the field you want to edit.</li>
+                  <li>Make changes in the fields</li>
+                  <li>Click on submit button.</li>
                   <li>
-                    ▪ Soil test details will be edited/updated successfully.
+                    Soil test details will be edited/updated successfully.
                   </li>
                 </ul>
               </div>
@@ -252,17 +255,17 @@ const soiltest = () => {
                 If you want to delete the soil test, you can easily do so.
                 <br />
                 <br />
-                <ul className="pl-[15px]">
+                <ul className="pl-[15px] list-disc text-primary-activelink">
                   <li>
-                    ▪ Click on the delete icon against the row you want to
+                    Click on the delete icon against the row you want to
                     delete in the soil test’s table.
                   </li>
                   <li>
-                    ▪ A dialogue box will appear to confirm whether you want to
+                    A dialogue box will appear to confirm whether you want to
                     delete or not.
                   </li>
-                  <li>▪ Click on delete button.</li>
-                  <li>▪ Soil test will be deleted successfully.</li>
+                  <li>Click on delete button.</li>
+                  <li>Soil test will be deleted successfully.</li>
                 </ul>
               </div>
               <div className="pl-13 pt-8 flex justify-center">
@@ -285,11 +288,11 @@ const soiltest = () => {
                 You can easily view the details of the soil test. For that:
                 <br />
                 <br />
-                <ul className="pl-[15px]">
-                  <li>▪ Hover on three dots.</li>
-                  <li>▪Click on view button.</li>
-                  <li>▪soil Test details page will open.</li>
-                  <li>▪You can print the details of the soil test.</li>
+                <ul className="pl-[15px] list-disc text-primary-activelink">
+                  <li>Hover on three dots.</li>
+                  <li>Click on view button.</li>
+                  <li>soil Test details page will open.</li>
+                  <li>You can print the details of the soil test.</li>
                 </ul>
               </div>
               <div className="pl-13 pt-8 flex justify-center">

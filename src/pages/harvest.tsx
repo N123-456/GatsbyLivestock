@@ -63,7 +63,7 @@ const harvest = () => {
               />
             )}
           </div>
-
+<br/><br/>
           <div className="flex items-center pt-5 space-x-4">
             <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
               Step 1
@@ -82,14 +82,15 @@ const harvest = () => {
             </span>
             tab.
             <br />
-            <p>▪Click on three dots against the crop you want to add harvest data.</p>
-            <p>o Choose harvest from the options.</p>
-            <p>o Click on “Add Pesticides” button.</p>
-            <p>o Enter the required details as follows:</p>
-            <ul>
-                <li>▪ Date & Time: When was the crop harvested, what was the after-harvest process i.e., either the yield was directly sold out or there was further processing on the yield or was stored in inventory. Other than the inventory option, enter the customer’s name who bought the yield. </li>
-                <li>▪ Enter the batch no (e.g. Pick 1, Pick 2 etc.) and classify the grade of yield (e.g. High, Medium, Low):</li>
-                <li>▪ In case the after-harvest process was “Direct Sale”, enter the quantity got in that batch (e.g. 40 KG), revenue per unit (e.g.212 Rs), total revenue will calculated automatically, and transaction details like head of accounts (e.g. Bank) and transaction id/ cheque no (e.g. 8746900987) in case head of accounts was bank. A transaction will be created against it as the harvest is a revenue generated from the farm.</li>
+            <ul className="style-disc">
+            <li><p>Click on three dots against the crop you want to add harvest data.</p></li>
+            <li><p>Choose harvest from the options.</p></li>
+            <li><p>Click on “Add Pesticides” button.</p></li>
+            <li><p>Enter the required details as follows:</p></li></ul>
+            <ul className="pl-[15px] list-disc text-primary-activelink">
+                <li> Date & Time: When was the crop harvested, what was the after-harvest process i.e., either the yield was directly sold out or there was further processing on the yield or was stored in inventory. Other than the inventory option, enter the customer’s name who bought the yield. </li>
+                <li>Enter the batch no (e.g. Pick 1, Pick 2 etc.) and classify the grade of yield (e.g. High, Medium, Low):</li>
+                <li>In case the after-harvest process was “Direct Sale”, enter the quantity got in that batch (e.g. 40 KG), revenue per unit (e.g.212 Rs), total revenue will calculated automatically, and transaction details like head of accounts (e.g. Bank) and transaction id/ cheque no (e.g. 8746900987) in case head of accounts was bank. A transaction will be created against it as the harvest is a revenue generated from the farm.</li>
                  <div className="pl-13 pt-8 flex justify-center">
               {listview && (
                 <GatsbyImage
@@ -99,7 +100,8 @@ const harvest = () => {
                 />
               )}
             </div>
-            <li>▪ In case the after-harvest process was “Processed”, enter the before processed quantity got in that batch, after processing quantity got in that batch, revenue per unit, total revenue will calculated automatically, and transaction details like head of accounts and transaction id/ cheque no in case head of accounts was bank. A transaction will be created against it as the harvest is a revenue generated from the farm.</li>
+            <br/><br/>
+            <li>In case the after-harvest process was “Processed”, enter the before processed quantity got in that batch, after processing quantity got in that batch, revenue per unit, total revenue will calculated automatically, and transaction details like head of accounts and transaction id/ cheque no in case head of accounts was bank. A transaction will be created against it as the harvest is a revenue generated from the farm.</li>
                  <div className="pl-13 pt-8 flex justify-center">
               {listview && (
                 <GatsbyImage
@@ -109,7 +111,7 @@ const harvest = () => {
                 />
               )}
             </div>
-            <li>▪ In case the after-harvest process is “Inventory”, choose the inventory where the harvest will be stored, quantity to be stored, revenue per unit, total revenue will calculated automatically. No transaction will created in this case.</li>
+            <li>In case the after-harvest process is “Inventory”, choose the inventory where the harvest will be stored, quantity to be stored, revenue per unit, total revenue will calculated automatically. No transaction will created in this case.</li>
                  <div className="pl-13 pt-8 flex justify-center">
               {listview && (
                 <GatsbyImage
@@ -119,13 +121,13 @@ const harvest = () => {
                 />
               )}
             </div>
-            <li>▪ Enter the instructions related to the harvest if any.</li>
+            <br/><br/>
+            <li>Enter the instructions related to the harvest if any.</li>
                
-           
-            </ul>
-            <p>o Click on the submit button.</p>
-            <p>o Harvest will be added successfully.</p>
-            <p>o You can add more harvest pickings details in the same way.</p>
+            <br/><br/>
+            <li><p>Click on the submit button.</p></li>
+            <li><p>Harvest will be added successfully.</p></li>
+            <li><p>You can add more harvest pickings details in the same way.</p></li></ul>
             <br /> 
             <div className="flex items-center pt-5 space-x-4">
             <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
@@ -139,7 +141,7 @@ const harvest = () => {
               You can search the harvest from the list of harvests of locations
               present in the system. You can search based on either:
               <br />
-              <p>▪ Batch Number: You can search by the batch number of harvest.</p>{" "}
+              <p>Batch Number: You can search by the batch number of harvest.</p>{" "}
 
               <br />
               <p>
@@ -154,6 +156,7 @@ const harvest = () => {
                   />
                 )}
               </div>
+              <br/><br/>
               <div className="flex items-center pt-5 space-x-4">
               <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
               Step 3
@@ -165,17 +168,17 @@ const harvest = () => {
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
              If any harvesting detail you want to change, you can easily edit the details. For that:
                 <br /><br/>
-                <ul className="pl-[15px]">
+                <ul className="pl-[15px] list-disc text-primary-activelink">
                   <li>
-                    ▪ Click on the edit icon against the harvest you want to
+                    Click on the edit icon against the harvest you want to
                     edit.
                   </li>
-                  <li>▪ Harvesting details screen will open.</li>
-                  <li>▪ Click on the field you want to edit.</li>
-                  <li>▪ Make changes in the fields</li>
-                  <li>▪ Click on submit button.</li>
+                  <li>Harvesting details screen will open.</li>
+                  <li>Click on the field you want to edit.</li>
+                  <li>Make changes in the fields</li>
+                  <li>Click on submit button.</li>
                   <li>
-                    ▪ Harvest details will be edited/updated successfully.
+                    Harvest details will be edited/updated successfully.
                   </li>
                 </ul>
               </div>
@@ -190,13 +193,13 @@ const harvest = () => {
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
               If you want to delete any harvest, you can easily do so.
                 <br /><br/>
-                <ul className="pl-[15px]">
+                <ul className="pl-[15px] list-disc text-primary-activelink">
                   <li>
-                    ▪	Click on the delete icon against the row you want to delete in the harvest’s table.
+                    Click on the delete icon against the row you want to delete in the harvest’s table.
                   </li>
-                  <li>▪	A dialogue box will appear to confirm whether you want to delete or not.</li>
-                  <li>▪	Click on delete button.</li>
-                  <li>▪	Harvest will be deleted successfully.</li>
+                  <li>A dialogue box will appear to confirm whether you want to delete or not.</li>
+                  <li>Click on delete button.</li>
+                  <li>Harvest will be deleted successfully.</li>
                 </ul>
               </div>
                <div className="pl-13 pt-8 flex justify-center">
@@ -218,14 +221,14 @@ const harvest = () => {
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
              You can easily view the details of the harvest. For that:
                 <br /><br/>
-                <ul className="pl-[15px]">
+                <ul className="pl-[15px] list-disc text-primary-activelink">
                   <li>
-                    ▪	Hover on three dots.
+                    Hover on three dots.
                   </li>
-                  <li>▪Click on view button.</li>
-                  <li>▪Click on delete button.</li>
-                  <li>▪harvest details page will open.</li>
-                  <li>▪Click on print button if you want to print the details of the harvest.</li>
+                  <li>Click on view button.</li>
+                  <li>Click on delete button.</li>
+                  <li>harvest details page will open.</li>
+                  <li>Click on print button if you want to print the details of the harvest.</li>
                 </ul>
               </div>
                <div className="pl-13 pt-8 flex justify-center">
@@ -237,6 +240,7 @@ const harvest = () => {
                   />
                 )}
               </div>
+              <br/><br/>
               <div className="pl-13 pt-8 flex justify-center">
                 {listview && (
                   <GatsbyImage
@@ -246,6 +250,7 @@ const harvest = () => {
                   />
                 )}
               </div>
+              
             </div>
           </div>
         </div>

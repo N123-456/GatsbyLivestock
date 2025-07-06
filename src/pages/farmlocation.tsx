@@ -6,7 +6,7 @@ const farmlocation = () => {
   return (
     <AppLayout>
     <div>
-      
+      Farm Location
     </div>
     </AppLayout>
   )

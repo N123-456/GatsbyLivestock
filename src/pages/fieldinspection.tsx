@@ -63,7 +63,7 @@ const fieldinspection = () => {
               />
             )}
           </div>
-
+<br/><br/>
           <div className="flex items-center pt-5 space-x-4">
             <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
               Step 1
@@ -76,20 +76,20 @@ const fieldinspection = () => {
           <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
             <p>For adding Field Inspection:</p>
             <br />
-            <br />▪ Click on{" "}
+            <br />Click on{" "}
             <span className="text-primary-activelink font-semibold">
               "Planting"
             </span>
             tab.
             <br />
-            <p>o Click on three dots against the crop you want to add field inspection data.</p>
-            <p>o Choose field inspection from the options.</p>
-            <p>o Click on “Add Field Inspection” button.</p>
-            <p>o Enter the required details as follows:</p>
+            <p>Click on three dots against the crop you want to add field inspection data.</p>
+            <p>Choose field inspection from the options.</p>
+            <p>Click on “Add Field Inspection” button.</p>
+            <p>Enter the required details as follows:</p>
             <ul>
-                <li>▪ Field Inspection Details: When was the field inspection performed, who was the field scout, why the field inspection was conducted, how much cost was incurred on the field inspection, transaction details like head of accounts, transaction id/ cheque no in case head of accounts is bank, who was the customer.</li>
-                <li>▪ Plant Health Levels: How much has the pest damaged the crop (low, high), is the crop diseased (infested, highly infested, low), and how much weeds are there in the crop (severe, less or none).</li>
-                <li>▪ Disaster Level: Intensity of heat wave (Severe, Moderate, Minor), intensity of rainfall (Severe, Moderate, Minor), effect of wind on crop (Severe, Moderate, Minor), smog density (Severe, Moderate, Minor), hailstorm intensity (Severe, Moderate, Minor), and frost condition (Severe, Moderate, Minor).</li>
+                <li><span className="text-primary-pheading font-semibold">Field Inspection Details</span>: When was the field inspection performed, who was the field scout, why the field inspection was conducted, how much cost was incurred on the field inspection, transaction details like head of accounts, transaction id/ cheque no in case head of accounts is bank, who was the customer.</li>
+                <li><span className="text-primary-pheading font-semibold">Plant Health Levels</span>: How much has the pest damaged the crop (low, high), is the crop diseased (infested, highly infested, low), and how much weeds are there in the crop (severe, less or none).</li>
+                <li><span className="text-primary-pheading font-semibold">Disaster Level</span>: Intensity of heat wave (Severe, Moderate, Minor), intensity of rainfall (Severe, Moderate, Minor), effect of wind on crop (Severe, Moderate, Minor), smog density (Severe, Moderate, Minor), hailstorm intensity (Severe, Moderate, Minor), and frost condition (Severe, Moderate, Minor).</li>
                  <div className="pl-13 pt-8 flex justify-center">
               {listview && (
                 <GatsbyImage
@@ -99,7 +99,8 @@ const fieldinspection = () => {
                 />
               )}
             </div>
-            <li>▪ Optionally. You can add description, can mark area where the scouting took place and can also add images taken during field inspection.</li>
+            <br/>
+            <li>Optionally. You can add description, can mark area where the scouting took place and can also add images taken during field inspection.</li>
                  <div className="pl-13 pt-8 flex justify-center">
               {listview && (
                 <GatsbyImage
@@ -109,11 +110,11 @@ const fieldinspection = () => {
                 />
               )}
             </div>
-           
+           <br/><br/>
             </ul>
-            <p>o Click on the submit button.</p>
-            <p>o Field inspection will be added successfully.</p>
-            <p>o A transaction will created as expense was incurred for carrying out field inspection.</p>
+            <p>Click on the submit button.</p>
+            <p>Field inspection will be added successfully.</p>
+            <p>A transaction will created as expense was incurred for carrying out field inspection.</p>
             <br /> 
             <div className="flex items-center pt-5 space-x-4">
             <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
@@ -127,8 +128,11 @@ const fieldinspection = () => {
               You can search the field inspection from the list of field inspection of locations
               present in the system. You can search based on either:
               <br />
-              <p>▪ Field Scout Name: You can search which field scout carried out which field inspection.</p>{" "}
-              <p>▪ Date Range: You can search by specifying date range that how many field inspections were held during a specific date range.</p>
+              <ul>
+                <li>
+              <span className="text-primary-pheading font-semibold">Field Scout Name:</span> You can search which field scout carried out which field inspection.</li>{" "}
+              <li><span className="text-primary-pheading font-semibold">Date Range:</span> You can search by specifying date range that how many field inspections were held during a specific date range.</li>
+              </ul>
               <br />
               <p>
               Then click on the Search button. Also, you can click on the refresh button to refresh the data.
@@ -142,6 +146,7 @@ const fieldinspection = () => {
                   />
                 )}
               </div>
+              <br/><br/>
               <div className="flex items-center pt-5 space-x-4">
               <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
               Step 3
@@ -153,17 +158,17 @@ const fieldinspection = () => {
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
              If any field inspection detail you want to change, you can easily edit the details. For that:
                 <br /><br/>
-                <ul className="pl-[15px]">
+                <ul className="pl-[15px] list-disc text-primary-activelink">
                   <li>
-                    ▪ Click on the edit icon against the field inspection you want to
+                    Click on the edit icon against the field inspection you want to
                     edit.
                   </li>
-                  <li>▪ Field Inspection details screen will open.</li>
-                  <li>▪ Click on the field you want to edit.</li>
-                  <li>▪ Make changes in the fields</li>
-                  <li>▪ Click on submit button.</li>
+                  <li>Field Inspection details screen will open.</li>
+                  <li>Click on the field you want to edit.</li>
+                  <li>Make changes in the fields</li>
+                  <li>Click on submit button.</li>
                   <li>
-                    ▪ Field Inspection details will be edited/updated successfully.
+                    Field Inspection details will be edited/updated successfully.
                   </li>
                 </ul>
               </div>
@@ -178,13 +183,13 @@ const fieldinspection = () => {
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
               If you want to delete any field inspection, you can easily do so.
                 <br /><br/>
-                <ul className="pl-[15px]">
+                <ul className="pl-[15px] list-disc text-primary-activelink">
                   <li>
-                    ▪	Click on the delete icon against the row you want to delete in the field inspection’s table.
+                    Click on the delete icon against the row you want to delete in the field inspection’s table.
                   </li>
-                  <li>▪	A dialogue box will appear to confirm whether you want to delete or not.</li>
-                  <li>▪	Click on delete button.</li>
-                  <li>▪	Field Inspection will be deleted successfully.</li>
+                  <li>A dialogue box will appear to confirm whether you want to delete or not.</li>
+                  <li>Click on delete button.</li>
+                  <li>Field Inspection will be deleted successfully.</li>
                 </ul>
               </div>
                <div className="pl-13 pt-8 flex justify-center">
@@ -195,7 +200,7 @@ const fieldinspection = () => {
                     className="bg-white w-[1000.58px] "
                   />
                 )}
-              </div>
+              </div><br/><br/>
 <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
               Step 5
             </h2>
@@ -206,14 +211,14 @@ const fieldinspection = () => {
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
              You can easily view the details of the field inspection. For that:
                 <br /><br/>
-                <ul className="pl-[15px]">
+                <ul className="pl-[15px] list-disc text-primary-activelink">
                   <li>
-                    ▪	Hover on three dots.
+                    Hover on three dots.
                   </li>
-                  <li>▪Click on view button.</li>
-                  <li>▪Click on delete button.</li>
-                  <li>▪Field inspection details page will open.</li>
-                  <li>▪Click on print button if you want to print the details of the field inspection.</li>
+                  <li>Click on view button.</li>
+                  <li>Click on delete button.</li>
+                  <li>Field inspection details page will open.</li>
+                  <li>Click on print button if you want to print the details of the field inspection.</li>
                 </ul>
               </div>
                <div className="pl-13 pt-8 flex justify-center">

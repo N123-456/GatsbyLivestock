@@ -97,7 +97,7 @@ const addlocation = () => {
               />
             )}
           </div>
-
+<br/><br/>
           <div className="flex items-center pt-5 space-x-4">
             <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
               Step 1
@@ -213,6 +213,7 @@ const addlocation = () => {
                 />
               )}
             </div>
+            <br/><br/>
             ▪ Enter the required information.
             <br />
             <ul className="text-primary-activelink font-semibold">
@@ -231,6 +232,7 @@ const addlocation = () => {
                 />
               )}
             </div>
+            <br/><br/>
             ▪ Enter the additional information including:
             <br />
             <ul className="text-primary-subheading font-normal text-[18px] font-montserrat pt-5 list-disc">
@@ -282,6 +284,7 @@ const addlocation = () => {
                 />
               )}
             </div>
+            <br/><br/>
             ▪ Enter the required information.
             <br />
             <ul className="text-primary-activelink font-semibold">
@@ -300,6 +303,7 @@ const addlocation = () => {
                 />
               )}
             </div>
+            <br/><br/>
             <p>▪ Choose the location boundaries:</p>
             <h1 className="font-semibold">Mark Boundaries: </h1>
             <br />
@@ -331,6 +335,7 @@ const addlocation = () => {
                 />
               )}
             </div>
+            <br/><br/>
             <ul className="pt-4">
               <li>
                 ▪ Optionally, you can upload the image of your farm location.
@@ -350,6 +355,7 @@ const addlocation = () => {
                 />
               )}
             </div>
+            <br/><br/>
             <div className="flex items-center pt-5 space-x-4">
             <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
               Step 2
@@ -396,6 +402,7 @@ const addlocation = () => {
                   />
                 )}
               </div>
+              <br/><br/>
               <div className="flex items-center pt-5 space-x-4">
               <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
               Step 3
@@ -451,6 +458,7 @@ const addlocation = () => {
                   />
                 )}
               </div>
+              <br/><br/>
 <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
               Step 5
             </h2>
@@ -480,6 +488,7 @@ const addlocation = () => {
                   />
                 )}
               </div>
+              <br/>
               <div className="pl-13 pt-8 flex justify-center">
                 {VL2 && (
                   <GatsbyImage
