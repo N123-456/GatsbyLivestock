@@ -3,7 +3,8 @@ import { AppLayout } from "../components/AppShell/AppLayout";
 import { graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-const pesticides = () => {
+
+const user = () => {
   const data = useStaticQuery(graphql`
     query {
       listview: file(relativePath: { eq: "listview.png" }) {
@@ -47,12 +48,12 @@ const pesticides = () => {
   return (
     <AppLayout>
       <div>
-        <div className="flex flex-col ">
+        <div className="flex flex-col">
           <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat pl-10 pt-5">
-          Starting Guide for Pesticides:
+          Starting Guide for User Management:
           </h2>
           <p className="text-primary-paragraph text-[18px] font-montserrat font-normal px-10 pt-4">
-           Pesticides are chemicals or natural substances used to protect crops from pests, insects, weeds, and diseases. They help prevent damage to plants, ensuring healthy growth and higher yields. Pesticides can be classified into types such as insecticides (for insects), herbicides (for weeds), and fungicides (for fungi). Proper and safe use of pesticides is important to avoid harm to crops, soil, and the environment. Following recommended guidelines ensures effective pest control while maintaining food safety. In the pesticides tab, you will add the pesticides applied to a specific crop.   
+          Users can be managed easily through farm management system. Users are the people who will perform the tasks related to the farm. System offers different user roles with varying levels of access and permissions within the system. From here, you grant access to users to access the system according to their defined roles. Only users with "Farm Admin" role can create and manage user accounts. Users can be added, searched and their details can be edited.
           </p>
           <div className="pl-13 pt-8 flex justify-center">
             {listview && (
@@ -71,28 +72,50 @@ const pesticides = () => {
             <div className="flex-1 h-px bg-primary-line"></div>
           </div>
           <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
-            Add Pesticides:
+            Add New User:
           </h2>
           <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
-            <p>For adding Pesticides:</p>
-            <br />
-            <br />Click on{" "}
+            <p>For adding a new user</p><br/><br/>
+            Click on{" "}
             <span className="text-primary-activelink font-semibold">
-              "Planting"
+              "Add New"
             </span>
-            tab.
-            <br />
-            <p>Click on three dots against the crop you want to add pesticides data.</p>
-            <p>Choose pesticides from the options.</p>
-            <p>Click on <span className="text-primary-activelink font-semibold">"Add Pesticides"</span> button.</p>
-            <p>Enter the required details as follows:</p><br/>
-            <ul className="list-disc ">
-                <li>Enter the product details including product name, brand of the pesticide, when was the pesticide applied to the crop, how much effective was the pesticide i.e., pesticide efficiency in percentage.</li>
-                <li>Now enter the usage details:</li><br/>
-                <ul className="list-disc">
-                    <li>If the pesticide you applied was taken from the inventory, choose the option “inventory”.</li>
-                    <li>Choose the inventory. </li>
-                    <li>After choosing the inventory, available quantity of the inventory will be automatically shown. Enter the quantity from the available quantity that was used. The quantity cannot exceed the available quantity.</li>
+            button.
+    
+   <p>Enter the required details:</p>
+   <ul>
+                <li><span className="text-primary-pheading font-semibold">Name:</span> Name of the User. </li>
+                <li><span className="text-primary-pheading font-semibold">Email Address:</span>Email Address of the user through which they can log into the system and will also get their login credentials and through this email. </li>
+                <li><span className="text-primary-pheading font-semibold">Phone Number:</span>Contact Number of the user </li>
+                 <li><span className="text-primary-pheading font-semibold">Image:</span>Profile image of the user.It is optional</li>
+                   <li><span className="text-primary-pheading font-semibold">Status:</span>User status can either be blocked or active. By default, user status will be active and cannot be changed. The field is disabled. But you can later change the status if you want to block access of any user to the system by changing its status to blocked.</li>
+                     <li><span className="text-primary-pheading font-semibold">User Role:</span>From this dropdown, you can define the role of user and can decide much access user can have to the system. The user roles are:</li>
+                     <ul className="text-primary-paragraph2 font-medium list-disc">
+                        <li><span className="text-primary-activelink font-bold">Farm Manager</span>:</li><br/>
+                        <ul><li>Access to operational features like plantings, resources etc.</li>
+                        <li>Can create users (except for Admins) and assign tasks/events.</li></ul><br/>
+                        <li><span className="text-primary-activelink font-bold">Accountant</span>:</li><br/>
+                        <ul><li>Have exclusive access to the accounting section, including financial reports.</li>
+                        <li>Have no access to any operational information.</li></ul><br/>
+                        <li><span className="text-primary-activelink font-bold">Service Manager</span>:</li><br/>
+                        <ul><li>Full access to the Resources section for managing equipment, tools, and inventory.</li>
+                        <li>Can also work with contacts.</li></ul><br/>
+                         <li><span className="text-primary-activelink font-bold">Warehouse Manager</span>:</li><br/>
+                        <ul><li>Have limited access to the Resources section, focusing on inventory and warehouse management.</li>
+                        <li>Can also work with contacts.</li></ul><br/>
+                        <li><span className="text-primary-activelink font-bold">Farm Worker</span>:</li><br/>
+                        <ul><li>Have access to create, view, and update tasks assigned to them.</li>
+                        <li>Cannot see tasks assigned to others but can work with unassigned tasks.</li></ul><br/>
+
+                         <li><span className="text-primary-activelink font-bold">Auditor</span>:</li><br/>
+                        <ul><li>Read-only access to all information within System, including financial data.</li>
+                        <li>Cannot modify records, access settings, or create/assign tasks/events.</li></ul><br/>
+                        
+                     </ul>
+                     
+                 <p>Click on the submit button</p>
+                 <p>User will be Added</p></ul>
+           <br/>
                  <div className="pl-13 pt-8 flex justify-center">
               {listview && (
                 <GatsbyImage
@@ -101,43 +124,37 @@ const pesticides = () => {
                   className="bg-white w-[1000.58px] "
                 />
               )}
-            </div>
-            <li>If the pesticide you applied was not available in the inventory and you have to buy the pesticide, choose the option “New Buy”.</li>
-            <li>Enter the details when the pesticide was bought, how much did the pesticide cost, how much quantity did you buy, transaction details like head of accounts, transaction id/cheque no in case head of accounts is bank, and from whom you bought the pesticide i.e., the vendor’s name.</li>   
-                 <div className="pl-13 pt-8 flex justify-center">
-              {listview && (
-                <GatsbyImage
-                  image={listview}
-                  alt="Startups illustration"
-                  className="bg-white w-[1000.58px] "
-                />
-              )}
-            </div>
-                </ul><br/>
+            </div></div>
+          
+         
+           
+          
             
-            <li><p>Click on the submit button.</p></li>
-          <li> <p>Pesticides will be added successfully.</p></li> 
-           <li><p>If the pesticides was a new buy, in that case it was an expense so a transaction will be created.</p></li> 
-            </ul>
-            <br /> 
+
             <div className="flex items-center pt-5 space-x-4">
             <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
               Step 2
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div></div>
             <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
-              Search Pesticides:
+              Search User:
             </h2>
             <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
-              You can search the pesticides from the list of pesticides of locations
-              present in the system. You can search based on either:
+             You can search the user from the list of users present in the system. You can search based on either:
               <br />
-              <p><span className="text-primary-pheading font-semibold">Pesticide Name</span>: You can search by the name of the pesticide.</p>{" "}
+              <ul className="list-disc">
+              <li><p>Email Address: You can search by the email of the user.</p></li>
+              <li><p>Status: You can search by the status of the user which can be:
+o	Active
+o	Blocked
+
+
+</p></li>
 
               <br />
               <p>
               Then click on the Search button. Also, you can click on the refresh button to refresh the data.
-              </p>
+              </p><br/>
               <div className="pl-13 pt-8 flex justify-center">
                 {listview && (
                   <GatsbyImage
@@ -146,29 +163,28 @@ const pesticides = () => {
                     className="bg-white w-[1000.58px] "
                   />
                 )}
-              </div>
+              </div></ul>
               <div className="flex items-center pt-5 space-x-4">
               <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
               Step 3
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div></div>
               <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
-                Edit Pesticide:
+                Edit User:
               </h2>
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
-             If any pesticides application detail you want to change, you can easily edit the details. For that:
+             If any user's details you want to change, you can easily edit the details. For that:
                 <br /><br/>
                 <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
                   <li>
-                    Click on the edit icon against the pesticide you want to
-                    edit.
+                    Click on the edit icon 
                   </li>
-                  <li>pesticide details screen will open.</li>
+                  <li>User details screen will open.</li>
                   <li>Click on the field you want to edit.</li>
                   <li>Make changes in the fields</li>
                   <li>Click on submit button.</li>
                   <li>
-                    pesticides details will be edited/updated successfully.
+                    User details will be edited/updated successfully.
                   </li>
                 </ul>
               </div>
@@ -178,20 +194,18 @@ const pesticides = () => {
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div></div>
                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
-              Delete Pesticide:
+              Block User:
               </h2>
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
-              If you want to delete any pesticide, you can easily do so.
+            You can block any user for any reason. When the user will be blocked, he/she will lose access to the system and will not be able to log into the system. For this, you can do it in two ways:
                 <br /><br/>
                 <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
-                  <li>
-                    Click on the delete icon against the row you want to delete in the pesticide’s table.
-                  </li>
-                  <li>A dialogue box will appear to confirm whether you want to delete or not.</li>
-                  <li>Click on delete button.</li>
-                  <li>pesticide will be deleted successfully.</li>
+                  
+                  <li>You can go to edit details and change the status to blocked.</li>
+                  <li>You can hover on three dots. There you will find an option of Block.</li>
+                
                 </ul>
-              </div>
+              </div><br/>
                <div className="pl-13 pt-8 flex justify-center">
                 {listview && (
                   <GatsbyImage
@@ -200,28 +214,27 @@ const pesticides = () => {
                     className="bg-white w-[1000.58px] "
                   />
                 )}
-              </div>
-                <div className="flex items-center pt-5 space-x-4">
+              </div><br/><br/>
 <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
               Step 5
             </h2>
-            <div className="flex-1 h-px bg-primary-line"></div></div>
+            <div className="flex-1 h-px bg-primary-line"></div>
                 <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
-              View Pesticide:
+              View User Details:
               </h2>
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
-             You can easily view the details of the fertilizer. For that:
-                <br /><br/>
+             You can easily view the details of users. For that:
+                <br />
                 <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
                   <li>
                     Hover on three dots.
                   </li>
                   <li>Click on view button.</li>
                   <li>Click on delete button.</li>
-                  <li>pesticide details page will open.</li>
-                  <li>Click on print button if you want to print the details of the fertilizer.</li>
+                  <li>User details page will open.</li>
+                
                 </ul>
-              </div>
+              </div><br/>
                <div className="pl-13 pt-8 flex justify-center">
                 {listview && (
                   <GatsbyImage
@@ -240,12 +253,13 @@ const pesticides = () => {
                   />
                 )}
               </div>
-            </div>
+             </div>
+            
           </div>
         </div>
-      </div>
+    
     </AppLayout>
   );
 };
 
-export default pesticides;
+export default user;

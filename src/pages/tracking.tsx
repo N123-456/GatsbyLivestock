@@ -64,7 +64,7 @@ const maintenance = () => {
           </h2>
           <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
             <p>The check-in process involves recording details when a machine is returned after use. This includes noting the time and date of return, the operator's name, and the machine's current condition. A thorough inspection is carried out to check for any signs of damage, wear and tear, fuel levels, or technical issues. If any problems are found, they are documented for maintenance or repair. The machine is then cleaned, refuelled (if required), and properly stored in its designated area to ensure it is ready for the next operation. Recording this information in a logbook or farm management system helps maintain accurate usage records, track machine health, and ensure accountability. You can visually analyse the check in usage of the machinery. You can easily filter out weekly, monthly and yearly check in usage. </p>
-           <h3 className="text-primary-activelink text-[17px] font-montserrat font-normal px-10">Add Check-In</h3>
+           <h2 className="text-primary-activelink text-[17px] font-montserrat font-normal pl-10">Add Check-In</h2>
            <ul className="list-disc">
         <li>Go to{" "}
             <span className="text-primary-activelink font-semibold">

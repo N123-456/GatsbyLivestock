@@ -89,46 +89,47 @@ const planting = () => {
             </span>
             : In the crop type and location, you will enter what crop you want to plant and on which farm location you want to plant. How the crop will be planted like 
             <br />
-            
-            <ul className="font-semibold">
+            <br/>
+            <ul className="pl-[15px] font-semibold text-primary-activelink list-disc">
               <li>
-                ❖	Planted in Beds
+                Planted in Beds
               </li>
               <li>
-                ❖	Cover Crop
+                Cover Crop
               </li>
               <li>
-               ❖	Row Crop
+               Row Crop
               </li>
               <li>
-               ❖	Other
+               Other
               </li>
            
-               </ul>
-               <ul>
-              <li> If the crop will be planted in beds, enter the following details:</li>
+               </ul><br/>
+                  <p> If the crop will be planted in beds, enter the following details:</p>
+               <ul className="list-disc">
+           
               <br/>
               <li>
-                ❖	Choose the unit of measurement (Centimetre, Meter, Inch, Feet).
+                Choose the unit of measurement (Centimetre, Meter, Inch, Feet).
               </li>
               <li>
-               ❖	Enter how many beds you will use for planting.
+               Enter how many beds you will use for planting.
               </li>
               <li>
-               ❖	Enter the length, width, and height of each bed.
+               Enter the length, width, and height of each bed.
               </li>
               <li>
-               ❖	Enter how many rows you will plant in each bed.
+               Enter how many rows you will plant in each bed.
               </li>
               <li>
-               ❖	Land Area will be calculated automatically on which the crop will be planted.
+               Land Area will be calculated automatically on which the crop will be planted.
               </li>
               <li>
-                ❖	Choose the direction for planting (Away from Sun, Towards Sun).
+                Choose the direction for planting (Away from Sun, Towards Sun).
               </li>
               <li>If the crop is planted as cover crop, row crop or any other, enter the following details:</li>
-              <li>❖	Enter the land area on which the crop will be planted.</li>
-              <li>❖	Choose the direction for planting (Away from Sun, Towards Sun).</li>
+              <li>Enter the land area on which the crop will be planted.</li>
+              <li>Choose the direction for planting (Away from Sun, Towards Sun).</li>
             </ul>
             <div className="pl-13 pt-8 flex justify-center">
               {listview && (
@@ -149,22 +150,22 @@ const planting = () => {
               )}
             </div>
             <p className="font-semibold font-primary-pheading">Seed Details:</p>
-            <ul className="text-primary-subheading font-normal text-[18px] font-montserrat">
+            <ul className="text-primary-subheading font-normal text-[18px] font-montserrat list-disc">
               <li>
-               ❖	Select the company that provided the seeds.
+               Select the company that provided the seeds.
               </li>
               <li>
-                ❖	Choose the type of seed being used.
+                Choose the type of seed being used.
               </li>
               <li>
-              ❖	Enter the total amount of seeds you have for planting.
+              Enter the total amount of seeds you have for planting.
               </li>
               <li>
-                ❖	Choose the unit of measurement for the seed quantity (e.g., KG, grams).
+                Choose the unit of measurement for the seed quantity (e.g., KG, grams).
               </li>
-              <li>❖	Enter the lot number of the seed batch for tracking purposes.</li>
+              <li>Enter the lot number of the seed batch for tracking purposes.</li>
   
-              <li>❖	Enter the origin or source of the seeds (country or region).</li>
+              <li>Enter the origin or source of the seeds (country or region).</li>
             </ul>
             <div className="pl-13 pt-8 flex justify-center">
               {listview && (
@@ -175,27 +176,27 @@ const planting = () => {
                 />
               )}
             </div><br/>
-            <p className="font-semibold font-primary-pheading">Planting Details.</p>
-            <ul className=" font-normal">
-              <li>❖	Select the unit of measurement for input (Centimetre, Meter, Inch, Feet).</li>
-              <li>❖	Enter the specific variety of the crop you are planting.</li>
-              <li>❖	Enter the distance between rows in your planting beds.</li>
-              <li>❖	Choose how you are starting the crops (Nursery in Grounds, Nursery in Trays, Bulbs/Cloves, Remove Root Stock, Grafting, and Others).</li>
-              <li>❖	Enter the total number of plants per acre.</li>
-              <li>❖	Enter the space between each plant in the row.</li>
-              <li>❖	Enter the expected number of days for the seeds to start emerging after planting.</li>
-           <li>❖	Enter the recommended planting depth for your crop.</li>
-           <li>❖	Select the date and time when the seeds will be sown.</li>
-           <li>❖	Specify the material used for sowing.</li>
-           <li>❖	Enter the number of seeds to plant in each hole.</li>
-           <li>❖	Select the date and time for transplanting, if applicable.</li>
-           <li>❖	Enter the estimated germination rate for the seeds (percentage).</li>
-           <li>❖	Choose the growth stage of the crop (Seed Started, Germination, Seeding, Vegetative, Flowering, Ripening, Complete). You can later modify the growth stage of the crop.</li>
-           <li>❖	If you will check the box, task will automatically be created for that particular planting which you can modify or add according to your needs. If you want to see the list of tasks for a particular crop</li>
-            <li>✔	Click on three dots.</li>
-            <li>✔	Click on Tasks button</li>
-            <li>✔	Tasks list will open.</li>
-            <li>✔	You can add, edit, delete, search and view the tasks.</li>
+            <p className="font-semibold font-primary-pheading ">Planting Details.</p>
+            <ul className=" font-normal list-disc">
+              <li>Select the unit of measurement for input (Centimetre, Meter, Inch, Feet).</li>
+              <li>Enter the specific variety of the crop you are planting.</li>
+              <li>Enter the distance between rows in your planting beds.</li>
+              <li>Choose how you are starting the crops (Nursery in Grounds, Nursery in Trays, Bulbs/Cloves, Remove Root Stock, Grafting, and Others).</li>
+              <li>Enter the total number of plants per acre.</li>
+              <li>Enter the space between each plant in the row.</li>
+              <li>Enter the expected number of days for the seeds to start emerging after planting.</li>
+           <li>Enter the recommended planting depth for your crop.</li>
+           <li>Select the date and time when the seeds will be sown.</li>
+           <li>Specify the material used for sowing.</li>
+           <li>Enter the number of seeds to plant in each hole.</li>
+           <li>Select the date and time for transplanting, if applicable.</li>
+           <li>Enter the estimated germination rate for the seeds (percentage).</li>
+           <li>Choose the growth stage of the crop (Seed Started, Germination, Seeding, Vegetative, Flowering, Ripening, Complete). You can later modify the growth stage of the crop.</li>
+           <li>If you will check the box, task will automatically be created for that particular planting which you can modify or add according to your needs. If you want to see the list of tasks for a particular crop</li>
+           <ul className="text-primary-activelink font-semibold list-disc"> <li>Click on three dots.</li>
+            <li>Click on Tasks button</li>
+            <li>Tasks list will open.</li>
+            <li>You can add, edit, delete, search and view the tasks.</li></ul>
             </ul>
             <div className="pl-13 pt-8 flex justify-center">
               {listview && (
@@ -206,25 +207,25 @@ const planting = () => {
                 />
               )}
             </div><br/><br/>
-            <p className="font-semibold">⮚	Estimated Harvest Details:</p>
-            <ul className="font-normal text-[18px] font-montserrat ">
+            <p className="font-semibold">Estimated Harvest Details:</p>
+            <ul className="font-normal text-[18px] font-montserrat list-disc">
               <li>
-               ❖	What is the expected date to harvest the crop.
+               What is the expected date to harvest the crop.
               </li>
-              <li>❖	Maturity days will calculated automatically based on sowing and harvesting date.</li>
-              <li>❖	How many days it will take to harvest the crop will be entered in harvest window.</li>
+              <li>Maturity days will calculated automatically based on sowing and harvesting date.</li>
+              <li>How many days it will take to harvest the crop will be entered in harvest window.</li>
               <li>
-           ❖	How much you will lost during the harvest will be entered in est. Harvest lost.
-              </li>
-              <li>
-               ❖	Select the harvest unit (KG, Maunds)
+           How much you will lost during the harvest will be entered in est. Harvest lost.
               </li>
               <li>
-               ❖	How much estimated yield will be produced will be entered in Est. Yield Per Acre.
+               Select the harvest unit (KG, Maunds)
               </li>
-              <li>❖	What is the unit price per kg/maund for that particular crop.</li>
-              <li>❖	Estimated Revenue will be calculated automatically.</li>
-              <li>❖	How much average height will be of the crop at the time of harvesting.</li>
+              <li>
+               How much estimated yield will be produced will be entered in Est. Yield Per Acre.
+              </li>
+              <li>What is the unit price per kg/maund for that particular crop.</li>
+              <li>Estimated Revenue will be calculated automatically.</li>
+              <li>How much average height will be of the crop at the time of harvesting.</li>
             <li>Click on submit button.</li>
             <li>Crop planting will be added successfully.</li>
             </ul>
@@ -280,7 +281,7 @@ const planting = () => {
                 If any planting details changes, you can easily edit the
                 details. For that:
                 <br /><br/>
-                <ul className="pl-[15px] list-disc text-primary-activelink">
+                <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
                   <li>
                     Click on the edit icon against the crop you want to
                     edit.
@@ -305,7 +306,7 @@ const planting = () => {
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
               If you want to delete any crop planting, you can easily do so.
                 <br /><br/>
-                <ul className="pl-[15px] list-disc text-primary-activelink">
+                <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
                   <li>
                     Click on the delete icon against the row you want to delete in the planting’s table.
                   </li>
@@ -333,7 +334,7 @@ const planting = () => {
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
               You can easily view the details of the planting. For that:
                 <br /><br/>
-                <ul className="pl-[15px] list-disc text-primary-activelink">
+                <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
                   <li>
                     Hover on three dots.
                   </li>

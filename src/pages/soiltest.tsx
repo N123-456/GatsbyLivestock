@@ -98,7 +98,7 @@ const soiltest = () => {
             For adding a soil test:
             <br />
             <br />
-            <ul className="list-disc text-primary-activelink">
+            <ul className="list-disc text-primary-activelink font-semibold">
            <li> Go to farm locations tab.</li>
            <li> Hover on three dots against the farm.</li>
             <li>location you want to add soil test.</li>
@@ -144,7 +144,7 @@ const soiltest = () => {
                   />
                 )}
               </div>
-
+<br/><br/>
               <li>
                 <span className="text-primary-pheading font-semibold">
                   Soil Chemical Properties:{" "}
@@ -169,7 +169,7 @@ const soiltest = () => {
                   />
                 )}
               </div>
-
+<br/>
               <li>Optionally, you can upload the soil test report document.</li>
               <li>Click on submit button.</li>
               <li>Soil test will be added successfully.</li>
@@ -228,7 +228,7 @@ const soiltest = () => {
                 the details. For that:
                 <br />
                 <br />
-                <ul className="pl-[15px] list-disc text-primary-activelink">
+                <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
                   <li>
                     Click on the edit icon against the soil test you want to
                     edit.
@@ -255,7 +255,7 @@ const soiltest = () => {
                 If you want to delete the soil test, you can easily do so.
                 <br />
                 <br />
-                <ul className="pl-[15px] list-disc text-primary-activelink">
+                <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
                   <li>
                     Click on the delete icon against the row you want to
                     delete in the soil test’s table.
@@ -288,7 +288,7 @@ const soiltest = () => {
                 You can easily view the details of the soil test. For that:
                 <br />
                 <br />
-                <ul className="pl-[15px] list-disc text-primary-activelink">
+                <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
                   <li>Hover on three dots.</li>
                   <li>Click on view button.</li>
                   <li>soil Test details page will open.</li>

@@ -1,112 +1,116 @@
 import React, { useState } from "react";
-import SideNavBar from "./SideNavBar";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, Link, useStaticQuery } from "gatsby";
+import { IconChevronDown, IconChevronRight } from "@tabler/icons-react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-const Navbar = () => {
-  const [activeLabel, setActiveLabel] = useState("/introduction");
-  const navData = [
-    { label: "Introduction", link: "/introduction" },
-    { label: "Dashboard", link: "/" },
-    { label: "Tasks", link: "/tasks" },
-    {
-      label: "Farm Location",
+const Sidebar = () => {
+  const [activeLink, setActiveLink] = useState("Introduction");
+  const [openMenus, setOpenMenus] = useState({});
 
-      links: [
-        { label: "Add Location", link: "/addlocation" },
-        { label: "Soil Test", link: "/soiltest" },
-        { label: "Water Test", link: "/watertest" },
+  const handleLinkClick = (link) => {
+    setActiveLink(link);
+  };
+
+  const toggleSubmenu = (menu) => {
+    setOpenMenus((prev) => ({
+      ...prev,
+      [menu]: !prev[menu],
+    }));
+  };
+
+  const menuItems = [
+    { name: "Introduction", path: "/introduction" },
+    { name: "Dashboard", path: "/dashboard" },
+    { name: "Tasks", path: "/tasks" },
+    {
+      name: "Farm Location",
+      sublinks: [
+        { name: "Add Location", path: "/addlocation" },
+        { name: "Soil Test", path: "/soiltest" },
+        { name: "Water Test", path: "/watertest" },
       ],
     },
     {
-      label: "Planting",
-
-      links: [
-        { label: "Add New Planting", link: "/planting" },
-        { label: "Fertilizers", link: "/fertilizers" },
-        { label: "Chemicals", link: "/pesticides" },
-        { label: "Harvests", link: "/harvest" },
-        { label: "Field Inspections", link: "/fieldinspection" },
-        { label: "Sales After Storage", link: "/harvest" },
-        { label: "Health Monitoring", link: "/harvest" },
+      name: "Planting",
+      sublinks: [
+        { name: "Add New Planting", path: "/planting" },
+        { name: "Fertilizers", path: "/fertilizers" },
+        { name: "Chemicals", path: "/pesticides" },
+        { name: "Harvests", path: "/harvest" },
+        { name: "Field Inspections", path: "/fieldinspection" },
+        { name: "Sales After Storage", path: "/planting" },
+        { name: "Health Monitoring", path: "/planting" },
       ],
     },
     {
-      label: "Orchards",
-
-      links: [
-        { label: "Add New Orchard", link: "" },
-        { label: "Fertilizers", link: "" },
-        { label: "Chemicals", link: "" },
-        { label: "Harvests", link: "" },
-        { label: "Field Inspections", link: "" },
-        { label: "Sales After Storage", link: "" },
-        { label: "Health Monitoring", link: "" },
-      ],
-    },
-   {
-  label: "Warehouse",
-  links: [
-    {
-      label: "Add Warehouse",link:"/warehouse",
-      links: [
-        { label: "Shed", link: "/warehouse/shed" },
-        { label: "Inputs/Technology Solutions", link: "/warehouse/inputs" },
-        { label: "Vaccination Center", link: "/warehouse/vaccination" },
-        { label: "Feed/Forage", link: "/warehouse/feed" },
-      ],
-    },
-  ],
-},
-
-
-    {
-      label: "Inventory",
-
-      links: [
-        { label: "Add Inventory", link: "/inventory" },
-        { label: "Purchase", link: "/purchase" },
-        { label: "Transfer", link: "/purchase" },
+      name: "Orchards",
+      sublinks: [
+        { name: "Add New Orchard", path: "/warehouse" },
+        { name: "Fertilizers", path: "/warehouse" },
+        { name: "Chemicals", path: "/warehouse" },
+        { name: "Harvests", path: "/warehouse" },
+        { name: "Field Inspections", path: "/warehouse" },
+        { name: "Sales After Storage", path: "/warehouse" },
+        { name: "Health Monitoring", path: "/warehouse" },
       ],
     },
     {
-      label: "Machinery/Tools",
-
-      links: [
-        { label: "Add New Machinery ", link: "/machinery" },
-        { label: "Maintenance", link: "/maintenance" },
-        { label: "Track Usage", link: "/tracking" },
+      name: "Warehouse",
+      sublinks: [
+        {
+          name: "Add Warehouse",
+          sublinks: [
+            { name: "Shed", path: "/warehouse" },
+            { name: "Inputs/Technology ", path: "/warehouse" },
+            { name: "Vaccination Center", path: "/maintenance" },
+            { name: "Feed/Forage", path: "/maintenance" },
+          ],
+        },
       ],
     },
-    { label: "Contact", link: "/tracking" },
     {
-      label: "Financials",
-
-      links: [
-        { label: "General Legder", link: "" },
-        { label: "Trial Balance", link: "" },
-        { label: "Balance Sheet", link: "" },
-        { label: "Record Transaction", link: "" },
-        { label: "Create Expense", link: "" },
-        { label: "Add Account Head", link: "" },
+      name: "Inventory",
+      sublinks: [
+        { name: "Purchase", path: "/maintenance" },
+        { name: "Transfer", path: "/maintenance" },
       ],
     },
-
-    { label: "Manage Users", link: "/inventory" },
-
     {
-      label: "Reports",
-
-      links: [
-        { label: "Crop Activity Reports", link: "" },
-        { label: "Equipment Reports", link: "" },
-        { label: "Inventory Reports", link: "" },
-        { label: "Orchard Reports", link: "" },
-        { label: "Create Expense", link: "" },
-        { label: "P&L Reports", link: "" },
+      name: "Machinery/Tools",
+      sublinks: [
+        { name: "Add New Machinery", path: "/maintenance" },
+        { name: "Maintenance", path: "/maintenance" },
+        { name: "Track Usage", path: "/tracking" },
+      ],
+    },
+    { name: "Contact", path: "/contact" },
+    {
+      name: "Financials",
+      sublinks: [
+        { name: "General Ledger", path: "/maintenance" },
+        { name: "Trial Balance", path: "/maintenance" },
+        { name: "Balance Sheet", path: "/maintenance" },
+        { name: "Record Transaction", path: "/maintenance" },
+        { name: "Create Expense", path: "/maintenance" },
+        { name: "Add Account Head", path: "/maintenance" },
+      ],
+    },
+    {
+      name: "Manage Users",
+      path: "/user",
+    },
+    {
+      name: "Reports",
+      sublinks: [
+        { name: "Crop Activity Reports", path: "/maintenance" },
+        { name: "Equipment Reports", path: "/maintenance" },
+        { name: "Inventory Reports", path: "/maintenance" },
+        { name: "Orchard Reports", path: "/maintenance" },
+        { name: "P&L Reports", path: "/maintenance" },
       ],
     },
   ];
+
   const data = useStaticQuery(graphql`
     query {
       fmslogo: file(relativePath: { eq: "fmslogo.png" }) {
@@ -118,41 +122,159 @@ const Navbar = () => {
   `);
 
   const fmslogo = getImage(data.fmslogo);
-  return (
-    <nav className="fixed top-0 left-0 z-50 w-80 h-screen overflow-y-auto scrollbar-hidden bg-[#F3FBF2] shadow-lg p-4">
-      {/* Header */}
-      <div className="inline-block border-b border-[#DBDBDB] w-[240px] mb-4 pb-6 ">
-        <div className="flex items-center space-x-2 pl-[20px] pt-[23px]">
-          {fmslogo && (
-            <GatsbyImage
-              image={fmslogo}
-              alt={""}
-              className="h-[54px] w-[29px]"
-            />
-          )}
-          <h2 className="font-niramit text-[17px] font-bold text-primary-activelink">
-            FARM MANAGEMENT
-            <br />
-            SYSTEM
-          </h2>
-        </div>
-      </div>
 
-      {/* Links */}
-      <div className="space-y-2 h-[calc(100%-120px)]">
-        {navData.map((item, index) => (
-          <SideNavBar
-            key={index}
-            label={item.label}
-            links={item.links}
-            setActiveLabel={setActiveLabel}
-            activeLabel={activeLabel}
-            link={item.link}
-          />
-        ))}
-      </div>
-    </nav>
+  return (
+    <div>
+      <aside className="fixed top-0 left-0 h-full w-[250px] overflow-y-auto scrollbar-hidden bg-[#F3FBF2] shadow-lg">
+        <div className="p-4 pt-[23px] pb-2 pr-[20px] pl-[20px]">
+          <h1 className="text-lg font-bold flex items-center">
+            <span role="img" aria-label="logo" className="mr-2">
+              {fmslogo && (
+                <GatsbyImage
+                  image={fmslogo}
+                  alt="Farm Management System Logo"
+                  className="h-[54px] w-[29px]"
+                />
+              )}
+            </span>
+            <p className="font-niramit text-[17px] font-bold text-primary-activelink">
+              FARM MANAGEMENT <br />
+              SYSTEM
+            </p>
+          </h1>
+        </div>
+        <div className="border-b border-[#DBDBDB] w-[207px] ml-[22px] mt-[12px]" />
+        <nav className="mt-3 space-y-2">
+          <ul>
+            {menuItems.map((item) => (
+              <li key={item.name} className="mb-1">
+                <div
+                  className={`flex items-center justify-between pl-[20px] py-2 text-sm font-montserrat cursor-pointer relative ${
+                    item.sublinks && openMenus[item.name]
+                      ? "text-primary-activelink font-bold"
+                      : activeLink === item.name
+                      ? "text-primary-activelink font-bold"
+                      : "text-primary-nlink font-medium"
+                  }`}
+                  onClick={() => {
+                    if (item.sublinks) {
+                      toggleSubmenu(item.name);
+                    } else {
+                      handleLinkClick(item.name);
+                    }
+                  }}
+                >
+                  {/* Custom left border for open submenus */}
+                  {item.sublinks && openMenus[item.name] && (
+                    <span
+                      className="absolute left-4 top-[25px] transform -translate-y-1/2 w-[2px] h-4 bg-primary-activelink"
+                      style={{ height: "16px" }}
+                    />
+                  )}
+                  <span className="flex-1 pl-2 pt-2">
+                    {item.path ? (
+                      <Link to={item.path}>{item.name}</Link>
+                    ) : (
+                      item.name
+                    )}
+                    {/* Show border-b only if sublinks are not open */}
+                    {!item.sublinks || !openMenus[item.name] ? (
+                      <span className="block border-b border-[#DBDBDB] pb-2 w-[207px]" />
+                    ) : null}
+                  </span>
+                  {item.sublinks && (
+                    <span>
+                      {openMenus[item.name] ? (
+                        <IconChevronDown size={16} />
+                      ) : (
+                        <IconChevronRight size={16} />
+                      )}
+                    </span>
+                  )}
+                </div>
+                {item.sublinks && openMenus[item.name] && (
+                  <>
+                    <ul className="pl-6 pt-2">
+                      {item.sublinks.map((sublink) => (
+                        <li
+                          key={sublink.name}
+                          className="text-[12px] text-primary-nlink font-medium font-montserrat"
+                        >
+                          <div
+                            className={`flex items-center justify-between px-1 py-1 text-sm cursor-pointer ${
+                              sublink.sublinks && openMenus[sublink.name]
+                                ? "text-primary-activelink text-[13px] font-bold font-montserrat pl-1"
+                                : activeLink === sublink.name
+                                ? "text-primary-activelink"
+                                : ""
+                            }`}
+                            onClick={(e) => {
+                              if (sublink.sublinks) {
+                                e.stopPropagation();
+                                toggleSubmenu(sublink.name);
+                              } else {
+                                handleLinkClick(sublink.name);
+                              }
+                            }}
+                          >
+                            <span className="flex-1">
+                              {sublink.path ? (
+                                <Link to={sublink.path} className="flex-1">
+                                  <span className="mr-2 text-black">•</span>
+                                  {sublink.name}
+                                </Link>
+                              ) : (
+                                <span className="flex-1">
+                                  <span className="mr-2">•</span>
+                                  {sublink.name}
+                                </span>
+                              )}
+                            </span>
+                            {sublink.sublinks && (
+                              <span>
+                                {openMenus[sublink.name] ? (
+                                  <IconChevronDown size={16} />
+                                ) : (
+                                  <IconChevronRight size={16} />
+                                )}
+                              </span>
+                            )}
+                          </div>
+                          {sublink.sublinks && openMenus[sublink.name] && (
+                            <ul className="ml-2">
+                              {sublink.sublinks.map((nestedSublink) => (
+                                <li key={nestedSublink.name}>
+                                  <Link
+                                    to={nestedSublink.path}
+                                    className={`flex items-center px-4 py-1 text-sm font-montserrat ${
+                                      activeLink === nestedSublink.name
+                                        ? "text-primary-activelink "
+                                        : "text-primary-nlink font-medium"
+                                    }`}
+                                    onClick={() =>
+                                      handleLinkClick(nestedSublink.name)
+                                    }
+                                  >
+                                    <span className="mr-2">•</span>
+                                    {nestedSublink.name}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+                        </li>
+                      ))}
+                    </ul>
+                    <span className="block border-b border-[#DBDBDB] pb-2 w-[207px] ml-[20px]" />
+                  </>
+                )}
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </aside>
+    </div>
   );
 };
 
-export default Navbar;
+export default Sidebar;

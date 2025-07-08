@@ -78,21 +78,23 @@ const fertilizers = () => {
             <br />
             <br />Click on{" "}
             <span className="text-primary-activelink font-semibold">
-              "Planting"
-            </span>
+              "Planting" 
+            </span>{" "}
             tab.
             <br />
             <p>Click on three dots against the crop you want to add fertilizer data.</p>
             <p>Choose Fertilizer from the options.</p>
-            <p>Click on “Add Fertilizer” button.</p>
-            <p>Enter the required details as follows:</p>
+            <p>Click on <span className="text-primary-activelink font-semibold">
+              "Add Fertilizer" 
+            </span>{" "} button.</p>
+            <p>Enter the required details as follows:</p><br/>
             <ul className="pl-[15px] list-disc">
-                <li>▪ Enter the product details including product name, fertilizer type from the available types, brand of the fertilizer, when was the fertilizer applied to the crop, and how was the fertilizer applied i.e., the application method.</li>
-                <li>▪ Now enter the usage details:</li>
-                <ul className="text-primary-pheading">
-                    <li>❖ If the fertilizer you applied was taken from the inventory, choose the option “inventory”.</li>
-                    <li>❖ Choose the inventory. </li>
-                    <li>❖ After choosing the inventory, available quantity of the inventory will be automatically shown. Enter the quantity from the available quantity that was used. The quantity cannot exceed the available quantity.</li>
+                <li>Enter the product details including product name, fertilizer type from the available types, brand of the fertilizer, when was the fertilizer applied to the crop, and how was the fertilizer applied i.e., the application method.</li>
+                <li>Now enter the usage details:</li><br/>
+                <ul className="list-disc">
+                    <li>If the fertilizer you applied was taken from the inventory, choose the option “inventory”.</li>
+                    <li>Choose the inventory. </li>
+                    <li>After choosing the inventory, available quantity of the inventory will be automatically shown. Enter the quantity from the available quantity that was used. The quantity cannot exceed the available quantity.</li>
                  <div className="pl-13 pt-8 flex justify-center">
               {listview && (
                 <GatsbyImage
@@ -102,8 +104,8 @@ const fertilizers = () => {
                 />
               )}
             </div>
-            <li>❖ If the fertilizer you applied was not available in the inventory and you have to buy the fertilizer, choose the option “New Buy”.</li>
-            <li>❖ Enter the details when the fertilizer was bought, how much did the fertilizer cost, how much quantity did you buy, transaction details like head of accounts, transaction id/cheque no in case head of accounts is bank, and from whom you bought the fertilizer i.e., the vendor’s name.</li>   
+            <li>If the fertilizer you applied was not available in the inventory and you have to buy the fertilizer, choose the option “New Buy”.</li>
+            <li>Enter the details when the fertilizer was bought, how much did the fertilizer cost, how much quantity did you buy, transaction details like head of accounts, transaction id/cheque no in case head of accounts is bank, and from whom you bought the fertilizer i.e., the vendor’s name.</li>   
                  <div className="pl-13 pt-8 flex justify-center">
               {listview && (
                 <GatsbyImage
@@ -114,11 +116,11 @@ const fertilizers = () => {
               )}
             </div>
                 </ul>
-            </ul>
+            </ul><br/>
             <p>Click on the submit button.</p>
             <p>Fertilizer will be added successfully.</p>
             <p>If the fertilizer was a new buy, in that case it was an expense so a transaction will be created.</p>
-            <br /> 
+            <br /> </div>
             <div className="flex items-center pt-5 space-x-4">
             <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
               Step 2
@@ -131,7 +133,7 @@ const fertilizers = () => {
               You can search the fertilizer from the list of fertilizers of locations
               present in the system. You can search based on either:
               <br />
-              <p>▪ Fertilizer Name: You can search by the name of the Fertilizer.</p>{" "}
+              <p><span className="text-primary-pheading font-semibold">Fertilizer Name</span>: You can search by the name of the Fertilizer.</p>{" "}
 
               <br />
               <p>
@@ -158,7 +160,7 @@ const fertilizers = () => {
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
              If any fertilizer detail you want to change, you can easily edit the details. For that:
                 <br /><br/>
-                <ul className="pl-[15px] list-disc text-primary-activelink">
+                <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
                   <li>
                     Click on the edit icon against the fertilizer you want to
                     edit.
@@ -183,7 +185,7 @@ const fertilizers = () => {
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
               If you want to delete any fertilizer, you can easily do so.
                 <br /><br/>
-                <ul className="pl-[15px] list-disc text-primary-activelink">
+                <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
                   <li>
                     Click on the delete icon against the row you want to delete in the fertilizers’s table.
                   </li>
@@ -212,7 +214,7 @@ const fertilizers = () => {
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
              You can easily view the details of the fertilizer. For that:
                 <br /><br/>
-                <ul className="pl-[15px] list-disc text-primary-activelink">
+                <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
                   <li>
                     Hover on three dots.
                   </li>
@@ -245,7 +247,7 @@ const fertilizers = () => {
             </div>
           </div>
         </div>
-      </div>
+    
     </AppLayout>
   );
 };

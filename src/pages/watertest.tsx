@@ -166,8 +166,8 @@ const watertest = () => {
                   />
                 )}
               </div>
-
-              <li>Optionally, you can upload the water test report document.</li><br/>
+<br/>
+              <li>Optionally, you can upload the water test report document.</li>
               <li>Click on submit button.</li>
               <li>Water test will be added successfully.</li>
             </ul>
@@ -192,11 +192,11 @@ const watertest = () => {
             <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
               You can search the water test from the list of water tests present
               in the system. You can search based on:
-              <br /><br/>
+              <br />
               <p className="pl-[15px] ">
-                Name: You can search by the name of the laboratory where the
+                <span className="text-primary-pheading font-semibold">Name</span>: You can search by the name of the laboratory where the
                 test was performed.
-              </p><br/>{" "}
+              </p><br/>
               <p>
                 Then click on the Search button. Also, you can click on the
                 refresh button to refresh the data.
@@ -225,7 +225,7 @@ const watertest = () => {
                 the details. For that:
                 <br />
                 <br />
-                <ul className="pl-[15px] list-disc text-primary-activelink">
+                <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
                   <li>
                     Click on the edit icon against the water test you want to
                     edit.
@@ -252,7 +252,7 @@ const watertest = () => {
                 If you want to delete the water test, you can easily do so.
                 <br />
                 <br />
-                <ul className="pl-[15px] list-disc text-primary-activelink">
+                <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
                   <li>
                     Click on the delete icon against the row you want to
                     delete in the water test’s table.
@@ -286,7 +286,7 @@ const watertest = () => {
                 You can easily view the details of the water test. For that:
                 <br />
                 <br />
-                <ul className="pl-[15px] list-disc text-primary-activelink">
+                <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
                   <li>Hover on three dots.</li>
                   <li>Click on view button.</li>
                   <li>water Test details page will open.</li>

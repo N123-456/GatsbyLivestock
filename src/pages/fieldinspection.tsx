@@ -79,18 +79,18 @@ const fieldinspection = () => {
             <br />Click on{" "}
             <span className="text-primary-activelink font-semibold">
               "Planting"
-            </span>
+            </span>{" "}
             tab.
             <br />
             <p>Click on three dots against the crop you want to add field inspection data.</p>
             <p>Choose field inspection from the options.</p>
             <p>Click on “Add Field Inspection” button.</p>
-            <p>Enter the required details as follows:</p>
-            <ul>
+            <p>Enter the required details as follows:</p><br/>
+            <ul className="list-disc">
                 <li><span className="text-primary-pheading font-semibold">Field Inspection Details</span>: When was the field inspection performed, who was the field scout, why the field inspection was conducted, how much cost was incurred on the field inspection, transaction details like head of accounts, transaction id/ cheque no in case head of accounts is bank, who was the customer.</li>
                 <li><span className="text-primary-pheading font-semibold">Plant Health Levels</span>: How much has the pest damaged the crop (low, high), is the crop diseased (infested, highly infested, low), and how much weeds are there in the crop (severe, less or none).</li>
                 <li><span className="text-primary-pheading font-semibold">Disaster Level</span>: Intensity of heat wave (Severe, Moderate, Minor), intensity of rainfall (Severe, Moderate, Minor), effect of wind on crop (Severe, Moderate, Minor), smog density (Severe, Moderate, Minor), hailstorm intensity (Severe, Moderate, Minor), and frost condition (Severe, Moderate, Minor).</li>
-                 <div className="pl-13 pt-8 flex justify-center">
+                 <br/><div className="pl-13 pt-8 flex justify-center">
               {listview && (
                 <GatsbyImage
                   image={listview}
@@ -115,7 +115,7 @@ const fieldinspection = () => {
             <p>Click on the submit button.</p>
             <p>Field inspection will be added successfully.</p>
             <p>A transaction will created as expense was incurred for carrying out field inspection.</p>
-            <br /> 
+            <br /></div>
             <div className="flex items-center pt-5 space-x-4">
             <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
               Step 2
@@ -158,7 +158,7 @@ const fieldinspection = () => {
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
              If any field inspection detail you want to change, you can easily edit the details. For that:
                 <br /><br/>
-                <ul className="pl-[15px] list-disc text-primary-activelink">
+                <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
                   <li>
                     Click on the edit icon against the field inspection you want to
                     edit.
@@ -183,7 +183,7 @@ const fieldinspection = () => {
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
               If you want to delete any field inspection, you can easily do so.
                 <br /><br/>
-                <ul className="pl-[15px] list-disc text-primary-activelink">
+                <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
                   <li>
                     Click on the delete icon against the row you want to delete in the field inspection’s table.
                   </li>
@@ -201,17 +201,18 @@ const fieldinspection = () => {
                   />
                 )}
               </div><br/><br/>
+                    <div className="flex items-center pt-5 space-x-4">
 <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
               Step 5
             </h2>
-            <div className="flex-1 h-px bg-primary-line"></div>
+            <div className="flex-1 h-px bg-primary-line"></div></div>
                 <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
               View Field Inspection:
               </h2>
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
              You can easily view the details of the field inspection. For that:
                 <br /><br/>
-                <ul className="pl-[15px] list-disc text-primary-activelink">
+                <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
                   <li>
                     Hover on three dots.
                   </li>
@@ -242,7 +243,7 @@ const fieldinspection = () => {
             </div>
           </div>
         </div>
-      </div>
+  
     </AppLayout>
   );
 };

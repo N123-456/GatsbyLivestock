@@ -110,14 +110,14 @@ const addlocation = () => {
           <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
             For adding a location:
             <br />
-            <br />▪ Click on{" "}
+            <br />Click on{" "}
             <span className="text-primary-activelink font-semibold">
               "Add location"
             </span>
             button.
             <br />
-            ▪ Enter the required information.
-            <br />▪ First enter the{" "}
+            Enter the required information.
+            <br />First enter the{" "}
             <span className="text-primary-activelink font-semibold">
               name and type
             </span>
@@ -216,7 +216,7 @@ const addlocation = () => {
             <br/><br/>
             ▪ Enter the required information.
             <br />
-            <ul className="text-primary-activelink font-semibold">
+            <ul className="text-primary-activelink font-semibold list-disc">
               <li>Province</li>
               <li>Division</li>
               <li>District</li>
@@ -233,7 +233,7 @@ const addlocation = () => {
               )}
             </div>
             <br/><br/>
-            ▪ Enter the additional information including:
+            Enter the additional information including:
             <br />
             <ul className="text-primary-subheading font-normal text-[18px] font-montserrat pt-5 list-disc">
               <li>
@@ -269,7 +269,7 @@ const addlocation = () => {
                 land is:
               </li>
             </ul>
-            <ul className="text-primary-activelink list-circle font-semibold pl-[15px]">
+            <ul className="text-primary-activelink list-disc font-semibold pl-[15px]">
               <li>Rainfed</li>
               <li>By canal</li>
               <li>By Tube Wells</li>
@@ -285,9 +285,9 @@ const addlocation = () => {
               )}
             </div>
             <br/><br/>
-            ▪ Enter the required information.
+            Enter the required information:
             <br />
-            <ul className="text-primary-activelink font-semibold">
+            <ul className="text-primary-activelink font-semibold list-disc">
               <li>Province</li>
               <li>Division</li>
               <li>District</li>
@@ -304,26 +304,26 @@ const addlocation = () => {
               )}
             </div>
             <br/><br/>
-            <p>▪ Choose the location boundaries:</p>
+            <p>Choose the location boundaries:</p><br/>
             <h1 className="font-semibold">Mark Boundaries: </h1>
             <br />
             <ul className="text-primary-subheading font-normal text-[18px] font-montserrat ">
               <li>
-                ⮚ Click on the “Mark Boundaries” button. A satellite imagery map
+                Click on the <span className="text-primary-activelink font-semibold">“Mark Boundaries”</span> button. A satellite imagery map
                 will open.
               </li>
-              <li>⮚ Enter the location name in the search bar.</li>
-              <li>⮚ Zoom In or zoom out to reach the exact location.</li>
+              <li>Enter the location name in the search bar.</li>
+              <li>Zoom In or zoom out to reach the exact location.</li>
               <li>
-                ⮚ After reaching the desired location mark the boundaries of
+                After reaching the desired location mark the boundaries of
                 your farm location.
               </li>
               <li>
-                ⮚ Additionally, you can Upload KML file to get the location
+                Additionally, you can Upload KML file to get the location
                 marked on the map.
               </li>
               <li>
-                ⮚ After the boundaries are marked, click on the save button.
+                After the boundaries are marked, click on the save button.
               </li>
             </ul>
             <div className="pl-13 pt-8 flex justify-center">
@@ -336,15 +336,15 @@ const addlocation = () => {
               )}
             </div>
             <br/><br/>
-            <ul className="pt-4">
+            <ul className="pt-4 list-disc">
               <li>
-                ▪ Optionally, you can upload the image of your farm location.
+                Optionally, you can upload the image of your farm location.
               </li>
               <li>
-                ▪ When you will mark the boundaries, automatically area of your
+                When you will mark the boundaries, automatically area of your
                 land will be calculated.
               </li>
-              <li>▪ You can change the unit of area as per your choice.</li>
+              <li>You can change the unit of area as per your choice.</li>
             </ul>
             <div className="pl-13 pt-8 flex justify-center">
               {UI && (
@@ -369,25 +369,25 @@ const addlocation = () => {
               present in the system. You can search based on either:
               <br />
               <br />
-              <p>▪ Name: You can search by the name of the location.</p>{" "}
+              <p>Name: You can search by the name of the location.</p>{" "}
               <p>
-                ▪ Type: You can search based on particular type of the location
+                Type: You can search based on particular type of the location
                 which can be:
               </p>
               <br />
-              <ul className="pl-[15px]">
-                <li>⮚ All</li>
-                <li>⮚Animal Enclosures</li>
-                <li>⮚Buffer Zones</li>
-                <li>⮚Buildings</li>
-                <li>⮚ Farm Boundaries</li>
-                <li>⮚ Fields</li>
-                <li>⮚ Greenhouse</li>
-                <li>⮚ Grow Room</li>
-                <li>⮚Irrigation Zones</li>
-                <li>⮚Paddock</li>
-                <li>⮚Pasture</li>
-                <li> ⮚Others</li>
+              <ul className="pl-[15px] text-primary-activelink font-semibold list-disc">
+                <li>All</li>
+                <li>Animal Enclosures</li>
+                <li>Buffer Zones</li>
+                <li>Buildings</li>
+                <li>Farm Boundaries</li>
+                <li>Fields</li>
+                <li>Greenhouse</li>
+                <li>Grow Room</li>
+                <li>Irrigation Zones</li>
+                <li>Paddock</li>
+                <li>Pasture</li>
+                <li>Others</li>
               </ul>
               <p>
                 Then click on the Search button. Also, you can click on the
@@ -415,17 +415,17 @@ const addlocation = () => {
                 If any location details changes, you can easily edit the
                 details. For that:
                 <br /><br/>
-                <ul className="pl-[15px]">
+                <ul className="pl-[15px] text-primary-activelink font-semibold list-disc">
                   <li>
-                    ▪ Click on the edit icon against the location you want to
+                    Click on the edit icon against the location you want to
                     edit.
                   </li>
-                  <li>▪ Location details screen will open.</li>
-                  <li>▪ Click on the field you want to edit.</li>
-                  <li>▪ Make changes in the fields</li>
-                  <li>▪ Click on submit button.</li>
+                  <li>Location details screen will open.</li>
+                  <li>Click on the field you want to edit.</li>
+                  <li>Make changes in the fields</li>
+                  <li>Click on submit button.</li>
                   <li>
-                    ▪ Location details will be edited/updated successfully.
+                    Location details will be edited/updated successfully.
                   </li>
                 </ul>
               </div>
@@ -440,13 +440,13 @@ const addlocation = () => {
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
                If you no longer need any location or that location no more belongs to you and wants to delete the location, you can easily do so.
                 <br /><br/>
-                <ul className="pl-[15px]">
+                <ul className="pl-[15px] text-primary-activelink font-semibold list-disc">
                   <li>
-                    ▪	Click on the delete icon against the row you want to delete in the location’s table.
+                    Click on the delete icon against the row you want to delete in the location’s table.
                   </li>
-                  <li>▪	A dialogue box will appear to confirm whether you want to delete or not.</li>
-                  <li>▪	Click on delete button.</li>
-                  <li>▪	Location will be deleted successfully.</li>
+                  <li>A dialogue box will appear to confirm whether you want to delete or not.</li>
+                  <li>Click on delete button.</li>
+                  <li>Location will be deleted successfully.</li>
                 </ul>
               </div>
                <div className="pl-13 pt-8 flex justify-center">
@@ -469,14 +469,14 @@ const addlocation = () => {
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
                If you no longer need any location or that location no more belongs to you and wants to delete the location, you can easily do so.
                 <br /><br/>
-                <ul className="pl-[15px]">
+                <ul className="pl-[15px] text-primary-activelink font-semibold list-disc">
                   <li>
-                    ▪	Hover on three dots.
+                    Hover on three dots.
                   </li>
-                  <li>▪Click on view button.</li>
-                  <li>▪Click on delete button.</li>
-                  <li>▪Location details page will open.</li>
-                  <li>▪You can print the details of the location.</li>
+                  <li>Click on view button.</li>
+                  <li>Click on delete button.</li>
+                  <li>Location details page will open.</li>
+                  <li>You can print the details of the location.</li>
                 </ul>
               </div>
                <div className="pl-13 pt-8 flex justify-center">

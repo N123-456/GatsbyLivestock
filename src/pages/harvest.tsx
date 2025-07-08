@@ -76,7 +76,7 @@ const harvest = () => {
           <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
             <p>For adding harvest details:</p>
             <br />
-            <br />▪ Click on{" "}
+            <br />Click on{" "}
             <span className="text-primary-activelink font-semibold">
               "Planting"
             </span>
@@ -85,9 +85,9 @@ const harvest = () => {
             <ul className="style-disc">
             <li><p>Click on three dots against the crop you want to add harvest data.</p></li>
             <li><p>Choose harvest from the options.</p></li>
-            <li><p>Click on “Add Pesticides” button.</p></li>
-            <li><p>Enter the required details as follows:</p></li></ul>
-            <ul className="pl-[15px] list-disc text-primary-activelink">
+            <li><p>Click on <span className="text-primary-pheading font-semibold">"Add Pesticides"</span> button.</p></li>
+            <li><p>Enter the required details as follows:</p></li></ul><br/>
+            <ul className="pl-[15px] list-disc">
                 <li> Date & Time: When was the crop harvested, what was the after-harvest process i.e., either the yield was directly sold out or there was further processing on the yield or was stored in inventory. Other than the inventory option, enter the customer’s name who bought the yield. </li>
                 <li>Enter the batch no (e.g. Pick 1, Pick 2 etc.) and classify the grade of yield (e.g. High, Medium, Low):</li>
                 <li>In case the after-harvest process was “Direct Sale”, enter the quantity got in that batch (e.g. 40 KG), revenue per unit (e.g.212 Rs), total revenue will calculated automatically, and transaction details like head of accounts (e.g. Bank) and transaction id/ cheque no (e.g. 8746900987) in case head of accounts was bank. A transaction will be created against it as the harvest is a revenue generated from the farm.</li>
@@ -128,7 +128,7 @@ const harvest = () => {
             <li><p>Click on the submit button.</p></li>
             <li><p>Harvest will be added successfully.</p></li>
             <li><p>You can add more harvest pickings details in the same way.</p></li></ul>
-            <br /> 
+            <br /> </div>
             <div className="flex items-center pt-5 space-x-4">
             <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
               Step 2
@@ -141,7 +141,7 @@ const harvest = () => {
               You can search the harvest from the list of harvests of locations
               present in the system. You can search based on either:
               <br />
-              <p>Batch Number: You can search by the batch number of harvest.</p>{" "}
+              <p><span className="text-primary-pheading font-semibold">Batch Number</span> You can search by the batch number of harvest.</p>{" "}
 
               <br />
               <p>
@@ -168,7 +168,7 @@ const harvest = () => {
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
              If any harvesting detail you want to change, you can easily edit the details. For that:
                 <br /><br/>
-                <ul className="pl-[15px] list-disc text-primary-activelink">
+                <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
                   <li>
                     Click on the edit icon against the harvest you want to
                     edit.
@@ -193,7 +193,7 @@ const harvest = () => {
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
               If you want to delete any harvest, you can easily do so.
                 <br /><br/>
-                <ul className="pl-[15px] list-disc text-primary-activelink">
+                <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
                   <li>
                     Click on the delete icon against the row you want to delete in the harvest’s table.
                   </li>
@@ -211,17 +211,18 @@ const harvest = () => {
                   />
                 )}
               </div>
+               <div className="flex items-center pt-5 space-x-4">
 <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
               Step 5
             </h2>
-            <div className="flex-1 h-px bg-primary-line"></div>
+            <div className="flex-1 h-px bg-primary-line"></div></div>
                 <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
               View Harvest:
               </h2>
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
              You can easily view the details of the harvest. For that:
                 <br /><br/>
-                <ul className="pl-[15px] list-disc text-primary-activelink">
+                <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
                   <li>
                     Hover on three dots.
                   </li>
@@ -254,7 +255,7 @@ const harvest = () => {
             </div>
           </div>
         </div>
-      </div>
+  
     </AppLayout>
   );
 };
