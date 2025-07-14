@@ -70,16 +70,16 @@ const Sidebar = React.memo(() => {
     }
   }, []);
 
-  const toggleSubmenu = useCallback((menu: string, event?: React.MouseEvent) => {
-    if (event) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
-    setOpenMenus((prev) => ({
-      ...prev,
-      [menu]: !prev[menu],
-    }));
-  }, []);
+  // const toggleSubmenu = useCallback((menu: string, event?: React.MouseEvent) => {
+  //   if (event) {
+  //     event.preventDefault();
+  //     event.stopPropagation();
+  //   }
+  //   setOpenMenus((prev) => ({
+  //     ...prev,
+  //     [menu]: !prev[menu],
+  //   }));
+  // }, []);
 
   const menuItems = [
     { name: "Introduction", path: "/introduction" },
@@ -173,6 +173,32 @@ const Sidebar = React.memo(() => {
       ],
     },
   ];
+
+  const toggleSubmenu = useCallback((menu: string, event?: React.MouseEvent) => {
+  if (event) {
+    event.preventDefault();
+    event.stopPropagation();
+  }
+  setOpenMenus((prev) => {
+    const topLevelMenus = menuItems.map((item) => item.name);
+    console.log("Toggling:", menu, "Current openMenus:", prev);
+    if (topLevelMenus.includes(menu)) {
+      const newState = { ...prev };
+      topLevelMenus.forEach((topMenu) => {
+        if (topMenu !== menu) {
+          newState[topMenu] = false;
+        }
+      });
+      newState[menu] = !prev[menu];
+      console.log("New openMenus:", newState);
+      return newState;
+    }
+    return {
+      ...prev,
+      [menu]: !prev[menu],
+    };
+  });
+}, [menuItems]);
 
   const data = useStaticQuery(graphql`
     query {
