@@ -2,11 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-/* global.css or index.css */
 .scrollbar-hidden::-webkit-scrollbar {
-  display: none;
+  width: 6px;
 }
-.scrollbar-hidden {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;     /* Firefox */
+.scrollbar-hidden::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 3px;
 }
+.scrollbar-hidden::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.submenu {
+  transition: max-height 0.3s ease-in-out;
+  max-height: 0;
+  overflow: hidden;
+}
+.submenu.open {
+  max-height: 500px; /* Adjust based on content */
+}
+
+

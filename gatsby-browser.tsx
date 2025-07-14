@@ -1,6 +1,6 @@
 import React from "react";
 import "./src/styles/global.css";
 
-export const wrapPageElement = () => {
-  return ;
-};
+export function wrapPageElement() {
+    return ;
+}
