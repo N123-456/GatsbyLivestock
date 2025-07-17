@@ -212,139 +212,148 @@ const Sidebar = React.memo(() => {
 
   const fmslogo = getImage(data.fmslogo);
 
-  const renderMenuItem = useCallback((item: any) => {
-    const isActive = !item.sublinks && (activeLink === item.path || activeLink === `${item.path}/`);
-    const isOpen = openMenus[item.name];
-    const hasSublinks = item.sublinks && item.sublinks.length > 0;
+ const renderMenuItem = useCallback((item: any) => {
+  const isActive = !item.sublinks && (activeLink === item.path || activeLink === `${item.path}/`);
+  const isOpen = openMenus[item.name];
+  const hasSublinks = item.sublinks && item.sublinks.length > 0;
 
-    return (
-      <div>
-      <li key={item.name} className="mb-1">
-        <button
-         className={`flex items-center w-full text-left pl-4 py-2 pr-0 text-sm font-montserrat cursor-pointer relative ${
-                      item.sublinks && openMenus[item.name]
-                        ? "text-primary-activelink font-bold "
-                        : activeLink === `${item.path}/`
-                        ? "text-primary-activelink font-bold hover:bg-green-200"
-                        : "text-primary-nlink font-medium hover:bg-green-200"
-                    }`}
-          onClick={(e) => {
-            if (hasSublinks) {
-              toggleSubmenu(item.name, e);
-            }
-            
-          }}
-        >
-          {hasSublinks && isOpen && (
-            <span
-              className="absolute left-4 top-[25px] transform -translate-y-1/2 w-[2px] h-4 bg-primary-activelink"
-              style={{ height: "16px" }}
-            />
-          )}
-          <span className="flex-1 pl-2 pt-2">
-            {item.path && !hasSublinks ? (
-              <Link
-                to={item.path}
-                className={` ${
-                  isActive ? "text-primary-activelink font-bold" : "text-primary-nlink"
-                }`}
-              >
-                {item.name}
-              </Link>
-            ) : (
-              item.name
+  return (
+    <div key={item.name}>
+      <li className="mb-1">
+        {item.path && !hasSublinks ? (
+          <Link to={item.path} className="block w-full">
+            <div
+              className={`flex items-center w-full text-left pl-4 py-2 pr-0 text-sm font-montserrat cursor-pointer relative ${
+                isActive
+                  ? "text-primary-activelink font-bold "
+                  : "text-primary-nlink font-medium "
+              }`}
+            >
+              <span className="flex-1 pl-2 pt-2">{item.name}
+              <span className="block border-b border-[#DBDBDB] pb-2 w-[207px]" /></span>
+            </div>
+          </Link>
+        ) : (
+          <button
+            className={`flex items-center w-full text-left pl-4 py-2 pr-0 text-sm font-montserrat cursor-pointer relative ${
+              item.sublinks && openMenus[item.name]
+                ? "text-primary-activelink font-bold "
+                : activeLink === `${item.path}/`
+                ? "text-primary-activelink font-bold "
+                : "text-primary-nlink font-medium "
+            }`}
+            onClick={(e) => {
+              if (hasSublinks) {
+                toggleSubmenu(item.name, e);
+              }
+            }}
+          >
+            {hasSublinks && isOpen && (
+              <span
+                className="absolute left-4 top-[25px] transform -translate-y-1/2 w-[2px] h-4 bg-primary-activelink"
+                style={{ height: "16px" }}
+              />
             )}
-            {!hasSublinks || !isOpen ? (
+            <span className="flex-1 pl-2 pt-2">{item.name}
+            {!hasSublinks || !isOpen? (
               <span className="block border-b border-[#DBDBDB] pb-2 w-[207px]" />
-            ) : null}
-          </span>
-          {hasSublinks && (
-            <span className={`absolute ${isOpen ? "bottom-2 right-3 " : "bottom-4 right-3"} text-black`}>
-              {isOpen ? (
-                <IconChevronDown size={17} />
-              ) : (
-                <IconChevronRight size={17} />
-              )}
-            </span>
-          )}
-        </button>
+            ) : null}</span>
+            {hasSublinks && (
+              <span className={`absolute ${isOpen ? "bottom-2 right-3 " : "bottom-4 right-3"} text-black`}>
+                {isOpen ? (
+                  <IconChevronDown size={17} />
+                ) : (
+                  <IconChevronRight size={17} />
+                )}
+              </span>
+            )}
+          </button>
+        )}
+
+        {/* Submenu rendering */}
         {hasSublinks && isOpen && (
           <>
             <ul className="pl-6 pt-2">
               {item.sublinks.map((sublink: any) => {
-                const isSublinkActive = sublink.path && (activeLink === sublink.path || activeLink === `${sublink.path}/`);
+                const isSublinkActive =
+                  sublink.path && (activeLink === sublink.path || activeLink === `${sublink.path}/`);
+
                 return (
-                <li
-                  key={sublink.name}
-                  className="text-[12px] text-primary-nlink font-medium font-montserrat"
-                >
-                  <button
-                   className={`flex items-center justify-between w-full px-1 py-1 text-sm cursor-pointer ${
-                                sublink.sublinks && openMenus[sublink.name]
-                                  ? "text-primary-activelink text-[13px] font-bold font-montserrat pl-1"
-                                  : activeLink === sublink.name
-                                  ? "text-primary-activelink"
-                                  : ""
-                              }`}
-                    onClick={(e) => {
-                      if (sublink.sublinks) {
-                        toggleSubmenu(sublink.name, e);
-                      }
-                    }}
+                  <li
+                    key={sublink.name}
+                    className="text-[12px] text-primary-nlink font-medium font-montserrat"
                   >
-                    <span className="flex-1">
-                      {sublink.path && !sublink.sublinks ? (
-                        <Link
-                          to={sublink.path}
-                          className="flex items-center"
-                        >
-                          <span className="mr-2 text-black">•</span>
-                          {sublink.name}
-                        </Link>
-                      ) : (
-                        <span className="flex items-center">
-                          <span className="mr-2">•</span>
-                          {sublink.name}
-                        </span>
-                      )}
-                    </span>
-                    {sublink.sublinks && (
-                      <span className="text-black pr-[9px]">
-                        {openMenus[sublink.name] ? (
-                          <IconChevronDown size={16} />
+                    <button
+                      className={`flex items-center justify-between w-full px-1 py-1 text-sm cursor-pointer ${
+                        sublink.sublinks && openMenus[sublink.name]
+                          ? "text-primary-activelink text-[13px] font-bold font-montserrat pl-1"
+                          : activeLink === sublink.name
+                          ? "text-primary-activelink"
+                          : ""
+                      }`}
+                      onClick={(e) => {
+                        if (sublink.sublinks) {
+                          toggleSubmenu(sublink.name, e);
+                        }
+                      }}
+                    >
+                      <span className="flex-1">
+                        {sublink.path && !sublink.sublinks ? (
+                          <Link to={sublink.path} className="flex items-center">
+                            <span className="mr-2 text-black">•</span>
+                            {sublink.name}
+                          </Link>
                         ) : (
-                          <IconChevronRight size={16} />
+                          <span className="flex items-center">
+                            <span className="mr-2">•</span>
+                            {sublink.name}
+                          </span>
                         )}
                       </span>
+                      {sublink.sublinks && (
+                        <span className="text-black pr-[9px]">
+                          {openMenus[sublink.name] ? (
+                            <IconChevronDown size={16} />
+                          ) : (
+                            <IconChevronRight size={16} />
+                          )}
+                        </span>
+                      )}
+                    </button>
+
+                    {/* Nested sublinks */}
+                    {sublink.sublinks && openMenus[sublink.name] && (
+                      <ul className="ml-2">
+                        {sublink.sublinks.map((nestedSublink: any) => {
+                          const isNestedSublinkActive =
+                            nestedSublink.path &&
+                            (activeLink === nestedSublink.path || activeLink === `${nestedSublink.path}/`);
+                          return (
+                            <li key={nestedSublink.name}>
+                              <Link
+                                to={nestedSublink.path}
+                                className="flex items-center px-4 py-1 text-sm font-montserrat text-primary-nlink font-medium"
+                              >
+                                <span className="mr-2">•</span>
+                                {nestedSublink.name}
+                              </Link>
+                            </li>
+                          );
+                        })}
+                      </ul>
                     )}
-                  </button>
-                  {sublink.sublinks && openMenus[sublink.name] && (
-                    <ul className="ml-2">
-                      {sublink.sublinks.map((nestedSublink: any) => {
-                        const isNestedSublinkActive = nestedSublink.path && (activeLink === nestedSublink.path || activeLink === `${nestedSublink.path}/`);
-                        return (
-                        <li key={nestedSublink.name}>
-                          <Link
-                            to={nestedSublink.path}
-                            className="flex items-center px-4 py-1 text-sm font-montserrat text-primary-nlink font-medium" 
-                          >
-                            <span className="mr-2">•</span>
-                            {nestedSublink.name}
-                          </Link>
-                        </li>
-                      )})}
-                    </ul>
-                  )}
-                </li>
-              )})}
+                  </li>
+                );
+              })}
             </ul>
             <span className="block border-b border-[#DBDBDB] pb-2 w-[207px] ml-[20px]" />
           </>
         )}
       </li>
-      </div>
-    );
-  }, [activeLink, openMenus, toggleSubmenu]);
+    </div>
+  );
+}, [activeLink, openMenus, toggleSubmenu]);
+
 
   return (
     <div>
