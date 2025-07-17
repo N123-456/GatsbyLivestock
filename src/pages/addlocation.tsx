@@ -71,12 +71,12 @@ const addlocation = () => {
       
   return (
     <AppLayout>
-      <div>
-        <div className="flex flex-col ">
-          <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat pl-10 pt-5">
+      <div >
+        <div className="flex flex-col justify-center">
+          <h2 className="text-primary-activelink font-semibold lg:text-[34px]  sm:text-[18px]  sm:pt-2 font-montserrat pl-10 lg:pt-5">
             Starting Guide for Farm Locations:
           </h2>
-          <p className="text-primary-paragraph text-[18px] font-montserrat font-normal px-10 pt-4">
+          <p className="text-primary-paragraph lg:text-[18px] sm:[16px] sm:px-2  font-montserrat font-normal pl-10  lg:pt-4">
             Farm Locations are the locations that are owned by you or where you
             can plant your crops. So, for that you need to Add the location
             first. After that, on that particular location you can add the
@@ -507,3 +507,10 @@ const addlocation = () => {
 };
 
 export default addlocation;
+
+export const Head = () => (
+  <>
+<title>Location | Farm Management System</title>
+ <link rel="icon" type="image/png" href="/images/fmsLogo.png" />
+</>
+)

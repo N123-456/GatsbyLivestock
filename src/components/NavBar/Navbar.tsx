@@ -83,7 +83,7 @@ const Sidebar = React.memo(() => {
 
   const menuItems = [
     { name: "Introduction", path: "/introduction" },
-    { name: "Dashboard", path: "/dashboard" },
+    { name: "Dashboard", path: "/" },
     { name: "Tasks", path: "/tasks" },
     {
       name: "Farm Location",
@@ -121,12 +121,12 @@ const Sidebar = React.memo(() => {
       name: "Warehouse",
       sublinks: [
         {
-          name: "Add Warehouse",
+          name: "Add Warehouse", path:"/warehouse",
           sublinks: [
             { name: "Shed", path: "/warehouse" },
-            { name: "Inputs/Technology ", path: "/warehouse" },
-            { name: "Vaccination Center", path: "/maintenance" },
-            { name: "Feed/Forage", path: "/maintenance" },
+            { name: "Inputs/Technology ", path: "/inputs" },
+            { name: "Vaccination Center", path: "/vaccination" },
+            { name: "Feed/Forage", path: "/feed" },
           ],
         },
       ],
@@ -134,7 +134,7 @@ const Sidebar = React.memo(() => {
     {
       name: "Inventory",
       sublinks: [
-        { name: "Purchase", path: "/maintenance" },
+        { name: "Purchase", path: "/purchase" },
         { name: "Transfer", path: "/maintenance" },
       ],
     },
@@ -148,12 +148,12 @@ const Sidebar = React.memo(() => {
     },
     { name: "Contact", path: "/contact" },
     {
-      name: "Financials",
+      name: "Financials", path:"/financials",
       sublinks: [
-        { name: "General Ledger", path: "/maintenance" },
-        { name: "Trial Balance", path: "/maintenance" },
-        { name: "Balance Sheet", path: "/maintenance" },
-        { name: "Record Transaction", path: "/maintenance" },
+        { name: "General Ledger", path: "/financials" },
+        { name: "Trial Balance", path: "/trialbalance" },
+        { name: "Balance Sheet", path: "/balancesheet" },
+        { name: "Record Transaction", path: "/recordtransaction" },
         { name: "Create Expense", path: "/maintenance" },
         { name: "Add Account Head", path: "/maintenance" },
       ],
@@ -307,7 +307,7 @@ const Sidebar = React.memo(() => {
                       )}
                     </span>
                     {sublink.sublinks && (
-                      <span >
+                      <span className="text-black pr-[9px]">
                         {openMenus[sublink.name] ? (
                           <IconChevronDown size={16} />
                         ) : (
@@ -347,7 +347,7 @@ const Sidebar = React.memo(() => {
     <div>
       <aside 
         ref={sidebarRef}
-        className="fixed top-0 left-0 h-full w-[250px] overflow-y-auto scrollbar-hidden bg-[#F3FBF2] shadow-lg"
+        className="fixed top-0 left-0 h-full lg:w-[250px] sm:w-[170px] overflow-y-auto scrollbar-hidden bg-[#F3FBF2] shadow-lg"
       >
         <div className="p-4 pt-[23px] pb-2 pr-[20px] pl-[20px]">
           <h1 className="text-lg font-bold flex items-center">
@@ -381,3 +381,4 @@ const Sidebar = React.memo(() => {
 Sidebar.displayName = "Sidebar";
 
 export default Sidebar;
+

@@ -3,13 +3,27 @@
  */
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://www.yourdomain.tld`,
+title: `Farm Management System`,
+   
   },
   plugins: [
     `gatsby-plugin-image`,
     'gatsby-plugin-postcss',
     'gatsby-plugin-sharp',
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-react-helmet`,
+      {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Farm Management`,
+        short_name: `Farm`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#663399`,
+        display: `minimal-ui`,
+         icon: `src/images/fmslogo.png`,
+      },
+    },
     
     {
     resolve: `gatsby-source-filesystem`,

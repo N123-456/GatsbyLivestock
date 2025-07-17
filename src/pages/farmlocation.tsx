@@ -13,3 +13,9 @@ const farmlocation = () => {
 }
 
 export default farmlocation
+export const Head = () => (
+  <>
+<title>Farm Management System</title>
+ <link rel="icon" type="image/png" href="/images/fmsLogo.png" />
+</>
+)

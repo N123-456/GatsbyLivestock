@@ -47,7 +47,7 @@ const harvest = () => {
   return (
     <AppLayout>
       <div>
-        <div className="flex flex-col">
+        <div className="flex flex-col justify-center">
           <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat pl-10 pt-5">
           Starting Guide for Harvest:
           </h2>
@@ -261,3 +261,9 @@ const harvest = () => {
 };
 
 export default harvest;
+export const Head = () => (
+  <>
+<title>Harvest | Farm Management System</title>
+ <link rel="icon" type="image/png" href="/images/fmsLogo.png" />
+</>
+)

@@ -72,7 +72,7 @@ const inventory = () => {
   return (
     <AppLayout>
       <div>
-        <div className="flex flex-col ">
+        <div className="flex flex-col justify-center">
           <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat pl-10 pt-5">
             Starting Guide for Inventory:
           </h2>
@@ -334,3 +334,9 @@ const inventory = () => {
 };
 
 export default inventory;
+export const Head = () => (
+  <>
+<title>Inventory | Farm Management System</title>
+ <link rel="icon" type="image/png" href="/images/fmsLogo.png" />
+</>
+)

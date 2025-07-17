@@ -59,7 +59,7 @@ const soiltest = () => {
   return (
     <AppLayout>
       <div>
-        <div className="flex flex-col ">
+        <div className="flex flex-col justify-center">
           <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat pl-10 pt-5">
             Starting Guide for Soil Test:
           </h2>
@@ -322,3 +322,9 @@ const soiltest = () => {
 };
 
 export default soiltest;
+export const Head = () => (
+  <>
+<title>SoilTest | Farm Management System</title>
+ <link rel="icon" type="image/png" href="/images/fmsLogo.png" />
+</>
+)

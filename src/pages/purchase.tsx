@@ -72,7 +72,7 @@ const DL = getImage(data.DL);
   return (
     <AppLayout>
       <div>
-        <div className="flex flex-col ">
+        <div className="flex flex-col justify-center">
           <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat pl-10 pt-5">
            Starting Guide for Purchase Requisition:
           </h2>
@@ -184,3 +184,9 @@ const DL = getImage(data.DL);
 };
 
 export default purchase;
+export const Head = () => (
+  <>
+<title>Purchase | Farm Management System</title>
+ <link rel="icon" type="image/png" href="/images/fmsLogo.png" />
+</>
+)

@@ -66,7 +66,7 @@ const watertest = () => {
   return (
     <AppLayout>
       <div>
-        <div className="flex flex-col ">
+        <div className="flex flex-col justify-center">
           <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat pl-10 pt-5">
             Starting Guide for Water Test:
           </h2>
@@ -320,3 +320,9 @@ const watertest = () => {
 };
 
 export default watertest;
+export const Head = () => (
+  <>
+<title>WaterTest | Farm Management System</title>
+ <link rel="icon" type="image/png" href="/images/fmsLogo.png" />
+</>
+)

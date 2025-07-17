@@ -47,7 +47,7 @@ const pesticides = () => {
   return (
     <AppLayout>
       <div>
-        <div className="flex flex-col ">
+        <div className="flex flex-col justify-center">
           <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat pl-10 pt-5">
           Starting Guide for Pesticides:
           </h2>
@@ -249,3 +249,9 @@ const pesticides = () => {
 };
 
 export default pesticides;
+export const Head = () => (
+  <>
+<title>Pesticides | Farm Management System</title>
+ <link rel="icon" type="image/png" href="/images/fmsLogo.png" />
+</>
+)
