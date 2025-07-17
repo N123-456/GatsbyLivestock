@@ -16,16 +16,16 @@ const feed = () => {
     
     <AppLayout>
     <div>
-      <div className='flex flex-col'>
+      <div className='flex flex-col text-sm/7'>
         <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat pl-10 pt-5">
                    Feed/ Forage:
                           </h2>
-     <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
-                    The Feed/Forage Section is used for storig
+     <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10 pt-8">
+                    The Feed/Forage Section is used for storing
                       harvested crops and animal feed. It ensures optimal conditions
                       for storage to prevent spoilage and loss.{" "}
                   
-                    <ul>
+                   <ul> <br/>
                       <li>
                         <span className="text-primary-pheading font-semibold">
                           Animal Feed:
@@ -63,14 +63,20 @@ const feed = () => {
                       After choosing the option, start adding racks for storing
                       different inventory items.
                     </li>
-                    <li>Click on “Add More” button.</li>
+                    <li>Click on <span className="text-primary-activelink font-semibold">
+              "Add More"
+            </span> button.</li>
                     <li>
                       Add rack name (e.g. Rack 1), rack capacity (e.g. 100), unit
                       (e.g. bags), and description (e.g. This rack contains
                       fertilizers with a capacity of 100 bags) of the rack. You can
-                      add as many racks as per your requirement by clicking “Add more”
+                      add as many racks as per your requirement by clicking <span className="text-primary-activelink font-semibold">
+              "Add More" {" "}
+            </span>
                       button. In the similar way if you want to remove any rack, click
-                      on the “remove” button.
+                      on the <span className="text-primary-activelink font-semibold">
+              "remove" {" "}
+            </span> button.
                     </li>
                     <li>
                       After adding all the racks for different portions, click on the

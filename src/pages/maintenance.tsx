@@ -96,7 +96,9 @@ const maintenance = () => {
               Click on the three dots against the machinery you want to add
               maintenance record..
             </p>
-            <p>Click on "Maintenance" button</p>
+            <p>Click on <span className="text-primary-activelink font-semibold">
+              "Maintenance"
+            </span> button</p>
             <p>Enter the required details:</p>
             <br />
             <ul className="list-disc ">
@@ -153,13 +155,17 @@ const maintenance = () => {
             You can search the maintenance from the list of maintenance of
             locations present in the system. You can search based on either:
             <br />
-            <ul className="list-disc">
+            <ul >
               <li>
-                <p>Name: You can search by the name of machinery.</p>
+                <p><span className="text-primary-pheading font-bold">
+              Name
+            </span>: You can search by the name of machinery.</p>
               </li>
               <li>
                 <p>
-                  Service: You can search by the service performed on the
+                   <span className="text-primary-pheading font-bold">
+              Service
+            </span>: You can search by the service performed on the
                   machinery which can be either:
                 </p>
                 <ul className="text-primary-activelink font-semibold pl-[15px]">
@@ -243,10 +249,11 @@ const maintenance = () => {
                 />
               )}
             </div>
+            <div className="flex items-center pt-5 space-x-4">
             <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
               Step 5
             </h2>
-            <div className="flex-1 h-px bg-primary-line"></div>
+            <div className="flex-1 h-px bg-primary-line"></div></div>
             <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
               View Maintenance:
             </h2>

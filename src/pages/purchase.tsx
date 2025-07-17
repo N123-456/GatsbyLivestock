@@ -79,7 +79,7 @@ const DL = getImage(data.DL);
           <p className="text-primary-paragraph text-[18px] font-montserrat font-normal px-10 pt-4">
             A Purchase Requisition is a formal request made within an organization to acquire goods or services. It is used to request the purchase of essential items, such as seeds, fertilizers, tools, or equipment. The process typically starts when there is a need for a particular item. The requisition includes details such as the item description, quantity required, and any specifications. After this, it moves to the purchase order to initiate the purchase process. This ensures that inventory levels are maintained, and resources are procured in an organized and efficient manner. It also helps track spending and manage budgets within the farm.
           </p>
-          <div className="pl-13 pt-8 flex justify-center">
+          <div className="pl-13 pt-8 flex justify-center ">
             {fl && (
               <GatsbyImage
                 image={fl}
@@ -100,11 +100,11 @@ const DL = getImage(data.DL);
           </h2>
           <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
             For adding purchase requisition:
-            <br />
-            <ul className="list-disc text-primary-activelink">
-                <li>Click on the “inventory” tab.</li>
-                <li>On the top left, there is a tab with title “Purchase Requisition”, click on it.</li>
-                <li>Click on “Add New” button.</li>
+            <br /><br/>
+            <ul className=" text-primary-paragraph2 ">
+                <li>Click on the <span className="text-primary-activelink font-bold">“inventory” </span> tab.</li>
+                <li>On the top left, there is a tab with title <span className="text-primary-activelink font-bold">“Purchase Requisition” </span>, click on it.</li>
+                <li>Click on <span className="text-primary-activelink font-bold">“Add New” </span> button.</li>
                 <li>Enter the details</li>
                 <li>Enter the barcode</li>
             <li>Choose the warehouse where the inventory will be stored.</li>
@@ -115,22 +115,26 @@ const DL = getImage(data.DL);
             <li>Enter the product variety, choose the vendor.</li>
             <li>Enter the quantity.</li>
 
+             <div className="pl-13 pt-8 flex justify-center ">
             {fl && (
               <GatsbyImage
                 image={fl}
                 alt="Startups illustration"
                 className="bg-white w-[1000.58px] "
               />
-            )}<br/>
-<li>Click on “Add” button.</li>
+            )}
+          </div><br/>
+<li>Click on <span className="text-primary-activelink font-bold">“Add” </span> button.</li>
 <li>In the similar way you can add new purchase requisition, as you get new stock requests.</li>
- {fl && (
+ <div className="pl-13 pt-8 flex justify-center ">
+            {fl && (
               <GatsbyImage
                 image={fl}
                 alt="Startups illustration"
                 className="bg-white w-[1000.58px] "
               />
-            )}<br/>
+            )}
+          </div><br/>
             </ul>  
             <br/><br/>
 
@@ -147,13 +151,13 @@ const DL = getImage(data.DL);
               <br />
               <br />
               <ul>
-                <li>Requisition Number: You can search by the requisition number.</li>
-                <li>Warehouse: You can search for specific purchase requisitions for specific warehouse.</li>
-                <li>Requisition Date</li>
+                <li><span className="text-primary-pheading font-bold">Requisition Number:</span> You can search by the requisition number.</li>
+                <li><span className="text-primary-pheading font-bold">Warehouse:</span> You can search for specific purchase requisitions for specific warehouse.</li>
+                <br/><li>Requisition Date</li>
               </ul>
-              <p>Then click on the Search button. Also, you can click on the refresh button to refresh the data.</p>{" "}
+              <p>Then click on the <span className="text-primary-activelink font-bold">“Search” </span> button. Also, you can click on the refresh button to refresh the data.</p>{" "}
               <p>
-            Click on the “print” icon to print the details of the purchase requisition.
+            Click on the <span className="text-primary-activelink font-bold">“Print” </span> icon to print the details of the purchase requisition.
               </p><br/>
             
               <br />

@@ -292,10 +292,11 @@ const maintenance = () => {
                   />
                 )}
               </div>
+              <div className="flex items-center pt-5 space-x-4">
 <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
               Step 5
             </h2>
-            <div className="flex-1 h-px bg-primary-line"></div>
+            <div className="flex-1 h-px bg-primary-line"></div></div>
                 <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
               View Maintenance:
               </h2>

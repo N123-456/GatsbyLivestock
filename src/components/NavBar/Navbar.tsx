@@ -101,20 +101,20 @@ const Sidebar = React.memo(() => {
         { name: "Chemicals", path: "/pesticides" },
         { name: "Harvests", path: "/harvest" },
         { name: "Field Inspections", path: "/fieldinspection" },
-        { name: "Sales After Storage", path: "/planting" },
-        { name: "Health Monitoring", path: "/planting" },
+        { name: "Sales After Storage", path: "/emptypage" },
+        { name: "Health Monitoring", path: "/emptypage" },
       ],
     },
     {
       name: "Orchards",
       sublinks: [
-        { name: "Add New Orchard", path: "/warehouse" },
-        { name: "Fertilizers", path: "/warehouse" },
-        { name: "Chemicals", path: "/warehouse" },
-        { name: "Harvests", path: "/warehouse" },
-        { name: "Field Inspections", path: "/warehouse" },
-        { name: "Sales After Storage", path: "/warehouse" },
-        { name: "Health Monitoring", path: "/warehouse" },
+        { name: "Add New Orchard", path: "/emptypage" },
+        { name: "Fertilizers", path: "/emptypage" },
+        { name: "Chemicals", path: "/emptypage" },
+        { name: "Harvests", path: "/emptypage" },
+        { name: "Field Inspections", path: "/emptypage" },
+        { name: "Sales After Storage", path: "/emptypage" },
+        { name: "Health Monitoring", path: "/emptypage" },
       ],
     },
     {
@@ -135,13 +135,13 @@ const Sidebar = React.memo(() => {
       name: "Inventory",
       sublinks: [
         { name: "Purchase", path: "/purchase" },
-        { name: "Transfer", path: "/maintenance" },
+        { name: "Transfer", path: "/emptypage" },
       ],
     },
     {
       name: "Machinery/Tools",
       sublinks: [
-        { name: "Add New Machinery", path: "/maintenance" },
+        { name: "Add New Machinery", path: "/machinery" },
         { name: "Maintenance", path: "/maintenance" },
         { name: "Track Usage", path: "/tracking" },
       ],
@@ -165,11 +165,11 @@ const Sidebar = React.memo(() => {
     {
       name: "Reports",
       sublinks: [
-        { name: "Crop Activity Reports", path: "/maintenance" },
-        { name: "Equipment Reports", path: "/maintenance" },
-        { name: "Inventory Reports", path: "/maintenance" },
-        { name: "Orchard Reports", path: "/maintenance" },
-        { name: "P&L Reports", path: "/maintenance" },
+        { name: "Crop Activity Reports", path: "/emptypage" },
+        { name: "Equipment Reports", path: "/emptypage" },
+        { name: "Inventory Reports", path: "/emptypage" },
+        { name: "Orchard Reports", path: "/emptypage" },
+        { name: "P&L Reports", path: "/emptypage" },
       ],
     },
   ];
@@ -218,19 +218,21 @@ const Sidebar = React.memo(() => {
     const hasSublinks = item.sublinks && item.sublinks.length > 0;
 
     return (
+      <div>
       <li key={item.name} className="mb-1">
-        <div
-         className={`flex items-center justify-between pl-[20px] py-2 text-sm font-montserrat cursor-pointer relative ${
+        <button
+         className={`flex items-center w-full text-left pl-4 py-2 pr-0 text-sm font-montserrat cursor-pointer relative ${
                       item.sublinks && openMenus[item.name]
-                        ? "text-primary-activelink font-bold"
+                        ? "text-primary-activelink font-bold "
                         : activeLink === `${item.path}/`
-                        ? "text-primary-activelink font-bold"
-                        : "text-primary-nlink font-medium"
+                        ? "text-primary-activelink font-bold hover:bg-green-200"
+                        : "text-primary-nlink font-medium hover:bg-green-200"
                     }`}
           onClick={(e) => {
             if (hasSublinks) {
               toggleSubmenu(item.name, e);
             }
+            
           }}
         >
           {hasSublinks && isOpen && (
@@ -243,7 +245,7 @@ const Sidebar = React.memo(() => {
             {item.path && !hasSublinks ? (
               <Link
                 to={item.path}
-                className={`${
+                className={` ${
                   isActive ? "text-primary-activelink font-bold" : "text-primary-nlink"
                 }`}
               >
@@ -257,7 +259,7 @@ const Sidebar = React.memo(() => {
             ) : null}
           </span>
           {hasSublinks && (
-            <span className={`absolute right-3 ${isOpen ? "bottom-3" : "bottom-4"} text-black`}>
+            <span className={`absolute ${isOpen ? "bottom-2 right-3 " : "bottom-4 right-3"} text-black`}>
               {isOpen ? (
                 <IconChevronDown size={17} />
               ) : (
@@ -265,7 +267,7 @@ const Sidebar = React.memo(() => {
               )}
             </span>
           )}
-        </div>
+        </button>
         {hasSublinks && isOpen && (
           <>
             <ul className="pl-6 pt-2">
@@ -276,8 +278,8 @@ const Sidebar = React.memo(() => {
                   key={sublink.name}
                   className="text-[12px] text-primary-nlink font-medium font-montserrat"
                 >
-                  <div
-                   className={`flex items-center justify-between px-1 py-1 text-sm cursor-pointer ${
+                  <button
+                   className={`flex items-center justify-between w-full px-1 py-1 text-sm cursor-pointer ${
                                 sublink.sublinks && openMenus[sublink.name]
                                   ? "text-primary-activelink text-[13px] font-bold font-montserrat pl-1"
                                   : activeLink === sublink.name
@@ -315,7 +317,7 @@ const Sidebar = React.memo(() => {
                         )}
                       </span>
                     )}
-                  </div>
+                  </button>
                   {sublink.sublinks && openMenus[sublink.name] && (
                     <ul className="ml-2">
                       {sublink.sublinks.map((nestedSublink: any) => {
@@ -340,6 +342,7 @@ const Sidebar = React.memo(() => {
           </>
         )}
       </li>
+      </div>
     );
   }, [activeLink, openMenus, toggleSubmenu]);
 
@@ -349,7 +352,7 @@ const Sidebar = React.memo(() => {
         ref={sidebarRef}
         className="fixed top-0 left-0 h-full lg:w-[250px] sm:w-[170px] overflow-y-auto scrollbar-hidden bg-[#F3FBF2] shadow-lg"
       >
-        <div className="p-4 pt-[23px] pb-2 pr-[20px] pl-[20px]">
+        <div className="p-4 pt-[23px] pb-2 pr-[20px] pl-[16px]">
           <h1 className="text-lg font-bold flex items-center">
             <span role="img" aria-label="logo" className="mr-2">
               {fmslogo && (

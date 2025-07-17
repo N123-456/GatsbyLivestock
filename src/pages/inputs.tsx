@@ -19,7 +19,7 @@ const inputs = () => {
         <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat pl-10 pt-5">
                      Inputs/Technologies:
                           </h2>
-       <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+       <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal pt-5 px-10">
                         The Inputs/Technologies Section is designed
                         for handling and storing chemicals, such as fertilizers,
                         pesticides, weedicides, and application equipment, safely.

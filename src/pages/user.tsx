@@ -90,7 +90,7 @@ const user = () => {
                  <li><span className="text-primary-pheading font-semibold">Image:</span>Profile image of the user.It is optional</li>
                    <li><span className="text-primary-pheading font-semibold">Status:</span>User status can either be blocked or active. By default, user status will be active and cannot be changed. The field is disabled. But you can later change the status if you want to block access of any user to the system by changing its status to blocked.</li>
                      <li><span className="text-primary-pheading font-semibold">User Role:</span>From this dropdown, you can define the role of user and can decide much access user can have to the system. The user roles are:</li>
-                     <ul className="text-primary-paragraph2 font-medium list-disc">
+                     <br/><br/><ul className="text-primary-paragraph2 font-medium list-disc">
                         <li><span className="text-primary-activelink font-bold">Farm Manager</span>:</li><br/>
                         <ul><li>Access to operational features like plantings, resources etc.</li>
                         <li>Can create users (except for Admins) and assign tasks/events.</li></ul><br/>
@@ -113,7 +113,9 @@ const user = () => {
                         
                      </ul>
                      
-                 <p>Click on the submit button</p>
+                 <p>Click on the <span className="text-primary-activelink font-bold">
+              Submit {" "}
+            </span> button</p>
                  <p>User will be Added</p></ul>
            <br/>
                  <div className="pl-13 pt-8 flex justify-center">
@@ -141,12 +143,16 @@ const user = () => {
             </h2>
             <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
              You can search the user from the list of users present in the system. You can search based on either:
-              <br />
-              <ul className="list-disc">
-              <li><p>Email Address: You can search by the email of the user.</p></li>
-              <li><p>Status: You can search by the status of the user which can be:
-o	Active
-o	Blocked
+              <br /><br />
+              <ul>
+              <li><p> <span className="text-primary-pheading font-bold">
+              Email Address
+            </span> You can search by the email of the user.</p></li>
+              <li><p><span className="text-primary-pheading font-bold">Status:</span> You can search by the status of the user which can be:
+<ul className="text-primary-activelink font-bold">
+	<li>Active</li>
+<li>Blocked</li>
+</ul>
 
 
 </p></li>
@@ -215,10 +221,11 @@ o	Blocked
                   />
                 )}
               </div><br/><br/>
+               <div className="flex items-center pt-5 space-x-4">
 <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
               Step 5
             </h2>
-            <div className="flex-1 h-px bg-primary-line"></div>
+            <div className="flex-1 h-px bg-primary-line"></div></div>
                 <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
               View User Details:
               </h2>

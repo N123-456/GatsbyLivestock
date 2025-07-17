@@ -19,7 +19,7 @@ const Introduction = () => {
     <AppLayout>
       <div>
       
-        <div className="flex flex-col justify-center">
+        <div className="flex flex-col justify-center ">
           <h2 className="text-primary-activelink font-semibold text-2xl sm:text-xl md:text-4xl font-montserrat px-4 sm:px-10 pt-5">
             Introduction
           </h2>

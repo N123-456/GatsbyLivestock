@@ -19,7 +19,7 @@ const vaccination = () => {
          <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat pl-10 pt-5">
                     Vaccination Centre:
                           </h2>
-             <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+             <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10 pt-5">
                        The Vaccination Centre ensures proper
                        management of vaccines and immunization tools. Options include
                        Cabinets and Refrigerators for temperature-sensitive vaccines.
