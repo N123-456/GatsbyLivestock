@@ -6,58 +6,82 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 const planting = () => {
   const data = useStaticQuery(graphql`
     query {
-      listview: file(relativePath: { eq: "listview.png" }) {
+      planting: file(relativePath: { eq: "planting.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      cview: file(relativePath: { eq: "cview.png" }) {
+      AP: file(relativePath: { eq: "AP.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      addtask: file(relativePath: { eq: "addtask.png" }) {
+      AP1: file(relativePath: { eq: "AP1.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      stask: file(relativePath: { eq: "stask.png" }) {
+      AP2: file(relativePath: { eq: "AP2.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      dtask: file(relativePath: { eq: "dtask.png" }) {
+      PD: file(relativePath: { eq: "PD.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      vtask: file(relativePath: { eq: "vtask.png" }) {
+      HD: file(relativePath: { eq: "HD.png" }) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED)
+        }
+      }
+         SP: file(relativePath: { eq: "SP.png" }) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED)
+        }
+      }
+         DP: file(relativePath: { eq: "DP.png" }) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED)
+        }
+      }
+          VP: file(relativePath: { eq: "VP.png" }) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED)
+        }
+      }
+          VP1: file(relativePath: { eq: "VP1.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
     }
   `);
-  const listview = getImage(data.listview);
-  const cview = getImage(data.cview);
-  const addtask = getImage(data.addtask);
-  const stask = getImage(data.stask);
-  const dtask = getImage(data.dtask);
-  const vtask = getImage(data.vtask);
+  const planting = getImage(data.planting);
+  const AP = getImage(data.AP);
+  const AP1 = getImage(data.AP1);
+  const AP2 = getImage(data.AP2);
+  const PD = getImage(data.PD);
+  const HD = getImage(data.HD);
+  const SP = getImage(data.SP);
+  const DP = getImage(data.DP);
+  const VP = getImage(data.VP);
+  const VP1 = getImage(data.VP1);
   return (
     <AppLayout>
       <div>
         <div className="flex flex-col justify-center">
-          <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat pl-10 pt-5">
+          <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10 pt-5">
           Starting Guide for Planting:
           </h2>
-          <p className="text-primary-paragraph text-[18px] font-montserrat font-normal px-10 pt-4">
+          <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10 pt-4">
            In the planting process, you enter the details of the crops to be planted, ensuring all necessary information is recorded for effective crop management. This includes selecting the crop type, specifying the planting location, and entering details about the seeds, such as variety and source. Additional planting details include the planting depth, spacing, and any special instructions. You should also provide estimated harvest details, including the expected harvest date and anticipated yield. By accurately recording these details, farmers can monitor crop progress and optimize growth conditions for better yields. Moreover, you can add fertilizers and pesticides details applied on the crop. Also, the harvest details of the crop can be added. Furthermore, field inspection details can also be added. The details of these will be found in the later sections of the document.
           </p>
           <div className="pl-13 pt-8 flex justify-center">
-            {listview && (
+            {planting && (
               <GatsbyImage
-                image={listview}
+                image={planting}
                 alt="Startups illustration"
                 className="bg-white w-[1000.58px] "
               />
@@ -65,15 +89,15 @@ const planting = () => {
           </div>
 
           <div className="flex items-center pt-5 space-x-4">
-            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 1
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div>
           </div>
-          <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+          <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
             Add Planting:
           </h2>
-          <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+          <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
             <p>For adding planting, you first need to have a farm location. So, if you haven’t have added yet first add the farm location. See the guide for adding farm location in the upper section of the document. After choosing the crop, most of the fields will be automatically filled based on predefined data, but you can modify them as per your need. So, for adding planting:</p>
             <br />
             <br /> Click on{" "}
@@ -132,18 +156,18 @@ const planting = () => {
               <li>Choose the direction for planting (Away from Sun, Towards Sun).</li>
             </ul>
             <div className="pl-13 pt-8 flex justify-center">
-              {listview && (
+              {AP && (
                 <GatsbyImage
-                  image={listview}
+                  image={AP}
                   alt="Startups illustration"
                   className="bg-white w-[1000.58px] "
                 />
               )}
             </div>
             <div className="pl-13 pt-8 flex justify-center">
-              {listview && (
+              {AP1 && (
                 <GatsbyImage
-                  image={listview}
+                  image={AP1}
                   alt="Startups illustration"
                   className="bg-white w-[1000.58px] "
                 />
@@ -168,9 +192,9 @@ const planting = () => {
               <li>Enter the origin or source of the seeds (country or region).</li>
             </ul>
             <div className="pl-13 pt-8 flex justify-center">
-              {listview && (
+              {AP2 && (
                 <GatsbyImage
-                  image={listview}
+                  image={AP2}
                   alt="Startups illustration"
                   className="bg-white w-[1000.58px] "
                 />
@@ -199,9 +223,9 @@ const planting = () => {
             <li>You can add, edit, delete, search and view the tasks.</li></ul>
             </ul>
             <div className="pl-13 pt-8 flex justify-center">
-              {listview && (
+              {PD && (
                 <GatsbyImage
-                  image={listview}
+                  image={PD}
                   alt="Startups illustration"
                   className="bg-white w-[1000.58px] "
                 />
@@ -230,9 +254,9 @@ const planting = () => {
             <li>Crop planting will be added successfully.</li>
             </ul>
             <div className="pl-13 pt-8 flex justify-center">
-              {listview && (
+              {HD && (
                 <GatsbyImage
-                  image={listview}
+                  image={HD}
                   alt="Startups illustration"
                   className="bg-white w-[1000.58px] "
                 />
@@ -240,14 +264,14 @@ const planting = () => {
             </div>
            
             <div className="flex items-center pt-5 space-x-4">
-            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 2
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div></div>
-            <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+            <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
               Search Planting:
             </h2>
-            <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+            <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
               You can search the location from the list of farms of locations
               present in the system. You can search based on either:
               <br />
@@ -261,23 +285,23 @@ const planting = () => {
               Then click on the Search button. Also, you can click on the refresh button to refresh the data.
               </p>
               <div className="pl-13 pt-8 flex justify-center">
-                {listview && (
+                {SP && (
                   <GatsbyImage
-                    image={listview}
+                    image={SP}
                     alt="Startups illustration"
                     className="bg-white w-[1000.58px] "
                   />
                 )}
               </div>
               <div className="flex items-center pt-5 space-x-4">
-              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 3
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div></div>
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
                 Edit Planting:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
                 If any planting details changes, you can easily edit the
                 details. For that:
                 <br /><br/>
@@ -296,14 +320,14 @@ const planting = () => {
                 </ul>
               </div>
               <div className="flex items-center pt-5 space-x-4">
-              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 4
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div></div>
-               <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+               <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
               Delete Planting:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
               If you want to delete any crop planting, you can easily do so.
                 <br /><br/>
                 <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
@@ -316,23 +340,23 @@ const planting = () => {
                 </ul>
               </div>
                <div className="pl-13 pt-8 flex justify-center">
-                {listview && (
+                {DP && (
                   <GatsbyImage
-                    image={listview}
+                    image={DP}
                     alt="Startups illustration"
                     className="bg-white w-[1000.58px] "
                   />
                 )}
               </div>
                   <div className="flex items-center pt-5 space-x-4">
-<h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+<h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 5
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div></div>
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
               View Planting:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
               You can easily view the details of the planting. For that:
                 <br /><br/>
                 <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
@@ -346,18 +370,18 @@ const planting = () => {
                 </ul>
               </div>
                <div className="pl-13 pt-8 flex justify-center">
-                {listview && (
+                {VP && (
                   <GatsbyImage
-                    image={listview}
+                    image={VP}
                     alt="Startups illustration"
                     className="bg-white w-[1000.58px] "
                   />
                 )}
               </div>
               <div className="pl-13 pt-8 flex justify-center">
-                {listview && (
+                {VP1 && (
                   <GatsbyImage
-                    image={listview}
+                    image={VP1}
                     alt="Startups illustration"
                     className="bg-white w-[1000.58px] "
                   />

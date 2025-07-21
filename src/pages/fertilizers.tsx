@@ -6,58 +6,58 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 const fertilizers = () => {
   const data = useStaticQuery(graphql`
     query {
-      listview: file(relativePath: { eq: "listview.png" }) {
+      fertilizer: file(relativePath: { eq: "fertilizer.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      cview: file(relativePath: { eq: "cview.png" }) {
+      AF: file(relativePath: { eq: "AF.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      addtask: file(relativePath: { eq: "addtask.png" }) {
+      AF1: file(relativePath: { eq: "AF1.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      stask: file(relativePath: { eq: "stask.png" }) {
+      SF: file(relativePath: { eq: "SF.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      dtask: file(relativePath: { eq: "dtask.png" }) {
+      DF: file(relativePath: { eq: "DF.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      vtask: file(relativePath: { eq: "vtask.png" }) {
+      VF: file(relativePath: { eq: "VF.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
     }
   `);
-  const listview = getImage(data.listview);
-  const cview = getImage(data.cview);
-  const addtask = getImage(data.addtask);
-  const stask = getImage(data.stask);
-  const dtask = getImage(data.dtask);
-  const vtask = getImage(data.vtask);
+  const fertilizer = getImage(data.fertilizer);
+  const AF = getImage(data.AF);
+  const AF1 = getImage(data.AF1);
+  const SF = getImage(data.SF);
+  const DF = getImage(data.DF);
+  const VF = getImage(data.VF);
   return (
     <AppLayout>
       <div>
         <div className="flex flex-col justify-center">
-          <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat pl-10 pt-5">
+          <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10 pt-5">
           Starting Guide for Fertilizer:
           </h2>
-          <p className="text-primary-paragraph text-[18px] font-montserrat font-normal px-10 pt-4">
+          <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10 pt-4">
            Fertilizers are substances added to soil or plants to provide essential nutrients that promote healthy growth and increase crop yield. They supply key nutrients like nitrogen, phosphorus, and potassium, which plants need for development. Fertilizers can be organic (e.g., compost, manure) or chemical-based, depending on the farm's needs. Proper use of fertilizers improves soil fertility, strengthens plants, and ensures better quality produce. It is important to apply the right type and amount of fertilizer to avoid harming crops or the environment. In the fertilizers tab, you will add the fertilizer applied to a specific crop.  
           </p>
           <div className="pl-13 pt-8 flex justify-center">
-            {listview && (
+            {fertilizer && (
               <GatsbyImage
-                image={listview}
+                image={fertilizer}
                 alt="Startups illustration"
                 className="bg-white w-[1000.58px] "
               />
@@ -65,15 +65,15 @@ const fertilizers = () => {
           </div>
 <br/><br/>
           <div className="flex items-center pt-5 space-x-4">
-            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 1
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div>
           </div>
-          <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+          <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
             Add Fertilizer:
           </h2>
-          <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+          <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
             <p>For adding fertilizer:</p>
             <br />
             <br />Click on{" "}
@@ -96,9 +96,9 @@ const fertilizers = () => {
                     <li>Choose the inventory. </li>
                     <li>After choosing the inventory, available quantity of the inventory will be automatically shown. Enter the quantity from the available quantity that was used. The quantity cannot exceed the available quantity.</li>
                  <div className="pl-13 pt-8 flex justify-center">
-              {listview && (
+              {AF && (
                 <GatsbyImage
-                  image={listview}
+                  image={AF}
                   alt="Startups illustration"
                   className="bg-white w-[1000.58px] "
                 />
@@ -107,9 +107,9 @@ const fertilizers = () => {
             <li>If the fertilizer you applied was not available in the inventory and you have to buy the fertilizer, choose the option “New Buy”.</li>
             <li>Enter the details when the fertilizer was bought, how much did the fertilizer cost, how much quantity did you buy, transaction details like head of accounts, transaction id/cheque no in case head of accounts is bank, and from whom you bought the fertilizer i.e., the vendor’s name.</li>   
                  <div className="pl-13 pt-8 flex justify-center">
-              {listview && (
+              {AF1 && (
                 <GatsbyImage
-                  image={listview}
+                  image={AF1}
                   alt="Startups illustration"
                   className="bg-white w-[1000.58px] "
                 />
@@ -122,14 +122,14 @@ const fertilizers = () => {
             <p>If the fertilizer was a new buy, in that case it was an expense so a transaction will be created.</p>
             <br /> </div>
             <div className="flex items-center pt-5 space-x-4">
-            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 2
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div></div>
-            <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+            <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
               Search Fertilizer:
             </h2>
-            <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+            <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
               You can search the fertilizer from the list of fertilizers of locations
               present in the system. You can search based on either:
               <br />
@@ -140,9 +140,9 @@ const fertilizers = () => {
               Then click on the Search button. Also, you can click on the refresh button to refresh the data.
               </p>
               <div className="pl-13 pt-8 flex justify-center">
-                {listview && (
+                {SF && (
                   <GatsbyImage
-                    image={listview}
+                    image={SF}
                     alt="Startups illustration"
                     className="bg-white w-[1000.58px] "
                   />
@@ -150,14 +150,14 @@ const fertilizers = () => {
               </div>
               <br/><br/>
               <div className="flex items-center pt-5 space-x-4">
-              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 3
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div></div>
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
                 Edit Fertilizer:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
              If any fertilizer detail you want to change, you can easily edit the details. For that:
                 <br /><br/>
                 <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
@@ -175,14 +175,14 @@ const fertilizers = () => {
                 </ul>
               </div>
               <div className="flex items-center pt-5 space-x-4">
-              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 4
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div></div>
-               <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+               <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
               Delete Fertilizer:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
               If you want to delete any fertilizer, you can easily do so.
                 <br /><br/>
                 <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
@@ -195,23 +195,23 @@ const fertilizers = () => {
                 </ul>
               </div>
                <div className="pl-13 pt-8 flex justify-center">
-                {listview && (
+                {DF && (
                   <GatsbyImage
-                    image={listview}
+                    image={DF}
                     alt="Startups illustration"
                     className="bg-white w-[1000.58px] "
                   />
                 )}
               </div>
               <br/><br/>
-<h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+<h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 5
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div>
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
               View Fertilizer:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
              You can easily view the details of the fertilizer. For that:
                 <br /><br/>
                 <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
@@ -225,25 +225,15 @@ const fertilizers = () => {
                 </ul>
               </div>
                <div className="pl-13 pt-8 flex justify-center">
-                {listview && (
+                {VF && (
                   <GatsbyImage
-                    image={listview}
+                    image={VF}
                     alt="Startups illustration"
                     className="bg-white w-[1000.58px] "
                   />
                 )}
               </div>
-              <br/>
-              <div className="pl-13 pt-8 flex justify-center">
-                {listview && (
-                  <GatsbyImage
-                    image={listview}
-                    alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
-                  />
-                )}
-              </div>
-
+             
             </div>
           </div>
         </div>

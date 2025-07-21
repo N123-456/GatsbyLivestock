@@ -6,58 +6,64 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 const harvest = () => {
   const data = useStaticQuery(graphql`
     query {
-      listview: file(relativePath: { eq: "listview.png" }) {
+      harvest: file(relativePath: { eq: "harvest.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      cview: file(relativePath: { eq: "cview.png" }) {
+      AH: file(relativePath: { eq: "AH.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      addtask: file(relativePath: { eq: "addtask.png" }) {
+      AH1: file(relativePath: { eq: "AH1.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      stask: file(relativePath: { eq: "stask.png" }) {
+      AH2: file(relativePath: { eq: "AH2.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      dtask: file(relativePath: { eq: "dtask.png" }) {
+      SH: file(relativePath: { eq: "SH.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      vtask: file(relativePath: { eq: "vtask.png" }) {
+      DH: file(relativePath: { eq: "DH.png" }) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED)
+        }
+      }
+          VH: file(relativePath: { eq: "VH.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
     }
   `);
-  const listview = getImage(data.listview);
-  const cview = getImage(data.cview);
-  const addtask = getImage(data.addtask);
-  const stask = getImage(data.stask);
-  const dtask = getImage(data.dtask);
-  const vtask = getImage(data.vtask);
+  const harvest = getImage(data.harvest);
+  const AH = getImage(data.AH);
+  const AH1 = getImage(data.AH1);
+  const AH2 = getImage(data.AH2);
+  const SH = getImage(data.SH);
+  const DH = getImage(data.DH);
+   const VH = getImage(data.VH);
   return (
     <AppLayout>
       <div>
         <div className="flex flex-col justify-center">
-          <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat pl-10 pt-5">
+          <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10 pt-5">
           Starting Guide for Harvest:
           </h2>
-          <p className="text-primary-paragraph text-[18px] font-montserrat font-normal px-10 pt-4">
+          <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10 pt-4">
           The Harvest Section helps manage and organize the process of gathering crops and recording important harvest-related details. It ensures that harvested crops are properly documented, categorized, and accounted for. This section allows farmers to track the harvest process, monitor yields, and manage post-harvest activities such as selling or storing crops. It provides a structured way to organize harvested produce, record quantities, and manage revenues. By keeping everything in one place, it simplifies decision-making, improves efficiency, and helps maintain a clear record of the farm's productivity and financial performance. In the harvest tab, you will add the harvest picked/ gained from specific crop.     
           </p>
           <div className="pl-13 pt-8 flex justify-center">
-            {listview && (
+            {harvest && (
               <GatsbyImage
-                image={listview}
+                image={harvest}
                 alt="Startups illustration"
                 className="bg-white w-[1000.58px] "
               />
@@ -65,15 +71,15 @@ const harvest = () => {
           </div>
 <br/><br/>
           <div className="flex items-center pt-5 space-x-4">
-            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 1
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div>
           </div>
-          <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+          <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
             Add Harvest:
           </h2>
-          <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+          <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
             <p>For adding harvest details:</p>
             <br />
             <br />Click on{" "}
@@ -92,9 +98,9 @@ const harvest = () => {
                 <li>Enter the batch no (e.g. Pick 1, Pick 2 etc.) and classify the grade of yield (e.g. High, Medium, Low):</li>
                 <li>In case the after-harvest process was “Direct Sale”, enter the quantity got in that batch (e.g. 40 KG), revenue per unit (e.g.212 Rs), total revenue will calculated automatically, and transaction details like head of accounts (e.g. Bank) and transaction id/ cheque no (e.g. 8746900987) in case head of accounts was bank. A transaction will be created against it as the harvest is a revenue generated from the farm.</li>
                  <div className="pl-13 pt-8 flex justify-center">
-              {listview && (
+              {AH && (
                 <GatsbyImage
-                  image={listview}
+                  image={AH}
                   alt="Startups illustration"
                   className="bg-white w-[1000.58px] "
                 />
@@ -103,9 +109,9 @@ const harvest = () => {
             <br/><br/>
             <li>In case the after-harvest process was “Processed”, enter the before processed quantity got in that batch, after processing quantity got in that batch, revenue per unit, total revenue will calculated automatically, and transaction details like head of accounts and transaction id/ cheque no in case head of accounts was bank. A transaction will be created against it as the harvest is a revenue generated from the farm.</li>
                  <div className="pl-13 pt-8 flex justify-center">
-              {listview && (
+              {AH1 && (
                 <GatsbyImage
-                  image={listview}
+                  image={AH1}
                   alt="Startups illustration"
                   className="bg-white w-[1000.58px] "
                 />
@@ -113,9 +119,9 @@ const harvest = () => {
             </div>
             <li>In case the after-harvest process is “Inventory”, choose the inventory where the harvest will be stored, quantity to be stored, revenue per unit, total revenue will calculated automatically. No transaction will created in this case.</li>
                  <div className="pl-13 pt-8 flex justify-center">
-              {listview && (
+              {AH2 && (
                 <GatsbyImage
-                  image={listview}
+                  image={AH2}
                   alt="Startups illustration"
                   className="bg-white w-[1000.58px] "
                 />
@@ -130,14 +136,14 @@ const harvest = () => {
             <li><p>You can add more harvest pickings details in the same way.</p></li></ul>
             <br /> </div>
             <div className="flex items-center pt-5 space-x-4">
-            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 2
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div></div>
-            <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+            <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
               Search Harvest:
             </h2>
-            <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+            <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
               You can search the harvest from the list of harvests of locations
               present in the system. You can search based on either:
               <br />
@@ -148,9 +154,9 @@ const harvest = () => {
               Then click on the Search button. Also, you can click on the refresh button to refresh the data.
               </p>
               <div className="pl-13 pt-8 flex justify-center">
-                {listview && (
+                {SH && (
                   <GatsbyImage
-                    image={listview}
+                    image={SH}
                     alt="Startups illustration"
                     className="bg-white w-[1000.58px] "
                   />
@@ -158,14 +164,14 @@ const harvest = () => {
               </div>
               <br/><br/>
               <div className="flex items-center pt-5 space-x-4">
-              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 3
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div></div>
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
                 Edit Harvest:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
              If any harvesting detail you want to change, you can easily edit the details. For that:
                 <br /><br/>
                 <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
@@ -183,14 +189,14 @@ const harvest = () => {
                 </ul>
               </div>
               <div className="flex items-center pt-5 space-x-4">
-              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 4
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div></div>
-               <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+               <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
               Delete Harvest:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
               If you want to delete any harvest, you can easily do so.
                 <br /><br/>
                 <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
@@ -203,23 +209,23 @@ const harvest = () => {
                 </ul>
               </div>
                <div className="pl-13 pt-8 flex justify-center">
-                {listview && (
+                {DH && (
                   <GatsbyImage
-                    image={listview}
+                    image={DH}
                     alt="Startups illustration"
                     className="bg-white w-[1000.58px] "
                   />
                 )}
               </div>
                <div className="flex items-center pt-5 space-x-4">
-<h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+<h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 5
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div></div>
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
               View Harvest:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
              You can easily view the details of the harvest. For that:
                 <br /><br/>
                 <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
@@ -233,24 +239,15 @@ const harvest = () => {
                 </ul>
               </div>
                <div className="pl-13 pt-8 flex justify-center">
-                {listview && (
+                {VH && (
                   <GatsbyImage
-                    image={listview}
+                    image={VH}
                     alt="Startups illustration"
                     className="bg-white w-[1000.58px] "
                   />
                 )}
               </div>
-              <br/><br/>
-              <div className="pl-13 pt-8 flex justify-center">
-                {listview && (
-                  <GatsbyImage
-                    image={listview}
-                    alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
-                  />
-                )}
-              </div>
+           
               
             </div>
           </div>

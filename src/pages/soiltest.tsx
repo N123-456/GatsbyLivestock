@@ -60,10 +60,10 @@ const soiltest = () => {
     <AppLayout>
       <div>
         <div className="flex flex-col justify-center">
-          <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat pl-10 pt-5">
+          <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10 pt-5">
             Starting Guide for Soil Test:
           </h2>
-          <p className="text-primary-paragraph text-[18px] font-montserrat font-normal px-10 pt-4">
+          <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10 pt-4">
             A soil test checks the soil's health by measuring its nutrients and
             pH levels. It helps farmers understand what nutrients their soil
             needs. By testing the soil, farmers can make better choices about
@@ -86,15 +86,15 @@ const soiltest = () => {
           </div>
 
           <div className="flex items-center pt-5 space-x-4">
-            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 1
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div>
           </div>
-          <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+          <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
             Add Soil Test:
           </h2>
-          <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+          <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
             For adding a soil test:
             <br />
             <br />
@@ -184,15 +184,15 @@ const soiltest = () => {
               )}
             </div>
             <div className="flex items-center pt-5 space-x-4">
-              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                 Step 2
               </h2>
               <div className="flex-1 h-px bg-primary-line"></div>
             </div>
-            <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+            <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
               Search Soil Test:
             </h2>
-            <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+            <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
               You can search the soil test from the list of soil tests present
               in the system. You can search based on:
               <br />
@@ -215,15 +215,15 @@ const soiltest = () => {
                 )}
               </div>
               <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 3
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
                 Edit Soil Test:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
                 If any soil test detail you want to change, you can easily edit
                 the details. For that:
                 <br />
@@ -243,15 +243,15 @@ const soiltest = () => {
                 </ul>
               </div>
               <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 4
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
                 Delete Soil Test:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
                 If you want to delete the soil test, you can easily do so.
                 <br />
                 <br />
@@ -277,14 +277,15 @@ const soiltest = () => {
                   />
                 )}
               </div>
-              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+              <div className="flex items-center pt-5 space-x-4">
+              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                 Step 5
               </h2>
-              <div className="flex-1 h-px bg-primary-line"></div>
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+              <div className="flex-1 h-px bg-primary-line"></div></div>
+              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
                 View Soil Test:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
                 You can easily view the details of the soil test. For that:
                 <br />
                 <br />

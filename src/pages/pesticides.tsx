@@ -6,58 +6,58 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 const pesticides = () => {
   const data = useStaticQuery(graphql`
     query {
-      listview: file(relativePath: { eq: "listview.png" }) {
+      pesticide: file(relativePath: { eq: "pesticide.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      cview: file(relativePath: { eq: "cview.png" }) {
+      APE: file(relativePath: { eq: "APE.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      addtask: file(relativePath: { eq: "addtask.png" }) {
+      APE1: file(relativePath: { eq: "APE1.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      stask: file(relativePath: { eq: "stask.png" }) {
+      SPE: file(relativePath: { eq: "SPE.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      dtask: file(relativePath: { eq: "dtask.png" }) {
+      DPE: file(relativePath: { eq: "DPE.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      vtask: file(relativePath: { eq: "vtask.png" }) {
+      VPE: file(relativePath: { eq: "VPE.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
     }
   `);
-  const listview = getImage(data.listview);
-  const cview = getImage(data.cview);
-  const addtask = getImage(data.addtask);
-  const stask = getImage(data.stask);
-  const dtask = getImage(data.dtask);
-  const vtask = getImage(data.vtask);
+  const pesticide = getImage(data.pesticide);
+  const APE = getImage(data.APE);
+  const APE1 = getImage(data.APE1);
+  const SPE = getImage(data.SPE);
+  const DPE = getImage(data.DPE);
+  const VPE = getImage(data.VPE);
   return (
     <AppLayout>
       <div>
         <div className="flex flex-col justify-center">
-          <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat pl-10 pt-5">
+          <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10 pt-5">
           Starting Guide for Pesticides:
           </h2>
-          <p className="text-primary-paragraph text-[18px] font-montserrat font-normal px-10 pt-4">
+          <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10 pt-4">
            Pesticides are chemicals or natural substances used to protect crops from pests, insects, weeds, and diseases. They help prevent damage to plants, ensuring healthy growth and higher yields. Pesticides can be classified into types such as insecticides (for insects), herbicides (for weeds), and fungicides (for fungi). Proper and safe use of pesticides is important to avoid harm to crops, soil, and the environment. Following recommended guidelines ensures effective pest control while maintaining food safety. In the pesticides tab, you will add the pesticides applied to a specific crop.   
           </p>
           <div className="pl-13 pt-8 flex justify-center">
-            {listview && (
+            {pesticide && (
               <GatsbyImage
-                image={listview}
+                image={pesticide}
                 alt="Startups illustration"
                 className="bg-white w-[1000.58px] "
               />
@@ -65,15 +65,15 @@ const pesticides = () => {
           </div>
 
           <div className="flex items-center pt-5 space-x-4">
-            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 1
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div>
           </div>
-          <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+          <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
             Add Pesticides:
           </h2>
-          <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+          <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
             <p>For adding Pesticides:</p>
             <br />
             <br />Click on{" "}
@@ -94,9 +94,9 @@ const pesticides = () => {
                     <li>Choose the inventory. </li>
                     <li>After choosing the inventory, available quantity of the inventory will be automatically shown. Enter the quantity from the available quantity that was used. The quantity cannot exceed the available quantity.</li>
                  <div className="pl-13 pt-8 flex justify-center">
-              {listview && (
+              {APE && (
                 <GatsbyImage
-                  image={listview}
+                  image={APE}
                   alt="Startups illustration"
                   className="bg-white w-[1000.58px] "
                 />
@@ -105,9 +105,9 @@ const pesticides = () => {
             <li>If the pesticide you applied was not available in the inventory and you have to buy the pesticide, choose the option “New Buy”.</li>
             <li>Enter the details when the pesticide was bought, how much did the pesticide cost, how much quantity did you buy, transaction details like head of accounts, transaction id/cheque no in case head of accounts is bank, and from whom you bought the pesticide i.e., the vendor’s name.</li>   
                  <div className="pl-13 pt-8 flex justify-center">
-              {listview && (
+              {APE1 && (
                 <GatsbyImage
-                  image={listview}
+                  image={APE1}
                   alt="Startups illustration"
                   className="bg-white w-[1000.58px] "
                 />
@@ -121,14 +121,14 @@ const pesticides = () => {
             </ul>
             <br /> 
             <div className="flex items-center pt-5 space-x-4">
-            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 2
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div></div>
-            <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+            <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
               Search Pesticides:
             </h2>
-            <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+            <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
               You can search the pesticides from the list of pesticides of locations
               present in the system. You can search based on either:
               <br />
@@ -139,23 +139,23 @@ const pesticides = () => {
               Then click on the Search button. Also, you can click on the refresh button to refresh the data.
               </p>
               <div className="pl-13 pt-8 flex justify-center">
-                {listview && (
+                {SPE && (
                   <GatsbyImage
-                    image={listview}
+                    image={SPE}
                     alt="Startups illustration"
                     className="bg-white w-[1000.58px] "
                   />
                 )}
               </div>
               <div className="flex items-center pt-5 space-x-4">
-              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 3
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div></div>
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
                 Edit Pesticide:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
              If any pesticides application detail you want to change, you can easily edit the details. For that:
                 <br /><br/>
                 <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
@@ -173,14 +173,14 @@ const pesticides = () => {
                 </ul>
               </div>
               <div className="flex items-center pt-5 space-x-4">
-              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 4
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div></div>
-               <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+               <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
               Delete Pesticide:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
               If you want to delete any pesticide, you can easily do so.
                 <br /><br/>
                 <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
@@ -193,23 +193,23 @@ const pesticides = () => {
                 </ul>
               </div>
                <div className="pl-13 pt-8 flex justify-center">
-                {listview && (
+                {DPE && (
                   <GatsbyImage
-                    image={listview}
+                    image={DPE}
                     alt="Startups illustration"
                     className="bg-white w-[1000.58px] "
                   />
                 )}
               </div>
                 <div className="flex items-center pt-5 space-x-4">
-<h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+<h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 5
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div></div>
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
               View Pesticide:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
              You can easily view the details of the fertilizer. For that:
                 <br /><br/>
                 <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
@@ -223,18 +223,9 @@ const pesticides = () => {
                 </ul>
               </div>
                <div className="pl-13 pt-8 flex justify-center">
-                {listview && (
+                {VPE && (
                   <GatsbyImage
-                    image={listview}
-                    alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
-                  />
-                )}
-              </div>
-              <div className="pl-13 pt-8 flex justify-center">
-                {listview && (
-                  <GatsbyImage
-                    image={listview}
+                    image={VPE}
                     alt="Startups illustration"
                     className="bg-white w-[1000.58px] "
                   />

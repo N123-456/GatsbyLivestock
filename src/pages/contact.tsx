@@ -7,58 +7,54 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 const contact = () => {
   const data = useStaticQuery(graphql`
     query {
-      listview: file(relativePath: { eq: "listview.png" }) {
+      cont: file(relativePath: { eq: "cont.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      cview: file(relativePath: { eq: "cview.png" }) {
+      anc: file(relativePath: { eq: "anc.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      addtask: file(relativePath: { eq: "addtask.png" }) {
+      sc: file(relativePath: { eq: "sc.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      stask: file(relativePath: { eq: "stask.png" }) {
+      dc: file(relativePath: { eq: "dc.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      dtask: file(relativePath: { eq: "dtask.png" }) {
+      vc: file(relativePath: { eq: "vc.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      vtask: file(relativePath: { eq: "vtask.png" }) {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
-        }
-      }
+     
     }
   `);
-  const listview = getImage(data.listview);
-  const cview = getImage(data.cview);
-  const addtask = getImage(data.addtask);
-  const stask = getImage(data.stask);
-  const dtask = getImage(data.dtask);
-  const vtask = getImage(data.vtask);
+  const cont = getImage(data.cont);
+  const anc = getImage(data.anc);
+  const sc = getImage(data.sc);
+  const dc = getImage(data.dc);
+  const vc = getImage(data.vc);
+ 
   return (
     <AppLayout>
       <div>
         <div className="flex flex-col justify-center">
-          <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat pl-10 pt-5">
+          <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10 pt-5">
           Starting Guide for Contacts:
           </h2>
-          <p className="text-primary-paragraph text-[18px] font-montserrat font-normal px-10 pt-4">
+          <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10 pt-4">
            Contacts are the central repository for storing and managing contact information of relevant individuals or businesses. Targeted contacts are mostly farmers and agricultural business owners. Key contact details are displayed within the Contacts Grid: name, company, email, phone number, address, and designation. You can add, delete, edit, search and view contacts.
           </p>
           <div className="pl-13 pt-8 flex justify-center">
-            {listview && (
+            {cont && (
               <GatsbyImage
-                image={listview}
+                image={cont}
                 alt="Startups illustration"
                 className="bg-white w-[1000.58px] "
               />
@@ -66,15 +62,15 @@ const contact = () => {
           </div>
 
           <div className="flex items-center pt-5 space-x-4">
-            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 1
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div>
           </div>
-          <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+          <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
             Add New Contact:
           </h2>
-          <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+          <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
             <p>For adding a new contact</p>
             Click on{" "}
             <span className="text-primary-activelink font-semibold">
@@ -113,9 +109,9 @@ const contact = () => {
                  <p>New Contact will be created</p>
            <br/>
                  <div className="pl-13 pt-8 flex justify-center">
-              {listview && (
+              {anc && (
                 <GatsbyImage
-                  image={listview}
+                  image={anc}
                   alt="Startups illustration"
                   className="bg-white w-[1000.58px] "
                 />
@@ -128,23 +124,24 @@ const contact = () => {
             
 
             <div className="flex items-center pt-5 space-x-4">
-            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 2
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div></div>
-            <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+            <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
               Search Contact:
             </h2>
-            <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+            <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
              You can search the contact from the list of contacts present in the system. You can search based on either:
               <br />
               <ul className="list-disc">
-              <li><p>Name: You can search by the name of contact.</p></li>
-              <li><p>Contact No: You can search by the contact no of the contact.</p></li>
-              <li><p>Role: You can search by the role of the user which can be:
-o	Vendor
-o	Manager
-o	Auditor
+              <li><p><span className="text-primary-pheading font-bold">Name:</span> You can search by the name of contact.</p></li>
+              <li><p><span className="text-primary-pheading font-bold">Contact No:</span> You can search by the contact no of the contact.</p></li>
+              <li><p><span className="text-primary-pheading font-bold">Role:</span> You can search by the role of the user which can be:
+<ul className="text-primary-activelink font-bold">
+<li>Vendor</li>
+<li>Manager</li>
+<li>Auditor</li></ul>
 
 
 </p></li>
@@ -154,23 +151,23 @@ o	Auditor
               Then click on the Search button. Also, you can click on the refresh button to refresh the data.
               </p><br/>
               <div className="pl-13 pt-8 flex justify-center">
-                {listview && (
+                {sc && (
                   <GatsbyImage
-                    image={listview}
+                    image={sc}
                     alt="Startups illustration"
                     className="bg-white w-[1000.58px] "
                   />
                 )}
               </div></ul>
               <div className="flex items-center pt-5 space-x-4">
-              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 3
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div></div>
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
                 Edit Contact:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
              If any contacts details you want to change, you can easily edit the details. For that:
                 <br /><br/>
                 <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
@@ -187,14 +184,14 @@ o	Auditor
                 </ul>
               </div>
               <div className="flex items-center pt-5 space-x-4">
-              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 4
             </h2>
             <div className="flex-1 h-px bg-primary-line "></div></div>
-               <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+               <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
               Delete Contact:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
             If you no longer need any contact and wants to delete the contact, you can easily do so.
                 <br /><br/>
                 <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
@@ -207,23 +204,23 @@ o	Auditor
                 </ul>
               </div><br/>
                <div className="pl-13 pt-8 flex justify-center">
-                {listview && (
+                {dc && (
                   <GatsbyImage
-                    image={listview}
+                    image={dc}
                     alt="Startups illustration"
                     className="bg-white w-[1000.58px] "
                   />
                 )}
               </div><br/><br/>
                  <div className="flex items-center pt-5 space-x-4">
-<h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+<h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 5
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div></div>
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
               View Contact:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
              You can easily view the details of users. For that:
                 <br />
                 <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
@@ -237,23 +234,15 @@ o	Auditor
                 </ul>
               </div><br/>
                <div className="pl-13 pt-8 flex justify-center">
-                {listview && (
+                {vc && (
                   <GatsbyImage
-                    image={listview}
+                    image={vc}
                     alt="Startups illustration"
                     className="bg-white w-[1000.58px] "
                   />
                 )}
               </div>
-              <div className="pl-13 pt-8 flex justify-center">
-                {listview && (
-                  <GatsbyImage
-                    image={listview}
-                    alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
-                  />
-                )}
-              </div>
+             
              </div>
             
           </div>

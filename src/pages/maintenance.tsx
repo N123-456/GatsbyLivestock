@@ -6,52 +6,48 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 const maintenance = () => {
   const data = useStaticQuery(graphql`
     query {
-      listview: file(relativePath: { eq: "listview.png" }) {
+      main: file(relativePath: { eq: "main.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      cview: file(relativePath: { eq: "cview.png" }) {
+      amain: file(relativePath: { eq: "amain.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      addtask: file(relativePath: { eq: "addtask.png" }) {
+      smain: file(relativePath: { eq: "smain.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      stask: file(relativePath: { eq: "stask.png" }) {
+      dmain: file(relativePath: { eq: "dmain.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      dtask: file(relativePath: { eq: "dtask.png" }) {
+      vmain: file(relativePath: { eq: "vmain.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      vtask: file(relativePath: { eq: "vtask.png" }) {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
-        }
-      }
+     
     }
   `);
-  const listview = getImage(data.listview);
-  const cview = getImage(data.cview);
-  const addtask = getImage(data.addtask);
-  const stask = getImage(data.stask);
-  const dtask = getImage(data.dtask);
-  const vtask = getImage(data.vtask);
+  const main = getImage(data.main);
+  const amain = getImage(data.amain);
+  const smain = getImage(data.smain);
+  const dmain = getImage(data.dmain);
+  const vmain = getImage(data.vmain);
+  
   return (
     <AppLayout>
       <div>
         <div className="flex flex-col justify-center">
-          <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat pl-10 pt-5">
+          <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10 pt-5">
             Starting Guide for Maintenance:
           </h2>
-          <p className="text-primary-paragraph text-[18px] font-montserrat font-normal px-10 pt-4">
+          <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10 pt-4">
             Maintenance of machinery involves regular checks, repairs, and
             servicing to ensure the equipment works efficiently and lasts
             longer. This includes cleaning, lubricating moving parts, checking
@@ -67,9 +63,9 @@ const maintenance = () => {
             well, businesses can reduce downtime and improve productivity.
           </p>
           <div className="pl-13 pt-8 flex justify-center">
-            {listview && (
+            {main && (
               <GatsbyImage
-                image={listview}
+                image={main}
                 alt="Startups illustration"
                 className="bg-white w-[1000.58px] "
               />
@@ -77,15 +73,15 @@ const maintenance = () => {
           </div>
 
           <div className="flex items-center pt-5 space-x-4">
-            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 1
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div>
           </div>
-          <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+          <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
             Add Maintenance:
           </h2>
-          <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+          <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
             <p>For adding maintenance</p>
             Click on{" "}
             <span className="text-primary-activelink font-semibold">
@@ -132,9 +128,9 @@ const maintenance = () => {
               expense.
             </p>
             <div className="pl-13 pt-8 flex justify-center">
-              {listview && (
+              {amain && (
                 <GatsbyImage
-                  image={listview}
+                  image={amain}
                   alt="Startups illustration"
                   className="bg-white w-[1000.58px] "
                 />
@@ -143,15 +139,15 @@ const maintenance = () => {
           </div>
 
           <div className="flex items-center pt-5 space-x-4">
-            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 2
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div>
           </div>
-          <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+          <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
             Search Maintenance:
           </h2>
-          <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+          <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
             You can search the maintenance from the list of maintenance of
             locations present in the system. You can search based on either:
             <br />
@@ -180,9 +176,9 @@ const maintenance = () => {
                 refresh button to refresh the data.
               </p>
               <div className="pl-13 pt-8 flex justify-center">
-                {listview && (
+                {smain && (
                   <GatsbyImage
-                    image={listview}
+                    image={smain}
                     alt="Startups illustration"
                     className="bg-white w-[1000.58px] "
                   />
@@ -190,15 +186,15 @@ const maintenance = () => {
               </div>
             </ul>
             <div className="flex items-center pt-5 space-x-4">
-              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                 Step 3
               </h2>
               <div className="flex-1 h-px bg-primary-line"></div>
             </div>
-            <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+            <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
               Edit Maintenance:
             </h2>
-            <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+            <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
               If any maintenance details you want to change, you can easily edit
               the details. For that:
               <br />
@@ -215,15 +211,15 @@ const maintenance = () => {
               </ul>
             </div>
             <div className="flex items-center pt-5 space-x-4">
-              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                 Step 4
               </h2>
               <div className="flex-1 h-px bg-primary-line"></div>
             </div>
-            <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+            <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
               Delete Maintenance:
             </h2>
-            <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+            <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
               If you want to delete the maintenance, you can easily do so.
               <br />
               <br />
@@ -241,23 +237,23 @@ const maintenance = () => {
               </ul>
             </div>
             <div className="pl-13 pt-8 flex justify-center">
-              {listview && (
+              {dmain && (
                 <GatsbyImage
-                  image={listview}
+                  image={dmain}
                   alt="Startups illustration"
                   className="bg-white w-[1000.58px] "
                 />
               )}
             </div>
             <div className="flex items-center pt-5 space-x-4">
-            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 5
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div></div>
-            <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+            <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
               View Maintenance:
             </h2>
-            <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+            <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
               You can easily view the details of the maintenance. For that:
               <br />
               <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
@@ -272,23 +268,15 @@ const maintenance = () => {
               </ul>
             </div>
             <div className="pl-13 pt-8 flex justify-center">
-              {listview && (
+              {vmain && (
                 <GatsbyImage
-                  image={listview}
+                  image={vmain}
                   alt="Startups illustration"
                   className="bg-white w-[1000.58px] "
                 />
               )}
             </div>
-            <div className="pl-13 pt-8 flex justify-center">
-              {listview && (
-                <GatsbyImage
-                  image={listview}
-                  alt="Startups illustration"
-                  className="bg-white w-[1000.58px] "
-                />
-              )}
-            </div>
+           
           </div>
         </div>
       </div>

@@ -6,12 +6,12 @@ import { graphql, useStaticQuery } from 'gatsby';
 const vaccination = () => {
      const data = useStaticQuery(graphql`
                     query {
-                      listview: file(relativePath: { eq: "listview.png" }) {
+                      vaccination: file(relativePath: { eq: "vaccination.png" }) {
                         childImageSharp {
                           gatsbyImageData(placeholder: BLURRED)
                         }
                  }}`)
-                 const listview = getImage(data.listview);
+                 const vaccination = getImage(data.vaccination);
   return (
    <AppLayout>
     <div>
@@ -40,9 +40,9 @@ const vaccination = () => {
                        </li>
                      </ul>
                      <div className="pl-13 pt-8 flex justify-center">
-                       {listview && (
+                       {vaccination && (
                          <GatsbyImage
-                           image={listview}
+                           image={vaccination}
                            alt="Startups illustration"
                            className="bg-white w-[1000.58px] "
                          />

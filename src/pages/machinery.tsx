@@ -7,58 +7,94 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 const machinery = () => {
   const data = useStaticQuery(graphql`
     query {
-      listview: file(relativePath: { eq: "listview.png" }) {
+      M: file(relativePath: { eq: "M.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      cview: file(relativePath: { eq: "cview.png" }) {
+      ANM: file(relativePath: { eq: "ANM.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      addtask: file(relativePath: { eq: "addtask.png" }) {
+      PI: file(relativePath: { eq: "PI.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      stask: file(relativePath: { eq: "stask.png" }) {
+      IDEN: file(relativePath: { eq: "IDEN.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      dtask: file(relativePath: { eq: "dtask.png" }) {
+      SPEC: file(relativePath: { eq: "SPEC.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      vtask: file(relativePath: { eq: "vtask.png" }) {
+      PIN: file(relativePath: { eq: "PIN.png" }) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED)
+        }
+      }
+        AD: file(relativePath: { eq: "AD.png" }) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED)
+        }
+      }
+         SM: file(relativePath: { eq: "SM.png" }) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED)
+        }
+      }
+         DM: file(relativePath: { eq: "DM.png" }) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED)
+        }
+      }
+        VM: file(relativePath: { eq: "VM.png" }) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED)
+        }
+      }
+        VM1: file(relativePath: { eq: "VM1.png" }) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED)
+        }
+      }
+         MU: file(relativePath: { eq: "MU.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
     }
   `);
-  const listview = getImage(data.listview);
-  const cview = getImage(data.cview);
-  const addtask = getImage(data.addtask);
-  const stask = getImage(data.stask);
-  const dtask = getImage(data.dtask);
-  const vtask = getImage(data.vtask);
+  const M = getImage(data.M);
+  const ANM = getImage(data.ANM);
+  const PI = getImage(data.PI);
+  const IDEN = getImage(data.IDEN);
+  const SPEC = getImage(data.SPEC);
+  const PIN = getImage(data.PIN);
+  const AD = getImage(data.AD);
+  const SM = getImage(data.SM);
+  const DM = getImage(data.DM);
+  const VM = getImage(data.VM);
+  const VM1 = getImage(data.VM1);
+  const MU = getImage(data.MU);
   return (
     <AppLayout>
       <div>
         <div className="flex flex-col justify-center">
-          <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat pl-10 pt-5">
+          <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10 pt-5">
           Starting Guide for Machinery:
           </h2>
-          <p className="text-primary-paragraph text-[18px] font-montserrat font-normal px-10 pt-4">
+          <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10 pt-4">
           In this Machinery module, you can keep track of the machineries available in your farm. One of your most vital tools is your machinery, which enables you to operate more efficiently and accomplish more. Regular maintenance is essential to preventing malfunctions and keeping everything functioning properly. With its ability to log hours, maintenance history, and expenses, Farm Management System simplifies machinery management. You can add, edit, view, search, delete the machinery. 
           </p>
           <div className="pl-13 pt-8 flex justify-center">
-            {listview && (
+            {M && (
               <GatsbyImage
-                image={listview}
+                image={M}
                 alt="Startups illustration"
                 className="bg-white w-[1000.58px] "
               />
@@ -66,15 +102,15 @@ const machinery = () => {
           </div>
 
           <div className="flex items-center pt-5 space-x-4">
-            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 1
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div>
           </div>
-          <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+          <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
             Add New Machinery:
           </h2>
-          <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+          <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
             <p>For adding new machinery, follow the following steps:</p>
             Click on{" "}
             <span className="text-primary-activelink font-semibold">
@@ -102,9 +138,9 @@ const machinery = () => {
                  </ul>
                  <li>❖ Status: What is the status of the equipment. Either its available or on Maintenance.</li>
                  <div className="pl-13 pt-8 flex justify-center">
-              {listview && (
+              {ANM && (
                 <GatsbyImage
-                  image={listview}
+                  image={ANM}
                   alt="Startups illustration"
                   className="bg-white w-[1000.58px] "
                 />
@@ -117,9 +153,9 @@ const machinery = () => {
             <li>❖ Parking Slot: In which parking slot of the warehouse, the machinery will be parked.</li>
               </ul><br/><br/>   
                  <div className="pl-13 pt-8 flex justify-center">
-              {listview && (
+              {PI && (
                 <GatsbyImage
-                  image={listview}
+                  image={PI}
                   alt="Startups illustration"
                   className="bg-white w-[1000.58px] "
                 />
@@ -133,9 +169,9 @@ const machinery = () => {
             <li>❖ Serial No: Enter the serial number of the machinery.</li>
                </ul>  
                  <div className="pl-13 pt-8 flex justify-center">
-              {listview && (
+              {IDEN && (
                 <GatsbyImage
-                  image={listview}
+                  image={IDEN}
                   alt="Startups illustration"
                   className="bg-white w-[1000.58px] "
                 />
@@ -148,9 +184,9 @@ const machinery = () => {
             <li>❖ Track Usage: The primary usage of the track, such as on-road, off-road, or specialized tracks.</li>
                </ul>
                <div className="pl-13 pt-8 flex justify-center">
-              {listview && (
+              {SPEC && (
                 <GatsbyImage
-                  image={listview}
+                  image={SPEC}
                   alt="Startups illustration"
                   className="bg-white w-[1000.58px] "
                 />
@@ -164,9 +200,9 @@ const machinery = () => {
              <li>❖ Estimated Value: Current estimated market value of the vehicle.</li>
              </ul>
              <div className="pl-13 pt-8 flex justify-center">
-              {listview && (
+              {PIN && (
                 <GatsbyImage
-                  image={listview}
+                  image={PIN}
                   alt="Startups illustration"
                   className="bg-white w-[1000.58px] "
                 />
@@ -178,53 +214,62 @@ const machinery = () => {
 
             </ul></ul>
             <p>Click on the submit button.</p>
-            <p>New Machinery will be added successfully.</p>
-      
+            <p>New Machinery will be added successfully.</p><br/>
+      <div className="pl-13 pt-8 flex justify-center">
+                {AD && (
+                  <GatsbyImage
+                    image={AD}
+                    alt="Startups illustration"
+                    className="bg-white w-[1000.58px] "
+                  />
+                )}
+              </div>
             
             <br /> 
             <div className="flex items-center pt-5 space-x-4">
-            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 2
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div></div>
-            <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+            <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
               Search Machinery:
             </h2>
-            <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+            <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
               You can search the machinery from the list of machineries of locations
               present in the system. You can search based on either:
               <br />
               <ul className="list-disc">
-              <li><p>Name: You can search by the name of machinery.</p></li>
-              <li><p>Status: You can search by the status of the machinery. The status of machinery can be:
-o	Available
-o	Maintenance
+              <li><p><span className="text-primary-pheading font-bold">Name:</span> You can search by the name of machinery.</p></li>
+              <li><p><span className="text-primary-pheading font-bold">Status:</span> You can search by the status of the machinery. The status of machinery can be:
+<ul className="text-primary-activelink font-bold">
+<li>Available</li>
+<li>Maintenance</li></ul>
 </p></li>
-<li>Model: You can search by the model of the machinery.</li>
-<li>Number: You can search by the number of the machinery.</li></ul>
+<li><span className="text-primary-pheading font-bold">Modal:</span> You can search by the model of the machinery.</li>
+<li><span className="text-primary-pheading font-bold">Number:</span> You can search by the number of the machinery.</li></ul>
 
               <br />
               <p>
               Then click on the Search button. Also, you can click on the refresh button to refresh the data.
               </p>
               <div className="pl-13 pt-8 flex justify-center">
-                {listview && (
+                {SM && (
                   <GatsbyImage
-                    image={listview}
+                    image={SM}
                     alt="Startups illustration"
                     className="bg-white w-[1000.58px] "
                   />
                 )}
               </div>
               <div className="flex items-center pt-5 space-x-4">
-              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 3
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div></div>
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
                 Edit Machinery:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
              If any machinery details you want to change, you can easily edit the details. For that:
                 <br /><br/>
                 <ul className="pl-[15px] list-disc text-primary-activelink">
@@ -241,14 +286,14 @@ o	Maintenance
                 </ul>
               </div>
               <div className="flex items-center pt-5 space-x-4">
-              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 4
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div></div>
-               <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+               <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
               Delete Machinery:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
               If you no longer need any machinery and wants to delete the machinery or the machinery you have sold and does not belong to you, you can easily do so.
                 <br /><br/>
                 <ul className="pl-[15px] list-disc text-primary-activelink">
@@ -261,22 +306,22 @@ o	Maintenance
                 </ul>
               </div>
                <div className="pl-13 pt-8 flex justify-center">
-                {listview && (
+                {DM && (
                   <GatsbyImage
-                    image={listview}
+                    image={DM}
                     alt="Startups illustration"
                     className="bg-white w-[1000.58px] "
                   />
                 )}
               </div>
-<h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+<h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 5
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div>
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
               View Machinery:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
              You can easily view the details of the machinery. For that:
                 <br />
                 <ul className="pl-[15px] list-disc text-primary-activelink">
@@ -290,31 +335,31 @@ o	Maintenance
                 </ul>
               </div>
                <div className="pl-13 pt-8 flex justify-center">
-                {listview && (
+                {VM && (
                   <GatsbyImage
-                    image={listview}
+                    image={VM}
                     alt="Startups illustration"
                     className="bg-white w-[1000.58px] "
                   />
                 )}
               </div>
               <div className="pl-13 pt-8 flex justify-center">
-                {listview && (
+                {VM1 && (
                   <GatsbyImage
-                    image={listview}
+                    image={VM1}
                     alt="Startups illustration"
                     className="bg-white w-[1000.58px] "
                   />
                 )}
               </div>
-              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 5
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div>
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
               Machinery Usage:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
              Machinery usage can be tracked easily. You can see where and for how much time the machinery was used. Also, you can get an overview of weekly, monthly and yearly usage for all the machines available all at one place. For checking machinery usage:
                 <br />
                 <ul className="pl-[15px] list-disc text-primary-activelink">
@@ -328,9 +373,9 @@ o	Maintenance
                 <li>Click on the dropdown to see weekly, monthly and yearly usage of the machineries.</li>
                 </ul>
                 <div className="pl-13 pt-8 flex justify-center">
-                {listview && (
+                {MU && (
                   <GatsbyImage
-                    image={listview}
+                    image={MU}
                     alt="Startups illustration"
                     className="bg-white w-[1000.58px] "
                   />

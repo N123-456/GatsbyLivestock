@@ -16,10 +16,10 @@ const trialbalance = () => {
     <AppLayout>
     <div>
       <div className='flex flex-col justify-center'>
-      <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat pl-10 pt-5">
+      <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10 pt-5">
                       Trial Balance Report:
                     </h2>
-                    <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+                    <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
                    The Trial Balance is a financial report that lists all the accounts in the general ledger along with their respective debit and credit balances at a specific point in time. Its primary purpose is to ensure that the total debits equal the total credits, maintaining the accounting equation's accuracy. If the trial balance does not balance, it indicates an error, such as incorrect entries, missing transactions, or misclassifications. For example, if the farm spent money on equipment maintenance, the expense would be debited to the maintenance account, while the same amount would be credited to the cash or bank account. The trial balance ensures both sides are equal, proving the mathematical accuracy of the financial records.
                       <br /><br/>
                     </div>

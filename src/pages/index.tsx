@@ -42,27 +42,27 @@ const IndexPage = () => {
     <AppLayout>
       <main>
         <div className="flex flex-col justify-center">
-          <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat pl-10 pt-5">
+          <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10 pt-5">
             Dashboard
           </h2>
-          <p className="text-primary-paragraph text-[18px] font-montserrat font-normal px-10 pt-4">
+          <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10 pt-4">
             After logging into the system, the screen that will be first
             accessible to you will be the dashboard. The dashboard will provide
             you an overview of the farm.
           </p>
 
           <div className="flex items-center pt-5 space-x-4">
-            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10 ">
+            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10 ">
               Step 1
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div>
           </div>
           <div>
             {" "}
-            <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+            <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
               Land Overview
             </h2>
-            <p className="text-primary-paragraph text-[18px] font-montserrat font-normal pl-10">
+            <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:pl-10">
               Welcome to the Farm Management System! Designed specifically for
               agriculture sector, this system will allow you to track your
               crops, manage your expenses, manage your tasks and plan your
@@ -83,17 +83,17 @@ const IndexPage = () => {
             </div>
           </div>
           <div className="flex items-center pt-10 space-x-4">
-            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10 ">
+            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10 ">
               Step 2
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div>
           </div>
           <div>
             {" "}
-            <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10 ">
+            <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10 ">
               Cost Estimation:
             </h2>
-            <p className="text-primary-paragraph text-[18px] font-montserrat font-normal pl-10">
+            <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:pl-10">
               You will get an insight about your farming business. You can see
               how much cost has been incurred and whether you are gaining profit
               or are in loss. Also, you can see the graphical representation for
@@ -111,17 +111,17 @@ const IndexPage = () => {
             </div>
           </div>
           <div className="flex items-center pt-5 space-x-4">
-            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 3
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div>
           </div>
           <div>
             {" "}
-            <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+            <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
               Upcoming Tasks:
             </h2>
-            <p className="text-primary-paragraph text-[18px] font-montserrat font-normal  pl-10">
+            <p className="text-primary-paragraph text-[18px] font-montserrat font-normal  lg:pl-10">
               In this portion of dashboard, you can see list of top three
               upcoming tasks to be done along with their due dates.
             </p>
@@ -135,7 +135,7 @@ const IndexPage = () => {
               )}
             </div>
             <div className="flex items-center pt-5 space-x-4">
-              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                 Step 4
               </h2>
               <div className="flex-1 h-px bg-primary-line"></div>
@@ -143,10 +143,10 @@ const IndexPage = () => {
           </div>
           <div>
             {" "}
-            <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+            <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
               Menu:
             </h2>
-            <p className="text-primary-paragraph2 text-[19px] font-montserrat font-normal px-10">
+            <p className="text-primary-paragraph2 text-[19px] font-montserrat font-normal lg:px-10">
               On the left-hand side of your screen, you will see a list of menu
               options. The menu is your gateway to all features, the menu
               ensures you can move easily between functions and keep on top of

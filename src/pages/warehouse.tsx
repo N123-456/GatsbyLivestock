@@ -6,52 +6,48 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 const harvest = () => {
   const data = useStaticQuery(graphql`
     query {
-      listview: file(relativePath: { eq: "listview.png" }) {
+      W: file(relativePath: { eq: "W.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      cview: file(relativePath: { eq: "cview.png" }) {
+      shed: file(relativePath: { eq: "shed.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      addtask: file(relativePath: { eq: "addtask.png" }) {
+      swa: file(relativePath: { eq: "swa.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      stask: file(relativePath: { eq: "stask.png" }) {
+      dwa: file(relativePath: { eq: "dwa.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      dtask: file(relativePath: { eq: "dtask.png" }) {
+      vwa: file(relativePath: { eq: "vwa.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      vtask: file(relativePath: { eq: "vtask.png" }) {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
-        }
-      }
+     
     }
   `);
-  const listview = getImage(data.listview);
-  const cview = getImage(data.cview);
-  const addtask = getImage(data.addtask);
-  const stask = getImage(data.stask);
-  const dtask = getImage(data.dtask);
-  const vtask = getImage(data.vtask);
+  const W = getImage(data.W);
+  const shed = getImage(data.shed);
+  const swa = getImage(data.swa);
+  const dwa = getImage(data.dwa);
+  const vwa = getImage(data.vwa);
+
   return (
     <AppLayout>
       <div>
         <div className="flex flex-col justify-center text-sm/6">
-          <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat pl-10 pt-5">
+          <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10 pt-5">
             Starting Guide for Warehouse:
           </h2>
-          <p className="text-primary-paragraph text-[18px] font-montserrat font-normal px-10 pt-5">
+          <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10 pt-5">
             A warehouse is a storage facility where goods, equipment, or produce
             are kept safely before use or distribution. It helps organize and
             manage items efficiently, ensuring they are protected from damage or
@@ -66,9 +62,9 @@ const harvest = () => {
             The details are provided in the above part of the document.
           </p>
           <div className="pl-13 pt-8 flex justify-center">
-            {listview && (
+            {W && (
               <GatsbyImage
-                image={listview}
+                image={W}
                 alt="Startups illustration"
                 className="bg-white w-[1000.58px] "
               />
@@ -76,15 +72,15 @@ const harvest = () => {
           </div>
 
           <div className="flex items-center pt-5 space-x-4">
-            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 1
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div>
           </div>
-          <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+          <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
             Add Warehouse:
           </h2>
-          <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+          <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
             <p>For adding harvest details:</p>
             Click on{" "}
             <span className="text-primary-activelink font-semibold">
@@ -112,9 +108,9 @@ const harvest = () => {
                 ensuring smooth vehicle operations.{" "}
               </p>
                <div className="pl-13 pt-8 flex justify-center">
-              {listview && (
+              {shed && (
                 <GatsbyImage
-                  image={listview}
+                  image={shed}
                   alt="Startups illustration"
                   className="bg-white w-[1000.58px] "
                 />
@@ -122,15 +118,15 @@ const harvest = () => {
             </div><br/>
           </div>
           <div className="flex items-center pt-5 space-x-4">
-            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 2
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div>
           </div>
-          <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+          <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
             Search Warehouse:
           </h2>
-          <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+          <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
             You can search the warehouse from the list of warehouse of locations
             present in the system. You can search based on either:
             <br />
@@ -141,24 +137,24 @@ const harvest = () => {
               refresh button to refresh the data.
             </p>
             <div className="pl-13 pt-8 flex justify-center">
-              {listview && (
+              {swa && (
                 <GatsbyImage
-                  image={listview}
+                  image={swa}
                   alt="Startups illustration"
                   className="bg-white w-[1000.58px] "
                 />
               )}
             </div>
             <div className="flex items-center pt-5 space-x-4">
-              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                 Step 3
               </h2>
               <div className="flex-1 h-px bg-primary-line"></div>
             </div>
-            <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+            <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
               Edit Warehouse:
             </h2>
-            <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+            <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
               If any warehouse detail you want to change, you can easily edit
               the details. For that:
               <br />
@@ -175,15 +171,15 @@ const harvest = () => {
               </ul>
             </div>
             <div className="flex items-center pt-5 space-x-4">
-              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                 Step 4
               </h2>
               <div className="flex-1 h-px bg-primary-line"></div>
             </div>
-            <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+            <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
               Delete Warehouse:
             </h2>
-            <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+            <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
               If you want to delete any warehouse, you can easily do so.
               <br />
               <br />
@@ -201,24 +197,24 @@ const harvest = () => {
               </ul>
             </div>
             <div className="pl-13 pt-8 flex justify-center">
-              {listview && (
+              {dwa && (
                 <GatsbyImage
-                  image={listview}
+                  image={dwa}
                   alt="Startups illustration"
                   className="bg-white w-[1000.58px] "
                 />
               )}
             </div>
             <div className="flex items-center pt-5 space-x-4">
-              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                 Step 5
               </h2>
               <div className="flex-1 h-px bg-primary-line"></div>
             </div>
-            <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+            <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
               View Warehouse:
             </h2>
-            <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+            <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
               You can easily view the details of the warehouse. For that:
               <br />
               <br />
@@ -234,23 +230,15 @@ const harvest = () => {
               </ul>
             </div>
             <div className="pl-13 pt-8 flex justify-center">
-              {listview && (
+              {vwa && (
                 <GatsbyImage
-                  image={listview}
+                  image={vwa}
                   alt="Startups illustration"
                   className="bg-white w-[1000.58px] "
                 />
               )}
             </div>
-            <div className="pl-13 pt-8 flex justify-center">
-              {listview && (
-                <GatsbyImage
-                  image={listview}
-                  alt="Startups illustration"
-                  className="bg-white w-[1000.58px] "
-                />
-              )}
-            </div>
+          
           </div>
         </div>
       </div>

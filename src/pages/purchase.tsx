@@ -6,83 +6,57 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 const purchase = () => {
   const data = useStaticQuery(graphql`
     query {
-      fl: file(relativePath: { eq: "fl.png" }) {
+      PR: file(relativePath: { eq: "PR.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      AL: file(relativePath: { eq: "AL.png" }) {
+      APR: file(relativePath: { eq: "APR.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      LD: file(relativePath: { eq: "LD.png" }) {
+      APR1: file(relativePath: { eq: "APR1.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      LI: file(relativePath: { eq: "LI.png" }) {
+     
+      SPR: file(relativePath: { eq: "SPR.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      MB: file(relativePath: { eq: "MB.png" }) {
+      SPR1: file(relativePath: { eq: "SPR1.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      UI: file(relativePath: { eq: "UI.png" }) {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
-        }
-      }
-         SL: file(relativePath: { eq: "SL.png" }) {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
-        }
-      }
-         DL: file(relativePath: { eq: "DL.png" }) {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
-        }
-      }
-         VL: file(relativePath: { eq: "VL.png" }) {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
-        }
-      }
-         VL2: file(relativePath: { eq: "VL2.png" }) {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
-        }
-      }
+        
     }
   `);
-  const fl = getImage(data.fl);
-  const AL = getImage(data.AL);
-  const LD = getImage(data.LD);
-  const LI = getImage(data.LI);
-  const MB = getImage(data.MB);
-  const UI = getImage(data.UI);
-   const SL = getImage(data.SL);
-const DL = getImage(data.DL);
-    const VL= getImage(data.VL);
-    const VL2= getImage(data.VL2);
+  const PR = getImage(data.PR);
+  const APR = getImage(data.APR);
+  const APR1 = getImage(data.APR1);
+ 
+  const SPR = getImage(data.SPR);
+  const SPR1 = getImage(data.SPR1);
+   
       
   return (
     <AppLayout>
       <div>
         <div className="flex flex-col justify-center">
-          <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat pl-10 pt-5">
+          <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10 pt-5">
            Starting Guide for Purchase Requisition:
           </h2>
-          <p className="text-primary-paragraph text-[18px] font-montserrat font-normal px-10 pt-4">
+          <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10 pt-4">
             A Purchase Requisition is a formal request made within an organization to acquire goods or services. It is used to request the purchase of essential items, such as seeds, fertilizers, tools, or equipment. The process typically starts when there is a need for a particular item. The requisition includes details such as the item description, quantity required, and any specifications. After this, it moves to the purchase order to initiate the purchase process. This ensures that inventory levels are maintained, and resources are procured in an organized and efficient manner. It also helps track spending and manage budgets within the farm.
           </p>
           <div className="pl-13 pt-8 flex justify-center ">
-            {fl && (
+            {PR && (
               <GatsbyImage
-                image={fl}
+                image={PR}
                 alt="Startups illustration"
                 className="bg-white w-[1000.58px] "
               />
@@ -90,15 +64,15 @@ const DL = getImage(data.DL);
           </div>
 <br/><br/>
           <div className="flex items-center pt-5 space-x-4">
-            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 1
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div>
           </div>
-          <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+          <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
             Add Purchase Requisition:
           </h2>
-          <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+          <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
             For adding purchase requisition:
             <br /><br/>
             <ul className=" text-primary-paragraph2 ">
@@ -116,9 +90,9 @@ const DL = getImage(data.DL);
             <li>Enter the quantity.</li>
 
              <div className="pl-13 pt-8 flex justify-center ">
-            {fl && (
+            {APR && (
               <GatsbyImage
-                image={fl}
+                image={APR}
                 alt="Startups illustration"
                 className="bg-white w-[1000.58px] "
               />
@@ -127,9 +101,9 @@ const DL = getImage(data.DL);
 <li>Click on <span className="text-primary-activelink font-bold">“Add” </span> button.</li>
 <li>In the similar way you can add new purchase requisition, as you get new stock requests.</li>
  <div className="pl-13 pt-8 flex justify-center ">
-            {fl && (
+            {APR1 && (
               <GatsbyImage
-                image={fl}
+                image={APR1}
                 alt="Startups illustration"
                 className="bg-white w-[1000.58px] "
               />
@@ -139,14 +113,14 @@ const DL = getImage(data.DL);
             <br/><br/>
 
             <div className="flex items-center pt-5 space-x-4">
-            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 2
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div></div>
-            <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+            <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
             Search & Print Purchase Requisition:
             </h2>
-            <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+            <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
            You can search the purchase requisition from the list of purchase requisitions present in the system. You can search based on:
               <br />
               <br />
@@ -162,9 +136,9 @@ const DL = getImage(data.DL);
             
               <br />
                 <div className="pl-13 pt-8 flex justify-center">
-               {fl && (
+               {SPR && (
               <GatsbyImage
-                image={fl}
+                image={SPR}
                 alt="Startups illustration"
                 className="bg-white w-[1000.58px] "
               />
@@ -172,9 +146,9 @@ const DL = getImage(data.DL);
               </div>
              
                <div className="pl-13 pt-8 flex justify-center">
-                {DL && (
+                {SPR1 && (
                   <GatsbyImage
-                    image={DL}
+                    image={SPR1}
                     alt="Startups illustration"
                     className="bg-white w-[1000.58px] "
                   />

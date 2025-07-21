@@ -48,10 +48,10 @@ const tasks = () => {
     <AppLayout>
       <div>
         <div className="flex flex-col justify-center">
-          <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat pl-10 pt-5">
+          <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10 pt-5">
             Starting Guide for Tasks:
           </h2>
-          <p className="text-primary-paragraph text-[18px] font-montserrat font-normal px-10 pt-4">
+          <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10 pt-4">
             This feature of farm management system helps you manage all the work
             that needs to be done around your farm. You can create a list of
             tasks, add checklists, assign them to workers, track progress,
@@ -60,15 +60,15 @@ const tasks = () => {
           </p>
 
            <div className="flex items-center pt-5 space-x-4">
-              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                 Step 1
               </h2>
               <div className="flex-1 h-px bg-primary-line"></div>
             </div>
-          <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+          <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
             Task Views:
           </h2>
-          <p className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+          <p className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
             There are two tabs in the upper left corner when you come on task
             screen: Table and calendar. These tabs offer different perspectives
             for task management, enabling users to select the most suitable
@@ -110,15 +110,15 @@ const tasks = () => {
           </p>
 
  <div className="flex items-center pt-5 space-x-4">
-              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                 Step 2
               </h2>
               <div className="flex-1 h-px bg-primary-line"></div>
             </div>
-          <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+          <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
             Adding Tasks:
           </h2>
-          <p className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+          <p className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
             For adding a task, click on the add task button. A task form will
             open. Enter the details related to the tasks. Enter task title,
             description, additional checklists, where the task will be
@@ -142,15 +142,15 @@ const tasks = () => {
           </div>
 
            <div className="flex items-center pt-5 space-x-4">
-              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                 Step 3
               </h2>
               <div className="flex-1 h-px bg-primary-line"></div>
             </div>
-          <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+          <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
             Tasks Fields:
           </h2>
-          <p className="text-primary-paragraph2 text-[19px] font-montserrat font-normal px-10">
+          <p className="text-primary-paragraph2 text-[19px] font-montserrat font-normal lg:px-10">
             <span className="text-primary-pheading font-semibold">Title</span>: It
             will tell the name of the task to be done. (e.g. Ploughing)
             <br />{" "}
@@ -255,15 +255,15 @@ const tasks = () => {
 
 
  <div className="flex items-center pt-5 space-x-4">
-              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                 Step 4
               </h2>
               <div className="flex-1 h-px bg-primary-line"></div>
             </div>
-           <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+           <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
             Search Task:
           </h2>
-          <p className="text-primary-paragraph2 text-[19px] font-montserrat font-normal px-10">
+          <p className="text-primary-paragraph2 text-[19px] font-montserrat font-normal lg:px-10">
             You can search the task from the list of tasks present in the system. You can search based on either:<br/>
             <span className="text-primary-pheading font-semibold">Title</span>: You can search by the title of the task.
             <br />{" "}
@@ -293,16 +293,16 @@ const tasks = () => {
           </div>
 
            <div className="flex items-center pt-5 space-x-4">
-              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                 Step 5
               </h2>
               <div className="flex-1 h-px bg-primary-line"></div>
             </div>
 
-<h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+<h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
         Edit Task:
           </h2>
-          <p className="text-primary-paragraph2 text-[19px] font-montserrat font-normal px-10">
+          <p className="text-primary-paragraph2 text-[19px] font-montserrat font-normal lg:px-10">
            If any tasks detail you want to change, you can easily edit the details except for the transaction details related to the task. For that:<br/>
            <ul className="list-disc list-inside text-primary-activelink font-semibold text-[18px]">
             <li>Click on the edit icon.</li>
@@ -315,16 +315,16 @@ const tasks = () => {
             </p>
 
              <div className="flex items-center pt-5 space-x-4">
-              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                 Step 6
               </h2>
               <div className="flex-1 h-px bg-primary-line"></div>
             </div>
 
-<h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+<h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
         Delete Task:
           </h2>
-          <p className="text-primary-paragraph2 text-[19px] font-montserrat font-normal px-10">
+          <p className="text-primary-paragraph2 text-[19px] font-montserrat font-normal lg:px-10">
           If you no longer need any task and wants to delete the machinery, you can easily do so:<br/>
            <ul className="list-disc list-inside text-primary-activelink font-semibold text-[18px]">
             <li>Click on the delete icon against the row you want to delete in the tasks table.</li>
@@ -346,16 +346,16 @@ const tasks = () => {
           </div>
 
            <div className="flex items-center pt-5 space-x-4">
-              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                 Step 7
               </h2>
               <div className="flex-1 h-px bg-primary-line"></div>
             </div>
 
-<h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+<h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
         View Task:
           </h2>
-          <p className="text-primary-paragraph2 text-[19px] font-montserrat font-normal px-10">
+          <p className="text-primary-paragraph2 text-[19px] font-montserrat font-normal lg:px-10">
           You can easily view the details of task. For that:<br/>
            <ul className="list-disc list-inside text-primary-activelink font-semibold text-[18px]">
             <li>Hover on three dots.</li>

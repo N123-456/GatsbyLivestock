@@ -7,64 +7,63 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 const maintenance = () => {
   const data = useStaticQuery(graphql`
     query {
-      listview: file(relativePath: { eq: "listview.png" }) {
+      acu: file(relativePath: { eq: "acu.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      cview: file(relativePath: { eq: "cview.png" }) {
+      aci: file(relativePath: { eq: "aci.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      addtask: file(relativePath: { eq: "addtask.png" }) {
+      acou: file(relativePath: { eq: "acou.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      stask: file(relativePath: { eq: "stask.png" }) {
+      acou1: file(relativePath: { eq: "acou1.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      dtask: file(relativePath: { eq: "dtask.png" }) {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
-        }
-      }
-      vtask: file(relativePath: { eq: "vtask.png" }) {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
-        }
-      }
+     
     }
   `);
-  const listview = getImage(data.listview);
-  const cview = getImage(data.cview);
-  const addtask = getImage(data.addtask);
-  const stask = getImage(data.stask);
-  const dtask = getImage(data.dtask);
-  const vtask = getImage(data.vtask);
+  const acu = getImage(data.acu);
+  const aci = getImage(data.aci);
+  const acou = getImage(data.acou);
+  const acou1 = getImage(data.acou1);
+ 
   return (
     <AppLayout>
       <div>
         <div className="flex flex-col justify-center">
-          <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat pl-10 pt-5">
+          <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10 pt-5">
           Starting Guide with Machinery Usage Tracking:
           </h2>
          
           <div className="flex items-center pt-5 space-x-4">
-            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 1
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div>
           </div>
-          <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+          <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
             Add Check-In Usage:
           </h2>
-          <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+          <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
             <p>The check-in process involves recording details when a machine is returned after use. This includes noting the time and date of return, the operator's name, and the machine's current condition. A thorough inspection is carried out to check for any signs of damage, wear and tear, fuel levels, or technical issues. If any problems are found, they are documented for maintenance or repair. The machine is then cleaned, refuelled (if required), and properly stored in its designated area to ensure it is ready for the next operation. Recording this information in a logbook or farm management system helps maintain accurate usage records, track machine health, and ensure accountability. You can visually analyse the check in usage of the machinery. You can easily filter out weekly, monthly and yearly check in usage. </p>
-           <br/>
+           <br/><div className="pl-13 pt-8 flex justify-center">
+              {acu && (
+                <GatsbyImage
+                  image={acu}
+                  alt="Startups illustration"
+                  className="bg-white w-[1000.58px] "
+                />
+              )}
+            </div>
+           <br/><br/>
            <h2 className="text-primary-paragraph2 text-[19px] font-montserrat font-semibold ">Add Check-In</h2>
            
            <ul>
@@ -134,9 +133,9 @@ const maintenance = () => {
            <li>Check In usage will be added successfully.</li>
            </ul> 
                 <div className="pl-13 pt-8 flex justify-center">
-              {listview && (
+              {aci && (
                 <GatsbyImage
-                  image={listview}
+                  image={aci}
                   alt="Startups illustration"
                   className="bg-white w-[1000.58px] "
                 />
@@ -149,18 +148,28 @@ const maintenance = () => {
             
 
             <div className="flex items-center pt-5 space-x-4">
-            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 2
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div>
           </div>
-          <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+          <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
             Add Check-Out Usage:
           </h2>
-          <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+          <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
             <p>The check-in process involves recording details when a machine is returned after use. This includes noting the time and date of return, the operator's name, and the machine's current condition. A thorough inspection is carried out to check for any signs of damage, wear and tear, fuel levels, or technical issues. If any problems are found, they are documented for maintenance or repair. The machine is then cleaned, refuelled (if required), and properly stored in its designated area to ensure it is ready for the next operation. Recording this information in a logbook or farm management system helps maintain accurate usage records, track machine health, and ensure accountability. You can visually analyse the check in usage of the machinery. You can easily filter out weekly, monthly and yearly check in usage. </p>
-           <br/>
-           <h2 className="text-primary-paragraph2 text-[19px] font-montserrat font-semibold ">Add Check-In</h2>
+           <br/><div className="pl-13 pt-8 flex justify-center">
+              {acou && (
+                <GatsbyImage
+                  image={acou}
+                  alt="Startups illustration"
+                  className="bg-white w-[1000.58px] "
+                />
+              )}
+            </div>
+           <br/><br/>
+           <h2 className="text-primary-paragraph2 text-[19px] font-montserrat font-semibold ">Add Check-Out Usage</h2>
+           <p>To add check out details:</p>
            <ul>
         <li>Go to{" "}
             <span className="text-primary-activelink font-semibold">
@@ -180,7 +189,7 @@ const maintenance = () => {
             button.</li> <br/>
             <p className="font-semibold">Enter Machinery Details:</p>
             <li> <span className="text-primary-pheading font-semibold">
-              Machinery
+              Machinery Name
             </span>: Displays the name of the machinery being checked in (e.g., Tractor). This field is non-editable and is automatically populated.</li>
              <li> <span className="text-primary-pheading font-semibold">
               Machine Type
@@ -230,107 +239,16 @@ const maintenance = () => {
              
             
               <div className="pl-13 pt-8 flex justify-center">
-                {listview && (
+                {acou1 && (
                   <GatsbyImage
-                    image={listview}
+                    image={acou1}
                     alt="Startups illustration"
                     className="bg-white w-[1000.58px] "
                   />
                 )}
               </div></div>
 
-              <div className="flex items-center pt-5 space-x-4">
-              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
-              Step 3
-            </h2>
-            <div className="flex-1 h-px bg-primary-line"></div></div>
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
-                Edit Maintenance:
-              </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
-             If any maintenance details you want to change, you can easily edit the details. For that:
-                <br /><br/>
-                <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
-                  <li>
-                    Click on the edit icon 
-                  </li>
-                  <li>Maintenance details screen will open.</li>
-                  <li>Click on the field you want to edit.</li>
-                  <li>Make changes in the fields</li>
-                  <li>Click on submit button.</li>
-                  <li>
-                    Maintenance details will be edited/updated successfully.
-                  </li>
-                </ul>
-              </div>
-              <div className="flex items-center pt-5 space-x-4">
-              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
-              Step 4
-            </h2>
-            <div className="flex-1 h-px bg-primary-line"></div></div>
-               <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
-              Delete Maintenance:
-              </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
-              If you want to delete the maintenance, you can easily do so.
-                <br /><br/>
-                <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
-                  <li>
-                    Click on the delete icon against the row you want to delete in the maintenance’s table.
-                  </li>
-                  <li>A dialogue box will appear to confirm whether you want to delete or not.</li>
-                  <li>Click on delete button.</li>
-                  <li>Maintenance will be deleted successfully.</li>
-                </ul>
-              </div>
-               <div className="pl-13 pt-8 flex justify-center">
-                {listview && (
-                  <GatsbyImage
-                    image={listview}
-                    alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
-                  />
-                )}
-              </div>
-              <div className="flex items-center pt-5 space-x-4">
-<h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
-              Step 5
-            </h2>
-            <div className="flex-1 h-px bg-primary-line"></div></div>
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
-              View Maintenance:
-              </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
-             You can easily view the details of the maintenance. For that:
-                <br />
-                <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
-                  <li>
-                    Hover on three dots.
-                  </li>
-                  <li>Click on view button.</li>
-                  <li>Click on delete button.</li>
-                  <li>Maintenance details page will open.</li>
-                  <li>Click on print button if you want to print the details of the maintenance.</li>
-                </ul>
-              </div>
-               <div className="pl-13 pt-8 flex justify-center">
-                {listview && (
-                  <GatsbyImage
-                    image={listview}
-                    alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
-                  />
-                )}
-              </div>
-              <div className="pl-13 pt-8 flex justify-center">
-                {listview && (
-                  <GatsbyImage
-                    image={listview}
-                    alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
-                  />
-                )}
-              </div>
+             
              </div>
             
           </div>

@@ -6,12 +6,18 @@ import { graphql, useStaticQuery } from 'gatsby';
 const feed = () => {
     const data = useStaticQuery(graphql`
             query {
-              listview: file(relativePath: { eq: "listview.png" }) {
+              feed: file(relativePath: { eq: "feed.png" }) {
+                childImageSharp {
+                  gatsbyImageData(placeholder: BLURRED)
+                }
+         }
+                    feed1: file(relativePath: { eq: "feed1.png" }) {
                 childImageSharp {
                   gatsbyImageData(placeholder: BLURRED)
                 }
          }}`)
-         const listview = getImage(data.listview);
+         const feed = getImage(data.feed);
+          const feed1 = getImage(data.feed1);
   return (
     
     <AppLayout>
@@ -40,9 +46,9 @@ const feed = () => {
                       </li>
                     </ul>
                     <div className="pl-13 pt-8 flex justify-center">
-                      {listview && (
+                      {feed && (
                         <GatsbyImage
-                          image={listview}
+                          image={feed}
                           alt="Startups illustration"
                           className="bg-white w-[1000.58px] "
                         />
@@ -50,9 +56,9 @@ const feed = () => {
                     </div><br/><ul>
                     <li>Choose the storage option where you want to add racks.</li>
                     <div className="pl-13 pt-8 flex justify-center">
-                      {listview && (
+                      {feed1 && (
                         <GatsbyImage
-                          image={listview}
+                          image={feed1}
                           alt="Startups illustration"
                           className="bg-white w-[1000.58px] "
                         />

@@ -75,7 +75,7 @@ const user = () => {
             Add New User:
           </h2>
           <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
-            <p>For adding a new user</p><br/><br/>
+            <p>For adding a new user</p><br/>
             Click on{" "}
             <span className="text-primary-activelink font-semibold">
               "Add New"

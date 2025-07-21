@@ -6,12 +6,12 @@ import { graphql, useStaticQuery } from 'gatsby'
 const inputs = () => {
     const data = useStaticQuery(graphql`
                 query {
-                  listview: file(relativePath: { eq: "listview.png" }) {
+                  inputs: file(relativePath: { eq: "inputs.png" }) {
                     childImageSharp {
                       gatsbyImageData(placeholder: BLURRED)
                     }
              }}`)
-             const listview = getImage(data.listview);
+             const inputs= getImage(data.inputs);
   return (
    <AppLayout>
     <div>
@@ -48,13 +48,13 @@ const inputs = () => {
                             Application Equipment:
                           </span>{" "}
                           Tools and machines used to apply fertilizers, pesticides, and
-                          weedicides.
+                          wedicides.
                         </li>
                       </ul>
                       <div className="pl-13 pt-8 flex justify-center">
-                        {listview && (
+                        {inputs && (
                           <GatsbyImage
-                            image={listview}
+                            image={inputs}
                             alt="Startups illustration"
                             className="bg-white w-[1000.58px] "
                           />

@@ -36,22 +36,22 @@ const addlocation = () => {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-         SL: file(relativePath: { eq: "SL.png" }) {
+      SL: file(relativePath: { eq: "SL.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-         DL: file(relativePath: { eq: "DL.png" }) {
+      DL: file(relativePath: { eq: "DL.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-         VL: file(relativePath: { eq: "VL.png" }) {
+      VL: file(relativePath: { eq: "VL.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-         VL2: file(relativePath: { eq: "VL2.png" }) {
+      VL2: file(relativePath: { eq: "VL2.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
@@ -64,19 +64,19 @@ const addlocation = () => {
   const LI = getImage(data.LI);
   const MB = getImage(data.MB);
   const UI = getImage(data.UI);
-   const SL = getImage(data.SL);
-    const DL = getImage(data.DL);
-     const VL= getImage(data.VL);
-      const VL2= getImage(data.VL2);
-      
+  const SL = getImage(data.SL);
+  const DL = getImage(data.DL);
+  const VL = getImage(data.VL);
+  const VL2 = getImage(data.VL2);
+
   return (
     <AppLayout>
-      <div >
+      <div>
         <div className="flex flex-col justify-center">
-          <h2 className="text-primary-activelink font-semibold lg:text-[34px]  sm:text-[18px]  sm:pt-2 font-montserrat lg:pl-10 lg:pt-5">
+          <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10 pt-5">
             Starting Guide for Farm Locations:
           </h2>
-          <p className="text-primary-paragraph lg:text-[18px] sm:[16px] sm:px-2  font-montserrat font-normal lg:pl-10  lg:pt-4">
+          <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:pl-10 lg:pt-5 sm:pt-5 md:pt-5">
             Farm Locations are the locations that are owned by you or where you
             can plant your crops. So, for that you need to Add the location
             first. After that, on that particular location you can add the
@@ -97,27 +97,30 @@ const addlocation = () => {
               />
             )}
           </div>
-<br/><br/>
+          <br />
+          <br />
           <div className="flex items-center pt-5 space-x-4">
-            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 1
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div>
           </div>
-          <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+          <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
             Add Location:
           </h2>
-          <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+          <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
             For adding a location:
             <br />
-            <br />Click on{" "}
+            <br />
+            Click on{" "}
             <span className="text-primary-activelink font-semibold">
               "Add location"
             </span>
             button.
             <br />
             Enter the required information.
-            <br />First enter the{" "}
+            <br />
+            First enter the{" "}
             <span className="text-primary-activelink font-semibold">
               name and type
             </span>
@@ -213,7 +216,8 @@ const addlocation = () => {
                 />
               )}
             </div>
-            <br/><br/>
+            <br />
+            <br />
             ▪ Enter the required information.
             <br />
             <ul className="text-primary-activelink font-semibold list-disc">
@@ -232,7 +236,8 @@ const addlocation = () => {
                 />
               )}
             </div>
-            <br/><br/>
+            <br />
+            <br />
             Enter the additional information including:
             <br />
             <ul className="text-primary-subheading font-normal text-[18px] font-montserrat pt-5 list-disc">
@@ -284,7 +289,8 @@ const addlocation = () => {
                 />
               )}
             </div>
-            <br/><br/>
+            <br />
+            <br />
             Enter the required information:
             <br />
             <ul className="text-primary-activelink font-semibold list-disc">
@@ -303,24 +309,29 @@ const addlocation = () => {
                 />
               )}
             </div>
-            <br/><br/>
-            <p>Choose the location boundaries:</p><br/>
+            <br />
+            <br />
+            <p>Choose the location boundaries:</p>
+            <br />
             <h1 className="font-semibold">Mark Boundaries: </h1>
             <br />
             <ul className="text-primary-subheading font-normal text-[18px] font-montserrat ">
               <li>
-                Click on the <span className="text-primary-activelink font-semibold">“Mark Boundaries”</span> button. A satellite imagery map
-                will open.
+                Click on the{" "}
+                <span className="text-primary-activelink font-semibold">
+                  “Mark Boundaries”
+                </span>{" "}
+                button. A satellite imagery map will open.
               </li>
               <li>Enter the location name in the search bar.</li>
               <li>Zoom In or zoom out to reach the exact location.</li>
               <li>
-                After reaching the desired location mark the boundaries of
-                your farm location.
+                After reaching the desired location mark the boundaries of your
+                farm location.
               </li>
               <li>
-                Additionally, you can Upload KML file to get the location
-                marked on the map.
+                Additionally, you can Upload KML file to get the location marked
+                on the map.
               </li>
               <li>
                 After the boundaries are marked, click on the save button.
@@ -335,7 +346,8 @@ const addlocation = () => {
                 />
               )}
             </div>
-            <br/><br/>
+            <br />
+            <br />
             <ul className="pt-4 list-disc">
               <li>
                 Optionally, you can upload the image of your farm location.
@@ -354,17 +366,19 @@ const addlocation = () => {
                   className="bg-white w-[1000.58px] "
                 />
               )}
-            </div>
-            <br/><br/>
+            </div></div>
+            <br />
+            <br />
             <div className="flex items-center pt-5 space-x-4">
-            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
-              Step 2
-            </h2>
-            <div className="flex-1 h-px bg-primary-line"></div></div>
-            <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                Step 2
+              </h2>
+              <div className="flex-1 h-px bg-primary-line"></div>
+            </div>
+            <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
               Search Location:
             </h2>
-            <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+            <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
               You can search the location from the list of farms of locations
               present in the system. You can search based on either:
               <br />
@@ -401,20 +415,23 @@ const addlocation = () => {
                     className="bg-white w-[1000.58px] "
                   />
                 )}
-              </div>
-              <br/><br/>
+              </div></div>
+              <br />
+              <br />
               <div className="flex items-center pt-5 space-x-4">
-              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
-              Step 3
-            </h2>
-            <div className="flex-1 h-px bg-primary-line"></div></div>
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                  Step 3
+                </h2>
+                <div className="flex-1 h-px bg-primary-line"></div>
+              </div>
+              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
                 Edit Location:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
                 If any location details changes, you can easily edit the
                 details. For that:
-                <br /><br/>
+                <br />
+                <br />
                 <ul className="pl-[15px] text-primary-activelink font-semibold list-disc">
                   <li>
                     Click on the edit icon against the location you want to
@@ -424,32 +441,38 @@ const addlocation = () => {
                   <li>Click on the field you want to edit.</li>
                   <li>Make changes in the fields</li>
                   <li>Click on submit button.</li>
-                  <li>
-                    Location details will be edited/updated successfully.
-                  </li>
+                  <li>Location details will be edited/updated successfully.</li>
                 </ul>
               </div>
               <div className="flex items-center pt-5 space-x-4">
-              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
-              Step 4
-            </h2>
-            <div className="flex-1 h-px bg-primary-line"></div></div>
-               <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
-              Delete Location:
+                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                  Step 4
+                </h2>
+                <div className="flex-1 h-px bg-primary-line"></div>
+              </div>
+              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+                Delete Location:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
-               If you no longer need any location or that location no more belongs to you and wants to delete the location, you can easily do so.
-                <br /><br/>
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+                If you no longer need any location or that location no more
+                belongs to you and wants to delete the location, you can easily
+                do so.
+                <br />
+                <br />
                 <ul className="pl-[15px] text-primary-activelink font-semibold list-disc">
                   <li>
-                    Click on the delete icon against the row you want to delete in the location’s table.
+                    Click on the delete icon against the row you want to delete
+                    in the location’s table.
                   </li>
-                  <li>A dialogue box will appear to confirm whether you want to delete or not.</li>
+                  <li>
+                    A dialogue box will appear to confirm whether you want to
+                    delete or not.
+                  </li>
                   <li>Click on delete button.</li>
                   <li>Location will be deleted successfully.</li>
                 </ul>
               </div>
-               <div className="pl-13 pt-8 flex justify-center">
+              <div className="pl-13 pt-8 flex justify-center">
                 {DL && (
                   <GatsbyImage
                     image={DL}
@@ -458,28 +481,31 @@ const addlocation = () => {
                   />
                 )}
               </div>
-              <br/><br/>
-<h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
-              Step 5
-            </h2>
-            <div className="flex-1 h-px bg-primary-line"></div>
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
-              View Location:
+              <br />
+              <br />
+                <div className="flex items-center pt-5 space-x-4">
+              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                Step 5
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
-               If you no longer need any location or that location no more belongs to you and wants to delete the location, you can easily do so.
-                <br /><br/>
+              <div className="flex-1 h-px bg-primary-line"></div></div>
+              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+                View Location:
+              </h2>
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+                If you no longer need any location or that location no more
+                belongs to you and wants to delete the location, you can easily
+                do so.
+                <br />
+                <br />
                 <ul className="pl-[15px] text-primary-activelink font-semibold list-disc">
-                  <li>
-                    Hover on three dots.
-                  </li>
+                  <li>Hover on three dots.</li>
                   <li>Click on view button.</li>
                   <li>Click on delete button.</li>
                   <li>Location details page will open.</li>
                   <li>You can print the details of the location.</li>
                 </ul>
               </div>
-               <div className="pl-13 pt-8 flex justify-center">
+              <div className="pl-13 pt-8 flex justify-center">
                 {VL && (
                   <GatsbyImage
                     image={VL}
@@ -488,7 +514,7 @@ const addlocation = () => {
                   />
                 )}
               </div>
-              <br/>
+              <br />
               <div className="pl-13 pt-8 flex justify-center">
                 {VL2 && (
                   <GatsbyImage
@@ -500,8 +526,8 @@ const addlocation = () => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
+    
+      
     </AppLayout>
   );
 };
@@ -510,7 +536,7 @@ export default addlocation;
 
 export const Head = () => (
   <>
-<title>Location | Farm Management System</title>
- <link rel="icon" type="image/png" href="/images/fmsLogo.png" />
-</>
-)
+    <title>Location | Farm Management System</title>
+    <link rel="icon" type="image/png" href="/images/fmsLogo.png" />
+  </>
+);
