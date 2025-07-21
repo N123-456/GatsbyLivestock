@@ -6,15 +6,17 @@ import { AppLayout } from '../components/AppShell/AppLayout'
 const balancesheet = () => {
      const data = useStaticQuery(graphql`
         query {
-          listview: file(relativePath: { eq: "listview.png" }) {
+          bs: file(relativePath: { eq: "bs.png" }) {
             childImageSharp {
               gatsbyImageData(placeholder: BLURRED)
             }
      }}`)
-     const listview = getImage(data.listview);
+     const bs = getImage(data.bs);
   return (
     <AppLayout>
     <div>
+      <div className="flex flex-col justify-center">
+           <div className="max-w-7xl w-full px-4 lg:px-4">
       <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10 pt-5">
                       Balance Sheet:
                     </h2>
@@ -37,14 +39,15 @@ const balancesheet = () => {
                                 For example, if the farm owns equipment worth Rs. 10,000,000 (asset) but has an outstanding loan of Rs. 4,000,000 (liability), the owner’s equity would be Rs. 6,000,000. The balance sheet helps determine the farm's financial health by showing whether its assets outweigh its liabilities.
                                 </p><br/>
                                 <div className="pl-13 pt-8 flex justify-center">
-                                  {listview && (
+                                  {bs && (
                                     <GatsbyImage
-                                      image={listview}
+                                      image={bs}
                                       alt="Startups illustration"
                                       className="bg-white w-[1000.58px] "
                                     />
                                   )}
                                 </div></ul></div>
+                                </div></div>
       
     </div>
     </AppLayout>

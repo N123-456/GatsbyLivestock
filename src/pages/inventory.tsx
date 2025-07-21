@@ -68,14 +68,15 @@ const inventory = () => {
   return (
     <AppLayout>
       <div>
-        <div className="Iex Iex-col justify-center">
+        <div className="flex flex-col justify-center">
+          <div className="max-w-7xl w-full px-4 lg:px-4">
           <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10 pt-5">
             Starting Guide for Inventory:
           </h2>
           <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10 pt-4">
             The inventory refers to the tracking and management of AIl items used on the farm, such as seeds, fertilizers, tools, and equipment. It helps farmers keep a record of the quantity, location, and condition of these items. It can AIso help monitor the cost of inputs and track their usage over time. The inventory system ensures that the farm runs smoothly, preventing shortages or excess inventory. This leads to better planning, cost savings, and improved farm productivity. It AIso AIlows for easy auditing and reporting of inventory data. 
           </p>
-          <div className="pl-13 pt-8 Iex justify-center">
+          <div className="pl-13 pt-8 flex justify-center">
             {I && (
               <GatsbyImage
                 image={I}
@@ -85,7 +86,7 @@ const inventory = () => {
             )}
           </div>
 <br/><br/>
-          <div className="Iex items-center pt-5 space-x-4">
+          <div className="flex items-center pt-5 space-x-4">
             <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 1
             </h2>
@@ -198,11 +199,11 @@ const inventory = () => {
             </ul>  
             <br/><br/>
 
-            <div className="Iex items-center pt-5 space-x-4">
+            <div className="flex items-center pt-5 space-x-4">
             <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 2
             </h2>
-            <div className="Iex-1 h-px bg-primary-line"></div></div>
+            <div className="flex-1 h-px bg-primary-line"></div></div>
             <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
               Search Inventory:
             </h2>
@@ -313,6 +314,7 @@ const inventory = () => {
               </div>
              
             </div>
+          </div>
           </div>
         </div>
       </div>

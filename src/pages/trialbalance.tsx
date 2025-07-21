@@ -6,16 +6,17 @@ import { AppLayout } from '../components/AppShell/AppLayout'
 const trialbalance = () => {
      const data = useStaticQuery(graphql`
         query {
-          listview: file(relativePath: { eq: "listview.png" }) {
+          tbr: file(relativePath: { eq: "tbr.png" }) {
             childImageSharp {
               gatsbyImageData(placeholder: BLURRED)
             }
      }}`)
-     const listview = getImage(data.listview);
+     const tbr = getImage(data.tbr);
   return (
     <AppLayout>
     <div>
       <div className='flex flex-col justify-center'>
+             <div className="max-w-7xl w-full px-4 lg:px-4">
       <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10 pt-5">
                       Trial Balance Report:
                     </h2>
@@ -24,14 +25,15 @@ const trialbalance = () => {
                       <br /><br/>
                     </div>
                     <div className="pl-13 pt-8 flex justify-center">
-                      {listview && (
+                      {tbr && (
                         <GatsbyImage
-                          image={listview}
+                          image={tbr}
                           alt="Startups illustration"
                           className="bg-white w-[1000.58px] "
                         />
                       )}
                     </div>
+</div>
                     </div>
       
     </div>

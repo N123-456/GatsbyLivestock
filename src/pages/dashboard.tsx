@@ -44,7 +44,9 @@ const dashboard = () => {
   return (
     <AppLayout>
       <main>
-        <div className="flex flex-col">
+        <div className="flex flex-col justify-center">
+         
+           <div className="max-w-5xl w-full px-4 lg:px-10">
           <h2 className="text-primary-activelink font-semibold text-2xl sm:text-3xl md:text-4xl font-montserrat px-4 sm:px-10 pt-5">
             Dashboard
           </h2>
@@ -229,6 +231,7 @@ const dashboard = () => {
                 />
               )}
             </div>
+          </div>
           </div>
         </div>
       </main>

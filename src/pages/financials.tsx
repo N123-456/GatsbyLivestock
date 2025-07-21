@@ -7,48 +7,27 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 const contact = () => {
   const data = useStaticQuery(graphql`
     query {
-      listview: file(relativePath: { eq: "listview.png" }) {
+      f: file(relativePath: { eq: "f.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      cview: file(relativePath: { eq: "cview.png" }) {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
-        }
-      }
-      addtask: file(relativePath: { eq: "addtask.png" }) {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
-        }
-      }
-      stask: file(relativePath: { eq: "stask.png" }) {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
-        }
-      }
-      dtask: file(relativePath: { eq: "dtask.png" }) {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
-        }
-      }
-      vtask: file(relativePath: { eq: "vtask.png" }) {
+      glr: file(relativePath: { eq: "glr.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
     }
   `);
-  const listview = getImage(data.listview);
-  const cview = getImage(data.cview);
-  const addtask = getImage(data.addtask);
-  const stask = getImage(data.stask);
-  const dtask = getImage(data.dtask);
-  const vtask = getImage(data.vtask);
+  const f= getImage(data.f);
+  const glr = getImage(data.glr);
+
   return (
     <AppLayout>
       <div>
         <div className="flex flex-col justify-center">
+         
+           <div className="max-w-7xl w-full px-4 lg:px-4">
           <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10 pt-5">
           Starting Guide for Financials:
           </h2>
@@ -61,9 +40,9 @@ By using the Financial Module, farm owners and managers can make well-informed d
 
           </p>
           <div className="pl-13 pt-8 flex justify-center">
-            {listview && (
+            {f && (
               <GatsbyImage
-                image={listview}
+                image={f}
                 alt="Startups illustration"
                 className="bg-white w-[1000.58px] "
               />
@@ -80,16 +59,16 @@ By using the Financial Module, farm owners and managers can make well-informed d
        
             </div><br/>
  <div className="pl-13 pt-8 flex justify-center">
-            {listview && (
+            {glr && (
               <GatsbyImage
-                image={listview}
+                image={glr}
                 alt="Startups illustration"
                 className="bg-white w-[1000.58px] "
               />
             )}
           </div>
             
-
+</div>
              </div>
             
           </div>

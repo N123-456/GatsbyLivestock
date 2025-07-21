@@ -42,6 +42,8 @@ const IndexPage = () => {
     <AppLayout>
       <main>
         <div className="flex flex-col justify-center">
+          
+           <div className="max-w-7xl w-full px-4 lg:px-4">
           <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10 pt-5">
             Dashboard
           </h2>
@@ -208,6 +210,7 @@ const IndexPage = () => {
                 />
               )}
             </div>
+          </div>
           </div>
         </div>
       </main>

@@ -258,7 +258,7 @@ const Sidebar = React.memo(() => {
                   ) : null}
                 </span>
                 {hasSublinks && (
-                  <span className={`absolute ${isOpen ? "bottom-2 right-3" : "bottom-5 right-3"} text-black`}>
+                  <span className={`absolute ${isOpen ? "bottom-2 right-3" : "bottom-4 right-5"} text-black`}>
                     {isOpen ? <IconChevronDown size={17} /> : <IconChevronRight size={17} />}
                   </span>
                 )}
@@ -353,7 +353,7 @@ const Sidebar = React.memo(() => {
     <div>
       {/* Hamburger Menu for Mobile */}
       <button
-        className="md:hidden fixed top-1 right-1 z-50 p-2 bg-primary-activelink text-white rounded-md"
+        className="md:hidden fixed top-1 left-1 z-50 p-2 bg-primary-activelink text-white rounded-md"
         onClick={toggleSidebar}
       >
         {isSidebarOpen ? <IconX size={24} /> : <IconMenu2 size={24} />}
@@ -371,10 +371,10 @@ const Sidebar = React.memo(() => {
         ref={sidebarRef}
         className={`fixed top-0 left-0 h-full bg-[#F3FBF2] shadow-lg overflow-y-auto scrollbar-hidden transition-transform duration-300 ease-in-out z-40
           ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"} 
-          md:translate-x-0 md:w-[250px] w-[200px]`}
+          md:translate-x-0 md:w-[250px] w-[290px]`}
       >
-        <div className="pt-[23px] pb-2 lg:pr-[20px] pl-[16px]">
-          <div className=" font-bold flex items-center">
+        <div className="lg:pt-[23px] sm:pt-[30px] md:pt-[30px] pl-[16px]">
+          <div className=" font-bold flex items-center lg:pr-[20px]">
             <span role="img" aria-label="logo" className="mr-2">
               {fmslogo && (
                 <GatsbyImage

@@ -6,16 +6,30 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 const recordtransaction = () => {
       const data = useStaticQuery(graphql`
             query {
-              listview: file(relativePath: { eq: "listview.png" }) {
+              rt: file(relativePath: { eq: "rt.png" }) {
                 childImageSharp {
                   gatsbyImageData(placeholder: BLURRED)
                 }
-         }}`)
-         const listview = getImage(data.listview);
+         }
+          rt1: file(relativePath: { eq: "rt1.png" }) {
+                childImageSharp {
+                  gatsbyImageData(placeholder: BLURRED)
+                }
+         }
+                 rt2: file(relativePath: { eq: "rt2.png" }) {
+                childImageSharp {
+                  gatsbyImageData(placeholder: BLURRED)
+                }
+         }       
+                }`)
+         const rt = getImage(data.rt);
+          const rt1 = getImage(data.rt1);
+           const rt2 = getImage(data.rt2);
   return (
     <AppLayout>
         <div>
           <div className='flex flex-col justify-center'>
+                 <div className="max-w-7xl w-full px-4 lg:px-4">
                         <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10 pt-5">
                         Record Transaction:
                           </h2>
@@ -38,9 +52,9 @@ const recordtransaction = () => {
                              <li><span className="text-primary-pheading font-bold">Life Span (If Applicable): :</span> Select the applicable year using the dropdown menu.</li>
                              <li><span className="text-primary-pheading font-bold">Purpose:</span> Write the purpose or description of the transaction.</li>
                              <br/><div className="pl-13 pt-8 flex justify-center">
-                            {listview && (
+                            {rt && (
                               <GatsbyImage
-                                image={listview}
+                                image={rt}
                                 alt="Startups illustration"
                                 className="bg-white w-[1000.58px] "
                               />
@@ -61,9 +75,9 @@ const recordtransaction = () => {
                             </ul>
                         <br/>
                            <div className="pl-13 pt-8 flex justify-center">
-                            {listview && (
+                            {rt1 && (
                               <GatsbyImage
-                                image={listview}
+                                image={rt1}
                                 alt="Startups illustration"
                                 className="bg-white w-[1000.58px] "
                               />
@@ -79,9 +93,9 @@ const recordtransaction = () => {
                             <li>Transaction will be created successfully.</li>
             <br/>
                                <div className="pl-13 pt-8 flex justify-center">
-                            {listview && (
+                            {rt2 && (
                               <GatsbyImage
-                                image={listview}
+                                image={rt2}
                                 alt="Startups illustration"
                                 className="bg-white w-[1000.58px] "
                               />
@@ -93,6 +107,7 @@ const recordtransaction = () => {
                             <li>Double-check the values for accuracy before saving.</li>
                             </ul>
                           </div><br/>
+                          </div>
                           </div>
         </div>
     </AppLayout>

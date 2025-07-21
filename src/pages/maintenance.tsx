@@ -44,6 +44,7 @@ const maintenance = () => {
     <AppLayout>
       <div>
         <div className="flex flex-col justify-center">
+            <div className="max-w-7xl w-full px-4 lg:px-4">
           <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10 pt-5">
             Starting Guide for Maintenance:
           </h2>
@@ -277,6 +278,7 @@ const maintenance = () => {
               )}
             </div>
            
+          </div>
           </div>
         </div>
       </div>

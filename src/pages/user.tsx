@@ -7,48 +7,39 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 const user = () => {
   const data = useStaticQuery(graphql`
     query {
-      listview: file(relativePath: { eq: "listview.png" }) {
+      um: file(relativePath: { eq: "um.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      cview: file(relativePath: { eq: "cview.png" }) {
+      anu: file(relativePath: { eq: "anu.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      addtask: file(relativePath: { eq: "addtask.png" }) {
+      su: file(relativePath: { eq: "su.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      stask: file(relativePath: { eq: "stask.png" }) {
+      vud: file(relativePath: { eq: "vud.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      dtask: file(relativePath: { eq: "dtask.png" }) {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
-        }
-      }
-      vtask: file(relativePath: { eq: "vtask.png" }) {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
-        }
-      }
+     
     }
   `);
-  const listview = getImage(data.listview);
-  const cview = getImage(data.cview);
-  const addtask = getImage(data.addtask);
-  const stask = getImage(data.stask);
-  const dtask = getImage(data.dtask);
-  const vtask = getImage(data.vtask);
+  const um = getImage(data.um);
+  const anu = getImage(data.anu);
+  const su = getImage(data.su);
+  const vud = getImage(data.vud);
+ 
   return (
     <AppLayout>
       <div>
         <div className="flex flex-col justify-center">
+               <div className="max-w-7xl w-full px-4 lg:px-4">
           <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat pl-10 pt-5">
           Starting Guide for User Management:
           </h2>
@@ -56,9 +47,9 @@ const user = () => {
           Users can be managed easily through farm management system. Users are the people who will perform the tasks related to the farm. System offers different user roles with varying levels of access and permissions within the system. From here, you grant access to users to access the system according to their defined roles. Only users with "Farm Admin" role can create and manage user accounts. Users can be added, searched and their details can be edited.
           </p>
           <div className="pl-13 pt-8 flex justify-center">
-            {listview && (
+            {um && (
               <GatsbyImage
-                image={listview}
+                image={um}
                 alt="Startups illustration"
                 className="bg-white w-[1000.58px] "
               />
@@ -119,9 +110,9 @@ const user = () => {
                  <p>User will be Added</p></ul>
            <br/>
                  <div className="pl-13 pt-8 flex justify-center">
-              {listview && (
+              {anu && (
                 <GatsbyImage
-                  image={listview}
+                  image={anu}
                   alt="Startups illustration"
                   className="bg-white w-[1000.58px] "
                 />
@@ -162,9 +153,9 @@ const user = () => {
               Then click on the Search button. Also, you can click on the refresh button to refresh the data.
               </p><br/>
               <div className="pl-13 pt-8 flex justify-center">
-                {listview && (
+                {su && (
                   <GatsbyImage
-                    image={listview}
+                    image={su}
                     alt="Startups illustration"
                     className="bg-white w-[1000.58px] "
                   />
@@ -212,15 +203,7 @@ const user = () => {
                 
                 </ul>
               </div><br/>
-               <div className="pl-13 pt-8 flex justify-center">
-                {listview && (
-                  <GatsbyImage
-                    image={listview}
-                    alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
-                  />
-                )}
-              </div><br/><br/>
+              <br/><br/>
                <div className="flex items-center pt-5 space-x-4">
 <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
               Step 5
@@ -243,25 +226,17 @@ const user = () => {
                 </ul>
               </div><br/>
                <div className="pl-13 pt-8 flex justify-center">
-                {listview && (
+                {vud && (
                   <GatsbyImage
-                    image={listview}
+                    image={vud}
                     alt="Startups illustration"
                     className="bg-white w-[1000.58px] "
                   />
                 )}
               </div>
-              <div className="pl-13 pt-8 flex justify-center">
-                {listview && (
-                  <GatsbyImage
-                    image={listview}
-                    alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
-                  />
-                )}
-              </div>
+             
              </div>
-            
+            </div>
           </div>
         </div>
     
