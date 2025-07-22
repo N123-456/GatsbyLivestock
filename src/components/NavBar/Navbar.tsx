@@ -353,7 +353,9 @@ const Sidebar = React.memo(() => {
     <div>
       {/* Hamburger Menu for Mobile */}
       <button
-        className="md:hidden fixed top-1 left-1 z-50 p-2 bg-primary-activelink text-white rounded-md"
+       className={`md:hidden fixed ${
+          isSidebarOpen ? "left-[250px] top-1" : "left-1 top-1"
+        } z-50 p-2 bg-gray-200 text-black rounded-md`}
         onClick={toggleSidebar}
       >
         {isSidebarOpen ? <IconX size={24} /> : <IconMenu2 size={24} />}

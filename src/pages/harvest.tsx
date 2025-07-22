@@ -55,7 +55,7 @@ const harvest = () => {
       <div>
         <div className="flex flex-col justify-center">
        
-           <div className="max-w-7xl w-full px-4 lg:px-4">
+           <div className="max-w-7xl w-full px-4 lg:px-4 text-justify">
           <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10 pt-5">
           Starting Guide for Harvest:
           </h2>
@@ -83,7 +83,7 @@ const harvest = () => {
           </h2>
           <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
             <p>For adding harvest details:</p>
-            <br />
+          
             <br />Click on{" "}
             <span className="text-primary-activelink font-semibold">
               "Planting"
@@ -97,8 +97,8 @@ const harvest = () => {
             <li><p>Enter the required details as follows:</p></li></ul><br/>
             <ul className="pl-[15px] list-disc">
                 <li> Date & Time: When was the crop harvested, what was the after-harvest process i.e., either the yield was directly sold out or there was further processing on the yield or was stored in inventory. Other than the inventory option, enter the customer’s name who bought the yield. </li>
-                <li>Enter the batch no (e.g. Pick 1, Pick 2 etc.) and classify the grade of yield (e.g. High, Medium, Low):</li>
-                <li>In case the after-harvest process was “Direct Sale”, enter the quantity got in that batch (e.g. 40 KG), revenue per unit (e.g.212 Rs), total revenue will calculated automatically, and transaction details like head of accounts (e.g. Bank) and transaction id/ cheque no (e.g. 8746900987) in case head of accounts was bank. A transaction will be created against it as the harvest is a revenue generated from the farm.</li>
+                <li>Enter the batch no <span className="text-primary-activelink font-bold">(e.g. Pick 1, Pick 2 etc.)</span>{" "} and classify the grade of yield <span className="text-primary-activelink font-bold">(e.g. High, Medium, Low):</span>{""}</li>
+                <li>In case the after-harvest process was <span className="text-primary-activelink font-bold">“Direct Sale”,</span>{" "} enter the quantity got in that batch <span className="text-primary-activelink font-bold">(e.g. 40 KG),</span>{" "} revenue per unit <span className="text-primary-activelink font-bold">(e.g.212 Rs),</span>{" "} total revenue will calculated automatically, and transaction details like head of accounts <span className="text-primary-activelink font-bold">(e.g. Bank)</span>{" "} and transaction id/ cheque no <span className="text-primary-activelink font-bold">(e.g. 8746900987)</span>{" "} in case head of accounts was bank. A transaction will be created against it as the harvest is a revenue generated from the farm.</li>
                  <div className="pl-13 pt-8 flex justify-center">
               {AH && (
                 <GatsbyImage
@@ -109,7 +109,7 @@ const harvest = () => {
               )}
             </div>
             <br/><br/>
-            <li>In case the after-harvest process was “Processed”, enter the before processed quantity got in that batch, after processing quantity got in that batch, revenue per unit, total revenue will calculated automatically, and transaction details like head of accounts and transaction id/ cheque no in case head of accounts was bank. A transaction will be created against it as the harvest is a revenue generated from the farm.</li>
+            <li>In case the after-harvest process was <span className="text-primary-activelink font-bold">“Processed”,</span>{" "} enter the before processed quantity got in that batch, after processing quantity got in that batch, revenue per unit, total revenue will calculated automatically, and transaction details like head of accounts and transaction id/ cheque no in case head of accounts was bank. A transaction will be created against it as the harvest is a revenue generated from the farm.</li>
                  <div className="pl-13 pt-8 flex justify-center">
               {AH1 && (
                 <GatsbyImage
@@ -118,8 +118,8 @@ const harvest = () => {
                   className="bg-white w-[1000.58px] "
                 />
               )}
-            </div>
-            <li>In case the after-harvest process is “Inventory”, choose the inventory where the harvest will be stored, quantity to be stored, revenue per unit, total revenue will calculated automatically. No transaction will created in this case.</li>
+            </div><br/>
+            <li>In case the after-harvest process is <span className="text-primary-activelink font-bold">“Inventory”,</span>{" "} choose the inventory where the harvest will be stored, quantity to be stored, revenue per unit, total revenue will calculated automatically. No transaction will created in this case.</li>
                  <div className="pl-13 pt-8 flex justify-center">
               {AH2 && (
                 <GatsbyImage
@@ -132,7 +132,7 @@ const harvest = () => {
             <br/><br/>
             <li>Enter the instructions related to the harvest if any.</li>
                
-            <br/><br/>
+            <br/>
             <li><p>Click on the submit button.</p></li>
             <li><p>Harvest will be added successfully.</p></li>
             <li><p>You can add more harvest pickings details in the same way.</p></li></ul>

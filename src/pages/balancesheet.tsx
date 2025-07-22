@@ -16,11 +16,11 @@ const balancesheet = () => {
     <AppLayout>
     <div>
       <div className="flex flex-col justify-center">
-           <div className="max-w-7xl w-full px-4 lg:px-4">
+           <div className="max-w-7xl w-full px-4 lg:px-4  text-justify">
       <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10 pt-5">
                       Balance Sheet:
                     </h2>
-                  <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+                  <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10 pt-5">
                                The Balance Sheet is a critical financial report that provides a snapshot of the farm’s financial position at a specific point in time. It shows the relationship between the farm's assets (what the farm owns), liabilities (what the farm owes), and owner’s equity (the owner's investment).
                                 <br />
                                 <p>The balance sheet follows the accounting equation:

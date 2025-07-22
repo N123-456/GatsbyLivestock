@@ -20,11 +20,11 @@ const Introduction = () => {
       <div>
       
         <div className="flex flex-col justify-center ">
-          <div className="max-w-7xl w-full px-4 lg:px-4">
+          <div className="max-w-7xl w-full px-4 lg:px-4  text-justify">
           <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:px-10 pt-5">
             Introduction
           </h2>
-          <p className="text-primary-paragraph sm:text-[12px] lg:text-lg md:text-lg font-montserrat font-normal lg:px-10 pt-4">
+          <p className="text-primary-paragraph sm:text-[12px] lg:text-lg md:text-lg font-montserrat font-normal lg:px-10 pt-4 text-justify">
             Welcome to the Farm Management System! Designed specifically for the
             agriculture sector, this system will allow you to track your crops,
             manage your expenses, manage your tasks, and plan your resources

@@ -85,7 +85,7 @@ const machinery = () => {
     <AppLayout>
       <div>
         <div className="flex flex-col justify-center">
-            <div className="max-w-7xl w-full px-4 lg:px-4">
+            <div className="max-w-7xl w-full px-4 lg:px-4  text-justify">
           <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10 pt-5">
           Starting Guide for Machinery:
           </h2>
@@ -114,7 +114,7 @@ const machinery = () => {
           <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
             <p>For adding new machinery, follow the following steps:</p>
             Click on{" "}
-            <span className="text-primary-activelink font-semibold">
+            <span className="text-primary-activelink font-bold">
               "Add New"
             </span>
             button.
@@ -123,21 +123,21 @@ const machinery = () => {
             <ul className="list-disc">
                 <li>Basic Information:</li>
             
-            <ul className="text-primary-pheading">
+            <ul className="text-primary-paragraph2">
                 
-            <li>❖ Name: Name of the equipment. </li>
-            <li>❖ Type:  What type is the equipment. The types can be</li>
-                <ul>
-                <li><span className="text-primary-pheading">Machinery:</span> </li>
-                <li><span className="text-primary-pheading">Tools:</span> </li>
-                <li><span className="text-primary-pheading">Vehicles:</span> </li>
-                 <li><span className="text-primary-pheading">Irigation:</span></li>
-                   <li><span className="text-primary-pheading">Storage:</span></li>
-                     <li><span className="text-primary-pheading">Harvesting:</span></li>
-                       <li><span className="text-primary-pheading">Planting:</span></li>
-                         <li><span className="text-primary-pheading">Fertilizing:</span></li>
+            <li><span className="text-primary-pheading font-bold">Name:</span>{" "} Name of the equipment. </li>
+            <li><span className="text-primary-pheading font-bold">Type:</span>{" "}  What type is the equipment. The types can be</li>
+                <ul className="text-primary-activelink font-bold">
+                <li>Machinery: </li>
+                <li>Tools: </li>
+                <li>Vehicles:</li>
+                 <li>Irigation:</li>
+                   <li>Storage:</li>
+                     <li>Harvesting:</li>
+                       <li>Planting:</li>
+                         <li>Fertilizing:</li>
                  </ul>
-                 <li>❖ Status: What is the status of the equipment. Either its available or on Maintenance.</li>
+                 <li><span className="text-primary-pheading font-bold">Status:</span>{" "} What is the status of the equipment. Either its available or on Maintenance.</li>
                  <div className="pl-13 pt-8 flex justify-center">
               {ANM && (
                 <GatsbyImage
@@ -146,12 +146,12 @@ const machinery = () => {
                   className="bg-white w-[1000.58px] "
                 />
               )}
-            </div>
+            </div><br/>
            </ul>
            <li>Parking Information:</li>
-           <ul className="text-primary-pheading">
-            <li>❖ Warehouse: In which warehouse the machinery will be parked.</li>
-            <li>❖ Parking Slot: In which parking slot of the warehouse, the machinery will be parked.</li>
+           <ul className="text-primary-paragraph2">
+            <li><span className="text-primary-pheading font-bold">Warehouse:</span>{" "} In which warehouse the machinery will be parked.</li>
+            <li><span className="text-primary-pheading font-bold">Parking Slot:</span>{" "} In which parking slot of the warehouse, the machinery will be parked.</li>
               </ul><br/><br/>   
                  <div className="pl-13 pt-8 flex justify-center">
               {PI && (
@@ -161,13 +161,13 @@ const machinery = () => {
                   className="bg-white w-[1000.58px] "
                 />
               )}
-            </div>
+            </div><br/>
             <li>Identification: How will the machinery be identified.</li>
-            <ul className="text-primary-pheading">
-            <li>❖ Model: What is the model of the machinery.</li>
-            <li>❖ Model Year: What is the model year of the machinery.</li>
-            <li>❖ ID / Plate No: What is the id/plate no of the machinery.</li>
-            <li>❖ Serial No: Enter the serial number of the machinery.</li>
+            <ul className="text-primary-paragraph2">
+            <li><span className="text-primary-pheading font-bold">Model:</span>{" "} What is the model of the machinery.</li>
+            <li><span className="text-primary-pheading font-bold">Model Year:</span>{" "} What is the model year of the machinery.</li>
+            <li><span className="text-primary-pheading font-bold">ID / Plate No:</span>{" "} What is the id/plate no of the machinery.</li>
+            <li><span className="text-primary-pheading font-bold">Serial No:</span>{" "} Enter the serial number of the machinery.</li>
                </ul>  
                  <div className="pl-13 pt-8 flex justify-center">
               {IDEN && (
@@ -177,12 +177,12 @@ const machinery = () => {
                   className="bg-white w-[1000.58px] "
                 />
               )}
-            </div>
+            </div><br/>
             <li>Specifications:</li>
-            <ul className="text-primary-pheading">
-            <li>❖ Engine: Details about the engine type, power output, and specifications. </li>
-            <li>❖ Transmission: Information on the transmission system, including type and gear configuration.</li>
-            <li>❖ Track Usage: The primary usage of the track, such as on-road, off-road, or specialized tracks.</li>
+            <ul className="text-primary-paragraph2">
+            <li><span className="text-primary-pheading font-bold">Engine:</span>{" "} Details about the engine type, power output, and specifications. </li>
+            <li><span className="text-primary-pheading font-bold">Transmission:</span>{" "} Information on the transmission system, including type and gear configuration.</li>
+            <li><span className="text-primary-pheading font-bold">Track Usage:</span>{" "} The primary usage of the track, such as on-road, off-road, or specialized tracks.</li>
                </ul>
                <div className="pl-13 pt-8 flex justify-center">
               {SPEC && (
@@ -192,13 +192,13 @@ const machinery = () => {
                   className="bg-white w-[1000.58px] "
                 />
               )}
-            </div>
+            </div><br/>
             <li>Purchase Information</li>
-            <ul className="text-primary-pheading">
-            <li>❖ Ownership Status:  Current ownership status, indicating whether the vehicle is owned or leased.</li>
-            <li>❖ Date Acquired: The date the vehicle was acquired, indicating when it was purchased or leased.</li>
-             <li>❖ Purchase Price: The price paid for the vehicle at the time of acquisition.</li>
-             <li>❖ Estimated Value: Current estimated market value of the vehicle.</li>
+            <ul className="text-primary-paragraph2">
+            <li><span className="text-primary-pheading font-bold">Ownership Status:</span>{" "}  Current ownership status, indicating whether the vehicle is owned or leased.</li>
+            <li><span className="text-primary-pheading font-bold">Date Acquired:</span>{" "} The date the vehicle was acquired, indicating when it was purchased or leased.</li>
+             <li><span className="text-primary-pheading font-bold">Purchase Price:</span>{" "} The price paid for the vehicle at the time of acquisition.</li>
+             <li><span className="text-primary-pheading font-bold">Estimated Value:</span>{" "} Current estimated market value of the vehicle.</li>
              </ul>
              <div className="pl-13 pt-8 flex justify-center">
               {PIN && (
@@ -208,10 +208,10 @@ const machinery = () => {
                   className="bg-white w-[1000.58px] "
                 />
               )}
-            </div>
-<li>Additional Details</li><ul className="text-primary-pheading" >
-            <li>❖ Link To Manual: A hyperlink to the product’s user manual or instructional guide.</li>
-            <li>❖ Description: A brief overview of the vehicle, highlighting key features and purpose.</li>
+            </div><br/>
+<li>Additional Details</li><ul className="text-primary-paragraph2" >
+            <li><span className="text-primary-pheading font-bold">Link To Manual:</span>{" "} A hyperlink to the product’s user manual or instructional guide.</li>
+            <li><span className="text-primary-pheading font-bold">Description:</span>{" "} A brief overview of the vehicle, highlighting key features and purpose.</li>
 
             </ul></ul>
             <p>Click on the submit button.</p>
@@ -273,7 +273,7 @@ const machinery = () => {
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
              If any machinery details you want to change, you can easily edit the details. For that:
                 <br /><br/>
-                <ul className="pl-[15px] list-disc text-primary-activelink">
+                <ul className="pl-[15px] list-disc text-primary-activelink font-bold">
                   <li>
                     Click on the edit icon 
                   </li>
@@ -297,7 +297,7 @@ const machinery = () => {
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
               If you no longer need any machinery and wants to delete the machinery or the machinery you have sold and does not belong to you, you can easily do so.
                 <br /><br/>
-                <ul className="pl-[15px] list-disc text-primary-activelink">
+                <ul className="pl-[15px] list-disc text-primary-activelink font-bold">
                   <li>
                     Click on the delete icon against the row you want to delete in the machinery table.
                   </li>
@@ -325,7 +325,7 @@ const machinery = () => {
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
              You can easily view the details of the machinery. For that:
                 <br />
-                <ul className="pl-[15px] list-disc text-primary-activelink">
+                <ul className="pl-[15px] list-disc text-primary-activelink font-bold">
                   <li>
                     Hover on three dots.
                   </li>
@@ -363,7 +363,7 @@ const machinery = () => {
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
              Machinery usage can be tracked easily. You can see where and for how much time the machinery was used. Also, you can get an overview of weekly, monthly and yearly usage for all the machines available all at one place. For checking machinery usage:
                 <br />
-                <ul className="pl-[15px] list-disc text-primary-activelink">
+                <ul className="pl-[15px] list-disc text-primary-activelink font-bold">
                   <li>
                     Go to machinery tab:
                   </li>

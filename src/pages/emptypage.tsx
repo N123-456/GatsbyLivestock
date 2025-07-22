@@ -5,7 +5,7 @@ const emptypage = () => {
   return (
     <AppLayout>
     <div>
-      <div className='flex text-center text-7xl text-primary-activelink'>Page Not Found</div>
+      <div className='flex text-center text-7xl  pl-8 text-primary-activelink  '>Page Not Found</div>
     </div>
     </AppLayout>
   )

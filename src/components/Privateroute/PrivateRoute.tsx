@@ -2,28 +2,26 @@
 import React, { useEffect, useState, ReactNode } from "react";
 import { navigate } from "gatsby";
 import { isLoggedIn } from "../../utils/auth";
-import LoginModal from "../LoginModal/LoginModal";
 
 type PrivateRouteProps = {
   children: ReactNode;
+  setIsLoginModalOpen: (open: boolean) => void;
 };
 
-const PrivateRoute: React.FC<PrivateRouteProps> = ({ children }) => {
+const PrivateRoute: React.FC<PrivateRouteProps> = ({ children, setIsLoginModalOpen }) => {
   const [authChecked, setAuthChecked] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
 
   useEffect(() => {
     const checkAuth = async () => {
       try {
         if (!isLoggedIn()) {
-          setIsLoginModalOpen(true); // Show LoginModal instead of redirecting
+          setIsLoginModalOpen(true);
         } else {
           setAuthChecked(true);
         }
       } catch (error) {
         console.error("Authentication check error:", error);
-        // Optionally redirect to an error page
         await navigate("/error");
       } finally {
         setIsLoading(false);
@@ -31,7 +29,7 @@ const PrivateRoute: React.FC<PrivateRouteProps> = ({ children }) => {
     };
 
     checkAuth();
-  }, []);
+  }, [setIsLoginModalOpen]);
 
   if (isLoading) {
     return (
@@ -41,14 +39,7 @@ const PrivateRoute: React.FC<PrivateRouteProps> = ({ children }) => {
     );
   }
 
-  return (
-    <>
-      <LoginModal
-        isOpen={isLoginModalOpen}
-        onClose={() => setIsLoginModalOpen(false)}
-      />
-      {authChecked ? <>{children}</> : null}
-    </>
-  );
+  return authChecked ? <>{children}</> : null;
 };
+
 export default PrivateRoute;

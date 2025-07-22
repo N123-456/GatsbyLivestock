@@ -60,7 +60,7 @@ const soiltest = () => {
     <AppLayout>
       <div>
         <div className="flex flex-col justify-center">
-               <div className="max-w-7xl w-full px-4 lg:px-4">
+               <div className="max-w-7xl w-full px-4 lg:px-4  text-justify">
           <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10 pt-5">
             Starting Guide for Soil Test:
           </h2>
@@ -99,12 +99,12 @@ const soiltest = () => {
             For adding a soil test:
             <br />
             <br />
-            <ul className="list-disc text-primary-activelink font-semibold">
-           <li> Go to farm locations tab.</li>
+            <ul>
+           <li> Go to <span className="text-primary-activelink font-bold">farm locations</span> {" "} tab.</li>
            <li> Hover on three dots against the farm.</li>
             <li>location you want to add soil test.</li>
            <li> Click on soil test.</li>
-            <li>Click on “Add Soil Test” button.</li></ul><br/>
+            <li>Click on <span className="text-primary-activelink font-bold">“Add Soil Test” </span> {" "} button.</li></ul><br/>
             <br />Enter the required details including: <br />
             <ul>
               <li>
@@ -197,10 +197,10 @@ const soiltest = () => {
               You can search the soil test from the list of soil tests present
               in the system. You can search based on:
               <br />
-              <p className="pl-[15px]">
-                Name: You can search by the name of the laboratory where the
+              <p>
+                 <span className="text-primary-pheading font-bold">Name:</span> You can search by the name of the laboratory where the
                 test was performed.
-              </p>{" "}
+              </p>{" "}<br/>
               <p>
                 Then click on the Search button. Also, you can click on the
                 refresh button to refresh the data.

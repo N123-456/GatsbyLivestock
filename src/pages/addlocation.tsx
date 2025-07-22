@@ -73,11 +73,11 @@ const addlocation = () => {
     <AppLayout>
       <div>
         <div className="flex flex-col justify-center">
-           <div className="max-w-7xl w-full px-4 lg:px-4">
+           <div className="max-w-7xl w-full px-4 lg:px-4  text-justify">
           <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10 pt-5">
             Starting Guide for Farm Locations:
           </h2>
-          <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:pl-10 lg:pt-5 sm:pt-5 md:pt-5">
+          <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:pl-10 pt-5 ">
             Farm Locations are the locations that are owned by you or where you
             can plant your crops. So, for that you need to Add the location
             first. After that, on that particular location you can add the
@@ -128,7 +128,7 @@ const addlocation = () => {
             : of the location. The type of location can be:
             <br />
             <br />{" "}
-            <ul className="list-disc">
+            <ul>
               <li>
                 <span className="text-primary-pheading font-semibold">
                   Animal Enclosure:
@@ -219,7 +219,7 @@ const addlocation = () => {
             </div>
             <br />
             <br />
-            ▪ Enter the required information.
+            Enter the required information.
             <br />
             <ul className="text-primary-activelink font-semibold list-disc">
               <li>Province</li>
@@ -241,7 +241,7 @@ const addlocation = () => {
             <br />
             Enter the additional information including:
             <br />
-            <ul className="text-primary-subheading font-normal text-[18px] font-montserrat pt-5 list-disc">
+            <ul className="text-primary-subheading font-normal text-[18px] font-montserrat pt-5">
               <li>
                 <span className="text-primary-pheading font-semibold">
                   Ownership Status
@@ -315,7 +315,7 @@ const addlocation = () => {
             <p>Choose the location boundaries:</p>
             <br />
             <h1 className="font-semibold">Mark Boundaries: </h1>
-            <br />
+         
             <ul className="text-primary-subheading font-normal text-[18px] font-montserrat ">
               <li>
                 Click on the{" "}
@@ -384,9 +384,9 @@ const addlocation = () => {
               present in the system. You can search based on either:
               <br />
               <br />
-              <p>Name: You can search by the name of the location.</p>{" "}
+              <p><span className="text-primary-pheading font-bold">Name:</span> You can search by the name of the location.</p>{" "}
               <p>
-                Type: You can search based on particular type of the location
+                <span className="text-primary-pheading font-bold">Type:</span> You can search based on particular type of the location
                 which can be:
               </p>
               <br />

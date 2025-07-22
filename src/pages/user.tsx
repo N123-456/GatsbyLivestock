@@ -39,11 +39,11 @@ const user = () => {
     <AppLayout>
       <div>
         <div className="flex flex-col justify-center">
-               <div className="max-w-7xl w-full px-4 lg:px-4">
-          <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat pl-10 pt-5">
+               <div className="max-w-7xl w-full px-4 lg:px-4  text-justify">
+          <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10 pt-5">
           Starting Guide for User Management:
           </h2>
-          <p className="text-primary-paragraph text-[18px] font-montserrat font-normal px-10 pt-4">
+          <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10 pt-4">
           Users can be managed easily through farm management system. Users are the people who will perform the tasks related to the farm. System offers different user roles with varying levels of access and permissions within the system. From here, you grant access to users to access the system according to their defined roles. Only users with "Farm Admin" role can create and manage user accounts. Users can be added, searched and their details can be edited.
           </p>
           <div className="pl-13 pt-8 flex justify-center">
@@ -57,15 +57,15 @@ const user = () => {
           </div>
 
           <div className="flex items-center pt-5 space-x-4">
-            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 1
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div>
           </div>
-          <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+          <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
             Add New User:
           </h2>
-          <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+          <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
             <p>For adding a new user</p><br/>
             Click on{" "}
             <span className="text-primary-activelink font-semibold">
@@ -125,14 +125,14 @@ const user = () => {
             
 
             <div className="flex items-center pt-5 space-x-4">
-            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+            <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 2
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div></div>
-            <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+            <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
               Search User:
             </h2>
-            <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+            <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
              You can search the user from the list of users present in the system. You can search based on either:
               <br /><br />
               <ul>
@@ -162,14 +162,14 @@ const user = () => {
                 )}
               </div></ul>
               <div className="flex items-center pt-5 space-x-4">
-              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 3
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div></div>
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
                 Edit User:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
              If any user's details you want to change, you can easily edit the details. For that:
                 <br /><br/>
                 <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
@@ -186,14 +186,14 @@ const user = () => {
                 </ul>
               </div>
               <div className="flex items-center pt-5 space-x-4">
-              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 4
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div></div>
-               <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+               <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
               Block User:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
             You can block any user for any reason. When the user will be blocked, he/she will lose access to the system and will not be able to log into the system. For this, you can do it in two ways:
                 <br /><br/>
                 <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
@@ -202,17 +202,17 @@ const user = () => {
                   <li>You can hover on three dots. There you will find an option of Block.</li>
                 
                 </ul>
-              </div><br/>
-              <br/><br/>
+              </div>
+            
                <div className="flex items-center pt-5 space-x-4">
-<h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pl-10">
+<h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
               Step 5
             </h2>
             <div className="flex-1 h-px bg-primary-line"></div></div>
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 pl-10">
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
               View User Details:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal px-10">
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
              You can easily view the details of users. For that:
                 <br />
                 <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
