@@ -1,12 +1,14 @@
+// src/components/NavBar/Navbar.tsx
+import React, { useEffect, useState, useRef, useCallback } from "react";
 import { IconChevronDown, IconChevronRight, IconMenu2, IconX } from "@tabler/icons-react";
 import { graphql, Link, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import React, { useEffect, useState, useRef, useCallback } from "react";
+import { isLoggedIn } from "../../utils/auth";
+import { navigate } from "gatsby";
 
 const Sidebar = React.memo(() => {
-  const sidebarRef = useRef(null);
+  const sidebarRef = useRef<HTMLDivElement | null>(null);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
   const [openMenus, setOpenMenus] = useState(() => {
     if (typeof window !== "undefined") {
       const saved = localStorage.getItem("sidebarOpenMenus");
@@ -14,7 +16,6 @@ const Sidebar = React.memo(() => {
     }
     return {};
   });
-
   const [activeLink, setActiveLink] = useState(() => {
     if (typeof window !== "undefined") {
       return window.location.pathname;
@@ -57,7 +58,6 @@ const Sidebar = React.memo(() => {
     if (typeof window !== "undefined") {
       const handleLocationChange = () => {
         setActiveLink(window.location.pathname);
-        // Close sidebar on navigation in mobile
         if (window.innerWidth < 768) {
           setIsSidebarOpen(false);
         }
@@ -70,6 +70,21 @@ const Sidebar = React.memo(() => {
       };
     }
   }, []);
+
+  const handleDashboardClick = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
+    const loggedIn = isLoggedIn();
+    console.log("handleDashboardClick: isLoggedIn =", loggedIn);
+    if (!loggedIn) {
+      e.preventDefault();
+      console.log("handleDashboardClick: Redirecting to /login");
+      navigate("/login");
+    } else {
+      setActiveLink(path);
+      if (window.innerWidth < 768) {
+        setIsSidebarOpen(false);
+      }
+    }
+  };
 
   const toggleSubmenu = useCallback((menu, event) => {
     if (event) {
@@ -216,7 +231,20 @@ const Sidebar = React.memo(() => {
         <div key={item.name}>
           <li className="mb-1">
             {item.path && !hasSublinks ? (
-              <Link to={item.path} className="block w-full">
+              <Link
+                to={item.path}
+                className="block w-full"
+                onClick={(e) => {
+                  if (item.name === "Dashboard") {
+                    handleDashboardClick(e, item.path);
+                  } else {
+                    setActiveLink(item.path);
+                    if (window.innerWidth < 768) {
+                      setIsSidebarOpen(false);
+                    }
+                  }
+                }}
+              >
                 <div
                   className={`flex items-center w-full text-left pl-4 py-2 pr-0 text-xs md:text-sm font-montserrat cursor-pointer relative ${
                     isActive
@@ -264,7 +292,6 @@ const Sidebar = React.memo(() => {
                 )}
               </button>
             )}
-
             {hasSublinks && isOpen && (
               <>
                 <ul className="pl-6 pt-2">
@@ -314,7 +341,6 @@ const Sidebar = React.memo(() => {
                             </span>
                           )}
                         </button>
-
                         {sublink.sublinks && openMenus[sublink.name] && (
                           <ul className="ml-2">
                             {sublink.sublinks.map((nestedSublink) => {
@@ -351,49 +377,36 @@ const Sidebar = React.memo(() => {
 
   return (
     <div>
-      {/* Hamburger Menu for Mobile */}
       <button
-       className={`md:hidden fixed ${
-          isSidebarOpen ? "left-[250px] top-1" : "left-1 top-1"
-        } z-50 p-2 bg-gray-200 text-black rounded-md`}
+        className={`md:hidden fixed ${isSidebarOpen ? "left-[250px] top-1" : "left-1 top-1"} z-50 p-2 bg-gray-200 text-black rounded-md`}
         onClick={toggleSidebar}
       >
-        {isSidebarOpen ? <IconX size={24} /> : <IconMenu2 size={24} />}
+        {isSidebarOpen ? <IconX size={15} /> : <IconMenu2 size={24} />}
       </button>
-
-      {/* Overlay for Mobile */}
       {isSidebarOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-50 z-30 md:hidden"
           onClick={toggleSidebar}
         ></div>
       )}
-
       <aside
         ref={sidebarRef}
         className={`fixed top-0 left-0 h-full bg-[#F3FBF2] shadow-lg overflow-y-auto scrollbar-hidden transition-transform duration-300 ease-in-out z-40
           ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"} 
           md:translate-x-0 md:w-[250px] w-[290px]`}
       >
-        <div className="lg:pt-[23px] sm:pt-[30px] md:pt-[30px] pl-[16px]">
-          <div className=" font-bold flex items-center lg:pr-[20px]">
+        <div className="pt-[23px]">
+          <div className="font-bold flex items-center pl-[16px]">
             <span role="img" aria-label="logo" className="mr-2">
-              {fmslogo && (
-                <GatsbyImage
-                  image={fmslogo}
-                  alt="Farm Management System Logo"
-                 
-                />
-              )}
+              {fmslogo && <GatsbyImage image={fmslogo} alt="Farm Management System Logo" />}
             </span>
             <p className="font-niramit lg:text-[17px] sm:text-[4px] md:text-[4px] text-primary-activelink">
-              FARM MANAGEMENT <br/>
+              FARM MANAGEMENT <br />
               SYSTEM
             </p>
           </div>
-          <div className="border-b border-[#DBDBDB] w-[90%] ml-[8px] mt-[12px] pt-[12px]" />
+          <div className="border-b border-[#DBDBDB] w-[82%] ml-[22px] mt-[12px] pt-[12px]" />
         </div>
-
         <nav className="mt-3 space-y-2">
           <ul>{menuItems.map((item) => renderMenuItem(item))}</ul>
         </nav>

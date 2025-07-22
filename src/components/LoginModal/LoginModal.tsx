@@ -1,4 +1,4 @@
-// src/components/LoginModal.tsx
+// src/components/LoginModal/LoginModal.tsx
 import React, { useState } from "react";
 import { IconX } from "@tabler/icons-react";
 import { navigate } from "gatsby";
@@ -17,7 +17,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
     localStorage.setItem("email", email);
     localStorage.setItem("password", password);
     onClose();
-    navigate("/");
+    navigate("/"); // Redirect to dashboard after login
   };
 
   if (!isOpen) return null;

@@ -5,18 +5,20 @@ import { isLoggedIn } from "../../utils/auth";
 
 type PrivateRouteProps = {
   children: ReactNode;
-  setIsLoginModalOpen: (open: boolean) => void;
 };
 
-const PrivateRoute: React.FC<PrivateRouteProps> = ({ children, setIsLoginModalOpen }) => {
+const PrivateRoute: React.FC<PrivateRouteProps> = ({ children }) => {
   const [authChecked, setAuthChecked] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        if (!isLoggedIn()) {
-          setIsLoginModalOpen(true);
+        const loggedIn = isLoggedIn();
+        console.log("PrivateRoute: isLoggedIn =", loggedIn);
+        if (!loggedIn) {
+          console.log("PrivateRoute: Redirecting to /login");
+          await navigate("/login", { replace: true });
         } else {
           setAuthChecked(true);
         }
@@ -29,7 +31,7 @@ const PrivateRoute: React.FC<PrivateRouteProps> = ({ children, setIsLoginModalOp
     };
 
     checkAuth();
-  }, [setIsLoginModalOpen]);
+  }, []);
 
   if (isLoading) {
     return (
@@ -39,7 +41,11 @@ const PrivateRoute: React.FC<PrivateRouteProps> = ({ children, setIsLoginModalOp
     );
   }
 
-  return authChecked ? <>{children}</> : null;
+  if (!authChecked) {
+    return null; // Prevent rendering until auth is checked
+  }
+
+  return <>{children}</>;
 };
 
 export default PrivateRoute;
