@@ -1,9 +1,24 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { AppLayout } from '../components/AppShell/AppLayout'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, navigate, useStaticQuery } from 'gatsby';
+import PrivateRoute from '../components/Privateroute/PrivateRoute';
+import { isLoggedIn } from '../utils/auth';
 
 const feed = () => {
+  // const [isCheckingAuth, setIsCheckingAuth] = useState(true);
+  
+  //   useEffect(() => {
+  //     const loggedIn = isLoggedIn();
+  //     if (!loggedIn) {
+  //       navigate("/introduction");
+  //     } else {
+  //       setIsCheckingAuth(false); // allow page to render
+  //     }
+  //   }, []);
+  
+  //   // ⛔ Don't render anything while checking auth
+  //   if (isCheckingAuth) return null;
     const data = useStaticQuery(graphql`
             query {
               feed: file(relativePath: { eq: "feed.png" }) {
@@ -21,6 +36,7 @@ const feed = () => {
   return (
     
     <AppLayout>
+      <PrivateRoute>
     <div>
       <div className='flex flex-col justify-center'>
       
@@ -97,7 +113,9 @@ const feed = () => {
                 </div>
                 </div>
     </div>
+       </PrivateRoute>
     </AppLayout>
+ 
   )
 }
 

@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { AppLayout } from "../components/AppShell/AppLayout";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, navigate, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import PrivateRoute from "../components/Privateroute/PrivateRoute";
+import { isLoggedIn } from "../utils/auth";
 
 const Introduction = () => {
+  
   const data = useStaticQuery(graphql`
     query {
       Dashboard: file(relativePath: { eq: "Dashboard.png" }) {
@@ -17,6 +20,7 @@ const Introduction = () => {
 
   return (
     <AppLayout>
+      
       <div>
       
         <div className="flex flex-col justify-center ">

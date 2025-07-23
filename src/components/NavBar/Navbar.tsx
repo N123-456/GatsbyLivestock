@@ -235,7 +235,11 @@ const Sidebar = React.memo(() => {
                 to={item.path}
                 className="block w-full"
                 onClick={(e) => {
-                  if (item.name === "Dashboard") {
+                  if (
+  item.name === "Dashboard" 
+ 
+ 
+) {
                     handleDashboardClick(e, item.path);
                   } else {
                     setActiveLink(item.path);
@@ -271,6 +275,7 @@ const Sidebar = React.memo(() => {
                   if (hasSublinks) {
                     toggleSubmenu(item.name, e);
                   }
+                     
                 }}
               >
                 {hasSublinks && isOpen && (

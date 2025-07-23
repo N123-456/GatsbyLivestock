@@ -1,9 +1,24 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { AppLayout } from '../components/AppShell/AppLayout'
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, navigate, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import PrivateRoute from '../components/Privateroute/PrivateRoute';
+import { isLoggedIn } from '../utils/auth';
 
 const recordtransaction = () => {
+  // const [isCheckingAuth, setIsCheckingAuth] = useState(true);
+  
+  //   useEffect(() => {
+  //     const loggedIn = isLoggedIn();
+  //     if (!loggedIn) {
+  //       navigate("/introduction");
+  //     } else {
+  //       setIsCheckingAuth(false); // allow page to render
+  //     }
+  //   }, []);
+  
+  //   // ⛔ Don't render anything while checking auth
+  //   if (isCheckingAuth) return null;
       const data = useStaticQuery(graphql`
             query {
               rt: file(relativePath: { eq: "rt.png" }) {
@@ -27,6 +42,7 @@ const recordtransaction = () => {
            const rt2 = getImage(data.rt2);
   return (
     <AppLayout>
+      <PrivateRoute>
         <div>
           <div className='flex flex-col justify-center'>
                  <div className="max-w-7xl w-full px-4 lg:px-4  text-justify">
@@ -110,6 +126,7 @@ const recordtransaction = () => {
                           </div>
                           </div>
         </div>
+        </PrivateRoute>
     </AppLayout>
   )
 }

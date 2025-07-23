@@ -1,10 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { AppLayout } from "../components/AppShell/AppLayout";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, navigate, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import PrivateRoute from "../components/Privateroute/PrivateRoute";
+import { isLoggedIn } from "../utils/auth";
 
 
 const contact = () => {
+  // const [isCheckingAuth, setIsCheckingAuth] = useState(true);
+  
+  //   useEffect(() => {
+  //     const loggedIn = isLoggedIn();
+  //     if (!loggedIn) {
+  //       navigate("/introduction");
+  //     } else {
+  //       setIsCheckingAuth(false); // allow page to render
+  //     }
+  //   }, []);
+  
+  //   // ⛔ Don't render anything while checking auth
+  //   if (isCheckingAuth) return null;
   const data = useStaticQuery(graphql`
     query {
       f: file(relativePath: { eq: "f.png" }) {
@@ -24,6 +39,7 @@ const contact = () => {
 
   return (
     <AppLayout>
+      <PrivateRoute>
       <div>
         <div className="flex flex-col justify-center">
          
@@ -72,7 +88,7 @@ By using the Financial Module, farm owners and managers can make well-informed d
              </div>
             
           </div>
-       
+       </PrivateRoute>
     
     </AppLayout>
   );

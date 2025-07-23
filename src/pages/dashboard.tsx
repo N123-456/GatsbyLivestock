@@ -5,6 +5,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { SEO } from "../components/SEO";
 
 const dashboard = () => {
+  
   const data = useStaticQuery(graphql`
     query {
       lanoverview: file(relativePath: { eq: "lanoverview.png" }) {
