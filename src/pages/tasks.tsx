@@ -4,6 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { graphql, navigate, useStaticQuery } from "gatsby";
 import PrivateRoute from "../components/Privateroute/PrivateRoute";
 import { isLoggedIn } from "../utils/auth";
+import TextToSpeech from "../components/TextToSpeech";
 
 const tasks = () => {
   // const [isCheckingAuth, setIsCheckingAuth] = useState(true);
@@ -64,7 +65,8 @@ const tasks = () => {
       <PrivateRoute>
       <div>
         <div className="flex flex-col justify-center">
-               <div className="max-w-7xl w-full px-4 lg:px-4  text-justify">
+               <div className="content-container max-w-7xl w-full px-4 lg:px-4  text-justify">
+                                 <TextToSpeech textSelector=".content-container" />
           <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10 pt-5">
             Starting Guide for Tasks:
           </h2>

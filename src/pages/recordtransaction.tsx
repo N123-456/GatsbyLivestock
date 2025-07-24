@@ -4,6 +4,7 @@ import { graphql, navigate, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import PrivateRoute from '../components/Privateroute/PrivateRoute';
 import { isLoggedIn } from '../utils/auth';
+import TextToSpeech from '../components/TextToSpeech';
 
 const recordtransaction = () => {
   // const [isCheckingAuth, setIsCheckingAuth] = useState(true);
@@ -45,7 +46,8 @@ const recordtransaction = () => {
       <PrivateRoute>
         <div>
           <div className='flex flex-col justify-center'>
-                 <div className="max-w-7xl w-full px-4 lg:px-4  text-justify">
+                  <div className="content-container max-w-7xl w-full px-4 lg:px-4  text-justify">
+                   <TextToSpeech textSelector=".content-container" />
                         <h2 className="text-primary-activelink font-semibold lg:text-[34px] md:text-[30px] sm:text-[30px] font-montserrat lg:pl-10 pt-5">
                         Record Transaction:
                           </h2>

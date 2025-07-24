@@ -95,9 +95,9 @@ const TextToSpeech = ({ textSelector }) => {
   };
 
   return (
-    <div className="tts-container max-w-2xl mx-auto bg-white p-6 rounded-lg shadow-lg border-t-4 border-green-500 mb-6">
+    <div className="tts-container  max-w-2xl mx-auto bg-white p-6 rounded-lg shadow-lg border-t-4 border-green-500 mb-6">
       <h3 className="text-lg font-semibold mb-4">Text-to-Speech</h3>
-      <div id="msg" className="text-sm mb-4">
+      {/* <div id="msg" className="text-sm mb-4">
         {isSupported ? (
           <span>
             Your browser <strong>supports</strong> speech synthesis.
@@ -113,7 +113,7 @@ const TextToSpeech = ({ textSelector }) => {
             </a>.
           </span>
         )}
-      </div>
+      </div> */}
       {isSupported && (
         <>
           <div className="mb-4">

@@ -6,6 +6,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import PrivateRoute from "../components/Privateroute/PrivateRoute";
 import { isLoggedIn } from "../utils/auth";
 import { useEffect, useState } from "react";
+import TextToSpeech from "../components/TextToSpeech";
 const IndexPage = () => {
 const [isCheckingAuth, setIsCheckingAuth] = useState(true);
 
@@ -64,7 +65,8 @@ const [isCheckingAuth, setIsCheckingAuth] = useState(true);
         <PrivateRoute >
           <main>
             <div className="flex flex-col justify-center">
-              <div className="max-w-7xl w-full px-4 lg:px-4  text-justify">
+              <div className="content-container max-w-7xl w-full px-4 lg:px-4  text-justify">
+                   <TextToSpeech textSelector=".content-container" />
                 <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10 pt-5">
                   Dashboard
                 </h2>
