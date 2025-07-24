@@ -135,7 +135,9 @@ const fertilizers = () => {
                 <ul className="list-disc">
                   <li>
                     If the fertilizer you applied was taken from the inventory,
-                    choose the option “inventory”.
+                    choose the option  <span className="text-primary-activelink font-semibold">
+                "inventory"
+              </span>{" "}.
                   </li>
                   <li>Choose the inventory. </li>
                   <li>
@@ -157,7 +159,9 @@ const fertilizers = () => {
                   <li>
                     If the fertilizer you applied was not available in the
                     inventory and you have to buy the fertilizer, choose the
-                    option “New Buy”.
+                    option <span className="text-primary-activelink font-semibold">
+                "New Buy"
+              </span>{" "}.
                   </li>
                   <li>
                     Enter the details when the fertilizer was bought, how much

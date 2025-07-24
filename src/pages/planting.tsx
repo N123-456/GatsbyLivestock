@@ -234,7 +234,7 @@ const planting = () => {
            <li>Enter the estimated germination rate for the seeds (percentage).</li>
            <li>Choose the growth stage of the crop (Seed Started, Germination, Seeding, Vegetative, Flowering, Ripening, Complete). You can later modify the growth stage of the crop.</li>
            <li>If you will check the box, task will automatically be created for that particular planting which you can modify or add according to your needs. If you want to see the list of tasks for a particular crop</li>
-           <ul className="text-primary-activelink font-semibold list-disc"> <li>Click on three dots.</li>
+           <ul className="text-primary-activelink font-semibold"> <li>Click on three dots.</li>
             <li>Click on Tasks button</li>
             <li>Tasks list will open.</li>
             <li>You can add, edit, delete, search and view the tasks.</li></ul>

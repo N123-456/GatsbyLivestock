@@ -291,7 +291,7 @@ const Sidebar = React.memo(() => {
                   ) : null}
                 </span>
                 {hasSublinks && (
-                  <span className={`absolute ${isOpen ? "bottom-2 right-3" : "bottom-4 right-5"} text-black`}>
+                  <span className={`absolute ${isOpen ? "bottom-2 right-3" : "bottom-5 right-5"} text-black`}>
                     {isOpen ? <IconChevronDown size={17} /> : <IconChevronRight size={17} />}
                   </span>
                 )}
@@ -325,7 +325,7 @@ const Sidebar = React.memo(() => {
                         >
                           <span className="flex-1">
                             {sublink.path && !sublink.sublinks ? (
-                              <Link to={sublink.path} className="flex items-center">
+                              <Link to={sublink.path} className="flex items-center ">
                                 <span className="mr-2 text-black">•</span>
                                 {sublink.name}
                               </Link>
@@ -356,7 +356,7 @@ const Sidebar = React.memo(() => {
                                 <li key={nestedSublink.name}>
                                   <Link
                                     to={nestedSublink.path}
-                                    className="flex items-center px-4 py-1 text-[10px] md:text-sm font-montserrat text-primary-nlink font-medium"
+                                    className="flex items-center px-2 py-1 text-[10px] md:text-sm font-montserrat text-primary-nlink font-medium"
                                   >
                                     <span className="mr-2">•</span>
                                     {nestedSublink.name}
@@ -370,7 +370,7 @@ const Sidebar = React.memo(() => {
                     );
                   })}
                 </ul>
-                <span className="block border-b border-[#DBDBDB] pb-2 w-[90%] ml-[20px]" />
+                <span className="block border-b border-[#DBDBDB] pb-2 w-[83%] ml-[22px]" />
               </>
             )}
           </li>
@@ -383,10 +383,10 @@ const Sidebar = React.memo(() => {
   return (
     <div>
       <button
-        className={`md:hidden fixed ${isSidebarOpen ? "left-[250px] top-1" : "left-1 top-1"} z-50 p-2 bg-gray-200 text-black rounded-md`}
+        className={`md:hidden fixed ${isSidebarOpen ? "left-[250px] top-1" : "left-1 top-1 bg-gray-200"} z-50 p-2  text-black rounded-md`}
         onClick={toggleSidebar}
       >
-        {isSidebarOpen ? <IconX size={15} /> : <IconMenu2 size={24} />}
+        {isSidebarOpen ? <IconX size={18} /> : <IconMenu2 size={24} />}
       </button>
       {isSidebarOpen && (
         <div

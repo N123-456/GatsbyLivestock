@@ -101,15 +101,15 @@ const harvest = () => {
             <p>For adding harvest details:</p>
           
             <br />Click on{" "}
-            <span className="text-primary-activelink font-semibold">
+            <span className="text-primary-activelink font-bold">
               "Planting"
-            </span>
+            </span>{" "}
             tab.
             <br />
             <ul className="style-disc">
             <li><p>Click on three dots against the crop you want to add harvest data.</p></li>
             <li><p>Choose harvest from the options.</p></li>
-            <li><p>Click on <span className="text-primary-pheading font-semibold">"Add Pesticides"</span> button.</p></li>
+            <li><p>Click on <span className="text-primary-activelink font-bold">"Add Pesticides"</span> button.</p></li>
             <li><p>Enter the required details as follows:</p></li></ul><br/>
             <ul className="pl-[15px] list-disc">
                 <li> Date & Time: When was the crop harvested, what was the after-harvest process i.e., either the yield was directly sold out or there was further processing on the yield or was stored in inventory. Other than the inventory option, enter the customer’s name who bought the yield. </li>

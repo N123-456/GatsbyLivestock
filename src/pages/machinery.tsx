@@ -136,7 +136,7 @@ const machinery = () => {
             button.
         
             <p>Enter the required details the fields are.</p>
-            <ul className="list-disc">
+            <ul className="list-disc text-primary-paragraph2">
                 <li>Basic Information:</li>
             
             <ul className="text-primary-paragraph2">
@@ -144,14 +144,14 @@ const machinery = () => {
             <li><span className="text-primary-pheading font-bold">Name:</span>{" "} Name of the equipment. </li>
             <li><span className="text-primary-pheading font-bold">Type:</span>{" "}  What type is the equipment. The types can be</li>
                 <ul className="text-primary-activelink font-bold">
-                <li>Machinery: </li>
-                <li>Tools: </li>
-                <li>Vehicles:</li>
-                 <li>Irigation:</li>
-                   <li>Storage:</li>
-                     <li>Harvesting:</li>
-                       <li>Planting:</li>
-                         <li>Fertilizing:</li>
+                <li>Machinery</li>
+                <li>Tools</li>
+                <li>Vehicle</li>
+                 <li>Irigation</li>
+                   <li>Storage</li>
+                     <li>Harvesting</li>
+                       <li>Planting</li>
+                         <li>Fertilizing</li>
                  </ul>
                  <li><span className="text-primary-pheading font-bold">Status:</span>{" "} What is the status of the equipment. Either its available or on Maintenance.</li>
                  <div className="pl-13 pt-8 flex justify-center">

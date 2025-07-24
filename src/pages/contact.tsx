@@ -93,12 +93,14 @@ const contact = () => {
             Click on{" "}
             <span className="text-primary-activelink font-semibold">
               "Add New"
-            </span>
+            </span>{" "}
             button.
         <p>Contact form will open</p>
         <p>Fill out the required details. The details of fields are:</p>
             <p>Click on the three dots against the machinery you want to add maintenance record..</p>
-            <p>Click on "Maintenance" button</p>
+            <p>Click on <span className="text-primary-activelink font-semibold">
+              "Maintenance"
+            </span>{" "} button</p>
    <p>Enter the required details:</p><br/>
    <ul>
                 <li><span className="text-primary-pheading font-semibold">Full Name:</span> Name of the contact. </li>
@@ -107,14 +109,14 @@ const contact = () => {
                  <li><span className="text-primary-pheading font-semibold">Alternative No:</span>It is an optional field. If user has any alternative number, you can enter.</li>
                    <li><span className="text-primary-pheading font-semibold">Designation:</span>At which designation, the person is at the company/ organization.</li>
                      <li><span className="text-primary-pheading font-semibold">Role:</span>Role of the contact related to your farm. The roles can be.</li>
-                    <br/> <ul className="text-primary-paragraph2">
-                        <li>Auditor: Reviews and verifies the accuracy of financial records and system operations.</li>
-                        <li>Vendor: Provides goods or services and interacts with the system to manage orders and invoices.</li>
-                        <li>Manager: Oversees system operations, tasks, and team activities to ensure smooth workflow.</li>
+                   <ul className="text-primary-paragraph2">
+                        <li><span className="text-primary-activelink font-semibold">Auditor:</span> Reviews and verifies the accuracy of financial records and system operations.</li>
+                        <li><span className="text-primary-activelink font-semibold">Vendor:</span> Provides goods or services and interacts with the system to manage orders and invoices.</li>
+                        <li><span className="text-primary-activelink font-semibold">Manager:</span> Oversees system operations, tasks, and team activities to ensure smooth workflow.</li>
                      </ul><br/>
                        <li><span className="text-primary-pheading font-semibold">Organization/Company:</span>Name of the organization in which the person works in.</li>
                         <li><span className="text-primary-pheading font-semibold">Address Details:</span>Address of the person. Address details include:</li>
-                 <br/> <ul className="text-primary-activelink font-medium list-disc">
+                 <br/> <ul className="text-primary-activelink font-bold list-disc">
                         <li>Province</li>
                         <li>Division</li>
                         <li>District</li>
@@ -152,11 +154,11 @@ const contact = () => {
             <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
              You can search the contact from the list of contacts present in the system. You can search based on either:
               <br />
-              <ul className="list-disc">
+              <ul>
               <li><p><span className="text-primary-pheading font-bold">Name:</span> You can search by the name of contact.</p></li>
               <li><p><span className="text-primary-pheading font-bold">Contact No:</span> You can search by the contact no of the contact.</p></li>
               <li><p><span className="text-primary-pheading font-bold">Role:</span> You can search by the role of the user which can be:
-<ul className="text-primary-activelink font-bold">
+<ul className="text-primary-activelink font-bold list-disc">
 <li>Vendor</li>
 <li>Manager</li>
 <li>Auditor</li></ul>
@@ -192,7 +194,7 @@ const contact = () => {
                   <li>
                     Click on the edit icon 
                   </li>
-                  <li>contact details screen will open.</li>
+                  <li>Contact details screen will open.</li>
                   <li>Click on the field you want to edit.</li>
                   <li>Make changes in the fields</li>
                   <li>Click on submit button.</li>
@@ -218,7 +220,7 @@ const contact = () => {
                   </li>
                   <li>A dialogue box will appear to confirm whether you want to delete or not.</li>
                   <li>Click on delete button.</li>
-                  <li>contact will be deleted successfully.</li>
+                  <li>Contact will be deleted successfully.</li>
                 </ul>
               </div><br/>
                <div className="pl-13 pt-8 flex justify-center">
@@ -247,7 +249,7 @@ const contact = () => {
                   </li>
                   <li>Click on view button.</li>
                   <li>Click on delete button.</li>
-                  <li>contact details page will open.</li>
+                  <li>Contact details page will open.</li>
                   <li>Click on print button if you want to print the details of the contact.</li>
                 </ul>
               </div><br/>

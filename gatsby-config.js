@@ -4,6 +4,7 @@
 module.exports = {
   siteMetadata: {
 title: `Farm Management System`,
+description: `Example project for the Gatsby Head API`,
    
   },
   plugins: [
