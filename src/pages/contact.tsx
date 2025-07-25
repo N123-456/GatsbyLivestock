@@ -64,10 +64,14 @@ const contact = () => {
         <div className="flex flex-col justify-center">
           
            <div className="content-container max-w-7xl w-full px-4 lg:px-4  text-justify">
-               <TextToSpeech textSelector=".content-container" />
-          <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10 pt-5">
-          Starting Guide for Contacts:
-          </h2>
+               <div className="flex items-center lg:pl-10 pt-5 space-x-2">
+                              <TextToSpeech textSelector=".content-container" />
+                              <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat">
+                              Starting Guide for Contacts:
+                              </h2>
+                            </div>
+          
+         
           <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10 pt-4">
            Contacts are the central repository for storing and managing contact information of relevant individuals or businesses. Targeted contacts are mostly farmers and agricultural business owners. Key contact details are displayed within the Contacts Grid: name, company, email, phone number, address, and designation. You can add, delete, edit, search and view contacts.
           </p>

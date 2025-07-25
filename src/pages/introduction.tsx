@@ -7,7 +7,6 @@ import { isLoggedIn } from "../utils/auth";
 import TextToSpeech from "../components/TextToSpeech";
 
 const Introduction = () => {
-  
   const data = useStaticQuery(graphql`
     query {
       Dashboard: file(relativePath: { eq: "Dashboard.png" }) {
@@ -21,37 +20,38 @@ const Introduction = () => {
 
   return (
     <AppLayout>
-      
       <div>
-      
         <div className="flex flex-col justify-center ">
           <div className="content-container max-w-7xl w-full px-4 lg:px-4  text-justify">
-               <TextToSpeech textSelector=".content-container" />
-          <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:px-10 pt-5">
-            Introduction
-          </h2>
-          <p className="text-primary-paragraph sm:text-[12px] lg:text-lg md:text-lg font-montserrat font-normal lg:px-10 pt-4 text-justify">
-            Welcome to the Farm Management System! Designed specifically for the
-            agriculture sector, this system will allow you to track your crops,
-            manage your expenses, manage your tasks, and plan your resources
-            well. It will make your work easy and assist you in getting better
-            results. An integrated system for streamlined farm management. In
-            this user manual, we will show you how to get started on the system
-            and how to set up your farm. Let’s get started!
-          </p>
-          <div className="pt-7 flex justify-center px-4 sm:px-10">
-            {Dashboard && (
-              <GatsbyImage
-                image={Dashboard}
-                alt="Startups illustration"
-                className="bg-white max-w-full h-auto"
-              />
-            )}
-          </div>
+            <div className="flex items-center lg:pl-10 pt-5 space-x-2">
+              <TextToSpeech textSelector=".content-container" />
+              <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat">
+                Introduction
+              </h2>
+            </div>
+
+            <p className="text-primary-paragraph sm:text-[12px] lg:text-lg md:text-lg font-montserrat font-normal lg:px-10 pt-4 text-justify">
+              Welcome to the Farm Management System! Designed specifically for
+              the agriculture sector, this system will allow you to track your
+              crops, manage your expenses, manage your tasks, and plan your
+              resources well. It will make your work easy and assist you in
+              getting better results. An integrated system for streamlined farm
+              management. In this user manual, we will show you how to get
+              started on the system and how to set up your farm. Let’s get
+              started!
+            </p>
+            <div className="pt-7 flex justify-center px-4 sm:px-10">
+              {Dashboard && (
+                <GatsbyImage
+                  image={Dashboard}
+                  alt="Startups illustration"
+                  className="bg-white max-w-full h-auto"
+                />
+              )}
+            </div>
           </div>
         </div>
       </div>
-     
     </AppLayout>
   );
 };

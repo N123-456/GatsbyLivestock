@@ -8,7 +8,7 @@ import TextToSpeech from "../components/TextToSpeech";
 
 const inputs = () => {
   // const [isCheckingAuth, setIsCheckingAuth] = useState(true);
-  
+
   //   useEffect(() => {
   //     const loggedIn = isLoggedIn();
   //     if (!loggedIn) {
@@ -17,7 +17,7 @@ const inputs = () => {
   //       setIsCheckingAuth(false); // allow page to render
   //     }
   //   }, []);
-  
+
   //   // ⛔ Don't render anything while checking auth
   //   if (isCheckingAuth) return null;
   const data = useStaticQuery(graphql`
@@ -33,58 +33,62 @@ const inputs = () => {
   return (
     <AppLayout>
       <PrivateRoute>
-      <div>
-        <div className="flex flex-col justify-center">
-          <div className="content-container max-w-7xl w-full px-4 lg:px-4  text-justify">
-               <TextToSpeech textSelector=".content-container" />
-            <h2 className="text-primary-activelink font-semibold text-[30px] font-montserrat lg:pl-10 pt-5">
-              Inputs/Technologies:
-            </h2>
-            <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal pt-5 lg:px-10">
-              The Inputs/Technologies Section is designed for handling and
-              storing chemicals, such as fertilizers, pesticides, weedicides,
-              and application equipment, safely.
-              <ul>
-                <li>
-                  <span className="text-primary-pheading font-semibold">
-                    Fertilizer:
-                  </span>
-                  : Materials used to improve soil quality and help crops grow.
-                </li>
-                <li>
-                  <span className="text-primary-pheading font-semibold">
-                    Pesticides:
-                  </span>{" "}
-                  Chemicals used to protect crops from pests and insects.
-                </li>
-                <li>
-                  <span className="text-primary-pheading font-semibold">
-                    Wedicides:
-                  </span>{" "}
-                  Chemicals to control and eliminate weeds from the farm.
-                </li>
-                <li>
-                  <span className="text-primary-pheading font-semibold">
-                    Application Equipment:
-                  </span>{" "}
-                  Tools and machines used to apply fertilizers, pesticides, and
-                  wedicides.
-                </li>
-              </ul>
-              <div className="pl-13 pt-8 flex justify-center">
-                {inputs && (
-                  <GatsbyImage
-                    image={inputs}
-                    alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
-                  />
-                )}
+        <div>
+          <div className="flex flex-col justify-center">
+            <div className="content-container max-w-7xl w-full px-4 lg:px-4  text-justify">
+              <div className="flex items-center lg:pl-10 pt-5 space-x-2">
+                <TextToSpeech textSelector=".content-container" />
+                <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat">
+                  Inputs/Technologies:
+                </h2>
               </div>
+
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal pt-5 lg:px-10">
+                The Inputs/Technologies Section is designed for handling and
+                storing chemicals, such as fertilizers, pesticides, weedicides,
+                and application equipment, safely.
+                <ul>
+                  <li>
+                    <span className="text-primary-pheading font-semibold">
+                      Fertilizer:
+                    </span>
+                    : Materials used to improve soil quality and help crops
+                    grow.
+                  </li>
+                  <li>
+                    <span className="text-primary-pheading font-semibold">
+                      Pesticides:
+                    </span>{" "}
+                    Chemicals used to protect crops from pests and insects.
+                  </li>
+                  <li>
+                    <span className="text-primary-pheading font-semibold">
+                      Wedicides:
+                    </span>{" "}
+                    Chemicals to control and eliminate weeds from the farm.
+                  </li>
+                  <li>
+                    <span className="text-primary-pheading font-semibold">
+                      Application Equipment:
+                    </span>{" "}
+                    Tools and machines used to apply fertilizers, pesticides,
+                    and wedicides.
+                  </li>
+                </ul>
+                <div className="pl-13 pt-8 flex justify-center">
+                  {inputs && (
+                    <GatsbyImage
+                      image={inputs}
+                      alt="Startups illustration"
+                      className="bg-white w-[1000.58px] "
+                    />
+                  )}
+                </div>
+              </div>
+              <br />
             </div>
-            <br />
           </div>
         </div>
-      </div>
       </PrivateRoute>
     </AppLayout>
   );

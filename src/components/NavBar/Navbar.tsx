@@ -1,6 +1,11 @@
 // src/components/NavBar/Navbar.tsx
 import React, { useEffect, useState, useRef, useCallback } from "react";
-import { IconChevronDown, IconChevronRight, IconMenu2, IconX } from "@tabler/icons-react";
+import {
+  IconChevronDown,
+  IconChevronRight,
+  IconMenu2,
+  IconX,
+} from "@tabler/icons-react";
 import { graphql, Link, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { isLoggedIn } from "../../utils/auth";
@@ -37,7 +42,10 @@ const Sidebar = React.memo(() => {
   useEffect(() => {
     const handleScroll = () => {
       if (sidebarRef.current) {
-        localStorage.setItem("sidebarScrollPosition", sidebarRef.current.scrollTop.toString());
+        localStorage.setItem(
+          "sidebarScrollPosition",
+          sidebarRef.current.scrollTop.toString()
+        );
       }
     };
 
@@ -71,7 +79,10 @@ const Sidebar = React.memo(() => {
     }
   }, []);
 
-  const handleDashboardClick = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
+  const handleDashboardClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    path: string
+  ) => {
     const loggedIn = isLoggedIn();
     console.log("handleDashboardClick: isLoggedIn =", loggedIn);
     if (!loggedIn) {
@@ -223,7 +234,9 @@ const Sidebar = React.memo(() => {
 
   const renderMenuItem = useCallback(
     (item) => {
-      const isActive = !item.sublinks && (activeLink === item.path || activeLink === `${item.path}/`);
+      const isActive =
+        !item.sublinks &&
+        (activeLink === item.path || activeLink === `${item.path}/`);
       const isOpen = openMenus[item.name];
       const hasSublinks = item.sublinks && item.sublinks.length > 0;
 
@@ -235,11 +248,7 @@ const Sidebar = React.memo(() => {
                 to={item.path}
                 className="block w-full"
                 onClick={(e) => {
-                  if (
-  item.name === "Dashboard" 
- 
- 
-) {
+                  if (item.name === "Dashboard") {
                     handleDashboardClick(e, item.path);
                   } else {
                     setActiveLink(item.path);
@@ -275,7 +284,6 @@ const Sidebar = React.memo(() => {
                   if (hasSublinks) {
                     toggleSubmenu(item.name, e);
                   }
-                     
                 }}
               >
                 {hasSublinks && isOpen && (
@@ -291,8 +299,16 @@ const Sidebar = React.memo(() => {
                   ) : null}
                 </span>
                 {hasSublinks && (
-                  <span className={`absolute ${isOpen ? "bottom-2 right-3" : "bottom-5 right-5"} text-black`}>
-                    {isOpen ? <IconChevronDown size={17} /> : <IconChevronRight size={17} />}
+                  <span
+                    className={`absolute ${
+                      isOpen ? "bottom-2 right-3" : "bottom-5 right-5"
+                    } text-black`}
+                  >
+                    {isOpen ? (
+                      <IconChevronDown size={17} />
+                    ) : (
+                      <IconChevronRight size={17} />
+                    )}
                   </span>
                 )}
               </button>
@@ -302,7 +318,9 @@ const Sidebar = React.memo(() => {
                 <ul className="pl-6 pt-2">
                   {item.sublinks.map((sublink) => {
                     const isSublinkActive =
-                      sublink.path && (activeLink === sublink.path || activeLink === `${sublink.path}/`);
+                      sublink.path &&
+                      (activeLink === sublink.path ||
+                        activeLink === `${sublink.path}/`);
 
                     return (
                       <li
@@ -325,7 +343,10 @@ const Sidebar = React.memo(() => {
                         >
                           <span className="flex-1">
                             {sublink.path && !sublink.sublinks ? (
-                              <Link to={sublink.path} className="flex items-center ">
+                              <Link
+                                to={sublink.path}
+                                className="flex items-center "
+                              >
                                 <span className="mr-2 text-black">•</span>
                                 {sublink.name}
                               </Link>
@@ -351,7 +372,8 @@ const Sidebar = React.memo(() => {
                             {sublink.sublinks.map((nestedSublink) => {
                               const isNestedSublinkActive =
                                 nestedSublink.path &&
-                                (activeLink === nestedSublink.path || activeLink === `${nestedSublink.path}/`);
+                                (activeLink === nestedSublink.path ||
+                                  activeLink === `${nestedSublink.path}/`);
                               return (
                                 <li key={nestedSublink.name}>
                                   <Link
@@ -383,7 +405,9 @@ const Sidebar = React.memo(() => {
   return (
     <div>
       <button
-        className={`md:hidden fixed ${isSidebarOpen ? "left-[250px] top-1" : "left-1 top-1 bg-gray-200"} z-50 p-2  text-black rounded-md`}
+        className={`md:hidden fixed ${
+          isSidebarOpen ? "left-[250px] top-1" : "left-1 top-1 bg-gray-200"
+        } z-50 p-2  text-black rounded-md`}
         onClick={toggleSidebar}
       >
         {isSidebarOpen ? <IconX size={18} /> : <IconMenu2 size={24} />}
@@ -403,7 +427,12 @@ const Sidebar = React.memo(() => {
         <div className="pt-[23px]">
           <div className="font-bold flex items-center pl-[16px]">
             <span role="img" aria-label="logo" className="mr-2">
-              {fmslogo && <GatsbyImage image={fmslogo} alt="Farm Management System Logo" />}
+              {fmslogo && (
+                <GatsbyImage
+                  image={fmslogo}
+                  alt="Farm Management System Logo"
+                />
+              )}
             </span>
             <p className="font-niramit lg:text-[17px] sm:text-[4px] md:text-[4px] text-primary-activelink">
               FARM MANAGEMENT <br />

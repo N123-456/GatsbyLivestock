@@ -35,10 +35,12 @@ const balancesheet = () => {
     <div>
       <div className="flex flex-col justify-center">
            <div className="content-container max-w-7xl w-full px-4 lg:px-4  text-justify">
-               <TextToSpeech textSelector=".content-container" />
-      <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10 pt-5">
-                      Balance Sheet:
-                    </h2>
+               <div className="flex items-center lg:pl-10 pt-5 space-x-2">
+                              <TextToSpeech textSelector=".content-container" />
+                              <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat">
+                                Balance Sheet:
+                              </h2>
+                            </div>
                   <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10 pt-5">
                                The Balance Sheet is a critical financial report that provides a snapshot of the farm’s financial position at a specific point in time. It shows the relationship between the farm's assets (what the farm owns), liabilities (what the farm owes), and owner’s equity (the owner's investment).
                                 <br />
