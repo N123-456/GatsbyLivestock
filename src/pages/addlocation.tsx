@@ -92,7 +92,7 @@ const addlocation = () => {
         <div>
           <div className="flex flex-col justify-center">
             <div className="content-container max-w-7xl w-full px-4 lg:px-4 text-justify">
-              <div className="flex items-center lg:pl-10 pt-5 space-x-2">
+              <div className="flex items-center lg:pt-5 space-x-1">
                 <TextToSpeech textSelector=".content-container" />
                 <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat">
                   Starting Guide for Farm Locations:
