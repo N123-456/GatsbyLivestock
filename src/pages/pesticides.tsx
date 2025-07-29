@@ -66,12 +66,12 @@ const pesticides = () => {
         <div>
           <div className="flex flex-col justify-center">
             <div className="content-container max-w-7xl w-full px-4 lg:px-4  text-justify">
-              <div className="flex items-center pt-5 space-x-1">
-                <TextToSpeech textSelector=".content-container" />
+               <div className="sm pt-5">
+                             <TextToSpeech textSelector=".sm" />
                 <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat">
                   Starting Guide for Pesticides:
                 </h2>
-              </div>
+              
 
               <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10 pt-4">
                 Pesticides are chemicals or natural substances used to protect
@@ -84,7 +84,7 @@ const pesticides = () => {
                 Following recommended guidelines ensures effective pest control
                 while maintaining food safety. In the pesticides tab, you will
                 add the pesticides applied to a specific crop.
-              </p>
+              </p></div>
               <div className="pl-13 pt-8 flex justify-center">
                 {pesticide && (
                   <GatsbyImage
@@ -94,13 +94,16 @@ const pesticides = () => {
                   />
                 )}
               </div>
-
+  <div className="s1 pt-5">
+                <TextToSpeech textSelector=".s1" />
               <div className="flex items-center pt-5 space-x-4">
                 <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 1
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
-              </div>
+              </div></div>
+                <div className="ap pt-5">
+                              <TextToSpeech textSelector=".ap" />
               <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
                 Add Pesticides:
               </h2>
@@ -201,14 +204,18 @@ const pesticides = () => {
                       expense so a transaction will be created.
                     </p>
                   </li>
-                </ul>
+                </ul></div></div>
                 <br />
+                  <div className="s2 pt-5">
+                                <TextToSpeech textSelector=".s2" />
                 <div className="flex items-center pt-5 space-x-4">
                   <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                     Step 2
                   </h2>
                   <div className="flex-1 h-px bg-primary-line"></div>
-                </div>
+                </div></div>
+                  <div className="sp pt-5">
+                                <TextToSpeech textSelector=".sp" />
                 <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
                   Search Pesticides:
                 </h2>
@@ -236,13 +243,17 @@ const pesticides = () => {
                         className="bg-white w-[1000.58px] "
                       />
                     )}
-                  </div>
+                  </div></div></div>
+                    <div className="s3 pt-5">
+                                  <TextToSpeech textSelector=".s3" />
                   <div className="flex items-center pt-5 space-x-4">
                     <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                       Step 3
                     </h2>
                     <div className="flex-1 h-px bg-primary-line"></div>
-                  </div>
+                  </div></div>
+                    <div className="ep pt-5">
+                                  <TextToSpeech textSelector=".ep" />
                   <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
                     Edit Pesticide:
                   </h2>
@@ -264,13 +275,17 @@ const pesticides = () => {
                         pesticides details will be edited/updated successfully.
                       </li>
                     </ul>
-                  </div>
+                  </div></div>
+                    <div className="s4 pt-5">
+                                  <TextToSpeech textSelector=".s4" />
                   <div className="flex items-center pt-5 space-x-4">
                     <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                       Step 4
                     </h2>
                     <div className="flex-1 h-px bg-primary-line"></div>
-                  </div>
+                  </div></div>
+                    <div className="dp pt-5">
+                                  <TextToSpeech textSelector=".dp" />
                   <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
                     Delete Pesticide:
                   </h2>
@@ -290,7 +305,7 @@ const pesticides = () => {
                       <li>Click on delete button.</li>
                       <li>pesticide will be deleted successfully.</li>
                     </ul>
-                  </div>
+                  </div></div>
                   <div className="pl-13 pt-8 flex justify-center">
                     {DPE && (
                       <GatsbyImage
@@ -300,12 +315,16 @@ const pesticides = () => {
                       />
                     )}
                   </div>
+                    <div className="s5 pt-5">
+                                  <TextToSpeech textSelector=".s5" />
                   <div className="flex items-center pt-5 space-x-4">
                     <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                       Step 5
                     </h2>
                     <div className="flex-1 h-px bg-primary-line"></div>
-                  </div>
+                  </div></div>
+                    <div className="vp pt-5">
+                                  <TextToSpeech textSelector=".vp" />
                   <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
                     View Pesticide:
                   </h2>
@@ -323,7 +342,7 @@ const pesticides = () => {
                         of the fertilizer.
                       </li>
                     </ul>
-                  </div>
+                  </div></div>
                   <div className="pl-13 pt-8 flex justify-center">
                     {VPE && (
                       <GatsbyImage
@@ -336,8 +355,8 @@ const pesticides = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+         
+        
       </PrivateRoute>
     </AppLayout>
   );

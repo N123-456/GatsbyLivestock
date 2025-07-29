@@ -43,12 +43,12 @@ const contact = () => {
         <div>
           <div className="flex flex-col justify-center">
             <div className="content-container max-w-7xl w-full px-4 lg:px-4  text-justify">
-              <div className="flex items-center pt-5 space-x-1">
-                <TextToSpeech textSelector=".content-container" />
-                <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat">
+        <div className="finance pt-5">
+                                        <TextToSpeech textSelector=".finance" />
+                <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10">
                   Starting Guide for Financials:
                 </h2>
-              </div>
+             
 
               <p className=" text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10 pt-4">
                 The Financial Module in the farm management system is designed
@@ -92,7 +92,7 @@ const contact = () => {
                 and maintain the overall financial stability of the farm. This
                 module simplifies financial management and helps users focus on
                 improving productivity and profitability.
-              </p>
+              </p> </div>
               <div className="pl-13 pt-8 flex justify-center">
                 {f && (
                   <GatsbyImage
@@ -104,7 +104,9 @@ const contact = () => {
               </div>
 
               <br />
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+              <div className="glr pt-5">
+                                        <TextToSpeech textSelector=".glr" />
+              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                 General Ledger Report:
               </h2>
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10 pt-5">
@@ -127,7 +129,7 @@ const contact = () => {
                   accounts payable etc. Against every head of account is a
                   general ledger report.{" "}
                 </p>
-              </div>
+              </div></div>
               <br />
               <div className="pl-13 pt-8 flex justify-center">
                 {glr && (

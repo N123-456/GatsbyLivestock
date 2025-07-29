@@ -65,27 +65,27 @@ const fertilizers = () => {
       <PrivateRoute>
         <div>
           <div className="flex flex-col justify-center">
-            <div className="content-container max-w-7xl w-full px-4 lg:px-4  text-justify">
-              <div className="flex items-center pt-5 space-x-1">
-                <TextToSpeech textSelector=".content-container" />
-                <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat">
+            <div className="max-w-7xl w-full px-4 lg:px-4  text-justify">
+              <div className="fertilizer ">
+                <TextToSpeech textSelector=".fertilizer" />
+                <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10">
                   Starting Guide for Fertilizer:
                 </h2>
-              </div>
 
-              <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10 pt-4">
-                Fertilizers are substances added to soil or plants to provide
-                essential nutrients that promote healthy growth and increase
-                crop yield. They supply key nutrients like nitrogen, phosphorus,
-                and potassium, which plants need for development. Fertilizers
-                can be organic (e.g., compost, manure) or chemical-based,
-                depending on the farm's needs. Proper use of fertilizers
-                improves soil fertility, strengthens plants, and ensures better
-                quality produce. It is important to apply the right type and
-                amount of fertilizer to avoid harming crops or the environment.
-                In the fertilizers tab, you will add the fertilizer applied to a
-                specific crop.
-              </p>
+                <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10 pt-4">
+                  Fertilizers are substances added to soil or plants to provide
+                  essential nutrients that promote healthy growth and increase
+                  crop yield. They supply key nutrients like nitrogen,
+                  phosphorus, and potassium, which plants need for development.
+                  Fertilizers can be organic (e.g., compost, manure) or
+                  chemical-based, depending on the farm's needs. Proper use of
+                  fertilizers improves soil fertility, strengthens plants, and
+                  ensures better quality produce. It is important to apply the
+                  right type and amount of fertilizer to avoid harming crops or
+                  the environment. In the fertilizers tab, you will add the
+                  fertilizer applied to a specific crop.
+                </p>
+              </div>
               <div className="pl-13 pt-8 flex justify-center">
                 {fertilizer && (
                   <GatsbyImage
@@ -97,15 +97,21 @@ const fertilizers = () => {
               </div>
               <br />
               <br />
-              <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
-                  Step 1
-                </h2>
-                <div className="flex-1 h-px bg-primary-line"></div>
+              <div className="step1 pt-5">
+                <TextToSpeech textSelector=".step1" />
+                <div className="flex items-center space-x-4">
+                  <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                    Step 1
+                  </h2>
+                  <div className="flex-1 h-px bg-primary-line"></div>
+                </div>
               </div>
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
-                Add Fertilizer:
-              </h2>
+              <div className="af pt-5">
+                <TextToSpeech textSelector=".af" />
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                  Add Fertilizer:
+                </h2>
+             
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
                 <p>For adding fertilizer:</p>
                 <br />
@@ -199,14 +205,18 @@ const fertilizers = () => {
                   expense so a transaction will be created.
                 </p>
                 <br />{" "}
-              </div>
-              <div className="flex items-center pt-5 space-x-4">
+              </div></div>
+              <div className="step2 pt-5">
+                <TextToSpeech textSelector=".step2" />
+              <div className="flex items-center space-x-4">
                 <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 2
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
-              </div>
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+              </div></div>
+              <div className="sf pt-5">
+                <TextToSpeech textSelector=".sf" />
+              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                 Search Fertilizer:
               </h2>
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -232,16 +242,20 @@ const fertilizers = () => {
                       className="bg-white w-[1000.58px] "
                     />
                   )}
-                </div>
+                </div></div></div>
                 <br />
                 <br />
-                <div className="flex items-center pt-5 space-x-4">
+                 <div className="step3 pt-5">
+                <TextToSpeech textSelector=".step3" />
+                <div className="flex items-center space-x-4">
                   <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                     Step 3
                   </h2>
                   <div className="flex-1 h-px bg-primary-line"></div>
-                </div>
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+                </div></div>
+                 <div className="ef pt-5">
+                <TextToSpeech textSelector=".ef" />
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                   Edit Fertilizer:
                 </h2>
                 <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -262,14 +276,18 @@ const fertilizers = () => {
                       Fertilizer details will be edited/updated successfully.
                     </li>
                   </ul>
-                </div>
-                <div className="flex items-center pt-5 space-x-4">
+                </div></div>
+                 <div className="step4 pt-5">
+                <TextToSpeech textSelector=".step4" />
+                <div className="flex items-center space-x-4">
                   <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                     Step 4
                   </h2>
                   <div className="flex-1 h-px bg-primary-line"></div>
-                </div>
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+                </div></div>
+                 <div className="df pt-5">
+                <TextToSpeech textSelector=".df" />
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                   Delete Fertilizer:
                 </h2>
                 <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -288,7 +306,7 @@ const fertilizers = () => {
                     <li>Click on delete button.</li>
                     <li>fertilizer will be deleted successfully.</li>
                   </ul>
-                </div>
+                </div></div>
                 <div className="pl-13 pt-8 flex justify-center">
                   {DF && (
                     <GatsbyImage
@@ -300,11 +318,16 @@ const fertilizers = () => {
                 </div>
                 <br />
                 <br />
+                 <div className="step-5 pt-5">
+                <TextToSpeech textSelector=".step5" />
+                 <div className="flex items-center space-x-4">
                 <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 5
                 </h2>
-                <div className="flex-1 h-px bg-primary-line"></div>
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+                <div className="flex-1 h-px bg-primary-line"></div></div></div>
+                 <div className="vf pt-5">
+                <TextToSpeech textSelector=".vf" />
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                   View Fertilizer:
                 </h2>
                 <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -321,7 +344,7 @@ const fertilizers = () => {
                       the fertilizer.
                     </li>
                   </ul>
-                </div>
+                </div></div>
                 <div className="pl-13 pt-8 flex justify-center">
                   {VF && (
                     <GatsbyImage
@@ -334,7 +357,7 @@ const fertilizers = () => {
               </div>
             </div>
           </div>
-        </div>
+      
       </PrivateRoute>
     </AppLayout>
   );

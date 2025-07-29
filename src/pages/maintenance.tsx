@@ -61,29 +61,29 @@ const maintenance = () => {
         <div>
           <div className="flex flex-col justify-center">
             <div className="content-container max-w-7xl w-full px-4 lg:px-4  text-justify">
-              <div className="flex items-center pt-5 space-x-1">
-                <TextToSpeech textSelector=".content-container" />
+              <div className="sm pt-5">
+                <TextToSpeech textSelector=".sm" />
                 <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat">
                   Starting Guide for Maintenance:
                 </h2>
-              </div>
 
-              <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10 pt-4">
-                Maintenance of machinery involves regular checks, repairs, and
-                servicing to ensure the equipment works efficiently and lasts
-                longer. This includes cleaning, lubricating moving parts,
-                checking for wear and tear, and replacing worn-out components.
-                It's important to follow the manufacturer's guidelines for
-                maintenance schedules and procedures. Preventive maintenance
-                helps reduce unexpected breakdowns and costly repairs. Operators
-                and technicians should be trained to identify signs of potential
-                issues early. Regular inspections can detect problems like
-                leaks, unusual sounds, or vibrations. Machinery should also be
-                calibrated and tested periodically for optimal performance.
-                Maintenance records should be kept for tracking repairs and
-                updates. By maintaining equipment well, businesses can reduce
-                downtime and improve productivity.
-              </p>
+                <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10 pt-4">
+                  Maintenance of machinery involves regular checks, repairs, and
+                  servicing to ensure the equipment works efficiently and lasts
+                  longer. This includes cleaning, lubricating moving parts,
+                  checking for wear and tear, and replacing worn-out components.
+                  It's important to follow the manufacturer's guidelines for
+                  maintenance schedules and procedures. Preventive maintenance
+                  helps reduce unexpected breakdowns and costly repairs.
+                  Operators and technicians should be trained to identify signs
+                  of potential issues early. Regular inspections can detect
+                  problems like leaks, unusual sounds, or vibrations. Machinery
+                  should also be calibrated and tested periodically for optimal
+                  performance. Maintenance records should be kept for tracking
+                  repairs and updates. By maintaining equipment well, businesses
+                  can reduce downtime and improve productivity.
+                </p>
+              </div>
               <div className="pl-13 pt-8 flex justify-center">
                 {main && (
                   <GatsbyImage
@@ -93,136 +93,153 @@ const maintenance = () => {
                   />
                 )}
               </div>
-
-              <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
-                  Step 1
-                </h2>
-                <div className="flex-1 h-px bg-primary-line"></div>
-              </div>
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
-                Add Maintenance:
-              </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
-                <p>For adding maintenance</p>
-                Click on{" "}
-                <span className="text-primary-activelink font-semibold">
-                  "Machinery"
-                </span>
-                button.
-                <p>
-                  Click on the three dots against the machinery you want to add
-                  maintenance record..
-                </p>
-                <p>
-                  Click on{" "}
-                  <span className="text-primary-activelink font-semibold">
-                    "Maintenance"
-                  </span>{" "}
-                  button
-                </p>
-                <p>Enter the required details:</p>
-                <br />
-                <ul className="list-disc ">
-                  <li>
-                    What type of maintenance service will be performed on the
-                    machinery either wash or repair.{" "}
-                  </li>
-                  <li>
-                    When was the maintenance performed, when it started, when it
-                    ended and when the machinery was delivered after
-                    maintenance.
-                  </li>
-                  <li>Who performed the service</li>
-                  <li>
-                    Transaction details including cost of maintenance, head of
-                    accounts, and transaction id/ cheque no in case of head of
-                    accounts is bank.
-                  </li>
-                  <li>Description of service</li>
-                  <li>
-                    Inventory used and in how much quantity. Available quantity
-                    of inventory will be shown. Quantity to be used cannot
-                    exceed the available quantity.
-                  </li>
-                </ul>
-                <br />
-                <p>Click on the submit button.</p>
-                <p>Maintenance will be added successfully.</p>
-                <p>Inventory will be reduced</p>
-                <p>
-                  Transaction will be created against the maintenance as it is
-                  an expense.
-                </p>
-                <div className="pl-13 pt-8 flex justify-center">
-                  {amain && (
-                    <GatsbyImage
-                      image={amain}
-                      alt="Startups illustration"
-                      className="bg-white w-[1000.58px] "
-                    />
-                  )}
+              <div className="s1 pt-5">
+                <TextToSpeech textSelector=".s1" />
+                <div className="flex items-center space-x-4">
+                  <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                    Step 1
+                  </h2>
+                  <div className="flex-1 h-px bg-primary-line"></div>
                 </div>
               </div>
-
-              <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
-                  Step 2
+              <div className="am pt-5">
+                <TextToSpeech textSelector=".am" />
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                  Add Maintenance:
                 </h2>
-                <div className="flex-1 h-px bg-primary-line"></div>
-              </div>
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
-                Search Maintenance:
-              </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
-                You can search the maintenance from the list of maintenance of
-                locations present in the system. You can search based on either:
-                <br />
-                <ul>
-                  <li>
-                    <p>
-                      <span className="text-primary-pheading font-bold">
-                        Name
-                      </span>
-                      : You can search by the name of machinery.
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      <span className="text-primary-pheading font-bold">
-                        Service
-                      </span>
-                      : You can search by the service performed on the machinery
-                      which can be either:
-                    </p>
-                    <ul className="text-primary-activelink font-semibold pl-[15px]">
-                      <li>Wash</li>
-                      <li>Repair</li>
-                    </ul>
-                  </li>
-
-                  <br />
+                <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+                  <p>For adding maintenance</p>
+                  Click on{" "}
+                  <span className="text-primary-activelink font-semibold">
+                    "Machinery"
+                  </span>
+                  button.
                   <p>
-                    Then click on the Search button. Also, you can click on the
-                    refresh button to refresh the data.
+                    Click on the three dots against the machinery you want to
+                    add maintenance record..
+                  </p>
+                  <p>
+                    Click on{" "}
+                    <span className="text-primary-activelink font-semibold">
+                      "Maintenance"
+                    </span>{" "}
+                    button
+                  </p>
+                  <p>Enter the required details:</p>
+                  <br />
+                  <ul className="list-disc ">
+                    <li>
+                      What type of maintenance service will be performed on the
+                      machinery either wash or repair.{" "}
+                    </li>
+                    <li>
+                      When was the maintenance performed, when it started, when
+                      it ended and when the machinery was delivered after
+                      maintenance.
+                    </li>
+                    <li>Who performed the service</li>
+                    <li>
+                      Transaction details including cost of maintenance, head of
+                      accounts, and transaction id/ cheque no in case of head of
+                      accounts is bank.
+                    </li>
+                    <li>Description of service</li>
+                    <li>
+                      Inventory used and in how much quantity. Available
+                      quantity of inventory will be shown. Quantity to be used
+                      cannot exceed the available quantity.
+                    </li>
+                  </ul>
+                  <br />
+                  <p>Click on the submit button.</p>
+                  <p>Maintenance will be added successfully.</p>
+                  <p>Inventory will be reduced</p>
+                  <p>
+                    Transaction will be created against the maintenance as it is
+                    an expense.
                   </p>
                   <div className="pl-13 pt-8 flex justify-center">
-                    {smain && (
+                    {amain && (
                       <GatsbyImage
-                        image={smain}
+                        image={amain}
                         alt="Startups illustration"
                         className="bg-white w-[1000.58px] "
                       />
                     )}
                   </div>
-                </ul>
-                <div className="flex items-center pt-5 space-x-4">
+                </div>
+              </div>
+              <div className="s2 pt-5">
+                <TextToSpeech textSelector=".s2" />
+                <div className="flex items-center space-x-4">
+                  <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                    Step 2
+                  </h2>
+                  <div className="flex-1 h-px bg-primary-line"></div>
+                </div>
+              </div>
+              <div className="sma pt-5">
+                <TextToSpeech textSelector=".sma" />
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                  Search Maintenance:
+                </h2>
+                <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+                  You can search the maintenance from the list of maintenance of
+                  locations present in the system. You can search based on
+                  either:
+                  <br />
+                  <ul>
+                    <li>
+                      <p>
+                        <span className="text-primary-pheading font-bold">
+                          Name
+                        </span>
+                        : You can search by the name of machinery.
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <span className="text-primary-pheading font-bold">
+                          Service
+                        </span>
+                        : You can search by the service performed on the
+                        machinery which can be either:
+                      </p>
+                      <ul className="text-primary-activelink font-semibold pl-[15px]">
+                        <li>Wash</li>
+                        <li>Repair</li>
+                      </ul>
+                    </li>
+
+                    <br />
+                    <p>
+                      Then click on the Search button. Also, you can click on
+                      the refresh button to refresh the data.
+                    </p>
+                    <div className="pl-13 pt-8 flex justify-center">
+                      {smain && (
+                        <GatsbyImage
+                          image={smain}
+                          alt="Startups illustration"
+                          className="bg-white w-[1000.58px] "
+                        />
+                      )}
+                    </div>
+                  </ul>
+                </div>
+              </div>
+              <div className="s3 pt-5">
+                <TextToSpeech textSelector=".s3" />
+                <div className="flex items-center space-x-4">
                   <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                     Step 3
                   </h2>
                   <div className="flex-1 h-px bg-primary-line"></div>
                 </div>
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+              </div>
+              <div className="em pt-5">
+                <TextToSpeech textSelector=".em" />
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                   Edit Maintenance:
                 </h2>
                 <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -241,13 +258,19 @@ const maintenance = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="flex items-center pt-5 space-x-4">
+              </div>
+              <div className="s4 pt-5">
+                <TextToSpeech textSelector=".s4" />
+                <div className="flex items-center space-x-4">
                   <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                     Step 4
                   </h2>
                   <div className="flex-1 h-px bg-primary-line"></div>
                 </div>
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+              </div>
+              <div className="dm pt-5">
+                <TextToSpeech textSelector=".dm" />
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                   Delete Maintenance:
                 </h2>
                 <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -267,21 +290,27 @@ const maintenance = () => {
                     <li>Maintenance will be deleted successfully.</li>
                   </ul>
                 </div>
-                <div className="pl-13 pt-8 flex justify-center">
-                  {dmain && (
-                    <GatsbyImage
-                      image={dmain}
-                      alt="Startups illustration"
-                      className="bg-white w-[1000.58px] "
-                    />
-                  )}
-                </div>
+              </div>
+              <div className="pl-13 pt-8 flex justify-center">
+                {dmain && (
+                  <GatsbyImage
+                    image={dmain}
+                    alt="Startups illustration"
+                    className="bg-white w-[1000.58px] "
+                  />
+                )}
+              </div>
+              <div className="s5 pt-5">
+                <TextToSpeech textSelector=".s5" />
                 <div className="flex items-center pt-5 space-x-4">
                   <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                     Step 5
                   </h2>
                   <div className="flex-1 h-px bg-primary-line"></div>
                 </div>
+              </div>
+              <div className="vm pt-5">
+                <TextToSpeech textSelector=".vm" />
                 <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
                   View Maintenance:
                 </h2>
@@ -299,15 +328,15 @@ const maintenance = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="pl-13 pt-8 flex justify-center">
-                  {vmain && (
-                    <GatsbyImage
-                      image={vmain}
-                      alt="Startups illustration"
-                      className="bg-white w-[1000.58px] "
-                    />
-                  )}
-                </div>
+              </div>
+              <div className="pl-13 pt-8 flex justify-center">
+                {vmain && (
+                  <GatsbyImage
+                    image={vmain}
+                    alt="Startups illustration"
+                    className="bg-white w-[1000.58px] "
+                  />
+                )}
               </div>
             </div>
           </div>

@@ -36,12 +36,12 @@ const inputs = () => {
         <div>
           <div className="flex flex-col justify-center">
             <div className="content-container max-w-7xl w-full px-4 lg:px-4  text-justify">
-              <div className="flex items-center pt-5 space-x-1">
-                <TextToSpeech textSelector=".content-container" />
+                <div className="harvest pt-5">
+                                                               <TextToSpeech textSelector=".harvest" />
                 <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat">
                   Inputs/Technologies:
                 </h2>
-              </div>
+             
 
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal pt-5 lg:px-10">
                 The Inputs/Technologies Section is designed for handling and
@@ -84,7 +84,7 @@ const inputs = () => {
                     />
                   )}
                 </div>
-              </div>
+              </div></div>
               <br />
             </div>
           </div>

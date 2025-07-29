@@ -71,13 +71,14 @@ const fieldinspection = () => {
       <PrivateRoute>
         <div>
           <div className="flex flex-col justify-center">
-            <div className="content-container max-w-7xl w-full px-4 lg:px-4  text-justify">
-              <div className="flex items-center pt-5 space-x-1">
-                <TextToSpeech textSelector=".content-container" />
-                <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat">
+            <div className=" max-w-7xl w-full px-4 lg:px-4  text-justify">
+               <div className="fi pt-5">
+                              <TextToSpeech textSelector=".fi" />
+                
+                <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10">
                   Starting Guide for Field Inspection:
                 </h2>
-              </div>
+             
 
               <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10 pt-4">
                 The Field Inspection is used to monitor and evaluate the
@@ -92,7 +93,7 @@ const fieldinspection = () => {
                 issues early and ensure better productivity and farm management.
                 A field inspection is conducted separately against a specific
                 crop.
-              </p>
+              </p></div>
               <div className="pl-13 pt-8 flex justify-center">
                 {FI && (
                   <GatsbyImage
@@ -104,13 +105,17 @@ const fieldinspection = () => {
               </div>
               <br />
               <br />
-              <div className="flex items-center pt-5 space-x-4">
+               <div className="step1 pt-5">
+                              <TextToSpeech textSelector=".step1" />
+              <div className="flex items-center space-x-4">
                 <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 1
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
-              </div>
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+              </div></div>
+               <div className="afi pt-5">
+                <TextToSpeech textSelector=".afi" />
+              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                 Add Field Inspection:
               </h2>
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -201,14 +206,18 @@ const fieldinspection = () => {
                   carrying out field inspection.
                 </p>
                 <br />
-              </div>
-              <div className="flex items-center pt-5 space-x-4">
+              </div></div>
+               <div className="step2 pt-5">
+                              <TextToSpeech textSelector=".step2" />
+              <div className="flex items-center space-x-4">
                 <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 2
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
-              </div>
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+              </div></div>
+               <div className="sfi pt-5">
+                              <TextToSpeech textSelector=".sfi" />
+              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                 Search Field Inspection:
               </h2>
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -245,16 +254,20 @@ const fieldinspection = () => {
                       className="bg-white w-[1000.58px] "
                     />
                   )}
-                </div>
+                </div></div></div>
                 <br />
                 <br />
-                <div className="flex items-center pt-5 space-x-4">
+                 <div className="step3 pt-5">
+                                <TextToSpeech textSelector=".step3" />
+                <div className="flex items-center space-x-4">
                   <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                     Step 3
                   </h2>
                   <div className="flex-1 h-px bg-primary-line"></div>
-                </div>
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+                </div></div>
+                 <div className="efi pt-5">
+                                <TextToSpeech textSelector=".efi" />
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                   Edit Field Inspection:
                 </h2>
                 <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -276,14 +289,18 @@ const fieldinspection = () => {
                       successfully.
                     </li>
                   </ul>
-                </div>
-                <div className="flex items-center pt-5 space-x-4">
+                </div></div>
+                 <div className="step4 pt-5">
+                                <TextToSpeech textSelector=".step4" />
+                <div className="flex items-center space-x-4">
                   <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                     Step 4
                   </h2>
                   <div className="flex-1 h-px bg-primary-line"></div>
-                </div>
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+                </div></div>
+                 <div className="dfi pt-5">
+                                <TextToSpeech textSelector=".dfi" />
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                   Delete Field Inspection:
                 </h2>
                 <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -303,7 +320,7 @@ const fieldinspection = () => {
                     <li>Click on delete button.</li>
                     <li>Field Inspection will be deleted successfully.</li>
                   </ul>
-                </div>
+                </div></div>
                 <div className="pl-13 pt-8 flex justify-center">
                   {DFI && (
                     <GatsbyImage
@@ -315,13 +332,17 @@ const fieldinspection = () => {
                 </div>
                 <br />
                 <br />
-                <div className="flex items-center pt-5 space-x-4">
+                 <div className="step5 pt-5">
+                                <TextToSpeech textSelector=".step5" />
+                <div className="flex items-center space-x-4">
                   <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                     Step 5
                   </h2>
                   <div className="flex-1 h-px bg-primary-line"></div>
-                </div>
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+                </div></div>
+                 <div className="vfi pt-5">
+                                <TextToSpeech textSelector=".vfi" />
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                   View Field Inspection:
                 </h2>
                 <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -339,7 +360,7 @@ const fieldinspection = () => {
                       the field inspection.
                     </li>
                   </ul>
-                </div>
+                </div></div>
                 <div className="pl-13 pt-8 flex justify-center">
                   {VFI && (
                     <GatsbyImage
@@ -361,7 +382,7 @@ const fieldinspection = () => {
               </div>
             </div>
           </div>
-        </div>
+       
       </PrivateRoute>
     </AppLayout>
   );

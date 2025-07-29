@@ -78,12 +78,12 @@ const soiltest = () => {
         <div>
           <div className="flex flex-col justify-center">
             <div className="content-container max-w-7xl w-full px-4 lg:px-4  text-justify">
-              <div className="flex items-center pt-5 space-x-1">
-                <TextToSpeech textSelector=".content-container" />
+               <div className="sm pt-5">
+                             <TextToSpeech textSelector=".sm" />
                 <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat">
                   Starting Guide for Soil Test:
                 </h2>
-              </div>
+             
 
               <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10 pt-4">
                 A soil test checks the soil's health by measuring its nutrients
@@ -97,7 +97,7 @@ const soiltest = () => {
                 is an expense. When a soil test is added, a transaction is
                 created against that soil test. That can be viewed in the
                 financial tab in general ledger table.
-              </p>
+              </p></div>
               <div className="pl-13 pt-8 flex justify-center">
                 {ST && (
                   <GatsbyImage
@@ -107,13 +107,16 @@ const soiltest = () => {
                   />
                 )}
               </div>
-
+  <div className="s1 pt-5">
+                <TextToSpeech textSelector=".s1" />
               <div className="flex items-center pt-5 space-x-4">
                 <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 1
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
-              </div>
+              </div></div>
+                <div className="st pt-5">
+                              <TextToSpeech textSelector=".st" />
               <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
                 Add Soil Test:
               </h2>
@@ -215,7 +218,7 @@ const soiltest = () => {
                   </li>
                   <li>Click on submit button.</li>
                   <li>Soil test will be added successfully.</li>
-                </ul>
+                </ul></div></div>
                 <div className="pl-13 pt-8 flex justify-center">
                   {SDS && (
                     <GatsbyImage
@@ -225,13 +228,17 @@ const soiltest = () => {
                     />
                   )}
                 </div>
-                <div className="flex items-center pt-5 space-x-4">
+                  <div className="s2 pt-5">
+                                <TextToSpeech textSelector=".s2" />
+                <div className="flex items-center space-x-4">
                   <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                     Step 2
                   </h2>
                   <div className="flex-1 h-px bg-primary-line"></div>
-                </div>
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+                </div></div>
+                  <div className="sst pt-5">
+                                <TextToSpeech textSelector=".sst" />
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                   Search Soil Test:
                 </h2>
                 <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -249,7 +256,7 @@ const soiltest = () => {
                   <p>
                     Then click on the Search button. Also, you can click on the
                     refresh button to refresh the data.
-                  </p>
+                  </p></div></div>
                   <br />
                   <div className="pl-13 pt-8 flex justify-center">
                     {SS && (
@@ -260,13 +267,17 @@ const soiltest = () => {
                       />
                     )}
                   </div>
-                  <div className="flex items-center pt-5 space-x-4">
+                    <div className="s3 pt-5">
+                                  <TextToSpeech textSelector=".s3" />
+                  <div className="flex items-center space-x-4">
                     <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                       Step 3
                     </h2>
                     <div className="flex-1 h-px bg-primary-line"></div>
-                  </div>
-                  <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+                  </div></div>
+                    <div className="est pt-5">
+                                  <TextToSpeech textSelector=".est" />
+                  <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                     Edit Soil Test:
                   </h2>
                   <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -287,14 +298,18 @@ const soiltest = () => {
                         Soil test details will be edited/updated successfully.
                       </li>
                     </ul>
-                  </div>
-                  <div className="flex items-center pt-5 space-x-4">
+                  </div></div>
+                    <div className="s4 pt-5">
+                                  <TextToSpeech textSelector=".s4" />
+                  <div className="flex items-center space-x-4">
                     <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                       Step 4
                     </h2>
                     <div className="flex-1 h-px bg-primary-line"></div>
-                  </div>
-                  <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+                  </div></div>
+                    <div className="dst pt-5">
+                                  <TextToSpeech textSelector=".dst" />
+                  <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                     Delete Soil Test:
                   </h2>
                   <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -313,7 +328,7 @@ const soiltest = () => {
                       <li>Click on delete button.</li>
                       <li>Soil test will be deleted successfully.</li>
                     </ul>
-                  </div>
+                  </div></div>
                   <div className="pl-13 pt-8 flex justify-center">
                     {DS && (
                       <GatsbyImage
@@ -323,13 +338,17 @@ const soiltest = () => {
                       />
                     )}
                   </div>
-                  <div className="flex items-center pt-5 space-x-4">
+                    <div className="s5 pt-5">
+                                  <TextToSpeech textSelector=".s5" />
+                  <div className="flex items-center space-x-4">
                     <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                       Step 5
                     </h2>
                     <div className="flex-1 h-px bg-primary-line"></div>
-                  </div>
-                  <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+                  </div></div>
+                    <div className="vst pt-5">
+                                  <TextToSpeech textSelector=".vst" />
+                  <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                     View Soil Test:
                   </h2>
                   <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -342,7 +361,7 @@ const soiltest = () => {
                       <li>soil Test details page will open.</li>
                       <li>You can print the details of the soil test.</li>
                     </ul>
-                  </div>
+                  </div></div>
                   <div className="pl-13 pt-8 flex justify-center">
                     {VS && (
                       <GatsbyImage
@@ -364,8 +383,8 @@ const soiltest = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+       
+        
       </PrivateRoute>
     </AppLayout>
   );

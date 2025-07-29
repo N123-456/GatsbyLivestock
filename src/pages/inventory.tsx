@@ -85,9 +85,9 @@ const inventory = () => {
         <div>
           <div className="flex flex-col justify-center">
             <div className="content-container max-w-7xl w-full px-4 lg:px-4  text-justify">
-              <div className="flex items-center pt-5 space-x-1">
-                <TextToSpeech textSelector=".content-container" />
-                <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat">
+              <div className="inv pt-5">
+                <TextToSpeech textSelector=".inv" />
+                <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10">
                   Starting Guide for Inventory:
                 </h2>
               </div>
@@ -103,24 +103,30 @@ const inventory = () => {
                 cost savings, and improved farm productivity. It AIso AIlows for
                 easy auditing and reporting of inventory data.
               </p>
-              <div className="pl-13 pt-8 flex justify-center">
-                {I && (
-                  <GatsbyImage
-                    image={I}
-                    alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
-                  />
-                )}
-              </div>
-              <br />
-              <br />
+            </div>
+            <div className="pl-13 pt-8 flex justify-center">
+              {I && (
+                <GatsbyImage
+                  image={I}
+                  alt="Startups illustration"
+                  className="bg-white w-[1000.58px] "
+                />
+              )}
+            </div>
+            <br />
+            <br />
+            <div className="step1 pt-5">
+              <TextToSpeech textSelector=".step1" />
               <div className="flex items-center pt-5 space-x-4">
                 <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 1
                 </h2>
                 <div className="Iex-1 h-px bg-primary-line"></div>
               </div>
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+            </div>
+            <div className="ai pt-5">
+              <TextToSpeech textSelector=".ai" />
+              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                 Add Inventory:
               </h2>
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -182,17 +188,19 @@ const inventory = () => {
                     add.
                   </li>
                   <li>Click on history button.</li>
+                  <div>
+                    {AI1 && (
+                      <GatsbyImage
+                        image={AI1}
+                        alt="Startups illustration"
+                        className="bg-white w-[1000.58px] "
+                      />
+                    )}
+                  </div>
 
-                  {AI1 && (
-                    <GatsbyImage
-                      image={AI1}
-                      alt="Startups illustration"
-                      className="bg-white w-[1000.58px] "
-                    />
-                  )}
                   <li>Here you have two options:</li>
                 </ul>
-                <ul className="list-disc">
+                <ul className="list-disc op">
                   <li>
                     <span className="text-primary-pheading font-semibold">
                       Add New:
@@ -249,23 +257,22 @@ const inventory = () => {
                   )}
                   <li>
                     <span className="text-primary-pheading font-semibold">
-                      ManuAI Adjustment:{" "}
+                      Manual Adjustment:{" "}
                     </span>
                     This option is for if you found the difference between
-                    actuAI and available quantity present in warehouse. So, you
-                    can manuAIly adjust the quantity. For doing this:
+                    actual and available quantity present in warehouse. So, you
+                    can manually adjust the quantity. For doing this:
                   </li>
                   <ul>
-                    <li>❖ Click on “ManuAI Adjustment” button.</li>
+                    <li>Click on “Manual Adjustment” button.</li>
                     <li>
-                      ❖ Enter the reason, the date on which you are making
-                      manuAI adjustment, choose the rack, and the difference in
-                      the available and actuAI quantity. In case you want to
-                      lessen the inventory, enter the quantity with negative
-                      sign.
+                      Enter the reason, the date on which you are making manul
+                      adjustment, choose the rack, and the difference in the
+                      available and actual quantity. In case you want to lessen
+                      the inventory, enter the quantity with negative sign.
                     </li>
-                    <li>❖ Click on submit button.</li>
-                    <li>❖ Inventory will be adjusted manuAIly successfully.</li>
+                    <li>Click on submit button.</li>
+                    <li>Inventory will be adjusted manually successfully.</li>
                   </ul>
                   <br />
                   {MA && (
@@ -276,15 +283,21 @@ const inventory = () => {
                     />
                   )}
                 </ul>
-                <br />
-                <br />
-                <div className="flex items-center pt-5 space-x-4">
+              </div>
+              <br />
+              <br />
+              <div className="step2 pt-5">
+                <TextToSpeech textSelector=".step2" />
+                <div className="flex items-center space-x-4">
                   <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                     Step 2
                   </h2>
                   <div className="flex-1 h-px bg-primary-line"></div>
                 </div>
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+              </div>
+              <div className="si pt-5">
+                <TextToSpeech textSelector=".si" />
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                   Search Inventory:
                 </h2>
                 <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -301,25 +314,33 @@ const inventory = () => {
                     inventory.
                   </p>
                   <br />
-                  Then click on the Search button. AIso, you can click on the
-                  refresh button to refresh the data.
-                  <br />
-                  {SIN && (
-                    <GatsbyImage
-                      image={SIN}
-                      alt="Startups illustration"
-                      className="bg-white w-[1000.58px] "
-                    />
-                  )}
-                  <br />
-                  <br />
+                  <p>
+                    Then click on the Search button. AIso, you can click on the
+                    refresh button to refresh the data.
+                  </p>
+                </div>
+                <br />
+                {SIN && (
+                  <GatsbyImage
+                    image={SIN}
+                    alt="Startups illustration"
+                    className="bg-white w-[1000.58px] "
+                  />
+                )}
+                <br />
+                <br />
+                <div className="step3 pt-5">
+                  <TextToSpeech textSelector=".step3" />
                   <div className="Iex items-center pt-5 space-x-4">
                     <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                       Step 3
                     </h2>
                     <div className="Iex-1 h-px bg-primary-line"></div>
                   </div>
-                  <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+                </div>
+                <div className="ei pt-5">
+                  <TextToSpeech textSelector=".ei" />
+                  <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                     Edit Inventory:
                   </h2>
                   <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -343,15 +364,21 @@ const inventory = () => {
                       </li>
                     </ul>
                   </div>
-                  <br />
-                  <br />
+                </div>
+                <br />
+                <br />
+                <div className="step4 pt-5">
+                  <TextToSpeech textSelector=".step4" />
                   <div className="Iex items-center pt-5 space-x-4">
                     <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                       Step 4
                     </h2>
                     <div className="Iex-1 h-px bg-primary-line"></div>
                   </div>
-                  <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+                </div>
+                <div className="di pt-5">
+                  <TextToSpeech textSelector=".di" />
+                  <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                     Delete Inventory:
                   </h2>
                   <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -371,22 +398,28 @@ const inventory = () => {
                       <li>Inventory will be deleted successfully.</li>
                     </ul>
                   </div>
-                  <div className="pl-13 pt-8 Iex justify-center">
-                    {DI && (
-                      <GatsbyImage
-                        image={DI}
-                        alt="Startups illustration"
-                        className="bg-white w-[1000.58px] "
-                      />
-                    )}
-                  </div>
-                  <br />
-                  <br />
+                </div>
+                <div className="pl-13 pt-8 Iex justify-center">
+                  {DI && (
+                    <GatsbyImage
+                      image={DI}
+                      alt="Startups illustration"
+                      className="bg-white w-[1000.58px] "
+                    />
+                  )}
+                </div>
+                <br />
+                <br />
+                <div className="step5 pt-5">
+                  <TextToSpeech textSelector=".step5" />
                   <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                     Step 5
                   </h2>
                   <div className="Iex-1 h-px bg-primary-line"></div>
-                  <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+                </div>
+                <div className="vi pt-5">
+                  <TextToSpeech textSelector=".vi" />
+                  <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                     View Inventory:
                   </h2>
                   <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -401,15 +434,15 @@ const inventory = () => {
                       <li>You can print the details of the location.</li>
                     </ul>
                   </div>
-                  <div className="pl-13 pt-8 Iex justify-center">
-                    {VI && (
-                      <GatsbyImage
-                        image={VI}
-                        alt="Startups illustration"
-                        className="bg-white w-[1000.58px] "
-                      />
-                    )}
-                  </div>
+                </div>
+                <div className="pl-13 pt-8 Iex justify-center">
+                  {VI && (
+                    <GatsbyImage
+                      image={VI}
+                      alt="Startups illustration"
+                      className="bg-white w-[1000.58px] "
+                    />
+                  )}
                 </div>
               </div>
             </div>

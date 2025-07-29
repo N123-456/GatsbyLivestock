@@ -107,7 +107,7 @@ const TextToSpeech = ({ textSelector }) => {
         isSpeaking
           ? ""
           : ""
-      } transition-colors duration-200 disabled:bg-gray-400 disabled:cursor-not-allowed`}
+      } lg:pl-10 transition-colors duration-200 disabled:bg-gray-400 disabled:cursor-not-allowed`}
       title={isSpeaking ? "Stop" : "Speak"}
     >
       {isSpeaking ? (

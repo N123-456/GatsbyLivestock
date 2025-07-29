@@ -61,12 +61,12 @@ const harvest = () => {
         <div>
           <div className="flex flex-col justify-center ">
             <div className="content-container max-w-7xl w-full px-4 lg:px-4  text-justify">
-              <div className="flex items-center pt-5 space-x-1">
-                <TextToSpeech textSelector=".content-container" />
-                <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat">
+                    <div className="acu pt-5">
+                              <TextToSpeech textSelector=".acu" />
+                <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10">
                   Starting Guide for Warehouse:
                 </h2>
-              </div>
+           
 
               <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10 pt-5">
                 A warehouse is a storage facility where goods, equipment, or
@@ -84,7 +84,7 @@ const harvest = () => {
                 location added, add the farm location first. See the user guide
                 for adding farm location. The details are provided in the above
                 part of the document.
-              </p>
+              </p></div>
               <div className="pl-13 pt-8 flex justify-center">
                 {W && (
                   <GatsbyImage
@@ -94,14 +94,17 @@ const harvest = () => {
                   />
                 )}
               </div>
-
-              <div className="flex items-center pt-5 space-x-4">
+      <div className="s1 pt-5">
+                <TextToSpeech textSelector=".s1" />
+              <div className="flex items-center space-x-4">
                 <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 1
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
-              </div>
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+              </div></div>
+                    <div className="aw pt-5">
+                              <TextToSpeech textSelector=".aw" />
+              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                 Add Warehouse:
               </h2>
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -122,6 +125,8 @@ const harvest = () => {
                 </p>
                 <p>There are four options:</p>
                 <br />
+                      <div className="shed pt-5">
+                                <TextToSpeech textSelector=".shed" />
                 <h2 className="text-primary-activelink font-semibold text-[22px] font-montserrat pt-5 ">
                   Shed:
                 </h2>
@@ -130,7 +135,7 @@ const harvest = () => {
                   tools. It provides space for storing vehicles and repair
                   tools. Users can maintain equipment necessary for vehicle
                   repairs, ensuring smooth vehicle operations.{" "}
-                </p>
+                </p></div>
                 <div className="pl-13 pt-8 flex justify-center">
                   {shed && (
                     <GatsbyImage
@@ -141,14 +146,18 @@ const harvest = () => {
                   )}
                 </div>
                 <br />
-              </div>
-              <div className="flex items-center pt-5 space-x-4">
+              </div></div>
+                    <div className="s2 pt-5">
+                              <TextToSpeech textSelector=".s2" />
+              <div className="flex items-center space-x-4">
                 <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 2
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
-              </div>
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+              </div></div>
+                    <div className="sw pt-5">
+                              <TextToSpeech textSelector=".sw" />
+              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                 Search Warehouse:
               </h2>
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -160,7 +169,7 @@ const harvest = () => {
                 <p>
                   Then click on the Search button. Also, you can click on the
                   refresh button to refresh the data.
-                </p>
+                </p></div></div>
                 <div className="pl-13 pt-8 flex justify-center">
                   {swa && (
                     <GatsbyImage
@@ -170,13 +179,17 @@ const harvest = () => {
                     />
                   )}
                 </div>
-                <div className="flex items-center pt-5 space-x-4">
+                      <div className="s3 pt-5">
+                                <TextToSpeech textSelector=".s3" />
+                <div className="flex items-center space-x-4">
                   <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                     Step 3
                   </h2>
                   <div className="flex-1 h-px bg-primary-line"></div>
-                </div>
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+                </div></div>
+                      <div className="ew pt-5">
+                                <TextToSpeech textSelector=".ew" />
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                   Edit Warehouse:
                 </h2>
                 <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -197,14 +210,19 @@ const harvest = () => {
                       Warehouse details will be edited/updated successfully.
                     </li>
                   </ul>
-                </div>
+                </div></div>
+
+                      <div className="a4 pt-5">
+                                <TextToSpeech textSelector=".a4" />
                 <div className="flex items-center pt-5 space-x-4">
                   <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                     Step 4
                   </h2>
                   <div className="flex-1 h-px bg-primary-line"></div>
-                </div>
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+                </div></div>
+                      <div className="dw pt-5">
+                                <TextToSpeech textSelector=".dw" />
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                   Delete Warehouse:
                 </h2>
                 <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -223,7 +241,7 @@ const harvest = () => {
                     <li>Click on delete button.</li>
                     <li>Warehouse will be deleted successfully.</li>
                   </ul>
-                </div>
+                </div></div>
                 <div className="pl-13 pt-8 flex justify-center">
                   {dwa && (
                     <GatsbyImage
@@ -233,13 +251,17 @@ const harvest = () => {
                     />
                   )}
                 </div>
-                <div className="flex items-center pt-5 space-x-4">
+                      <div className="s5 pt-5">
+                                <TextToSpeech textSelector=".s5" />
+                <div className="flex items-center space-x-4">
                   <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                     Step 5
                   </h2>
                   <div className="flex-1 h-px bg-primary-line"></div>
-                </div>
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+                </div></div>
+                      <div className="vw pt-5">
+                                <TextToSpeech textSelector=".vw" />
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                   View Warehouse:
                 </h2>
                 <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -256,7 +278,7 @@ const harvest = () => {
                       the warehouse.
                     </li>
                   </ul>
-                </div>
+                </div></div>
                 <div className="pl-13 pt-8 flex justify-center">
                   {vwa && (
                     <GatsbyImage
@@ -269,7 +291,7 @@ const harvest = () => {
               </div>
             </div>
           </div>
-        </div>
+      
       </PrivateRoute>
     </AppLayout>
   );

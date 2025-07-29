@@ -66,12 +66,12 @@ const tasks = () => {
         <div>
           <div className="flex flex-col justify-center">
             <div className="content-container max-w-7xl w-full px-4 lg:px-4  text-justify">
-              <div className="flex items-center pt-5 space-x-1">
-                <TextToSpeech textSelector=".content-container" />
-                <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat">
+                <div className="sm pt-5">
+                              <TextToSpeech textSelector=".sm" />
+                <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10">
                   Starting Guide for Tasks:
                 </h2>
-              </div>
+             
 
               <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10 pt-4">
                 This feature of farm management system helps you manage all the
@@ -80,15 +80,18 @@ const tasks = () => {
                 progress, assign priority, add cost incurred on the task and
                 related transaction information, and record how long they take
                 to complete.
-              </p>
-
-              <div className="flex items-center pt-5 space-x-4">
+              </p>.</div>
+  <div className="s1 pt-5">
+                <TextToSpeech textSelector=".s1" />
+              <div className="flex items-center space-x-4">
                 <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 1
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
-              </div>
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+              </div></div>
+                <div className="tv pt-5">
+                              <TextToSpeech textSelector=".tv" />
+              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                 Task Views:
               </h2>
               <p className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -135,14 +138,18 @@ const tasks = () => {
                 </div>
                 <br />{" "}
               </p>
-
-              <div className="flex items-center pt-5 space-x-4">
+</div>
+  <div className="s2 pt-5">
+                <TextToSpeech textSelector=".s2" />
+              <div className="flex items-center space-x-4">
                 <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 2
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
-              </div>
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+              </div></div>
+                <div className="at pt-5">
+                              <TextToSpeech textSelector=".at" />
+              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                 Adding Tasks:
               </h2>
               <p className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -157,7 +164,7 @@ const tasks = () => {
                 how much time will be spent on the task. When a task is
                 completed, a transaction is created against that task. That can
                 be viewed in the financial tab in general ledger table.
-              </p>
+              </p></div>
               <div className="pl-13 pt-8 flex justify-center">
                 {addtask && (
                   <GatsbyImage
@@ -167,14 +174,17 @@ const tasks = () => {
                   />
                 )}
               </div>
-
-              <div className="flex items-center pt-5 space-x-4">
+  <div className="s3 pt-5">
+                <TextToSpeech textSelector=".3" />
+              <div className="flex items-center space-x-4">
                 <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 3
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
-              </div>
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+              </div></div>
+                <div className="tf pt-5">
+                              <TextToSpeech textSelector=".tf" />
+              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                 Tasks Fields:
               </h2>
               <p className="text-primary-paragraph2 text-[19px] font-montserrat font-normal lg:px-10">
@@ -302,14 +312,18 @@ const tasks = () => {
                 : The unit of time can be seconds, hour, minute and day to
                 complete the task.
               </p>
-
-              <div className="flex items-center pt-5 space-x-4">
+</div>
+  <div className="s4 pt-5">
+                <TextToSpeech textSelector=".s4" />
+              <div className="flex items-center space-x-4">
                 <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 4
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
-              </div>
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+              </div></div>
+                <div className="st pt-5">
+                              <TextToSpeech textSelector=".st" />
+              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                 Search Task:
               </h2>
               <p className="text-primary-paragraph2 text-[19px] font-montserrat font-normal lg:px-10">
@@ -347,7 +361,7 @@ const tasks = () => {
                 a custom range in which tasks were or will be performed.
                 <br /> Then click on the Search button. Also, you can click on
                 the refresh button to refresh the data.
-              </p>
+              </p></div>
               <div className="pl-13 pt-8 flex justify-center">
                 {stask && (
                   <GatsbyImage
@@ -357,15 +371,18 @@ const tasks = () => {
                   />
                 )}
               </div>
-
-              <div className="flex items-center pt-5 space-x-4">
+  <div className="s5 pt-5">
+                <TextToSpeech textSelector=".s5" />
+              <div className="flex items-center space-x-4">
                 <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 5
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
-
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+</div>
+  <div className="et pt-5">
+                <TextToSpeech textSelector=".et" />
+              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                 Edit Task:
               </h2>
               <p className="text-primary-paragraph2 text-[19px] font-montserrat font-normal lg:px-10">
@@ -382,15 +399,18 @@ const tasks = () => {
                   <li>Tasks details will be edited/updated successfully.</li>
                 </ul>
               </p>
-
-              <div className="flex items-center pt-5 space-x-4">
+</div>
+  <div className="s6 pt-5">
+                <TextToSpeech textSelector=".s6" />
+              <div className="flex items-center space-x-4">
                 <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 6
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
-              </div>
-
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+              </div></div>
+  <div className="dt pt-5">
+                <TextToSpeech textSelector=".dt" />
+              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                 Delete Task:
               </h2>
               <p className="text-primary-paragraph2 text-[19px] font-montserrat font-normal lg:px-10">
@@ -410,7 +430,7 @@ const tasks = () => {
                   <li>Make changes in the field.</li>
                   <li>Task will be deleted successfully.</li>
                 </ul>
-              </p>
+              </p></div>
               <div className="pl-13 pt-8 flex justify-center">
                 {dtask && (
                   <GatsbyImage
@@ -420,15 +440,17 @@ const tasks = () => {
                   />
                 )}
               </div>
-
-              <div className="flex items-center pt-5 space-x-4">
+  <div className="s7 pt-5">
+                <TextToSpeech textSelector=".s7" />
+              <div className="flex items-center space-x-4">
                 <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 7
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
-              </div>
-
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+              </div></div>
+  <div className="vt pt-5">
+                <TextToSpeech textSelector=".vt" />
+              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat  lg:pl-10">
                 View Task:
               </h2>
               <p className="text-primary-paragraph2 text-[19px] font-montserrat font-normal lg:px-10">
@@ -443,7 +465,7 @@ const tasks = () => {
                     the task.
                   </li>
                 </ul>
-              </p>
+              </p></div>
               <div className="pl-13 pt-8 flex justify-center">
                 {vtask && (
                   <GatsbyImage

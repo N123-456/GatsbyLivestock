@@ -36,12 +36,12 @@ const trialbalance = () => {
         <div>
           <div className="flex flex-col justify-center">
             <div className="content-container max-w-7xl w-full px-4 lg:px-4  text-justify">
-              <div className="flex items-center pt-5 space-x-1">
-                <TextToSpeech textSelector=".content-container" />
-                <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat">
+                <div className="acu pt-5">
+                <TextToSpeech textSelector=".acu" />
+                <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10">
                   Trial Balance Report:
                 </h2>
-              </div>
+           
 
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10 pt-5">
                 The Trial Balance is a financial report that lists all the
@@ -58,7 +58,7 @@ const trialbalance = () => {
                 mathematical accuracy of the financial records.
                 <br />
                 <br />
-              </div>
+              </div></div>
               <div className="pl-13 pt-8 flex justify-center">
                 {tbr && (
                   <GatsbyImage

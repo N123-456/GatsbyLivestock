@@ -55,55 +55,64 @@ const maintenance = () => {
         <div>
           <div className="flex flex-col justify-center">
             <div className="content-container max-w-7xl w-full px-4 lg:px-4  text-justify">
-              <div className="flex items-center pt-5 space-x-1">
-                <TextToSpeech textSelector=".content-container" />
-                <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat">
+              <div className="sm pt-5">
+                <TextToSpeech textSelector=".sm" />
+                <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10">
                   Starting Guide with Machinery Usage Tracking:
                 </h2>
               </div>
-
-              <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
-                  Step 1
-                </h2>
-                <div className="flex-1 h-px bg-primary-line"></div>
-              </div>
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
-                Add Check-In Usage:
-              </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
-                <p>
-                  The check-in process involves recording details when a machine
-                  is returned after use. This includes noting the time and date
-                  of return, the operator's name, and the machine's current
-                  condition. A thorough inspection is carried out to check for
-                  any signs of damage, wear and tear, fuel levels, or technical
-                  issues. If any problems are found, they are documented for
-                  maintenance or repair. The machine is then cleaned, refuelled
-                  (if required), and properly stored in its designated area to
-                  ensure it is ready for the next operation. Recording this
-                  information in a logbook or farm management system helps
-                  maintain accurate usage records, track machine health, and
-                  ensure accountability. You can visually analyse the check in
-                  usage of the machinery. You can easily filter out weekly,
-                  monthly and yearly check in usage.{" "}
-                </p>
-                <br />
-                <div className="pl-13 pt-8 flex justify-center">
-                  {acu && (
-                    <GatsbyImage
-                      image={acu}
-                      alt="Startups illustration"
-                      className="bg-white w-[1000.58px] "
-                    />
-                  )}
+              <div className="s1 pt-5">
+                <TextToSpeech textSelector=".s1" />
+                <div className="flex items-center space-x-4">
+                  <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                    Step 1
+                  </h2>
+                  <div className="flex-1 h-px bg-primary-line"></div>
                 </div>
-                <br />
-                <br />
+              </div>
+              <div className="adu pt-5">
+                <TextToSpeech textSelector=".adu" />
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                  Add Check-In Usage:
+                </h2>
+                <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+                  <p>
+                    The check-in process involves recording details when a
+                    machine is returned after use. This includes noting the time
+                    and date of return, the operator's name, and the machine's
+                    current condition. A thorough inspection is carried out to
+                    check for any signs of damage, wear and tear, fuel levels,
+                    or technical issues. If any problems are found, they are
+                    documented for maintenance or repair. The machine is then
+                    cleaned, refuelled (if required), and properly stored in its
+                    designated area to ensure it is ready for the next
+                    operation. Recording this information in a logbook or farm
+                    management system helps maintain accurate usage records,
+                    track machine health, and ensure accountability. You can
+                    visually analyse the check in usage of the machinery. You
+                    can easily filter out weekly, monthly and yearly check in
+                    usage.{" "}
+                  </p>
+                </div>
+              </div>
+              <br />
+              <div className="pl-13 pt-8 flex justify-center">
+                {acu && (
+                  <GatsbyImage
+                    image={acu}
+                    alt="Startups illustration"
+                    className="bg-white w-[1000.58px] "
+                  />
+                )}
+              </div>
+              <br />
+              <br />
+              <div className="aci pt-5">
+                <TextToSpeech textSelector=".aci" />
                 <h2 className="text-primary-paragraph2 text-[19px] font-montserrat font-semibold ">
                   Add Check-In
                 </h2>
-
+ <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
                 <ul>
                   <li>
                     Go to{" "}
@@ -229,24 +238,27 @@ const maintenance = () => {
                   <li>Once complete, click the Submit button.</li>
                   <li>Check In usage will be added successfully.</li>
                 </ul>
-                <div className="pl-13 pt-8 flex justify-center">
-                  {aci && (
-                    <GatsbyImage
-                      image={aci}
-                      alt="Startups illustration"
-                      className="bg-white w-[1000.58px] "
-                    />
-                  )}
-                </div>
+              </div></div>
+              <div className="pl-13 pt-8 flex justify-center">
+                {aci && (
+                  <GatsbyImage
+                    image={aci}
+                    alt="Startups illustration"
+                    className="bg-white w-[1000.58px] "
+                  />
+                )}
               </div>
-
-              <div className="flex items-center pt-5 space-x-4">
+<div className="s2 pt-5">
+                <TextToSpeech textSelector=".s2" />
+              <div className="flex items-center space-x-4">
                 <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 2
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
-              </div>
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+              </div></div>
+              <div className="acu pt-5">
+                <TextToSpeech textSelector=".acu" />
+              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                 Add Check-Out Usage:
               </h2>
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -265,7 +277,7 @@ const maintenance = () => {
                   ensure accountability. You can visually analyse the check in
                   usage of the machinery. You can easily filter out weekly,
                   monthly and yearly check in usage.{" "}
-                </p>
+                </p></div></div>
                 <br />
                 <div className="pl-13 pt-8 flex justify-center">
                   {acou && (
@@ -278,9 +290,12 @@ const maintenance = () => {
                 </div>
                 <br />
                 <br />
+                      <div className="acou pt-5">
+                <TextToSpeech textSelector=".acou" />
                 <h2 className="text-primary-paragraph2 text-[19px] font-montserrat font-semibold ">
                   Add Check-Out Usage
                 </h2>
+                              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
                 <p>To add check out details:</p>
                 <ul>
                   <li>
@@ -407,7 +422,7 @@ const maintenance = () => {
                   <li>Once complete, click the Submit button.</li>
                   <li>Check In usage will be added successfully.</li>
                 </ul>
-
+</div></div>
                 <div className="pl-13 pt-8 flex justify-center">
                   {acou1 && (
                     <GatsbyImage
@@ -420,7 +435,7 @@ const maintenance = () => {
               </div>
             </div>
           </div>
-        </div>
+       
       </PrivateRoute>
     </AppLayout>
   );

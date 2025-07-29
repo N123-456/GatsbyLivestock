@@ -90,13 +90,13 @@ const planting = () => {
         <div>
           <div className="flex flex-col justify-center">
             <div className="content-container max-w-7xl w-full px-4 lg:px-4  text-justify">
-              <div className="flex items-center pt-5 space-x-1">
-                <TextToSpeech textSelector=".content-container" />
-                <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat">
+                <div className="sm pt-5">
+                              <TextToSpeech textSelector=".sm" />
+                <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10">
                   Starting Guide for Planting:
                 </h2>
-              </div>
-              <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10 pt-4">
+             
+              <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10 ">
                 In the planting process, you enter the details of the crops to
                 be planted, ensuring all necessary information is recorded for
                 effective crop management. This includes selecting the crop
@@ -112,7 +112,7 @@ const planting = () => {
                 Furthermore, field inspection details can also be added. The
                 details of these will be found in the later sections of the
                 document.
-              </p>
+              </p></div>
               <div className="pl-13 pt-8 flex justify-center">
                 {planting && (
                   <GatsbyImage
@@ -122,14 +122,16 @@ const planting = () => {
                   />
                 )}
               </div>
-
-              <div className="flex items-center pt-5 space-x-4">
+  <div className="s1 pt-5">
+                <TextToSpeech textSelector=".s1" />
+              <div className="flex items-center space-x-4">
                 <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 1
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
-              </div>
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+              </div></div>
+                
+              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                 Add Planting:
               </h2>
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -360,13 +362,13 @@ const planting = () => {
                     />
                   )}
                 </div>
-                <div className="flex items-center pt-5 space-x-4">
+                <div className="flex items-center space-x-4">
                   <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                     Step 2
                   </h2>
                   <div className="flex-1 h-px bg-primary-line"></div>
                 </div>
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                   Search Planting:
                 </h2>
                 <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -409,13 +411,13 @@ const planting = () => {
                       />
                     )}
                   </div>
-                  <div className="flex items-center pt-5 space-x-4">
+                  <div className="flex items-center space-x-4">
                     <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                       Step 3
                     </h2>
                     <div className="flex-1 h-px bg-primary-line"></div>
                   </div>
-                  <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+                  <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                     Edit Planting:
                   </h2>
                   <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -437,13 +439,13 @@ const planting = () => {
                       </li>
                     </ul>
                   </div>
-                  <div className="flex items-center pt-5 space-x-4">
+                  <div className="flex items-center space-x-4">
                     <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                       Step 4
                     </h2>
                     <div className="flex-1 h-px bg-primary-line"></div>
                   </div>
-                  <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+                  <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                     Delete Planting:
                   </h2>
                   <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -473,13 +475,13 @@ const planting = () => {
                       />
                     )}
                   </div>
-                  <div className="flex items-center pt-5 space-x-4">
+                  <div className="flex items-center space-x-4">
                     <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                       Step 5
                     </h2>
                     <div className="flex-1 h-px bg-primary-line"></div>
                   </div>
-                  <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+                  <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                     View Planting:
                   </h2>
                   <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">

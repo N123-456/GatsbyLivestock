@@ -95,7 +95,9 @@ const purchase = () => {
         <div>
           <div className="flex flex-col justify-center">
             <div className="max-w-7xl w-full px-4 lg:px-4  text-justify">
-              <h2 className="text-primary-activelink font-semibold text-[28px] font-montserrat lg:pl-10 pt-5">
+                <div className="spr pt-5">
+                              <TextToSpeech textSelector=".spr" />
+              <h2 className="text-primary-activelink font-semibold text-[28px] font-montserrat lg:pl-10 ">
                 Starting Guide for Purchase Requisition:
               </h2>
               <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10 pt-4">
@@ -110,7 +112,7 @@ const purchase = () => {
                 levels are maintained, and resources are procured in an
                 organized and efficient manner. It also helps track spending and
                 manage budgets within the farm.
-              </p>
+              </p></div>
               <div className="pl-13 pt-8 flex justify-center ">
                 {PR && (
                   <GatsbyImage
@@ -122,13 +124,17 @@ const purchase = () => {
               </div>
               <br />
               <br />
-              <div className="flex items-center pt-5 space-x-4">
+                <div className="s1 pt-5">
+                              <TextToSpeech textSelector=".s1" />
+              <div className="flex items-center space-x-4">
                 <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 1
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
-              </div>
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+              </div></div>
+                <div className="apr pt-5">
+                              <TextToSpeech textSelector=".apr" />
+              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                 Add Purchase Requisition:
               </h2>
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -206,16 +212,20 @@ const purchase = () => {
                     )}
                   </div>
                   <br />
-                </ul>
+                </ul></div></div>
                 <br />
                 <br />
-                <div className="flex items-center pt-5 space-x-4">
+                  <div className="s2 pt-5">
+                                <TextToSpeech textSelector=".s2" />
+                <div className="flex items-center space-x-4">
                   <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                     Step 2
                   </h2>
                   <div className="flex-1 h-px bg-primary-line"></div>
-                </div>
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+                </div></div>
+                  <div className="spr pt-5">
+                                <TextToSpeech textSelector=".spr" />
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                   Search & Print Purchase Requisition:
                 </h2>
                 <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -255,7 +265,7 @@ const purchase = () => {
                       “Print”{" "}
                     </span>{" "}
                     icon to print the details of the purchase requisition.
-                  </p>
+                  </p></div>
                   <br />
                   <br />
                   <div className="pl-13 pt-8 flex justify-center">
@@ -279,17 +289,17 @@ const purchase = () => {
                 </div>
               </div>
             </div>
-          </div>
+         
           <br />
 
           <div className="flex flex-col justify-center">
             <div className="content-container max-w-7xl w-full px-4 lg:px-4  text-justify">
-              <div className="flex items-center pt-5 space-x-1">
-                <TextToSpeech textSelector=".content-container" />
+               <div className="sgp pt-5">
+                <TextToSpeech textSelector=".sgp" />
                 <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat">
                   Starting Guide for Purchase Order:
                 </h2>
-              </div>
+            
 
               <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10 pt-4">
                 A Purchase Order (PO) is a formal document issued by a buyer to
@@ -299,7 +309,7 @@ const purchase = () => {
                 The purchase order serves as a legal agreement between the farm
                 and the supplier. It helps track and manage farm purchases,
                 monitor inventory, and maintain accurate financial records.
-              </p>
+              </p></div>
               <div className="pl-13 pt-8 flex justify-center ">
                 {po && (
                   <GatsbyImage
@@ -311,12 +321,16 @@ const purchase = () => {
               </div>
               <br />
               <br />
+                <div className="s1 pt-5">
+                              <TextToSpeech textSelector=".s1" />
               <div className="flex items-center pt-5 space-x-4">
                 <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 1
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
-              </div>
+              </div></div>
+                <div className="apo pt-5">
+                              <TextToSpeech textSelector=".apo" />
               <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
                 Add Purchase Order:
               </h2>
@@ -411,16 +425,20 @@ const purchase = () => {
                     )}
                   </div>
                   <br />
-                </ul>
+                </ul></div></div>
                 <br />
                 <br />
-                <div className="flex items-center pt-5 space-x-4">
+                  <div className="s2 pt-5">
+                                <TextToSpeech textSelector=".s2" />
+                <div className="flex items-center space-x-4">
                   <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                     Step 2
                   </h2>
                   <div className="flex-1 h-px bg-primary-line"></div>
-                </div>
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+                </div></div>
+                  <div className="spo pt-5">
+                                <TextToSpeech textSelector=".spo" />
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                   Search & Print Purchase Order:
                 </h2>
                 <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -480,11 +498,11 @@ const purchase = () => {
                       />
                     )}
                   </div>
-                </div>
+                </div></div>
               </div>
             </div>
           </div>
-        </div>
+     
       </PrivateRoute>
     </AppLayout>
   );

@@ -36,12 +36,12 @@ const vaccination = () => {
         <div>
           <div className="flex flex-col justify-center">
             <div className="content-container max-w-7xl w-full px-4 lg:px-4  text-justify">
-              <div className="flex items-center pt-5 space-x-1">
-                <TextToSpeech textSelector=".content-container" />
+                   <div className="acu pt-5">
+                <TextToSpeech textSelector=".acu" />
                 <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat">
                   Vaccination Centre:
                 </h2>
-              </div>
+             
 
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10 pt-5">
                 The Vaccination Centre ensures proper management of vaccines and
@@ -71,7 +71,7 @@ const vaccination = () => {
                     />
                   )}
                 </div>
-              </div>
+              </div></div>
               <br />
             </div>
           </div>
