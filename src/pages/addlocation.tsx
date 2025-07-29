@@ -92,9 +92,9 @@ const addlocation = () => {
         <div>
           <div className="flex flex-col justify-center">
             <div className="content-container max-w-7xl w-full px-4 lg:px-4 text-justify">
-              <div className="flex items-center lg:pt-5 space-x-1">
-                <TextToSpeech textSelector=".content-container" />
-                <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat">
+              <div className="acu pt-5">
+                <TextToSpeech textSelector=".acu" />
+                <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10">
                   Starting Guide for Farm Locations:
                 </h2>
 
@@ -123,9 +123,9 @@ const addlocation = () => {
               </div>
               <br />
               <br />
-              <div className="step2">
+              <div className="step2 pt-5">
                 <TextToSpeech textSelector=".step2" />
-                <div className="flex items-center pt-5 space-x-2">
+                <div className="flex items-center space-x-2">
                   <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                     Step 1
                   </h2>
@@ -133,9 +133,9 @@ const addlocation = () => {
                 </div>
               </div>
 
-              <div className="step2">
+              <div className="step2 pt-5">
                 <TextToSpeech textSelector=".step2" />
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                   Add Location:
                 </h2>
                 <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -238,183 +238,185 @@ const addlocation = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="pl-13 pt-8 flex justify-center">
-                  {AL && (
-                    <GatsbyImage
-                      image={AL}
-                      alt="Startups illustration"
-                      className="bg-white w-[1000.58px] "
-                    />
-                  )}
-                </div>
-                <br />
-                <br />
-                Enter the required information.
-                <br />
-                <ul className="text-primary-activelink font-semibold list-disc">
-                  <li>Province</li>
-                  <li>Division</li>
-                  <li>District</li>
-                  <li>Tehsil</li>
-                  <li>Address</li>
-                </ul>
-                <div className="pl-13 pt-8 flex justify-center">
-                  {LD && (
-                    <GatsbyImage
-                      image={LD}
-                      alt="Startups illustration"
-                      className="bg-white w-[1000.58px] "
-                    />
-                  )}
-                </div>
-                <br />
-                <br /><p>
-                Enter the additional information including:</p>
-                <br />
-                <ul className="text-primary-subheading font-normal text-[18px] font-montserrat pt-5">
-                  <li>
-                    <span className="text-primary-pheading font-semibold">
-                      Ownership Status
-                    </span>
-                    : What is the ownership status of the land. Whether it is:
-                  </li>
-                  <li>
-                    <span className="text-primary-pheading font-semibold">
-                      Self Owned
-                    </span>
-                    : If the land is self owned then enter what is the estimated
-                    cost of the land.
-                  </li>
-                  <li>
-                    <span className="text-primary-pheading font-semibold">
-                      Crop Sharing
-                    </span>
-                    : If the land ownership status is crop sharing, enter the
-                    crop sharing percentage and upload the terms of share
-                    tenancy document.
-                  </li>
-                  <li>
-                    <span className="text-primary-pheading font-semibold">
-                      Leased
-                    </span>
-                    : If the land is on lease, enter the annual lease rate.
-                  </li>
-                  <li>Select the soil type of the land.</li>
-                  <li>
-                    Choose irrigation method: how your land is irrigated. Either
-                    the land is:
-                  </li>
-                </ul>
-                <ul className="text-primary-activelink list-disc font-semibold pl-[15px]">
-                  <li>Rainfed</li>
-                  <li>By canal</li>
-                  <li>By Tube Wells</li>
-                  <li>By Dug Wells</li>
-                </ul>
-                <div className="pl-13 pt-8 flex justify-center">
-                  {LI && (
-                    <GatsbyImage
-                      image={LI}
-                      alt="Startups illustration"
-                      className="bg-white w-[1000.58px] "
-                    />
-                  )}
-                </div>
-                <br />
-                <br />
-                <p>Enter the required information:</p>
-                <br />
-                <ul className="text-primary-activelink font-semibold list-disc">
-                  <li>Province</li>
-                  <li>Division</li>
-                  <li>District</li>
-                  <li>Tehsil</li>
-                  <li>Address</li>
-                </ul>
-                <div className="pl-13 pt-8 flex justify-center">
-                  {LD && (
-                    <GatsbyImage
-                      image={LD}
-                      alt="Startups illustration"
-                      className="bg-white w-[1000.58px] "
-                    />
-                  )}
-                </div>
-                <br />
-                <br />
-
-                <p>Choose the location boundaries:</p>
-                <br />
-                <h1 className="font-semibold">Mark Boundaries: </h1>
-                <ul className="text-primary-subheading font-normal text-[18px] font-montserrat ">
-                  <li>
-                    Click on the{" "}
-                    <span className="text-primary-activelink font-semibold">
-                      “Mark Boundaries”
-                    </span>{" "}
-                    button. A satellite imagery map will open.
-                  </li>
-                  <li>Enter the location name in the search bar.</li>
-                  <li>Zoom In or zoom out to reach the exact location.</li>
-                  <li>
-                    After reaching the desired location mark the boundaries of
-                    your farm location.
-                  </li>
-                  <li>
-                    Additionally, you can Upload KML file to get the location
-                    marked on the map.
-                  </li>
-                  <li>
-                    After the boundaries are marked, click on the save button.
-                  </li>
-                </ul>
-                <div className="pl-13 pt-8 flex justify-center">
-                  {MB && (
-                    <GatsbyImage
-                      image={MB}
-                      alt="Startups illustration"
-                      className="bg-white w-[1000.58px] "
-                    />
-                  )}
-                </div>
-                <br />
-                <br />
-                <ul className="pt-4 list-disc">
-                  <li>
-                    Optionally, you can upload the image of your farm location.
-                  </li>
-                  <li>
-                    When you will mark the boundaries, automatically area of
-                    your land will be calculated.
-                  </li>
-                  <li>You can change the unit of area as per your choice.</li>
-                </ul>
-                <div className="pl-13 pt-8 flex justify-center">
-                  {UI && (
-                    <GatsbyImage
-                      image={UI}
-                      alt="Startups illustration"
-                      className="bg-white w-[1000.58px] "
-                    />
-                  )}
+              </div>
+              <div className="pl-13 pt-8 flex justify-center">
+                {AL && (
+                  <GatsbyImage
+                    image={AL}
+                    alt="Startups illustration"
+                    className="bg-white w-[1000.58px] "
+                  />
+                )}
+              </div>
+              <br />
+              <br />
+              <div className="ri pt-5">
+                <TextToSpeech textSelector=".ri" />
+                <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+                  <p className="text-primary-paragraph2 font-bold">
+                    Enter the required information.
+                  </p>
+                  <br />
+                  <ul className="text-primary-activelink font-semibold list-disc">
+                    <li>Province</li>
+                    <li>Division</li>
+                    <li>District</li>
+                    <li>Tehsil</li>
+                    <li>Address</li>
+                  </ul>
+                  <div className="pl-13 pt-8 flex justify-center">
+                    {LD && (
+                      <GatsbyImage
+                        image={LD}
+                        alt="Startups illustration"
+                        className="bg-white w-[1000.58px] "
+                      />
+                    )}
+                  </div>
                 </div>
               </div>
-            
+              <br />
+              <br />
+              <div className="ii pt-5">
+                <TextToSpeech textSelector=".ii" />
+                <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+                  <p className="text-primary-paragraph2 font-bold">
+                    Enter the additional information including:
+                  </p>
+                  <br />
+                  <ul className="text-primary-subheading font-normal text-[18px] font-montserrat pt-5">
+                    <li>
+                      <span className="text-primary-pheading font-semibold">
+                        Ownership Status
+                      </span>
+                      : What is the ownership status of the land. Whether it is:
+                    </li>
+                    <li>
+                      <span className="text-primary-pheading font-semibold">
+                        Self Owned
+                      </span>
+                      : If the land is self owned then enter what is the
+                      estimated cost of the land.
+                    </li>
+                    <li>
+                      <span className="text-primary-pheading font-semibold">
+                        Crop Sharing
+                      </span>
+                      : If the land ownership status is crop sharing, enter the
+                      crop sharing percentage and upload the terms of share
+                      tenancy document.
+                    </li>
+                    <li>
+                      <span className="text-primary-pheading font-semibold">
+                        Leased
+                      </span>
+                      : If the land is on lease, enter the annual lease rate.
+                    </li>
+                    <li>Select the soil type of the land.</li>
+                    <li>
+                      Choose irrigation method: how your land is irrigated.
+                      Either the land is:
+                    </li>
+                  </ul>
+                  <ul className="text-primary-activelink list-disc font-semibold pl-[15px]">
+                    <li>Rainfed</li>
+                    <li>By canal</li>
+                    <li>By Tube Wells</li>
+                    <li>By Dug Wells</li>
+                  </ul>
+                </div>
+              </div>
+              <div className="pl-13 pt-8 flex justify-center">
+                {LI && (
+                  <GatsbyImage
+                    image={LI}
+                    alt="Startups illustration"
+                    className="bg-white w-[1000.58px] "
+                  />
+                )}
+              </div>
+              <br />
+              <br />
+              <div className="slb pt-5">
+                <TextToSpeech textSelector=".slb" />
+
+                <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+                  <p className="text-primary-paragraph2 font-bold">
+                    Choose the location boundaries:
+                  </p>
+                  <br />
+                  <h1 className="font-semibold">Mark Boundaries: </h1>
+                  <ul className="text-primary-subheading font-normal text-[18px] font-montserrat ">
+                    <li>
+                      Click on the{" "}
+                      <span className="text-primary-activelink font-semibold">
+                        “Mark Boundaries”
+                      </span>{" "}
+                      button. A satellite imagery map will open.
+                    </li>
+                    <li>Enter the location name in the search bar.</li>
+                    <li>Zoom In or zoom out to reach the exact location.</li>
+                    <li>
+                      After reaching the desired location mark the boundaries of
+                      your farm location.
+                    </li>
+                    <li>
+                      Additionally, you can Upload KML file to get the location
+                      marked on the map.
+                    </li>
+                    <li>
+                      After the boundaries are marked, click on the save button.
+                    </li>
+                  </ul>
+                  <div className="pl-13 pt-8 flex justify-center">
+                    {MB && (
+                      <GatsbyImage
+                        image={MB}
+                        alt="Startups illustration"
+                        className="bg-white w-[1000.58px] "
+                      />
+                    )}
+                  </div>
+                  <br />
+                  <br />
+                  <ul className="pt-4 list-disc">
+                    <li>
+                      Optionally, you can upload the image of your farm
+                      location.
+                    </li>
+                    <li>
+                      When you will mark the boundaries, automatically area of
+                      your land will be calculated.
+                    </li>
+                    <li>You can change the unit of area as per your choice.</li>
+                  </ul>
+                  <div className="pl-13 pt-8 flex justify-center">
+                    {UI && (
+                      <GatsbyImage
+                        image={UI}
+                        alt="Startups illustration"
+                        className="bg-white w-[1000.58px] "
+                      />
+                    )}
+                  </div>
+                </div>
+              </div>
+
               <br />
               <br />
 
-              <div className="step2">
+              <div className="step2 pt-5">
                 <TextToSpeech textSelector=".step2" />
-                <div className="flex items-center pt-5 space-x-4">
-                  <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-2">
+                <div className="flex items-center space-x-4">
+                  <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                     Step 2
                   </h2>
                   <div className="flex-1 h-px bg-primary-line"></div>
                 </div>
               </div>
-              <div className="step2">
-                <TextToSpeech textSelector=".step2" />
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+              <div className="sl pt-5">
+                <TextToSpeech textSelector=".sl" />
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                   Search Location:
                 </h2>
                 <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -468,60 +470,73 @@ const addlocation = () => {
               </div>
               <br />
               <br />
-
-              <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
-                  Step 3
+              <div className="s3 pt-5">
+                <TextToSpeech textSelector=".s3" />
+                <div className="flex items-center space-x-4">
+                  <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                    Step 3
+                  </h2>
+                  <div className="flex-1 h-px bg-primary-line"></div>
+                </div>
+              </div>
+              <div className="el pt-5">
+                <TextToSpeech textSelector=".el" />
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                  Edit Location:
                 </h2>
-                <div className="flex-1 h-px bg-primary-line"></div>
+                <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+                  If any location details changes, you can easily edit the
+                  details. For that:
+                  <br />
+                  <br />
+                  <ul className="pl-[15px] text-primary-activelink font-semibold list-disc">
+                    <li>
+                      Click on the edit icon against the location you want to
+                      edit.
+                    </li>
+                    <li>Location details screen will open.</li>
+                    <li>Click on the field you want to edit.</li>
+                    <li>Make changes in the fields</li>
+                    <li>Click on submit button.</li>
+                    <li>
+                      Location details will be edited/updated successfully.
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
-                Edit Location:
-              </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
-                If any location details changes, you can easily edit the
-                details. For that:
-                <br />
-                <br />
-                <ul className="pl-[15px] text-primary-activelink font-semibold list-disc">
-                  <li>
-                    Click on the edit icon against the location you want to
-                    edit.
-                  </li>
-                  <li>Location details screen will open.</li>
-                  <li>Click on the field you want to edit.</li>
-                  <li>Make changes in the fields</li>
-                  <li>Click on submit button.</li>
-                  <li>Location details will be edited/updated successfully.</li>
-                </ul>
+              <div className="s4 pt-5">
+                <TextToSpeech textSelector=".s4" />
+                <div className="flex items-center space-x-4">
+                  <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                    Step 4
+                  </h2>
+                  <div className="flex-1 h-px bg-primary-line"></div>
+                </div>
               </div>
-              <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
-                  Step 4
+              <div className="dl pt-5">
+                <TextToSpeech textSelector=".dl" />
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                  Delete Location:
                 </h2>
-                <div className="flex-1 h-px bg-primary-line"></div>
-              </div>
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
-                Delete Location:
-              </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
-                If you no longer need any location or that location no more
-                belongs to you and wants to delete the location, you can easily
-                do so.
-                <br />
-                <br />
-                <ul className="pl-[15px] text-primary-activelink font-semibold list-disc">
-                  <li>
-                    Click on the delete icon against the row you want to delete
-                    in the location’s table.
-                  </li>
-                  <li>
-                    A dialogue box will appear to confirm whether you want to
-                    delete or not.
-                  </li>
-                  <li>Click on delete button.</li>
-                  <li>Location will be deleted successfully.</li>
-                </ul>
+                <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+                  If you no longer need any location or that location no more
+                  belongs to you and wants to delete the location, you can
+                  easily do so.
+                  <br />
+                  <br />
+                  <ul className="pl-[15px] text-primary-activelink font-semibold list-disc">
+                    <li>
+                      Click on the delete icon against the row you want to
+                      delete in the location’s table.
+                    </li>
+                    <li>
+                      A dialogue box will appear to confirm whether you want to
+                      delete or not.
+                    </li>
+                    <li>Click on delete button.</li>
+                    <li>Location will be deleted successfully.</li>
+                  </ul>
+                </div>
               </div>
               <div className="pl-13 pt-8 flex justify-center">
                 {DL && (
@@ -534,18 +549,18 @@ const addlocation = () => {
               </div>
               <br />
               <br />
-              <div className="step2">
-                <TextToSpeech textSelector=".step2" />
-                <div className="flex items-center pt-5 space-x-4">
+              <div className="step5">
+                <TextToSpeech textSelector=".step5" />
+                <div className="flex items-center space-x-4">
                   <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                     Step 5
                   </h2>
                   <div className="flex-1 h-px bg-primary-line"></div>
                 </div>
               </div>
-              <div className="step2">
-                <TextToSpeech textSelector=".step2" />
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+              <div className="vl">
+                <TextToSpeech textSelector=".vl" />
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                   View Location:
                 </h2>
                 <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">

@@ -296,7 +296,7 @@ const purchase = () => {
             <div className="content-container max-w-7xl w-full px-4 lg:px-4  text-justify">
                <div className="sgp pt-5">
                 <TextToSpeech textSelector=".sgp" />
-                <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat">
+                <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10">
                   Starting Guide for Purchase Order:
                 </h2>
             
@@ -323,7 +323,7 @@ const purchase = () => {
               <br />
                 <div className="s1 pt-5">
                               <TextToSpeech textSelector=".s1" />
-              <div className="flex items-center pt-5 space-x-4">
+              <div className="flex items-center space-x-4">
                 <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 1
                 </h2>
@@ -331,7 +331,7 @@ const purchase = () => {
               </div></div>
                 <div className="apo pt-5">
                               <TextToSpeech textSelector=".apo" />
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                 Add Purchase Order:
               </h2>
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">

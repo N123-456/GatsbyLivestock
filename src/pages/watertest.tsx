@@ -85,12 +85,12 @@ const watertest = () => {
         <div>
           <div className="flex flex-col justify-center">
             <div className="content-container max-w-7xl w-full px-4 lg:px-4  text-justify">
-              <div className="flex items-center pt-5 space-x-1">
-                <TextToSpeech textSelector=".content-container" />
-                <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat">
+                   <div className="acu pt-5">
+                             <TextToSpeech textSelector=".acu" />
+                <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10">
                   Starting Guide for Water Test:
                 </h2>
-              </div>
+             
 
               <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10 pt-4">
                 A water test checks the quality of water used on the farm,
@@ -106,7 +106,7 @@ const watertest = () => {
                 When a water test is added, a transaction is created against
                 that soil test. That can be viewed in the financial tab in
                 general ledger table.
-              </p>
+              </p></div>
               <div className="pl-13 pt-8 flex justify-center">
                 {WT && (
                   <GatsbyImage
@@ -116,14 +116,17 @@ const watertest = () => {
                   />
                 )}
               </div>
-
-              <div className="flex items-center pt-5 space-x-4">
+      <div className="s1 pt-5">
+                <TextToSpeech textSelector=".s1" />
+              <div className="flex items-center space-x-4">
                 <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 1
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
-              </div>
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+              </div></div>
+                    <div className="aw pt-5">
+                              <TextToSpeech textSelector=".aw" />
+              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                 Add Water Test:
               </h2>
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -221,7 +224,7 @@ const watertest = () => {
                   </li>
                   <li>Click on submit button.</li>
                   <li>Water test will be added successfully.</li>
-                </ul>
+                </ul></div></div>
                 <div className="pl-13 pt-8 flex justify-center">
                   {AW3 && (
                     <GatsbyImage
@@ -231,13 +234,17 @@ const watertest = () => {
                     />
                   )}
                 </div>
-                <div className="flex items-center pt-5 space-x-4">
+                      <div className="s2 pt-5">
+                                <TextToSpeech textSelector=".s2" />
+                <div className="flex items-center  space-x-4">
                   <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                     Step 2
                   </h2>
                   <div className="flex-1 h-px bg-primary-line"></div>
-                </div>
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+                </div></div>
+                      <div className="swt pt-5">
+                                <TextToSpeech textSelector=".swt" />
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                   Search Water Test:
                 </h2>
                 <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -255,7 +262,7 @@ const watertest = () => {
                   <p>
                     Then click on the Search button. Also, you can click on the
                     refresh button to refresh the data.
-                  </p>
+                  </p></div></div>
                   <br />
                   <div className="pl-13 pt-8 flex justify-center">
                     {SW && (
@@ -266,13 +273,17 @@ const watertest = () => {
                       />
                     )}
                   </div>
-                  <div className="flex items-center pt-5 space-x-4">
+                        <div className="s3 pt-5">
+                                  <TextToSpeech textSelector=".s3" />
+                  <div className="flex items-center space-x-4">
                     <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                       Step 3
                     </h2>
                     <div className="flex-1 h-px bg-primary-line"></div>
-                  </div>
-                  <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+                  </div></div>
+                        <div className="ewt pt-5">
+                                  <TextToSpeech textSelector=".ewt" />
+                  <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                     Edit Water Test:
                   </h2>
                   <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -293,14 +304,18 @@ const watertest = () => {
                         Water test details will be edited/updated successfully.
                       </li>
                     </ul>
-                  </div>
-                  <div className="flex items-center pt-5 space-x-4">
+                  </div></div>
+                        <div className="s4 pt-5">
+                                  <TextToSpeech textSelector=".s4" />
+                  <div className="flex items-center space-x-4">
                     <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                       Step 4
                     </h2>
                     <div className="flex-1 h-px bg-primary-line"></div>
-                  </div>
-                  <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+                  </div></div>
+                        <div className="dwt pt-5">
+                                  <TextToSpeech textSelector=".dwt" />
+                  <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                     Delete Water Test:
                   </h2>
                   <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -319,7 +334,7 @@ const watertest = () => {
                       <li>Click on delete button.</li>
                       <li>water test will be deleted successfully.</li>
                     </ul>
-                  </div>
+                  </div></div>
                   <div className="pl-13 pt-8 flex justify-center">
                     {DW && (
                       <GatsbyImage
@@ -329,13 +344,17 @@ const watertest = () => {
                       />
                     )}
                   </div>
-                  <div className="flex items-center pt-5 space-x-4">
+                        <div className="s5 pt-5">
+                                  <TextToSpeech textSelector=".s5" />
+                  <div className="flex items-center space-x-4">
                     <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                       Step 5
                     </h2>
                     <div className="flex-1 h-px bg-primary-line"></div>
-                  </div>
-                  <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+                  </div></div>
+                        <div className="vwt pt-5">
+                                  <TextToSpeech textSelector=".vwt" />
+                  <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                     View water Test:
                   </h2>
                   <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -348,7 +367,7 @@ const watertest = () => {
                       <li>water Test details page will open.</li>
                       <li>You can print the details of the water test.</li>
                     </ul>
-                  </div>
+                  </div></div>
                   <div className="pl-13 pt-8 flex justify-center">
                     {VW && (
                       <GatsbyImage
@@ -370,8 +389,8 @@ const watertest = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+      
+      
       </PrivateRoute>
     </AppLayout>
   );

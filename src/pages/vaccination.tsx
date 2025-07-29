@@ -38,7 +38,7 @@ const vaccination = () => {
             <div className="content-container max-w-7xl w-full px-4 lg:px-4  text-justify">
                    <div className="acu pt-5">
                 <TextToSpeech textSelector=".acu" />
-                <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat">
+                <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10">
                   Vaccination Centre:
                 </h2>
              

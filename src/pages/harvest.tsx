@@ -74,7 +74,7 @@ const harvest = () => {
             <div className=" max-w-7xl w-full px-4 lg:px-4 text-justify">
               <div className="harvest pt-5">
                                                       <TextToSpeech textSelector=".harvest" />
-                <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat">
+                <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10">
                   Starting Guide for Harvest:
                 </h2>
              
