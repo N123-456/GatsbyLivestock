@@ -5,6 +5,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import PrivateRoute from "../components/Privateroute/PrivateRoute";
 import { isLoggedIn } from "../utils/auth";
 import TextToSpeech from "../components/TextToSpeech";
+import DarkModeToggle from "../components/DarkModeToggle/DarkModeToggle";
 
 const fieldinspection = () => {
   // const [isCheckingAuth, setIsCheckingAuth] = useState(true);
@@ -71,16 +72,25 @@ const fieldinspection = () => {
       <PrivateRoute>
         <div>
           <div className="flex flex-col justify-center">
-            <div className=" max-w-7xl w-full px-4 lg:px-4  text-justify">
-               <div className="fi pt-5">
-                              <TextToSpeech textSelector=".fi" />
-                
-                <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10">
-                  Starting Guide for Field Inspection:
-                </h2>
-             
+            <div className="acu max-w-7xl w-full px-4 lg:px-4  text-justify">
+             <div className="flex items-center pt-5">
+                             <div className="hidden lg:block">
+                               <TextToSpeech textSelector=".acu" />
+                             </div>
+                             <h2 className="text-primary-activelink font-semibold text-[30px] font-montserrat ">
+                               Starting Guide for Field Inspection:
+                             </h2>
+                           </div>
+                           <div className="flex items-center pt-5">
+                             <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                               Introduction
+                             </h2>
+                             <div className=" lg:hidden">
+                               <TextToSpeech textSelector=".acu" />
+                             </div>
+                           </div>
 
-              <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10 pt-4">
+              <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10">
                 The Field Inspection is used to monitor and evaluate the
                 condition of crops and fields during the growing process. It
                 involves checking the health of plants, identifying pests,
@@ -93,7 +103,8 @@ const fieldinspection = () => {
                 issues early and ensure better productivity and farm management.
                 A field inspection is conducted separately against a specific
                 crop.
-              </p></div>
+              </p>
+
               <div className="pl-13 pt-8 flex justify-center">
                 {FI && (
                   <GatsbyImage
@@ -105,168 +116,176 @@ const fieldinspection = () => {
               </div>
               <br />
               <br />
-               <div className="step1 pt-5">
-                              <TextToSpeech textSelector=".step1" />
-              <div className="flex items-center space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
-                  Step 1
-                </h2>
-                <div className="flex-1 h-px bg-primary-line"></div>
-              </div></div>
-               <div className="afi pt-5">
+              <div className="step1 pt-5">
+                <TextToSpeech textSelector=".step1" />
+                <div className="flex items-center space-x-4">
+                  <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                    Step 1
+                  </h2>
+                  <div className="flex-1 h-px bg-primary-line"></div>
+                </div>
+              </div>
+              <div className="afi pt-5">
                 <TextToSpeech textSelector=".afi" />
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
-                Add Field Inspection:
-              </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
-                <p>For adding Field Inspection:</p>
-                <br />
-                Click on{" "}
-                <span className="text-primary-activelink font-bold">
-                  "Planting"
-                </span>{" "}
-                tab.
-                <br />
-                <p>
-                  Click on three dots against the crop you want to add field
-                  inspection data.
-                </p>
-                <p>Choose field inspection from the options.</p>
-                <p>
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                  Add Field Inspection:
+                </h2>
+                <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+                  <p>For adding Field Inspection:</p>
+                  <br />
                   Click on{" "}
                   <span className="text-primary-activelink font-bold">
-                    “Add Field Inspection”
+                    "Planting"
                   </span>{" "}
-                  button.
-                </p>
-                <p>Enter the required details as follows:</p>
-                <br />
-                <ul>
-                  <li>
-                    <span className="text-primary-pheading font-semibold">
-                      Field Inspection Details
-                    </span>
-                    : When was the field inspection performed, who was the field
-                    scout, why the field inspection was conducted, how much cost
-                    was incurred on the field inspection, transaction details
-                    like head of accounts, transaction id/ cheque no in case
-                    head of accounts is bank, who was the customer.
-                  </li>
-                  <li>
-                    <span className="text-primary-pheading font-semibold">
-                      Plant Health Levels
-                    </span>
-                    : How much has the pest damaged the crop (low, high), is the
-                    crop diseased (infested, highly infested, low), and how much
-                    weeds are there in the crop (severe, less or none).
-                  </li>
-                  <li>
-                    <span className="text-primary-pheading font-semibold">
-                      Disaster Level
-                    </span>
-                    : Intensity of heat wave (Severe, Moderate, Minor),
-                    intensity of rainfall (Severe, Moderate, Minor), effect of
-                    wind on crop (Severe, Moderate, Minor), smog density
-                    (Severe, Moderate, Minor), hailstorm intensity (Severe,
-                    Moderate, Minor), and frost condition (Severe, Moderate,
-                    Minor).
-                  </li>
+                  tab.
                   <br />
-                  <div className="pl-13 pt-8 flex justify-center">
-                    {AFI1 && (
-                      <GatsbyImage
-                        image={AFI1}
-                        alt="Startups illustration"
-                        className="bg-white w-[1000.58px] "
-                      />
-                    )}
-                  </div>
+                  <p>
+                    Click on three dots against the crop you want to add field
+                    inspection data.
+                  </p>
+                  <p>Choose field inspection from the options.</p>
+                  <p>
+                    Click on{" "}
+                    <span className="text-primary-activelink font-bold">
+                      “Add Field Inspection”
+                    </span>{" "}
+                    button.
+                  </p>
+                  <p>Enter the required details as follows:</p>
                   <br />
-                  <li>
-                    Optionally. You can add description, can mark area where the
-                    scouting took place and can also add images taken during
-                    field inspection.
-                  </li>
-                  <div className="pl-13 pt-8 flex justify-center">
-                    {AFI2 && (
-                      <GatsbyImage
-                        image={AFI2}
-                        alt="Startups illustration"
-                        className="bg-white w-[1000.58px] "
-                      />
-                    )}
-                  </div>
+                  <ul>
+                    <li>
+                      <span className="text-primary-pheading font-semibold">
+                        Field Inspection Details
+                      </span>
+                      : When was the field inspection performed, who was the
+                      field scout, why the field inspection was conducted, how
+                      much cost was incurred on the field inspection,
+                      transaction details like head of accounts, transaction id/
+                      cheque no in case head of accounts is bank, who was the
+                      customer.
+                    </li>
+                    <li>
+                      <span className="text-primary-pheading font-semibold">
+                        Plant Health Levels
+                      </span>
+                      : How much has the pest damaged the crop (low, high), is
+                      the crop diseased (infested, highly infested, low), and
+                      how much weeds are there in the crop (severe, less or
+                      none).
+                    </li>
+                    <li>
+                      <span className="text-primary-pheading font-semibold">
+                        Disaster Level
+                      </span>
+                      : Intensity of heat wave (Severe, Moderate, Minor),
+                      intensity of rainfall (Severe, Moderate, Minor), effect of
+                      wind on crop (Severe, Moderate, Minor), smog density
+                      (Severe, Moderate, Minor), hailstorm intensity (Severe,
+                      Moderate, Minor), and frost condition (Severe, Moderate,
+                      Minor).
+                    </li>
+                    <br />
+                    <div className="pl-13 pt-8 flex justify-center">
+                      {AFI1 && (
+                        <GatsbyImage
+                          image={AFI1}
+                          alt="Startups illustration"
+                          className="bg-white w-[1000.58px] "
+                        />
+                      )}
+                    </div>
+                    <br />
+                    <li>
+                      Optionally. You can add description, can mark area where
+                      the scouting took place and can also add images taken
+                      during field inspection.
+                    </li>
+                    <div className="pl-13 pt-8 flex justify-center">
+                      {AFI2 && (
+                        <GatsbyImage
+                          image={AFI2}
+                          alt="Startups illustration"
+                          className="bg-white w-[1000.58px] "
+                        />
+                      )}
+                    </div>
+                    <br />
+                    <br />
+                  </ul>
+                  <p>Click on the submit button.</p>
+                  <p>Field inspection will be added successfully.</p>
+                  <p>
+                    A transaction will created as expense was incurred for
+                    carrying out field inspection.
+                  </p>
                   <br />
-                  <br />
-                </ul>
-                <p>Click on the submit button.</p>
-                <p>Field inspection will be added successfully.</p>
-                <p>
-                  A transaction will created as expense was incurred for
-                  carrying out field inspection.
-                </p>
-                <br />
-              </div></div>
-               <div className="step2 pt-5">
-                              <TextToSpeech textSelector=".step2" />
-              <div className="flex items-center space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
-                  Step 2
+                </div>
+              </div>
+              <div className="step2 pt-5">
+                <TextToSpeech textSelector=".step2" />
+                <div className="flex items-center space-x-4">
+                  <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                    Step 2
+                  </h2>
+                  <div className="flex-1 h-px bg-primary-line"></div>
+                </div>
+              </div>
+              <div className="sfi pt-5">
+                <TextToSpeech textSelector=".sfi" />
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                  Search Field Inspection:
                 </h2>
-                <div className="flex-1 h-px bg-primary-line"></div>
-              </div></div>
-               <div className="sfi pt-5">
-                              <TextToSpeech textSelector=".sfi" />
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
-                Search Field Inspection:
-              </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
-                You can search the field inspection from the list of field
-                inspection of locations present in the system. You can search
-                based on either:
-                <br />
-                <ul>
-                  <li>
-                    <span className="text-primary-pheading font-semibold">
-                      Field Scout Name:
-                    </span>{" "}
-                    You can search which field scout carried out which field
-                    inspection.
-                  </li>{" "}
-                  <li>
-                    <span className="text-primary-pheading font-semibold">
-                      Date Range:
-                    </span>{" "}
-                    You can search by specifying date range that how many field
-                    inspections were held during a specific date range.
-                  </li>
-                </ul>
-                <br />
-                <p>
-                  Then click on the Search button. Also, you can click on the
-                  refresh button to refresh the data.
-                </p>
-                <div className="pl-13 pt-8 flex justify-center">
-                  {SFI && (
-                    <GatsbyImage
-                      image={SFI}
-                      alt="Startups illustration"
-                      className="bg-white w-[1000.58px] "
-                    />
-                  )}
-                </div></div></div>
-                <br />
-                <br />
-                 <div className="step3 pt-5">
-                                <TextToSpeech textSelector=".step3" />
+                <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+                  You can search the field inspection from the list of field
+                  inspection of locations present in the system. You can search
+                  based on either:
+                  <br />
+                  <ul>
+                    <li>
+                      <span className="text-primary-pheading font-semibold">
+                        Field Scout Name:
+                      </span>{" "}
+                      You can search which field scout carried out which field
+                      inspection.
+                    </li>{" "}
+                    <li>
+                      <span className="text-primary-pheading font-semibold">
+                        Date Range:
+                      </span>{" "}
+                      You can search by specifying date range that how many
+                      field inspections were held during a specific date range.
+                    </li>
+                  </ul>
+                  <br />
+                  <p>
+                    Then click on the Search button. Also, you can click on the
+                    refresh button to refresh the data.
+                  </p>
+                  <div className="pl-13 pt-8 flex justify-center">
+                    {SFI && (
+                      <GatsbyImage
+                        image={SFI}
+                        alt="Startups illustration"
+                        className="bg-white w-[1000.58px] "
+                      />
+                    )}
+                  </div>
+                </div>
+              </div>
+              <br />
+              <br />
+              <div className="step3 pt-5">
+                <TextToSpeech textSelector=".step3" />
                 <div className="flex items-center space-x-4">
                   <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                     Step 3
                   </h2>
                   <div className="flex-1 h-px bg-primary-line"></div>
-                </div></div>
-                 <div className="efi pt-5">
-                                <TextToSpeech textSelector=".efi" />
+                </div>
+              </div>
+              <div className="efi pt-5">
+                <TextToSpeech textSelector=".efi" />
                 <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                   Edit Field Inspection:
                 </h2>
@@ -289,17 +308,19 @@ const fieldinspection = () => {
                       successfully.
                     </li>
                   </ul>
-                </div></div>
-                 <div className="step4 pt-5">
-                                <TextToSpeech textSelector=".step4" />
+                </div>
+              </div>
+              <div className="step4 pt-5">
+                <TextToSpeech textSelector=".step4" />
                 <div className="flex items-center space-x-4">
                   <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                     Step 4
                   </h2>
                   <div className="flex-1 h-px bg-primary-line"></div>
-                </div></div>
-                 <div className="dfi pt-5">
-                                <TextToSpeech textSelector=".dfi" />
+                </div>
+              </div>
+              <div className="dfi pt-5">
+                <TextToSpeech textSelector=".dfi" />
                 <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                   Delete Field Inspection:
                 </h2>
@@ -320,28 +341,30 @@ const fieldinspection = () => {
                     <li>Click on delete button.</li>
                     <li>Field Inspection will be deleted successfully.</li>
                   </ul>
-                </div></div>
-                <div className="pl-13 pt-8 flex justify-center">
-                  {DFI && (
-                    <GatsbyImage
-                      image={DFI}
-                      alt="Startups illustration"
-                      className="bg-white w-[1000.58px] "
-                    />
-                  )}
                 </div>
-                <br />
-                <br />
-                 <div className="step5 pt-5">
-                                <TextToSpeech textSelector=".step5" />
+              </div>
+              <div className="pl-13 pt-8 flex justify-center">
+                {DFI && (
+                  <GatsbyImage
+                    image={DFI}
+                    alt="Startups illustration"
+                    className="bg-white w-[1000.58px] "
+                  />
+                )}
+              </div>
+              <br />
+              <br />
+              <div className="step5 pt-5">
+                <TextToSpeech textSelector=".step5" />
                 <div className="flex items-center space-x-4">
                   <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                     Step 5
                   </h2>
                   <div className="flex-1 h-px bg-primary-line"></div>
-                </div></div>
-                 <div className="vfi pt-5">
-                                <TextToSpeech textSelector=".vfi" />
+                </div>
+              </div>
+              <div className="vfi pt-5">
+                <TextToSpeech textSelector=".vfi" />
                 <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                   View Field Inspection:
                 </h2>
@@ -360,29 +383,29 @@ const fieldinspection = () => {
                       the field inspection.
                     </li>
                   </ul>
-                </div></div>
-                <div className="pl-13 pt-8 flex justify-center">
-                  {VFI && (
-                    <GatsbyImage
-                      image={VFI}
-                      alt="Startups illustration"
-                      className="bg-white w-[1000.58px] "
-                    />
-                  )}
                 </div>
-                <div className="pl-13 pt-8 flex justify-center">
-                  {VFI1 && (
-                    <GatsbyImage
-                      image={VFI1}
-                      alt="Startups illustration"
-                      className="bg-white w-[1000.58px] "
-                    />
-                  )}
-                </div>
+              </div>
+              <div className="pl-13 pt-8 flex justify-center">
+                {VFI && (
+                  <GatsbyImage
+                    image={VFI}
+                    alt="Startups illustration"
+                    className="bg-white w-[1000.58px] "
+                  />
+                )}
+              </div>
+              <div className="pl-13 pt-8 flex justify-center">
+                {VFI1 && (
+                  <GatsbyImage
+                    image={VFI1}
+                    alt="Startups illustration"
+                    className="bg-white w-[1000.58px] "
+                  />
+                )}
               </div>
             </div>
           </div>
-       
+        </div>
       </PrivateRoute>
     </AppLayout>
   );

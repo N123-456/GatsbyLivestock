@@ -89,12 +89,23 @@ const planting = () => {
       <PrivateRoute>
         <div>
           <div className="flex flex-col justify-center">
-            <div className="content-container max-w-7xl w-full px-4 lg:px-4  text-justify">
-                <div className="sm pt-5">
-                              <TextToSpeech textSelector=".sm" />
-                <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10">
-                  Starting Guide for Planting:
-                </h2>
+            <div className="acu max-w-7xl w-full px-4 lg:px-4  text-justify">
+         <div className="flex items-center pt-5">
+                         <div className="hidden lg:block">
+                           <TextToSpeech textSelector=".acu" />
+                         </div>
+                         <h2 className="text-primary-activelink font-semibold text-[30px] font-montserrat ">
+                           Starting Guide for Planting:
+                         </h2>
+                       </div>
+                       <div className="flex items-center pt-5">
+                         <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                           Introduction
+                         </h2>
+                         <div className=" lg:hidden">
+                           <TextToSpeech textSelector=".acu" />
+                         </div>
+                       </div>
              
               <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10 ">
                 In the planting process, you enter the details of the crops to
@@ -112,7 +123,7 @@ const planting = () => {
                 Furthermore, field inspection details can also be added. The
                 details of these will be found in the later sections of the
                 document.
-              </p></div>
+              </p>
               <div className="pl-13 pt-8 flex justify-center">
                 {planting && (
                   <GatsbyImage
@@ -130,7 +141,8 @@ const planting = () => {
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div></div>
-                
+                  <div className="ap pt-5">
+                              <TextToSpeech textSelector=".ap" />
               <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                 Add Planting:
               </h2>
@@ -220,6 +232,10 @@ const planting = () => {
                   )}
                 </div>
                 <br />
+</div><div className="sd pt-5">
+                             <TextToSpeech textSelector=".sd" />
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+
                 <p className="font-semibold font-primary-pheading">
                   Seed Details:
                 </p>
@@ -241,7 +257,7 @@ const planting = () => {
                   <li>
                     Enter the origin or source of the seeds (country or region).
                   </li>
-                </ul>
+                </ul></div></div>
                 <div className="pl-13 pt-8 flex justify-center">
                   {AP2 && (
                     <GatsbyImage
@@ -252,6 +268,9 @@ const planting = () => {
                   )}
                 </div>
                 <br />
+                <div className="pd pt-5">
+                                             <TextToSpeech textSelector=".pd" />
+                                              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
                 <p className="font-semibold font-primary-pheading ">
                   Planting Details.
                 </p>
@@ -309,7 +328,7 @@ const planting = () => {
                       You can add, edit, delete, search and view the tasks.
                     </li>
                   </ul>
-                </ul>
+                </ul></div></div>
                 <div className="pl-13 pt-8 flex justify-center">
                   {PD && (
                     <GatsbyImage
@@ -321,6 +340,9 @@ const planting = () => {
                 </div>
                 <br />
                 <br />
+                  <div className="eh pt-5">
+                                             <TextToSpeech textSelector=".eh" />
+                 <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
                 <p className="font-semibold">Estimated Harvest Details:</p>
                 <ul className="font-normal text-[18px] font-montserrat list-disc">
                   <li>What is the expected date to harvest the crop.</li>
@@ -352,7 +374,7 @@ const planting = () => {
                   </li>
                   <li>Click on submit button.</li>
                   <li>Crop planting will be added successfully.</li>
-                </ul>
+                </ul></div></div>
                 <div className="pl-13 pt-8 flex justify-center">
                   {HD && (
                     <GatsbyImage
@@ -362,12 +384,16 @@ const planting = () => {
                     />
                   )}
                 </div>
+                  <div className="s2 pt-5">
+                                             <TextToSpeech textSelector=".s2" />
                 <div className="flex items-center space-x-4">
                   <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                     Step 2
                   </h2>
                   <div className="flex-1 h-px bg-primary-line"></div>
-                </div>
+                </div></div>
+                  <div className="sp pt-5">
+                                             <TextToSpeech textSelector=".sp" />
                 <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                   Search Planting:
                 </h2>
@@ -401,7 +427,7 @@ const planting = () => {
                   <p>
                     Then click on the Search button. Also, you can click on the
                     refresh button to refresh the data.
-                  </p>
+                  </p></div>
                   <div className="pl-13 pt-8 flex justify-center">
                     {SP && (
                       <GatsbyImage
@@ -411,12 +437,16 @@ const planting = () => {
                       />
                     )}
                   </div>
+                    <div className="s3 pt-5">
+                                               <TextToSpeech textSelector=".s3" />
                   <div className="flex items-center space-x-4">
                     <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                       Step 3
                     </h2>
                     <div className="flex-1 h-px bg-primary-line"></div>
-                  </div>
+                  </div></div>
+                    <div className="ep pt-5">
+                                               <TextToSpeech textSelector=".ep" />
                   <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                     Edit Planting:
                   </h2>
@@ -438,13 +468,17 @@ const planting = () => {
                         Planting details will be edited/updated successfully.
                       </li>
                     </ul>
-                  </div>
+                  </div></div>
+                    <div className="s4 pt-5">
+                                               <TextToSpeech textSelector=".s4" />
                   <div className="flex items-center space-x-4">
                     <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                       Step 4
                     </h2>
                     <div className="flex-1 h-px bg-primary-line"></div>
-                  </div>
+                  </div></div>
+                    <div className="dp pt-5">
+                                               <TextToSpeech textSelector=".dp" />
                   <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                     Delete Planting:
                   </h2>
@@ -465,7 +499,7 @@ const planting = () => {
                       <li>Click on delete button.</li>
                       <li>Crop will be deleted successfully.</li>
                     </ul>
-                  </div>
+                  </div></div>
                   <div className="pl-13 pt-8 flex justify-center">
                     {DP && (
                       <GatsbyImage
@@ -475,12 +509,16 @@ const planting = () => {
                       />
                     )}
                   </div>
+                    <div className="s5 pt-5">
+                                               <TextToSpeech textSelector=".s5" />
                   <div className="flex items-center space-x-4">
                     <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                       Step 5
                     </h2>
                     <div className="flex-1 h-px bg-primary-line"></div>
-                  </div>
+                  </div></div>
+                    <div className="vp pt-5">
+                                               <TextToSpeech textSelector=".vp" />
                   <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                     View Planting:
                   </h2>
@@ -495,7 +533,7 @@ const planting = () => {
                       <li>Crop details page will open.</li>
                       <li>You can print the details of the Planting.</li>
                     </ul>
-                  </div>
+                  </div></div>
                   <div className="pl-13 pt-8 flex justify-center">
                     {VP && (
                       <GatsbyImage

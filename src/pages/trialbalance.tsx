@@ -36,14 +36,25 @@ const trialbalance = () => {
         <div>
           <div className="flex flex-col justify-center">
             <div className="content-container max-w-7xl w-full px-4 lg:px-4  text-justify">
-                <div className="acu pt-5">
-                <TextToSpeech textSelector=".acu" />
-                <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10">
-                  Trial Balance Report:
-                </h2>
+               <div className="flex items-center pt-5">
+                               <div className="hidden lg:block">
+                                 <TextToSpeech textSelector=".acu" />
+                               </div>
+                               <h2 className="text-primary-activelink font-semibold text-[30px] font-montserrat ">
+                                 Trial Balance Report:
+                               </h2>
+                             </div>
+                             <div className="flex items-center pt-5">
+                               <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                                 Introduction
+                               </h2>
+                               <div className="lg:hidden">
+                                 <TextToSpeech textSelector=".acu" />
+                               </div>
+                             </div>
            
 
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10 pt-5">
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10 ">
                 The Trial Balance is a financial report that lists all the
                 accounts in the general ledger along with their respective debit
                 and credit balances at a specific point in time. Its primary
@@ -58,7 +69,7 @@ const trialbalance = () => {
                 mathematical accuracy of the financial records.
                 <br />
                 <br />
-              </div></div>
+              
               <div className="pl-13 pt-8 flex justify-center">
                 {tbr && (
                   <GatsbyImage
@@ -70,7 +81,7 @@ const trialbalance = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div></div>
       </PrivateRoute>
     </AppLayout>
   );

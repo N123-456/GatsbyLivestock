@@ -54,22 +54,31 @@ const maintenance = () => {
       <PrivateRoute>
         <div>
           <div className="flex flex-col justify-center">
-            <div className="content-container max-w-7xl w-full px-4 lg:px-4  text-justify">
-              <div className="sm pt-5">
-                <TextToSpeech textSelector=".sm" />
-                <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10">
-                  Starting Guide with Machinery Usage Tracking:
-                </h2>
-              </div>
-              <div className="s1 pt-5">
-                <TextToSpeech textSelector=".s1" />
-                <div className="flex items-center space-x-4">
+            <div className="acu max-w-7xl w-full px-4 lg:px-4  text-justify">
+              <div className="flex items-center pt-5">
+                              <div className="hidden lg:block">
+                                <TextToSpeech textSelector=".acu" />
+                              </div>
+                              <h2 className="text-primary-activelink font-semibold text-[30px] font-montserrat ">
+                                Starting Guide with Machinery Usage Tracking:
+                              </h2>
+                            </div>
+                            <div className="flex items-center pt-5">
+                              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                                Introduction
+                              </h2>
+                              <div className=" lg:hidden">
+                                <TextToSpeech textSelector=".acu" />
+                              </div>
+                            </div>
+              
+                <div className="flex items-center space-x-4 pt-5">
                   <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                     Step 1
                   </h2>
                   <div className="flex-1 h-px bg-primary-line"></div>
                 </div>
-              </div>
+             
               <div className="adu pt-5">
                 <TextToSpeech textSelector=".adu" />
                 <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">

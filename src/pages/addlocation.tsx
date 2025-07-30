@@ -6,6 +6,7 @@ import PrivateRoute from "../components/Privateroute/PrivateRoute";
 import { isLoggedIn } from "../utils/auth";
 import { SEO } from "../components/SEO";
 import TextToSpeech from "../components/TextToSpeech";
+import DarkModeToggle from "./../components/DarkModeToggle/DarkModeToggle";
 
 const addlocation = () => {
   // const [isCheckingAuth, setIsCheckingAuth] = useState(true);
@@ -91,27 +92,36 @@ const addlocation = () => {
       <PrivateRoute>
         <div>
           <div className="flex flex-col justify-center">
-            <div className="content-container max-w-7xl w-full px-4 lg:px-4 text-justify">
-              <div className="acu pt-5">
-                <TextToSpeech textSelector=".acu" />
-                <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10">
+            <div className="acu max-w-7xl w-full px-4 lg:px-4 text-justify">
+              <div className="flex items-center pt-5">
+                <div className="hidden lg:block">
+                  <TextToSpeech textSelector=".acu" />
+                </div>
+                <h2 className="text-primary-activelink font-semibold text-[30px] font-montserrat ">
                   Starting Guide for Farm Locations:
                 </h2>
-
-                <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:pl-10 pt-5 ">
-                  Farm Locations are the locations that are owned by you or
-                  where you can plant your crops. So, for that you need to Add
-                  the location first. After that, on that particular location
-                  you can add the details of your farm. The locations can be of
-                  any type like fields, building etc. You can easily manage all
-                  your farm locations all at one place. For adding planting,
-                  warehouse and tasks related to land you first need to have a
-                  farm location. The location is an asset of the farmer. When a
-                  location is added, a transaction is created against that
-                  location. That can be viewed in the financial tab in general
-                  ledger table.
-                </p>
               </div>
+              <div className="flex items-center pt-5">
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                  Introduction
+                </h2>
+                <div className=" lg:hidden">
+                  <TextToSpeech textSelector=".acu" />
+                </div>
+              </div>
+              <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:pl-10 ">
+                Farm Locations are the locations that are owned by you or where
+                you can plant your crops. So, for that you need to Add the
+                location first. After that, on that particular location you can
+                add the details of your farm. The locations can be of any type
+                like fields, building etc. You can easily manage all your farm
+                locations all at one place. For adding planting, warehouse and
+                tasks related to land you first need to have a farm location.
+                The location is an asset of the farmer. When a location is
+                added, a transaction is created against that location. That can
+                be viewed in the financial tab in general ledger table.
+              </p>
+
               <div className="pl-13 pt-8 flex justify-center">
                 {fl && (
                   <GatsbyImage
@@ -123,19 +133,17 @@ const addlocation = () => {
               </div>
               <br />
               <br />
-              <div className="step2 pt-5">
-                <TextToSpeech textSelector=".step2" />
-                <div className="flex items-center space-x-2">
+              
+                <div className="flex items-center pt-5 space-x-2">
                   <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                     Step 1
                   </h2>
                   <div className="flex-1 h-px bg-primary-line"></div>
                 </div>
-              </div>
+            
 
-              <div className="step2 pt-5">
-                <TextToSpeech textSelector=".step2" />
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+              
+                <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
                   Add Location:
                 </h2>
                 <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -238,7 +246,7 @@ const addlocation = () => {
                     </li>
                   </ul>
                 </div>
-              </div>
+             
               <div className="pl-13 pt-8 flex justify-center">
                 {AL && (
                   <GatsbyImage
@@ -250,9 +258,8 @@ const addlocation = () => {
               </div>
               <br />
               <br />
-              <div className="ri pt-5">
-                <TextToSpeech textSelector=".ri" />
-                <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+            
+                <div className="text-primary-paragraph2 pt-5 text-[18px] font-montserrat font-normal lg:px-10">
                   <p className="text-primary-paragraph2 font-bold">
                     Enter the required information.
                   </p>
@@ -274,11 +281,10 @@ const addlocation = () => {
                     )}
                   </div>
                 </div>
-              </div>
+             
               <br />
               <br />
-              <div className="ii pt-5">
-                <TextToSpeech textSelector=".ii" />
+             
                 <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
                   <p className="text-primary-paragraph2 font-bold">
                     Enter the additional information including:
@@ -324,7 +330,7 @@ const addlocation = () => {
                     <li>By Tube Wells</li>
                     <li>By Dug Wells</li>
                   </ul>
-                </div>
+                
               </div>
               <div className="pl-13 pt-8 flex justify-center">
                 {LI && (

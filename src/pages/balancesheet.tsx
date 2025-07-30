@@ -5,6 +5,7 @@ import { AppLayout } from "../components/AppShell/AppLayout";
 import PrivateRoute from "../components/Privateroute/PrivateRoute";
 import { isLoggedIn } from "../utils/auth";
 import TextToSpeech from "../components/TextToSpeech";
+import DarkModeToggle from "../components/DarkModeToggle/DarkModeToggle";
 
 const balancesheet = () => {
   // const [isCheckingAuth, setIsCheckingAuth] = useState(true);
@@ -35,14 +36,25 @@ const balancesheet = () => {
       <PrivateRoute>
         <div>
           <div className="flex flex-col justify-center">
-            <div className="content-container max-w-7xl w-full px-4 lg:px-4  text-justify">
-              <div className="step2 pt-5">
-                <TextToSpeech textSelector=".step2" />
-                <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10">
-                  Balance Sheet:
-                </h2>
+            <div className="acu max-w-7xl w-full px-4 lg:px-4  text-justify">
+              <div className="flex items-center pt-5">
+                              <div className="hidden lg:block">
+                                <TextToSpeech textSelector=".acu" />
+                              </div>
+                              <h2 className="text-primary-activelink font-semibold text-[30px] font-montserrat ">
+                                Balance Sheet:
+                              </h2>
+                            </div>
+                            <div className="flex items-center pt-5">
+                              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                                Introduction
+                              </h2>
+                              <div className=" lg:hidden">
+                                <TextToSpeech textSelector=".acu" />
+                              </div>
+                            </div>
 
-                <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10 pt-5">
+                <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
                   The Balance Sheet is a critical financial report that provides
                   a snapshot of the farm’s financial position at a specific
                   point in time. It shows the relationship between the farm's
@@ -98,7 +110,7 @@ const balancesheet = () => {
               </div>
             </div>
           </div>
-        </div>
+        
       </PrivateRoute>
     </AppLayout>
   );

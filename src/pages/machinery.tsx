@@ -101,14 +101,25 @@ const machinery = () => {
       <PrivateRoute>
         <div>
           <div className="flex flex-col justify-center">
-            <div className="content-container max-w-7xl w-full px-4  text-justify">
-              <div className="vi pt-5">
-                <TextToSpeech textSelector=".vi" />
-                <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat">
-                  Starting Guide for Machinery:
-                </h2>
+            <div className="acu max-w-7xl w-full px-4  text-justify">
+             <div className="flex items-center pt-5">
+                             <div className="hidden lg:block">
+                               <TextToSpeech textSelector=".acu" />
+                             </div>
+                             <h2 className="text-primary-activelink font-semibold text-[30px] font-montserrat ">
+                               Starting Guide for Machinery:
+                             </h2>
+                           </div>
+                           <div className="flex items-center pt-5">
+                             <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                               Introduction
+                             </h2>
+                             <div className=" lg:hidden">
+                               <TextToSpeech textSelector=".acu" />
+                             </div>
+                           </div>
 
-                <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10 pt-4">
+                <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10">
                   In this Machinery module, you can keep track of the
                   machineries available in your farm. One of your most vital
                   tools is your machinery, which enables you to operate more
@@ -119,7 +130,7 @@ const machinery = () => {
                   simplifies machinery management. You can add, edit, view,
                   search, delete the machinery.
                 </p>
-              </div>
+              
               <div className="pl-13 pt-8 flex justify-center">
                 {M && (
                   <GatsbyImage

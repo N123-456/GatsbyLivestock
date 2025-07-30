@@ -62,77 +62,92 @@ const IndexPage = () => {
       <PrivateRoute>
         <main>
           <div className="flex flex-col justify-center">
-            <div className=" max-w-7xl w-full px-4 lg:px-4  text-justify">
-                     <div className="dashboard pt-5">
-                                                                    <TextToSpeech textSelector=".dashboard" />
-                <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10">
-                  Dashboard
-                </h2>
-            
+            <div className="acu max-w-7xl w-full px-4 lg:px-4  text-justify">
+            <div className="flex items-center pt-5">
+                            <div className="hidden lg:block">
+                              <TextToSpeech textSelector=".acu" />
+                            </div>
+                            <h2 className="text-primary-activelink font-semibold text-[30px] font-montserrat ">
+                             Dashboard:
+                            </h2>
+                          </div>
+                          <div className="flex items-center pt-5">
+                            <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                              Introduction
+                            </h2>
+                            <div className=" lg:hidden">
+                              <TextToSpeech textSelector=".acu" />
+                            </div>
+                          </div>
 
-              <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10 pt-4">
-                After logging into the system, the screen that will be first
-                accessible to you will be the dashboard. The dashboard will
-                provide you an overview of the farm.
-              </p></div>
-       <div className="step1 pt-5">
-                                                      <TextToSpeech textSelector=".step1" />
-              <div className="flex items-center space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10 ">
-                  Step 1
-                </h2>
-                <div className="flex-1 h-px bg-primary-line"></div>
-              </div></div>
-              <div>
-                {" "}
-                       <div className="lo pt-5">
-                                                                      <TextToSpeech textSelector=".lo" />
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
-                  Land Overview
-                </h2>
-                <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:pl-10">
-                  Welcome to the Farm Management System! Designed specifically
-                  for agriculture sector, this system will allow you to track
-                  your crops, manage your expenses, manage your tasks and plan
-                  your resources well. It will make your work easy and assist
-                  you in getting better results. An integrated system for
-                  streamlined farm management. In this user manual, we will show
-                  you how to get started on the system and how to set up your
-                  farm. Let’s get started!
+                <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10">
+                  After logging into the system, the screen that will be first
+                  accessible to you will be the dashboard. The dashboard will
+                  provide you an overview of the farm.
                 </p>
-                <div className="pl-13 pt-8 flex justify-center">
-                  {lanoverview && (
-                    <GatsbyImage
-                      image={lanoverview}
-                      alt="Startups illustration"
-                      className="bg-white w-[1000.58px] "
-                    />
-                  )}
-                </div></div>
+             
+              <div className="step1 pt-5">
+                <TextToSpeech textSelector=".step1" />
+                <div className="flex items-center space-x-4">
+                  <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10 ">
+                    Step 1
+                  </h2>
+                  <div className="flex-1 h-px bg-primary-line"></div>
+                </div>
               </div>
-                     <div className="step2 pt-5">
-                                                                    <TextToSpeech textSelector=".step2" />
-              <div className="flex items-center space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10 ">
-                  Step 2
-                </h2>
-                <div className="flex-1 h-px bg-primary-line"></div>
-              </div></div>
               <div>
                 {" "}
-                       <div className="ce pt-5">
-                                                                      <TextToSpeech textSelector=".ce" />
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10 ">
-                  Cost Estimation:
-                </h2>
-                <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:pl-10">
-                  You will get an insight about your farming business. You can
-                  see how much cost has been incurred and whether you are
-                  gaining profit or are in loss. Also, you can see the graphical
-                  representation for the cost estimates. You can further refine
-                  the cost estimations by filtering them based on your preferred
-                  date range.
-                </p></div>
+                <div className="lo pt-5">
+                  <TextToSpeech textSelector=".lo" />
+                  <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                    Land Overview
+                  </h2>
+                  <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:pl-10">
+                    Welcome to the Farm Management System! Designed specifically
+                    for agriculture sector, this system will allow you to track
+                    your crops, manage your expenses, manage your tasks and plan
+                    your resources well. It will make your work easy and assist
+                    you in getting better results. An integrated system for
+                    streamlined farm management. In this user manual, we will
+                    show you how to get started on the system and how to set up
+                    your farm. Let’s get started!
+                  </p>
+                  <div className="pl-13 pt-8 flex justify-center">
+                    {lanoverview && (
+                      <GatsbyImage
+                        image={lanoverview}
+                        alt="Startups illustration"
+                        className="bg-white w-[1000.58px] "
+                      />
+                    )}
+                  </div>
+                </div>
+              </div>
+              <div className="step2 pt-5">
+                <TextToSpeech textSelector=".step2" />
+                <div className="flex items-center space-x-4">
+                  <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10 ">
+                    Step 2
+                  </h2>
+                  <div className="flex-1 h-px bg-primary-line"></div>
+                </div>
+              </div>
+              <div>
+                {" "}
+                <div className="ce pt-5">
+                  <TextToSpeech textSelector=".ce" />
+                  <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10 ">
+                    Cost Estimation:
+                  </h2>
+                  <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:pl-10">
+                    You will get an insight about your farming business. You can
+                    see how much cost has been incurred and whether you are
+                    gaining profit or are in loss. Also, you can see the
+                    graphical representation for the cost estimates. You can
+                    further refine the cost estimations by filtering them based
+                    on your preferred date range.
+                  </p>
+                </div>
                 <div className="pl-13 pt-8 flex justify-center">
                   {costest && (
                     <GatsbyImage
@@ -143,47 +158,45 @@ const IndexPage = () => {
                   )}
                 </div>
               </div>
-                     <div className="step3 pt-5">
-                                                                    <TextToSpeech textSelector=".step3" />
-              <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
-                  Step 3
-                </h2>
-                <div className="flex-1 h-px bg-primary-line"></div>
-              </div></div>
-        
-                {" "}
-                       <div className="ut pt-5">
-                                                                      <TextToSpeech textSelector=".ut" />
+              <div className="step3 pt-5">
+                <TextToSpeech textSelector=".step3" />
+                <div className="flex items-center pt-5 space-x-4">
+                  <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                    Step 3
+                  </h2>
+                  <div className="flex-1 h-px bg-primary-line"></div>
+                </div>
+              </div>{" "}
+              <div className="ut pt-5">
+                <TextToSpeech textSelector=".ut" />
                 <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                   Upcoming Tasks:
                 </h2>
                 <p className="text-primary-paragraph text-[18px] font-montserrat font-normal  lg:pl-10">
                   In this portion of dashboard, you can see list of top three
                   upcoming tasks to be done along with their due dates.
-                </p></div>
-                <div className="pl-13 pt-8 flex justify-center">
-                  {uptask && (
-                    <GatsbyImage
-                      image={uptask}
-                      alt="Startups illustration"
-                      className="bg-white w-[1000.58px]"
-                    />
-                  )}
-                </div>
-                       <div className="step4 pt-5">
-                                                                      <TextToSpeech textSelector=".step4" />
+                </p>
+              </div>
+              <div className="pl-13 pt-8 flex justify-center">
+                {uptask && (
+                  <GatsbyImage
+                    image={uptask}
+                    alt="Startups illustration"
+                    className="bg-white w-[1000.58px]"
+                  />
+                )}
+              </div>
+              <div className="step4 pt-5">
+                <TextToSpeech textSelector=".step4" />
                 <div className="flex items-center space-x-4">
                   <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                     Step 4
                   </h2>
                   <div className="flex-1 h-px bg-primary-line"></div>
                 </div>
-              </div>
-            
-                {" "}
-                       <div className="menu pt-5">
-                                                                      <TextToSpeech textSelector=".menu" />
+              </div>{" "}
+              <div className="menu pt-5">
+                <TextToSpeech textSelector=".menu" />
                 <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                   Menu:
                 </h2>
@@ -264,19 +277,19 @@ const IndexPage = () => {
                   Navigate through the various possibilities to form your own
                   understanding of the system. The later section of document
                   provides the details of the each of option.
-                </p></div>
-                <div className="pl-13 pt-8 flex justify-center">
-                  {menu && (
-                    <GatsbyImage
-                      image={menu}
-                      alt="Startups illustration"
-                      className="bg-white w-[1000.58px]"
-                    />
-                  )}
-                </div>
+                </p>
+              </div>
+              <div className="pl-13 pt-8 flex justify-center">
+                {menu && (
+                  <GatsbyImage
+                    image={menu}
+                    alt="Startups illustration"
+                    className="bg-white w-[1000.58px]"
+                  />
+                )}
               </div>
             </div>
-        
+          </div>
         </main>
       </PrivateRoute>
     </AppLayout>

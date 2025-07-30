@@ -60,15 +60,26 @@ const harvest = () => {
       <PrivateRoute>
         <div>
           <div className="flex flex-col justify-center ">
-            <div className="content-container max-w-7xl w-full px-4 lg:px-4  text-justify">
-                    <div className="acu pt-5">
-                              <TextToSpeech textSelector=".acu" />
-                <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10">
-                  Starting Guide for Warehouse:
-                </h2>
+            <div className="acu max-w-7xl w-full px-4 lg:px-4  text-justify">
+                 <div className="flex items-center pt-5">
+                                 <div className="hidden lg:block">
+                                   <TextToSpeech textSelector=".acu" />
+                                 </div>
+                                 <h2 className="text-primary-activelink font-semibold text-[30px] font-montserrat ">
+                                   Starting Guide for Warehouse:
+                                 </h2>
+                               </div>
+                               <div className="flex items-center pt-5">
+                                 <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                                   Introduction
+                                 </h2>
+                                 <div className=" lg:hidden">
+                                   <TextToSpeech textSelector=".acu" />
+                                 </div>
+                               </div>
            
 
-              <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10 pt-5">
+              <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10">
                 A warehouse is a storage facility where goods, equipment, or
                 produce are kept safely before use or distribution. It helps
                 organize and manage items efficiently, ensuring they are
@@ -84,7 +95,7 @@ const harvest = () => {
                 location added, add the farm location first. See the user guide
                 for adding farm location. The details are provided in the above
                 part of the document.
-              </p></div>
+              </p>
               <div className="pl-13 pt-8 flex justify-center">
                 {W && (
                   <GatsbyImage

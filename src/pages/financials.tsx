@@ -42,15 +42,25 @@ const contact = () => {
       <PrivateRoute>
         <div>
           <div className="flex flex-col justify-center">
-            <div className="content-container max-w-7xl w-full px-4 lg:px-4  text-justify">
-        <div className="finance pt-5">
-                                        <TextToSpeech textSelector=".finance" />
-                <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10">
+            <div className="acu max-w-7xl w-full px-4 lg:px-4  text-justify">
+              <div className="flex items-center pt-5">
+                <div className="hidden lg:block">
+                  <TextToSpeech textSelector=".acu" />
+                </div>
+                <h2 className="text-primary-activelink font-semibold text-[30px] font-montserrat ">
                   Starting Guide for Financials:
                 </h2>
-             
+              </div>
+              <div className="flex items-center pt-5">
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                  Introduction
+                </h2>
+                <div className=" lg:hidden">
+                  <TextToSpeech textSelector=".acu" />
+                </div>
+              </div>
 
-              <p className=" text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10 pt-4">
+              <p className=" text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
                 The Financial Module in the farm management system is designed
                 to manage and streamline all financial activities related to the
                 farm. It allows users to record, monitor, and analyse financial
@@ -92,7 +102,7 @@ const contact = () => {
                 and maintain the overall financial stability of the farm. This
                 module simplifies financial management and helps users focus on
                 improving productivity and profitability.
-              </p> </div>
+              </p>
               <div className="pl-13 pt-8 flex justify-center">
                 {f && (
                   <GatsbyImage
@@ -105,31 +115,32 @@ const contact = () => {
 
               <br />
               <div className="glr pt-5">
-                                        <TextToSpeech textSelector=".glr" />
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
-                General Ledger Report:
-              </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10 pt-5">
-                <p>
-                  The General Ledger is the central record of all financial
-                  transactions within the farm management system. It acts as the
-                  main accounting document where every transaction related to
-                  the farm is recorded. Each financial entry is categorized into
-                  types, such as income, expenses, assets, liabilities, and
-                  equity. For example, purchases of seeds, soil testing costs,
-                  or revenue from crop sales are all recorded in their
-                  respective accounts within the general ledger.
-                  <br />
-                  <br /> It provides a detailed breakdown of every debit and
-                  credit, ensuring complete transparency and traceability of all
-                  financial activities. The general ledger serves as the
-                  foundation for preparing other financial reports like the
-                  trial balance and balance sheet. Furthermore, we have head of
-                  accounts like cash, bank, inventory, accounts receivable,
-                  accounts payable etc. Against every head of account is a
-                  general ledger report.{" "}
-                </p>
-              </div></div>
+                <TextToSpeech textSelector=".glr" />
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                  General Ledger Report:
+                </h2>
+                <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10 pt-5">
+                  <p>
+                    The General Ledger is the central record of all financial
+                    transactions within the farm management system. It acts as
+                    the main accounting document where every transaction related
+                    to the farm is recorded. Each financial entry is categorized
+                    into types, such as income, expenses, assets, liabilities,
+                    and equity. For example, purchases of seeds, soil testing
+                    costs, or revenue from crop sales are all recorded in their
+                    respective accounts within the general ledger.
+                    <br />
+                    <br /> It provides a detailed breakdown of every debit and
+                    credit, ensuring complete transparency and traceability of
+                    all financial activities. The general ledger serves as the
+                    foundation for preparing other financial reports like the
+                    trial balance and balance sheet. Furthermore, we have head
+                    of accounts like cash, bank, inventory, accounts receivable,
+                    accounts payable etc. Against every head of account is a
+                    general ledger report.{" "}
+                  </p>
+                </div>
+              </div>
               <br />
               <div className="pl-13 pt-8 flex justify-center">
                 {glr && (

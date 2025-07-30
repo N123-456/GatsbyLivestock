@@ -54,14 +54,25 @@ const user = () => {
       <PrivateRoute>
         <div>
           <div className="flex flex-col justify-center">
-            <div className="content-container max-w-7xl w-full px-4 lg:px-4  text-justify">
-              <div className="acu pt-5">
-                <TextToSpeech textSelector=".acu" />
-                <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10">
-                  Starting Guide for User Management:
-                </h2>
+            <div className="acu max-w-7xl w-full px-4 lg:px-4  text-justify">
+              <div className="flex items-center pt-5">
+                              <div className="hidden lg:block">
+                                <TextToSpeech textSelector=".acu" />
+                              </div>
+                              <h2 className="text-primary-activelink font-semibold text-[30px] font-montserrat ">
+                                Starting Guide for User Management:
+                              </h2>
+                            </div>
+                            <div className="flex items-center pt-5">
+                              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                                Introduction
+                              </h2>
+                              <div className=" lg:hidden">
+                                <TextToSpeech textSelector=".acu" />
+                              </div>
+                            </div>
 
-                <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10 pt-4">
+                <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10">
                   Users can be managed easily through farm management system.
                   Users are the people who will perform the tasks related to the
                   farm. System offers different user roles with varying levels
@@ -71,7 +82,7 @@ const user = () => {
                   and manage user accounts. Users can be added, searched and
                   their details can be edited.
                 </p>
-              </div>
+           
               <div className="pl-13 pt-8 flex justify-center">
                 {um && (
                   <GatsbyImage

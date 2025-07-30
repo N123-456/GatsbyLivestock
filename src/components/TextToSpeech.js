@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { IconVolume, IconX } from "@tabler/icons-react"; // Using correct Tabler Icons
+import { IconVolume, IconX,IconVolumeOff } from "@tabler/icons-react"; // Using correct Tabler Icons
 
 const TextToSpeech = ({ textSelector }) => {
   const [isSupported, setIsSupported] = useState(false);
@@ -10,7 +10,7 @@ const TextToSpeech = ({ textSelector }) => {
   const volume = 1;
   const rate = 0.7;
   const pitch = 0;
-  const selectedVoice = "Microsoft George - English (United Kingdom)";
+  const selectedVoice = "English Australia";
 
   // Function to recursively extract text from an element and its children, excluding images
   const getAllText = (element) => {
@@ -103,17 +103,17 @@ const TextToSpeech = ({ textSelector }) => {
       id="speak"
       onClick={speak}
       disabled={!isSupported}
-      className={`p-2 rounded-md text-black ${
+      className={`p-2 rounded-md text-gray-500 ${
         isSpeaking
           ? ""
           : ""
-      } lg:pl-10 transition-colors duration-200 disabled:bg-gray-400 disabled:cursor-not-allowed`}
+      }  transition-colors duration-200 disabled:cursor-not-allowed`}
       title={isSpeaking ? "Stop" : "Speak"}
     >
       {isSpeaking ? (
-        <IconX className="w-5 h-5" />
-      ) : (
         <IconVolume className="w-5 h-5" />
+      ) : (
+        <IconVolumeOff className="w-5 h-5" />
       )}
     </button>
   );

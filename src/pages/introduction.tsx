@@ -23,27 +23,24 @@ const Introduction = () => {
     <AppLayout>
       <div>
         <div className="flex flex-col justify-center ">
-          <div className="content-container max-w-7xl w-full px-4 lg:px-4  text-justify">
-                   <div className="intro pt-5">
-                                                                  <TextToSpeech textSelector=".intro" />
+          <div className=" max-w-7xl w-full px-4 lg:px-4  text-justify">
+            <div className="intro">
+              <TextToSpeech textSelector=".intro" />
               <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10">
                 Introduction
               </h2>
-              <div className="flex justify-end lg:pl-[1100px]">
-                        <DarkModeToggle />
-                      </div>
-           
 
-            <p className="text-primary-paragraph sm:text-[12px] lg:text-lg md:text-lg font-montserrat font-normal lg:px-10 pt-4 text-justify">
-              Welcome to the Farm Management System! Designed specifically for
-              the agriculture sector, this system will allow you to track your
-              crops, manage your expenses, manage your tasks, and plan your
-              resources well. It will make your work easy and assist you in
-              getting better results. An integrated system for streamlined farm
-              management. In this user manual, we will show you how to get
-              started on the system and how to set up your farm. Let’s get
-              started!
-            </p></div>
+              <p className="text-primary-paragraph sm:text-[12px] lg:text-lg md:text-lg font-montserrat font-normal lg:px-10 pt-4 text-justify">
+                Welcome to the Farm Management System! Designed specifically for
+                the agriculture sector, this system will allow you to track your
+                crops, manage your expenses, manage your tasks, and plan your
+                resources well. It will make your work easy and assist you in
+                getting better results. An integrated system for streamlined
+                farm management. In this user manual, we will show you how to
+                get started on the system and how to set up your farm. Let’s get
+                started!
+              </p>
+            </div>
             <div className="pt-7 flex justify-center px-4 sm:px-10">
               {Dashboard && (
                 <GatsbyImage

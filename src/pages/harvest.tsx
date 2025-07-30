@@ -71,15 +71,25 @@ const harvest = () => {
       <PrivateRoute>
         <div>
           <div className="flex flex-col justify-center">
-            <div className=" max-w-7xl w-full px-4 lg:px-4 text-justify">
-              <div className="harvest pt-5">
-                                                      <TextToSpeech textSelector=".harvest" />
-                <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10">
+            <div className="acu max-w-7xl w-full px-4 lg:px-4 text-justify">
+              <div className="flex items-center pt-5">
+                <div className="hidden lg:block">
+                  <TextToSpeech textSelector=".acu" />
+                </div>
+                <h2 className="text-primary-activelink font-semibold text-[30px] font-montserrat ">
                   Starting Guide for Harvest:
                 </h2>
-             
+              </div>
+              <div className="flex items-center pt-5">
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                  Introduction
+                </h2>
+                <div className=" lg:hidden">
+                  <TextToSpeech textSelector=".acu" />
+                </div>
+              </div>
 
-              <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10 pt-4">
+              <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10">
                 The Harvest Section helps manage and organize the process of
                 gathering crops and recording important harvest-related details.
                 It ensures that harvested crops are properly documented,
@@ -92,7 +102,7 @@ const harvest = () => {
                 helps maintain a clear record of the farm's productivity and
                 financial performance. In the harvest tab, you will add the
                 harvest picked/ gained from specific crop.
-              </p> </div>
+              </p>
               <div className="pl-13 pt-8 flex justify-center">
                 {harvest && (
                   <GatsbyImage
@@ -104,220 +114,230 @@ const harvest = () => {
               </div>
               <br />
               <br />
-                     <div className="step1 pt-5">
-                                                      <TextToSpeech textSelector=".step1" />
-              <div className="flex items-center space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
-                  Step 1
+              <div className="step1 pt-5">
+                <TextToSpeech textSelector=".step1" />
+                <div className="flex items-center space-x-4">
+                  <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                    Step 1
+                  </h2>
+                  <div className="flex-1 h-px bg-primary-line"></div>
+                </div>
+              </div>
+              <div className="ah pt-5">
+                <TextToSpeech textSelector=".ah" />
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                  Add Harvest:
                 </h2>
-                <div className="flex-1 h-px bg-primary-line"></div>
-              </div></div>
-                     <div className="ah pt-5">
-                                                      <TextToSpeech textSelector=".ah" />
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
-                Add Harvest:
-              </h2>
 
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
-                <p>For adding harvest details:</p>
-                <br />
-                Click on{" "}
-                <span className="text-primary-activelink font-bold">
-                  "Planting"
-                </span>{" "}
-                tab.
-                <br />
-                <ul className="style-disc">
-                  <li>
-                    <p>
-                      Click on three dots against the crop you want to add
-                      harvest data.
-                    </p>
-                  </li>
-                  <li>
-                    <p>Choose harvest from the options.</p>
-                  </li>
-                  <li>
-                    <p>
-                      Click on{" "}
-                      <span className="text-primary-activelink font-bold">
-                        "Add Pesticides"
-                      </span>{" "}
-                      button.
-                    </p>
-                  </li>
-                  <li>
-                    <p>Enter the required details as follows:</p>
-                  </li>
-                </ul>
-                <br />
-                <ul className="pl-[15px] list-disc">
-                  <li>
-                    {" "}
-                    Date & Time: When was the crop harvested, what was the
-                    after-harvest process i.e., either the yield was directly
-                    sold out or there was further processing on the yield or was
-                    stored in inventory. Other than the inventory option, enter
-                    the customer’s name who bought the yield.{" "}
-                  </li>
-                  <li>
-                    Enter the batch no{" "}
-                    <span className="text-primary-activelink font-bold">
-                      (e.g. Pick 1, Pick 2 etc.)
-                    </span>{" "}
-                    and classify the grade of yield{" "}
-                    <span className="text-primary-activelink font-bold">
-                      (e.g. High, Medium, Low):
-                    </span>
-                    {""}
-                  </li>
-                  <li>
-                    In case the after-harvest process was{" "}
-                    <span className="text-primary-activelink font-bold">
-                      “Direct Sale”,
-                    </span>{" "}
-                    enter the quantity got in that batch{" "}
-                    <span className="text-primary-activelink font-bold">
-                      (e.g. 40 KG),
-                    </span>{" "}
-                    revenue per unit{" "}
-                    <span className="text-primary-activelink font-bold">
-                      (e.g.212 Rs),
-                    </span>{" "}
-                    total revenue will calculated automatically, and transaction
-                    details like head of accounts{" "}
-                    <span className="text-primary-activelink font-bold">
-                      (e.g. Bank)
-                    </span>{" "}
-                    and transaction id/ cheque no{" "}
-                    <span className="text-primary-activelink font-bold">
-                      (e.g. 8746900987)
-                    </span>{" "}
-                    in case head of accounts was bank. A transaction will be
-                    created against it as the harvest is a revenue generated
-                    from the farm.
-                  </li>
-                  <div className="pl-13 pt-8 flex justify-center">
-                    {AH && (
-                      <GatsbyImage
-                        image={AH}
-                        alt="Startups illustration"
-                        className="bg-white w-[1000.58px] "
-                      />
-                    )}
-                  </div>
+                <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+                  <p>For adding harvest details:</p>
                   <br />
-                  <br />
-                  <li>
-                    In case the after-harvest process was{" "}
-                    <span className="text-primary-activelink font-bold">
-                      “Processed”,
-                    </span>{" "}
-                    enter the before processed quantity got in that batch, after
-                    processing quantity got in that batch, revenue per unit,
-                    total revenue will calculated automatically, and transaction
-                    details like head of accounts and transaction id/ cheque no
-                    in case head of accounts was bank. A transaction will be
-                    created against it as the harvest is a revenue generated
-                    from the farm.
-                  </li>
-                  <div className="pl-13 pt-8 flex justify-center">
-                    {AH1 && (
-                      <GatsbyImage
-                        image={AH1}
-                        alt="Startups illustration"
-                        className="bg-white w-[1000.58px] "
-                      />
-                    )}
-                  </div>
-                  <br />
-                  <li>
-                    In case the after-harvest process is{" "}
-                    <span className="text-primary-activelink font-bold">
-                      “Inventory”,
-                    </span>{" "}
-                    choose the inventory where the harvest will be stored,
-                    quantity to be stored, revenue per unit, total revenue will
-                    calculated automatically. No transaction will created in
-                    this case.
-                  </li>
-                  <div className="pl-13 pt-8 flex justify-center">
-                    {AH2 && (
-                      <GatsbyImage
-                        image={AH2}
-                        alt="Startups illustration"
-                        className="bg-white w-[1000.58px] "
-                      />
-                    )}
-                  </div>
-                  <br />
-                  <br />
-                  <li>Enter the instructions related to the harvest if any.</li>
-
-                  <br />
-                  <li>
-                    <p>Click on the submit button.</p>
-                  </li>
-                  <li>
-                    <p>Harvest will be added successfully.</p>
-                  </li>
-                  <li>
-                    <p>
-                      You can add more harvest pickings details in the same way.
-                    </p>
-                  </li>
-                </ul>
-                <br />{" "}
-              </div></div>
-                     <div className="step2 pt-5">
-                                                      <TextToSpeech textSelector=".step2" />
-              <div className="flex items-center space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
-                  Step 2
-                </h2>
-                <div className="flex-1 h-px bg-primary-line"></div>
-              </div></div>
-                     <div className="sh pt-5">
-                                                      <TextToSpeech textSelector=".sh" />
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
-                Search Harvest:
-              </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
-                You can search the harvest from the list of harvests of
-                locations present in the system. You can search based on either:
-                <br />
-                <p>
-                  <span className="text-primary-pheading font-semibold">
-                    Batch Number
+                  Click on{" "}
+                  <span className="text-primary-activelink font-bold">
+                    "Planting"
                   </span>{" "}
-                  You can search by the batch number of harvest.
-                </p>{" "}
-                <br />
-                <p>
-                  Then click on the Search button. Also, you can click on the
-                  refresh button to refresh the data.
-                </p>
-                <div className="pl-13 pt-8 flex justify-center">
-                  {SH && (
-                    <GatsbyImage
-                      image={SH}
-                      alt="Startups illustration"
-                      className="bg-white w-[1000.58px] "
-                    />
-                  )}
-                </div></div></div>
-                <br />
-                <br />
-                       <div className="step3 pt-5">
-                                                      <TextToSpeech textSelector=".step3" />
+                  tab.
+                  <br />
+                  <ul className="style-disc">
+                    <li>
+                      <p>
+                        Click on three dots against the crop you want to add
+                        harvest data.
+                      </p>
+                    </li>
+                    <li>
+                      <p>Choose harvest from the options.</p>
+                    </li>
+                    <li>
+                      <p>
+                        Click on{" "}
+                        <span className="text-primary-activelink font-bold">
+                          "Add Pesticides"
+                        </span>{" "}
+                        button.
+                      </p>
+                    </li>
+                    <li>
+                      <p>Enter the required details as follows:</p>
+                    </li>
+                  </ul>
+                  <br />
+                  <ul className="pl-[15px] list-disc">
+                    <li>
+                      {" "}
+                      Date & Time: When was the crop harvested, what was the
+                      after-harvest process i.e., either the yield was directly
+                      sold out or there was further processing on the yield or
+                      was stored in inventory. Other than the inventory option,
+                      enter the customer’s name who bought the yield.{" "}
+                    </li>
+                    <li>
+                      Enter the batch no{" "}
+                      <span className="text-primary-activelink font-bold">
+                        (e.g. Pick 1, Pick 2 etc.)
+                      </span>{" "}
+                      and classify the grade of yield{" "}
+                      <span className="text-primary-activelink font-bold">
+                        (e.g. High, Medium, Low):
+                      </span>
+                      {""}
+                    </li>
+                    <li>
+                      In case the after-harvest process was{" "}
+                      <span className="text-primary-activelink font-bold">
+                        “Direct Sale”,
+                      </span>{" "}
+                      enter the quantity got in that batch{" "}
+                      <span className="text-primary-activelink font-bold">
+                        (e.g. 40 KG),
+                      </span>{" "}
+                      revenue per unit{" "}
+                      <span className="text-primary-activelink font-bold">
+                        (e.g.212 Rs),
+                      </span>{" "}
+                      total revenue will calculated automatically, and
+                      transaction details like head of accounts{" "}
+                      <span className="text-primary-activelink font-bold">
+                        (e.g. Bank)
+                      </span>{" "}
+                      and transaction id/ cheque no{" "}
+                      <span className="text-primary-activelink font-bold">
+                        (e.g. 8746900987)
+                      </span>{" "}
+                      in case head of accounts was bank. A transaction will be
+                      created against it as the harvest is a revenue generated
+                      from the farm.
+                    </li>
+                    <div className="pl-13 pt-8 flex justify-center">
+                      {AH && (
+                        <GatsbyImage
+                          image={AH}
+                          alt="Startups illustration"
+                          className="bg-white w-[1000.58px] "
+                        />
+                      )}
+                    </div>
+                    <br />
+                    <br />
+                    <li>
+                      In case the after-harvest process was{" "}
+                      <span className="text-primary-activelink font-bold">
+                        “Processed”,
+                      </span>{" "}
+                      enter the before processed quantity got in that batch,
+                      after processing quantity got in that batch, revenue per
+                      unit, total revenue will calculated automatically, and
+                      transaction details like head of accounts and transaction
+                      id/ cheque no in case head of accounts was bank. A
+                      transaction will be created against it as the harvest is a
+                      revenue generated from the farm.
+                    </li>
+                    <div className="pl-13 pt-8 flex justify-center">
+                      {AH1 && (
+                        <GatsbyImage
+                          image={AH1}
+                          alt="Startups illustration"
+                          className="bg-white w-[1000.58px] "
+                        />
+                      )}
+                    </div>
+                    <br />
+                    <li>
+                      In case the after-harvest process is{" "}
+                      <span className="text-primary-activelink font-bold">
+                        “Inventory”,
+                      </span>{" "}
+                      choose the inventory where the harvest will be stored,
+                      quantity to be stored, revenue per unit, total revenue
+                      will calculated automatically. No transaction will created
+                      in this case.
+                    </li>
+                    <div className="pl-13 pt-8 flex justify-center">
+                      {AH2 && (
+                        <GatsbyImage
+                          image={AH2}
+                          alt="Startups illustration"
+                          className="bg-white w-[1000.58px] "
+                        />
+                      )}
+                    </div>
+                    <br />
+                    <br />
+                    <li>
+                      Enter the instructions related to the harvest if any.
+                    </li>
+
+                    <br />
+                    <li>
+                      <p>Click on the submit button.</p>
+                    </li>
+                    <li>
+                      <p>Harvest will be added successfully.</p>
+                    </li>
+                    <li>
+                      <p>
+                        You can add more harvest pickings details in the same
+                        way.
+                      </p>
+                    </li>
+                  </ul>
+                  <br />{" "}
+                </div>
+              </div>
+              <div className="step2 pt-5">
+                <TextToSpeech textSelector=".step2" />
+                <div className="flex items-center space-x-4">
+                  <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                    Step 2
+                  </h2>
+                  <div className="flex-1 h-px bg-primary-line"></div>
+                </div>
+              </div>
+              <div className="sh pt-5">
+                <TextToSpeech textSelector=".sh" />
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                  Search Harvest:
+                </h2>
+                <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+                  You can search the harvest from the list of harvests of
+                  locations present in the system. You can search based on
+                  either:
+                  <br />
+                  <p>
+                    <span className="text-primary-pheading font-semibold">
+                      Batch Number
+                    </span>{" "}
+                    You can search by the batch number of harvest.
+                  </p>{" "}
+                  <br />
+                  <p>
+                    Then click on the Search button. Also, you can click on the
+                    refresh button to refresh the data.
+                  </p>
+                  <div className="pl-13 pt-8 flex justify-center">
+                    {SH && (
+                      <GatsbyImage
+                        image={SH}
+                        alt="Startups illustration"
+                        className="bg-white w-[1000.58px] "
+                      />
+                    )}
+                  </div>
+                </div>
+              </div>
+              <br />
+              <br />
+              <div className="step3 pt-5">
+                <TextToSpeech textSelector=".step3" />
                 <div className="flex items-center space-x-4">
                   <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                     Step 3
                   </h2>
                   <div className="flex-1 h-px bg-primary-line"></div>
-                </div></div>
-                       <div className="eh pt-5">
-                                                      <TextToSpeech textSelector=".eh" />
+                </div>
+              </div>
+              <div className="eh pt-5">
+                <TextToSpeech textSelector=".eh" />
                 <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                   Edit Harvest:
                 </h2>
@@ -339,17 +359,19 @@ const harvest = () => {
                       Harvest details will be edited/updated successfully.
                     </li>
                   </ul>
-                </div></div>
-                       <div className="step4 pt-5">
-                                                      <TextToSpeech textSelector=".step4" />
+                </div>
+              </div>
+              <div className="step4 pt-5">
+                <TextToSpeech textSelector=".step4" />
                 <div className="flex items-center space-x-4">
                   <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                     Step 4
                   </h2>
                   <div className="flex-1 h-px bg-primary-line"></div>
-                </div></div>
-                       <div className="dh pt-5">
-                                                      <TextToSpeech textSelector=".dh" />
+                </div>
+              </div>
+              <div className="dh pt-5">
+                <TextToSpeech textSelector=".dh" />
                 <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                   Delete Harvest:
                 </h2>
@@ -369,26 +391,28 @@ const harvest = () => {
                     <li>Click on delete button.</li>
                     <li>Harvest will be deleted successfully.</li>
                   </ul>
-                </div></div>
-                <div className="pl-13 pt-8 flex justify-center">
-                  {DH && (
-                    <GatsbyImage
-                      image={DH}
-                      alt="Startups illustration"
-                      className="bg-white w-[1000.58px] "
-                    />
-                  )}
                 </div>
-                       <div className="step5 pt-5">
-                                                      <TextToSpeech textSelector=".step5" />
+              </div>
+              <div className="pl-13 pt-8 flex justify-center">
+                {DH && (
+                  <GatsbyImage
+                    image={DH}
+                    alt="Startups illustration"
+                    className="bg-white w-[1000.58px] "
+                  />
+                )}
+              </div>
+              <div className="step5 pt-5">
+                <TextToSpeech textSelector=".step5" />
                 <div className="flex items-center space-x-4">
                   <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                     Step 5
                   </h2>
                   <div className="flex-1 h-px bg-primary-line"></div>
-                </div></div>
-                       <div className="vh pt-5">
-                                                      <TextToSpeech textSelector=".vh" />
+                </div>
+              </div>
+              <div className="vh pt-5">
+                <TextToSpeech textSelector=".vh" />
                 <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                   View Harvest:
                 </h2>
@@ -416,10 +440,10 @@ const harvest = () => {
                     />
                   )}
                 </div>
-              </div></div>
+              </div>
             </div>
           </div>
-       
+        </div>
       </PrivateRoute>
     </AppLayout>
   );

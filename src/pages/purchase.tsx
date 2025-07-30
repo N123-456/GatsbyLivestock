@@ -94,13 +94,24 @@ const purchase = () => {
       <PrivateRoute>
         <div>
           <div className="flex flex-col justify-center">
-            <div className="max-w-7xl w-full px-4 lg:px-4  text-justify">
-                <div className="spr pt-5">
-                              <TextToSpeech textSelector=".spr" />
-              <h2 className="text-primary-activelink font-semibold text-[28px] font-montserrat lg:pl-10 ">
-                Starting Guide for Purchase Requisition:
-              </h2>
-              <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10 pt-4">
+            <div className="acu max-w-7xl w-full px-4 lg:px-4  text-justify">
+              <div className="flex items-center pt-5">
+                <div className="hidden lg:block">
+                  <TextToSpeech textSelector=".acu" />
+                </div>
+                <h2 className="text-primary-activelink font-semibold text-[30px] font-montserrat ">
+                  Starting Guide for Purchase Requisition:
+                </h2>
+              </div>
+              <div className="flex items-center pt-5">
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                  Introduction
+                </h2>
+                <div className=" lg:hidden">
+                  <TextToSpeech textSelector=".acu" />
+                </div>
+              </div>
+              <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10">
                 A Purchase Requisition is a formal request made within an
                 organization to acquire goods or services. It is used to request
                 the purchase of essential items, such as seeds, fertilizers,
@@ -112,7 +123,7 @@ const purchase = () => {
                 levels are maintained, and resources are procured in an
                 organized and efficient manner. It also helps track spending and
                 manage budgets within the farm.
-              </p></div>
+              </p>
               <div className="pl-13 pt-8 flex justify-center ">
                 {PR && (
                   <GatsbyImage
@@ -124,107 +135,111 @@ const purchase = () => {
               </div>
               <br />
               <br />
-                <div className="s1 pt-5">
-                              <TextToSpeech textSelector=".s1" />
-              <div className="flex items-center space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
-                  Step 1
+              <div className="s1 pt-5">
+                <TextToSpeech textSelector=".s1" />
+                <div className="flex items-center space-x-4">
+                  <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                    Step 1
+                  </h2>
+                  <div className="flex-1 h-px bg-primary-line"></div>
+                </div>
+              </div>
+              <div className="apr pt-5">
+                <TextToSpeech textSelector=".apr" />
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                  Add Purchase Requisition:
                 </h2>
-                <div className="flex-1 h-px bg-primary-line"></div>
-              </div></div>
-                <div className="apr pt-5">
-                              <TextToSpeech textSelector=".apr" />
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
-                Add Purchase Requisition:
-              </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
-                For adding purchase requisition:
-                <br />
-                <br />
-                <ul className=" text-primary-paragraph2 ">
-                  <li>
-                    Click on the{" "}
-                    <span className="text-primary-activelink font-bold">
-                      “inventory”{" "}
-                    </span>{" "}
-                    tab.
-                  </li>
-                  <li>
-                    On the top left, there is a tab with title{" "}
-                    <span className="text-primary-activelink font-bold">
-                      “Purchase Requisition”{" "}
-                    </span>
-                    , click on it.
-                  </li>
-                  <li>
-                    Click on{" "}
-                    <span className="text-primary-activelink font-bold">
-                      “Add New”{" "}
-                    </span>{" "}
-                    button.
-                  </li>
-                  <li>Enter the details</li>
-                  <li>Enter the barcode</li>
-                  <li>
-                    Choose the warehouse where the inventory will be stored.
-                  </li>
-                  <li>Date when the inventory is requested.</li>
-                  <li>Choose the category where the inventory belongs to.</li>
-                  <li>
-                    Choose subcategory for exactly placing the inventory in
-                    correct rack.
-                  </li>
-                  <li>
-                    Choose the product stored in the warehouse against which you
-                    are adding the inventory.
-                  </li>
-                  <li>Enter the product variety, choose the vendor.</li>
-                  <li>Enter the quantity.</li>
+                <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+                  For adding purchase requisition:
+                  <br />
+                  <br />
+                  <ul className=" text-primary-paragraph2 ">
+                    <li>
+                      Click on the{" "}
+                      <span className="text-primary-activelink font-bold">
+                        “inventory”{" "}
+                      </span>{" "}
+                      tab.
+                    </li>
+                    <li>
+                      On the top left, there is a tab with title{" "}
+                      <span className="text-primary-activelink font-bold">
+                        “Purchase Requisition”{" "}
+                      </span>
+                      , click on it.
+                    </li>
+                    <li>
+                      Click on{" "}
+                      <span className="text-primary-activelink font-bold">
+                        “Add New”{" "}
+                      </span>{" "}
+                      button.
+                    </li>
+                    <li>Enter the details</li>
+                    <li>Enter the barcode</li>
+                    <li>
+                      Choose the warehouse where the inventory will be stored.
+                    </li>
+                    <li>Date when the inventory is requested.</li>
+                    <li>Choose the category where the inventory belongs to.</li>
+                    <li>
+                      Choose subcategory for exactly placing the inventory in
+                      correct rack.
+                    </li>
+                    <li>
+                      Choose the product stored in the warehouse against which
+                      you are adding the inventory.
+                    </li>
+                    <li>Enter the product variety, choose the vendor.</li>
+                    <li>Enter the quantity.</li>
 
-                  <div className="pl-13 pt-8 flex justify-center ">
-                    {APR && (
-                      <GatsbyImage
-                        image={APR}
-                        alt="Startups illustration"
-                        className="bg-white w-[1000.58px] "
-                      />
-                    )}
-                  </div>
-                  <br />
-                  <li>
-                    Click on{" "}
-                    <span className="text-primary-activelink font-bold">
-                      “Add”{" "}
-                    </span>{" "}
-                    button.
-                  </li>
-                  <li>
-                    In the similar way you can add new purchase requisition, as
-                    you get new stock requests.
-                  </li>
-                  <div className="pl-13 pt-8 flex justify-center ">
-                    {APR1 && (
-                      <GatsbyImage
-                        image={APR1}
-                        alt="Startups illustration"
-                        className="bg-white w-[1000.58px] "
-                      />
-                    )}
-                  </div>
-                  <br />
-                </ul></div></div>
-                <br />
-                <br />
-                  <div className="s2 pt-5">
-                                <TextToSpeech textSelector=".s2" />
+                    <div className="pl-13 pt-8 flex justify-center ">
+                      {APR && (
+                        <GatsbyImage
+                          image={APR}
+                          alt="Startups illustration"
+                          className="bg-white w-[1000.58px] "
+                        />
+                      )}
+                    </div>
+                    <br />
+                    <li>
+                      Click on{" "}
+                      <span className="text-primary-activelink font-bold">
+                        “Add”{" "}
+                      </span>{" "}
+                      button.
+                    </li>
+                    <li>
+                      In the similar way you can add new purchase requisition,
+                      as you get new stock requests.
+                    </li>
+                    <div className="pl-13 pt-8 flex justify-center ">
+                      {APR1 && (
+                        <GatsbyImage
+                          image={APR1}
+                          alt="Startups illustration"
+                          className="bg-white w-[1000.58px] "
+                        />
+                      )}
+                    </div>
+                    <br />
+                  </ul>
+                </div>
+              </div>
+              <br />
+              <br />
+              <div className="s2 pt-5">
+                <TextToSpeech textSelector=".s2" />
                 <div className="flex items-center space-x-4">
                   <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                     Step 2
                   </h2>
                   <div className="flex-1 h-px bg-primary-line"></div>
-                </div></div>
-                  <div className="spr pt-5">
-                                <TextToSpeech textSelector=".spr" />
+                </div>
+              </div>
+              <div className="spr pt-5">
+                <TextToSpeech textSelector=".spr" />
                 <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                   Search & Print Purchase Requisition:
                 </h2>
@@ -265,51 +280,64 @@ const purchase = () => {
                       “Print”{" "}
                     </span>{" "}
                     icon to print the details of the purchase requisition.
-                  </p></div>
-                  <br />
-                  <br />
-                  <div className="pl-13 pt-8 flex justify-center">
-                    {SPR && (
-                      <GatsbyImage
-                        image={SPR}
-                        alt="Startups illustration"
-                        className="bg-white w-[1000.58px] "
-                      />
-                    )}
-                  </div>
-                  <div className="pl-13 pt-8 flex justify-center">
-                    {SPR1 && (
-                      <GatsbyImage
-                        image={SPR1}
-                        alt="Startups illustration"
-                        className="bg-white w-[1000.58px] "
-                      />
-                    )}
-                  </div>
+                  </p>
+                </div>
+                <br />
+                <br />
+                <div className="pl-13 pt-8 flex justify-center">
+                  {SPR && (
+                    <GatsbyImage
+                      image={SPR}
+                      alt="Startups illustration"
+                      className="bg-white w-[1000.58px] "
+                    />
+                  )}
+                </div>
+                <div className="pl-13 pt-8 flex justify-center">
+                  {SPR1 && (
+                    <GatsbyImage
+                      image={SPR1}
+                      alt="Startups illustration"
+                      className="bg-white w-[1000.58px] "
+                    />
+                  )}
                 </div>
               </div>
             </div>
-         
+          </div>
+
           <br />
 
           <div className="flex flex-col justify-center">
-            <div className="content-container max-w-7xl w-full px-4 lg:px-4  text-justify">
-               <div className="sgp pt-5">
-                <TextToSpeech textSelector=".sgp" />
-                <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10">
-                  Starting Guide for Purchase Order:
-                </h2>
-            
+            <div className="acu max-w-7xl w-full px-4 lg:px-4  text-justify">
+              <div className="flex items-center pt-5">
+                              <div className="hidden lg:block">
+                                <TextToSpeech textSelector=".acu" />
+                              </div>
+                              <h2 className="text-primary-activelink font-semibold text-[30px] font-montserrat ">
+                                Starting Guide for Purchase Order:
+                              </h2>
+                            </div>
+                            <div className="flex items-center pt-5">
+                              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                                Introduction
+                              </h2>
+                              <div className=" lg:hidden">
+                                <TextToSpeech textSelector=".acu" />
+                              </div>
+                            </div>
 
-              <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10 pt-4">
-                A Purchase Order (PO) is a formal document issued by a buyer to
-                a supplier, indicating the intent to purchase specific goods or
-                services. A purchase order is created after the purchase
-                requisition has been created. The supplier confirms the order.
-                The purchase order serves as a legal agreement between the farm
-                and the supplier. It helps track and manage farm purchases,
-                monitor inventory, and maintain accurate financial records.
-              </p></div>
+                <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10">
+                  A Purchase Order (PO) is a formal document issued by a buyer
+                  to a supplier, indicating the intent to purchase specific
+                  goods or services. A purchase order is created after the
+                  purchase requisition has been created. The supplier confirms
+                  the order. The purchase order serves as a legal agreement
+                  between the farm and the supplier. It helps track and manage
+                  farm purchases, monitor inventory, and maintain accurate
+                  financial records.
+                </p>
+             
               <div className="pl-13 pt-8 flex justify-center ">
                 {po && (
                   <GatsbyImage
@@ -321,123 +349,127 @@ const purchase = () => {
               </div>
               <br />
               <br />
-                <div className="s1 pt-5">
-                              <TextToSpeech textSelector=".s1" />
-              <div className="flex items-center space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
-                  Step 1
+              <div className="s1 pt-5">
+                <TextToSpeech textSelector=".s1" />
+                <div className="flex items-center space-x-4">
+                  <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                    Step 1
+                  </h2>
+                  <div className="flex-1 h-px bg-primary-line"></div>
+                </div>
+              </div>
+              <div className="apo pt-5">
+                <TextToSpeech textSelector=".apo" />
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                  Add Purchase Order:
                 </h2>
-                <div className="flex-1 h-px bg-primary-line"></div>
-              </div></div>
-                <div className="apo pt-5">
-                              <TextToSpeech textSelector=".apo" />
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
-                Add Purchase Order:
-              </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
-                For adding purchase Order:
-                <br />
-                <br />
-                <ul className=" text-primary-paragraph2 ">
-                  <li>
-                    Click on the{" "}
-                    <span className="text-primary-activelink font-bold">
-                      “inventory”{" "}
-                    </span>{" "}
-                    tab.
-                  </li>
-                  <li>
-                    On the top left, there is a tab with title{" "}
-                    <span className="text-primary-activelink font-bold">
-                      “Purchase Order”{" "}
-                    </span>
-                    , click on it.
-                  </li>
-                  <li>
-                    Click on{" "}
-                    <span className="text-primary-activelink font-bold">
-                      “Add New”{" "}
-                    </span>{" "}
-                    button.
-                  </li>
-                  <li>Enter the details</li>
-                  <li>Enter the barcode</li>
-                  <li>
-                    Choose the warehouse where the inventory will be stored.
-                  </li>
-                  <li>Date when the inventory was added in the warehouse.</li>
-                  <li>
-                    Additionally, you can check the box, receive by purchase
-                    requisition to automatically add the purchase order against
-                    that requisition. Choose the requisition number against
-                    which you want to add purchase order. You can edit the
-                    details.
-                  </li>
-                  <li>
-                    If not automatic creation of purchase order by purchase
-                    requisition, then choose the category where the inventory
-                    belongs to.
-                  </li>
-                  <li>
-                    Choose subcategory for exactly placing the inventory in
-                    correct rack.
-                  </li>
-                  <li>
-                    Choose the product stored in the warehouse against which you
-                    are adding the inventory.
-                  </li>
-                  <li>Enter the product variety, choose the vendor.</li>
-                  <li>Enter the quantity and unit price of inventory.</li>
+                <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+                  For adding purchase Order:
+                  <br />
+                  <br />
+                  <ul className=" text-primary-paragraph2 ">
+                    <li>
+                      Click on the{" "}
+                      <span className="text-primary-activelink font-bold">
+                        “inventory”{" "}
+                      </span>{" "}
+                      tab.
+                    </li>
+                    <li>
+                      On the top left, there is a tab with title{" "}
+                      <span className="text-primary-activelink font-bold">
+                        “Purchase Order”{" "}
+                      </span>
+                      , click on it.
+                    </li>
+                    <li>
+                      Click on{" "}
+                      <span className="text-primary-activelink font-bold">
+                        “Add New”{" "}
+                      </span>{" "}
+                      button.
+                    </li>
+                    <li>Enter the details</li>
+                    <li>Enter the barcode</li>
+                    <li>
+                      Choose the warehouse where the inventory will be stored.
+                    </li>
+                    <li>Date when the inventory was added in the warehouse.</li>
+                    <li>
+                      Additionally, you can check the box, receive by purchase
+                      requisition to automatically add the purchase order
+                      against that requisition. Choose the requisition number
+                      against which you want to add purchase order. You can edit
+                      the details.
+                    </li>
+                    <li>
+                      If not automatic creation of purchase order by purchase
+                      requisition, then choose the category where the inventory
+                      belongs to.
+                    </li>
+                    <li>
+                      Choose subcategory for exactly placing the inventory in
+                      correct rack.
+                    </li>
+                    <li>
+                      Choose the product stored in the warehouse against which
+                      you are adding the inventory.
+                    </li>
+                    <li>Enter the product variety, choose the vendor.</li>
+                    <li>Enter the quantity and unit price of inventory.</li>
 
-                  <div className="pl-13 pt-8 flex justify-center ">
-                    {apo && (
-                      <GatsbyImage
-                        image={apo}
-                        alt="Startups illustration"
-                        className="bg-white w-[1000.58px] "
-                      />
-                    )}
-                  </div>
-                  <br />
-                  <li>
-                    Click on{" "}
-                    <span className="text-primary-activelink font-bold">
-                      “Add”{" "}
-                    </span>{" "}
-                    button.
-                  </li>
-                  <li>
-                    In the similar way you can add new purchase order, as new
-                    requisition came.
-                  </li>
-                  <li>
-                    After adding purchase order, click on the submit button
-                  </li>
-                  <li>Purchase order will be added successfully.</li>
-                  <br />
-                  <div className="pl-13 pt-8 flex justify-center ">
-                    {apo1 && (
-                      <GatsbyImage
-                        image={apo1}
-                        alt="Startups illustration"
-                        className="bg-white w-[1000.58px] "
-                      />
-                    )}
-                  </div>
-                  <br />
-                </ul></div></div>
-                <br />
-                <br />
-                  <div className="s2 pt-5">
-                                <TextToSpeech textSelector=".s2" />
+                    <div className="pl-13 pt-8 flex justify-center ">
+                      {apo && (
+                        <GatsbyImage
+                          image={apo}
+                          alt="Startups illustration"
+                          className="bg-white w-[1000.58px] "
+                        />
+                      )}
+                    </div>
+                    <br />
+                    <li>
+                      Click on{" "}
+                      <span className="text-primary-activelink font-bold">
+                        “Add”{" "}
+                      </span>{" "}
+                      button.
+                    </li>
+                    <li>
+                      In the similar way you can add new purchase order, as new
+                      requisition came.
+                    </li>
+                    <li>
+                      After adding purchase order, click on the submit button
+                    </li>
+                    <li>Purchase order will be added successfully.</li>
+                    <br />
+                    <div className="pl-13 pt-8 flex justify-center ">
+                      {apo1 && (
+                        <GatsbyImage
+                          image={apo1}
+                          alt="Startups illustration"
+                          className="bg-white w-[1000.58px] "
+                        />
+                      )}
+                    </div>
+                    <br />
+                  </ul>
+                </div>
+              </div>
+              <br />
+              <br />
+              <div className="s2 pt-5">
+                <TextToSpeech textSelector=".s2" />
                 <div className="flex items-center space-x-4">
                   <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                     Step 2
                   </h2>
                   <div className="flex-1 h-px bg-primary-line"></div>
-                </div></div>
-                  <div className="spo pt-5">
-                                <TextToSpeech textSelector=".spo" />
+                </div>
+              </div>
+              <div className="spo pt-5">
+                <TextToSpeech textSelector=".spo" />
                 <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                   Search & Print Purchase Order:
                 </h2>
@@ -498,11 +530,11 @@ const purchase = () => {
                       />
                     )}
                   </div>
-                </div></div>
+                </div>
               </div>
             </div>
           </div>
-     
+        </div>
       </PrivateRoute>
     </AppLayout>
   );

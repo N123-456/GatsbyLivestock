@@ -35,15 +35,25 @@ const inputs = () => {
       <PrivateRoute>
         <div>
           <div className="flex flex-col justify-center">
-            <div className="content-container max-w-7xl w-full px-4 lg:px-4  text-justify">
-                <div className="harvest pt-5">
-                                                               <TextToSpeech textSelector=".harvest" />
-                <h2 className="text-primary-activelink font-semibold text-[34px] font-montserrat lg:pl-10">
+            <div className="acu max-w-7xl w-full px-4 lg:px-4  text-justify">
+              <div className="flex items-center pt-5">
+                <div className="hidden lg:block">
+                  <TextToSpeech textSelector=".acu" />
+                </div>
+                <h2 className="text-primary-activelink font-semibold text-[30px] font-montserrat ">
                   Inputs/Technologies:
                 </h2>
-             
+              </div>
+              <div className="flex items-center pt-5">
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                  Introduction
+                </h2>
+                <div className=" lg:hidden">
+                  <TextToSpeech textSelector=".acu" />
+                </div>
+              </div>
 
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal pt-5 lg:px-10">
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
                 The Inputs/Technologies Section is designed for handling and
                 storing chemicals, such as fertilizers, pesticides, weedicides,
                 and application equipment, safely.
@@ -84,7 +94,7 @@ const inputs = () => {
                     />
                   )}
                 </div>
-              </div></div>
+              </div>
               <br />
             </div>
           </div>
