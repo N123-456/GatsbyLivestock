@@ -130,7 +130,7 @@ const inventory = () => {
                 <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 1
                 </h2>
-                <div className="Iex-1 h-px bg-primary-line"></div>
+                <div className="flex-1 h-px bg-primary-line"></div>
               </div>
 
               <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
@@ -142,7 +142,7 @@ const inventory = () => {
                 warehouse. See the user guide for adding warehouse. For adding
                 inventory:
                 <br />
-                <ul className="list-disc text-primary-activelink">
+                <ul className="list-disc">
                   <li>Enter the name of the inventory.</li>
                   <li>Enter its variety.</li>
                   <li>Enter the unit i.e., KG or grams</li>
@@ -162,15 +162,17 @@ const inventory = () => {
                   <li>Enter the description about the location.</li>
                   <li>Click the submit button.</li>
                   <li>Inventory will be added successfully.</li>
-
-                  {AI && (
-                    <GatsbyImage
-                      image={AI}
-                      alt="Startups illustration"
-                      className="bg-white w-[1000.58px] "
-                    />
-                  )}
-
+                  <div className="pl-13 pt-8 flex justify-center">
+                    {AI && (
+                      <GatsbyImage
+                        image={AI}
+                        alt="Startups illustration"
+                        className="bg-white w-[1000.58px] "
+                      />
+                    )}
+                  </div>
+                  <br />
+                  <br />
                   <p>
                     By default, the inventory quantity will be zero. So, there
                     are two ways for adding inventory:
@@ -195,7 +197,7 @@ const inventory = () => {
                     add.
                   </li>
                   <li>Click on history button.</li>
-                  <div>
+                  <div className="pl-13 pt-8 flex justify-center">
                     {AI1 && (
                       <GatsbyImage
                         image={AI1}
@@ -204,18 +206,19 @@ const inventory = () => {
                       />
                     )}
                   </div>
-
+                  <br />
+                  <br />
                   <li>Here you have two options:</li>
                 </ul>
-                <ul className="list-disc op">
+                <ul>
                   <li>
-                    <span className="text-primary-pheading font-semibold">
+                    <span className="text-primary-pheading font-bold">
                       Add New:
                     </span>
                     This option is for adding new inventory. For that:
                   </li>
                   <ul>
-                    <li>Click on “Add New” button</li>
+                    <li>Click on <span className="text-primary-activelink font-bold">“Add New”</span>{" "} button</li>
                     <li>Enter barcode.</li>
                     <li>
                       Select the warehouse where the inventory will be stored.
@@ -239,7 +242,7 @@ const inventory = () => {
                     <li>
                       Choose the manufacture and expiry date if applicable.
                     </li>
-                    <li>Click on “Add” button.</li>
+                    <li>Click on <span className="text-primary-activelink font-bold">“Add”</span>{" "} button.</li>
                     <li>
                       In the similar way you can add new inventory as you new
                       stock came.
@@ -248,22 +251,28 @@ const inventory = () => {
                     <li>Inventory history will be added successfully.</li>
                   </ul>
                   <br />
-                  {AN && (
-                    <GatsbyImage
-                      image={AN}
-                      alt="Startups illustration"
-                      className="bg-white w-[1000.58px] "
-                    />
-                  )}
-                  {AN1 && (
-                    <GatsbyImage
-                      image={AN1}
-                      alt="Startups illustration"
-                      className="bg-white w-[1000.58px] "
-                    />
-                  )}
+                <div className="pl-13 pt-8 flex justify-center">
+                    {AN && (
+                      <GatsbyImage
+                        image={AN}
+                        alt="Startups illustration"
+                        className="bg-white w-[1000.58px] "
+                      />
+                    )}
+                  </div>
+                  <div className="pl-13 pt-8 flex justify-center">
+                    {AN1 && (
+                      <GatsbyImage
+                        image={AN1}
+                        alt="Startups illustration"
+                        className="bg-white w-[1000.58px] "
+                      />
+                    )}
+                  </div>
+                  <br />
+                  <br />
                   <li>
-                    <span className="text-primary-pheading font-semibold">
+                    <span className="text-primary-pheading font-bold ">
                       Manual Adjustment:{" "}
                     </span>
                     This option is for if you found the difference between
@@ -271,9 +280,9 @@ const inventory = () => {
                     can manually adjust the quantity. For doing this:
                   </li>
                   <ul>
-                    <li>Click on “Manual Adjustment” button.</li>
+                    <li>Click on <span className="text-primary-activelink font-bold">“Manual Adjustment”</span>{" "} button.</li>
                     <li>
-                      Enter the reason, the date on which you are making manul
+                      Enter the reason, the date on which you are making manual
                       adjustment, choose the rack, and the difference in the
                       available and actual quantity. In case you want to lessen
                       the inventory, enter the quantity with negative sign.
@@ -282,13 +291,15 @@ const inventory = () => {
                     <li>Inventory will be adjusted manually successfully.</li>
                   </ul>
                   <br />
-                  {MA && (
-                    <GatsbyImage
-                      image={MA}
-                      alt="Startups illustration"
-                      className="bg-white w-[1000.58px] "
-                    />
-                  )}
+                  <div className="pl-13 pt-8 flex justify-center">
+                {MA && (
+                  <GatsbyImage
+                    image={MA}
+                    alt="Startups illustration"
+                    className="bg-white w-[1000.58px] "
+                  />
+                )}
+              </div>
                 </ul>
               </div>
               <br />
@@ -307,13 +318,11 @@ const inventory = () => {
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
                 You can search the location from the list of inventories of
                 locations present in the system. You can search based on either:
-                <br />
-                <br />
                 <p>
-                  Inventory Name: You can search by the inventory name.
+                  <span className="text-primary-pheading font-bold">Inventory Name:</span>{" "} You can search by the inventory name.
                 </p>{" "}
                 <p>
-                  Product Variety: You can search by the variety of the
+                  <span className="text-primary-pheading font-bold">Product Variety:</span>{" "} You can search by the variety of the
                   inventory.
                 </p>
                 <br />
@@ -323,21 +332,23 @@ const inventory = () => {
                 </p>
               </div>
               <br />
-              {SIN && (
-                <GatsbyImage
-                  image={SIN}
-                  alt="Startups illustration"
-                  className="bg-white w-[1000.58px] "
-                />
-              )}
+              <div className="pl-13 pt-8 flex justify-center">
+                {SIN && (
+                  <GatsbyImage
+                    image={SIN}
+                    alt="Startups illustration"
+                    className="bg-white w-[1000.58px] "
+                  />
+                )}
+              </div>
               <br />
               <br />
 
-              <div className="Iex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+              <div className="flex items-center pt-5 space-x-4">
+                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pt-5 lg:pl-10">
                   Step 3
                 </h2>
-                <div className="Iex-1 h-px bg-primary-line"></div>
+                <div className="flex-1 h-px bg-primary-line"></div>
               </div>
 
               <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
@@ -348,7 +359,7 @@ const inventory = () => {
                 the details of inventory but not inventory history. For that:
                 <br />
                 <br />
-                <ul className="pl-[15px] text-primary-activelink list-disc">
+                <ul className="pl-[15px] text-primary-activelink list-disc font-bold">
                   <li>
                     Click on the edit icon against the inventory you want to
                     edit.
@@ -366,21 +377,21 @@ const inventory = () => {
               <br />
               <br />
 
-              <div className="Iex items-center pt-5 space-x-4">
+              <div className="flex items-center pt-5 space-x-4">
                 <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 4
                 </h2>
-                <div className="Iex-1 h-px bg-primary-line"></div>
+                <div className="flex-1 h-px bg-primary-line"></div>
               </div>
 
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
                 Delete Inventory:
               </h2>
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
                 If you want to delete any inventory, you can easily do so.
                 <br />
                 <br />
-                <ul className="pl-[15px] list-disc text-primary-activelink">
+                <ul className="pl-[15px] list-disc text-primary-activelink font-bold">
                   <li>
                     Click on the delete icon against the row you want to delete
                     in the inventory’s table.
@@ -394,7 +405,7 @@ const inventory = () => {
                 </ul>
               </div>
 
-              <div className="pl-13 pt-8 Iex justify-center">
+              <div className="pl-13 pt-8 flex justify-center">
                 {DI && (
                   <GatsbyImage
                     image={DI}
@@ -405,12 +416,12 @@ const inventory = () => {
               </div>
               <br />
               <br />
-
-              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
-                Step 5
-              </h2>
-              <div className="Iex-1 h-px bg-primary-line"></div>
-
+              <div className="flex items-center pt-5 space-x-4">
+                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                  Step 5
+                </h2>
+                <div className="flex-1 h-px bg-primary-line"></div>
+              </div>
               <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
                 View Inventory:
               </h2>
@@ -418,7 +429,7 @@ const inventory = () => {
                 You can easily view the details of the inventory. For that:
                 <br />
                 <br />
-                <ul className="pl-[15px] list-disc text-primary-activelink">
+                <ul className="pl-[15px] list-disc text-primary-activelink font-bold">
                   <li>Hover on three dots.</li>
                   <li>Click on view button.</li>
                   <li>Click on delete button.</li>
@@ -427,7 +438,7 @@ const inventory = () => {
                 </ul>
               </div>
 
-              <div className="pl-13 pt-8 Iex justify-center">
+              <div className="pl-13 pt-8 flex justify-center">
                 {VI && (
                   <GatsbyImage
                     image={VI}

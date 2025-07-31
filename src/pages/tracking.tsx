@@ -114,7 +114,7 @@ const maintenance = () => {
               <br />
               <br />
 
-              <h2 className="text-primary-paragraph2 pt-5 text-[19px] font-montserrat font-semibold ">
+              <h2 className="text-primary-paragraph2 pt-5 text-[19px] font-montserrat font-semibold lg:pl-10">
                 Add Check-In
               </h2>
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -295,7 +295,7 @@ const maintenance = () => {
               <br />
               <br />
 
-              <h2 className="text-primary-paragraph2 pt-5 text-[19px] font-montserrat font-semibold ">
+              <h2 className="text-primary-paragraph2 pt-5 text-[19px] font-montserrat font-semibold lg:pl-10">
                 Add Check-Out Usage
               </h2>
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">

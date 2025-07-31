@@ -179,6 +179,7 @@ const Sidebar = React.memo(() => {
     {
       name: "Inventory",
       sublinks: [
+         { name: "Add Inventory", path: "/inventory" },
         { name: "Purchase", path: "/purchase" },
         { name: "Transfer", path: "/emptypage" },
       ],

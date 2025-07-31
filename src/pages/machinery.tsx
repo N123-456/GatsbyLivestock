@@ -451,7 +451,7 @@ const machinery = () => {
                   </li>
                   <li>
                     <span className="text-primary-pheading font-bold">
-                      Modal:
+                      Model:
                     </span>{" "}
                     You can search by the model of the machinery.
                   </li>
