@@ -133,120 +133,118 @@ const addlocation = () => {
               </div>
               <br />
               <br />
-              
-                <div className="flex items-center pt-5 space-x-2">
-                  <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
-                    Step 1
-                  </h2>
-                  <div className="flex-1 h-px bg-primary-line"></div>
-                </div>
-            
 
-              
-                <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
-                  Add Location:
+              <div className="flex items-center pt-5 space-x-2">
+                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                  Step 1
                 </h2>
-                <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
-                  For adding a location:
-                  <br />
-                  <br />
-                  Click on{" "}
-                  <span className="text-primary-activelink font-semibold">
-                    "Add location"
-                  </span>
-                  button.
-                  <br />
-                  Enter the required information.
-                  <br />
-                  First enter the{" "}
-                  <span className="text-primary-activelink font-semibold">
-                    name and type
-                  </span>
-                  : of the location. The type of location can be:
-                  <br />
-                  <br />{" "}
-                  <ul>
-                    <li>
-                      <span className="text-primary-pheading font-semibold">
-                        Animal Enclosure:
-                      </span>
-                      An animal enclosure is a designated space designed to
-                      house and safely contain animals, providing them with a
-                      suitable environment for living and movement.
-                    </li>
-                    <li>
-                      <span className="text-primary-pheading font-semibold">
-                        Buffer Zones:{" "}
-                      </span>
-                      Buffer zones are designated areas created to separate and
-                      protect one region from another, often used to reduce
-                      conflict or impact.
-                    </li>
-                    <li>
-                      <span className="text-primary-pheading font-semibold">
-                        Buildings :{" "}
-                      </span>
-                      Buildings are structures designed for specific purposes,
-                      such as housing, storage, or operations.
-                    </li>
-                    <li>
-                      <span className="text-primary-pheading font-semibold">
-                        Farm Boundaries :{" "}
-                      </span>
-                      Farm boundaries are defined perimeters that mark the
-                      extent of a farm's land.
-                    </li>
-                    <li>
-                      <span className="text-primary-pheading font-semibold">
-                        Fields:{" "}
-                      </span>
-                      Fields are open areas of land used for planting crops or
-                      grazing livestock.
-                    </li>
-                    <li>
-                      <span className="text-primary-pheading font-semibold">
-                        Greenhouse:{" "}
-                      </span>
-                      A greenhouse is a controlled-environment structure
-                      designed for growing plants.
-                    </li>
-                    <li>
-                      <span className="text-primary-pheading font-semibold">
-                        Grow Room:{" "}
-                      </span>
-                      A grow room is an indoor space designed for cultivating
-                      plants under controlled conditions.
-                    </li>
-                    <li>
-                      <span className="text-primary-pheading font-semibold">
-                        Irrigation Zone:{" "}
-                      </span>
-                      Irrigation zones are designated areas within a farm that
-                      receive water through a specific irrigation system.
-                    </li>
-                    <li>
-                      <span className="text-primary-pheading font-semibold">
-                        Paddock:{" "}
-                      </span>
-                      A paddock is an enclosed area of land used for grazing or
-                      exercising livestock.
-                    </li>
-                    <li>
-                      <span className="text-primary-pheading font-semibold">
-                        Pasture:{" "}
-                      </span>
-                      Pasture is land covered with grass or other vegetation
-                      used for grazing livestock.
-                    </li>
-                    <li>
-                      <span className="text-primary-pheading font-semibold">
-                        Other:{" "}
-                      </span>
-                      Any other type other than the above mentioned..
-                    </li>
-                  </ul>
-                </div>
-             
+                <div className="flex-1 h-px bg-primary-line"></div>
+              </div>
+
+              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
+                Add Location:
+              </h2>
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+                For adding a location:
+                <br />
+                <br />
+                Click on{" "}
+                <span className="text-primary-activelink font-semibold">
+                  "Add location"
+                </span>
+                button.
+                <br />
+                Enter the required information.
+                <br />
+                First enter the{" "}
+                <span className="text-primary-activelink font-semibold">
+                  name and type
+                </span>
+                : of the location. The type of location can be:
+                <br />
+                <br />{" "}
+                <ul>
+                  <li>
+                    <span className="text-primary-pheading font-semibold">
+                      Animal Enclosure:
+                    </span>
+                    An animal enclosure is a designated space designed to house
+                    and safely contain animals, providing them with a suitable
+                    environment for living and movement.
+                  </li>
+                  <li>
+                    <span className="text-primary-pheading font-semibold">
+                      Buffer Zones:{" "}
+                    </span>
+                    Buffer zones are designated areas created to separate and
+                    protect one region from another, often used to reduce
+                    conflict or impact.
+                  </li>
+                  <li>
+                    <span className="text-primary-pheading font-semibold">
+                      Buildings :{" "}
+                    </span>
+                    Buildings are structures designed for specific purposes,
+                    such as housing, storage, or operations.
+                  </li>
+                  <li>
+                    <span className="text-primary-pheading font-semibold">
+                      Farm Boundaries :{" "}
+                    </span>
+                    Farm boundaries are defined perimeters that mark the extent
+                    of a farm's land.
+                  </li>
+                  <li>
+                    <span className="text-primary-pheading font-semibold">
+                      Fields:{" "}
+                    </span>
+                    Fields are open areas of land used for planting crops or
+                    grazing livestock.
+                  </li>
+                  <li>
+                    <span className="text-primary-pheading font-semibold">
+                      Greenhouse:{" "}
+                    </span>
+                    A greenhouse is a controlled-environment structure designed
+                    for growing plants.
+                  </li>
+                  <li>
+                    <span className="text-primary-pheading font-semibold">
+                      Grow Room:{" "}
+                    </span>
+                    A grow room is an indoor space designed for cultivating
+                    plants under controlled conditions.
+                  </li>
+                  <li>
+                    <span className="text-primary-pheading font-semibold">
+                      Irrigation Zone:{" "}
+                    </span>
+                    Irrigation zones are designated areas within a farm that
+                    receive water through a specific irrigation system.
+                  </li>
+                  <li>
+                    <span className="text-primary-pheading font-semibold">
+                      Paddock:{" "}
+                    </span>
+                    A paddock is an enclosed area of land used for grazing or
+                    exercising livestock.
+                  </li>
+                  <li>
+                    <span className="text-primary-pheading font-semibold">
+                      Pasture:{" "}
+                    </span>
+                    Pasture is land covered with grass or other vegetation used
+                    for grazing livestock.
+                  </li>
+                  <li>
+                    <span className="text-primary-pheading font-semibold">
+                      Other:{" "}
+                    </span>
+                    Any other type other than the above mentioned..
+                  </li>
+                </ul>
+              </div>
+
               <div className="pl-13 pt-8 flex justify-center">
                 {AL && (
                   <GatsbyImage
@@ -258,79 +256,78 @@ const addlocation = () => {
               </div>
               <br />
               <br />
-            
-                <div className="text-primary-paragraph2 pt-5 text-[18px] font-montserrat font-normal lg:px-10">
-                  <p className="text-primary-paragraph2 font-bold">
-                    Enter the required information.
-                  </p>
-                  <br />
-                  <ul className="text-primary-activelink font-semibold list-disc">
-                    <li>Province</li>
-                    <li>Division</li>
-                    <li>District</li>
-                    <li>Tehsil</li>
-                    <li>Address</li>
-                  </ul>
-                  <div className="pl-13 pt-8 flex justify-center">
-                    {LD && (
-                      <GatsbyImage
-                        image={LD}
-                        alt="Startups illustration"
-                        className="bg-white w-[1000.58px] "
-                      />
-                    )}
-                  </div>
+
+              <div className="text-primary-paragraph2 pt-5 text-[18px] font-montserrat font-normal lg:px-10">
+                <p className="text-primary-paragraph2 font-bold">
+                  Enter the required information.
+                </p>
+                <br />
+                <ul className="text-primary-activelink font-semibold list-disc">
+                  <li>Province</li>
+                  <li>Division</li>
+                  <li>District</li>
+                  <li>Tehsil</li>
+                  <li>Address</li>
+                </ul>
+                <div className="pl-13 pt-8 flex justify-center">
+                  {LD && (
+                    <GatsbyImage
+                      image={LD}
+                      alt="Startups illustration"
+                      className="bg-white w-[1000.58px] "
+                    />
+                  )}
                 </div>
-             
+              </div>
+
               <br />
               <br />
-             
-                <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
-                  <p className="text-primary-paragraph2 font-bold">
-                    Enter the additional information including:
-                  </p>
-                  <br />
-                  <ul className="text-primary-subheading font-normal text-[18px] font-montserrat pt-5">
-                    <li>
-                      <span className="text-primary-pheading font-semibold">
-                        Ownership Status
-                      </span>
-                      : What is the ownership status of the land. Whether it is:
-                    </li>
-                    <li>
-                      <span className="text-primary-pheading font-semibold">
-                        Self Owned
-                      </span>
-                      : If the land is self owned then enter what is the
-                      estimated cost of the land.
-                    </li>
-                    <li>
-                      <span className="text-primary-pheading font-semibold">
-                        Crop Sharing
-                      </span>
-                      : If the land ownership status is crop sharing, enter the
-                      crop sharing percentage and upload the terms of share
-                      tenancy document.
-                    </li>
-                    <li>
-                      <span className="text-primary-pheading font-semibold">
-                        Leased
-                      </span>
-                      : If the land is on lease, enter the annual lease rate.
-                    </li>
-                    <li>Select the soil type of the land.</li>
-                    <li>
-                      Choose irrigation method: how your land is irrigated.
-                      Either the land is:
-                    </li>
-                  </ul>
-                  <ul className="text-primary-activelink list-disc font-semibold pl-[15px]">
-                    <li>Rainfed</li>
-                    <li>By canal</li>
-                    <li>By Tube Wells</li>
-                    <li>By Dug Wells</li>
-                  </ul>
-                
+
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+                <p className="text-primary-paragraph2 font-bold">
+                  Enter the additional information including:
+                </p>
+                <br />
+                <ul className="text-primary-subheading font-normal text-[18px] font-montserrat pt-5">
+                  <li>
+                    <span className="text-primary-pheading font-semibold">
+                      Ownership Status
+                    </span>
+                    : What is the ownership status of the land. Whether it is:
+                  </li>
+                  <li>
+                    <span className="text-primary-pheading font-semibold">
+                      Self Owned
+                    </span>
+                    : If the land is self owned then enter what is the estimated
+                    cost of the land.
+                  </li>
+                  <li>
+                    <span className="text-primary-pheading font-semibold">
+                      Crop Sharing
+                    </span>
+                    : If the land ownership status is crop sharing, enter the
+                    crop sharing percentage and upload the terms of share
+                    tenancy document.
+                  </li>
+                  <li>
+                    <span className="text-primary-pheading font-semibold">
+                      Leased
+                    </span>
+                    : If the land is on lease, enter the annual lease rate.
+                  </li>
+                  <li>Select the soil type of the land.</li>
+                  <li>
+                    Choose irrigation method: how your land is irrigated. Either
+                    the land is:
+                  </li>
+                </ul>
+                <ul className="text-primary-activelink list-disc font-semibold pl-[15px]">
+                  <li>Rainfed</li>
+                  <li>By canal</li>
+                  <li>By Tube Wells</li>
+                  <li>By Dug Wells</li>
+                </ul>
               </div>
               <div className="pl-13 pt-8 flex justify-center">
                 {LI && (
@@ -343,207 +340,185 @@ const addlocation = () => {
               </div>
               <br />
               <br />
-              <div className="slb pt-5">
-                <TextToSpeech textSelector=".slb" />
 
-                <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
-                  <p className="text-primary-paragraph2 font-bold">
-                    Choose the location boundaries:
-                  </p>
-                  <br />
-                  <h1 className="font-semibold">Mark Boundaries: </h1>
-                  <ul className="text-primary-subheading font-normal text-[18px] font-montserrat ">
-                    <li>
-                      Click on the{" "}
-                      <span className="text-primary-activelink font-semibold">
-                        “Mark Boundaries”
-                      </span>{" "}
-                      button. A satellite imagery map will open.
-                    </li>
-                    <li>Enter the location name in the search bar.</li>
-                    <li>Zoom In or zoom out to reach the exact location.</li>
-                    <li>
-                      After reaching the desired location mark the boundaries of
-                      your farm location.
-                    </li>
-                    <li>
-                      Additionally, you can Upload KML file to get the location
-                      marked on the map.
-                    </li>
-                    <li>
-                      After the boundaries are marked, click on the save button.
-                    </li>
-                  </ul>
-                  <div className="pl-13 pt-8 flex justify-center">
-                    {MB && (
-                      <GatsbyImage
-                        image={MB}
-                        alt="Startups illustration"
-                        className="bg-white w-[1000.58px] "
-                      />
-                    )}
-                  </div>
-                  <br />
-                  <br />
-                  <ul className="pt-4 list-disc">
-                    <li>
-                      Optionally, you can upload the image of your farm
-                      location.
-                    </li>
-                    <li>
-                      When you will mark the boundaries, automatically area of
-                      your land will be calculated.
-                    </li>
-                    <li>You can change the unit of area as per your choice.</li>
-                  </ul>
-                  <div className="pl-13 pt-8 flex justify-center">
-                    {UI && (
-                      <GatsbyImage
-                        image={UI}
-                        alt="Startups illustration"
-                        className="bg-white w-[1000.58px] "
-                      />
-                    )}
-                  </div>
-                </div>
-              </div>
-
-              <br />
-              <br />
-
-              <div className="step2 pt-5">
-                <TextToSpeech textSelector=".step2" />
-                <div className="flex items-center space-x-4">
-                  <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
-                    Step 2
-                  </h2>
-                  <div className="flex-1 h-px bg-primary-line"></div>
-                </div>
-              </div>
-              <div className="sl pt-5">
-                <TextToSpeech textSelector=".sl" />
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
-                  Search Location:
-                </h2>
-                <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
-                  You can search the location from the list of farms of
-                  locations present in the system. You can search based on
-                  either:
-                  <br />
-                  <br />
-                  <p>
-                    <span className="text-primary-pheading font-bold">
-                      Name:
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+                <p className="text-primary-paragraph2 font-bold">
+                  Choose the location boundaries:
+                </p>
+                <br />
+                <h1 className="font-semibold">Mark Boundaries: </h1>
+                <ul className="text-primary-subheading font-normal text-[18px] font-montserrat ">
+                  <li>
+                    Click on the{" "}
+                    <span className="text-primary-activelink font-semibold">
+                      “Mark Boundaries”
                     </span>{" "}
-                    You can search by the name of the location.
-                  </p>{" "}
-                  <p>
-                    <span className="text-primary-pheading font-bold">
-                      Type:
-                    </span>{" "}
-                    You can search based on particular type of the location
-                    which can be:
-                  </p>
-                  <br />
-                  <ul className="pl-[15px] text-primary-activelink font-semibold list-disc">
-                    <li>All</li>
-                    <li>Animal Enclosures</li>
-                    <li>Buffer Zones</li>
-                    <li>Buildings</li>
-                    <li>Farm Boundaries</li>
-                    <li>Fields</li>
-                    <li>Greenhouse</li>
-                    <li>Grow Room</li>
-                    <li>Irrigation Zones</li>
-                    <li>Paddock</li>
-                    <li>Pasture</li>
-                    <li>Others</li>
-                  </ul>
-                  <p>
-                    Then click on the Search button. Also, you can click on the
-                    refresh button to refresh the data.
-                  </p>
-                  <div className="pl-13 pt-8 flex justify-center">
-                    {SL && (
-                      <GatsbyImage
-                        image={SL}
-                        alt="Startups illustration"
-                        className="bg-white w-[1000.58px] "
-                      />
-                    )}
-                  </div>
+                    button. A satellite imagery map will open.
+                  </li>
+                  <li>Enter the location name in the search bar.</li>
+                  <li>Zoom In or zoom out to reach the exact location.</li>
+                  <li>
+                    After reaching the desired location mark the boundaries of
+                    your farm location.
+                  </li>
+                  <li>
+                    Additionally, you can Upload KML file to get the location
+                    marked on the map.
+                  </li>
+                  <li>
+                    After the boundaries are marked, click on the save button.
+                  </li>
+                </ul>
+                <div className="pl-13 pt-8 flex justify-center">
+                  {MB && (
+                    <GatsbyImage
+                      image={MB}
+                      alt="Startups illustration"
+                      className="bg-white w-[1000.58px] "
+                    />
+                  )}
+                </div>
+                <br />
+                <br />
+                <ul className="pt-4 list-disc">
+                  <li>
+                    Optionally, you can upload the image of your farm location.
+                  </li>
+                  <li>
+                    When you will mark the boundaries, automatically area of
+                    your land will be calculated.
+                  </li>
+                  <li>You can change the unit of area as per your choice.</li>
+                </ul>
+                <div className="pl-13 pt-8 flex justify-center">
+                  {UI && (
+                    <GatsbyImage
+                      image={UI}
+                      alt="Startups illustration"
+                      className="bg-white w-[1000.58px] "
+                    />
+                  )}
                 </div>
               </div>
+
               <br />
               <br />
-              <div className="s3 pt-5">
-                <TextToSpeech textSelector=".s3" />
-                <div className="flex items-center space-x-4">
-                  <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
-                    Step 3
-                  </h2>
-                  <div className="flex-1 h-px bg-primary-line"></div>
-                </div>
-              </div>
-              <div className="el pt-5">
-                <TextToSpeech textSelector=".el" />
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
-                  Edit Location:
+
+              <div className="flex items-center pt-5 space-x-4">
+                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                  Step 2
                 </h2>
-                <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
-                  If any location details changes, you can easily edit the
-                  details. For that:
-                  <br />
-                  <br />
-                  <ul className="pl-[15px] text-primary-activelink font-semibold list-disc">
-                    <li>
-                      Click on the edit icon against the location you want to
-                      edit.
-                    </li>
-                    <li>Location details screen will open.</li>
-                    <li>Click on the field you want to edit.</li>
-                    <li>Make changes in the fields</li>
-                    <li>Click on submit button.</li>
-                    <li>
-                      Location details will be edited/updated successfully.
-                    </li>
-                  </ul>
+                <div className="flex-1 h-px bg-primary-line"></div>
+              </div>
+
+              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+                Search Location:
+              </h2>
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+                You can search the location from the list of farms of locations
+                present in the system. You can search based on either:
+                <br />
+                <br />
+                <p>
+                  <span className="text-primary-pheading font-bold">Name:</span>{" "}
+                  You can search by the name of the location.
+                </p>{" "}
+                <p>
+                  <span className="text-primary-pheading font-bold">Type:</span>{" "}
+                  You can search based on particular type of the location which
+                  can be:
+                </p>
+                <br />
+                <ul className="pl-[15px] text-primary-activelink font-semibold list-disc">
+                  <li>All</li>
+                  <li>Animal Enclosures</li>
+                  <li>Buffer Zones</li>
+                  <li>Buildings</li>
+                  <li>Farm Boundaries</li>
+                  <li>Fields</li>
+                  <li>Greenhouse</li>
+                  <li>Grow Room</li>
+                  <li>Irrigation Zones</li>
+                  <li>Paddock</li>
+                  <li>Pasture</li>
+                  <li>Others</li>
+                </ul>
+                <p>
+                  Then click on the Search button. Also, you can click on the
+                  refresh button to refresh the data.
+                </p>
+                <div className="pl-13 pt-8 flex justify-center">
+                  {SL && (
+                    <GatsbyImage
+                      image={SL}
+                      alt="Startups illustration"
+                      className="bg-white w-[1000.58px] "
+                    />
+                  )}
                 </div>
               </div>
-              <div className="s4 pt-5">
-                <TextToSpeech textSelector=".s4" />
-                <div className="flex items-center space-x-4">
-                  <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
-                    Step 4
-                  </h2>
-                  <div className="flex-1 h-px bg-primary-line"></div>
-                </div>
-              </div>
-              <div className="dl pt-5">
-                <TextToSpeech textSelector=".dl" />
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
-                  Delete Location:
+
+              <br />
+              <br />
+
+              <div className="flex items-center pt-5 space-x-4">
+                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                  Step 3
                 </h2>
-                <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
-                  If you no longer need any location or that location no more
-                  belongs to you and wants to delete the location, you can
-                  easily do so.
-                  <br />
-                  <br />
-                  <ul className="pl-[15px] text-primary-activelink font-semibold list-disc">
-                    <li>
-                      Click on the delete icon against the row you want to
-                      delete in the location’s table.
-                    </li>
-                    <li>
-                      A dialogue box will appear to confirm whether you want to
-                      delete or not.
-                    </li>
-                    <li>Click on delete button.</li>
-                    <li>Location will be deleted successfully.</li>
-                  </ul>
-                </div>
+                <div className="flex-1 h-px bg-primary-line"></div>
               </div>
+
+              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+                Edit Location:
+              </h2>
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+                If any location details changes, you can easily edit the
+                details. For that:
+                <br />
+                <br />
+                <ul className="pl-[15px] text-primary-activelink font-semibold list-disc">
+                  <li>
+                    Click on the edit icon against the location you want to
+                    edit.
+                  </li>
+                  <li>Location details screen will open.</li>
+                  <li>Click on the field you want to edit.</li>
+                  <li>Make changes in the fields</li>
+                  <li>Click on submit button.</li>
+                  <li>Location details will be edited/updated successfully.</li>
+                </ul>
+              </div>
+
+              <div className="flex items-center pt-5 space-x-4">
+                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                  Step 4
+                </h2>
+                <div className="flex-1 h-px bg-primary-line"></div>
+              </div>
+
+              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+                Delete Location:
+              </h2>
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+                If you no longer need any location or that location no more
+                belongs to you and wants to delete the location, you can easily
+                do so.
+                <br />
+                <br />
+                <ul className="pl-[15px] text-primary-activelink font-semibold list-disc">
+                  <li>
+                    Click on the delete icon against the row you want to delete
+                    in the location’s table.
+                  </li>
+                  <li>
+                    A dialogue box will appear to confirm whether you want to
+                    delete or not.
+                  </li>
+                  <li>Click on delete button.</li>
+                  <li>Location will be deleted successfully.</li>
+                </ul>
+              </div>
+
               <div className="pl-13 pt-8 flex justify-center">
                 {DL && (
                   <GatsbyImage
@@ -555,18 +530,16 @@ const addlocation = () => {
               </div>
               <br />
               <br />
-              <div className="step5">
-                <TextToSpeech textSelector=".step5" />
-                <div className="flex items-center space-x-4">
+           
+                <div className="flex items-center pt-5 space-x-4">
                   <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                     Step 5
                   </h2>
                   <div className="flex-1 h-px bg-primary-line"></div>
                 </div>
-              </div>
-              <div className="vl">
-                <TextToSpeech textSelector=".vl" />
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+            
+            
+                <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
                   View Location:
                 </h2>
                 <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -583,7 +556,7 @@ const addlocation = () => {
                     <li>You can print the details of the location.</li>
                   </ul>
                 </div>
-              </div>
+            
               <div className="pl-13 pt-8 flex justify-center">
                 {VL && (
                   <GatsbyImage

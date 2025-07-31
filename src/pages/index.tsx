@@ -86,20 +86,18 @@ const IndexPage = () => {
                   provide you an overview of the farm.
                 </p>
              
-              <div className="step1 pt-5">
-                <TextToSpeech textSelector=".step1" />
-                <div className="flex items-center space-x-4">
+            
+                <div className="flex items-center pt-5 space-x-4">
                   <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10 ">
                     Step 1
                   </h2>
                   <div className="flex-1 h-px bg-primary-line"></div>
                 </div>
-              </div>
-              <div>
+             
+            
                 {" "}
-                <div className="lo pt-5">
-                  <TextToSpeech textSelector=".lo" />
-                  <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+              
+                  <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
                     Land Overview
                   </h2>
                   <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:pl-10">
@@ -121,21 +119,19 @@ const IndexPage = () => {
                       />
                     )}
                   </div>
-                </div>
-              </div>
-              <div className="step2 pt-5">
-                <TextToSpeech textSelector=".step2" />
-                <div className="flex items-center space-x-4">
+                
+            
+             
+                <div className="flex items-center pt-5 space-x-4">
                   <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10 ">
                     Step 2
                   </h2>
                   <div className="flex-1 h-px bg-primary-line"></div>
                 </div>
-              </div>
-              <div>
+              
+             
                 {" "}
-                <div className="ce pt-5">
-                  <TextToSpeech textSelector=".ce" />
+                
                   <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10 ">
                     Cost Estimation:
                   </h2>
@@ -147,7 +143,7 @@ const IndexPage = () => {
                     further refine the cost estimations by filtering them based
                     on your preferred date range.
                   </p>
-                </div>
+             
                 <div className="pl-13 pt-8 flex justify-center">
                   {costest && (
                     <GatsbyImage
@@ -157,26 +153,24 @@ const IndexPage = () => {
                     />
                   )}
                 </div>
-              </div>
-              <div className="step3 pt-5">
-                <TextToSpeech textSelector=".step3" />
+            
+              
                 <div className="flex items-center pt-5 space-x-4">
                   <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                     Step 3
                   </h2>
                   <div className="flex-1 h-px bg-primary-line"></div>
                 </div>
-              </div>{" "}
-              <div className="ut pt-5">
-                <TextToSpeech textSelector=".ut" />
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+            
+              
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
                   Upcoming Tasks:
                 </h2>
                 <p className="text-primary-paragraph text-[18px] font-montserrat font-normal  lg:pl-10">
                   In this portion of dashboard, you can see list of top three
                   upcoming tasks to be done along with their due dates.
                 </p>
-              </div>
+            
               <div className="pl-13 pt-8 flex justify-center">
                 {uptask && (
                   <GatsbyImage
@@ -186,18 +180,16 @@ const IndexPage = () => {
                   />
                 )}
               </div>
-              <div className="step4 pt-5">
-                <TextToSpeech textSelector=".step4" />
-                <div className="flex items-center space-x-4">
+              
+                <div className="flex items-center pt-5 space-x-4">
                   <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                     Step 4
                   </h2>
                   <div className="flex-1 h-px bg-primary-line"></div>
                 </div>
-              </div>{" "}
-              <div className="menu pt-5">
-                <TextToSpeech textSelector=".menu" />
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+              
+             
+                <h2 className="text-primary-subheading font-semibold text-[22px] pt-5 font-montserrat lg:pl-10">
                   Menu:
                 </h2>
                 <p className="text-primary-paragraph2 text-[19px] font-montserrat font-normal lg:px-10">
@@ -278,7 +270,7 @@ const IndexPage = () => {
                   understanding of the system. The later section of document
                   provides the details of the each of option.
                 </p>
-              </div>
+             
               <div className="pl-13 pt-8 flex justify-center">
                 {menu && (
                   <GatsbyImage

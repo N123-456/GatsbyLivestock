@@ -56,54 +56,51 @@ const maintenance = () => {
           <div className="flex flex-col justify-center">
             <div className="acu max-w-7xl w-full px-4 lg:px-4  text-justify">
               <div className="flex items-center pt-5">
-                              <div className="hidden lg:block">
-                                <TextToSpeech textSelector=".acu" />
-                              </div>
-                              <h2 className="text-primary-activelink font-semibold text-[30px] font-montserrat ">
-                                Starting Guide with Machinery Usage Tracking:
-                              </h2>
-                            </div>
-                            <div className="flex items-center pt-5">
-                              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
-                                Introduction
-                              </h2>
-                              <div className=" lg:hidden">
-                                <TextToSpeech textSelector=".acu" />
-                              </div>
-                            </div>
-              
-                <div className="flex items-center space-x-4 pt-5">
-                  <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
-                    Step 1
-                  </h2>
-                  <div className="flex-1 h-px bg-primary-line"></div>
+                <div className="hidden lg:block">
+                  <TextToSpeech textSelector=".acu" />
                 </div>
-             
-              <div className="adu pt-5">
-                <TextToSpeech textSelector=".adu" />
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
-                  Add Check-In Usage:
+                <h2 className="text-primary-activelink font-semibold text-[30px] font-montserrat ">
+                  Starting Guide with Machinery Usage Tracking:
                 </h2>
-                <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
-                  <p>
-                    The check-in process involves recording details when a
-                    machine is returned after use. This includes noting the time
-                    and date of return, the operator's name, and the machine's
-                    current condition. A thorough inspection is carried out to
-                    check for any signs of damage, wear and tear, fuel levels,
-                    or technical issues. If any problems are found, they are
-                    documented for maintenance or repair. The machine is then
-                    cleaned, refuelled (if required), and properly stored in its
-                    designated area to ensure it is ready for the next
-                    operation. Recording this information in a logbook or farm
-                    management system helps maintain accurate usage records,
-                    track machine health, and ensure accountability. You can
-                    visually analyse the check in usage of the machinery. You
-                    can easily filter out weekly, monthly and yearly check in
-                    usage.{" "}
-                  </p>
+              </div>
+              <div className="flex items-center pt-5">
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                  Introduction
+                </h2>
+                <div className=" lg:hidden">
+                  <TextToSpeech textSelector=".acu" />
                 </div>
               </div>
+
+              <div className="flex items-center space-x-4 pt-5">
+                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                  Step 1
+                </h2>
+                <div className="flex-1 h-px bg-primary-line"></div>
+              </div>
+
+              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
+                Add Check-In Usage:
+              </h2>
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+                <p>
+                  The check-in process involves recording details when a machine
+                  is returned after use. This includes noting the time and date
+                  of return, the operator's name, and the machine's current
+                  condition. A thorough inspection is carried out to check for
+                  any signs of damage, wear and tear, fuel levels, or technical
+                  issues. If any problems are found, they are documented for
+                  maintenance or repair. The machine is then cleaned, refuelled
+                  (if required), and properly stored in its designated area to
+                  ensure it is ready for the next operation. Recording this
+                  information in a logbook or farm management system helps
+                  maintain accurate usage records, track machine health, and
+                  ensure accountability. You can visually analyse the check in
+                  usage of the machinery. You can easily filter out weekly,
+                  monthly and yearly check in usage.{" "}
+                </p>
+              </div>
+
               <br />
               <div className="pl-13 pt-8 flex justify-center">
                 {acu && (
@@ -116,12 +113,11 @@ const maintenance = () => {
               </div>
               <br />
               <br />
-              <div className="aci pt-5">
-                <TextToSpeech textSelector=".aci" />
-                <h2 className="text-primary-paragraph2 text-[19px] font-montserrat font-semibold ">
-                  Add Check-In
-                </h2>
- <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+
+              <h2 className="text-primary-paragraph2 pt-5 text-[19px] font-montserrat font-semibold ">
+                Add Check-In
+              </h2>
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
                 <ul>
                   <li>
                     Go to{" "}
@@ -247,7 +243,7 @@ const maintenance = () => {
                   <li>Once complete, click the Submit button.</li>
                   <li>Check In usage will be added successfully.</li>
                 </ul>
-              </div></div>
+              </div>
               <div className="pl-13 pt-8 flex justify-center">
                 {aci && (
                   <GatsbyImage
@@ -257,17 +253,15 @@ const maintenance = () => {
                   />
                 )}
               </div>
-<div className="s2 pt-5">
-                <TextToSpeech textSelector=".s2" />
-              <div className="flex items-center space-x-4">
+
+              <div className="flex items-center pt-5 space-x-4">
                 <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 2
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
-              </div></div>
-              <div className="acu pt-5">
-                <TextToSpeech textSelector=".acu" />
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+              </div>
+
+              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
                 Add Check-Out Usage:
               </h2>
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -286,25 +280,25 @@ const maintenance = () => {
                   ensure accountability. You can visually analyse the check in
                   usage of the machinery. You can easily filter out weekly,
                   monthly and yearly check in usage.{" "}
-                </p></div></div>
-                <br />
-                <div className="pl-13 pt-8 flex justify-center">
-                  {acou && (
-                    <GatsbyImage
-                      image={acou}
-                      alt="Startups illustration"
-                      className="bg-white w-[1000.58px] "
-                    />
-                  )}
-                </div>
-                <br />
-                <br />
-                      <div className="acou pt-5">
-                <TextToSpeech textSelector=".acou" />
-                <h2 className="text-primary-paragraph2 text-[19px] font-montserrat font-semibold ">
-                  Add Check-Out Usage
-                </h2>
-                              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+                </p>
+              </div>
+              <br />
+              <div className="pl-13 pt-8 flex justify-center">
+                {acou && (
+                  <GatsbyImage
+                    image={acou}
+                    alt="Startups illustration"
+                    className="bg-white w-[1000.58px] "
+                  />
+                )}
+              </div>
+              <br />
+              <br />
+
+              <h2 className="text-primary-paragraph2 pt-5 text-[19px] font-montserrat font-semibold ">
+                Add Check-Out Usage
+              </h2>
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
                 <p>To add check out details:</p>
                 <ul>
                   <li>
@@ -431,20 +425,19 @@ const maintenance = () => {
                   <li>Once complete, click the Submit button.</li>
                   <li>Check In usage will be added successfully.</li>
                 </ul>
-</div></div>
-                <div className="pl-13 pt-8 flex justify-center">
-                  {acou1 && (
-                    <GatsbyImage
-                      image={acou1}
-                      alt="Startups illustration"
-                      className="bg-white w-[1000.58px] "
-                    />
-                  )}
-                </div>
+              </div>
+              <div className="pl-13 pt-8 flex justify-center">
+                {acou1 && (
+                  <GatsbyImage
+                    image={acou1}
+                    alt="Startups illustration"
+                    className="bg-white w-[1000.58px] "
+                  />
+                )}
               </div>
             </div>
           </div>
-       
+        </div>
       </PrivateRoute>
     </AppLayout>
   );

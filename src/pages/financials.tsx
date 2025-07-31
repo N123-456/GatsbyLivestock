@@ -114,8 +114,7 @@ const contact = () => {
               </div>
 
               <br />
-              <div className="glr pt-5">
-                <TextToSpeech textSelector=".glr" />
+           
                 <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
                   General Ledger Report:
                 </h2>
@@ -140,7 +139,7 @@ const contact = () => {
                     general ledger report.{" "}
                   </p>
                 </div>
-              </div>
+              
               <br />
               <div className="pl-13 pt-8 flex justify-center">
                 {glr && (

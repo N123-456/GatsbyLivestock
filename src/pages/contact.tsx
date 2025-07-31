@@ -88,29 +88,25 @@ const contact = () => {
                 designation. You can add, delete, edit, search and view
                 contacts.
               </p>
-            </div>
-            <div className="pl-13 pt-8 flex justify-center">
-              {cont && (
-                <GatsbyImage
-                  image={cont}
-                  alt="Startups illustration"
-                  className="bg-white w-[1000.58px] "
-                />
-              )}
-            </div>
-            <div className="step1">
-              <TextToSpeech textSelector=".step1" />
-              <div className="flex items-center space-x-4">
+
+              <div className="pl-13 pt-8 flex justify-center">
+                {cont && (
+                  <GatsbyImage
+                    image={cont}
+                    alt="Startups illustration"
+                    className="bg-white w-[1000.58px] "
+                  />
+                )}
+              </div>
+
+              <div className="flex items-center pt-5 space-x-4">
                 <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 1
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
-            </div>
 
-            <div className="add pt-5">
-              <TextToSpeech textSelector=".add" />
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat  lg:pl-10">
+              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat  lg:pl-10">
                 Add New Contact:
               </h2>
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -224,30 +220,26 @@ const contact = () => {
                 <p>Click on the submit button</p>
                 <p>New Contact will be created</p>
               </div>
-            </div>
-            <br />
-            <div className="pl-13 pt-8 flex justify-center">
-              {anc && (
-                <GatsbyImage
-                  image={anc}
-                  alt="Startups illustration"
-                  className="bg-white w-[1000.58px] "
-                />
-              )}
-            </div>
-            <div className="step2 pt-5">
-              <TextToSpeech textSelector=".step2" />
-              <div className="flex items-center space-x-4">
+
+              <br />
+              <div className="pl-13 pt-8 flex justify-center">
+                {anc && (
+                  <GatsbyImage
+                    image={anc}
+                    alt="Startups illustration"
+                    className="bg-white w-[1000.58px] "
+                  />
+                )}
+              </div>
+
+              <div className="flex items-center pt-5 space-x-4">
                 <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 2
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
-            </div>
 
-            <div className="search pt-5">
-              <TextToSpeech textSelector=".search" />
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
                 Search Contact:
               </h2>
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -302,19 +294,15 @@ const contact = () => {
                   </div>
                 </ul>
               </div>
-            </div>
-            <div className="step3 pt-5">
-              <TextToSpeech textSelector=".step3" />
-              <div className="flex items-center space-x-4">
+
+              <div className="flex items-center pt-5 space-x-4">
                 <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 3
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
-            </div>
-            <div className="ec pt-5">
-              <TextToSpeech textSelector=".ec" />
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+
+              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
                 Edit Contact:
               </h2>
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -331,19 +319,15 @@ const contact = () => {
                   <li>Contact details will be edited/updated successfully.</li>
                 </ul>
               </div>
-            </div>
-            <div className="step4 pt-5">
-              <TextToSpeech textSelector=".step4" />
-              <div className="flex items-center space-x-4">
+
+              <div className="flex items-center pt-5 space-x-4">
                 <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 4
                 </h2>
                 <div className="flex-1 h-px bg-primary-line "></div>
               </div>
-            </div>
-            <div className="dc pt-5">
-              <TextToSpeech textSelector=".dc" />
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+
+              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
                 Delete Contact:
               </h2>
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -364,31 +348,28 @@ const contact = () => {
                   <li>Contact will be deleted successfully.</li>
                 </ul>
               </div>
-            </div>
-            <br />
-            <div className="pl-13 pt-8 flex justify-center">
-              {dc && (
-                <GatsbyImage
-                  image={dc}
-                  alt="Startups illustration"
-                  className="bg-white w-[1000.58px] "
-                />
-              )}
-            </div>
-            <br />
-            <br />
-            <div className="step5 pt-5">
-              <TextToSpeech textSelector=".step5" />
-              <div className="flex items-center space-x-4">
+
+              <br />
+              <div className="pl-13 pt-8 flex justify-center">
+                {dc && (
+                  <GatsbyImage
+                    image={dc}
+                    alt="Startups illustration"
+                    className="bg-white w-[1000.58px] "
+                  />
+                )}
+              </div>
+              <br />
+              <br />
+
+              <div className="flex items-center pt-5 space-x-4">
                 <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 5
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
-            </div>
-            <div className="vc pt-5">
-              <TextToSpeech textSelector=".vc" />
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+
+              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
                 View Contact:
               </h2>
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -405,16 +386,17 @@ const contact = () => {
                   </li>
                 </ul>
               </div>
-            </div>
-            <br />
-            <div className="pl-13 pt-8 flex justify-center">
-              {vc && (
-                <GatsbyImage
-                  image={vc}
-                  alt="Startups illustration"
-                  className="bg-white w-[1000.58px] "
-                />
-              )}
+
+              <br />
+              <div className="pl-13 pt-8 flex justify-center">
+                {vc && (
+                  <GatsbyImage
+                    image={vc}
+                    alt="Startups illustration"
+                    className="bg-white w-[1000.58px] "
+                  />
+                )}
+              </div>
             </div>
           </div>
         </div>

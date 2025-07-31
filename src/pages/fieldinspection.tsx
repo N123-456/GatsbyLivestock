@@ -73,22 +73,22 @@ const fieldinspection = () => {
         <div>
           <div className="flex flex-col justify-center">
             <div className="acu max-w-7xl w-full px-4 lg:px-4  text-justify">
-             <div className="flex items-center pt-5">
-                             <div className="hidden lg:block">
-                               <TextToSpeech textSelector=".acu" />
-                             </div>
-                             <h2 className="text-primary-activelink font-semibold text-[30px] font-montserrat ">
-                               Starting Guide for Field Inspection:
-                             </h2>
-                           </div>
-                           <div className="flex items-center pt-5">
-                             <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
-                               Introduction
-                             </h2>
-                             <div className=" lg:hidden">
-                               <TextToSpeech textSelector=".acu" />
-                             </div>
-                           </div>
+              <div className="flex items-center pt-5">
+                <div className="hidden lg:block">
+                  <TextToSpeech textSelector=".acu" />
+                </div>
+                <h2 className="text-primary-activelink font-semibold text-[30px] font-montserrat ">
+                  Starting Guide for Field Inspection:
+                </h2>
+              </div>
+              <div className="flex items-center pt-5">
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                  Introduction
+                </h2>
+                <div className=" lg:hidden">
+                  <TextToSpeech textSelector=".acu" />
+                </div>
+              </div>
 
               <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10">
                 The Field Inspection is used to monitor and evaluate the
@@ -116,233 +116,217 @@ const fieldinspection = () => {
               </div>
               <br />
               <br />
-              <div className="step1 pt-5">
-                <TextToSpeech textSelector=".step1" />
-                <div className="flex items-center space-x-4">
-                  <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
-                    Step 1
-                  </h2>
-                  <div className="flex-1 h-px bg-primary-line"></div>
-                </div>
-              </div>
-              <div className="afi pt-5">
-                <TextToSpeech textSelector=".afi" />
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
-                  Add Field Inspection:
+
+              <div className="flex items-center pt-5 space-x-4">
+                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                  Step 1
                 </h2>
-                <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
-                  <p>For adding Field Inspection:</p>
-                  <br />
+                <div className="flex-1 h-px bg-primary-line"></div>
+              </div>
+
+              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
+                Add Field Inspection:
+              </h2>
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+                <p>For adding Field Inspection:</p>
+                <br />
+                Click on{" "}
+                <span className="text-primary-activelink font-bold">
+                  "Planting"
+                </span>{" "}
+                tab.
+                <br />
+                <p>
+                  Click on three dots against the crop you want to add field
+                  inspection data.
+                </p>
+                <p>Choose field inspection from the options.</p>
+                <p>
                   Click on{" "}
                   <span className="text-primary-activelink font-bold">
-                    "Planting"
+                    “Add Field Inspection”
                   </span>{" "}
-                  tab.
+                  button.
+                </p>
+                <p>Enter the required details as follows:</p>
+                <br />
+                <ul>
+                  <li>
+                    <span className="text-primary-pheading font-semibold">
+                      Field Inspection Details
+                    </span>
+                    : When was the field inspection performed, who was the field
+                    scout, why the field inspection was conducted, how much cost
+                    was incurred on the field inspection, transaction details
+                    like head of accounts, transaction id/ cheque no in case
+                    head of accounts is bank, who was the customer.
+                  </li>
+                  <li>
+                    <span className="text-primary-pheading font-semibold">
+                      Plant Health Levels
+                    </span>
+                    : How much has the pest damaged the crop (low, high), is the
+                    crop diseased (infested, highly infested, low), and how much
+                    weeds are there in the crop (severe, less or none).
+                  </li>
+                  <li>
+                    <span className="text-primary-pheading font-semibold">
+                      Disaster Level
+                    </span>
+                    : Intensity of heat wave (Severe, Moderate, Minor),
+                    intensity of rainfall (Severe, Moderate, Minor), effect of
+                    wind on crop (Severe, Moderate, Minor), smog density
+                    (Severe, Moderate, Minor), hailstorm intensity (Severe,
+                    Moderate, Minor), and frost condition (Severe, Moderate,
+                    Minor).
+                  </li>
                   <br />
-                  <p>
-                    Click on three dots against the crop you want to add field
-                    inspection data.
-                  </p>
-                  <p>Choose field inspection from the options.</p>
-                  <p>
-                    Click on{" "}
-                    <span className="text-primary-activelink font-bold">
-                      “Add Field Inspection”
-                    </span>{" "}
-                    button.
-                  </p>
-                  <p>Enter the required details as follows:</p>
-                  <br />
-                  <ul>
-                    <li>
-                      <span className="text-primary-pheading font-semibold">
-                        Field Inspection Details
-                      </span>
-                      : When was the field inspection performed, who was the
-                      field scout, why the field inspection was conducted, how
-                      much cost was incurred on the field inspection,
-                      transaction details like head of accounts, transaction id/
-                      cheque no in case head of accounts is bank, who was the
-                      customer.
-                    </li>
-                    <li>
-                      <span className="text-primary-pheading font-semibold">
-                        Plant Health Levels
-                      </span>
-                      : How much has the pest damaged the crop (low, high), is
-                      the crop diseased (infested, highly infested, low), and
-                      how much weeds are there in the crop (severe, less or
-                      none).
-                    </li>
-                    <li>
-                      <span className="text-primary-pheading font-semibold">
-                        Disaster Level
-                      </span>
-                      : Intensity of heat wave (Severe, Moderate, Minor),
-                      intensity of rainfall (Severe, Moderate, Minor), effect of
-                      wind on crop (Severe, Moderate, Minor), smog density
-                      (Severe, Moderate, Minor), hailstorm intensity (Severe,
-                      Moderate, Minor), and frost condition (Severe, Moderate,
-                      Minor).
-                    </li>
-                    <br />
-                    <div className="pl-13 pt-8 flex justify-center">
-                      {AFI1 && (
-                        <GatsbyImage
-                          image={AFI1}
-                          alt="Startups illustration"
-                          className="bg-white w-[1000.58px] "
-                        />
-                      )}
-                    </div>
-                    <br />
-                    <li>
-                      Optionally. You can add description, can mark area where
-                      the scouting took place and can also add images taken
-                      during field inspection.
-                    </li>
-                    <div className="pl-13 pt-8 flex justify-center">
-                      {AFI2 && (
-                        <GatsbyImage
-                          image={AFI2}
-                          alt="Startups illustration"
-                          className="bg-white w-[1000.58px] "
-                        />
-                      )}
-                    </div>
-                    <br />
-                    <br />
-                  </ul>
-                  <p>Click on the submit button.</p>
-                  <p>Field inspection will be added successfully.</p>
-                  <p>
-                    A transaction will created as expense was incurred for
-                    carrying out field inspection.
-                  </p>
-                  <br />
-                </div>
-              </div>
-              <div className="step2 pt-5">
-                <TextToSpeech textSelector=".step2" />
-                <div className="flex items-center space-x-4">
-                  <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
-                    Step 2
-                  </h2>
-                  <div className="flex-1 h-px bg-primary-line"></div>
-                </div>
-              </div>
-              <div className="sfi pt-5">
-                <TextToSpeech textSelector=".sfi" />
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
-                  Search Field Inspection:
-                </h2>
-                <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
-                  You can search the field inspection from the list of field
-                  inspection of locations present in the system. You can search
-                  based on either:
-                  <br />
-                  <ul>
-                    <li>
-                      <span className="text-primary-pheading font-semibold">
-                        Field Scout Name:
-                      </span>{" "}
-                      You can search which field scout carried out which field
-                      inspection.
-                    </li>{" "}
-                    <li>
-                      <span className="text-primary-pheading font-semibold">
-                        Date Range:
-                      </span>{" "}
-                      You can search by specifying date range that how many
-                      field inspections were held during a specific date range.
-                    </li>
-                  </ul>
-                  <br />
-                  <p>
-                    Then click on the Search button. Also, you can click on the
-                    refresh button to refresh the data.
-                  </p>
                   <div className="pl-13 pt-8 flex justify-center">
-                    {SFI && (
+                    {AFI1 && (
                       <GatsbyImage
-                        image={SFI}
+                        image={AFI1}
                         alt="Startups illustration"
                         className="bg-white w-[1000.58px] "
                       />
                     )}
                   </div>
+                  <br />
+                  <li>
+                    Optionally. You can add description, can mark area where the
+                    scouting took place and can also add images taken during
+                    field inspection.
+                  </li>
+                  <div className="pl-13 pt-8 flex justify-center">
+                    {AFI2 && (
+                      <GatsbyImage
+                        image={AFI2}
+                        alt="Startups illustration"
+                        className="bg-white w-[1000.58px] "
+                      />
+                    )}
+                  </div>
+                  <br />
+                  <br />
+                </ul>
+                <p>Click on the submit button.</p>
+                <p>Field inspection will be added successfully.</p>
+                <p>
+                  A transaction will created as expense was incurred for
+                  carrying out field inspection.
+                </p>
+                <br />
+              </div>
+
+              <div className="flex items-center pt-5 space-x-4">
+                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                  Step 2
+                </h2>
+                <div className="flex-1 h-px bg-primary-line"></div>
+              </div>
+
+              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
+                Search Field Inspection:
+              </h2>
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+                You can search the field inspection from the list of field
+                inspection of locations present in the system. You can search
+                based on either:
+                <br />
+                <ul>
+                  <li>
+                    <span className="text-primary-pheading font-semibold">
+                      Field Scout Name:
+                    </span>{" "}
+                    You can search which field scout carried out which field
+                    inspection.
+                  </li>{" "}
+                  <li>
+                    <span className="text-primary-pheading font-semibold">
+                      Date Range:
+                    </span>{" "}
+                    You can search by specifying date range that how many field
+                    inspections were held during a specific date range.
+                  </li>
+                </ul>
+                <br />
+                <p>
+                  Then click on the Search button. Also, you can click on the
+                  refresh button to refresh the data.
+                </p>
+                <div className="pl-13 pt-8 flex justify-center">
+                  {SFI && (
+                    <GatsbyImage
+                      image={SFI}
+                      alt="Startups illustration"
+                      className="bg-white w-[1000.58px] "
+                    />
+                  )}
                 </div>
               </div>
+
               <br />
               <br />
-              <div className="step3 pt-5">
-                <TextToSpeech textSelector=".step3" />
-                <div className="flex items-center space-x-4">
-                  <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
-                    Step 3
-                  </h2>
-                  <div className="flex-1 h-px bg-primary-line"></div>
-                </div>
-              </div>
-              <div className="efi pt-5">
-                <TextToSpeech textSelector=".efi" />
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
-                  Edit Field Inspection:
+
+              <div className="flex items-center pt-5 space-x-4">
+                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                  Step 3
                 </h2>
-                <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
-                  If any field inspection detail you want to change, you can
-                  easily edit the details. For that:
-                  <br />
-                  <br />
-                  <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
-                    <li>
-                      Click on the edit icon against the field inspection you
-                      want to edit.
-                    </li>
-                    <li>Field Inspection details screen will open.</li>
-                    <li>Click on the field you want to edit.</li>
-                    <li>Make changes in the fields</li>
-                    <li>Click on submit button.</li>
-                    <li>
-                      Field Inspection details will be edited/updated
-                      successfully.
-                    </li>
-                  </ul>
-                </div>
+                <div className="flex-1 h-px bg-primary-line"></div>
               </div>
-              <div className="step4 pt-5">
-                <TextToSpeech textSelector=".step4" />
-                <div className="flex items-center space-x-4">
-                  <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
-                    Step 4
-                  </h2>
-                  <div className="flex-1 h-px bg-primary-line"></div>
-                </div>
+
+              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
+                Edit Field Inspection:
+              </h2>
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+                If any field inspection detail you want to change, you can
+                easily edit the details. For that:
+                <br />
+                <br />
+                <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
+                  <li>
+                    Click on the edit icon against the field inspection you want
+                    to edit.
+                  </li>
+                  <li>Field Inspection details screen will open.</li>
+                  <li>Click on the field you want to edit.</li>
+                  <li>Make changes in the fields</li>
+                  <li>Click on submit button.</li>
+                  <li>
+                    Field Inspection details will be edited/updated
+                    successfully.
+                  </li>
+                </ul>
               </div>
-              <div className="dfi pt-5">
-                <TextToSpeech textSelector=".dfi" />
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
-                  Delete Field Inspection:
+
+              <div className="flex items-center pt-5 space-x-4">
+                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                  Step 4
                 </h2>
-                <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
-                  If you want to delete any field inspection, you can easily do
-                  so.
-                  <br />
-                  <br />
-                  <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
-                    <li>
-                      Click on the delete icon against the row you want to
-                      delete in the field inspection’s table.
-                    </li>
-                    <li>
-                      A dialogue box will appear to confirm whether you want to
-                      delete or not.
-                    </li>
-                    <li>Click on delete button.</li>
-                    <li>Field Inspection will be deleted successfully.</li>
-                  </ul>
-                </div>
+                <div className="flex-1 h-px bg-primary-line"></div>
               </div>
+
+              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
+                Delete Field Inspection:
+              </h2>
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+                If you want to delete any field inspection, you can easily do
+                so.
+                <br />
+                <br />
+                <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
+                  <li>
+                    Click on the delete icon against the row you want to delete
+                    in the field inspection’s table.
+                  </li>
+                  <li>
+                    A dialogue box will appear to confirm whether you want to
+                    delete or not.
+                  </li>
+                  <li>Click on delete button.</li>
+                  <li>Field Inspection will be deleted successfully.</li>
+                </ul>
+              </div>
+
               <div className="pl-13 pt-8 flex justify-center">
                 {DFI && (
                   <GatsbyImage
@@ -354,37 +338,34 @@ const fieldinspection = () => {
               </div>
               <br />
               <br />
-              <div className="step5 pt-5">
-                <TextToSpeech textSelector=".step5" />
-                <div className="flex items-center space-x-4">
-                  <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
-                    Step 5
-                  </h2>
-                  <div className="flex-1 h-px bg-primary-line"></div>
-                </div>
-              </div>
-              <div className="vfi pt-5">
-                <TextToSpeech textSelector=".vfi" />
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
-                  View Field Inspection:
+
+              <div className="flex items-center pt-5 space-x-4">
+                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                  Step 5
                 </h2>
-                <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
-                  You can easily view the details of the field inspection. For
-                  that:
-                  <br />
-                  <br />
-                  <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
-                    <li>Hover on three dots.</li>
-                    <li>Click on view button.</li>
-                    <li>Click on delete button.</li>
-                    <li>Field inspection details page will open.</li>
-                    <li>
-                      Click on print button if you want to print the details of
-                      the field inspection.
-                    </li>
-                  </ul>
-                </div>
+                <div className="flex-1 h-px bg-primary-line"></div>
               </div>
+
+              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
+                View Field Inspection:
+              </h2>
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+                You can easily view the details of the field inspection. For
+                that:
+                <br />
+                <br />
+                <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
+                  <li>Hover on three dots.</li>
+                  <li>Click on view button.</li>
+                  <li>Click on delete button.</li>
+                  <li>Field inspection details page will open.</li>
+                  <li>
+                    Click on print button if you want to print the details of
+                    the field inspection.
+                  </li>
+                </ul>
+              </div>
+
               <div className="pl-13 pt-8 flex justify-center">
                 {VFI && (
                   <GatsbyImage

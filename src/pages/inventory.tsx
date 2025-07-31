@@ -113,30 +113,27 @@ const inventory = () => {
                 cost savings, and improved farm productivity. It AIso AIlows for
                 easy auditing and reporting of inventory data.
               </p>
-           
-            <div className="pl-13 pt-8 flex justify-center">
-              {I && (
-                <GatsbyImage
-                  image={I}
-                  alt="Startups illustration"
-                  className="bg-white w-[1000.58px] "
-                />
-              )}
-            </div>
-            <br />
-            <br />
-            <div className="step1 pt-5">
-              <TextToSpeech textSelector=".step1" />
+
+              <div className="pl-13 pt-8 flex justify-center">
+                {I && (
+                  <GatsbyImage
+                    image={I}
+                    alt="Startups illustration"
+                    className="bg-white w-[1000.58px] "
+                  />
+                )}
+              </div>
+              <br />
+              <br />
+
               <div className="flex items-center pt-5 space-x-4">
                 <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 1
                 </h2>
                 <div className="Iex-1 h-px bg-primary-line"></div>
               </div>
-            </div>
-            <div className="ai pt-5">
-              <TextToSpeech textSelector=".ai" />
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+
+              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
                 Add Inventory:
               </h2>
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -296,168 +293,152 @@ const inventory = () => {
               </div>
               <br />
               <br />
-              <div className="step2 pt-5">
-                <TextToSpeech textSelector=".step2" />
-                <div className="flex items-center space-x-4">
-                  <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
-                    Step 2
-                  </h2>
-                  <div className="flex-1 h-px bg-primary-line"></div>
-                </div>
-              </div>
-              <div className="si pt-5">
-                <TextToSpeech textSelector=".si" />
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
-                  Search Inventory:
+
+              <div className="flex items-center space-x-4">
+                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                  Step 2
                 </h2>
-                <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
-                  You can search the location from the list of inventories of
-                  locations present in the system. You can search based on
-                  either:
-                  <br />
-                  <br />
-                  <p>
-                    Inventory Name: You can search by the inventory name.
-                  </p>{" "}
-                  <p>
-                    Product Variety: You can search by the variety of the
-                    inventory.
-                  </p>
-                  <br />
-                  <p>
-                    Then click on the Search button. AIso, you can click on the
-                    refresh button to refresh the data.
-                  </p>
-                </div>
+                <div className="flex-1 h-px bg-primary-line"></div>
+              </div>
+
+              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+                Search Inventory:
+              </h2>
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+                You can search the location from the list of inventories of
+                locations present in the system. You can search based on either:
                 <br />
-                {SIN && (
+                <br />
+                <p>
+                  Inventory Name: You can search by the inventory name.
+                </p>{" "}
+                <p>
+                  Product Variety: You can search by the variety of the
+                  inventory.
+                </p>
+                <br />
+                <p>
+                  Then click on the Search button. AIso, you can click on the
+                  refresh button to refresh the data.
+                </p>
+              </div>
+              <br />
+              {SIN && (
+                <GatsbyImage
+                  image={SIN}
+                  alt="Startups illustration"
+                  className="bg-white w-[1000.58px] "
+                />
+              )}
+              <br />
+              <br />
+
+              <div className="Iex items-center pt-5 space-x-4">
+                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                  Step 3
+                </h2>
+                <div className="Iex-1 h-px bg-primary-line"></div>
+              </div>
+
+              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                Edit Inventory:
+              </h2>
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+                If any inventory detail you want to change, you can easily edit
+                the details of inventory but not inventory history. For that:
+                <br />
+                <br />
+                <ul className="pl-[15px] text-primary-activelink list-disc">
+                  <li>
+                    Click on the edit icon against the inventory you want to
+                    edit.
+                  </li>
+                  <li>Inventory details screen will open.</li>
+                  <li>Click on the fieAI1 you want to edit.</li>
+                  <li>Make changes in the fieAI1s</li>
+                  <li>Click on submit button.</li>
+                  <li>
+                    Inventory item details will be edited/updated successfully.
+                  </li>
+                </ul>
+              </div>
+
+              <br />
+              <br />
+
+              <div className="Iex items-center pt-5 space-x-4">
+                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                  Step 4
+                </h2>
+                <div className="Iex-1 h-px bg-primary-line"></div>
+              </div>
+
+              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                Delete Inventory:
+              </h2>
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+                If you want to delete any inventory, you can easily do so.
+                <br />
+                <br />
+                <ul className="pl-[15px] list-disc text-primary-activelink">
+                  <li>
+                    Click on the delete icon against the row you want to delete
+                    in the inventory’s table.
+                  </li>
+                  <li>
+                    A dialogue box will appear to confirm whether you want to
+                    delete or not.
+                  </li>
+                  <li>Click on delete button.</li>
+                  <li>Inventory will be deleted successfully.</li>
+                </ul>
+              </div>
+
+              <div className="pl-13 pt-8 Iex justify-center">
+                {DI && (
                   <GatsbyImage
-                    image={SIN}
+                    image={DI}
                     alt="Startups illustration"
                     className="bg-white w-[1000.58px] "
                   />
                 )}
+              </div>
+              <br />
+              <br />
+
+              <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                Step 5
+              </h2>
+              <div className="Iex-1 h-px bg-primary-line"></div>
+
+              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+                View Inventory:
+              </h2>
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+                You can easily view the details of the inventory. For that:
                 <br />
                 <br />
-                <div className="step3 pt-5">
-                  <TextToSpeech textSelector=".step3" />
-                  <div className="Iex items-center pt-5 space-x-4">
-                    <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
-                      Step 3
-                    </h2>
-                    <div className="Iex-1 h-px bg-primary-line"></div>
-                  </div>
-                </div>
-                <div className="ei pt-5">
-                  <TextToSpeech textSelector=".ei" />
-                  <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
-                    Edit Inventory:
-                  </h2>
-                  <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
-                    If any inventory detail you want to change, you can easily
-                    edit the details of inventory but not inventory history. For
-                    that:
-                    <br />
-                    <br />
-                    <ul className="pl-[15px] text-primary-activelink list-disc">
-                      <li>
-                        Click on the edit icon against the inventory you want to
-                        edit.
-                      </li>
-                      <li>Inventory details screen will open.</li>
-                      <li>Click on the fieAI1 you want to edit.</li>
-                      <li>Make changes in the fieAI1s</li>
-                      <li>Click on submit button.</li>
-                      <li>
-                        Inventory item details will be edited/updated
-                        successfully.
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <br />
-                <br />
-                <div className="step4 pt-5">
-                  <TextToSpeech textSelector=".step4" />
-                  <div className="Iex items-center pt-5 space-x-4">
-                    <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
-                      Step 4
-                    </h2>
-                    <div className="Iex-1 h-px bg-primary-line"></div>
-                  </div>
-                </div>
-                <div className="di pt-5">
-                  <TextToSpeech textSelector=".di" />
-                  <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
-                    Delete Inventory:
-                  </h2>
-                  <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
-                    If you want to delete any inventory, you can easily do so.
-                    <br />
-                    <br />
-                    <ul className="pl-[15px] list-disc text-primary-activelink">
-                      <li>
-                        Click on the delete icon against the row you want to
-                        delete in the inventory’s table.
-                      </li>
-                      <li>
-                        A dialogue box will appear to confirm whether you want
-                        to delete or not.
-                      </li>
-                      <li>Click on delete button.</li>
-                      <li>Inventory will be deleted successfully.</li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="pl-13 pt-8 Iex justify-center">
-                  {DI && (
-                    <GatsbyImage
-                      image={DI}
-                      alt="Startups illustration"
-                      className="bg-white w-[1000.58px] "
-                    />
-                  )}
-                </div>
-                <br />
-                <br />
-                <div className="step5 pt-5">
-                  <TextToSpeech textSelector=".step5" />
-                  <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
-                    Step 5
-                  </h2>
-                  <div className="Iex-1 h-px bg-primary-line"></div>
-                </div>
-                <div className="vi pt-5">
-                  <TextToSpeech textSelector=".vi" />
-                  <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
-                    View Inventory:
-                  </h2>
-                  <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
-                    You can easily view the details of the inventory. For that:
-                    <br />
-                    <br />
-                    <ul className="pl-[15px] list-disc text-primary-activelink">
-                      <li>Hover on three dots.</li>
-                      <li>Click on view button.</li>
-                      <li>Click on delete button.</li>
-                      <li>Inventory details page will open.</li>
-                      <li>You can print the details of the location.</li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="pl-13 pt-8 Iex justify-center">
-                  {VI && (
-                    <GatsbyImage
-                      image={VI}
-                      alt="Startups illustration"
-                      className="bg-white w-[1000.58px] "
-                    />
-                  )}
-                </div>
+                <ul className="pl-[15px] list-disc text-primary-activelink">
+                  <li>Hover on three dots.</li>
+                  <li>Click on view button.</li>
+                  <li>Click on delete button.</li>
+                  <li>Inventory details page will open.</li>
+                  <li>You can print the details of the location.</li>
+                </ul>
+              </div>
+
+              <div className="pl-13 pt-8 Iex justify-center">
+                {VI && (
+                  <GatsbyImage
+                    image={VI}
+                    alt="Startups illustration"
+                    className="bg-white w-[1000.58px] "
+                  />
+                )}
               </div>
             </div>
           </div>
-        </div></div>
+        </div>
       </PrivateRoute>
     </AppLayout>
   );
