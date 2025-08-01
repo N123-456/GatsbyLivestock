@@ -440,7 +440,7 @@ const Sidebar = React.memo(() => {
               SYSTEM
             </p>
           </div>
-          <div className="border-b border-[#DBDBDB] dark:border-[#0F783B] w-[82%] ml-[22px] mt-[12px] pt-[12px]" />
+          <div className="border-b border-[#DBDBDB] dark:border-[#FFFFFF] w-[82%] ml-[22px] mt-[12px] pt-[12px]" />
         </div>
         <nav className="mt-3 space-y-2">
           <ul>{menuItems.map((item) => renderMenuItem(item))}</ul>

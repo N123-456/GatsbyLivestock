@@ -243,7 +243,7 @@ const TextToSpeech = ({ textSelector }) => {
         setIsSpeaking(false);
         setCurrentWordIndex(-1);
         const spans = document.querySelectorAll(`${textSelector} .word`);
-        spans.forEach((span) => span.classList.remove("bg-yellow-300"));
+        spans.forEach((span) => span.classList.remove("bg-yellow-300 "));
       };
 
       utterance.onerror = (e) => {
