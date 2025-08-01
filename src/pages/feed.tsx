@@ -47,12 +47,12 @@ const feed = () => {
                 <div className="hidden lg:block">
                   <TextToSpeech textSelector=".acu" />
                 </div>
-                <h2 className="text-primary-activelink font-semibold text-[30px] font-montserrat ">
+                <h2 className="text-primary-activelink font-semibold text-[30px] font-montserrat dark:text-[#FFFFFF]">
                   Feed/Forage:
                 </h2>
               </div>
               <div className="flex items-center pt-5">
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10 dark:text-[#BE8B45]">
                   Introduction
                 </h2>
                 <div className=" lg:hidden">
@@ -60,7 +60,7 @@ const feed = () => {
                 </div>
               </div>
 
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10 dark:text-[#D5D5D5]">
                 The Feed/Forage Section is used for storing harvested crops and
                 animal feed. It ensures optimal conditions for storage to
                 prevent spoilage and loss.{" "}
@@ -111,7 +111,7 @@ const feed = () => {
                   </li>
                   <li>
                     Click on{" "}
-                    <span className="text-primary-activelink font-semibold">
+                    <span className="text-primary-activelink font-semibold dark:text-[#D5D5D5]">
                       "Add More"
                     </span>{" "}
                     button.
@@ -121,12 +121,12 @@ const feed = () => {
                     (e.g. bags), and description (e.g. This rack contains
                     fertilizers with a capacity of 100 bags) of the rack. You
                     can add as many racks as per your requirement by clicking{" "}
-                    <span className="text-primary-activelink font-semibold">
+                    <span className="text-primary-activelink font-semibold dark:text-[#D5D5D5]">
                       "Add More"{" "}
                     </span>
                     button. In the similar way if you want to remove any rack,
                     click on the{" "}
-                    <span className="text-primary-activelink font-semibold">
+                    <span className="text-primary-activelink font-semibold dark:text-[#D5D5D5]">
                       "remove"{" "}
                     </span>{" "}
                     button.

@@ -47,12 +47,12 @@ const contact = () => {
                 <div className="hidden lg:block">
                   <TextToSpeech textSelector=".acu" />
                 </div>
-                <h2 className="text-primary-activelink font-semibold text-[30px] font-montserrat ">
+                <h2 className="text-primary-activelink dark:text-[#FFFFFF] font-semibold text-[30px] font-montserrat ">
                   Starting Guide for Financials:
                 </h2>
               </div>
               <div className="flex items-center pt-5">
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                <h2 className="text-primary-subheading dark:text-[#BE8B45] font-semibold text-[22px] font-montserrat lg:pl-10">
                   Introduction
                 </h2>
                 <div className=" lg:hidden">
@@ -60,7 +60,7 @@ const contact = () => {
                 </div>
               </div>
 
-              <p className=" text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+              <p className=" text-primary-paragraph2 dark:text-[#D5D5D5] text-[18px] font-montserrat font-normal lg:px-10">
                 The Financial Module in the farm management system is designed
                 to manage and streamline all financial activities related to the
                 farm. It allows users to record, monitor, and analyse financial
@@ -114,32 +114,32 @@ const contact = () => {
               </div>
 
               <br />
-           
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
-                  General Ledger Report:
-                </h2>
-                <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10 pt-5">
-                  <p>
-                    The General Ledger is the central record of all financial
-                    transactions within the farm management system. It acts as
-                    the main accounting document where every transaction related
-                    to the farm is recorded. Each financial entry is categorized
-                    into types, such as income, expenses, assets, liabilities,
-                    and equity. For example, purchases of seeds, soil testing
-                    costs, or revenue from crop sales are all recorded in their
-                    respective accounts within the general ledger.
-                    <br />
-                    <br /> It provides a detailed breakdown of every debit and
-                    credit, ensuring complete transparency and traceability of
-                    all financial activities. The general ledger serves as the
-                    foundation for preparing other financial reports like the
-                    trial balance and balance sheet. Furthermore, we have head
-                    of accounts like cash, bank, inventory, accounts receivable,
-                    accounts payable etc. Against every head of account is a
-                    general ledger report.{" "}
-                  </p>
-                </div>
-              
+
+              <h2 className="text-primary-subheading font-semibold dark:text-[#D5D5D5] text-[22px] font-montserrat lg:pl-10">
+                General Ledger Report:
+              </h2>
+              <div className="text-primary-paragraph2 dark:text-[#D5D5D5] text-[18px] font-montserrat font-normal lg:px-10 pt-5">
+                <p>
+                  The General Ledger is the central record of all financial
+                  transactions within the farm management system. It acts as the
+                  main accounting document where every transaction related to
+                  the farm is recorded. Each financial entry is categorized into
+                  types, such as income, expenses, assets, liabilities, and
+                  equity. For example, purchases of seeds, soil testing costs,
+                  or revenue from crop sales are all recorded in their
+                  respective accounts within the general ledger.
+                  <br />
+                  <br /> It provides a detailed breakdown of every debit and
+                  credit, ensuring complete transparency and traceability of all
+                  financial activities. The general ledger serves as the
+                  foundation for preparing other financial reports like the
+                  trial balance and balance sheet. Furthermore, we have head of
+                  accounts like cash, bank, inventory, accounts receivable,
+                  accounts payable etc. Against every head of account is a
+                  general ledger report.{" "}
+                </p>
+              </div>
+
               <br />
               <div className="pl-13 pt-8 flex justify-center">
                 {glr && (

@@ -89,12 +89,12 @@ const watertest = () => {
                 <div className="hidden lg:block">
                   <TextToSpeech textSelector=".acu" />
                 </div>
-                <h2 className="text-primary-activelink font-semibold text-[30px] font-montserrat ">
+                <h2 className="text-primary-activelink dark:text-[#FFFFFF] font-semibold text-[30px] font-montserrat ">
                   Starting Guide for Water Test:
                 </h2>
               </div>
               <div className="flex items-center pt-5">
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                <h2 className="text-primary-subheading dark:text-[#BE8B45] font-semibold text-[22px] font-montserrat lg:pl-10">
                   Introduction
                 </h2>
                 <div className=" lg:hidden">
@@ -102,7 +102,7 @@ const watertest = () => {
                 </div>
               </div>
 
-              <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10">
+              <p className="text-primary-paragraph dark:text-[#D5D5D5] text-[18px] font-montserrat font-normal lg:px-10">
                 A water test checks the quality of water used on the farm,
                 including its pH, nutrient levels, and any harmful substances.
                 It helps ensure the water is safe for crops, livestock, and
@@ -129,21 +129,21 @@ const watertest = () => {
               </div>
 
               <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                <h2 className="text-primary-activelink dark:text-[#BE8B45] font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 1
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
 
-              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
+              <h2 className="text-primary-subheading dark:text-[#D5D5D5] pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
                 Add Water Test:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+              <div className="text-primary-paragraph2 dark:text-[#D5D5D5] text-[18px] font-montserrat font-normal lg:px-10">
                 For adding a water test:
                 <br />
                 <br />
                 Go to{" "}
-                <span className="text-primary-activelink font-bold">
+                <span className="text-primary-activelink dark:text-[#D5D5D5] font-bold">
                   farm locations
                 </span>{" "}
                 tab.
@@ -153,7 +153,7 @@ const watertest = () => {
                 Click on water test.
                 <br />
                 Click on
-                <span className="text-primary-activelink font-bold">
+                <span className="text-primary-activelink dark:text-[#D5D5D5] font-bold">
                   “Add Water Test”
                 </span>{" "}
                 button.
@@ -247,16 +247,16 @@ const watertest = () => {
               </div>
 
               <div className="flex items-center pt-5  space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                <h2 className="text-primary-activelink dark:text-[#BE8B45] font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 2
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
 
-              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
+              <h2 className="text-primary-subheading pt-5 dark:text-[#D5D5D5] font-semibold text-[22px] font-montserrat lg:pl-10">
                 Search Water Test:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+              <div className="text-primary-paragraph2 dark:text-[#D5D5D5] text-[18px] font-montserrat font-normal lg:px-10">
                 You can search the water test from the list of water tests
                 present in the system. You can search based on:
                 <br />
@@ -286,21 +286,21 @@ const watertest = () => {
               </div>
 
               <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                <h2 className="text-primary-activelink dark:text-[#BE8B45] font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 3
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
 
-              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
+              <h2 className="text-primary-subheading dark:text-[#D5D5D5] pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
                 Edit Water Test:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+              <div className="text-primary-paragraph2 dark:text-[#D5D5D5] text-[18px] font-montserrat font-normal lg:px-10">
                 If any water test detail you want to change, you can easily edit
                 the details. For that:
                 <br />
                 <br />
-                <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
+                <ul className="pl-[15px] dark:text-[#D5D5D5] list-disc text-primary-activelink font-semibold">
                   <li>
                     Click on the edit icon against the water test you want to
                     edit.
@@ -316,20 +316,20 @@ const watertest = () => {
               </div>
 
               <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                <h2 className="text-primary-activelink dark:text-[#BE8B45] font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 4
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
 
-              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
+              <h2 className="text-primary-subheading dark:text-[#D5D5D5] pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
                 Delete Water Test:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+              <div className="text-primary-paragraph2 dark:text-[#D5D5D5] text-[18px] font-montserrat font-normal lg:px-10">
                 If you want to delete the water test, you can easily do so.
                 <br />
                 <br />
-                <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
+                <ul className="pl-[15px] list-disc dark:text-[#D5D5D5] text-primary-activelink font-semibold">
                   <li>
                     Click on the delete icon against the row you want to delete
                     in the water test’s table.
@@ -354,20 +354,20 @@ const watertest = () => {
               </div>
 
               <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                <h2 className="text-primary-activelink dark:text-[#BE8B45] font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 5
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
 
-              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
+              <h2 className="text-primary-subheading dark:text-[#D5D5D5] pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
                 View water Test:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+              <div className="text-primary-paragraph2 dark:text-[#D5D5D5] text-[18px] font-montserrat font-normal lg:px-10">
                 You can easily view the details of the water test. For that:
                 <br />
                 <br />
-                <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
+                <ul className="pl-[15px] list-disc dark:text-[#D5D5D5] text-primary-activelink font-semibold">
                   <li>Hover on three dots.</li>
                   <li>Click on view button.</li>
                   <li>water Test details page will open.</li>

@@ -71,12 +71,12 @@ const fertilizers = () => {
                 <div className="hidden lg:block">
                   <TextToSpeech textSelector=".acu" />
                 </div>
-                <h2 className="text-primary-activelink font-semibold text-[30px] font-montserrat ">
+                <h2 className="text-primary-activelink font-semibold text-[30px] font-montserrat dark:text-[#FFFFFF]">
                   Starting Guide for Fertilizer:
                 </h2>
               </div>
               <div className="flex items-center pt-5">
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10 dark:text-[#BE8B45]">
                   Introduction
                 </h2>
                 <div className=" lg:hidden">
@@ -84,7 +84,7 @@ const fertilizers = () => {
                 </div>
               </div>
 
-              <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10">
+              <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10 dark:text-[#D5D5D5]">
                 Fertilizers are substances added to soil or plants to provide
                 essential nutrients that promote healthy growth and increase
                 crop yield. They supply key nutrients like nitrogen, phosphorus,
@@ -111,21 +111,21 @@ const fertilizers = () => {
               <br />
 
               <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl- dark:text-[#BE8B45]">
                   Step 1
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
 
-              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
+              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10 dark:text-[#D5D5D5]">
                 Add Fertilizer:
               </h2>
 
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10 dark:text-[#D5D5D5]">
                 <p>For adding fertilizer:</p>
                 <br />
                 Click on{" "}
-                <span className="text-primary-activelink font-semibold">
+                <span className="text-primary-activelink font-semibold dark:text-[#D5D5D5]">
                   "Planting"
                 </span>{" "}
                 tab.
@@ -137,7 +137,7 @@ const fertilizers = () => {
                 <p>Choose Fertilizer from the options.</p>
                 <p>
                   Click on{" "}
-                  <span className="text-primary-activelink font-semibold">
+                  <span className="text-primary-activelink font-semibold dark:text-[#D5D5D5]">
                     "Add Fertilizer"
                   </span>{" "}
                   button.
@@ -157,7 +157,7 @@ const fertilizers = () => {
                     <li>
                       If the fertilizer you applied was taken from the
                       inventory, choose the option{" "}
-                      <span className="text-primary-activelink font-semibold">
+                      <span className="text-primary-activelink font-semibold dark:text-[#D5D5D5]">
                         "inventory"
                       </span>{" "}
                       .
@@ -183,7 +183,7 @@ const fertilizers = () => {
                       If the fertilizer you applied was not available in the
                       inventory and you have to buy the fertilizer, choose the
                       option{" "}
-                      <span className="text-primary-activelink font-semibold">
+                      <span className="text-primary-activelink font-semibold dark:text-[#D5D5D5]">
                         "New Buy"
                       </span>{" "}
                       .
@@ -217,21 +217,21 @@ const fertilizers = () => {
               </div>
 
               <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10 dark:text-[#BE8B45]">
                   Step 2
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
 
-              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
+              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10 dark:text-[#D5D5D5]">
                 Search Fertilizer:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10 dark:text-[#D5D5D5]">
                 You can search the fertilizer from the list of fertilizers of
                 locations present in the system. You can search based on either:
                 <br />
                 <p>
-                  <span className="text-primary-pheading font-semibold">
+                  <span className="text-primary-pheading font-semibold ">
                     Fertilizer Name
                   </span>
                   : You can search by the name of the Fertilizer.
@@ -256,21 +256,21 @@ const fertilizers = () => {
               <br />
 
               <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10 dark:text-[#BE8B45]">
                   Step 3
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
 
-              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
+              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10 dark:text-[#D5D5D5]">
                 Edit Fertilizer:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10 dark:text-[#D5D5D5]">
                 If any fertilizer detail you want to change, you can easily edit
                 the details. For that:
                 <br />
                 <br />
-                <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
+                <ul className="pl-[15px] list-disc text-primary-activelink font-semibold dark:text-[#D5D5D5]">
                   <li>
                     Click on the edit icon against the fertilizer you want to
                     edit.
@@ -286,20 +286,20 @@ const fertilizers = () => {
               </div>
 
               <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10 dark:text-[#BE8B45]">
                   Step 4
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
 
-              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
+              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10 dark:text-[#D5D5D5]">
                 Delete Fertilizer:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10 dark:text-[#D5D5D5]">
                 If you want to delete any fertilizer, you can easily do so.
                 <br />
                 <br />
-                <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
+                <ul className="pl-[15px] list-disc text-primary-activelink font-semibold dark:text-[#D5D5D5]">
                   <li>
                     Click on the delete icon against the row you want to delete
                     in the fertilizers’s table.
@@ -326,20 +326,20 @@ const fertilizers = () => {
               <br />
 
               <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10 dark:text-[#BE8B45]">
                   Step 5
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
 
-              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
+              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10 dark:text-[#D5D5D5]">
                 View Fertilizer:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10 dark:text-[#D5D5D5]">
                 You can easily view the details of the fertilizer. For that:
                 <br />
                 <br />
-                <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
+                <ul className="pl-[15px] list-disc text-primary-activelink font-semibold dark:text-[#D5D5D5]">
                   <li>Hover on three dots.</li>
                   <li>Click on view button.</li>
                   <li>Click on delete button.</li>

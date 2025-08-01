@@ -99,19 +99,19 @@ const purchase = () => {
                 <div className="hidden lg:block">
                   <TextToSpeech textSelector=".acu" />
                 </div>
-                <h2 className="text-primary-activelink font-semibold text-[30px] font-montserrat ">
+                <h2 className="text-primary-activelink dark:text-[#FFFFFF] font-semibold text-[30px] font-montserrat ">
                   Starting Guide for Purchase Requisition:
                 </h2>
               </div>
               <div className="flex items-center pt-5">
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                <h2 className="text-primary-subheading dark:text-[#BE8B45] font-semibold text-[22px] font-montserrat lg:pl-10">
                   Introduction
                 </h2>
                 <div className=" lg:hidden">
                   <TextToSpeech textSelector=".acu" />
                 </div>
               </div>
-              <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10">
+              <p className="text-primary-paragraph dark:text-[#D5D5D5] text-[18px] font-montserrat font-normal lg:px-10">
                 A Purchase Requisition is a formal request made within an
                 organization to acquire goods or services. It is used to request
                 the purchase of essential items, such as seeds, fertilizers,
@@ -137,37 +137,37 @@ const purchase = () => {
               <br />
 
               <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                <h2 className="text-primary-activelink dark:text-[#BE8B45] font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 1
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
 
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+              <h2 className="text-primary-subheading dark:text-[#D5D5D5] font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
                 Add Purchase Requisition:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+              <div className="text-primary-paragraph2 dark:text-[#D5D5D5] text-[18px] font-montserrat font-normal lg:px-10">
                 For adding purchase requisition:
                 <br />
                 <br />
-                <ul className=" text-primary-paragraph2 ">
+                <ul className=" text-primary-paragraph2 dark:text-[#D5D5D5]">
                   <li>
                     Click on the{" "}
-                    <span className="text-primary-activelink font-bold">
+                    <span className="text-primary-activelink font-bold dark:text-[#D5D5D5]">
                       “inventory”{" "}
                     </span>{" "}
                     tab.
                   </li>
                   <li>
                     On the top left, there is a tab with title{" "}
-                    <span className="text-primary-activelink font-bold">
+                    <span className="text-primary-activelink font-bold dark:text-[#D5D5D5]">
                       “Purchase Requisition”{" "}
                     </span>
                     , click on it.
                   </li>
                   <li>
                     Click on{" "}
-                    <span className="text-primary-activelink font-bold">
+                    <span className="text-primary-activelink font-bold dark:text-[#D5D5D5]">
                       “Add New”{" "}
                     </span>{" "}
                     button.
@@ -202,7 +202,7 @@ const purchase = () => {
                   <br />
                   <li>
                     Click on{" "}
-                    <span className="text-primary-activelink font-bold">
+                    <span className="text-primary-activelink font-bold dark:text-[#D5D5D5]">
                       “Add”{" "}
                     </span>{" "}
                     button.
@@ -228,16 +228,16 @@ const purchase = () => {
               <br />
 
               <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                <h2 className="text-primary-activelink dark:text-[#BE8B45] font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 2
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
 
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+              <h2 className="text-primary-subheading dark:text-[#D5D5D5] font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
                 Search & Print Purchase Requisition:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+              <div className="text-primary-paragraph2 dark:text-[#D5D5D5] text-[18px] font-montserrat font-normal lg:px-10">
                 You can search the purchase requisition from the list of
                 purchase requisitions present in the system. You can search
                 based on:
@@ -262,7 +262,7 @@ const purchase = () => {
                 </ul>
                 <p>
                   Then click on the{" "}
-                  <span className="text-primary-activelink font-bold">
+                  <span className="text-primary-activelink font-bold dark:text-[#D5D5D5]">
                     “Search”{" "}
                   </span>{" "}
                   button. Also, you can click on the refresh button to refresh
@@ -270,7 +270,7 @@ const purchase = () => {
                 </p>{" "}
                 <p>
                   Click on the{" "}
-                  <span className="text-primary-activelink font-bold">
+                  <span className="text-primary-activelink font-bold dark:text-[#D5D5D5]">
                     “Print”{" "}
                   </span>{" "}
                   icon to print the details of the purchase requisition.
@@ -307,12 +307,12 @@ const purchase = () => {
                 <div className="hidden lg:block">
                   <TextToSpeech textSelector=".acu" />
                 </div>
-                <h2 className="text-primary-activelink font-semibold text-[30px] font-montserrat ">
+                <h2 className="text-primary-activelink dark:text-[#FFFFFF] font-semibold text-[30px] font-montserrat ">
                   Starting Guide for Purchase Order:
                 </h2>
               </div>
               <div className="flex items-center pt-5">
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                <h2 className="text-primary-subheading dark:text-[#BE8B45] font-semibold text-[22px] font-montserrat lg:pl-10">
                   Introduction
                 </h2>
                 <div className=" lg:hidden">
@@ -320,7 +320,7 @@ const purchase = () => {
                 </div>
               </div>
 
-              <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10">
+              <p className="text-primary-paragraph dark:text-[#D5D5D5] text-[18px] font-montserrat font-normal lg:px-10">
                 A Purchase Order (PO) is a formal document issued by a buyer to
                 a supplier, indicating the intent to purchase specific goods or
                 services. A purchase order is created after the purchase
@@ -343,37 +343,37 @@ const purchase = () => {
               <br />
 
               <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                <h2 className="text-primary-activelink dark:text-[#BE8B45] font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 1
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
 
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+              <h2 className="text-primary-subheading dark:text-[#D5D5D5] font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
                 Add Purchase Order:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+              <div className="text-primary-paragraph2 dark:text-[#D5D5D5] text-[18px] font-montserrat font-normal lg:px-10">
                 For adding purchase Order:
                 <br />
                 <br />
-                <ul className=" text-primary-paragraph2 ">
+                <ul className=" text-primary-paragraph2 dark:text-[#D5D5D5]">
                   <li>
                     Click on the{" "}
-                    <span className="text-primary-activelink font-bold">
+                    <span className="text-primary-activelink font-bold dark:text-[#D5D5D5]">
                       “inventory”{" "}
                     </span>{" "}
                     tab.
                   </li>
                   <li>
                     On the top left, there is a tab with title{" "}
-                    <span className="text-primary-activelink font-bold">
+                    <span className="text-primary-activelink font-bold dark:text-[#D5D5D5]">
                       “Purchase Order”{" "}
                     </span>
                     , click on it.
                   </li>
                   <li>
                     Click on{" "}
-                    <span className="text-primary-activelink font-bold">
+                    <span className="text-primary-activelink font-bold dark:text-[#D5D5D5]">
                       “Add New”{" "}
                     </span>{" "}
                     button.
@@ -419,7 +419,7 @@ const purchase = () => {
                   <br />
                   <li>
                     Click on{" "}
-                    <span className="text-primary-activelink font-bold">
+                    <span className="text-primary-activelink font-bold dark:text-[#D5D5D5]">
                       “Add”{" "}
                     </span>{" "}
                     button.
@@ -450,16 +450,16 @@ const purchase = () => {
               <br />
 
               <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                <h2 className="text-primary-activelink dark:text-[#BE8B45] font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 2
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
 
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+              <h2 className="text-primary-subheading dark:text-[#D5D5D5] font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
                 Search & Print Purchase Order:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+              <div className="text-primary-paragraph2 dark:text-[#D5D5D5] text-[18px] font-montserrat font-normal lg:px-10">
                 You can search the purchase order from the list of purchase
                 order present in the system. You can search based on:
                 <br />
@@ -483,7 +483,7 @@ const purchase = () => {
                 </ul>
                 <p>
                   Then click on the{" "}
-                  <span className="text-primary-activelink font-bold">
+                  <span className="text-primary-activelink font-bold dark:text-[#D5D5D5]">
                     “Search”{" "}
                   </span>{" "}
                   button. Also, you can click on the refresh button to refresh
@@ -491,7 +491,7 @@ const purchase = () => {
                 </p>{" "}
                 <p>
                   Click on the{" "}
-                  <span className="text-primary-activelink font-bold">
+                  <span className="text-primary-activelink font-bold dark:text-[#D5D5D5]">
                     “Print”{" "}
                   </span>{" "}
                   icon to print the details of the purchase order.

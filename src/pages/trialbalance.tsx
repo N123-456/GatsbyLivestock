@@ -40,12 +40,12 @@ const trialbalance = () => {
                                <div className="hidden lg:block">
                                  <TextToSpeech textSelector=".acu" />
                                </div>
-                               <h2 className="text-primary-activelink font-semibold text-[30px] font-montserrat ">
+                               <h2 className="text-primary-activelink dark:text-[#FFFFFF] font-semibold text-[30px] font-montserrat ">
                                  Trial Balance Report:
                                </h2>
                              </div>
                              <div className="flex items-center pt-5">
-                               <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                               <h2 className="text-primary-subheading dark:text-[#BE8B45] font-semibold text-[22px] font-montserrat lg:pl-10">
                                  Introduction
                                </h2>
                                <div className="lg:hidden">
@@ -54,7 +54,7 @@ const trialbalance = () => {
                              </div>
            
 
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10 ">
+              <div className="text-primary-paragraph2 text-[18px] dark:text-[#D5D5D5] font-montserrat font-normal lg:px-10 ">
                 The Trial Balance is a financial report that lists all the
                 accounts in the general ledger along with their respective debit
                 and credit balances at a specific point in time. Its primary

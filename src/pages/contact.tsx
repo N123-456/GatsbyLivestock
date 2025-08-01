@@ -66,12 +66,12 @@ const contact = () => {
                 <div className="hidden lg:block">
                   <TextToSpeech textSelector=".acu" />
                 </div>
-                <h2 className="text-primary-activelink font-semibold text-[30px] font-montserrat ">
+                <h2 className="text-primary-activelink font-semibold text-[30px] font-montserrat dark:text-[#FFFFFF]">
                   Starting Guide for Contact:
                 </h2>
               </div>
               <div className="flex items-center pt-5">
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10 dark:text-[#BE8B45]">
                   Introduction
                 </h2>
                 <div className=" lg:hidden">
@@ -79,7 +79,7 @@ const contact = () => {
                 </div>
               </div>
 
-              <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10">
+              <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10 dark:text-[#D5D5D5]">
                 Contacts are the central repository for storing and managing
                 contact information of relevant individuals or businesses.
                 Targeted contacts are mostly farmers and agricultural business
@@ -100,19 +100,19 @@ const contact = () => {
               </div>
 
               <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10 dark:text-[#BE8B45]">
                   Step 1
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
 
-              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat  lg:pl-10">
+              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat  lg:pl-10 dark:text-[#D5D5D5]">
                 Add New Contact:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10 dark:text-[#D5D5D5]">
                 <p>For adding a new contact</p>
                 Click on{" "}
-                <span className="text-primary-activelink font-semibold">
+                <span className="text-primary-activelink font-semibold dark:text-[#D5D5D5]">
                   "Add New"
                 </span>{" "}
                 button.
@@ -124,7 +124,7 @@ const contact = () => {
                 </p>
                 <p>
                   Click on{" "}
-                  <span className="text-primary-activelink font-semibold">
+                  <span className="text-primary-activelink font-semibold dark:text-[#D5D5D5]">
                     "Maintenance"
                   </span>{" "}
                   button
@@ -170,23 +170,23 @@ const contact = () => {
                     </span>
                     Role of the contact related to your farm. The roles can be.
                   </li>
-                  <ul className="text-primary-paragraph2">
+                  <ul className="text-primary-paragraph2 dark:text-[#D5D5D5]">
                     <li>
-                      <span className="text-primary-activelink font-semibold">
+                      <span className="text-primary-activelink font-semibold dark:text-[#D5D5D5]">
                         Auditor:
                       </span>{" "}
                       Reviews and verifies the accuracy of financial records and
                       system operations.
                     </li>
                     <li>
-                      <span className="text-primary-activelink font-semibold">
+                      <span className="text-primary-activelink font-semibold dark:text-[#D5D5D5]">
                         Vendor:
                       </span>{" "}
                       Provides goods or services and interacts with the system
                       to manage orders and invoices.
                     </li>
                     <li>
-                      <span className="text-primary-activelink font-semibold">
+                      <span className="text-primary-activelink font-semibold dark:text-[#D5D5D5]">
                         Manager:
                       </span>{" "}
                       Oversees system operations, tasks, and team activities to
@@ -207,7 +207,7 @@ const contact = () => {
                     Address of the person. Address details include:
                   </li>
                   <br />{" "}
-                  <ul className="text-primary-activelink font-bold list-disc">
+                  <ul className="text-primary-activelink font-bold list-disc dark:text-[#D5D5D5]">
                     <li>Province</li>
                     <li>Division</li>
                     <li>District</li>
@@ -233,16 +233,16 @@ const contact = () => {
               </div>
 
               <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10 dark:text-[#BE8B45]">
                   Step 2
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
 
-              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
+              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10 dark:text-[#D5D5D5]">
                 Search Contact:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10 dark:text-[#D5D5D5]">
                 You can search the contact from the list of contacts present in
                 the system. You can search based on either:
                 <br />
@@ -269,7 +269,7 @@ const contact = () => {
                         Role:
                       </span>{" "}
                       You can search by the role of the user which can be:
-                      <ul className="text-primary-activelink font-bold list-disc">
+                      <ul className="text-primary-activelink font-bold list-disc dark:text-[#D5D5D5]">
                         <li>Vendor</li>
                         <li>Manager</li>
                         <li>Auditor</li>
@@ -296,21 +296,21 @@ const contact = () => {
               </div>
 
               <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10 dark:text-[#BE8B45]">
                   Step 3
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
 
-              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
+              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10 dark:text-[#D5D5D5]">
                 Edit Contact:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10 dark:text-[#D5D5D5]">
                 If any contacts details you want to change, you can easily edit
                 the details. For that:
                 <br />
                 <br />
-                <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
+                <ul className="pl-[15px] list-disc text-primary-activelink font-semibold dark:text-[#D5D5D5]">
                   <li>Click on the edit icon</li>
                   <li>Contact details screen will open.</li>
                   <li>Click on the field you want to edit.</li>
@@ -321,13 +321,13 @@ const contact = () => {
               </div>
 
               <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10 dark:text-[#BE8B45]">
                   Step 4
                 </h2>
                 <div className="flex-1 h-px bg-primary-line "></div>
               </div>
 
-              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
+              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10 dark:text-[#D5D5D5]">
                 Delete Contact:
               </h2>
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -335,7 +335,7 @@ const contact = () => {
                 contact, you can easily do so.
                 <br />
                 <br />
-                <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
+                <ul className="pl-[15px] list-disc text-primary-activelink font-semibold dark:text-[#D5D5D5]">
                   <li>
                     Click on the delete icon against the row you want to delete
                     in the contact’s table.
@@ -363,19 +363,19 @@ const contact = () => {
               <br />
 
               <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10 dark:text-[#BE8B45]">
                   Step 5
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
 
-              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
+              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10 dark:text-[#D5D5D5]">
                 View Contact:
               </h2>
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
                 You can easily view the details of users. For that:
                 <br />
-                <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
+                <ul className="pl-[15px] list-disc text-primary-activelink font-semibold dark:text-[#D5D5D5]">
                   <li>Hover on three dots.</li>
                   <li>Click on view button.</li>
                   <li>Click on delete button.</li>

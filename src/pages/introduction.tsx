@@ -28,7 +28,7 @@ const Introduction = () => {
               <div className="hidden lg:block">
                 <TextToSpeech textSelector=".acu" />
               </div>
-              <h2 className="text-primary-activelink font-semibold text-[30px] font-montserrat ">
+              <h2 className="text-primary-activelink dark:text-[#FFFFFF] font-semibold text-[30px] font-montserrat ">
                 Introduction
               </h2>
               <div className=" lg:hidden">
@@ -36,7 +36,7 @@ const Introduction = () => {
               </div>
             </div>
 
-            <p className="text-primary-paragraph sm:text-[12px] lg:text-lg md:text-lg font-montserrat font-normal lg:px-10 pt-4 text-justify">
+            <p className="text-primary-paragraph dark:text-[#D5D5D5] sm:text-[12px] lg:text-lg md:text-lg font-montserrat font-normal lg:px-10 pt-4 text-justify">
               Welcome to the Farm Management System! Designed specifically for
               the agriculture sector, this system will allow you to track your
               crops, manage your expenses, manage your tasks, and plan your

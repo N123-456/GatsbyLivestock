@@ -94,12 +94,12 @@ const planting = () => {
                 <div className="hidden lg:block">
                   <TextToSpeech textSelector=".acu" />
                 </div>
-                <h2 className="text-primary-activelink font-semibold text-[30px] font-montserrat ">
+                <h2 className="text-primary-activelink dark:text-[#FFFFFF] font-semibold text-[30px] font-montserrat ">
                   Starting Guide for Planting:
                 </h2>
               </div>
               <div className="flex items-center pt-5">
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                <h2 className="text-primary-subheading dark:text-[#BE8B45] font-semibold text-[22px] font-montserrat lg:pl-10">
                   Introduction
                 </h2>
                 <div className=" lg:hidden">
@@ -107,7 +107,7 @@ const planting = () => {
                 </div>
               </div>
 
-              <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10 ">
+              <p className="text-primary-paragraph dark:text-[#D5D5D5] text-[18px] font-montserrat font-normal lg:px-10 ">
                 In the planting process, you enter the details of the crops to
                 be planted, ensuring all necessary information is recorded for
                 effective crop management. This includes selecting the crop
@@ -135,16 +135,16 @@ const planting = () => {
               </div>
 
               <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                <h2 className="text-primary-activelink dark:text-[#BE8B45] font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 1
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
 
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+              <h2 className="text-primary-subheading dark:text-[#D5D5D5] font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
                 Add Planting:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+              <div className="text-primary-paragraph2 dark:text-[#D5D5D5] text-[18px] font-montserrat font-normal lg:px-10">
                 <p>
                   For adding planting, you first need to have a farm location.
                   So, if you haven’t have added yet first add the farm location.
@@ -155,14 +155,14 @@ const planting = () => {
                 </p>
                 <br />
                 <br /> Click on{" "}
-                <span className="text-primary-activelink font-semibold">
+                <span className="text-primary-activelink dark:text-[#D5D5D5] font-semibold">
                   "Add Planting"
                 </span>
                 button.
                 <br />
                 Enter the required fields.
                 <br />
-                <span className="text-primary-pheading font-semibold">
+                <span className="text-primary-pheading  font-semibold">
                   Crop Type & Location:
                 </span>
                 : In the crop type and location, you will enter what crop you
@@ -170,7 +170,7 @@ const planting = () => {
                 the crop will be planted like
                 <br />
                 <br />
-                <ul className="pl-[15px] font-semibold text-primary-activelink list-disc">
+                <ul className="pl-[15px] dark:text-[#D5D5D5] font-semibold text-primary-activelink list-disc">
                   <li>Planted in Beds</li>
                   <li>Cover Crop</li>
                   <li>Row Crop</li>
@@ -232,10 +232,10 @@ const planting = () => {
                 <br />
               </div>
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
-                <p className="font-semibold font-primary-pheading">
+                <p className="font-semibold dark:text-[#D5D5D5] font-primary-pheading">
                   Seed Details:
                 </p>
-                <ul className="text-primary-subheading font-normal text-[18px] font-montserrat list-disc">
+                <ul className="text-primary-subheading dark:text-[#D5D5D5] font-normal text-[18px] font-montserrat list-disc">
                   <li>Select the company that provided the seeds.</li>
                   <li>Choose the type of seed being used.</li>
                   <li>
@@ -266,11 +266,11 @@ const planting = () => {
               </div>
               <br />
 
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+              <div className="text-primary-paragraph2 text-[18px] dark:text-[#D5D5D5] font-montserrat font-normal lg:px-10">
                 <p className="font-semibold font-primary-pheading ">
                   Planting Details.
                 </p>
-                <ul className=" font-normal list-disc">
+                <ul className=" font-normal list-disc ">
                   <li>
                     Select the unit of measurement for input (Centimetre, Meter,
                     Inch, Feet).
@@ -315,7 +315,7 @@ const planting = () => {
                     add according to your needs. If you want to see the list of
                     tasks for a particular crop
                   </li>
-                  <ul className="text-primary-activelink font-semibold">
+                  <ul className="text-primary-activelink font-semibold dark:text-[#D5D5D5]">
                     {" "}
                     <li>Click on three dots.</li>
                     <li>Click on Tasks button</li>
@@ -338,9 +338,9 @@ const planting = () => {
               <br />
               <br />
 
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
-                <p className="font-semibold">Estimated Harvest Details:</p>
-                <ul className="font-normal text-[18px] font-montserrat list-disc">
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat dark:text-[#D5D5D5] font-normal lg:px-10">
+                <p className="font-semibold ">Estimated Harvest Details:</p>
+                <ul className="font-normal text-[18px] font-montserrat dark:text-[#D5D5D5] list-disc">
                   <li>What is the expected date to harvest the crop.</li>
                   <li>
                     Maturity days will calculated automatically based on sowing
@@ -383,16 +383,16 @@ const planting = () => {
               </div>
 
               <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                <h2 className="text-primary-activelink dark:text-[#BE8B45] font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 2
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
 
-              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
+              <h2 className="text-primary-subheading dark:text-[#D5D5D5] pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
                 Search Planting:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+              <div className="text-primary-paragraph2 dark:text-[#D5D5D5] text-[18px] font-montserrat font-normal lg:px-10">
                 You can search the location from the list of farms of locations
                 present in the system. You can search based on either:
                 <br />
@@ -434,21 +434,21 @@ const planting = () => {
               </div>
 
               <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                <h2 className="text-primary-activelink dark:text-[#BE8B45] font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 3
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
 
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+              <h2 className="text-primary-subheading dark:text-[#D5D5D5] font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
                 Edit Planting:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+              <div className="text-primary-paragraph2 dark:text-[#D5D5D5] text-[18px] font-montserrat font-normal lg:px-10">
                 If any planting details changes, you can easily edit the
                 details. For that:
                 <br />
                 <br />
-                <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
+                <ul className="pl-[15px] list-disc dark:text-[#D5D5D5] text-primary-activelink font-semibold">
                   <li>
                     Click on the edit icon against the crop you want to edit.
                   </li>
@@ -461,20 +461,20 @@ const planting = () => {
               </div>
 
               <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                <h2 className="text-primary-activelink dark:text-[#BE8B45] font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 4
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
 
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+              <h2 className="text-primary-subheading dark:text-[#D5D5D5] font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
                 Delete Planting:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+              <div className="text-primary-paragraph2 dark:text-[#D5D5D5] text-[18px] font-montserrat font-normal lg:px-10">
                 If you want to delete any crop planting, you can easily do so.
                 <br />
                 <br />
-                <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
+                <ul className="pl-[15px] list-disc dark:text-[#D5D5D5] text-primary-activelink font-semibold">
                   <li>
                     Click on the delete icon against the row you want to delete
                     in the planting’s table.
@@ -498,20 +498,20 @@ const planting = () => {
               </div>
 
               <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                <h2 className="text-primary-activelink dark:text-[#BE8B45] font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 5
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
 
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+              <h2 className="text-primary-subheading dark:text-[#D5D5D5] font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
                 View Planting:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+              <div className="text-primary-paragraph2 dark:text-[#D5D5D5] text-[18px] font-montserrat font-normal lg:px-10">
                 You can easily view the details of the planting. For that:
                 <br />
                 <br />
-                <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
+                <ul className="pl-[15px] list-disc dark:text-[#D5D5D5] text-primary-activelink font-semibold">
                   <li>Hover on three dots.</li>
                   <li>Click on view button.</li>
                   <li>Click on delete button.</li>

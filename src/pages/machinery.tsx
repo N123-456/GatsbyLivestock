@@ -106,12 +106,12 @@ const machinery = () => {
                 <div className="hidden lg:block">
                   <TextToSpeech textSelector=".acu" />
                 </div>
-                <h2 className="text-primary-activelink font-semibold text-[30px] font-montserrat ">
+                <h2 className="text-primary-activelink dark:text-[#FFFFFF] font-semibold text-[30px] font-montserrat ">
                   Starting Guide for Machinery:
                 </h2>
               </div>
               <div className="flex items-center pt-5">
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                <h2 className="text-primary-subheading dark:text-[#BE8B45] font-semibold text-[22px] font-montserrat lg:pl-10">
                   Introduction
                 </h2>
                 <div className=" lg:hidden">
@@ -119,7 +119,7 @@ const machinery = () => {
                 </div>
               </div>
 
-              <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10">
+              <p className="text-primary-paragraph dark:text-[#D5D5D5] text-[18px] font-montserrat font-normal lg:px-10">
                 In this Machinery module, you can keep track of the machineries
                 available in your farm. One of your most vital tools is your
                 machinery, which enables you to operate more efficiently and
@@ -141,29 +141,29 @@ const machinery = () => {
               </div>
 
               <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                <h2 className="text-primary-activelink dark:text-[#BE8B45] font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 1
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
 
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+              <h2 className="text-primary-subheading dark:text-[#D5D5D5] font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
                 Add New Machinery:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+              <div className="text-primary-paragraph2 text-[18px] dark:text-[#D5D5D5] font-montserrat font-normal lg:px-10">
                 <p>For adding new machinery, follow the following steps:</p>
                 Click on{" "}
-                <span className="text-primary-activelink font-bold">
+                <span className="text-primary-activelink font-bold dark:text-[#D5D5D5]">
                   "Add New"
                 </span>
                 button.
                 <p>Enter the required details the fields are.</p>
-                <ul className="list-disc text-primary-paragraph2">
-                  <li className="text-primary-paragraph2 font-bold">
+                <ul className="list-disc text-primary-paragraph2 dark:text-[#D5D5D5]">
+                  <li className="text-primary-paragraph2 font-bold dark:text-[#D5D5D5]">
                     Basic Information:
                   </li>
 
-                  <ul className="text-primary-paragraph2">
+                  <ul className="text-primary-paragraph2 dark:text-[#D5D5D5]">
                     <li>
                       <span className="text-primary-pheading font-bold">
                         Name:
@@ -176,7 +176,7 @@ const machinery = () => {
                       </span>{" "}
                       What type is the equipment. The types can be
                     </li>
-                    <ul className="text-primary-activelink font-bold">
+                    <ul className="text-primary-activelink font-bold dark:text-[#D5D5D5]">
                       <li>Machinery</li>
                       <li>Tools</li>
                       <li>Vehicle</li>
@@ -207,12 +207,12 @@ const machinery = () => {
                 </ul>
               </div>
 
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal pt-5 lg:px-10">
-                <ul className="list-disc text-primary-paragraph2">
-                  <li className="text-primary-paragraph2 font-bold">
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal pt-5 lg:px-10 dark:text-[#D5D5D5]">
+                <ul className="list-disc text-primary-paragraph2 dark:text-[#D5D5D5]">
+                  <li className="text-primary-paragraph2 font-bold dark:text-[#D5D5D5]">
                     Parking Information:
                   </li>
-                  <ul className="text-primary-paragraph2">
+                  <ul className="text-primary-paragraph2 dark:text-[#D5D5D5]">
                     <li>
                       <span className="text-primary-pheading font-bold">
                         Warehouse:
@@ -244,9 +244,9 @@ const machinery = () => {
               <br />
 
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal pt-5 lg:px-10">
-                <ul className="list-disc text-primary-paragraph2">
+                <ul className="list-disc text-primary-paragraph2 dark:text-[#D5D5D5]">
                   <li>Identification: How will the machinery be identified.</li>
-                  <ul className="text-primary-paragraph2">
+                  <ul className="text-primary-paragraph2 dark:text-[#D5D5D5]">
                     <li>
                       <span className="text-primary-pheading font-bold">
                         Model:
@@ -288,10 +288,10 @@ const machinery = () => {
 
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal pt-5 lg:px-10">
                 <ul className="list-disc text-primary-paragraph2">
-                  <li className="text-primary-paragraph2 font-bold">
+                  <li className="text-primary-paragraph2 dark:text-[#D5D5D5] font-bold">
                     Specifications:
                   </li>
-                  <ul className="text-primary-paragraph2">
+                  <ul className="text-primary-paragraph2 dark:text-[#D5D5D5]">
                     <li>
                       <span className="text-primary-pheading font-bold">
                         Engine:
@@ -330,10 +330,10 @@ const machinery = () => {
 
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal pt-5 lg:px-10">
                 <ul className="list-disc text-primary-paragraph2">
-                  <li className="text-primary-paragraph2 font-bold">
+                  <li className="text-primary-paragraph2 font-bold dark:text-[#D5D5D5]">
                     Purchase Information
                   </li>
-                  <ul className="text-primary-paragraph2">
+                  <ul className="text-primary-paragraph2 dark:text-[#D5D5D5]">
                     <li>
                       <span className="text-primary-pheading font-bold">
                         Ownership Status:
@@ -377,7 +377,7 @@ const machinery = () => {
 
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal pt-5 lg:px-10">
                 <ul className="list-disc text-primary-paragraph2">
-                  <li className="text-primary-paragraph2 font-bold">
+                  <li className="text-primary-paragraph2 font-bold dark:text-[#D5D5D5]">
                     Additional Details
                   </li>
                   <ul className="text-primary-paragraph2">
@@ -414,16 +414,16 @@ const machinery = () => {
               <br />
 
               <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                <h2 className="text-primary-activelink dark:text-[#BE8B45] font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 2
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
 
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+              <h2 className="text-primary-subheading dark:text-[#D5D5D5] font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
                 Search Machinery:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+              <div className="text-primary-paragraph2 dark:text-[#D5D5D5] text-[18px] font-montserrat font-normal lg:px-10">
                 You can search the machinery from the list of machineries of
                 locations present in the system. You can search based on either:
                 <br />
@@ -443,7 +443,7 @@ const machinery = () => {
                       </span>{" "}
                       You can search by the status of the machinery. The status
                       of machinery can be:
-                      <ul className="text-primary-activelink font-bold">
+                      <ul className="text-primary-activelink font-bold dark:text-[#D5D5D5]">
                         <li>Available</li>
                         <li>Maintenance</li>
                       </ul>
@@ -480,21 +480,21 @@ const machinery = () => {
               </div>
 
               <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                <h2 className="text-primary-activelink dark:text-[#BE8B45] font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 3
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
 
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+              <h2 className="text-primary-subheading dark:text-[#D5D5D5] font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
                 Edit Machinery:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+              <div className="text-primary-paragraph2 dark:text-[#D5D5D5] text-[18px] font-montserrat font-normal lg:px-10">
                 If any machinery details you want to change, you can easily edit
                 the details. For that:
                 <br />
                 <br />
-                <ul className="pl-[15px] list-disc text-primary-activelink font-bold">
+                <ul className="pl-[15px] list-disc dark:text-[#D5D5D5] text-primary-activelink font-bold">
                   <li>Click on the edit icon</li>
                   <li>Machinery details screen will open.</li>
                   <li>Click on the field you want to edit.</li>
@@ -507,22 +507,22 @@ const machinery = () => {
               </div>
 
               <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                <h2 className="text-primary-activelink dark:text-[#BE8B45] font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 4
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
 
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+              <h2 className="text-primary-subheading dark:text-[#D5D5D5] font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
                 Delete Machinery:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+              <div className="text-primary-paragraph2 dark:text-[#D5D5D5] text-[18px] font-montserrat font-normal lg:px-10">
                 If you no longer need any machinery and wants to delete the
                 machinery or the machinery you have sold and does not belong to
                 you, you can easily do so.
                 <br />
                 <br />
-                <ul className="pl-[15px] list-disc text-primary-activelink font-bold">
+                <ul className="pl-[15px] list-disc dark:text-[#D5D5D5] text-primary-activelink font-bold">
                   <li>
                     Click on the delete icon against the row you want to delete
                     in the machinery table.
@@ -547,19 +547,19 @@ const machinery = () => {
               </div>
 
               <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                <h2 className="text-primary-activelink dark:text-[#BE8B45] font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 5
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
 
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+              <h2 className="text-primary-subheading dark:text-[#D5D5D5] font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
                 View Machinery:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+              <div className="text-primary-paragraph2 dark:text-[#D5D5D5] text-[18px] font-montserrat font-normal lg:px-10">
                 You can easily view the details of the machinery. For that:
                 <br />
-                <ul className="pl-[15px] list-disc text-primary-activelink font-bold">
+                <ul className="pl-[15px] list-disc dark:text-[#D5D5D5] text-primary-activelink font-bold">
                   <li>Hover on three dots.</li>
                   <li>Click on view button.</li>
                   <li>Click on delete button.</li>
@@ -591,13 +591,13 @@ const machinery = () => {
               </div>
 
               <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                <h2 className="text-primary-activelink dark:text-[#BE8B45] font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 6
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
 
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+              <h2 className="text-primary-subheading dark:text-[#D5D5D5] font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
                 Machinery Usage:
               </h2>
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -607,7 +607,7 @@ const machinery = () => {
                 machines available all at one place. For checking machinery
                 usage:
                 <br />
-                <ul className="pl-[15px] list-disc text-primary-activelink font-bold">
+                <ul className="pl-[15px] dark:text-[#D5D5D5] list-disc text-primary-activelink font-bold">
                   <li>Go to machinery tab:</li>
                   <li>
                     On top left corner, there will be a button of machinery

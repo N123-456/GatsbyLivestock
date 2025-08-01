@@ -76,12 +76,12 @@ const harvest = () => {
                 <div className="hidden lg:block">
                   <TextToSpeech textSelector=".acu" />
                 </div>
-                <h2 className="text-primary-activelink font-semibold text-[30px] font-montserrat ">
+                <h2 className="text-primary-activelink dark:text-[#FFFFFF] font-semibold text-[30px] font-montserrat ">
                   Starting Guide for Harvest:
                 </h2>
               </div>
               <div className="flex items-center pt-5">
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                <h2 className="text-primary-subheading dark:text-[#BE8B45] font-semibold text-[22px] font-montserrat lg:pl-10">
                   Introduction
                 </h2>
                 <div className=" lg:hidden">
@@ -89,7 +89,7 @@ const harvest = () => {
                 </div>
               </div>
 
-              <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10">
+              <p className="text-primary-paragraph dark:text-[#D5D5D5] text-[18px] font-montserrat font-normal lg:px-10">
                 The Harvest Section helps manage and organize the process of
                 gathering crops and recording important harvest-related details.
                 It ensures that harvested crops are properly documented,
@@ -116,21 +116,21 @@ const harvest = () => {
               <br />
 
               <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                <h2 className="text-primary-activelink dark:text-[#BE8B45] font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 1
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
 
-              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
+              <h2 className="text-primary-subheading pt-5 dark:text-[#D5D5D5] font-semibold text-[22px] font-montserrat lg:pl-10">
                 Add Harvest:
               </h2>
 
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+              <div className="text-primary-paragraph2 text-[18px] dark:text-[#D5D5D5] font-montserrat font-normal lg:px-10">
                 <p>For adding harvest details:</p>
                 <br />
                 Click on{" "}
-                <span className="text-primary-activelink font-bold">
+                <span className="text-primary-activelink font-bold dark:text-[#D5D5D5]">
                   "Planting"
                 </span>{" "}
                 tab.
@@ -148,7 +148,7 @@ const harvest = () => {
                   <li>
                     <p>
                       Click on{" "}
-                      <span className="text-primary-activelink font-bold">
+                      <span className="text-primary-activelink font-bold dark:text-[#D5D5D5]">
                         "Add Pesticides"
                       </span>{" "}
                       button.
@@ -170,35 +170,35 @@ const harvest = () => {
                   </li>
                   <li>
                     Enter the batch no{" "}
-                    <span className="text-primary-activelink font-bold">
+                    <span className="text-primary-activelink font-bold dark:text-[#D5D5D5]">
                       (e.g. Pick 1, Pick 2 etc.)
                     </span>{" "}
                     and classify the grade of yield{" "}
-                    <span className="text-primary-activelink font-bold">
+                    <span className="text-primary-activelink font-bold dark:text-[#D5D5D5]">
                       (e.g. High, Medium, Low):
                     </span>
                     {""}
                   </li>
                   <li>
                     In case the after-harvest process was{" "}
-                    <span className="text-primary-activelink font-bold">
+                    <span className="text-primary-activelink font-bold dark:text-[#D5D5D5]">
                       “Direct Sale”,
                     </span>{" "}
                     enter the quantity got in that batch{" "}
-                    <span className="text-primary-activelink font-bold">
+                    <span className="text-primary-activelink font-bold dark:text-[#D5D5D5]">
                       (e.g. 40 KG),
                     </span>{" "}
                     revenue per unit{" "}
-                    <span className="text-primary-activelink font-bold">
+                    <span className="text-primary-activelink font-bold dark:text-[#D5D5D5]">
                       (e.g.212 Rs),
                     </span>{" "}
                     total revenue will calculated automatically, and transaction
                     details like head of accounts{" "}
-                    <span className="text-primary-activelink font-bold">
+                    <span className="text-primary-activelink font-bold dark:text-[#D5D5D5]">
                       (e.g. Bank)
                     </span>{" "}
                     and transaction id/ cheque no{" "}
-                    <span className="text-primary-activelink font-bold">
+                    <span className="text-primary-activelink font-bold dark:text-[#D5D5D5]">
                       (e.g. 8746900987)
                     </span>{" "}
                     in case head of accounts was bank. A transaction will be
@@ -218,7 +218,7 @@ const harvest = () => {
                   <br />
                   <li>
                     In case the after-harvest process was{" "}
-                    <span className="text-primary-activelink font-bold">
+                    <span className="text-primary-activelink font-bold dark:text-[#D5D5D5]">
                       “Processed”,
                     </span>{" "}
                     enter the before processed quantity got in that batch, after
@@ -241,7 +241,7 @@ const harvest = () => {
                   <br />
                   <li>
                     In case the after-harvest process is{" "}
-                    <span className="text-primary-activelink font-bold">
+                    <span className="text-primary-activelink font-bold dark:text-[#D5D5D5]">
                       “Inventory”,
                     </span>{" "}
                     choose the inventory where the harvest will be stored,
@@ -279,16 +279,16 @@ const harvest = () => {
               </div>
 
               <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                <h2 className="text-primary-activelink dark:text-[#BE8B45] font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 2
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
 
-              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
+              <h2 className="text-primary-subheading pt-5 dark:text-[#D5D5D5] font-semibold text-[22px] font-montserrat lg:pl-10">
                 Search Harvest:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+              <div className="text-primary-paragraph2 dark:text-[#D5D5D5] text-[18px] font-montserrat font-normal lg:px-10">
                 You can search the harvest from the list of harvests of
                 locations present in the system. You can search based on either:
                 <br />
@@ -318,21 +318,21 @@ const harvest = () => {
               <br />
 
               <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                <h2 className="text-primary-activelink dark:text-[#BE8B45] font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 3
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
 
-              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
+              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10 dark:text-[#D5D5D5]">
                 Edit Harvest:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10 dark:text-[#D5D5D5]">
                 If any harvesting detail you want to change, you can easily edit
                 the details. For that:
                 <br />
                 <br />
-                <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
+                <ul className="pl-[15px] list-disc dark:text-[#D5D5D5] text-primary-activelink font-semibold">
                   <li>
                     Click on the edit icon against the harvest you want to edit.
                   </li>
@@ -345,20 +345,20 @@ const harvest = () => {
               </div>
 
               <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                <h2 className="text-primary-activelink dark:text-[#BE8B45] font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 4
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
 
-              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
+              <h2 className="text-primary-subheading pt-5 dark:text-[#D5D5D5] font-semibold text-[22px] font-montserrat lg:pl-10">
                 Delete Harvest:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10 dark:text-[#D5D5D5]">
                 If you want to delete any harvest, you can easily do so.
                 <br />
                 <br />
-                <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
+                <ul className="pl-[15px] list-disc text-primary-activelink font-semibold dark:text-[#D5D5D5]">
                   <li>
                     Click on the delete icon against the row you want to delete
                     in the harvest’s table.
@@ -383,20 +383,20 @@ const harvest = () => {
               </div>
 
               <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10 dark:text-[#BE8B45]">
                   Step 5
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
 
-              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
+              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10 dark:text-[#D5D5D5]">
                 View Harvest:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10 dark:text-[#D5D5D5]">
                 You can easily view the details of the harvest. For that:
                 <br />
                 <br />
-                <ul className="pl-[15px] list-disc text-primary-activelink font-semibold">
+                <ul className="pl-[15px] list-disc text-primary-activelink font-semibold dark:text-[#D5D5D5]">
                   <li>Hover on three dots.</li>
                   <li>Click on view button.</li>
                   <li>Click on delete button.</li>

@@ -59,12 +59,12 @@ const maintenance = () => {
                 <div className="hidden lg:block">
                   <TextToSpeech textSelector=".acu" />
                 </div>
-                <h2 className="text-primary-activelink font-semibold text-[30px] font-montserrat ">
+                <h2 className="text-primary-activelink dark:text-[#FFFFFF] font-semibold text-[30px] font-montserrat ">
                   Starting Guide with Machinery Usage Tracking:
                 </h2>
               </div>
               <div className="flex items-center pt-5">
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                <h2 className="text-primary-subheading dark:text-[#BE8B45] font-semibold text-[22px] font-montserrat lg:pl-10">
                   Introduction
                 </h2>
                 <div className=" lg:hidden">
@@ -73,16 +73,16 @@ const maintenance = () => {
               </div>
 
               <div className="flex items-center space-x-4 pt-5">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                <h2 className="text-primary-activelink dark:text-[#BE8B45] font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 1
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
 
-              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
+              <h2 className="text-primary-subheading dark:text-[#D5D5D5] pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
                 Add Check-In Usage:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+              <div className="text-primary-paragraph2 dark:text-[#D5D5D5] text-[18px] font-montserrat font-normal lg:px-10">
                 <p>
                   The check-in process involves recording details when a machine
                   is returned after use. This includes noting the time and date
@@ -114,14 +114,14 @@ const maintenance = () => {
               <br />
               <br />
 
-              <h2 className="text-primary-paragraph2 pt-5 text-[19px] font-montserrat font-semibold lg:pl-10">
+              <h2 className="text-primary-paragraph2 dark:text-[#D5D5D5] pt-5 text-[19px] font-montserrat font-semibold lg:pl-10">
                 Add Check-In
               </h2>
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
                 <ul>
                   <li>
                     Go to{" "}
-                    <span className="text-primary-activelink font-semibold">
+                    <span className="text-primary-activelink dark:text-[#D5D5D5] font-semibold">
                       "Machinery"
                     </span>
                     Tab.
@@ -132,14 +132,14 @@ const maintenance = () => {
                   </li>
                   <li>
                     Click on{" "}
-                    <span className="text-primary-activelink font-semibold">
+                    <span className="text-primary-activelink dark:text-[#D5D5D5] font-semibold">
                       "Track Usage"
                     </span>
                     button.
                   </li>
                   <li>
                     Go to{" "}
-                    <span className="text-primary-activelink font-semibold">
+                    <span className="text-primary-activelink dark:text-[#D5D5D5] font-semibold">
                       "+Check In"
                     </span>
                     button.
@@ -255,16 +255,16 @@ const maintenance = () => {
               </div>
 
               <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                <h2 className="text-primary-activelink dark:text-[#BE8B45] font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 2
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
 
-              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
+              <h2 className="text-primary-subheading dark:text-[#D5D5D5] pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
                 Add Check-Out Usage:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+              <div className="text-primary-paragraph2 dark:text-[#D5D5D5] text-[18px] font-montserrat font-normal lg:px-10">
                 <p>
                   The check-in process involves recording details when a machine
                   is returned after use. This includes noting the time and date
@@ -295,15 +295,15 @@ const maintenance = () => {
               <br />
               <br />
 
-              <h2 className="text-primary-paragraph2 pt-5 text-[19px] font-montserrat font-semibold lg:pl-10">
+              <h2 className="text-primary-paragraph2 pt-5 dark:text-[#D5D5D5] text-[19px] font-montserrat font-semibold lg:pl-10">
                 Add Check-Out Usage
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+              <div className="text-primary-paragraph2 text-[18px] dark:text-[#D5D5D5] font-montserrat font-normal lg:px-10">
                 <p>To add check out details:</p>
                 <ul>
                   <li>
                     Go to{" "}
-                    <span className="text-primary-activelink font-semibold">
+                    <span className="text-primary-activelink dark:text-[#D5D5D5] font-semibold">
                       "Machinery"
                     </span>
                     Tab.
@@ -314,14 +314,14 @@ const maintenance = () => {
                   </li>
                   <li>
                     Click on{" "}
-                    <span className="text-primary-activelink font-semibold">
+                    <span className="text-primary-activelink dark:text-[#D5D5D5] font-semibold">
                       "Track Usage"
                     </span>
                     button.
                   </li>
                   <li>
                     Go to{" "}
-                    <span className="text-primary-activelink font-semibold">
+                    <span className="text-primary-activelink dark:text-[#D5D5D5] font-semibold">
                       "+Check In"
                     </span>
                     button.
@@ -414,7 +414,7 @@ const maintenance = () => {
                   </li>
                   <li>
                     {" "}
-                    <span className="text-primary-pheading font-semibold">
+                    <span className="text-primary-pheading  font-semibold">
                       Supervisor Name
                     </span>
                     :Select the supervisor's name from the drop-down list. This

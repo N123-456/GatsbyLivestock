@@ -52,26 +52,26 @@ const recordtransaction = () => {
                 <div className="hidden lg:block">
                   <TextToSpeech textSelector=".acu" />
                 </div>
-                <h2 className="text-primary-activelink font-semibold text-[30px] font-montserrat ">
+                <h2 className="text-primary-activelink font-semibold dark:text-[#FFFFFF] text-[30px] font-montserrat ">
                   Record Transaction
                 </h2>
               </div>
               <div className="flex items-center pt-5">
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                <h2 className="text-primary-subheading dark:text-[#BE8B45] font-semibold text-[22px] font-montserrat lg:pl-10">
                   Introduction
                 </h2>
                 <div className=" lg:hidden">
                   <TextToSpeech textSelector=".acu" />
                 </div>
               </div>
-              <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10">
+              <p className="text-primary-paragraph text-[18px] dark:text-[#D5D5D5] font-montserrat font-normal lg:px-10">
                 {" "}
                 To record a transaction other than the automatic transactions
                 created, do the following:
               </p>
 
-              <div className="text-primary-paragraph2 text-[18px] pt-5 font-montserrat font-normal lg:px-10 pt-5">
-                <ul className="pl-[15px] list-disc text-primary-paragraph2 font-normal">
+              <div className="text-primary-paragraph2 dark:text-[#D5D5D5] text-[18px] pt-5 font-montserrat font-normal lg:px-10 pt-5">
+                <ul className="pl-[15px] list-disc dark:text-[#D5D5D5] text-primary-paragraph2 font-normal">
                   <li>Go to “Financials” tab.</li>
                   <li>Click on “Record Transaction” button.</li>
                   <li>Enter General details:</li>
@@ -146,16 +146,16 @@ const recordtransaction = () => {
               </div>
               <br />
 
-              <div className="text-primary-paragraph2 text-[18px] pt-5 font-montserrat font-normal lg:px-10 pt-5">
-                <ul className="pl-[15px] list-disc text-primary-paragraph2 font-normal">
+              <div className="text-primary-paragraph2 dark:text-[#D5D5D5] text-[18px] pt-5 font-montserrat font-normal lg:px-10 pt-5">
+                <ul className="pl-[15px] list-disc dark:text-[#D5D5D5] text-primary-paragraph2 font-normal">
                   <li>Enter Transaction Details:</li>
                   <li>
                     Once Cash and/or Bank is selected under Head of Accounts,
                     additional fields appear.
                   </li>
                   <br />
-                  <ul className="text-primary-paragraph font-normal">
-                    <li className="text-primary-activelink font-bold">
+                  <ul className="text-primary-paragraph dark:text-[#D5D5D5] font-normal">
+                    <li className="text-primary-activelink dark:text-[#D5D5D5] font-bold">
                       For Cash Transactions:
                     </li>
                     <ul>
@@ -167,12 +167,12 @@ const recordtransaction = () => {
                       </li>
                     </ul>
                     <br />
-                    <li className="text-primary-activelink font-bold">
+                    <li className="text-primary-activelink dark:text-[#D5D5D5] font-bold">
                       For Bank Transactions:
                     </li>
                     <ul>
                       <li>
-                        <span className="text-primary-pheading font-bold">
+                        <span className="text-primary-pheading  font-bold">
                           Bank Name:
                         </span>{" "}
                         Select the bank name from the dropdown list.
@@ -215,8 +215,8 @@ const recordtransaction = () => {
               </div>
               <br />
 
-              <div className="text-primary-paragraph2 text-[18px] pt-5 font-montserrat font-normal lg:px-10 pt-5">
-                <ul className="pl-[15px] list-disc text-primary-paragraph2 font-normal">
+              <div className="text-primary-paragraph2 dark:text-[#D5D5D5] text-[18px] pt-5 font-montserrat font-normal lg:px-10 pt-5">
+                <ul className="pl-[15px] list-disc dark:text-[#D5D5D5] text-primary-paragraph2 font-normal">
                   <li>Add Association and Additional Information:</li>
                   <li>
                     <span className="text-primary-pheading font-bold">
@@ -270,8 +270,8 @@ const recordtransaction = () => {
               </div>
               <br />
 
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal pt-5 lg:px-10">
-                <ul className="pl-[15px] list-disc text-primary-paragraph2 font-normal">
+              <div className="text-primary-paragraph2 dark:text-[#D5D5D5] text-[18px] font-montserrat font-normal pt-5 lg:px-10">
+                <ul className="pl-[15px] list-disc dark:text-[#D5D5D5] text-primary-paragraph2 font-normal">
                   <p>Notes</p>
                   <br />
                   <li>

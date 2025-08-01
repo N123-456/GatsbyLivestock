@@ -89,12 +89,12 @@ const inventory = () => {
                 <div className="hidden lg:block">
                   <TextToSpeech textSelector=".acu" />
                 </div>
-                <h2 className="text-primary-activelink font-semibold text-[30px] font-montserrat ">
+                <h2 className="text-primary-activelink dark:text-[#FFFFFF] font-semibold text-[30px] font-montserrat ">
                   Starting Guide for Inventory:
                 </h2>
               </div>
               <div className="flex items-center pt-5">
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                <h2 className="text-primary-subheading dark:text-[#BE8B45] font-semibold text-[22px] font-montserrat lg:pl-10">
                   Introduction
                 </h2>
                 <div className=" lg:hidden">
@@ -102,7 +102,7 @@ const inventory = () => {
                 </div>
               </div>
 
-              <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10">
+              <p className="text-primary-paragraph dark:text-[#D5D5D5] text-[18px] font-montserrat font-normal lg:px-10">
                 The inventory refers to the tracking and management of AIl items
                 used on the farm, such as seeds, fertilizers, tools, and
                 equipment. It helps farmers keep a record of the quantity,
@@ -127,22 +127,22 @@ const inventory = () => {
               <br />
 
               <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                <h2 className="text-primary-activelink dark:text-[#BE8B45] font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 1
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
 
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+              <h2 className="text-primary-subheading dark:text-[#D5D5D5] font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
                 Add Inventory:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+              <div className="text-primary-paragraph2 dark:text-[#D5D5D5] text-[18px] font-montserrat font-normal lg:px-10">
                 Before adding the inventory, it is necessary to add a warehouse
                 first. If you have not added a warehouse yet, first add the
                 warehouse. See the user guide for adding warehouse. For adding
                 inventory:
                 <br />
-                <ul className="list-disc">
+                <ul className="list-disc ">
                   <li>Enter the name of the inventory.</li>
                   <li>Enter its variety.</li>
                   <li>Enter the unit i.e., KG or grams</li>
@@ -218,7 +218,13 @@ const inventory = () => {
                     This option is for adding new inventory. For that:
                   </li>
                   <ul>
-                    <li>Click on <span className="text-primary-activelink font-bold">“Add New”</span>{" "} button</li>
+                    <li>
+                      Click on{" "}
+                      <span className="text-primary-activelink font-bold dark:text-[#D5D5D5]">
+                        “Add New”
+                      </span>{" "}
+                      button
+                    </li>
                     <li>Enter barcode.</li>
                     <li>
                       Select the warehouse where the inventory will be stored.
@@ -242,7 +248,13 @@ const inventory = () => {
                     <li>
                       Choose the manufacture and expiry date if applicable.
                     </li>
-                    <li>Click on <span className="text-primary-activelink font-bold">“Add”</span>{" "} button.</li>
+                    <li>
+                      Click on{" "}
+                      <span className="text-primary-activelink font-bold dark:text-[#D5D5D5]">
+                        “Add”
+                      </span>{" "}
+                      button.
+                    </li>
                     <li>
                       In the similar way you can add new inventory as you new
                       stock came.
@@ -251,7 +263,7 @@ const inventory = () => {
                     <li>Inventory history will be added successfully.</li>
                   </ul>
                   <br />
-                <div className="pl-13 pt-8 flex justify-center">
+                  <div className="pl-13 pt-8 flex justify-center">
                     {AN && (
                       <GatsbyImage
                         image={AN}
@@ -280,7 +292,13 @@ const inventory = () => {
                     can manually adjust the quantity. For doing this:
                   </li>
                   <ul>
-                    <li>Click on <span className="text-primary-activelink font-bold">“Manual Adjustment”</span>{" "} button.</li>
+                    <li>
+                      Click on{" "}
+                      <span className="text-primary-activelink font-bold dark:text-[#D5D5D5]">
+                        “Manual Adjustment”
+                      </span>{" "}
+                      button.
+                    </li>
                     <li>
                       Enter the reason, the date on which you are making manual
                       adjustment, choose the rack, and the difference in the
@@ -292,38 +310,43 @@ const inventory = () => {
                   </ul>
                   <br />
                   <div className="pl-13 pt-8 flex justify-center">
-                {MA && (
-                  <GatsbyImage
-                    image={MA}
-                    alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
-                  />
-                )}
-              </div>
+                    {MA && (
+                      <GatsbyImage
+                        image={MA}
+                        alt="Startups illustration"
+                        className="bg-white w-[1000.58px] "
+                      />
+                    )}
+                  </div>
                 </ul>
               </div>
               <br />
               <br />
 
               <div className="flex items-center space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                <h2 className="text-primary-activelink dark:text-[#BE8B45] font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 2
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
 
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+              <h2 className="text-primary-subheading dark:text-[#D5D5D5] font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
                 Search Inventory:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+              <div className="text-primary-paragraph2 text-[18px] dark:text-[#D5D5D5] font-montserrat font-normal lg:px-10">
                 You can search the location from the list of inventories of
                 locations present in the system. You can search based on either:
                 <p>
-                  <span className="text-primary-pheading font-bold">Inventory Name:</span>{" "} You can search by the inventory name.
+                  <span className="text-primary-pheading font-bold">
+                    Inventory Name:
+                  </span>{" "}
+                  You can search by the inventory name.
                 </p>{" "}
                 <p>
-                  <span className="text-primary-pheading font-bold">Product Variety:</span>{" "} You can search by the variety of the
-                  inventory.
+                  <span className="text-primary-pheading font-bold">
+                    Product Variety:
+                  </span>{" "}
+                  You can search by the variety of the inventory.
                 </p>
                 <br />
                 <p>
@@ -345,21 +368,21 @@ const inventory = () => {
               <br />
 
               <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] pt-5 lg:pl-10">
+                <h2 className="text-primary-activelink font-montserrat dark:text-[#BE8B45] font-semibold text-[22px] pt-5 lg:pl-10">
                   Step 3
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
 
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+              <h2 className="text-primary-subheading dark:text-[#D5D5D5] font-semibold text-[22px] font-montserrat lg:pl-10">
                 Edit Inventory:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+              <div className="text-primary-paragraph2 text-[18px] dark:text-[#D5D5D5] font-montserrat font-normal lg:px-10">
                 If any inventory detail you want to change, you can easily edit
                 the details of inventory but not inventory history. For that:
                 <br />
                 <br />
-                <ul className="pl-[15px] text-primary-activelink list-disc font-bold">
+                <ul className="pl-[15px] text-primary-activelink list-disc dark:text-[#D5D5D5] font-bold">
                   <li>
                     Click on the edit icon against the inventory you want to
                     edit.
@@ -378,20 +401,20 @@ const inventory = () => {
               <br />
 
               <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                <h2 className="text-primary-activelink font-montserrat dark:text-[#BE8B45] font-semibold text-[22px] lg:pl-10">
                   Step 4
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
 
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+              <h2 className="text-primary-subheading dark:text-[#D5D5D5] font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
                 Delete Inventory:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+              <div className="text-primary-paragraph2 dark:text-[#D5D5D5] text-[18px] font-montserrat font-normal lg:px-10">
                 If you want to delete any inventory, you can easily do so.
                 <br />
                 <br />
-                <ul className="pl-[15px] list-disc text-primary-activelink font-bold">
+                <ul className="pl-[15px] list-disc text-primary-activelink dark:text-[#D5D5D5] font-bold">
                   <li>
                     Click on the delete icon against the row you want to delete
                     in the inventory’s table.
@@ -417,19 +440,19 @@ const inventory = () => {
               <br />
               <br />
               <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                <h2 className="text-primary-activelink dark:text-[#BE8B45] font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 5
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+              <h2 className="text-primary-subheading dark:text-[#D5D5D5] font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
                 View Inventory:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+              <div className="text-primary-paragraph2 dark:text-[#D5D5D5] text-[18px] font-montserrat font-normal lg:px-10">
                 You can easily view the details of the inventory. For that:
                 <br />
                 <br />
-                <ul className="pl-[15px] list-disc text-primary-activelink font-bold">
+                <ul className="pl-[15px] list-disc dark:text-[#D5D5D5] text-primary-activelink font-bold">
                   <li>Hover on three dots.</li>
                   <li>Click on view button.</li>
                   <li>Click on delete button.</li>

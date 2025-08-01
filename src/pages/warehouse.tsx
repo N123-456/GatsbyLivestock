@@ -65,12 +65,12 @@ const harvest = () => {
                                  <div className="hidden lg:block">
                                    <TextToSpeech textSelector=".acu" />
                                  </div>
-                                 <h2 className="text-primary-activelink font-semibold text-[30px] font-montserrat ">
+                                 <h2 className="text-primary-activelink dark:text-[#FFFFFF] font-semibold text-[30px] font-montserrat ">
                                    Starting Guide for Warehouse:
                                  </h2>
                                </div>
                                <div className="flex items-center pt-5">
-                                 <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                                 <h2 className="text-primary-subheading dark:text-[#BE8B45] font-semibold text-[22px] font-montserrat lg:pl-10">
                                    Introduction
                                  </h2>
                                  <div className=" lg:hidden">
@@ -79,7 +79,7 @@ const harvest = () => {
                                </div>
            
 
-              <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:px-10">
+              <p className="text-primary-paragraph text-[18px] dark:text-[#D5D5D5] font-montserrat font-normal lg:px-10">
                 A warehouse is a storage facility where goods, equipment, or
                 produce are kept safely before use or distribution. It helps
                 organize and manage items efficiently, ensuring they are
@@ -107,19 +107,19 @@ const harvest = () => {
               </div>
 
               <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                <h2 className="text-primary-activelink dark:text-[#BE8B45] font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 1
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
                    
-              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
+              <h2 className="text-primary-subheading dark:text-[#D5D5D5] pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
                 Add Warehouse:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+              <div className="text-primary-paragraph2 dark:text-[#D5D5D5] text-[18px] font-montserrat font-normal lg:px-10">
                 <p>For adding harvest details:</p>
                 Click on{" "}
-                <span className="text-primary-activelink font-semibold">
+                <span className="text-primary-activelink dark:text-[#D5D5D5] font-semibold">
                   "Add Warehouse"
                 </span>
                 button.
@@ -135,7 +135,7 @@ const harvest = () => {
                 <p>There are four options:</p>
                 <br />
                       
-                <h2 className="text-primary-activelink font-semibold text-[22px] font-montserrat pt-5 ">
+                <h2 className="text-primary-activelink dark:text-[#FFFFFF] font-semibold text-[22px] font-montserrat pt-5 ">
                   Shed:
                 </h2>
                 <p className="pt-5">
@@ -157,16 +157,16 @@ const harvest = () => {
               </div>
                     
               <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                <h2 className="text-primary-activelink dark:text-[#BE8B45] font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 2
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
                    
-              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
+              <h2 className="text-primary-subheading dark:text-[#D5D5D5] pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
                 Search Warehouse:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+              <div className="text-primary-paragraph2 dark:text-[#D5D5D5] text-[18px] font-montserrat font-normal lg:px-10">
                 You can search the warehouse from the list of warehouse of
                 locations present in the system. You can search based on either:
                 <br />
@@ -187,21 +187,21 @@ const harvest = () => {
                 </div>
                      
                 <div className="flex items-center pt-5 space-x-4">
-                  <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                  <h2 className="text-primary-activelink dark:text-[#BE8B45] font-montserrat font-semibold text-[22px] lg:pl-10">
                     Step 3
                   </h2>
                   <div className="flex-1 h-px bg-primary-line"></div>
                 </div>
                       
-                <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
+                <h2 className="text-primary-subheading dark:text-[#D5D5D5] pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
                   Edit Warehouse:
                 </h2>
-                <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+                <div className="text-primary-paragraph2 dark:text-[#D5D5D5] text-[18px] font-montserrat font-normal lg:px-10">
                   If any warehouse detail you want to change, you can easily
                   edit the details. For that:
                   <br />
                   <br />
-                  <ul className=" list-disc text-primary-activelink font-semibold">
+                  <ul className=" list-disc dark:text-[#D5D5D5] text-primary-activelink font-semibold">
                     <li>
                       Click on the edit icon against the warehouse you want to
                       edit.
@@ -218,20 +218,20 @@ const harvest = () => {
 
                     
                 <div className="flex items-center pt-5 space-x-4">
-                  <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                  <h2 className="text-primary-activelink dark:text-[#BE8B45] font-montserrat font-semibold text-[22px] lg:pl-10">
                     Step 4
                   </h2>
                   <div className="flex-1 h-px bg-primary-line"></div>
                 </div>
                      
-                <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
+                <h2 className="text-primary-subheading dark:text-[#D5D5D5] pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
                   Delete Warehouse:
                 </h2>
-                <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+                <div className="text-primary-paragraph2 dark:text-[#D5D5D5] text-[18px] font-montserrat font-normal lg:px-10">
                   If you want to delete any warehouse, you can easily do so.
                   <br />
                   <br />
-                  <ul className=" list-disc text-primary-activelink font-semibold">
+                  <ul className=" list-disc dark:text-[#D5D5D5] text-primary-activelink font-semibold">
                     <li>
                       Click on the delete icon against the row you want to
                       delete in the warehouse’s table.
@@ -255,20 +255,20 @@ const harvest = () => {
                 </div>
                      
                 <div className="flex items-center space-x-4 pt-5">
-                  <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                  <h2 className="text-primary-activelink dark:text-[#BE8B45] font-montserrat font-semibold text-[22px] lg:pl-10">
                     Step 5
                   </h2>
                   <div className="flex-1 h-px bg-primary-line"></div>
                 </div>
                      
-                <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
+                <h2 className="text-primary-subheading dark:text-[#D5D5D5] pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
                   View Warehouse:
                 </h2>
-                <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+                <div className="text-primary-paragraph2 dark:text-[#D5D5D5] text-[18px] font-montserrat font-normal lg:px-10">
                   You can easily view the details of the warehouse. For that:
                   <br />
                   <br />
-                  <ul className=" list-disc text-primary-activelink font-semibold">
+                  <ul className=" list-disc dark:text-[#D5D5D5] text-primary-activelink font-semibold">
                     <li>Hover on three dots.</li>
                     <li>Click on view button.</li>
                     <li>Click on delete button.</li>

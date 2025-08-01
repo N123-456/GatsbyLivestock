@@ -92,7 +92,7 @@ const addlocation = () => {
       <PrivateRoute>
         <div>
           <div className="flex flex-col justify-center ">
-            <div className="acu max-w-7xl w-full px-4 lg:px-4 text-justify  ">
+            <div className="acu text-justify px-2 lg:px-2 ">
               <div className="flex items-center pt-5">
                 <div className="hidden lg:block">
                   <TextToSpeech textSelector=".acu" />
@@ -102,7 +102,7 @@ const addlocation = () => {
                 </h2>
               </div>
               <div className="flex items-center pt-5">
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10">
+                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10 dark:text-[#BE8B45]">
                   Introduction
                 </h2>
                 <div className=" lg:hidden">
@@ -135,21 +135,21 @@ const addlocation = () => {
               <br />
 
               <div className="flex items-center pt-5 space-x-2">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10 dark:text-[#BE8B45]">
                   Step 1
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
 
-              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
+              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10 dark:text-[#D5D5D5]">
                 Add Location:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10 dark:text-[#D5D5D5]">
                 For adding a location:
                 <br />
                 <br />
                 Click on{" "}
-                <span className="text-primary-activelink font-semibold">
+                <span className="text-primary-activelink font-semibold dark:text-[#D5D5D5]">
                   "Add location"
                 </span>
                 button.
@@ -157,7 +157,7 @@ const addlocation = () => {
                 Enter the required information.
                 <br />
                 First enter the{" "}
-                <span className="text-primary-activelink font-semibold">
+                <span className="text-primary-activelink font-semibold dark:text-[#D5D5D5]">
                   name and type
                 </span>
                 : of the location. The type of location can be:
@@ -257,12 +257,12 @@ const addlocation = () => {
               <br />
               <br />
 
-              <div className="text-primary-paragraph2 pt-5 text-[18px] font-montserrat font-normal lg:px-10">
-                <p className="text-primary-paragraph2 font-bold">
+              <div className="text-primary-paragraph2 pt-5 text-[18px] font-montserrat font-normal lg:px-10 dark:text-[#D5D5D5]">
+                <p className="text-primary-paragraph2 font-bold dark:text-[#D5D5D5]">
                   Enter the required information.
                 </p>
                 <br />
-                <ul className="text-primary-activelink font-semibold list-disc">
+                <ul className="text-primary-activelink font-semibold list-disc dark:text-[#D5D5D5]">
                   <li>Province</li>
                   <li>Division</li>
                   <li>District</li>
@@ -283,12 +283,12 @@ const addlocation = () => {
               <br />
               <br />
 
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
-                <p className="text-primary-paragraph2 font-bold">
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal dark:text-[#D5D5D5] lg:px-10">
+                <p className="text-primary-paragraph2 font-bold dark:text-[#D5D5D5]">
                   Enter the additional information including:
                 </p>
                 <br />
-                <ul className="text-primary-subheading font-normal text-[18px] font-montserrat pt-5">
+                <ul className="text-primary-subheading font-normal text-[18px] font-montserrat pt-5 dark:text-[#D5D5D5]">
                   <li>
                     <span className="text-primary-pheading font-semibold">
                       Ownership Status
@@ -322,7 +322,7 @@ const addlocation = () => {
                     the land is:
                   </li>
                 </ul>
-                <ul className="text-primary-activelink list-disc font-semibold pl-[15px]">
+                <ul className="text-primary-activelink list-disc font-semibold pl-[15px] dark:text-[#D5D5D5]">
                   <li>Rainfed</li>
                   <li>By canal</li>
                   <li>By Tube Wells</li>
@@ -341,16 +341,18 @@ const addlocation = () => {
               <br />
               <br />
 
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
-                <p className="text-primary-paragraph2 font-bold">
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10 dark:text-[#D5D5D5]">
+                <p className="text-primary-paragraph2 font-semibold dark:text-[#D5D5D5]">
                   Choose the location boundaries:
                 </p>
                 <br />
-                <h1 className="font-semibold">Mark Boundaries: </h1>
-                <ul className="text-primary-subheading font-normal text-[18px] font-montserrat ">
+                <h1 className="font-bold dark:text-[#D5D5D5]">
+                  Mark Boundaries:{" "}
+                </h1>
+                <ul className="text-primary-subheading font-normal text-[18px] font-montserrat dark:text-[#D5D5D5]">
                   <li>
                     Click on the{" "}
-                    <span className="text-primary-activelink font-semibold">
+                    <span className="text-primary-activelink font-semibold dark:text-[#D5D5D5]">
                       “Mark Boundaries”
                     </span>{" "}
                     button. A satellite imagery map will open.
@@ -404,17 +406,17 @@ const addlocation = () => {
               <br />
               <br />
 
-              <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+              <div className="flex items-center pt-5 space-x-4 ">
+                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10 dark:text-[#BE8B45]">
                   Step 2
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
 
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10 dark:text-[#D5D5D5]">
                 Search Location:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10 dark:text-[#D5D5D5]">
                 You can search the location from the list of farms of locations
                 present in the system. You can search based on either:
                 <br />
@@ -429,7 +431,7 @@ const addlocation = () => {
                   can be:
                 </p>
                 <br />
-                <ul className="pl-[15px] text-primary-activelink font-semibold list-disc">
+                <ul className="pl-[15px] text-primary-activelink font-semibold list-disc dark:text-[#D5D5D5]">
                   <li>All</li>
                   <li>Animal Enclosures</li>
                   <li>Buffer Zones</li>
@@ -461,14 +463,14 @@ const addlocation = () => {
               <br />
               <br />
 
-              <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+              <div className="flex items-center pt-5 space-x-4 ">
+                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10 dark:text-[#BE8B45]">
                   Step 3
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
 
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10 dark:text-[#D5D5D5]">
                 Edit Location:
               </h2>
               <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
@@ -476,7 +478,7 @@ const addlocation = () => {
                 details. For that:
                 <br />
                 <br />
-                <ul className="pl-[15px] text-primary-activelink font-semibold list-disc">
+                <ul className="pl-[15px] text-primary-activelink font-semibold list-disc dark:text-[#D5D5D5]">
                   <li>
                     Click on the edit icon against the location you want to
                     edit.
@@ -490,22 +492,22 @@ const addlocation = () => {
               </div>
 
               <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
+                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10 dark:text-[#BE8B45]">
                   Step 4
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
 
-              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
+              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat pt-5 lg:pl-10 dark:text-[#D5D5D5]">
                 Delete Location:
               </h2>
-              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10 dark:text-[#D5D5D5]">
                 If you no longer need any location or that location no more
                 belongs to you and wants to delete the location, you can easily
                 do so.
                 <br />
                 <br />
-                <ul className="pl-[15px] text-primary-activelink font-semibold list-disc">
+                <ul className="pl-[15px] text-primary-activelink font-semibold list-disc dark:text-[#D5D5D5]">
                   <li>
                     Click on the delete icon against the row you want to delete
                     in the location’s table.
@@ -530,33 +532,32 @@ const addlocation = () => {
               </div>
               <br />
               <br />
-           
-                <div className="flex items-center pt-5 space-x-4">
-                  <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10">
-                    Step 5
-                  </h2>
-                  <div className="flex-1 h-px bg-primary-line"></div>
-                </div>
-            
-            
-                <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
-                  View Location:
+
+              <div className="flex items-center pt-5 space-x-4">
+                <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10 dark:text-[#BE8B45]">
+                  Step 5
                 </h2>
-                <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10">
-                  If you no longer need any location or that location no more
-                  belongs to you and wants to delete the location, you can
-                  easily do so.
-                  <br />
-                  <br />
-                  <ul className="pl-[15px] text-primary-activelink font-semibold list-disc">
-                    <li>Hover on three dots.</li>
-                    <li>Click on view button.</li>
-                    <li>Click on delete button.</li>
-                    <li>Location details page will open.</li>
-                    <li>You can print the details of the location.</li>
-                  </ul>
-                </div>
-            
+                <div className="flex-1 h-px bg-primary-line"></div>
+              </div>
+
+              <h2 className="text-primary-subheading pt-5 font-semibold text-[22px] font-montserrat lg:pl-10 dark:text-[#D5D5D5]">
+                View Location:
+              </h2>
+              <div className="text-primary-paragraph2 text-[18px] font-montserrat font-normal lg:px-10 dark:text-[#D5D5D5]">
+                If you no longer need any location or that location no more
+                belongs to you and wants to delete the location, you can easily
+                do so.
+                <br />
+                <br />
+                <ul className="pl-[15px] text-primary-activelink font-semibold list-disc dark:text-[#D5D5D5]">
+                  <li>Hover on three dots.</li>
+                  <li>Click on view button.</li>
+                  <li>Click on delete button.</li>
+                  <li>Location details page will open.</li>
+                  <li>You can print the details of the location.</li>
+                </ul>
+              </div>
+
               <div className="pl-13 pt-8 flex justify-center">
                 {VL && (
                   <GatsbyImage
