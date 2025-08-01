@@ -91,13 +91,13 @@ const addlocation = () => {
     <AppLayout>
       <PrivateRoute>
         <div>
-          <div className="flex flex-col justify-center">
-            <div className="acu max-w-7xl w-full px-4 lg:px-4 text-justify ">
+          <div className="flex flex-col justify-center ">
+            <div className="acu max-w-7xl w-full px-4 lg:px-4 text-justify  ">
               <div className="flex items-center pt-5">
                 <div className="hidden lg:block">
                   <TextToSpeech textSelector=".acu" />
                 </div>
-                <h2 className="text-primary-activelink font-semibold text-[30px] font-montserrat ">
+                <h2 className="text-primary-activelink font-semibold text-[30px] font-montserrat dark:text-[#D5D5D5]">
                   Starting Guide for Farm Locations:
                 </h2>
               </div>
@@ -109,7 +109,7 @@ const addlocation = () => {
                   <TextToSpeech textSelector=".acu" />
                 </div>
               </div>
-              <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:pl-10 ">
+              <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:pl-10 dark:text-[#D5D5D5]">
                 Farm Locations are the locations that are owned by you or where
                 you can plant your crops. So, for that you need to Add the
                 location first. After that, on that particular location you can

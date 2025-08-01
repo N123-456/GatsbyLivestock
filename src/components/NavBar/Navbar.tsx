@@ -262,8 +262,8 @@ const Sidebar = React.memo(() => {
                 <div
                   className={`flex items-center w-full text-left pl-4 py-2 pr-0 text-xs md:text-sm font-montserrat cursor-pointer relative ${
                     isActive
-                      ? "text-primary-activelink font-bold"
-                      : "text-primary-nlink font-medium"
+                      ? "text-primary-activelink font-bold dark:text-[#BE8B45]"
+                      : "text-primary-nlink font-medium dark:text-[#FFFFFF]"
                   }`}
                 >
                   <span className="flex-1 pl-2 pt-2">
@@ -276,10 +276,10 @@ const Sidebar = React.memo(() => {
               <button
                 className={`flex items-center w-full text-left pl-4 py-2 pr-0 text-xs md:text-sm font-montserrat cursor-pointer relative ${
                   item.sublinks && openMenus[item.name]
-                    ? "text-primary-activelink font-bold"
+                    ? "text-primary-activelink font-bold dark:text-[#BE8B45]"
                     : activeLink === `${item.path}/`
-                    ? "text-primary-activelink font-bold"
-                    : "text-primary-nlink font-medium"
+                    ? "text-primary-activelink font-bold dark:text-[#BE8B45]"
+                    : "text-primary-nlink font-medium dark:text-[#FFFFFF]"
                 }`}
                 onClick={(e) => {
                   if (hasSublinks) {
@@ -289,7 +289,7 @@ const Sidebar = React.memo(() => {
               >
                 {hasSublinks && isOpen && (
                   <span
-                    className="absolute left-4 top-[25px] transform -translate-y-1/2 w-[2px] h-4 bg-primary-activelink"
+                    className="absolute left-4 top-[25px] transform -translate-y-1/2 w-[2px] h-4 bg-primary-activelink dark:bg-[#BE8B45]"
                     style={{ height: "16px" }}
                   />
                 )}
@@ -302,7 +302,7 @@ const Sidebar = React.memo(() => {
                 {hasSublinks && (
                   <span
                     className={`absolute ${
-                      isOpen ? "bottom-2 right-3" : "bottom-5 right-5"
+                      isOpen ? "bottom-2 right-3 dark:text-[#BE8B45]" : "bottom-5 right-5 dark:text-[#FFFFFF]"
                     } text-black`}
                   >
                     {isOpen ? (
@@ -326,14 +326,14 @@ const Sidebar = React.memo(() => {
                     return (
                       <li
                         key={sublink.name}
-                        className="text-[11px] md:text-[12px] text-primary-nlink font-medium font-montserrat"
+                        className="text-[11px] md:text-[12px] text-primary-nlink font-medium font-montserrat dark:text-[#FFFFFF]"
                       >
                         <button
                           className={`flex items-center justify-between w-full px-1 py-1 text-[11px] md:text-sm cursor-pointer ${
                             sublink.sublinks && openMenus[sublink.name]
-                              ? "text-primary-activelink text-[12px] md:text-[13px] font-bold font-montserrat pl-1"
+                              ? "text-primary-activelink text-[12px] md:text-[13px] font-bold font-montserrat pl-1 dark:text-[#BE8B45] dark:text-[#FFFFFF]"
                               : activeLink === sublink.name
-                              ? "text-primary-activelink"
+                              ? "text-primary-activelink dark:text-[#BE8B45]"
                               : ""
                           }`}
                           onClick={(e) => {
@@ -348,7 +348,7 @@ const Sidebar = React.memo(() => {
                                 to={sublink.path}
                                 className="flex items-center "
                               >
-                                <span className="mr-2 text-black">•</span>
+                                <span className="mr-2 text-black dark:text-[#FFFFFF]">•</span>
                                 {sublink.name}
                               </Link>
                             ) : (
@@ -359,7 +359,7 @@ const Sidebar = React.memo(() => {
                             )}
                           </span>
                           {sublink.sublinks && (
-                            <span className="text-black pr-[9px]">
+                            <span className="text-black pr-[9px] dark:text-[#BE8B45]">
                               {openMenus[sublink.name] ? (
                                 <IconChevronDown size={16} />
                               ) : (
@@ -379,9 +379,9 @@ const Sidebar = React.memo(() => {
                                 <li key={nestedSublink.name}>
                                   <Link
                                     to={nestedSublink.path}
-                                    className="flex items-center px-2 py-1 text-[10px] md:text-sm font-montserrat text-primary-nlink font-medium"
+                                    className="flex items-center px-2 py-1 text-[10px] md:text-sm font-montserrat text-primary-nlink font-medium dark:text-[#FFFFFF]"
                                   >
-                                    <span className="mr-2">•</span>
+                                    <span className="mr-2 dark-text-[#FFFFFF]">•</span>
                                     {nestedSublink.name}
                                   </Link>
                                 </li>
@@ -421,7 +421,7 @@ const Sidebar = React.memo(() => {
       )}
       <aside
         ref={sidebarRef}
-        className={`fixed top-0 left-0 h-full bg-[#F3FBF2] dark:bg-black shadow-lg overflow-y-auto scrollbar-hidden transition-transform duration-300 ease-in-out z-40
+        className={`fixed top-0 left-0 h-full bg-[#F3FBF2] dark:bg-[#2C2C2C] shadow-lg overflow-y-auto scrollbar-hidden transition-transform duration-300 ease-in-out z-40
           ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"} 
           md:translate-x-0 md:w-[250px] w-[290px]`}
       >
@@ -435,12 +435,12 @@ const Sidebar = React.memo(() => {
                 />
               )}
             </span>
-            <p className="font-niramit lg:text-[17px] sm:text-[4px] md:text-[4px] text-primary-activelink">
+            <p className="font-niramit lg:text-[17px] sm:text-[4px] md:text-[4px] text-primary-activelink dark:text-[#FFFFFF]">
               FARM MANAGEMENT <br />
               SYSTEM
             </p>
           </div>
-          <div className="border-b border-[#DBDBDB] w-[82%] ml-[22px] mt-[12px] pt-[12px]" />
+          <div className="border-b border-[#DBDBDB] dark:border-[#0F783B] w-[82%] ml-[22px] mt-[12px] pt-[12px]" />
         </div>
         <nav className="mt-3 space-y-2">
           <ul>{menuItems.map((item) => renderMenuItem(item))}</ul>
