@@ -92,7 +92,7 @@ const addlocation = () => {
       <PrivateRoute>
         <div>
           <div className="flex flex-col justify-center ">
-            <div className="acu text-justify px-2 lg:px-2 ">
+            <div className="acu text-justify lg:pr-4 ">
               <div className="flex items-center pt-5">
                 <div className="hidden lg:block">
                   <TextToSpeech textSelector=".acu" />

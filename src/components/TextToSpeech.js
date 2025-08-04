@@ -233,7 +233,7 @@ const TextToSpeech = ({ textSelector }) => {
           setCurrentWordIndex(wordIndex);
           const spans = document.querySelectorAll(`${textSelector} .word`);
           spans.forEach((span, index) =>
-            span.classList.toggle("bg-yellow-300", index === wordIndex)
+            span.classList.toggle("bg-gray-200", index === wordIndex)
           );
         }
       };
@@ -243,7 +243,7 @@ const TextToSpeech = ({ textSelector }) => {
         setIsSpeaking(false);
         setCurrentWordIndex(-1);
         const spans = document.querySelectorAll(`${textSelector} .word`);
-        spans.forEach((span) => span.classList.remove("bg-yellow-300 "));
+        spans.forEach((span) => span.classList.remove("bg-gray-200 "));
       };
 
       utterance.onerror = (e) => {
@@ -252,7 +252,7 @@ const TextToSpeech = ({ textSelector }) => {
         setIsSpeaking(false);
         setCurrentWordIndex(-1);
         const spans = document.querySelectorAll(`${textSelector} .word`);
-        spans.forEach((span) => span.classList.remove("bg-yellow-300"));
+        spans.forEach((span) => span.classList.remove("bg-gray-200"));
       };
 
       window.speechSynthesis.speak(utterance);
