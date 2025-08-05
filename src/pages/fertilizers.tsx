@@ -103,7 +103,7 @@ const fertilizers = () => {
                   <GatsbyImage
                     image={fertilizer}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -200,7 +200,7 @@ const fertilizers = () => {
                         <GatsbyImage
                           image={AF1}
                           alt="Startups illustration"
-                          className="bg-white w-[1000.58px] "
+                          className="border border-gray-200 shadow-lg w-[1000.58px] "
                         />
                       )}
                     </div>
@@ -246,7 +246,7 @@ const fertilizers = () => {
                     <GatsbyImage
                       image={SF}
                       alt="Startups illustration"
-                      className="bg-white w-[1000.58px] "
+                      className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
                 </div>
@@ -318,7 +318,7 @@ const fertilizers = () => {
                   <GatsbyImage
                     image={DF}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -356,7 +356,7 @@ const fertilizers = () => {
                   <GatsbyImage
                     image={VF}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>

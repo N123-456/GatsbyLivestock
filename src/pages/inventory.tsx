@@ -119,7 +119,7 @@ const inventory = () => {
                   <GatsbyImage
                     image={I}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -167,7 +167,7 @@ const inventory = () => {
                       <GatsbyImage
                         image={AI}
                         alt="Startups illustration"
-                        className="bg-white w-[1000.58px] "
+                        className="border border-gray-200 shadow-lg w-[1000.58px] "
                       />
                     )}
                   </div>
@@ -202,7 +202,7 @@ const inventory = () => {
                       <GatsbyImage
                         image={AI1}
                         alt="Startups illustration"
-                        className="bg-white w-[1000.58px] "
+                        className="border border-gray-200 shadow-lg w-[1000.58px] "
                       />
                     )}
                   </div>
@@ -268,7 +268,7 @@ const inventory = () => {
                       <GatsbyImage
                         image={AN}
                         alt="Startups illustration"
-                        className="bg-white w-[1000.58px] "
+                        className="border border-gray-200 shadow-lg w-[1000.58px] "
                       />
                     )}
                   </div>
@@ -277,7 +277,7 @@ const inventory = () => {
                       <GatsbyImage
                         image={AN1}
                         alt="Startups illustration"
-                        className="bg-white w-[1000.58px] "
+                        className="border border-gray-200 shadow-lg w-[1000.58px] "
                       />
                     )}
                   </div>
@@ -314,7 +314,7 @@ const inventory = () => {
                       <GatsbyImage
                         image={MA}
                         alt="Startups illustration"
-                        className="bg-white w-[1000.58px] "
+                        className="border border-gray-200 shadow-lg w-[1000.58px] "
                       />
                     )}
                   </div>
@@ -360,7 +360,7 @@ const inventory = () => {
                   <GatsbyImage
                     image={SIN}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -433,7 +433,7 @@ const inventory = () => {
                   <GatsbyImage
                     image={DI}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -466,7 +466,7 @@ const inventory = () => {
                   <GatsbyImage
                     image={VI}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>

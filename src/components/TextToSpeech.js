@@ -5,279 +5,494 @@ const TextToSpeech = ({ textSelector }) => {
   const [isSupported, setIsSupported] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [voices, setVoices] = useState([]);
-  const [isVoicesLoaded, setIsVoicesLoaded] = useState(false);
-  const [currentWordIndex, setCurrentWordIndex] = useState(-1);
-  const textRef = useRef(null);
-  const isMounted = useRef(true);
-  const wordSpans = useRef([]);
-  const wordList = useRef([]);
+  const [isVoiceLoading, setIsVoiceLoading] = useState(true);
+  const wordRefs = useRef([]);
+  const currentWordIndex = useRef(-1);
+  const containerRef = useRef(null);
 
-  // Fixed settings
   const volume = 1;
-  const rate = 0.75;
+  const rate = 0.7;
   const pitch = 0;
 
-  // Expanded list of preferred natural-sounding voices (female where possible)
-  const preferredVoices = [
-    "Microsoft Hazel - English (United Kingdom)", // Female, en-GB, Windows
-    "Google UK English Female", // Female, en-GB, Chrome
-    "Samantha", // Female, en-US, macOS
-    "Microsoft Zira - English (United States)", // Female, en-US, Windows
-    "Google US English", // Female, en-US, Chrome
+  // Expanded list of known female voice names (case-insensitive matching)
+  const femaleVoiceNames = [
+    "Google US English Female",
+    "Google UK English Female",
+    "Microsoft Zira Desktop",
+    "Samantha",
+    "Tessa",
+    "Victoria",
+    "Fiona",
+    "Karen",
+    "Siri Female",
+    "Amalia",
+    "Emma",
+    "Isabella",
+    "Google español de Estados Unidos",
+    "Google français",
+    "Microsoft Hazel Desktop",
+    "Microsoft Susan",
+    "Microsoft Linda",
   ];
 
-  // Function to wrap text nodes in spans while preserving DOM structure
-  const wrapTextInSpans = (element) => {
-    if (!element || !isMounted.current) return;
-    textRef.current.originalContent = element.innerHTML;
-    wordSpans.current = [];
-    wordList.current = [];
-    let wordIndex = 0;
+  console.log(
+    "TextToSpeech rendered, isSpeaking:",
+    isSpeaking,
+    "isVoiceLoading:",
+    isVoiceLoading,
+    "isSupported:",
+    isSupported
+  );
+
+  const wrapTextInSpans = (element, wordIndex = { index: 0 }) => {
+    if (!element) {
+      console.error("No element provided to wrapTextInSpans");
+      return null;
+    }
+
+    const allowedTags = ["P", "H1", "H2", "H3", "H4", "H5", "H6", "LI"];
 
     const processNode = (node) => {
-      if (node.nodeType === Node.TEXT_NODE) {
-        const text = node.textContent.trim();
-        if (text) {
-          const words = text.split(/(\s+)/);
-          const spanContainer = document.createElement("span");
-          let spanContent = "";
-          words.forEach((word) => {
-            if (/\S+/.test(word)) {
-              spanContent += `<span class="word transition-colors duration-200" data-index="${wordIndex}">${word}</span>`;
-              wordList.current.push(word);
-              wordSpans.current.push(wordIndex);
-              wordIndex++;
+      if (node.nodeType === Node.ELEMENT_NODE) {
+        const newElement = document.createElement(node.tagName);
+        for (let attr of node.attributes) {
+          newElement.setAttribute(attr.name, attr.value);
+        }
+
+        if (
+          node.tagName.toUpperCase() === "UL" ||
+          node.tagName.toUpperCase() === "SPAN"
+        ) {
+          node.childNodes.forEach((child) => {
+            const processedChild = processNode(child);
+            if (processedChild) newElement.appendChild(processedChild);
+          });
+          return newElement;
+        }
+
+        if (allowedTags.includes(node.tagName.toUpperCase())) {
+          node.childNodes.forEach((child) => {
+            if (child.nodeType === Node.TEXT_NODE) {
+              const text = child.textContent.trim();
+              if (text) {
+                const words = text
+                  .split(/\s+/)
+                  .filter((word) => word.length > 0);
+                words.forEach((word) => {
+                  const span = document.createElement("span");
+                  span.dataset.wordIndex = wordIndex.index++;
+                  span.textContent = word + " ";
+                  span.className = "inline";
+                  wordRefs.current[span.dataset.wordIndex] = span;
+                  newElement.appendChild(span);
+                });
+              }
             } else {
-              spanContent += word;
+              const processedChild = processNode(child);
+              if (processedChild) newElement.appendChild(processedChild);
             }
           });
-          spanContainer.innerHTML = spanContent;
-          node.replaceWith(spanContainer);
+          return newElement;
         }
-      } else if (node.nodeType === Node.ELEMENT_NODE && node.tagName.toLowerCase() !== "img") {
-        Array.from(node.childNodes).forEach(processNode);
+
+        node.childNodes.forEach((child) => {
+          const processedChild = processNode(child);
+          if (processedChild) newElement.appendChild(processedChild);
+        });
+        return newElement.childNodes.length > 0
+          ? newElement
+          : node.cloneNode(true);
+      } else if (node.nodeType === Node.TEXT_NODE) {
+        if (
+          node.parentElement &&
+          allowedTags.includes(node.parentElement.tagName.toUpperCase())
+        ) {
+          const text = node.textContent.trim();
+          if (text) {
+            const words = text.split(/\s+/).filter((word) => word.length > 0);
+            const fragment = document.createDocumentFragment();
+            words.forEach((word) => {
+              const span = document.createElement("span");
+              span.dataset.wordIndex = wordIndex.index++;
+              span.textContent = word + " ";
+              span.className = "inline";
+              wordRefs.current[span.dataset.wordIndex] = span;
+              fragment.appendChild(span);
+            });
+            return fragment;
+          }
+        }
+        return node.cloneNode(true);
       }
+      return node.cloneNode(true);
     };
 
-    try {
-      Array.from(element.childNodes).forEach(processNode);
-    } catch (error) {
-      console.error("Error wrapping text in spans:", error);
-      restoreOriginalContent();
-    }
+    const clonedElement = element.cloneNode(true);
+    return processNode(clonedElement);
   };
 
-  // Function to restore original content
-  const restoreOriginalContent = () => {
-    if (textRef.current && textRef.current.originalContent) {
-      textRef.current.innerHTML = textRef.current.originalContent;
-      delete textRef.current.originalContent;
-      wordSpans.current = [];
-      wordList.current = [];
-    }
-  };
-
-  // Function to extract text for speech synthesis
   const getAllText = (element) => {
-    if (!element) return "";
+    if (!element) {
+      console.error("No element provided to getAllText");
+      return "";
+    }
     let text = "";
+    const allowedTags = ["P", "H1", "H2", "H3", "H4", "H5", "H6", "LI"];
+
     element.childNodes.forEach((node) => {
       if (
         node.nodeType === Node.ELEMENT_NODE &&
         (node.tagName.toLowerCase() === "img" ||
-          node.classList.contains("bg-white"))
+          node.classList.contains("bg-white") ||
+          node.classList.contains("gatsby-image-wrapper"))
       ) {
         return;
       }
-      if (node.nodeType === Node.TEXT_NODE) {
-        text += node.textContent.trim() + " ";
+
+      if (
+        node.nodeType === Node.ELEMENT_NODE &&
+        allowedTags.includes(node.tagName.toUpperCase())
+      ) {
+        node.childNodes.forEach((child) => {
+          if (child.nodeType === Node.TEXT_NODE) {
+            const textContent = child.textContent.trim();
+            if (textContent) text += textContent + " ";
+          } else if (child.nodeType === Node.ELEMENT_NODE) {
+            text += getAllText(child);
+          }
+        });
       } else if (node.nodeType === Node.ELEMENT_NODE) {
         text += getAllText(node);
       }
     });
+
     return text.trim();
   };
 
-  // Check browser support and load voices
   useEffect(() => {
-    isMounted.current = true;
     if ("speechSynthesis" in window) {
       setIsSupported(true);
       const loadVoices = () => {
-        if (!isMounted.current) return;
         const availableVoices = window.speechSynthesis.getVoices();
+        console.log(
+          "Available voices:",
+          availableVoices.map((v) => ({
+            name: v.name,
+            lang: v.lang,
+            default: v.default,
+          }))
+        );
         if (availableVoices.length > 0) {
-          console.log(
-            "Available voices:",
-            availableVoices.map((v) => ({ name: v.name, lang: v.lang }))
-          );
           setVoices(availableVoices);
-          setIsVoicesLoaded(true);
-        } else {
-          // Retry loading voices after a short delay if none are available
-          setTimeout(loadVoices, 100);
+          const femaleVoice = availableVoices.find((v) =>
+            femaleVoiceNames.some((name) =>
+              v.name.toLowerCase().includes(name.toLowerCase())
+            )
+          );
+          if (femaleVoice) {
+            console.log(
+              `Female voice selected: ${femaleVoice.name} (${femaleVoice.lang})`
+            );
+          } else {
+            console.warn(
+              "No female voice matched, using first English voice or default"
+            );
+          }
+          setIsVoiceLoading(false);
         }
       };
 
       loadVoices();
       window.speechSynthesis.onvoiceschanged = () => {
         loadVoices();
+        window.speechSynthesis.onvoiceschanged = null;
       };
 
+      const timeout = setTimeout(() => {
+        if (isVoiceLoading) {
+          console.warn(
+            "Voice loading timed out, proceeding with available voices"
+          );
+          setIsVoiceLoading(false);
+        }
+      }, 5000);
+
       return () => {
-        isMounted.current = false;
+        clearTimeout(timeout);
         window.speechSynthesis.cancel();
         window.speechSynthesis.onvoiceschanged = null;
       };
     } else {
       setIsSupported(false);
+      setIsVoiceLoading(false);
+      console.log("Speech synthesis not supported");
     }
   }, []);
 
-  // Prepare text for highlighting and handle cleanup
   useEffect(() => {
-    isMounted.current = true;
-    const container = document.querySelector(textSelector);
-    if (container) {
-      textRef.current = container;
-      wrapTextInSpans(container);
-    }
+    console.log(
+      "State updated: isSpeaking=",
+      isSpeaking,
+      "isVoiceLoading=",
+      isVoiceLoading,
+      "isSupported=",
+      isSupported
+    );
+  }, [isSpeaking, isVoiceLoading, isSupported]);
 
-    return () => {
-      isMounted.current = false;
-      if (textRef.current) {
-        restoreOriginalContent();
-        window.speechSynthesis.cancel();
-        setIsSpeaking(false);
-        setCurrentWordIndex(-1);
-      }
-    };
-  }, [textSelector]);
-
-  // Handle speech with highlighting
   const speak = () => {
-    if (!isMounted.current) return;
-
+    console.log("Speak button clicked, current isSpeaking:", isSpeaking);
     if (isSpeaking) {
       window.speechSynthesis.cancel();
       setIsSpeaking(false);
-      setCurrentWordIndex(-1);
-      const spans = document.querySelectorAll(`${textSelector} .word`);
-      spans.forEach((span) => span.classList.remove("bg-yellow-300"));
+      resetHighlighting();
+      restoreOriginalContent();
+      console.log("Speech stopped, isSpeaking:", false);
       return;
     }
 
-    if (!isVoicesLoaded) {
-      console.warn("Voices are still loading. Please wait.");
+    if (isVoiceLoading) {
+      console.warn("Voices not yet loaded, please wait...");
       return;
     }
 
-    requestAnimationFrame(() => {
-      if (!isMounted.current) return;
-      const container = document.querySelector(textSelector);
-      if (!container) {
-        console.error("Container not found for selector:", textSelector);
-        return;
-      }
-      const text = getAllText(container);
-      if (!text) {
-        console.error("No text found for the given selector:", textSelector);
-        return;
-      }
+    setIsSpeaking(true);
+    console.log("Speech started, isSpeaking:", true);
 
-      const utterance = new SpeechSynthesisUtterance(text);
-      utterance.volume = volume;
-      utterance.rate = rate;
-      utterance.pitch = pitch;
+    const container = document.querySelector(textSelector);
+    if (!container) {
+      console.error("Container not found for selector:", textSelector);
+      setIsSpeaking(false);
+      return;
+    }
 
-      // Select the first available voice from the preferred list
-      let selectedVoice = voices.find((v) => preferredVoices.includes(v.name));
+    containerRef.current = container;
+    containerRef.current.originalContent = container.cloneNode(true);
 
-      // Fallback to high-quality en-GB or en-US voices
-      if (!selectedVoice) {
-        console.warn(
-          "No preferred voice found. Falling back to en-GB or en-US voice."
-        );
-        selectedVoice = voices.find(
-          (v) =>
-            (v.lang === "en-GB" || v.lang === "en-US") &&
-            (v.name.toLowerCase().includes("female") ||
-              v.name.toLowerCase().includes("natural"))
-        ) || voices.find((v) => v.lang === "en-GB" || v.lang === "en-US");
-      }
+    wordRefs.current = [];
+    currentWordIndex.current = -1;
+    const newContent = wrapTextInSpans(container);
+    if (newContent) {
+      container.innerHTML = "";
+      container.appendChild(newContent);
+      void container.offsetHeight;
+    } else {
+      console.error("Failed to wrap text in spans");
+      setIsSpeaking(false);
+      restoreOriginalContent();
+      return;
+    }
 
-      if (selectedVoice) {
-        utterance.voice = selectedVoice;
-        console.log(
-          `Using voice: ${selectedVoice.name} (${selectedVoice.lang})`
-        );
-      } else {
-        console.warn(
-          "No suitable voice found. Using browser default voice."
-        );
-      }
+    const text = getAllText(containerRef.current.originalContent);
+    if (!text) {
+      console.error("No text found for selector:", textSelector);
+      setIsSpeaking(false);
+      restoreOriginalContent();
+      return;
+    }
 
-      // Highlight words as they are spoken
-      utterance.onboundary = (event) => {
-        if (!isMounted.current || event.name !== "word") return;
-        let charCount = 0;
-        let wordIndex = -1;
-        for (let i = 0; i < wordList.current.length; i++) {
-          charCount += wordList.current[i].length + 1;
-          if (event.charIndex <= charCount) {
-            wordIndex = i;
-            break;
-          }
-        }
-        if (wordIndex >= 0 && wordIndex < wordSpans.current.length) {
-          setCurrentWordIndex(wordIndex);
-          const spans = document.querySelectorAll(`${textSelector} .word`);
-          spans.forEach((span, index) =>
-            span.classList.toggle("bg-gray-200", index === wordIndex)
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.volume = volume;
+    utterance.rate = rate;
+    utterance.pitch = pitch;
+
+    // Enhanced female voice selection
+    let voice = voices.find((v) =>
+      femaleVoiceNames.some((name) =>
+        v.name.toLowerCase().includes(name.toLowerCase())
+      )
+    );
+    if (!voice) {
+      // Fallback to any English voice
+      voice = voices.find((v) => v.lang.startsWith("en"));
+      console.warn(
+        `No female voice found, falling back to: ${
+          voice ? voice.name : "browser default"
+        }`
+      );
+    }
+    if (voice) {
+      utterance.voice = voice;
+      utterance.lang = voice.lang;
+      console.log("Selected voice:", voice.name, `(${voice.lang})`);
+    } else {
+      console.warn("No suitable voice found, using browser default");
+    }
+
+    const words = text.split(/\s+/).filter((word) => word.length > 0);
+    const wordBoundaries = [];
+    let charCount = 0;
+    words.forEach((word) => {
+      wordBoundaries.push({ start: charCount, end: charCount + word.length });
+      charCount += word.length + 1;
+    });
+
+    let lastHighlightTime = 0;
+    const highlightNextWord = () => {
+      const now = Date.now();
+      if (now - lastHighlightTime < 100) return;
+      lastHighlightTime = now;
+
+      const elapsed = now - (utterance.startTime || now);
+      let wordIndex = Math.floor((elapsed / 1000) * utterance.rate * 4);
+      wordIndex = Math.min(
+        wordIndex,
+        words.length - 1,
+        wordRefs.current.length - 1
+      );
+
+      if (wordIndex >= 0 && wordRefs.current[wordIndex]) {
+        if (
+          currentWordIndex.current >= 0 &&
+          wordRefs.current[currentWordIndex.current]
+        ) {
+          wordRefs.current[currentWordIndex.current].classList.remove(
+            "bg-gray-200",
+            "dark:bg-gray-400"
           );
         }
-      };
+        wordRefs.current[wordIndex].classList.add(
+          "bg-gray-200",
+          "dark:bg-gray-400"
+        );
+        currentWordIndex.current = wordIndex;
+        console.log(
+          `Highlighting word: ${words[wordIndex] || "N/A"}, index=${wordIndex}`
+        );
+      }
+    };
 
-      utterance.onend = () => {
-        if (!isMounted.current) return;
-        setIsSpeaking(false);
-        setCurrentWordIndex(-1);
-        const spans = document.querySelectorAll(`${textSelector} .word`);
-        spans.forEach((span) => span.classList.remove("bg-gray-200 "));
-      };
+    utterance.onstart = () => {
+      console.log("Utterance onstart fired");
+      utterance.startTime = Date.now();
+      const interval = setInterval(() => {
+        if (!isSpeaking) {
+          clearInterval(interval);
+          return;
+        }
+        highlightNextWord();
+      }, 200);
+      utterance.interval = interval;
+    };
 
-      utterance.onerror = (e) => {
-        if (!isMounted.current) return;
-        console.error("Speech synthesis error:", e);
-        setIsSpeaking(false);
-        setCurrentWordIndex(-1);
-        const spans = document.querySelectorAll(`${textSelector} .word`);
-        spans.forEach((span) => span.classList.remove("bg-gray-200"));
-      };
+    utterance.onboundary = (event) => {
+      if (event.name === "word") {
+        const charIndex = event.charIndex;
+        let wordIndex = wordBoundaries.findIndex(
+          (boundary) => charIndex >= boundary.start && charIndex < boundary.end
+        );
+        if (wordIndex >= 0 && wordRefs.current[wordIndex]) {
+          if (
+            currentWordIndex.current >= 0 &&
+            wordRefs.current[currentWordIndex.current]
+          ) {
+            wordRefs.current[currentWordIndex.current].classList.remove(
+              "bg-gray-200",
+              "dark:bg-gray-400"
+            );
+          }
+          wordRefs.current[wordIndex].classList.add(
+            "bg-gray-200",
+            "dark:bg-gray-400"
+          );
+          currentWordIndex.current = wordIndex;
+          console.log(
+            `Boundary-based highlight: wordIndex=${wordIndex}, word=${
+              words[wordIndex] || "N/A"
+            }`
+          );
+        }
+      }
+    };
 
-      window.speechSynthesis.speak(utterance);
-      setIsSpeaking(true);
-    });
+    utterance.onend = () => {
+      console.log("Utterance onend fired");
+      if (utterance.interval) {
+        clearInterval(utterance.interval);
+      }
+      setIsSpeaking(false);
+      resetHighlighting();
+      restoreOriginalContent();
+      console.log("Speech ended, isSpeaking:", false);
+    };
+
+    utterance.onerror = (e) => {
+      console.error("Speech synthesis error:", e.error, e.message);
+      if (utterance.interval) {
+        clearInterval(utterance.interval);
+      }
+      setIsSpeaking(false);
+      resetHighlighting();
+      restoreOriginalContent();
+      console.log("Speech error, isSpeaking:", false);
+    };
+
+    window.speechSynthesis.cancel();
+    console.log(
+      "Starting speech synthesis with voice:",
+      voice ? voice.name : "default"
+    );
+    window.speechSynthesis.speak(utterance);
   };
+
+  const resetHighlighting = () => {
+    if (
+      currentWordIndex.current >= 0 &&
+      wordRefs.current[currentWordIndex.current]
+    ) {
+      wordRefs.current[currentWordIndex.current].classList.remove(
+        "bg-gray-200",
+        "dark:bg-gray-400"
+      );
+    }
+    currentWordIndex.current = -1;
+  };
+
+  const restoreOriginalContent = () => {
+    if (containerRef.current && containerRef.current.originalContent) {
+      containerRef.current.innerHTML = "";
+      containerRef.current.appendChild(
+        containerRef.current.originalContent.cloneNode(true)
+      );
+      containerRef.current.originalContent = null;
+      console.log("Original DOM restored");
+    }
+  };
+
+  useEffect(() => {
+    return () => {
+      window.speechSynthesis.cancel();
+      resetHighlighting();
+      restoreOriginalContent();
+    };
+  }, []);
 
   return (
     <button
       id="speak"
       onClick={speak}
-      disabled={!isSupported || !isVoicesLoaded}
-      className={`p-2 rounded-md text-gray-500 dark:text-[#FFFFFF] transition-colors duration-200 disabled:cursor-not-allowed disabled:opacity-50 flex items-center gap-1`}
-      title={isSpeaking ? "Stop reading" : isVoicesLoaded ? "Read aloud" : "Preparing voices"}
+      disabled={!isSupported || isVoiceLoading}
+      className={`p-2 rounded-md text-gray-500 ${
+        isSpeaking ? "text-blue-500" : ""
+      } transition-colors duration-200 disabled:cursor-not-allowed disabled:opacity-50`}
+      title={
+        isSpeaking ? "Stop" : isVoiceLoading ? "Loading voices..." : "Speak"
+      }
+      aria-label={
+        isSpeaking
+          ? "Stop text-to-speech"
+          : isVoiceLoading
+          ? "Loading text-to-speech"
+          : "Start text-to-speech"
+      }
     >
-      {isSpeaking ? (
-        <IconVolumeOff className="w-5 h-5" />
-      ) : isVoicesLoaded ? (
-        <IconVolume className="w-5 h-5" />
+      {isVoiceLoading ? (
+        <IconLoader2 className="w-5 h-5 animate-spin" aria-label="Loading" />
+      ) : isSpeaking ? (
+        <IconVolume className="w-5 h-5" aria-label="Speaking" />
       ) : (
-        <IconLoader2 className="w-5 h-5 animate-spin" />
+        <IconVolumeOff className="w-5 h-5" aria-label="Not speaking" />
       )}
-      <span className="sr-only">
-        {isSpeaking ? "Stop reading" : isVoicesLoaded ? "Read aloud" : "Preparing voices"}
-      </span>
     </button>
   );
 };

@@ -107,7 +107,7 @@ const maintenance = () => {
                   <GatsbyImage
                     image={acu}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -249,7 +249,7 @@ const maintenance = () => {
                   <GatsbyImage
                     image={aci}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -288,7 +288,7 @@ const maintenance = () => {
                   <GatsbyImage
                     image={acou}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -431,7 +431,7 @@ const maintenance = () => {
                   <GatsbyImage
                     image={acou1}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>

@@ -88,7 +88,7 @@ const user = () => {
                   <GatsbyImage
                     image={um}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -277,7 +277,7 @@ const user = () => {
                     <GatsbyImage
                       image={anu}
                       alt="Startups illustration"
-                      className="bg-white w-[1000.58px] "
+                      className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
                 </div>
@@ -332,7 +332,7 @@ const user = () => {
                       <GatsbyImage
                         image={su}
                         alt="Startups illustration"
-                        className="bg-white w-[1000.58px] "
+                        className="border border-gray-200 shadow-lg w-[1000.58px] "
                       />
                     )}
                   </div>
@@ -417,7 +417,7 @@ const user = () => {
                   <GatsbyImage
                     image={vud}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>

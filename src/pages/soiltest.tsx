@@ -114,7 +114,7 @@ const soiltest = () => {
                   <GatsbyImage
                     image={ST}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -191,7 +191,7 @@ const soiltest = () => {
                       <GatsbyImage
                         image={AS}
                         alt="Startups illustration"
-                        className="bg-white w-[1000.58px] "
+                        className="border border-gray-200 shadow-lg w-[1000.58px] "
                       />
                     )}
                   </div>
@@ -217,7 +217,7 @@ const soiltest = () => {
                       <GatsbyImage
                         image={SCN}
                         alt="Startups illustration"
-                        className="bg-white w-[1000.58px] "
+                        className="border border-gray-200 shadow-lg w-[1000.58px] "
                       />
                     )}
                   </div>
@@ -235,7 +235,7 @@ const soiltest = () => {
                   <GatsbyImage
                     image={SDS}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -272,7 +272,7 @@ const soiltest = () => {
                   <GatsbyImage
                     image={SS}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -340,7 +340,7 @@ const soiltest = () => {
                   <GatsbyImage
                     image={DS}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -372,7 +372,7 @@ const soiltest = () => {
                   <GatsbyImage
                     image={VS}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -381,7 +381,7 @@ const soiltest = () => {
                   <GatsbyImage
                     image={VS2}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>

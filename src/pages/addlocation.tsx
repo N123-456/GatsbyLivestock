@@ -127,7 +127,7 @@ const addlocation = () => {
                   <GatsbyImage
                     image={fl}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -250,7 +250,7 @@ const addlocation = () => {
                   <GatsbyImage
                     image={AL}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -274,7 +274,7 @@ const addlocation = () => {
                     <GatsbyImage
                       image={LD}
                       alt="Startups illustration"
-                      className="bg-white w-[1000.58px] "
+                      className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
                 </div>
@@ -334,7 +334,7 @@ const addlocation = () => {
                   <GatsbyImage
                     image={LI}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -376,7 +376,7 @@ const addlocation = () => {
                     <GatsbyImage
                       image={MB}
                       alt="Startups illustration"
-                      className="bg-white w-[1000.58px] "
+                      className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
                 </div>
@@ -397,7 +397,7 @@ const addlocation = () => {
                     <GatsbyImage
                       image={UI}
                       alt="Startups illustration"
-                      className="bg-white w-[1000.58px] "
+                      className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
                 </div>
@@ -454,7 +454,7 @@ const addlocation = () => {
                     <GatsbyImage
                       image={SL}
                       alt="Startups illustration"
-                      className="bg-white w-[1000.58px] "
+                      className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
                 </div>
@@ -526,7 +526,7 @@ const addlocation = () => {
                   <GatsbyImage
                     image={DL}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -563,7 +563,7 @@ const addlocation = () => {
                   <GatsbyImage
                     image={VL}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -573,7 +573,7 @@ const addlocation = () => {
                   <GatsbyImage
                     image={VL2}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>

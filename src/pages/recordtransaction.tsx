@@ -140,7 +140,7 @@ const recordtransaction = () => {
                   <GatsbyImage
                     image={rt}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -209,7 +209,7 @@ const recordtransaction = () => {
                   <GatsbyImage
                     image={rt1}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -264,7 +264,7 @@ const recordtransaction = () => {
                   <GatsbyImage
                     image={rt2}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>

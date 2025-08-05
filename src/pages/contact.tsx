@@ -94,7 +94,7 @@ const contact = () => {
                   <GatsbyImage
                     image={cont}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -227,7 +227,7 @@ const contact = () => {
                   <GatsbyImage
                     image={anc}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -288,7 +288,7 @@ const contact = () => {
                       <GatsbyImage
                         image={sc}
                         alt="Startups illustration"
-                        className="bg-white w-[1000.58px] "
+                        className="border border-gray-200 shadow-lg w-[1000.58px] "
                       />
                     )}
                   </div>
@@ -355,7 +355,7 @@ const contact = () => {
                   <GatsbyImage
                     image={dc}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -393,7 +393,7 @@ const contact = () => {
                   <GatsbyImage
                     image={vc}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>

@@ -100,7 +100,7 @@ const pesticides = () => {
                   <GatsbyImage
                     image={pesticide}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -167,7 +167,7 @@ const pesticides = () => {
                         <GatsbyImage
                           image={APE}
                           alt="Startups illustration"
-                          className="bg-white w-[1000.58px] "
+                          className="border border-gray-200 shadow-lg w-[1000.58px] "
                         />
                       )}
                     </div>
@@ -192,7 +192,7 @@ const pesticides = () => {
                         <GatsbyImage
                           image={APE1}
                           alt="Startups illustration"
-                          className="bg-white w-[1000.58px] "
+                          className="border border-gray-200 shadow-lg w-[1000.58px] "
                         />
                       )}
                     </div>
@@ -247,7 +247,7 @@ const pesticides = () => {
                     <GatsbyImage
                       image={SPE}
                       alt="Startups illustration"
-                      className="bg-white w-[1000.58px] "
+                      className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
                 </div>
@@ -315,7 +315,7 @@ const pesticides = () => {
                   <GatsbyImage
                     image={DPE}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -351,7 +351,7 @@ const pesticides = () => {
                   <GatsbyImage
                     image={VPE}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>

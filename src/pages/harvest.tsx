@@ -108,7 +108,7 @@ const harvest = () => {
                   <GatsbyImage
                     image={harvest}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -210,7 +210,7 @@ const harvest = () => {
                       <GatsbyImage
                         image={AH}
                         alt="Startups illustration"
-                        className="bg-white w-[1000.58px] "
+                        className="border border-gray-200 shadow-lg w-[1000.58px] "
                       />
                     )}
                   </div>
@@ -234,7 +234,7 @@ const harvest = () => {
                       <GatsbyImage
                         image={AH1}
                         alt="Startups illustration"
-                        className="bg-white w-[1000.58px] "
+                        className="border border-gray-200 shadow-lg w-[1000.58px] "
                       />
                     )}
                   </div>
@@ -254,7 +254,7 @@ const harvest = () => {
                       <GatsbyImage
                         image={AH2}
                         alt="Startups illustration"
-                        className="bg-white w-[1000.58px] "
+                        className="border border-gray-200 shadow-lg w-[1000.58px] "
                       />
                     )}
                   </div>
@@ -308,7 +308,7 @@ const harvest = () => {
                     <GatsbyImage
                       image={SH}
                       alt="Startups illustration"
-                      className="bg-white w-[1000.58px] "
+                      className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
                 </div>
@@ -377,7 +377,7 @@ const harvest = () => {
                   <GatsbyImage
                     image={DH}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -412,7 +412,7 @@ const harvest = () => {
                   <GatsbyImage
                     image={VH}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>

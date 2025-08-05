@@ -90,7 +90,7 @@ const inputs = () => {
                     <GatsbyImage
                       image={inputs}
                       alt="Startups illustration"
-                      className="bg-white w-[1000.58px] "
+                      className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
                 </div>

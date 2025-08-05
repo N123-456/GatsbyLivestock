@@ -108,7 +108,7 @@ const IndexPage = () => {
                   <GatsbyImage
                     image={lanoverview}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -134,7 +134,7 @@ const IndexPage = () => {
                   <GatsbyImage
                     image={costest}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px]"
+                    className="border border-gray-200 shadow-lg w-[1000.58px]"
                   />
                 )}
               </div>
@@ -156,7 +156,7 @@ const IndexPage = () => {
                   <GatsbyImage
                     image={uptask}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px]"
+                    className="border border-gray-200 shadow-lg w-[1000.58px]"
                   />
                 )}
               </div>
@@ -251,7 +251,7 @@ const IndexPage = () => {
                   <GatsbyImage
                     image={menu}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px]"
+                    className="border border-gray-200 shadow-lg w-[1000.58px]"
                   />
                 )}
               </div>

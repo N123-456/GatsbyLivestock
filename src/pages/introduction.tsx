@@ -52,7 +52,7 @@ const Introduction = () => {
                 <GatsbyImage
                   image={Dashboard}
                   alt="Startups illustration"
-                  className="bg-white max-w-full h-auto"
+                 className=" border border-gray-200 shadow-lg"
                 />
               )}
             </div>

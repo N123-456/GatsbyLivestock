@@ -120,7 +120,7 @@ const tasks = () => {
                     <GatsbyImage
                       image={listview}
                       alt="Startups illustration"
-                      className="bg-white w-[1000.58px] "
+                      className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
                 </div>
@@ -138,7 +138,7 @@ const tasks = () => {
                     <GatsbyImage
                       image={cview}
                       alt="Startups illustration"
-                      className="bg-white w-[1000.58px] "
+                      className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
                 </div>
@@ -171,7 +171,7 @@ const tasks = () => {
                   <GatsbyImage
                     image={addtask}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -359,7 +359,7 @@ const tasks = () => {
                   <GatsbyImage
                     image={stask}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -418,7 +418,7 @@ const tasks = () => {
                   <GatsbyImage
                     image={dtask}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -449,7 +449,7 @@ const tasks = () => {
                   <GatsbyImage
                     image={vtask}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>

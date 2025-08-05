@@ -129,7 +129,7 @@ const planting = () => {
                   <GatsbyImage
                     image={planting}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -216,7 +216,7 @@ const planting = () => {
                     <GatsbyImage
                       image={AP}
                       alt="Startups illustration"
-                      className="bg-white w-[1000.58px] "
+                      className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
                 </div>
@@ -225,7 +225,7 @@ const planting = () => {
                     <GatsbyImage
                       image={AP1}
                       alt="Startups illustration"
-                      className="bg-white w-[1000.58px] "
+                      className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
                 </div>
@@ -260,7 +260,7 @@ const planting = () => {
                   <GatsbyImage
                     image={AP2}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -331,7 +331,7 @@ const planting = () => {
                   <GatsbyImage
                     image={PD}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -377,7 +377,7 @@ const planting = () => {
                   <GatsbyImage
                     image={HD}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -428,7 +428,7 @@ const planting = () => {
                   <GatsbyImage
                     image={SP}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -492,7 +492,7 @@ const planting = () => {
                   <GatsbyImage
                     image={DP}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -524,7 +524,7 @@ const planting = () => {
                   <GatsbyImage
                     image={VP}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -533,7 +533,7 @@ const planting = () => {
                   <GatsbyImage
                     image={VP1}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>

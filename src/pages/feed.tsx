@@ -85,7 +85,7 @@ const feed = () => {
                     <GatsbyImage
                       image={feed}
                       alt="Startups illustration"
-                      className="bg-white w-[1000.58px] "
+                      className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
                 </div>
@@ -99,7 +99,7 @@ const feed = () => {
                       <GatsbyImage
                         image={feed1}
                         alt="Startups illustration"
-                        className="bg-white w-[1000.58px] "
+                        className="border border-gray-200 shadow-lg w-[1000.58px] "
                       />
                     )}
                   </div>

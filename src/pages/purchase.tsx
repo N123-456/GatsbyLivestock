@@ -129,7 +129,7 @@ const purchase = () => {
                   <GatsbyImage
                     image={PR}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -195,7 +195,7 @@ const purchase = () => {
                       <GatsbyImage
                         image={APR}
                         alt="Startups illustration"
-                        className="bg-white w-[1000.58px] "
+                        className="border border-gray-200 shadow-lg w-[1000.58px] "
                       />
                     )}
                   </div>
@@ -216,7 +216,7 @@ const purchase = () => {
                       <GatsbyImage
                         image={APR1}
                         alt="Startups illustration"
-                        className="bg-white w-[1000.58px] "
+                        className="border border-gray-200 shadow-lg w-[1000.58px] "
                       />
                     )}
                   </div>
@@ -283,7 +283,7 @@ const purchase = () => {
                   <GatsbyImage
                     image={SPR}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -292,7 +292,7 @@ const purchase = () => {
                   <GatsbyImage
                     image={SPR1}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -335,7 +335,7 @@ const purchase = () => {
                   <GatsbyImage
                     image={po}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -412,7 +412,7 @@ const purchase = () => {
                       <GatsbyImage
                         image={apo}
                         alt="Startups illustration"
-                        className="bg-white w-[1000.58px] "
+                        className="border border-gray-200 shadow-lg w-[1000.58px] "
                       />
                     )}
                   </div>
@@ -438,7 +438,7 @@ const purchase = () => {
                       <GatsbyImage
                         image={apo1}
                         alt="Startups illustration"
-                        className="bg-white w-[1000.58px] "
+                        className="border border-gray-200 shadow-lg w-[1000.58px] "
                       />
                     )}
                   </div>
@@ -503,7 +503,7 @@ const purchase = () => {
                     <GatsbyImage
                       image={spo}
                       alt="Startups illustration"
-                      className="bg-white w-[1000.58px] "
+                      className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
                 </div>
@@ -512,7 +512,7 @@ const purchase = () => {
                     <GatsbyImage
                       image={spo1}
                       alt="Startups illustration"
-                      className="bg-white w-[1000.58px] "
+                      className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
                 </div>

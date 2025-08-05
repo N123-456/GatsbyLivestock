@@ -123,7 +123,7 @@ const watertest = () => {
                   <GatsbyImage
                     image={WT}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -188,7 +188,7 @@ const watertest = () => {
                       <GatsbyImage
                         image={AW}
                         alt="Startups illustration"
-                        className="bg-white w-[1000.58px] "
+                        className="border border-gray-200 shadow-lg w-[1000.58px] "
                       />
                     )}
                   </div>
@@ -223,7 +223,7 @@ const watertest = () => {
                       <GatsbyImage
                         image={AW2}
                         alt="Startups illustration"
-                        className="bg-white w-[1000.58px] "
+                        className="border border-gray-200 shadow-lg w-[1000.58px] "
                       />
                     )}
                   </div>
@@ -241,7 +241,7 @@ const watertest = () => {
                   <GatsbyImage
                     image={AW3}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -280,7 +280,7 @@ const watertest = () => {
                   <GatsbyImage
                     image={SW}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -348,7 +348,7 @@ const watertest = () => {
                   <GatsbyImage
                     image={DW}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -380,7 +380,7 @@ const watertest = () => {
                   <GatsbyImage
                     image={VW}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -389,7 +389,7 @@ const watertest = () => {
                   <GatsbyImage
                     image={VW2}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>

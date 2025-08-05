@@ -135,7 +135,7 @@ const machinery = () => {
                   <GatsbyImage
                     image={M}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -198,7 +198,7 @@ const machinery = () => {
                         <GatsbyImage
                           image={ANM}
                           alt="Startups illustration"
-                          className="bg-white w-[1000.58px] "
+                          className="border border-gray-200 shadow-lg w-[1000.58px] "
                         />
                       )}
                     </div>
@@ -235,7 +235,7 @@ const machinery = () => {
                     <GatsbyImage
                       image={PI}
                       alt="Startups illustration"
-                      className="bg-white w-[1000.58px] "
+                      className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
                 </div>
@@ -280,7 +280,7 @@ const machinery = () => {
                   <GatsbyImage
                     image={IDEN}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -322,7 +322,7 @@ const machinery = () => {
                   <GatsbyImage
                     image={SPEC}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -369,7 +369,7 @@ const machinery = () => {
                   <GatsbyImage
                     image={PIN}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -407,7 +407,7 @@ const machinery = () => {
                   <GatsbyImage
                     image={AD}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -474,7 +474,7 @@ const machinery = () => {
                   <GatsbyImage
                     image={SM}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -541,7 +541,7 @@ const machinery = () => {
                   <GatsbyImage
                     image={DM}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -576,7 +576,7 @@ const machinery = () => {
                   <GatsbyImage
                     image={VM}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -585,7 +585,7 @@ const machinery = () => {
                   <GatsbyImage
                     image={VM1}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -633,7 +633,7 @@ const machinery = () => {
                   <GatsbyImage
                     image={MU}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>

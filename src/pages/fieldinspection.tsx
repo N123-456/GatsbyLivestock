@@ -110,7 +110,7 @@ const fieldinspection = () => {
                   <GatsbyImage
                     image={FI}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -186,7 +186,7 @@ const fieldinspection = () => {
                       <GatsbyImage
                         image={AFI1}
                         alt="Startups illustration"
-                        className="bg-white w-[1000.58px] "
+                        className="border border-gray-200 shadow-lg w-[1000.58px] "
                       />
                     )}
                   </div>
@@ -201,7 +201,7 @@ const fieldinspection = () => {
                       <GatsbyImage
                         image={AFI2}
                         alt="Startups illustration"
-                        className="bg-white w-[1000.58px] "
+                        className="border border-gray-200 shadow-lg w-[1000.58px] "
                       />
                     )}
                   </div>
@@ -258,7 +258,7 @@ const fieldinspection = () => {
                     <GatsbyImage
                       image={SFI}
                       alt="Startups illustration"
-                      className="bg-white w-[1000.58px] "
+                      className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
                 </div>
@@ -332,7 +332,7 @@ const fieldinspection = () => {
                   <GatsbyImage
                     image={DFI}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -371,7 +371,7 @@ const fieldinspection = () => {
                   <GatsbyImage
                     image={VFI}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
@@ -380,7 +380,7 @@ const fieldinspection = () => {
                   <GatsbyImage
                     image={VFI1}
                     alt="Startups illustration"
-                    className="bg-white w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
               </div>
