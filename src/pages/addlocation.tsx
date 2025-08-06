@@ -92,10 +92,10 @@ const addlocation = () => {
       <PrivateRoute>
         <div>
           <div className="flex flex-col justify-center ">
-            <div className="acu text-justify lg:pr-4 ">
+            <div id="acu" className=" text-justify lg:pr-4 ">
               <div className="flex items-center pt-5">
                 <div className="hidden lg:block">
-                  <TextToSpeech textSelector=".acu" />
+                  <TextToSpeech textSelector="acu" />
                 </div>
                 <h2 className="text-primary-activelink font-semibold text-[30px] font-montserrat dark:text-[#D5D5D5]">
                   Starting Guide for Farm Locations:
@@ -106,7 +106,7 @@ const addlocation = () => {
                   Introduction
                 </h2>
                 <div className=" lg:hidden">
-                  <TextToSpeech textSelector=".acu" />
+                  <TextToSpeech textSelector="acu" />
                 </div>
               </div>
               <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:pl-10 dark:text-[#D5D5D5]">

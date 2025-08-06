@@ -47,10 +47,10 @@ const recordtransaction = () => {
       <PrivateRoute>
         <div>
           <div className="flex flex-col justify-center">
-            <div className="acu  lg:pr-4  text-justify">
+            <div id='acu' className="lg:pr-4  text-justify">
               <div className="flex items-center pt-5">
                 <div className="hidden lg:block">
-                  <TextToSpeech textSelector=".acu" />
+                  <TextToSpeech textSelector="acu" />
                 </div>
                 <h2 className="text-primary-activelink font-semibold dark:text-[#FFFFFF] text-[30px] font-montserrat ">
                   Record Transaction
@@ -61,7 +61,7 @@ const recordtransaction = () => {
                   Introduction
                 </h2>
                 <div className=" lg:hidden">
-                  <TextToSpeech textSelector=".acu" />
+                  <TextToSpeech textSelector="acu" />
                 </div>
               </div>
               <p className="text-primary-paragraph text-[18px] dark:text-[#D5D5D5] font-montserrat font-normal lg:px-10">

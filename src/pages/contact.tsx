@@ -61,10 +61,10 @@ const contact = () => {
       <PrivateRoute>
         <div>
           <div className="flex flex-col justify-center">
-            <div className="acu  lg:pr-4 text-justify">
+            <div id='acu' className="lg:pr-4 text-justify">
               <div className="flex items-center pt-5">
                 <div className="hidden lg:block">
-                  <TextToSpeech textSelector=".acu" />
+                  <TextToSpeech textSelector="acu" />
                 </div>
                 <h2 className="text-primary-activelink font-semibold text-[30px] font-montserrat dark:text-[#FFFFFF]">
                   Starting Guide for Contact:
@@ -75,7 +75,7 @@ const contact = () => {
                   Introduction
                 </h2>
                 <div className=" lg:hidden">
-                  <TextToSpeech textSelector=".acu" />
+                  <TextToSpeech textSelector="acu" />
                 </div>
               </div>
 
