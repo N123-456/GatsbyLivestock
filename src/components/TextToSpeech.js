@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import { IconVolume, IconVolumeOff, IconLoader2 } from "@tabler/icons-react";
 
 const TextToSpeech = ({ textSelector }) => {
+  // Move all hooks to the top level, unconditionally
+  const [isClient, setIsClient] = useState(false);
   const [isSupported, setIsSupported] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [voices, setVoices] = useState([]);
@@ -14,7 +16,6 @@ const TextToSpeech = ({ textSelector }) => {
   const rate = 0.7;
   const pitch = 0;
 
-  // Expanded list of known female voice names (case-insensitive matching)
   const femaleVoiceNames = [
     "Google US English Female",
     "Google UK English Female",
@@ -41,8 +42,15 @@ const TextToSpeech = ({ textSelector }) => {
     "isVoiceLoading:",
     isVoiceLoading,
     "isSupported:",
-    isSupported
+    isSupported,
+    "isClient:",
+    isClient
   );
+
+  // Handle client-side detection
+  useEffect(() => {
+    setIsClient(true); // Set to true after mount
+  }, []);
 
   const wrapTextInSpans = (element, wordIndex = { index: 0 }) => {
     if (!element) {
@@ -170,64 +178,61 @@ const TextToSpeech = ({ textSelector }) => {
   };
 
   useEffect(() => {
-    if ("speechSynthesis" in window) {
-      setIsSupported(true);
-      const loadVoices = () => {
-        const availableVoices = window.speechSynthesis.getVoices();
-        console.log(
-          "Available voices:",
-          availableVoices.map((v) => ({
-            name: v.name,
-            lang: v.lang,
-            default: v.default,
-          }))
-        );
-        if (availableVoices.length > 0) {
-          setVoices(availableVoices);
-          const femaleVoice = availableVoices.find((v) =>
-            femaleVoiceNames.some((name) =>
-              v.name.toLowerCase().includes(name.toLowerCase())
-            )
-          );
-          if (femaleVoice) {
-            console.log(
-              `Female voice selected: ${femaleVoice.name} (${femaleVoice.lang})`
-            );
-          } else {
-            console.warn(
-              "No female voice matched, using first English voice or default"
-            );
-          }
-          setIsVoiceLoading(false);
-        }
-      };
-
-      loadVoices();
-      window.speechSynthesis.onvoiceschanged = () => {
-        loadVoices();
-        window.speechSynthesis.onvoiceschanged = null;
-      };
-
-      const timeout = setTimeout(() => {
-        if (isVoiceLoading) {
-          console.warn(
-            "Voice loading timed out, proceeding with available voices"
-          );
-          setIsVoiceLoading(false);
-        }
-      }, 5000);
-
-      return () => {
-        clearTimeout(timeout);
-        window.speechSynthesis.cancel();
-        window.speechSynthesis.onvoiceschanged = null;
-      };
-    } else {
+    if (!isClient || !("speechSynthesis" in window)) {
       setIsSupported(false);
       setIsVoiceLoading(false);
-      console.log("Speech synthesis not supported");
+      console.log("Speech synthesis not supported or not client-side");
+      return;
     }
-  }, []);
+
+    setIsSupported(true);
+    const loadVoices = () => {
+      const availableVoices = window.speechSynthesis.getVoices();
+      console.log(
+        "Available voices:",
+        availableVoices.map((v) => ({
+          name: v.name,
+          lang: v.lang,
+          default: v.default,
+        }))
+      );
+      if (availableVoices.length > 0) {
+        setVoices(availableVoices);
+        setIsVoiceLoading(false);
+        const femaleVoice = availableVoices.find((v) =>
+          femaleVoiceNames.some((name) =>
+            v.name.toLowerCase().includes(name.toLowerCase())
+          )
+        );
+        if (femaleVoice) {
+          console.log(
+            `Female voice selected: ${femaleVoice.name} (${femaleVoice.lang})`
+          );
+        } else {
+          console.warn(
+            "No female voice matched, using first English voice or default"
+          );
+        }
+      }
+    };
+
+    loadVoices();
+    window.speechSynthesis.onvoiceschanged = () => {
+      loadVoices();
+      window.speechSynthesis.onvoiceschanged = null;
+    };
+
+    const timeout = setTimeout(() => {
+      console.warn("Voice loading timed out, proceeding with available voices");
+      setIsVoiceLoading(false);
+    }, 1000);
+
+    return () => {
+      clearTimeout(timeout);
+      window.speechSynthesis.cancel();
+      window.speechSynthesis.onvoiceschanged = null;
+    };
+  }, [isClient]);
 
   useEffect(() => {
     console.log(
@@ -241,6 +246,11 @@ const TextToSpeech = ({ textSelector }) => {
   }, [isSpeaking, isVoiceLoading, isSupported]);
 
   const speak = () => {
+    if (!isClient) {
+      console.warn("Cannot speak, not on client-side");
+      return;
+    }
+
     console.log("Speak button clicked, current isSpeaking:", isSpeaking);
     if (isSpeaking) {
       window.speechSynthesis.cancel();
@@ -256,10 +266,13 @@ const TextToSpeech = ({ textSelector }) => {
       return;
     }
 
-    setIsSpeaking(true);
-    console.log("Speech started, isSpeaking:", true);
+    setTimeout(() => {
+      setIsSpeaking(true);
+      console.log("setIsSpeaking(true) inside timeout");
+    }, 0);
 
     const container = document.querySelector(textSelector);
+    console.log("Container element:", container);
     if (!container) {
       console.error("Container not found for selector:", textSelector);
       setIsSpeaking(false);
@@ -296,14 +309,12 @@ const TextToSpeech = ({ textSelector }) => {
     utterance.rate = rate;
     utterance.pitch = pitch;
 
-    // Enhanced female voice selection
     let voice = voices.find((v) =>
       femaleVoiceNames.some((name) =>
         v.name.toLowerCase().includes(name.toLowerCase())
       )
     );
     if (!voice) {
-      // Fallback to any English voice
       voice = voices.find((v) => v.lang.startsWith("en"));
       console.warn(
         `No female voice found, falling back to: ${
@@ -427,12 +438,13 @@ const TextToSpeech = ({ textSelector }) => {
       console.log("Speech error, isSpeaking:", false);
     };
 
+    console.log("About to start speech synthesis");
     window.speechSynthesis.cancel();
+    window.speechSynthesis.speak(utterance);
     console.log(
-      "Starting speech synthesis with voice:",
+      "Speech synthesis triggered with voice:",
       voice ? voice.name : "default"
     );
-    window.speechSynthesis.speak(utterance);
   };
 
   const resetHighlighting = () => {
@@ -461,11 +473,18 @@ const TextToSpeech = ({ textSelector }) => {
 
   useEffect(() => {
     return () => {
-      window.speechSynthesis.cancel();
-      resetHighlighting();
-      restoreOriginalContent();
+      if (isClient) {
+        window.speechSynthesis.cancel();
+        resetHighlighting();
+        restoreOriginalContent();
+      }
     };
-  }, []);
+  }, [isClient]);
+
+  // Conditionally render button content, not the entire component
+  if (!isClient) {
+    return null; // Render nothing during SSR
+  }
 
   return (
     <button
@@ -486,10 +505,18 @@ const TextToSpeech = ({ textSelector }) => {
           : "Start text-to-speech"
       }
     >
+      {console.log(
+        "Rendering button, isSpeaking:",
+        isSpeaking,
+        "isVoiceLoading:",
+        isVoiceLoading,
+        "Icon to show:",
+        isVoiceLoading ? "Loader" : isSpeaking ? "Volume" : "VolumeOff"
+      )}
       {isVoiceLoading ? (
         <IconLoader2 className="w-5 h-5 animate-spin" aria-label="Loading" />
       ) : isSpeaking ? (
-        <IconVolume className="w-5 h-5" aria-label="Speaking" />
+        <IconVolume className="w-5 h-5 text-blue-500" aria-label="Speaking" />
       ) : (
         <IconVolumeOff className="w-5 h-5" aria-label="Not speaking" />
       )}
