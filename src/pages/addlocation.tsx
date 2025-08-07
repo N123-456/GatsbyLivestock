@@ -90,50 +90,49 @@ const addlocation = () => {
   return (
     <AppLayout>
       <PrivateRoute>
-        <div>
-          <div className="flex flex-col justify-center ">
-            <div id="acu" className=" text-justify lg:pr-4 ">
-              <div className="flex items-center pt-5">
-                <div className="hidden lg:block">
-                  <TextToSpeech textSelector="acu" />
-                </div>
-                <h2 className="text-primary-activelink font-semibold text-[30px] font-montserrat dark:text-[#D5D5D5]">
-                  Starting Guide for Farm Locations:
-                </h2>
+        <div className="acu">
+          <div className="text-justify lg:pr-4">
+            <div className="flex items-center pt-5">
+              <div className="hidden lg:block">
+                <TextToSpeech textSelector=".acu" />
               </div>
-              <div className="flex items-center pt-5">
-                <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10 dark:text-[#BE8B45]">
-                  Introduction
-                </h2>
-                <div className=" lg:hidden">
-                  <TextToSpeech textSelector="acu" />
-                </div>
+              <h2 className="text-primary-activelink font-semibold text-[30px] font-montserrat dark:text-[#D5D5D5]">
+                Starting Guide for Farm Locations:
+              </h2>
+            </div>
+            <div className="flex items-center pt-5">
+              <h2 className="text-primary-subheading font-semibold text-[22px] font-montserrat lg:pl-10 dark:text-[#BE8B45]">
+                Introduction
+              </h2>
+              <div className=" lg:hidden">
+                <TextToSpeech textSelector=".acu" />
               </div>
-              <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:pl-10 dark:text-[#D5D5D5]">
-                Farm Locations are the locations that are owned by you or where
-                you can plant your crops. So, for that you need to Add the
-                location first. After that, on that particular location you can
-                add the details of your farm. The locations can be of any type
-                like fields, building etc. You can easily manage all your farm
-                locations all at one place. For adding planting, warehouse and
-                tasks related to land you first need to have a farm location.
-                The location is an asset of the farmer. When a location is
-                added, a transaction is created against that location. That can
-                be viewed in the financial tab in general ledger table.
-              </p>
+            </div>
+            <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:pl-10 dark:text-[#D5D5D5]">
+              Farm Locations are the locations that are owned by you or where
+              you can plant your crops. So, for that you need to Add the
+              location first. After that, on that particular location you can
+              add the details of your farm. The locations can be of any type
+              like fields, building etc. You can easily manage all your farm
+              locations all at one place. For adding planting, warehouse and
+              tasks related to land you first need to have a farm location. The
+              location is an asset of the farmer. When a location is added, a
+              transaction is created against that location. That can be viewed
+              in the financial tab in general ledger table.
+            </p>
 
-              <div className="pl-13 pt-8 flex justify-center">
-                {fl && (
-                  <GatsbyImage
-                    image={fl}
-                    alt="Startups illustration"
-                    className="border border-gray-200 shadow-lg w-[1000.58px] "
-                  />
-                )}
-              </div>
-              <br />
-              <br />
-
+            <div className="pl-13 pt-8 flex justify-center">
+              {fl && (
+                <GatsbyImage
+                  image={fl}
+                  alt="Startups illustration"
+                  className="border border-gray-200 shadow-lg w-[1000.58px] "
+                />
+              )}
+            </div>
+            <br />
+            <br />
+          
               <div className="flex items-center pt-5 space-x-2">
                 <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px] lg:pl-10 dark:text-[#BE8B45]">
                   Step 1
@@ -579,7 +578,7 @@ const addlocation = () => {
               </div>
             </div>
           </div>
-        </div>
+       
       </PrivateRoute>
     </AppLayout>
   );

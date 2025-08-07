@@ -1,154 +1,271 @@
-import React, { useState, useEffect, useRef } from "react";
-import { IconVolume, IconVolumeOff, IconLoader2 } from "@tabler/icons-react";
+import React, { useState, useEffect } from "react";
+import { IconVolume, IconVolumeOff } from "@tabler/icons-react";
 
-export const TextToSpeech = ({ textSelector = "acu" }: { textSelector: string; }) => {
-  const [isSpeaking, setIsSpeaking] = useState(false);
-  const highlightRef = useRef<HTMLSpanElement | null>(null);
-  const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
+// Define props interface
+interface TextToSpeechProps {
+  textSelector: string;
+}
 
-  const findWordStart = (text: string, index: number): number => {
-    while (index > 0 && /\S/.test(text[index - 1])) {
-      index--;
-    }
-    return index;
-  };
+const TextToSpeech: React.FC<TextToSpeechProps> = ({ textSelector }) => {
+  const [isSupported, setIsSupported] = useState<boolean>(false);
+  const [isSpeaking, setIsSpeaking] = useState<boolean>(false);
+  const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([]);
+  const [isVoicesLoaded, setIsVoicesLoaded] = useState<boolean>(false);
 
-  const findWordEnd = (text: string, index: number): number => {
-    while (index < text.length && /\S/.test(text[index])) {
-      index++;
-    }
-    return index;
-  };
+  // Fixed settings
+  const volume: number = 1;
+  const rate: number = 0.75;
+  const pitch: number = 0;
 
-  const highlightWord = (charIndex: number) => {
-    const container = document.getElementById(textSelector);
-    if (!container) return;
+  // Hardcoded list of preferred female voices in order of priority
+  const preferredVoices: string[] = [
+    "Microsoft Hazel - English (United Kingdom)", // Female, en-GB, Windows
+    // Female, en-GB, Google Cloud
+  ];
 
-    const walker = document.createTreeWalker(
-      container,
-      NodeFilter.SHOW_TEXT,
-      null
-    );
-    let currentIndex = 0;
+  // Function to recursively extract text from an element and its children, excluding images
+  const getAllText = (element: HTMLElement | null): string => {
+    if (!element) return "";
+    const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, {
+      acceptNode: (node) => {
+        const parent = node.parentElement;
+        if (
+          parent &&
+          (parent.tagName.toLowerCase() === "img" ||
+            parent.closest("img") ||
+            parent.classList.contains("bg-white") ||
+            node.textContent?.trim() === "")
+        ) {
+          return NodeFilter.FILTER_REJECT;
+        }
+        return NodeFilter.FILTER_ACCEPT;
+      },
+    });
 
-    clearHighlight();
-
+    let text = "";
     while (walker.nextNode()) {
-      const node = walker.currentNode;
-      const text = node.nodeValue || "";
-      const nextIndex = currentIndex + text.length;
-
-      if (charIndex >= currentIndex && charIndex < nextIndex) {
-        const relativeIndex = charIndex - currentIndex;
-
-        // Now: find full word boundaries that surround relativeIndex
-        const wordStart = findWordStart(text, relativeIndex);
-        const wordEnd = findWordEnd(text, relativeIndex);
-        const before = text.slice(0, wordStart);
-        const word = text.slice(wordStart, wordEnd);
-        const after = text.slice(wordEnd);
-
-        const span = document.createElement("span");
-        span.textContent = word;
-        span.style.backgroundColor = "#d3d3d3";
-        highlightRef.current = span;
-
-        const frag = document.createDocumentFragment();
-        if (before) frag.appendChild(document.createTextNode(before));
-        frag.appendChild(span);
-        if (after) frag.appendChild(document.createTextNode(after));
-
-        node.parentNode?.replaceChild(frag, node);
-        break;
-      }
-
-      currentIndex = nextIndex;
-    }
-  };
-
-  const clearHighlight = () => {
-    if (highlightRef.current) {
-      const parent = highlightRef.current.parentNode;
-      if (parent) {
-        parent.replaceChild(
-          document.createTextNode(highlightRef.current.textContent || ""),
-          highlightRef.current
-        );
-        highlightRef.current = null;
+      const nodeText = walker.currentNode.textContent?.trim();
+      if (nodeText) {
+        text += nodeText + " ";
       }
     }
+    return text.trim();
   };
 
-  const speak = () => {
-    const container = document.getElementById(textSelector);
-    if (!container) return;
+  // Check browser support and load voices
+  useEffect(() => {
+    if ("speechSynthesis" in window) {
+      setIsSupported(true);
+      const loadVoices = () => {
+        const availableVoices: SpeechSynthesisVoice[] =
+          window.speechSynthesis.getVoices();
+        if (availableVoices.length > 0) {
+          console.log(
+            "Available voices:",
+            availableVoices.map((v) => ({ name: v.name, lang: v.lang }))
+          );
+          setVoices(availableVoices);
+          setIsVoicesLoaded(true); // Mark voices as loaded
+        }
+      };
 
-    const text = container.innerText;
-    const utterance = new SpeechSynthesisUtterance(text);
-    const voices = speechSynthesis.getVoices();
+      // Try loading voices immediately
+      loadVoices();
+      // Listen for voice changes
+      window.speechSynthesis.onvoiceschanged = () => {
+        loadVoices();
+      };
 
-    const selectedVoice = voices.find(
-      (v) => v.name === "Microsoft Zira - English (United States)"
-    );
-    if (selectedVoice) {
-      utterance.voice = selectedVoice;
-      // console.log(Using voice: ${selectedVoice.name} (${selectedVoice.lang}));
+      // Cleanup on unmount
+      return () => {
+        window.speechSynthesis.cancel();
+        window.speechSynthesis.onvoiceschanged = null;
+      };
     } else {
-      console.warn(
-        "Microsoft Zira voice not found. Using browser default voice."
-      );
+      setIsSupported(false);
+    }
+  }, []);
+
+  // Handle speech
+  const speak = (): void => {
+    if (isSpeaking) {
+      window.speechSynthesis.cancel();
+      setIsSpeaking(false);
+      // Clear any existing highlights
+      document.querySelectorAll(".highlight-word").forEach((span) => {
+        const parent = span.parentNode;
+        if (parent && span.textContent) {
+          parent.replaceChild(document.createTextNode(span.textContent), span);
+        }
+      });
+      return;
     }
 
-    utterance.onstart = () => setIsSpeaking(true);
+    if (!isVoicesLoaded) {
+      console.warn("Voices not loaded yet. Please wait and try again.");
+      return;
+    }
 
-    utterance.onend = () => {
-      setIsSpeaking(false);
-      clearHighlight();
-    };
-
-    utterance.onboundary = (event) => {
-      if (event.name === "word") {
-        highlightWord(event.charIndex);
+    requestAnimationFrame(() => {
+      const container: HTMLElement | null =
+        document.querySelector(textSelector);
+      const text: string = getAllText(container);
+      if (!text) {
+        console.error("No text found for the given selector:", textSelector);
+        return;
       }
-    };
 
-    utteranceRef.current = utterance;
-    speechSynthesis.speak(utterance);
-  };
+      // Split text into words for tracking
+      const words = text.split(/\s+/).filter((word) => word.length > 0);
+      let wordIndex = 0;
+      let currentOffset = 0;
 
-  const stop = () => {
-    speechSynthesis.cancel();
-    setIsSpeaking(false);
-    clearHighlight();
-  };
-
-  useEffect(() => {
-    const loadVoices = () => {
-      const voices = speechSynthesis.getVoices();
-      console.log(
-        "Voices:",
-        voices.map((v) => v.name)
+      const utterance: SpeechSynthesisUtterance = new SpeechSynthesisUtterance(
+        text
       );
-    };
+      utterance.volume = volume;
+      utterance.rate = rate;
+      utterance.pitch = pitch;
 
-    window.speechSynthesis.onvoiceschanged = loadVoices;
-    loadVoices();
-  }, []);
+      // Select the first available voice from the preferred list
+      let selectedVoice: SpeechSynthesisVoice | undefined = voices.find((v) =>
+        preferredVoices.includes(v.name)
+      );
 
-  useEffect(() => {
-    speechSynthesis.cancel();
-  }, []);
+      // Fallback to any en-GB or en-US voice if no preferred voice is found
+      if (!selectedVoice) {
+        console.warn(
+          "No preferred female voice found. Falling back to en-GB or en-US voice."
+        );
+        selectedVoice = voices.find(
+          (v) => v.lang === "en-GB" || v.lang === "en-US"
+        );
+      }
+
+      if (selectedVoice) {
+        utterance.voice = selectedVoice;
+        console.log(
+          `Using voice: ${selectedVoice.name} (${selectedVoice.lang})`
+        );
+      } else {
+        console.warn(
+          "No en-GB or en-US voice found. Using browser default voice."
+        );
+      }
+
+      // Function to find and highlight the current word
+      const highlightWord = (index: number) => {
+        if (index >= words.length) return;
+
+        // Clear previous highlight
+        document.querySelectorAll(".highlight-word").forEach((span) => {
+          const parent = span.parentNode;
+          if (parent && span.textContent) {
+            parent.replaceChild(
+              document.createTextNode(span.textContent),
+              span
+            );
+          }
+        });
+
+        // Find the word in the DOM
+        let found = false;
+        const walker = document.createTreeWalker(
+          container!,
+          NodeFilter.SHOW_TEXT,
+          {
+            acceptNode: (node) =>
+              node.parentElement?.tagName.toLowerCase() !== "img" &&
+              !node.parentElement?.classList.contains("bg-white")
+                ? NodeFilter.FILTER_ACCEPT
+                : NodeFilter.FILTER_REJECT,
+          }
+        );
+
+        let currentLength = 0;
+        while (walker.nextNode() && !found) {
+          const node = walker.currentNode as Text;
+          const nodeText = node.textContent || "";
+          const wordsInNode = nodeText.split(/\s+/).filter((w) => w.length > 0);
+
+          for (let i = 0; i < wordsInNode.length; i++) {
+            if (currentLength + i === index) {
+              const wordStart = nodeText.indexOf(wordsInNode[i]);
+              const wordEnd = wordStart + wordsInNode[i].length;
+              const range = document.createRange();
+              range.setStart(node, wordStart);
+              range.setEnd(node, wordEnd);
+              const span = document.createElement("span");
+              span.className = "highlight-word";
+              range.surroundContents(span);
+              found = true;
+              break;
+            }
+          }
+          currentLength += wordsInNode.length;
+        }
+      };
+
+      // Word boundary highlighting
+      utterance.onboundary = (event: SpeechSynthesisEvent) => {
+        if (event.name === "word") {
+          highlightWord(wordIndex);
+          wordIndex++;
+        }
+      };
+
+      utterance.onend = () => {
+        setIsSpeaking(false);
+        // Clear highlights
+        document.querySelectorAll(".highlight-word").forEach((span) => {
+          const parent = span.parentNode;
+          if (parent && span.textContent) {
+            parent.replaceChild(
+              document.createTextNode(span.textContent),
+              span
+            );
+          }
+        });
+      };
+      utterance.onerror = (e: SpeechSynthesisErrorEvent) => {
+        console.error("Speech synthesis error:", e);
+        setIsSpeaking(false);
+        // Clear highlights
+        document.querySelectorAll(".highlight-word").forEach((span) => {
+          const parent = span.parentNode;
+          if (parent && span.textContent) {
+            parent.replaceChild(
+              document.createTextNode(span.textContent),
+              span
+            );
+          }
+        });
+      };
+
+      window.speechSynthesis.speak(utterance);
+      setIsSpeaking(true);
+    });
+  };
 
   return (
     <button
-      onClick={isSpeaking ? stop : speak}
-      aria-label={isSpeaking ? "Pause" : "Play"}
+      id="speak"
+      onClick={speak}
+      disabled={!isSupported || !isVoicesLoaded}
       className={`p-2 rounded-md text-gray-500 ${
-        isSpeaking ? "text-blue-500" : ""
+        isSpeaking ? "" : ""
       } transition-colors duration-200 disabled:cursor-not-allowed disabled:opacity-50`}
+      title={
+        isSpeaking ? "Stop" : isVoicesLoaded ? "Speak" : "Loading voices..."
+      }
     >
-      {isSpeaking ? <IconVolumeOff className="w-5 h-5"/> : <IconVolume className="w-5 h-5" />}
+      {isSpeaking ? (
+        <IconVolumeOff className="w-5 h-5" />
+      ) : (
+        <IconVolume className="w-5 h-5" />
+      )}
     </button>
   );
 };
+
 export default TextToSpeech;
