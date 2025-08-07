@@ -24,17 +24,21 @@ const TextToSpeech: React.FC<TextToSpeechProps> = ({ textSelector }) => {
   ];
 
   // Function to recursively extract text from an element and its children, excluding images
+
   const getAllText = (element: HTMLElement | null): string => {
     if (!element) return "";
     const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, {
       acceptNode: (node) => {
         const parent = node.parentElement;
         if (
-          parent &&
-          (parent.tagName.toLowerCase() === "img" ||
-            parent.closest("img") ||
-            parent.classList.contains("bg-white") ||
-            node.textContent?.trim() === "")
+          !parent ||
+          parent.tagName.toLowerCase() === "img" ||
+          parent.closest("img") || // inside image wrapper
+          parent.closest(".gatsby-image-wrapper") || // inside GatsbyImage
+          parent.hasAttribute("aria-hidden") ||
+          getComputedStyle(parent).display === "none" ||
+          parent.classList.contains("bg-white") ||
+          node.textContent?.trim() === ""
         ) {
           return NodeFilter.FILTER_REJECT;
         }
@@ -154,8 +158,9 @@ const TextToSpeech: React.FC<TextToSpeechProps> = ({ textSelector }) => {
       }
 
       // Function to find and highlight the current word
+
       const highlightWord = (index: number) => {
-        if (index >= words.length) return;
+        if (!container || index < 0 || index >= words.length) return;
 
         // Clear previous highlight
         document.querySelectorAll(".highlight-word").forEach((span) => {
@@ -168,41 +173,48 @@ const TextToSpeech: React.FC<TextToSpeechProps> = ({ textSelector }) => {
           }
         });
 
-        // Find the word in the DOM
-        let found = false;
         const walker = document.createTreeWalker(
-          container!,
+          container,
           NodeFilter.SHOW_TEXT,
           {
             acceptNode: (node) =>
               node.parentElement?.tagName.toLowerCase() !== "img" &&
-              !node.parentElement?.classList.contains("bg-white")
+              !node.parentElement?.classList.contains("bg-white") &&
+              !node.parentElement?.closest(".gatsby-image-wrapper")
                 ? NodeFilter.FILTER_ACCEPT
                 : NodeFilter.FILTER_REJECT,
           }
         );
 
-        let currentLength = 0;
+        let currentWordCount = 0;
+        let found = false;
+
         while (walker.nextNode() && !found) {
           const node = walker.currentNode as Text;
           const nodeText = node.textContent || "";
-          const wordsInNode = nodeText.split(/\s+/).filter((w) => w.length > 0);
+          const wordsInNode = nodeText.match(/\S+/g) || [];
 
           for (let i = 0; i < wordsInNode.length; i++) {
-            if (currentLength + i === index) {
-              const wordStart = nodeText.indexOf(wordsInNode[i]);
-              const wordEnd = wordStart + wordsInNode[i].length;
-              const range = document.createRange();
-              range.setStart(node, wordStart);
-              range.setEnd(node, wordEnd);
-              const span = document.createElement("span");
-              span.className = "highlight-word";
-              range.surroundContents(span);
-              found = true;
-              break;
+            if (currentWordCount === index) {
+              const word = wordsInNode[i];
+              const wordStart = nodeText.indexOf(word);
+              const wordEnd = wordStart + word.length;
+
+              if (wordStart >= 0) {
+                const range = document.createRange();
+                range.setStart(node, wordStart);
+                range.setEnd(node, wordEnd);
+
+                const span = document.createElement("span");
+                span.className = "highlight-word";
+                span.style.backgroundColor = "#ffff00"; // optional: yellow highlight
+                range.surroundContents(span);
+                found = true;
+                break;
+              }
             }
+            currentWordCount++;
           }
-          currentLength += wordsInNode.length;
         }
       };
 
