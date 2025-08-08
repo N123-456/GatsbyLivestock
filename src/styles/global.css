@@ -3,8 +3,19 @@
 @tailwind utilities;
 
 .highlight-word {
-  background-color: yellow;
+  background-color:#d1d5db;
   transition: background-color 0.3s ease;
+}
+/* Hide scrollbar but allow scrolling */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
 }
 .scrollbar-hidden::-webkit-scrollbar {
   width: 6px;

@@ -24,7 +24,6 @@ const TextToSpeech: React.FC<TextToSpeechProps> = ({ textSelector }) => {
   ];
 
   // Function to recursively extract text from an element and its children, excluding images
-
   const getAllText = (element: HTMLElement | null): string => {
     if (!element) return "";
     const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, {
@@ -121,8 +120,17 @@ const TextToSpeech: React.FC<TextToSpeechProps> = ({ textSelector }) => {
 
       // Split text into words for tracking
       const words = text.split(/\s+/).filter((word) => word.length > 0);
-      let wordIndex = 0;
-      let currentOffset = 0;
+      let charIndexToWordIndex: { charIndex: number; wordIndex: number }[] = [];
+      let currentCharIndex = 0;
+
+      // Map character indices to word indices
+      words.forEach((word, index) => {
+        charIndexToWordIndex.push({
+          charIndex: currentCharIndex,
+          wordIndex: index,
+        });
+        currentCharIndex += word.length + 1; // +1 for the space
+      });
 
       const utterance: SpeechSynthesisUtterance = new SpeechSynthesisUtterance(
         text
@@ -158,7 +166,6 @@ const TextToSpeech: React.FC<TextToSpeechProps> = ({ textSelector }) => {
       }
 
       // Function to find and highlight the current word
-
       const highlightWord = (index: number) => {
         if (!container || index < 0 || index >= words.length) return;
 
@@ -207,7 +214,7 @@ const TextToSpeech: React.FC<TextToSpeechProps> = ({ textSelector }) => {
 
                 const span = document.createElement("span");
                 span.className = "highlight-word";
-                span.style.backgroundColor = "#ffff00"; // optional: yellow highlight
+                span.style.backgroundColor = "#d1d5db"; // optional: yellow highlight
                 range.surroundContents(span);
                 found = true;
                 break;
@@ -220,9 +227,15 @@ const TextToSpeech: React.FC<TextToSpeechProps> = ({ textSelector }) => {
 
       // Word boundary highlighting
       utterance.onboundary = (event: SpeechSynthesisEvent) => {
-        if (event.name === "word") {
-          highlightWord(wordIndex);
-          wordIndex++;
+        if (event.name === "word" && event.charIndex !== undefined) {
+          // Find the closest word index based on charIndex
+          const wordEntry = charIndexToWordIndex.reduce((prev, curr) =>
+            curr.charIndex <= event.charIndex! &&
+            curr.charIndex > prev.charIndex
+              ? curr
+              : prev
+          );
+          highlightWord(wordEntry.wordIndex);
         }
       };
 
@@ -264,7 +277,7 @@ const TextToSpeech: React.FC<TextToSpeechProps> = ({ textSelector }) => {
       id="speak"
       onClick={speak}
       disabled={!isSupported || !isVoicesLoaded}
-      className={`p-2 rounded-md text-gray-500 ${
+      className={`p-2 rounded-md text-gray-500 dark:text-white ${
         isSpeaking ? "" : ""
       } transition-colors duration-200 disabled:cursor-not-allowed disabled:opacity-50`}
       title={

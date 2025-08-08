@@ -72,7 +72,7 @@ const harvest = () => {
         <div>
           <div className="flex flex-col justify-center">
             <div className="acu lg:pr-4 text-justify">
-              <div className="flex items-center pt-5">
+              <div className="flex items-center">
                 <div className="hidden lg:block">
                   <TextToSpeech textSelector=".acu" />
                 </div>
