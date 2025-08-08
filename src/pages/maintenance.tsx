@@ -60,10 +60,10 @@ const maintenance = () => {
       <PrivateRoute>
         <div>
           <div className="flex flex-col justify-center">
-            <div id='acu' className="lg:pr-4 text-justify">
+            <div className="acu lg:pr-4 text-justify">
               <div className="flex items-center pt-5">
                 <div className="hidden lg:block">
-                  <TextToSpeech textSelector="acu" />
+                  <TextToSpeech textSelector=".acu" />
                 </div>
                 <h2 className="text-primary-activelink dark:text-[#FFFFFF] font-semibold text-[30px] font-montserrat ">
                   Starting Guide for Farm Maintenance:
@@ -74,7 +74,7 @@ const maintenance = () => {
                   Introduction
                 </h2>
                 <div className=" lg:hidden">
-                  <TextToSpeech textSelector="acu" />
+                  <TextToSpeech textSelector=".acu" />
                 </div>
               </div>
 
