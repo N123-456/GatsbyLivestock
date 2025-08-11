@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { navigate } from "gatsby";
 import LoginModal from "../components/LoginModal/LoginModal";
+import { AppLayout } from "../components/AppShell/AppLayout";
 
 const LoginPage = () => {
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(true);
@@ -13,9 +14,11 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <LoginModal isOpen={isLoginModalOpen} onClose={handleClose} />
-    </div>
+    <AppLayout>
+      <div className=" min-h-screen flex items-center justify-center bg-gray-100">
+        <LoginModal isOpen={isLoginModalOpen} onClose={handleClose} />
+      </div>
+    </AppLayout>
   );
 };
 

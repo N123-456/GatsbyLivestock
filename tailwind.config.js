@@ -8,7 +8,6 @@ module.exports = {
 
   theme: {
     extend: {
-      
       fontFamily: {
         niramit: ["Niramit", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],

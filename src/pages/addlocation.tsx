@@ -91,7 +91,7 @@ const addlocation = () => {
     <AppLayout>
       <PrivateRoute>
         <div className="acu">
-          <div className="text-justify lg:pr-4">
+          <div className="text-justify lg:pr-4 hide-scrollbar">
             <div className="flex items-center">
               <div className="hidden lg:block">
                 <TextToSpeech textSelector=".acu" />

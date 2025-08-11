@@ -285,9 +285,9 @@ const TextToSpeech: React.FC<TextToSpeechProps> = ({ textSelector }) => {
       }
     >
       {isSpeaking ? (
-        <IconVolumeOff className="w-5 h-5" />
-      ) : (
         <IconVolume className="w-5 h-5" />
+      ) : (
+        <IconVolumeOff className="w-5 h-5" />
       )}
     </button>
   );

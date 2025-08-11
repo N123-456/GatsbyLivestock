@@ -2,20 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+
 .highlight-word {
-  background-color:#d1d5db;
+  background-color: #d1d5db;
   transition: background-color 0.3s ease;
 }
 /* Hide scrollbar but allow scrolling */
-.scrollbar-hide::-webkit-scrollbar {
-    display: none;
+.scrollbar-hidee::-webkit-scrollbar {
+  display: none;
 }
 
-.scrollbar-hide {
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
+.scrollbar-hidee {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 .scrollbar-hidden::-webkit-scrollbar {
   width: 6px;
@@ -36,5 +37,3 @@
 .submenu.open {
   max-height: 500px; /* Adjust based on content */
 }
-
-

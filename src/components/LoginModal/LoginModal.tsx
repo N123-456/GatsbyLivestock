@@ -23,7 +23,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
+    <div className="lg:left-[250px] left-0 fixed top-0 right-0 bottom-0 bg-black bg-opacity-40 flex items-center justify-center">
       <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-sm min-h-[410px]">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-3xl text-primary-activelink text-center font-bold font-montserrat">
