@@ -2,22 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
 
 .highlight-word {
   background-color: #d1d5db;
   transition: background-color 0.3s ease;
 }
-/* Hide scrollbar but allow scrolling */
-.scrollbar-hidee::-webkit-scrollbar {
-  display: none;
+html,
+body {
+  overflow-x: hidden;         /* ✅ Stop horizontal scroll */
+  -ms-overflow-style: none;   /* IE and Edge */
+  scrollbar-width: none;      /* Firefox */
 }
 
-.scrollbar-hidee {
-  -ms-overflow-style: none;
-  /* IE and Edge */
-  scrollbar-width: none;
-  /* Firefox */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;              /* Chrome, Safari, Opera */
 }
+
 .scrollbar-hidden::-webkit-scrollbar {
   width: 6px;
 }
