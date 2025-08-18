@@ -15,12 +15,20 @@ const TextToSpeech: React.FC<TextToSpeechProps> = ({ textSelector }) => {
   // Fixed settings
   const volume: number = 1;
   const rate: number = 0.75;
-  const pitch: number = 0;
+  const pitch: number = 1.2; // Adjusted for more natural female tone
 
-  // Hardcoded list of preferred female voices in order of priority
+  // Expanded list of preferred female voices in order of priority
   const preferredVoices: string[] = [
-    "Microsoft Hazel - English (United Kingdom)", // Female, en-GB, Windows
-    // Female, en-GB, Google Cloud
+    "Microsoft Hazel Desktop - English (United Kingdom)", // Windows en-GB female
+    "Microsoft Hazel - English (United Kingdom)", // Variation without 'Desktop'
+    "Google UK English Female", // Chrome en-GB female
+    "Microsoft Susan - English (United Kingdom)", // Windows en-GB female
+    "Microsoft Sarah Mobile - English (United Kingdom)", // Mobile variant female
+    "Samantha", // Apple/Mac female en-US (works for en)
+    "Ava", // Apple female
+    "Susan", // Apple female
+    "Microsoft Zira Desktop - English (United States)", // Windows en-US female
+    "Google US English", // Chrome en-US female
   ];
 
   // Function to recursively extract text from an element and its children, excluding images
@@ -144,14 +152,22 @@ const TextToSpeech: React.FC<TextToSpeechProps> = ({ textSelector }) => {
         preferredVoices.includes(v.name)
       );
 
-      // Fallback to any en-GB or en-US voice if no preferred voice is found
+      // Fallback to likely female en-GB or en-US voice
       if (!selectedVoice) {
         console.warn(
-          "No preferred female voice found. Falling back to en-GB or en-US voice."
+          "No preferred female voice found. Falling back to likely female en-GB or en-US voice."
         );
-        selectedVoice = voices.find(
-          (v) => v.lang === "en-GB" || v.lang === "en-US"
-        );
+        selectedVoice =
+          voices.find(
+            (v) =>
+              (v.lang === "en-GB" || v.lang === "en-US") &&
+              (v.name.includes("Female") ||
+                v.name.includes("Hazel") ||
+                v.name.includes("Zira") ||
+                v.name.includes("Susan") ||
+                v.name.includes("Samantha") ||
+                v.name.includes("Ava"))
+          ) || voices.find((v) => v.lang === "en-GB" || v.lang === "en-US"); // Ultimate fallback
       }
 
       if (selectedVoice) {
