@@ -152,8 +152,8 @@ const Sidebar = React.memo(() => {
     {
       name: "Orchards",
       sublinks: [
-        { name: "Add New Orchard", path: "/emptypage" },
-        { name: "Fertilizers", path: "/emptypage" },
+        { name: "Add New Orchard", path: "/addorchards" },
+        { name: "Fertilizers", path: "/orchardfertilizer" },
         { name: "Chemicals", path: "/emptypage" },
         { name: "Harvests", path: "/emptypage" },
         { name: "Field Inspections", path: "/emptypage" },
@@ -179,7 +179,7 @@ const Sidebar = React.memo(() => {
     {
       name: "Inventory",
       sublinks: [
-         { name: "Add Inventory", path: "/inventory" },
+        { name: "Add Inventory", path: "/inventory" },
         { name: "Purchase", path: "/purchase" },
         { name: "Transfer", path: "/emptypage" },
       ],
@@ -302,7 +302,9 @@ const Sidebar = React.memo(() => {
                 {hasSublinks && (
                   <span
                     className={`absolute ${
-                      isOpen ? "bottom-2 right-3 dark:text-[#BE8B45]" : "bottom-5 right-5 dark:text-[#FFFFFF]"
+                      isOpen
+                        ? "bottom-2 right-3 dark:text-[#BE8B45]"
+                        : "bottom-5 right-5 dark:text-[#FFFFFF]"
                     } text-black`}
                   >
                     {isOpen ? (
@@ -348,7 +350,9 @@ const Sidebar = React.memo(() => {
                                 to={sublink.path}
                                 className="flex items-center "
                               >
-                                <span className="mr-2 text-black dark:text-[#FFFFFF]">•</span>
+                                <span className="mr-2 text-black dark:text-[#FFFFFF]">
+                                  •
+                                </span>
                                 {sublink.name}
                               </Link>
                             ) : (
@@ -381,7 +385,9 @@ const Sidebar = React.memo(() => {
                                     to={nestedSublink.path}
                                     className="flex items-center px-2 py-1 text-[10px] md:text-sm font-montserrat text-primary-nlink font-medium dark:text-[#FFFFFF]"
                                   >
-                                    <span className="mr-2 dark-text-[#FFFFFF]">•</span>
+                                    <span className="mr-2 dark-text-[#FFFFFF]">
+                                      •
+                                    </span>
                                     {nestedSublink.name}
                                   </Link>
                                 </li>
