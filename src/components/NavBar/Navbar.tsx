@@ -212,11 +212,11 @@ const Sidebar = React.memo(() => {
     {
       name: "Reports",
       sublinks: [
-        { name: "Crop Activity Reports", path: "/emptypage" },
-        { name: "Equipment Reports", path: "/emptypage" },
-        { name: "Inventory Reports", path: "/emptypage" },
-        { name: "Orchard Reports", path: "/emptypage" },
-        { name: "P&L Reports", path: "/emptypage" },
+        { name: "Crop Activity Reports", path: "/activityreports" },
+        { name: "Equipment Reports", path: "/equipmentreport" },
+        { name: "Inventory Reports", path: "/inventoryreport" },
+        { name: "Orchard Reports", path: "/orchardreport" },
+        { name: "P&L Reports", path: "/plreport" },
       ],
     },
   ];
