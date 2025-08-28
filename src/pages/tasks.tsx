@@ -83,14 +83,11 @@ const tasks = () => {
                 </div>
               </div>
               <p className="text-primary-paragraph dark:text-[#D5D5D5] text-[18px] font-montserrat font-normal lg:px-10">
-                This feature of farm management system helps you manage all the
-                work that needs to be done around your farm. You can create a
-                list of tasks, add checklists, assign them to workers, track
-                progress, assign priority, add cost incurred on the task and
-                related transaction information, and record how long they take
-                to complete.
+              This feature of the farm management system helps you manage all the work that needs to be done around your farm. You can create a list of tasks, add checklists, assign them to workers, track progress, assign priority, add cost incurred on the task and related transaction information, and record how long they take to complete.
+First of all before we showcase the features, we have to see that there are two views of the Tasks page
+
               </p>
-              
+
               <div className="flex items-center pt-5 space-x-4">
                 <h2 className="text-primary-activelink dark:text-[#BE8B45] font-montserrat font-semibold text-[22px] lg:pl-10">
                   Step 1
@@ -101,20 +98,24 @@ const tasks = () => {
                 Task Views:
               </h2>
               <p className="text-primary-paragraph2 dark:text-[#D5D5D5] text-[18px] font-montserrat font-normal lg:px-10">
-                There are two tabs in the upper left corner when you come on
-                task screen: Table and calendar. These tabs offer different
-                perspectives for task management, enabling users to select the
-                most suitable option based on their needs and preferences.
-                <br /> You can switch between tabs as per your wish.
+               There are two tabs in the upper left corner when you come on the tasks page: 
                 <br />
-                <br />{" "}
-                <span className="text-primary-pheading font-semibold">
+               <ul className="text-primary-activelink font-semibold">
+                <li >
                   List View
-                </span>
-                : The List View shows grid of items. It can be sorted by the
-                different column headers, allowing you to order these tasks by
-                priority, starting date, assignee, associated to, status, and
-                title.
+                </li>
+                 <div className="pl-13 pt-8 flex justify-center">
+                  {listview && (
+                    <GatsbyImage
+                      image={listview}
+                      alt="Startups illustration"
+                      className="border border-gray-200 shadow-lg w-[1000.58px] "
+                    />
+                  )}
+                </div>
+                <br />
+                <br />
+                <li></li></ul>
                 <div className="pl-13 pt-8 flex justify-center">
                   {listview && (
                     <GatsbyImage
@@ -126,23 +127,23 @@ const tasks = () => {
                 </div>
                 <br />
                 <br />
+               <p>These tabs offer different perspectives for task management, enabling users to select the most suitable option based on their needs and preferences. You can switch between tabs as per your wish.</p>
                 <br />
-                <span className="text-primary-pheading font-semibold ">
-                  Calendar View
-                </span>
-                :The Calendar View acts as a schedule for your tasks. You can
-                see what tasks are to be done in a particular month, week or a
-                day.
-                <div className="pl-13 pt-8 flex justify-center">
-                  {cview && (
-                    <GatsbyImage
-                      image={cview}
-                      alt="Startups illustration"
-                      className="border border-gray-200 shadow-lg w-[1000.58px] "
-                    />
-                  )}
-                </div>
-                <br />{" "}
+                <ul>
+                   <li  className="text-primary-activelink font-semibold ">
+                  Table View:
+                </li>
+                <p>:The table view shows a grid of items. Each item is a task with a start date and deadline. It can be sorted by the different column headers, allowing you to order these tasks by priority, starting date, assignee, associated to, status, and title.
+
+                .</p>
+                <li  className="text-primary-activelink font-semibold ">
+                  Calendar View:
+                </li>
+                <p>:The calendar view acts as a schedule for your tasks. You can see what tasks are to be done in a particular month, week or a day as well as an agenda of what should be done..</p>
+               
+                </ul>
+                <p>Now that we have covered that there are two views to the Tasks Page. We will now make sure that there are two set of instructions to the Tasks Page. One for the Table view, and another for the Calendar view.
+</p>
               </p>
               <div className="flex items-center pt-5 space-x-4">
                 <h2 className="text-primary-activelink dark:text-[#BE8B45] font-montserrat font-semibold text-[22px] lg:pl-10">
@@ -311,147 +312,357 @@ const tasks = () => {
               </p>
               <div className="flex items-center pt-5 space-x-4">
                 <h2 className="text-primary-activelink dark:text-[#BE8B45] font-montserrat font-semibold text-[22px] lg:pl-10">
-                  Step 4
+                  Step 2
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
               <h2 className="text-primary-subheading dark:text-[#D5D5D5] pt-5 font-semibold text-[22px] font-montserrat lg:pl-10">
-                Search Task:
+                Viewing a Task:
               </h2>
-              <p className="text-primary-paragraph2 dark:text-[#D5D5D5] text-[19px] font-montserrat font-normal lg:px-10">
-                You can search the task from the list of tasks present in the
-                system. You can search based on either:
+              <div className="text-primary-paragraph2 dark:text-[#D5D5D5] text-[19px] font-montserrat font-normal lg:px-10">
+                <p>
+                  You can easily review the details of the task. There are
+                  currently two methods to view a task. This feature is only on
+                  the Table view: :
+                </p>
                 <br />
-                <span className="text-primary-pheading font-semibold">
-                  Title
-                </span>
-                : You can search by the title of the task.
-                <br />{" "}
-                <span className="text-primary-pheading font-semibold">
-                  Assigned to
-                </span>
-                : You can search the task assigned to specific person.
-                <br />{" "}
-                <span className="text-primary-pheading font-semibold">
-                  Associated to
-                </span>
-                : You can search the task associated to specific resource like
-                land, planting, inventory, equipment etc
-                <br />{" "}
-                <span className="text-primary-pheading font-semibold">
-                  Progress
-                </span>
-                : You can search by the progress of the task. You can search
-                list of tasks that are pending, in progress, completed or
-                cancelled.
-                <br />{" "}
-                <span className="text-primary-pheading font-semibold">
-                  Upcoming tasks
-                </span>
-                : You can search which tasks are the upcoming ones based on
-                today, tomorrow, this week, next week, next month or can choose
-                a custom range in which tasks were or will be performed.
-                <br /> Then click on the Search button. Also, you can click on
-                the refresh button to refresh the data.
-              </p>
-              <div className="pl-13 pt-8 flex justify-center">
-                {stask && (
-                  <GatsbyImage
-                    image={stask}
-                    alt="Startups illustration"
-                    className="border border-gray-200 shadow-lg w-[1000.58px] "
-                  />
-                )}
+                <ul className="list-disc dark:text-[#D5D5D5] text-[18px]">
+                  <li>There are currently 2 methods to view a Task.</li>
+                  <br />
+                  <p>
+                    The first method is to select the name of the Task. It will
+                    then take you to the{" "}
+                    <span className="text-primary-pheading font-bold">
+                      "View Task"
+                    </span>{" "}
+                    window.
+                  </p>
+                  <ul>
+                    <li>
+                      First, you have to locate the Farm location that you want
+                      to view. You can do so by either searching or browsing the
+                      farm location dashboard until you find the farm location.
+                    </li>
+                    <br />
+                    <li>Once you have located the farm location you want to view, then you can select its name, which is located on the left of the table on the farm location you want to view.</li>
+                  <br />
+ <div className="pl-13 pt-8 flex justify-center">
+                    {dtask && (
+                      <GatsbyImage
+                        image={dtask}
+                        alt="Startups illustration"
+                        className="border border-gray-200 shadow-lg w-[1000.58px] "
+                      />
+                    )}
+                  </div>
+                  <br />
+                  <br />
+                  <li>It will then take you to the “View Task” window where you can view the details of the task you selected.</li>
+ <div className="pl-13 pt-8 flex justify-center">
+                    {dtask && (
+                      <GatsbyImage
+                        image={dtask}
+                        alt="Startups illustration"
+                        className="border border-gray-200 shadow-lg w-[1000.58px] "
+                      />
+                    )}
+                  </div>
+                  <br />
+                  <br />
+                  <p>The second method is select the “three dots” icon, to show a small white box</p>
+                  </ul>
+                  <li>
+                    Click on the {" "}
+                    <span className="text-primary-pheading font-bold">
+                      “three dots”
+                    </span>{" "}  [It’ll look like this “⋮“] icon. button [Shown as a “pencil” icon],
+                    located on the right side of the task,  to the right of the {" "}
+                    <span className="text-primary-activelink font-bold">
+                      “Delete”
+                    </span>{" "}
+                    <span className="text-primary-activelink font-bold">
+                      button [shown as a “trash can” icon]
+                    </span>{" "}
+                    , and the
+                   .
+                  </li>
+                  <div className="pl-13 pt-8 flex justify-center">
+                    {dtask && (
+                      <GatsbyImage
+                        image={dtask}
+                        alt="Startups illustration"
+                        className="border border-gray-200 shadow-lg w-[1000.58px] "
+                      />
+                    )}
+                  </div>
+                  <br />
+                  <br />
+                  <li>Click on the “View” button once it appears.</li><br />
+<li>The task’s “View Task” window will open.</li>
+                  <div className="pl-13 pt-8 flex justify-center">
+                    {dtask && (
+                      <GatsbyImage
+                        image={dtask}
+                        alt="Startups illustration"
+                        className="border border-gray-200 shadow-lg w-[1000.58px] "
+                      />
+                    )}
+                  </div>
+                  <br />
+                  <br />
+                  <li>
+                  You can then review all the task’s details and confirm if it is acceptable in your eyes.
+                  </li>
+                 
+                </ul>
+                <br />
               </div>
               <div className="flex items-center pt-5 space-x-4">
                 <h2 className="text-primary-activelink dark:text-[#BE8B45] font-montserrat font-semibold text-[22px] lg:pl-10">
-                  Step 5
+                  Step 3
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
               <h2 className="text-primary-subheading pt-5 dark:text-[#D5D5D5] font-semibold text-[22px] font-montserrat lg:pl-10">
-                Edit Task:
+                Editing a Task:
               </h2>
-              <p className="text-primary-paragraph2 dark:text-[#D5D5D5] text-[19px] font-montserrat font-normal lg:px-10">
-                If any tasks detail you want to change, you can easily edit the
-                details except for the transaction details related to the task.
-                For that:
+              <div className="text-primary-paragraph2 dark:text-[#D5D5D5] text-[19px] font-montserrat font-normal lg:px-10">
+                <p>
+                  If there are any task’s detail you want to change, you can
+                  easily edit the details except for the transaction details
+                  related to the task. We will show how to edit tasks in the
+                  different views in different instructions as the process is
+                  different in both views. For the table view, you start by :
+                </p>
                 <br />
-                <ul className="list-disc list-inside dark:text-[#D5D5D5] text-primary-activelink font-semibold text-[18px]">
-                  <li>Click on the edit icon.</li>
-                  <li>Task details screen will open.</li>
-                  <li>Click on the field you want to edit.</li>
-                  <li>Make changes in the field.</li>
-                  <li>Click on submit button.</li>
-                  <li>Tasks details will be edited/updated successfully.</li>
+                <ul className="list-disc list-inside dark:text-[#D5D5D5] text-[18px]">
+                  <li>
+                    First, finding the task you wish to edit, you can either use
+                    the search feature or go through the different pages to find
+                    the task you wish to edit.
+                  </li>
+                  <br />
+                  <li>
+                    Click on the “Edit” button [Shown as a “pencil” icon],
+                    located on the right side of the task entry and to the left
+                    of the{" "}
+                    <span className="text-primary-activelink font-bold">
+                      “Delete”
+                    </span>{" "}
+                    <span className="text-primary-activelink font-bold">
+                      button [shown as a “trash can” icon]
+                    </span>{" "}
+                    , and the{" "}
+                    <span className="text-primary-pheading font-bold">
+                      “three dots”
+                    </span>{" "}
+                    [It’ll look like this “⋮“] icon.
+                  </li>
+                  <div className="pl-13 pt-8 flex justify-center">
+                    {dtask && (
+                      <GatsbyImage
+                        image={dtask}
+                        alt="Startups illustration"
+                        className="border border-gray-200 shadow-lg w-[1000.58px] "
+                      />
+                    )}
+                  </div>
+                  <br />
+                  <br />
+                  <li>The task’s edit window will open.</li>
+
+                  <div className="pl-13 pt-8 flex justify-center">
+                    {dtask && (
+                      <GatsbyImage
+                        image={dtask}
+                        alt="Startups illustration"
+                        className="border border-gray-200 shadow-lg w-[1000.58px] "
+                      />
+                    )}
+                  </div>
+                  <br />
+                  <br />
+                  <li>
+                    Click on the <span className="font-bold">“field(s)”</span>{" "}
+                    you want to edit.
+                  </li>
+                  <li>
+                    Make changes in those{" "}
+                    <span className="font-bold">“field(s)”</span> .
+                  </li>
+                  <br />
+                  <li>
+                    When you are finished, click on the{" "}
+                    <span className="text-primary-activelink font-bold">
+                      “Submit”
+                    </span>{" "}
+                    . button.
+                  </li>
+                  <li>
+                    The task’s details will be edited/updated successfully.
+                  </li>
+                  <br />
+                  <p>For the calendar view:</p>
+                  <br />
+                  <li>
+                    First, you have to find the task you wish to edit, you can
+                    either use the search functionality or use the{" "}
+                    <span className="text-primary-activelink font-bold">
+                      “back”
+                    </span>{" "}
+                    and{" "}
+                    <span className="text-primary-activelink font-bold">
+                      “next”
+                    </span>{" "}
+                    buttons that are on the right and left of the{" "}
+                    <span className="text-primary-activelink font-bold">
+                      “today”
+                    </span>{" "}
+                    button in the “month” section to find the task you wish to
+                    edit.
+                  </li>
+                  <br />
+                  <li>
+                    Then click on the task (it is represented as a bar that
+                    extends from one date to another date).
+                  </li>
+                  <br />
+                  <div className="pl-13 pt-8 flex justify-center">
+                    {dtask && (
+                      <GatsbyImage
+                        image={dtask}
+                        alt="Startups illustration"
+                        className="border border-gray-200 shadow-lg w-[1000.58px] "
+                      />
+                    )}
+                  </div>
+                  <br />
+                  <br />
+                  <li>The task’s edit window will open.</li>
+                  <br />
+                  <div className="pl-13 pt-8 flex justify-center">
+                    {dtask && (
+                      <GatsbyImage
+                        image={dtask}
+                        alt="Startups illustration"
+                        className="border border-gray-200 shadow-lg w-[1000.58px] "
+                      />
+                    )}
+                  </div>
+                  <br />
+                  <br />
+                  <li>
+                    Click on the <span className="font-bold">“field(s)”</span>{" "}
+                    you want to edit.
+                  </li>
+                  <li>
+                    Make changes in those{" "}
+                    <span className="font-bold">“field(s)”</span> .
+                  </li>
+                  <br />
+                  <li>
+                    When you are finished, click on the{" "}
+                    <span className="text-primary-activelink font-bold">
+                      “Submit”
+                    </span>{" "}
+                    . button.
+                  </li>
+                  <li>
+                    The task’s details will be edited/updated successfully.
+                  </li>
                 </ul>
-              </p>
+                <br />
+              </div>
               <div className="flex items-center pt-5 space-x-4">
                 <h2 className="text-primary-activelink dark:text-[#BE8B45] font-montserrat font-semibold text-[22px] lg:pl-10">
-                  Step 6
+                  Step 4
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
               <h2 className="text-primary-subheading dark:text-[#D5D5D5] font-semibold text-[22px] font-montserrat pt-5 lg:pl-10">
-                Delete Task:
+                Deleting a Task
               </h2>
-              <p className="text-primary-paragraph2 text-[19px] font-montserrat font-normal lg:px-10">
-                If you no longer need any task and wants to delete the
-                machinery, you can easily do so:
+              <div className="text-primary-paragraph2 text-[19px] font-montserrat font-normal lg:px-10">
+                <p>
+                  If you no longer need a particular task and want to delete it,
+                  you can easily do so in the Table view only, as the option is
+                  not available on the Calendar view.
+                </p>
                 <br />
-                <ul className="list-disc list-inside dark:text-[#D5D5D5] text-primary-activelink font-semibold text-[18px]">
+                <ul className="list-disc list-inside dark:text-[#D5D5D5] text-primary-paragraph2 font-normal text-[18px]">
                   <li>
-                    Click on the delete icon against the row you want to delete
-                    in the tasks table.
+                    First, you need to find the task that you want to delete in
+                    the tasks table. You can do so by either using the search
+                    options or using the page buttons to find the task you want
+                    to delete.
                   </li>
+                  <br />
+                  <li>
+                    Click on the{" "}
+                    <span className="text-primary-activelink font-bold">
+                      “Delete”
+                    </span>{" "}
+                    <span className="text-primary-activelink font-bold">
+                      button [shown as a “trash can” icon]
+                    </span>{" "}
+                    , located on the right of the task entry in the middle of
+                    the “Edit” button [shown as a “pencil” icon] and the{" "}
+                    <span className="text-primary-pheading font-bold">
+                      “three dots”
+                    </span>{" "}
+                    [It’ll look like this “⋮“] icon.
+                  </li>
+                  <div className="pl-13 pt-8 flex justify-center">
+                    {dtask && (
+                      <GatsbyImage
+                        image={dtask}
+                        alt="Startups illustration"
+                        className="border border-gray-200 shadow-lg w-[1000.58px] "
+                      />
+                    )}
+                  </div>
+                  <br />
+                  <br />
                   <li>
                     A dialogue box will appear to confirm whether you want to
-                    delete or not.
+                    delete the task or not.
                   </li>
-                  <li>Click on delete button.</li>
                   <li>Make changes in the field.</li>
-                  <li>Task will be deleted successfully.</li>
-                </ul>
-              </p>
-              <div className="pl-13 pt-8 flex justify-center">
-                {dtask && (
-                  <GatsbyImage
-                    image={dtask}
-                    alt="Startups illustration"
-                    className="border border-gray-200 shadow-lg w-[1000.58px] "
-                  />
-                )}
-              </div>
-              <div className="flex items-center pt-5 space-x-4">
-                <h2 className="text-primary-activelink dark:text-[#BE8B45] font-montserrat font-semibold text-[22px] lg:pl-10">
-                  Step 7
-                </h2>
-                <div className="flex-1 h-px bg-primary-line"></div>
-              </div>
-              <h2 className="text-primary-subheading dark:text-[#D5D5D5] font-semibold text-[22px] pt-5 font-montserrat  lg:pl-10">
-                View Task:
-              </h2>
-              <p className="text-primary-paragraph2 dark:text-[#D5D5D5] text-[19px] font-montserrat font-normal lg:px-10">
-                You can easily view the details of task. For that:
-                <br />
-                <ul className="list-disc list-inside dark:text-[#D5D5D5] text-primary-activelink font-semibold text-[18px]">
-                  <li>Hover on three dots.</li>
-                  <li>Click on view details button.</li>
-                  <li>Task details page will open.</li>
+                  <div className="pl-13 pt-8 flex justify-center">
+                    {dtask && (
+                      <GatsbyImage
+                        image={dtask}
+                        alt="Startups illustration"
+                        className="border border-gray-200 shadow-lg w-[1000.58px] "
+                      />
+                    )}
+                  </div>
+                  <br />
+                  <br />
                   <li>
-                    Click on print button if you want to print the details of
-                    the task.
+                    Click on the{" "}
+                    <span className="text-primary-pheading font-bold">
+                      “Delete”
+                    </span>{" "}
+                    button to confirm your deletion.
+                  </li>
+                  <li>
+                    The Task will be deleted successfully from the table and the
+                    calendar as well.
                   </li>
                 </ul>
-              </p>
-              <div className="pl-13 pt-8 flex justify-center">
-                {vtask && (
-                  <GatsbyImage
-                    image={vtask}
-                    alt="Startups illustration"
-                    className="border border-gray-200 shadow-lg w-[1000.58px] "
-                  />
-                )}
+                <br />
+                <p>
+                  Now that we have checked out all the features of the{" "}
+                  <span className="text-primary-activelink font-bold">
+                    “Tasks”
+                  </span>{" "}
+                  page, Congratulations! Onward to the{" "}
+                  <span className="text-primary-activelink font-bold">
+                    “Planting”
+                  </span>{" "}
+                  page!
+                </p>
               </div>
             </div>
           </div>
