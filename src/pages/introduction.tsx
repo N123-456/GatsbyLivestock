@@ -100,7 +100,7 @@ We will first start off at the Login page, and get started with signing you into
   <li>Your Password (e.g. Ax76ghiu987ty)</li>
 </ul>
 <li>Enter the credentials into the Login Page, specifically the provided email address and the password.</li>
-<li>Press the <span className="text-primary-pheading font-bold">“Login”</span> button and Log into the system to continue.</li>
+<li>Press the{" "} <span className="text-primary-pheading font-bold">“Login”</span>{" "} button and Log into the system to continue.</li>
 </ul></div>
  <div className="pl-13 pt-8 flex justify-center">
                 {Dashboard && (
