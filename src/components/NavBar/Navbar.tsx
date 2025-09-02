@@ -195,9 +195,10 @@ const Sidebar = React.memo(() => {
     { name: "Contact", path: "/contact" },
     {
       name: "Financials",
-      path: "/financials",
+    
       sublinks: [
-        { name: "General Ledger", path: "/financials" },
+          { name: "Add Financials", path: "/financials" },
+        { name: "General Ledger", path: "/generalledger" },
         { name: "Trial Balance", path: "/trialbalance" },
         { name: "Balance Sheet", path: "/balancesheet" },
         { name: "Record Transaction", path: "/recordtransaction" },
