@@ -931,6 +931,15 @@ const maintenance = () => {
                     </span>{" "}
                     you wish to view.
                   </li>
+                   <div className="pl-13 pt-8 flex justify-center">
+                    {acu && (
+                      <GatsbyImage
+                        image={acu}
+                        alt="Startups illustration"
+                        className="border border-gray-200 shadow-lg w-[1000.58px] "
+                      />
+                    )}
+                  </div><br/><br/>
                   <li className="mb-2">
                     You will then see the{" "}
                     <span className="font-bold">“extra options”</span> menu
@@ -942,6 +951,15 @@ const maintenance = () => {
                     below the <span className="font-bold">“Maintenance”</span>{" "}
                     button.
                   </li>
+                   <div className="pl-13 pt-8 flex justify-center">
+                    {acu && (
+                      <GatsbyImage
+                        image={acu}
+                        alt="Startups illustration"
+                        className="border border-gray-200 shadow-lg w-[1000.58px] "
+                      />
+                    )}
+                  </div><br/><br/>
                 </ol>
                 <p className="mb-4">
                   You will then be taken to the{" "}
@@ -954,6 +972,15 @@ const maintenance = () => {
                   </span>{" "}
                   you selected.
                 </p>
+                 <div className="pl-13 pt-8 flex justify-center">
+                    {acu && (
+                      <GatsbyImage
+                        image={acu}
+                        alt="Startups illustration"
+                        className="border border-gray-200 shadow-lg w-[1000.58px] "
+                      />
+                    )}
+                  </div><br/><br/>
                 <p className="mb-4">
                   Now that you are in the{" "}
                   <span className="text-primary-activelink font-bold">
@@ -997,6 +1024,15 @@ const maintenance = () => {
                     </span>
                     .
                   </li>
+                   <div className="pl-13 pt-8 flex justify-center">
+                    {acu && (
+                      <GatsbyImage
+                        image={acu}
+                        alt="Startups illustration"
+                        className="border border-gray-200 shadow-lg w-[1000.58px] "
+                      />
+                    )}
+                  </div><br/><br/>
                 </ol>
                 <p className="mb-4">
                   It will open the{" "}
@@ -1005,6 +1041,15 @@ const maintenance = () => {
                   </span>{" "}
                   page.
                 </p>
+                 <div className="pl-13 pt-8 flex justify-center">
+                    {acu && (
+                      <GatsbyImage
+                        image={acu}
+                        alt="Startups illustration"
+                        className="border border-gray-200 shadow-lg w-[1000.58px] "
+                      />
+                    )}
+                  </div><br/><br/>
                 <p className="mb-4">
                   Please keep in mind, all the details of each step must be
                   filled properly.
@@ -1016,6 +1061,15 @@ const maintenance = () => {
                   </span>{" "}
                   step:
                 </p>
+                 <div className="pl-13 pt-8 flex justify-center">
+                    {acu && (
+                      <GatsbyImage
+                        image={acu}
+                        alt="Startups illustration"
+                        className="border border-gray-200 shadow-lg w-[1000.58px] "
+                      />
+                    )}
+                  </div><br/><br/>
                 <p className="mb-4">
                   The{" "}
                   <span className="text-primary-activelink font-bold">
@@ -1078,6 +1132,15 @@ const maintenance = () => {
                   </span>{" "}
                   step:
                 </p>
+                 <div className="pl-13 pt-8 flex justify-center">
+                    {acu && (
+                      <GatsbyImage
+                        image={acu}
+                        alt="Startups illustration"
+                        className="border border-gray-200 shadow-lg w-[1000.58px] "
+                      />
+                    )}
+                  </div><br/><br/>
                 <p className="mb-4">
                   The{" "}
                   <span className="text-primary-activelink font-bold">
@@ -1334,6 +1397,15 @@ const maintenance = () => {
                   </span>{" "}
                   Track Usage table!
                 </p>
+                 <div className="pl-13 pt-8 flex justify-center">
+                    {acu && (
+                      <GatsbyImage
+                        image={acu}
+                        alt="Startups illustration"
+                        className="border border-gray-200 shadow-lg w-[1000.58px] "
+                      />
+                    )}
+                  </div><br/><br/>
                 <p className="mb-4">
                   Now that you have covered how to add a{" "}
                   <span className="text-primary-activelink font-bold">
@@ -1386,6 +1458,15 @@ const maintenance = () => {
                   </span>
                   .
                 </p>
+                 <div className="pl-13 pt-8 flex justify-center">
+                    {acu && (
+                      <GatsbyImage
+                        image={acu}
+                        alt="Startups illustration"
+                        className="border border-gray-200 shadow-lg w-[1000.58px] "
+                      />
+                    )}
+                  </div><br/><br/>
                 <p className="mb-4">
                   [Provided above is the{" "}
                   <span className="text-primary-activelink font-bold">
@@ -1393,6 +1474,15 @@ const maintenance = () => {
                   </span>{" "}
                   table view of Track Usage]
                 </p>
+                 <div className="pl-13 pt-8 flex justify-center">
+                    {acu && (
+                      <GatsbyImage
+                        image={acu}
+                        alt="Startups illustration"
+                        className="border border-gray-200 shadow-lg w-[1000.58px] "
+                      />
+                    )}
+                  </div><br/><br/>
                 <p className="mb-4">
                   [Provided above is the{" "}
                   <span className="text-primary-activelink font-bold">
@@ -1456,6 +1546,15 @@ const maintenance = () => {
                           Yearly
                         </span>
                       </li>
+                       <div className="pl-13 pt-8 flex justify-center">
+                    {acu && (
+                      <GatsbyImage
+                        image={acu}
+                        alt="Startups illustration"
+                        className="border border-gray-200 shadow-lg w-[1000.58px] "
+                      />
+                    )}
+                  </div><br/><br/>
                     </ul>
                   </li>
                   <li className="mb-2">
@@ -1475,6 +1574,24 @@ const maintenance = () => {
                     , above the page select options, and is on the bottom left
                     of the page.
                   </li>
+                   <div className="pl-13 pt-8 flex justify-center">
+                    {acu && (
+                      <GatsbyImage
+                        image={acu}
+                        alt="Startups illustration"
+                        className="border border-gray-200 shadow-lg w-[1000.58px] "
+                      />
+                    )}
+                  </div><br/><br/>
+                   <div className="pl-13 pt-8 flex justify-center">
+                    {acu && (
+                      <GatsbyImage
+                        image={acu}
+                        alt="Startups illustration"
+                        className="border border-gray-200 shadow-lg w-[1000.58px] "
+                      />
+                    )}
+                  </div><br/><br/>
                   <li className="mb-2">
                     The{" "}
                     <span className="text-primary-activelink font-bold">
@@ -1490,6 +1607,24 @@ const maintenance = () => {
                     , above the page select options, and is to the bottom right
                     of the page.
                   </li>
+                   <div className="pl-13 pt-8 flex justify-center">
+                    {acu && (
+                      <GatsbyImage
+                        image={acu}
+                        alt="Startups illustration"
+                        className="border border-gray-200 shadow-lg w-[1000.58px] "
+                      />
+                    )}
+                  </div><br/><br/>
+                   <div className="pl-13 pt-8 flex justify-center">
+                    {acu && (
+                      <GatsbyImage
+                        image={acu}
+                        alt="Startups illustration"
+                        className="border border-gray-200 shadow-lg w-[1000.58px] "
+                      />
+                    )}
+                  </div><br/><br/>
                   <li className="mb-2">
                     The{" "}
                     <span className="text-primary-activelink font-bold">
@@ -1515,6 +1650,15 @@ const maintenance = () => {
                     </span>
                     , and is on the bottom middle of the page.
                   </li>
+                   <div className="pl-13 pt-8 flex justify-center">
+                    {acu && (
+                      <GatsbyImage
+                        image={acu}
+                        alt="Startups illustration"
+                        className="border border-gray-200 shadow-lg w-[1000.58px] "
+                      />
+                    )}
+                  </div><br/><br/>
                   <li className="mb-2">
                     The{" "}
                     <span className="text-primary-activelink font-bold">
@@ -1527,6 +1671,15 @@ const maintenance = () => {
                     you are looking for is and hit enter. It will then open the
                     page with the page number shown as well.
                   </li>
+                   <div className="pl-13 pt-8 flex justify-center">
+                    {acu && (
+                      <GatsbyImage
+                        image={acu}
+                        alt="Startups illustration"
+                        className="border border-gray-200 shadow-lg w-[1000.58px] "
+                      />
+                    )}
+                  </div><br/><br/>
                 </ul>
                 <p className="mb-4">
                   [Provided above is the{" "}
