@@ -2026,3 +2026,9 @@ const orchardfi = () => {
 };
 
 export default orchardfi;
+export const Head = () => (
+  <>
+    <title>Orchard Field Inspection | Farm Management System</title>
+    <link rel="icon" type="image/png" href="/images/fmsLogo.png" />
+  </>
+);

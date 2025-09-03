@@ -2520,3 +2520,9 @@ const orchardharvest = () => {
 };
 
 export default orchardharvest;
+export const Head = () => (
+  <>
+    <title>Orchard Harvest | Farm Management System</title>
+    <link rel="icon" type="image/png" href="/images/fmsLogo.png" />
+  </>
+);

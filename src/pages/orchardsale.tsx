@@ -2145,3 +2145,9 @@ const orchardsale = () => {
 };
 
 export default orchardsale;
+export const Head = () => (
+  <>
+    <title>Orchard Sale | Farm Management System</title>
+    <link rel="icon" type="image/png" href="/images/fmsLogo.png" />
+  </>
+);

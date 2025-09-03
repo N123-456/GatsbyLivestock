@@ -74,7 +74,7 @@ const activityreports = () => {
     <AppLayout>
       <PrivateRoute>
         <div className="acu">
-          <div className="text-justify lg:pr-4 hide-scrollbar text-primary-paragraph">
+          <div className="text-justify font-montserrat text-[18px] text-primary-paragraph2">
             <div className="flex items-center">
               <div className="hidden lg:block">
                 <TextToSpeech textSelector=".acu" />
@@ -91,7 +91,7 @@ const activityreports = () => {
                 <TextToSpeech textSelector=".acu" />
               </div>
             </div>
-            <div className="text-[19px] text-primary-paragraph2 font-montserrat">
+            <div className=" font-montserrat">
               <p className="text-primary-paragraph text-[18px] font-montserrat font-normal lg:pl-10 dark:text-[#D5D5D5]">
                 The{" "}
                 <span className="text-primary-activelink font-bold">
@@ -564,7 +564,7 @@ const activityreports = () => {
                   If you want to view an activity report and choose a different
                   crop you want to view instead. You can start by:
                 </p>
-                <ul className="pl-10 dark:text-[#D5D5D5] text-primary-paragraph font-montserrat text-[18px]">
+                <ul className="pl-10 dark:text-[#D5D5D5] font-montserrat text-[18px]">
                   <li>
                     First, clicking the{" "}
                     <span className="text-primary-pheading font-bold">
@@ -683,3 +683,9 @@ const activityreports = () => {
 };
 
 export default activityreports;
+export const Head = () => (
+  <>
+    <title>Crop Activity Report | Farm Management System</title>
+    <link rel="icon" type="image/png" href="/images/fmsLogo.png" />
+  </>
+);

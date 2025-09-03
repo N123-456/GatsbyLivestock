@@ -887,3 +887,9 @@ const plreport = () => {
 };
 
 export default plreport;
+export const Head = () => (
+  <>
+    <title>P&L Report | Farm Management System</title>
+    <link rel="icon" type="image/png" href="/images/fmsLogo.png" />
+  </>
+);

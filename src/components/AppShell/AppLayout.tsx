@@ -16,9 +16,9 @@ export function AppLayout({ children }: AppLayoutProps) {
         <div className="flex justify-end ">
           <DarkModeToggle />
         </div>
-
+<div className="lg:pr-4">
         {children}
-        
+        </div>
       </main>
     </div>
   );

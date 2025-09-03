@@ -98,7 +98,7 @@ const inventoryreport = () => {
                   </h2>
                   <div className="flex-1 h-px bg-primary-line"></div>
                 </div>
-                    <h1 className="text-primary-pheading font-bold">
+                    <h1 className="text-primary-activelink font-bold">
                     How to get to the Inventory Reports Page
                     </h1><br />
                     <p className="text-[18px] font-montserrat font-normal dark:text-[#D5D5D5]">
@@ -198,8 +198,8 @@ const inventoryreport = () => {
                     Step 2
                   </h2>
                   <div className="flex-1 h-px bg-primary-line"></div>
-                </div><br />
-                    <h1 className="text-primary-pheading font-bold font-montserrat text-[19px]">
+                </div>
+                    <h1 className="text-primary-activelink font-bold font-montserrat text-[19px]">
                     Overview of the Inventory Reports Page
                     </h1><br />
                     <p className="font-montserrat text-[18px] ">
@@ -435,8 +435,8 @@ const inventoryreport = () => {
                     Step 3
                   </h2>
                   <div className="flex-1 h-px bg-primary-line"></div>
-                </div><br />
-                    <h1 className="text-primary-pheading font-bold">
+                </div>
+                    <h1 className="text-primary-activelink font-bold">
                     Setting a Date range for the Inventory Reports
                     </h1><br />
                     <p className=" text-[18px] font-montserrat font-normal dark:text-[#D5D5D5]">
@@ -559,8 +559,8 @@ const inventoryreport = () => {
                     Step 4
                   </h2>
                   <div className="flex-1 h-px bg-primary-line"></div>
-                </div><br />
-                    <h1 className="text-primary-pheading font-bold">
+                </div>
+                    <h1 className="text-primary-activelink font-bold">
                     How to download an Inventory Report
                     </h1><br />
                     <p className="text-[18px] font-montserrat font-normal dark:text-[#D5D5D5]">
@@ -707,3 +707,9 @@ const inventoryreport = () => {
 }
 
 export default inventoryreport
+export const Head = () => (
+  <>
+    <title>Inventory Report | Farm Management System</title>
+    <link rel="icon" type="image/png" href="/images/fmsLogo.png" />
+  </>
+);

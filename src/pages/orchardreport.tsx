@@ -716,3 +716,9 @@ const orchardreport = () => {
 };
 
 export default orchardreport;
+export const Head = () => (
+  <>
+    <title>Orchard Report | Farm Management System</title>
+    <link rel="icon" type="image/png" href="/images/fmsLogo.png" />
+  </>
+);

@@ -1249,3 +1249,9 @@ const orchardchemical = () => {
 };
 
 export default orchardchemical;
+export const Head = () => (
+  <>
+    <title>Orchard Chemical | Farm Management System</title>
+    <link rel="icon" type="image/png" href="/images/fmsLogo.png" />
+  </>
+);

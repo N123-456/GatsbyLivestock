@@ -427,3 +427,9 @@ const orchardfertilizer = () => {
 };
 
 export default orchardfertilizer;
+export const Head = () => (
+  <>
+    <title>Orchard Fertilizers | Farm Management System</title>
+    <link rel="icon" type="image/png" href="/images/fmsLogo.png" />
+  </>
+);
