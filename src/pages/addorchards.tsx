@@ -4,72 +4,104 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { graphql, useStaticQuery } from "gatsby";
 import { AppLayout } from "../components/AppShell/AppLayout";
 import TextToSpeech from "../components/TextToSpeech";
+import { faVestPatches } from "@fortawesome/free-solid-svg-icons";
 
 const addorchards = () => {
   const data = useStaticQuery(graphql`
     query {
-      fl: file(relativePath: { eq: "fl.png" }) {
+      orchard: file(relativePath: { eq: "orchard.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      AL: file(relativePath: { eq: "AL.png" }) {
+      addo: file(relativePath: { eq: "addo.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      LD: file(relativePath: { eq: "LD.png" }) {
+      bfo: file(relativePath: { eq: "bfo.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      LI: file(relativePath: { eq: "LI.png" }) {
+      ps: file(relativePath: { eq: "ps.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      MB: file(relativePath: { eq: "MB.png" }) {
+      ao: file(relativePath: { eq: "ao.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      UI: file(relativePath: { eq: "UI.png" }) {
+      gtp: file(relativePath: { eq: "gtp.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      SL: file(relativePath: { eq: "SL.png" }) {
+      sfo: file(relativePath: { eq: "sfo.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      DL: file(relativePath: { eq: "DL.png" }) {
+      dtot: file(relativePath: { eq: "dtot.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      VL: file(relativePath: { eq: "VL.png" }) {
+      vttoao: file(relativePath: { eq: "vttoao.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      VL2: file(relativePath: { eq: "VL2.png" }) {
+
+      eao: file(relativePath: { eq: "eao.png" }) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED)
+        }
+      }
+      vo: file(relativePath: { eq: "vo.png" }) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED)
+        }
+      }
+      dao: file(relativePath: { eq: "dao.png" }) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED)
+        }
+      }
+      db: file(relativePath: { eq: "db.png" }) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED)
+        }
+      }
+      few: file(relativePath: { eq: "few.png" }) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED)
+        }
+      }
+      toto: file(relativePath: { eq: "toto.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
     }
   `);
-  const fl = getImage(data.fl);
-  const AL = getImage(data.AL);
-  const LD = getImage(data.LD);
-  const LI = getImage(data.LI);
-  const MB = getImage(data.MB);
-  const UI = getImage(data.UI);
-  const SL = getImage(data.SL);
-  const DL = getImage(data.DL);
-  const VL = getImage(data.VL);
-  const VL2 = getImage(data.VL2);
+  const orchard = getImage(data.orchard);
+  const addo = getImage(data.addo);
+  const bfo = getImage(data.bfo);
+  const ps = getImage(data.ps);
+  const gtp = getImage(data.gtp);
+  const sfo = getImage(data.sfo);
+  const dtot = getImage(data.dtot);
+  const vttoao = getImage(data.vttoao);
+  const vo = getImage(data.vo);
+  const eao = getImage(data.eao);
+  const dao = getImage(data.dao);
+  const db = getImage(data.db);
+  const ao = getImage(data.ao);
+  const few = getImage(data.few);
+  const toto = getImage(data.toto);
   return (
     <AppLayout>
       <PrivateRoute>
@@ -167,9 +199,9 @@ const addorchards = () => {
                 </p>
                 <p className="mb-4">Here is what the Page looks like:</p>
                 <div className="pl-13 pt-8 flex justify-center">
-                  {fl && (
+                  {orchard && (
                     <GatsbyImage
-                      image={fl}
+                      image={orchard}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -239,9 +271,9 @@ const addorchards = () => {
                     button and above the search options.
                   </li>
                   <div className="pl-13 pt-8 flex justify-center">
-                    {fl && (
+                    {addo && (
                       <GatsbyImage
-                        image={fl}
+                        image={addo}
                         alt="Startups illustration"
                         className="border border-gray-200 shadow-lg w-[1000.58px] "
                       />
@@ -258,9 +290,9 @@ const addorchards = () => {
                   page.
                 </p>
                 <div className="pl-13 pt-8 flex justify-center">
-                  {fl && (
+                  {ao && (
                     <GatsbyImage
-                      image={fl}
+                      image={ao}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -279,7 +311,7 @@ const addorchards = () => {
                   </span>{" "}
                   step:
                 </p>
-                <div className="pl-13 pt-8 flex justify-center">
+                {/* <div className="pl-13 pt-8 flex justify-center">
                   {fl && (
                     <GatsbyImage
                       image={fl}
@@ -289,7 +321,7 @@ const addorchards = () => {
                   )}
                 </div>
                 <br />
-                <br />
+                <br /> */}
                 <p className="mb-4">
                   The{" "}
                   <span className="text-primary-activelink font-bold">
@@ -495,7 +527,7 @@ const addorchards = () => {
                   </span>{" "}
                   step:
                 </p>
-                <div className="pl-13 pt-8 flex justify-center">
+                {/* <div className="pl-13 pt-8 flex justify-center">
                   {fl && (
                     <GatsbyImage
                       image={fl}
@@ -505,7 +537,7 @@ const addorchards = () => {
                   )}
                 </div>
                 <br />
-                <br />
+                <br /> */}
                 <p className="mb-4">
                   The{" "}
                   <span className="text-primary-activelink font-bold">
@@ -526,7 +558,7 @@ const addorchards = () => {
                       Orchard
                     </span>{" "}
                     farm. Select 1 of 2 options:
-                    <div className="pl-13 pt-8 flex justify-center">
+                    {/* <div className="pl-13 pt-8 flex justify-center">
                       {fl && (
                         <GatsbyImage
                           image={fl}
@@ -536,7 +568,7 @@ const addorchards = () => {
                       )}
                     </div>
                     <br />
-                    <br />
+                    <br /> */}
                     <ul className="list-disc ml-6 mt-2">
                       <li>
                         <span className="text-primary-pheading font-bold">
@@ -558,7 +590,7 @@ const addorchards = () => {
                         </span>
                         .
                       </li>
-                      <div className="pl-13 pt-8 flex justify-center">
+                      {/* <div className="pl-13 pt-8 flex justify-center">
                         {fl && (
                           <GatsbyImage
                             image={fl}
@@ -568,7 +600,7 @@ const addorchards = () => {
                         )}
                       </div>
                       <br />
-                      <br />
+                      <br /> */}
                       <li>
                         <span className="text-primary-pheading font-bold">
                           “Purchased”
@@ -643,7 +675,7 @@ const addorchards = () => {
                   </span>{" "}
                   step:
                 </p>
-                <div className="pl-13 pt-8 flex justify-center">
+                {/* <div className="pl-13 pt-8 flex justify-center">
                   {fl && (
                     <GatsbyImage
                       image={fl}
@@ -653,7 +685,7 @@ const addorchards = () => {
                   )}
                 </div>
                 <br />
-                <br />
+                <br /> */}
                 <p className="mb-4">
                   The{" "}
                   <span className="text-primary-activelink font-bold">
@@ -781,7 +813,7 @@ const addorchards = () => {
                   </span>{" "}
                   step:
                 </p>
-                <div className="pl-13 pt-8 flex justify-center">
+                {/* <div className="pl-13 pt-8 flex justify-center">
                   {fl && (
                     <GatsbyImage
                       image={fl}
@@ -791,7 +823,7 @@ const addorchards = () => {
                   )}
                 </div>
                 <br />
-                <br />
+                <br /> */}
                 <p className="mb-4">
                   The{" "}
                   <span className="text-primary-activelink font-bold">
@@ -927,9 +959,9 @@ const addorchards = () => {
                   table!
                 </p>
                 <div className="pl-13 pt-8 flex justify-center">
-                  {fl && (
+                  {orchard && (
                     <GatsbyImage
-                      image={fl}
+                      image={orchard}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -998,9 +1030,9 @@ const addorchards = () => {
                   .
                 </p>
                 <div className="pl-13 pt-8 flex justify-center">
-                  {fl && (
+                  {bfo && (
                     <GatsbyImage
-                      image={fl}
+                      image={bfo}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -1049,7 +1081,7 @@ const addorchards = () => {
                     , above the page select options, and is on the bottom left
                     of the page.
                   </li>
-                  <div className="pl-13 pt-8 flex justify-center">
+                  {/* <div className="pl-13 pt-8 flex justify-center">
                     {fl && (
                       <GatsbyImage
                         image={fl}
@@ -1059,7 +1091,7 @@ const addorchards = () => {
                     )}
                   </div>
                   <br />
-                  <br />
+                  <br /> */}
                   <li className="mb-2">
                     The{" "}
                     <span className="text-primary-activelink font-bold">
@@ -1078,7 +1110,7 @@ const addorchards = () => {
                     , above the page select options, and is to the bottom right
                     of the page.
                   </li>
-                  <div className="pl-13 pt-8 flex justify-center">
+                  {/* <div className="pl-13 pt-8 flex justify-center">
                     {fl && (
                       <GatsbyImage
                         image={fl}
@@ -1088,7 +1120,7 @@ const addorchards = () => {
                     )}
                   </div>
                   <br />
-                  <br />
+                  <br /> */}
                   <li className="mb-2">
                     The{" "}
                     <span className="text-primary-activelink font-bold">
@@ -1115,9 +1147,9 @@ const addorchards = () => {
                     . It is on the bottom middle of the page.
                   </li>
                   <div className="pl-13 pt-8 flex justify-center">
-                    {fl && (
+                    {ps && (
                       <GatsbyImage
-                        image={fl}
+                        image={ps}
                         alt="Startups illustration"
                         className="border border-gray-200 shadow-lg w-[1000.58px] "
                       />
@@ -1138,9 +1170,9 @@ const addorchards = () => {
                     open the page with the page number shown as well.
                   </li>
                   <div className="pl-13 pt-8 flex justify-center">
-                    {fl && (
+                    {gtp && (
                       <GatsbyImage
-                        image={fl}
+                        image={gtp}
                         alt="Startups illustration"
                         className="border border-gray-200 shadow-lg w-[1000.58px] "
                       />
@@ -1201,9 +1233,9 @@ const addorchards = () => {
                   button, and above the table.
                 </p>
                 <div className="pl-13 pt-8 flex justify-center">
-                  {fl && (
+                  {sfo && (
                     <GatsbyImage
-                      image={fl}
+                      image={sfo}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -1392,9 +1424,9 @@ const addorchards = () => {
                   </li>
                 </ol>
                 <div className="pl-13 pt-8 flex justify-center">
-                  {fl && (
+                  {dtot && (
                     <GatsbyImage
-                      image={fl}
+                      image={dtot}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -1407,9 +1439,9 @@ const addorchards = () => {
                   asking where to put the file in.
                 </p>
                 <div className="pl-13 pt-8 flex justify-center">
-                  {fl && (
+                  {few && (
                     <GatsbyImage
-                      image={fl}
+                      image={few}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -1443,17 +1475,17 @@ const addorchards = () => {
                 <p className="mb-4">
                   Provided below is an example of what it should look like:
                 </p>
-                <div className="pl-13 pt-8 flex justify-center">
-                  {fl && (
+                {/* <div className="pl-13 pt-8 flex justify-center">
+                  {vttoao && (
                     <GatsbyImage
-                      image={fl}
+                      image={vttoao}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
                 </div>
                 <br />
-                <br />
+                <br /> */}
                 <div className="flex items-center pt-5 space-x-4">
                   <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px]  dark:text-primary-pheading font-bold">
                     Step 5
@@ -1483,9 +1515,9 @@ const addorchards = () => {
                     up with a list of options you can go to.
                   </li>
                   <div className="pl-13 pt-8 flex justify-center">
-                    {fl && (
+                    {vttoao && (
                       <GatsbyImage
-                        image={fl}
+                        image={vttoao}
                         alt="Startups illustration"
                         className="border border-gray-200 shadow-lg w-[1000.58px] "
                       />
@@ -1499,7 +1531,7 @@ const addorchards = () => {
                     <span className="font-bold">“View”</span> button and above
                     the <span className="font-bold">“Fertilizer”</span> button.
                   </li>
-                  <div className="pl-13 pt-8 flex justify-center">
+                  {/* <div className="pl-13 pt-8 flex justify-center">
                     {fl && (
                       <GatsbyImage
                         image={fl}
@@ -1509,7 +1541,7 @@ const addorchards = () => {
                     )}
                   </div>
                   <br />
-                  <br />
+                  <br /> */}
                   <li className="mb-2">
                     Click on the <span className="font-bold">“Tasks”</span>{" "}
                     button, It will take you to the{" "}
@@ -1519,9 +1551,9 @@ const addorchards = () => {
                     page.
                   </li>
                   <div className="pl-13 pt-8 flex justify-center">
-                    {fl && (
+                    {toto && (
                       <GatsbyImage
-                        image={fl}
+                        image={toto}
                         alt="Startups illustration"
                         className="border border-gray-200 shadow-lg w-[1000.58px] "
                       />
@@ -1593,7 +1625,7 @@ const addorchards = () => {
                   </span>{" "}
                   you want to check out.
                 </p>
-                <div className="pl-13 pt-8 flex justify-center">
+                {/* <div className="pl-13 pt-8 flex justify-center">
                   {fl && (
                     <GatsbyImage
                       image={fl}
@@ -1603,7 +1635,7 @@ const addorchards = () => {
                   )}
                 </div>
                 <br />
-                <br />
+                <br /> */}
                 <ol className="list-decimal ml-6 mb-4">
                   <li className="mb-2">
                     You can select the plant name of the{" "}
@@ -1625,9 +1657,9 @@ const addorchards = () => {
                   you selected.
                 </p>
                 <div className="pl-13 pt-8 flex justify-center">
-                  {fl && (
+                  {vo && (
                     <GatsbyImage
-                      image={fl}
+                      image={vo}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -1656,7 +1688,7 @@ const addorchards = () => {
                     </span>{" "}
                     you wish to view.
                   </li>
-                  <div className="pl-13 pt-8 flex justify-center">
+                  {/* <div className="pl-13 pt-8 flex justify-center">
                     {fl && (
                       <GatsbyImage
                         image={fl}
@@ -1666,7 +1698,7 @@ const addorchards = () => {
                     )}
                   </div>
                   <br />
-                  <br />
+                  <br /> */}
                   <li className="mb-2">
                     You will then see the{" "}
                     <span className="font-bold">“extra options”</span> menu
@@ -1676,7 +1708,7 @@ const addorchards = () => {
                     Select the <span className="font-bold">“View”</span> button,
                     located at the top of the list in the menu.
                   </li>
-                  <div className="pl-13 pt-8 flex justify-center">
+                  {/* <div className="pl-13 pt-8 flex justify-center">
                     {fl && (
                       <GatsbyImage
                         image={fl}
@@ -1686,7 +1718,7 @@ const addorchards = () => {
                     )}
                   </div>
                   <br />
-                  <br />
+                  <br /> */}
                 </ol>
                 <p className="mb-4">
                   You will then be taken to the{" "}
@@ -1700,9 +1732,9 @@ const addorchards = () => {
                   you selected.
                 </p>
                 <div className="pl-13 pt-8 flex justify-center">
-                  {fl && (
+                  {vo && (
                     <GatsbyImage
-                      image={fl}
+                      image={vo}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -1769,9 +1801,9 @@ const addorchards = () => {
                     that you want to edit.
                   </li>
                   <div className="pl-13 pt-8 flex justify-center">
-                    {fl && (
+                    {eao && (
                       <GatsbyImage
-                        image={fl}
+                        image={eao}
                         alt="Startups illustration"
                         className="border border-gray-200 shadow-lg w-[1000.58px] "
                       />
@@ -1788,7 +1820,7 @@ const addorchards = () => {
                     Select the <span className="font-bold">“View”</span> button,
                     located at the top of the list in the menu.
                   </li>
-                  <div className="pl-13 pt-8 flex justify-center">
+                  {/* <div className="pl-13 pt-8 flex justify-center">
                     {fl && (
                       <GatsbyImage
                         image={fl}
@@ -1798,7 +1830,7 @@ const addorchards = () => {
                     )}
                   </div>
                   <br />
-                  <br />
+                  <br /> */}
                   <li className="mb-2">
                     You will then be taken to the{" "}
                     <span className="text-primary-activelink font-bold">
@@ -1811,9 +1843,9 @@ const addorchards = () => {
                     you selected.
                   </li>
                   <div className="pl-13 pt-8 flex justify-center">
-                    {fl && (
+                    {vo && (
                       <GatsbyImage
-                        image={fl}
+                        image={vo}
                         alt="Startups illustration"
                         className="border border-gray-200 shadow-lg w-[1000.58px] "
                       />
@@ -1843,9 +1875,9 @@ const addorchards = () => {
                     button.
                   </li>
                   <div className="pl-13 pt-8 flex justify-center">
-                    {fl && (
+                    {vo && (
                       <GatsbyImage
-                        image={fl}
+                        image={vo}
                         alt="Startups illustration"
                         className="border border-gray-200 shadow-lg w-[1000.58px] "
                       />
@@ -1861,7 +1893,7 @@ const addorchards = () => {
                   </span>{" "}
                   page.
                 </p>
-                <div className="pl-13 pt-8 flex justify-center">
+                {/* <div className="pl-13 pt-8 flex justify-center">
                   {fl && (
                     <GatsbyImage
                       image={fl}
@@ -1871,7 +1903,7 @@ const addorchards = () => {
                   )}
                 </div>
                 <br />
-                <br />
+                <br /> */}
                 <p className="mb-4">
                   Here you can change and update whatever fields you need to
                   edit.
@@ -1930,9 +1962,9 @@ const addorchards = () => {
                     that you want to download.
                   </li>
                   <div className="pl-13 pt-8 flex justify-center">
-                    {fl && (
+                    {dao && (
                       <GatsbyImage
-                        image={fl}
+                        image={dao}
                         alt="Startups illustration"
                         className="border border-gray-200 shadow-lg w-[1000.58px] "
                       />
@@ -1949,7 +1981,7 @@ const addorchards = () => {
                     Select the <span className="font-bold">“View”</span> button,
                     located at the top of the list in the menu.
                   </li>
-                  <div className="pl-13 pt-8 flex justify-center">
+                  {/* <div className="pl-13 pt-8 flex justify-center">
                     {fl && (
                       <GatsbyImage
                         image={fl}
@@ -1959,7 +1991,7 @@ const addorchards = () => {
                     )}
                   </div>
                   <br />
-                  <br />
+                  <br /> */}
                   <li className="mb-2">
                     You will then be taken to the{" "}
                     <span className="text-primary-activelink font-bold">
@@ -1972,9 +2004,9 @@ const addorchards = () => {
                     you selected.
                   </li>
                   <div className="pl-13 pt-8 flex justify-center">
-                    {fl && (
+                    {vo && (
                       <GatsbyImage
-                        image={fl}
+                        image={vo}
                         alt="Startups illustration"
                         className="border border-gray-200 shadow-lg w-[1000.58px] "
                       />
@@ -2004,9 +2036,9 @@ const addorchards = () => {
                     button.
                   </li>
                   <div className="pl-13 pt-8 flex justify-center">
-                    {fl && (
+                    {vo && (
                       <GatsbyImage
-                        image={fl}
+                        image={vo}
                         alt="Startups illustration"
                         className="border border-gray-200 shadow-lg w-[1000.58px] "
                       />
@@ -2029,7 +2061,7 @@ const addorchards = () => {
                 <p className="mb-4">
                   Here is an example of what it could look like:
                 </p>
-                <div className="pl-13 pt-8 flex justify-center">
+                {/* <div className="pl-13 pt-8 flex justify-center">
                   {fl && (
                     <GatsbyImage
                       image={fl}
@@ -2039,7 +2071,7 @@ const addorchards = () => {
                   )}
                 </div>
                 <br />
-                <br />
+                <br /> */}
                 <p className="mb-4">
                   When you have found a suitable place for your PDF file, then
                   you can press the <span className="font-bold">“Save”</span>{" "}
@@ -2059,7 +2091,7 @@ const addorchards = () => {
                 <p className="mb-4">
                   Provided below is an example of what it should look like:
                 </p>
-                <div className="pl-13 pt-8 flex justify-center">
+                {/* <div className="pl-13 pt-8 flex justify-center">
                   {fl && (
                     <GatsbyImage
                       image={fl}
@@ -2069,7 +2101,7 @@ const addorchards = () => {
                   )}
                 </div>
                 <br />
-                <br />
+                <br /> */}
                 <div className="flex items-center pt-5 space-x-4">
                   <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px]  dark:text-primary-pheading font-bold">
                     Step 8
@@ -2100,9 +2132,9 @@ const addorchards = () => {
                     that you want to delete.
                   </li>
                   <div className="pl-13 pt-8 flex justify-center">
-                    {fl && (
+                    {dao && (
                       <GatsbyImage
-                        image={fl}
+                        image={dao}
                         alt="Startups illustration"
                         className="border border-gray-200 shadow-lg w-[1000.58px] "
                       />
@@ -2132,9 +2164,9 @@ const addorchards = () => {
                     you selected.
                   </li>
                   <div className="pl-13 pt-8 flex justify-center">
-                    {fl && (
+                    {vo && (
                       <GatsbyImage
-                        image={fl}
+                        image={vo}
                         alt="Startups illustration"
                         className="border border-gray-200 shadow-lg w-[1000.58px] "
                       />
@@ -2164,9 +2196,9 @@ const addorchards = () => {
                     button.
                   </li>
                   <div className="pl-13 pt-8 flex justify-center">
-                    {fl && (
+                    {vo && (
                       <GatsbyImage
-                        image={fl}
+                        image={vo}
                         alt="Startups illustration"
                         className="border border-gray-200 shadow-lg w-[1000.58px] "
                       />
@@ -2183,9 +2215,9 @@ const addorchards = () => {
                     or not.
                   </li>
                   <div className="pl-13 pt-8 flex justify-center">
-                    {fl && (
+                    {db && (
                       <GatsbyImage
-                        image={fl}
+                        image={db}
                         alt="Startups illustration"
                         className="border border-gray-200 shadow-lg w-[1000.58px] "
                       />

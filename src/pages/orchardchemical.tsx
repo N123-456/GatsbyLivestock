@@ -7,45 +7,100 @@ import TextToSpeech from "../components/TextToSpeech";
 
 const orchardchemical = () => {
   const data = useStaticQuery(graphql`
-    query {
-      fertilizer: file(relativePath: { eq: "fertilizer.png" }) {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
+   query {
+        ac: file(relativePath: { eq: "ac.png" }) {
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED)
+          }
+        }
+        ma: file(relativePath: { eq: "ma.png" }) {
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED)
+          }
+        }
+        rs: file(relativePath: { eq: "rs.png" }) {
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED)
+          }
+        }
+        ps: file(relativePath: { eq: "ps.png" }) {
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED)
+          }
+        }
+        ao: file(relativePath: { eq: "ao.png" }) {
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED)
+          }
+        }
+        gtp: file(relativePath: { eq: "gtp.png" }) {
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED)
+          }
+        }
+        sfo: file(relativePath: { eq: "sfo.png" }) {
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED)
+          }
+        }
+        dtot: file(relativePath: { eq: "dtot.png" }) {
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED)
+          }
+        }
+        vttoao: file(relativePath: { eq: "vttoao.png" }) {
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED)
+          }
+        }
+  
+        eao: file(relativePath: { eq: "eao.png" }) {
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED)
+          }
+        }
+        vo: file(relativePath: { eq: "vo.png" }) {
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED)
+          }
+        }
+        dao: file(relativePath: { eq: "dao.png" }) {
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED)
+          }
+        }
+        db: file(relativePath: { eq: "db.png" }) {
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED)
+          }
+        }
+        few: file(relativePath: { eq: "few.png" }) {
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED)
+          }
+        }
+        toto: file(relativePath: { eq: "toto.png" }) {
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED)
+          }
         }
       }
-      AF: file(relativePath: { eq: "AF.png" }) {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
-        }
-      }
-      AF1: file(relativePath: { eq: "AF1.png" }) {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
-        }
-      }
-      SF: file(relativePath: { eq: "SF.png" }) {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
-        }
-      }
-      DF: file(relativePath: { eq: "DF.png" }) {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
-        }
-      }
-      VF: file(relativePath: { eq: "VF.png" }) {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
-        }
-      }
-    }
-  `);
-  const fertilizer = getImage(data.fertilizer);
-  const AF = getImage(data.AF);
-  const AF1 = getImage(data.AF1);
-  const SF = getImage(data.SF);
-  const DF = getImage(data.DF);
-  const VF = getImage(data.VF);
+    `);
+    const ac = getImage(data.ac);
+    const ma = getImage(data.ma);
+    const rs = getImage(data.rs);
+    const ps = getImage(data.ps);
+    const gtp = getImage(data.gtp);
+    const sfo = getImage(data.sfo);
+    const dtot = getImage(data.dtot);
+    const vttoao = getImage(data.vttoao);
+    const vo = getImage(data.vo);
+    const eao = getImage(data.eao);
+    const dao = getImage(data.dao);
+    const db = getImage(data.db);
+    const ao = getImage(data.ao);
+    const few = getImage(data.few);
+    const toto = getImage(data.toto);
   return (
     <AppLayout>
       <PrivateRoute>
@@ -102,8 +157,7 @@ const orchardchemical = () => {
                   Below is an example of what it should look like:
                 </p>
 
-                <br />
-                <br />
+          
 
                 <div className="flex items-center pt-5 space-x-4">
                   <h2 className="text-primary-activelink font-montserrat font-semibold text-[22px]  dark:text-primary-pheading font-bold">
@@ -209,9 +263,9 @@ const orchardchemical = () => {
                   <span className="text-primary-activelink font-bold">“Add Chemical”</span> page.
                 </p>
                  <div className="pl-13 pt-8 flex justify-center">
-                          {VF && (
+                          {ac && (
                                           <GatsbyImage
-                                            image={VF}
+                                            image={ac}
                                             alt="Startups illustration"
                                             className="border border-gray-200 shadow-lg w-[1000.58px] "
                                           />
@@ -232,7 +286,7 @@ const orchardchemical = () => {
                   <span className="text-primary-activelink font-bold">“Product Details”</span>{" "}
                   step:
                 </p>
-                 <div className="pl-13 pt-8 flex justify-center">
+                 {/* <div className="pl-13 pt-8 flex justify-center">
                           {VF && (
                                           <GatsbyImage
                                             image={VF}
@@ -242,7 +296,7 @@ const orchardchemical = () => {
                                         )}
                                       </div>
                                       <br />
-                                      <br />
+                                      <br /> */}
                 <p className="mb-4">
                   The <span className="text-primary-activelink font-bold">“Product Details”</span>{" "}
                   step is a step where you input the general details of the{" "}
@@ -297,7 +351,7 @@ const orchardchemical = () => {
                   The next and final step, is the{" "}
                   <span className="text-primary-activelink font-bold">“Usage Details”</span> step:
                 </p>
-                 <div className="pl-13 pt-8 flex justify-center">
+                 {/* <div className="pl-13 pt-8 flex justify-center">
                           {VF && (
                                           <GatsbyImage
                                             image={VF}
@@ -307,7 +361,7 @@ const orchardchemical = () => {
                                         )}
                                       </div>
                                       <br />
-                                      <br />
+                                      <br /> */}
                 <p className="mb-4">
                   The <span className="text-primary-activelink font-bold">“Usage Details”</span>{" "}
                   step is a step where you can input the details of what{" "}
@@ -367,9 +421,9 @@ const orchardchemical = () => {
                     <span className="text-primary-activelink font-bold">Mark Area</span> feature.
                   </li>
                    <div className="pl-13 pt-8 flex justify-center">
-                            {VF && (
+                            {ma && (
                                             <GatsbyImage
-                                              image={VF}
+                                              image={ma}
                                               alt="Startups illustration"
                                               className="border border-gray-200 shadow-lg w-[1000.58px] "
                                             />
@@ -401,9 +455,9 @@ const orchardchemical = () => {
                     to.
                   </li>
                    <div className="pl-13 pt-8 flex justify-center">
-                            {VF && (
+                            {rs && (
                                             <GatsbyImage
-                                              image={VF}
+                                              image={rs}
                                               alt="Startups illustration"
                                               className="border border-gray-200 shadow-lg w-[1000.58px] "
                                             />
@@ -536,11 +590,11 @@ const orchardchemical = () => {
                     and is on the bottom middle of the page.
                   </li>
                    <div className="pl-13 pt-8 flex justify-center">
-                            {VF && (
+                            {ps && (
                                             <GatsbyImage
-                                              image={VF}
+                                              image={ps}
                                               alt="Startups illustration"
-                                              className="border border-gray-200 shadow-lg w-[1000.58px] "
+                                              className="border border-gray-200 shadow-lg"
                                             />
                                           )}
                                         </div>
@@ -555,11 +609,11 @@ const orchardchemical = () => {
                     with the page number shown as well.
                   </li>
                    <div className="pl-13 pt-8 flex justify-center">
-                            {VF && (
+                            {gtp && (
                                             <GatsbyImage
-                                              image={VF}
+                                              image={gtp}
                                               alt="Startups illustration"
-                                              className="border border-gray-200 shadow-lg w-[1000.58px] "
+                                              className="border border-gray-200 shadow-lg"
                                             />
                                           )}
                                         </div>

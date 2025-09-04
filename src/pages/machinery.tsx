@@ -22,80 +22,99 @@ const machinery = () => {
   //   if (isCheckingAuth) return null;
   const data = useStaticQuery(graphql`
     query {
-      M: file(relativePath: { eq: "M.png" }) {
+      mash: file(relativePath: { eq: "mash.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      ANM: file(relativePath: { eq: "ANM.png" }) {
+      anma: file(relativePath: { eq: "anma.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      PI: file(relativePath: { eq: "PI.png" }) {
+      bfe: file(relativePath: { eq: "bfe.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      IDEN: file(relativePath: { eq: "IDEN.png" }) {
+      ps: file(relativePath: { eq: "ps.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      SPEC: file(relativePath: { eq: "SPEC.png" }) {
+      gtp: file(relativePath: { eq: "gtp.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      PIN: file(relativePath: { eq: "PIN.png" }) {
+      sfe: file(relativePath: { eq: "sfe.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      AD: file(relativePath: { eq: "AD.png" }) {
+      dtm: file(relativePath: { eq: "dtm.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      SM: file(relativePath: { eq: "SM.png" }) {
+      few: file(relativePath: { eq: "few.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      DM: file(relativePath: { eq: "DM.png" }) {
+      vte: file(relativePath: { eq: "vte.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      VM: file(relativePath: { eq: "VM.png" }) {
+      vae: file(relativePath: { eq: "vae.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      VM1: file(relativePath: { eq: "VM1.png" }) {
+      ve: file(relativePath: { eq: "ve.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      MU: file(relativePath: { eq: "MU.png" }) {
+      eae: file(relativePath: { eq: "eae.png" }) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED)
+        }
+      }
+          dae: file(relativePath: { eq: "dae.png" }) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED)
+        }
+      }
+          dele: file(relativePath: { eq: "dele.png" }) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED)
+        }
+      }
+             db: file(relativePath: { eq: "db.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
     }
   `);
-  const M = getImage(data.M);
-  const ANM = getImage(data.ANM);
-  const PI = getImage(data.PI);
-  const IDEN = getImage(data.IDEN);
-  const SPEC = getImage(data.SPEC);
-  const PIN = getImage(data.PIN);
-  const AD = getImage(data.AD);
-  const SM = getImage(data.SM);
-  const DM = getImage(data.DM);
-  const VM = getImage(data.VM);
-  const VM1 = getImage(data.VM1);
-  const MU = getImage(data.MU);
+  const anma = getImage(data.anma);
+  const anmp = getImage(data.anmp);
+  const bfe = getImage(data.bfe);
+  const dae = getImage(data.dae);
+  const dele = getImage(data.dele);
+  const dtm = getImage(data.dtm);
+  const eae = getImage(data.eae);
+  const mash = getImage(data.mash);
+  const sfe = getImage(data.sfe);
+  const vae= getImage(data.vae);
+  const ve = getImage(data.ve);
+  const vte = getImage(data.vte);
+   const db = getImage(data.db);
+    const gtp = getImage(data.gtp);
+     const ps = getImage(data.ps);
+      const few = getImage(data.few);
   return (
     <AppLayout>
       <PrivateRoute>
@@ -158,9 +177,9 @@ const machinery = () => {
               </p>
 
               <div className="pl-13 pt-8 flex justify-center">
-                {M && (
+                {mash && (
                   <GatsbyImage
-                    image={M}
+                    image={mash}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -262,9 +281,9 @@ const machinery = () => {
                     button and to the top of the search options.
                   </li>
                       <div className="pl-13 pt-8 flex justify-center">
-                {M && (
+                {anma && (
                   <GatsbyImage
-                    image={M}
+                    image={anma}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -280,9 +299,9 @@ const machinery = () => {
                   page.
                 </p>
                     <div className="pl-13 pt-8 flex justify-center">
-                {M && (
+                {anmp && (
                   <GatsbyImage
-                    image={M}
+                    image={anmp}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -300,7 +319,7 @@ const machinery = () => {
                   </span>{" "}
                   step:
                 </p>
-                    <div className="pl-13 pt-8 flex justify-center">
+                    {/* <div className="pl-13 pt-8 flex justify-center">
                 {M && (
                   <GatsbyImage
                     image={M}
@@ -308,7 +327,7 @@ const machinery = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
 
                 <p className="mb-4">
                   The{" "}
@@ -421,7 +440,7 @@ const machinery = () => {
                   </span>{" "}
                   step:
                 </p>
-                    <div className="pl-13 pt-8 flex justify-center">
+                    {/* <div className="pl-13 pt-8 flex justify-center">
                 {M && (
                   <GatsbyImage
                     image={M}
@@ -429,7 +448,7 @@ const machinery = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
 
                 <p className="mb-4">
                   The{" "}
@@ -469,7 +488,7 @@ const machinery = () => {
                   </span>{" "}
                   step:
                 </p>
-                    <div className="pl-13 pt-8 flex justify-center">
+                    {/* <div className="pl-13 pt-8 flex justify-center">
                 {M && (
                   <GatsbyImage
                     image={M}
@@ -477,7 +496,7 @@ const machinery = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
 
                 <p className="mb-4">
                   The{" "}
@@ -499,7 +518,7 @@ const machinery = () => {
                   </span>{" "}
                   step.
                 </p>
-                    <div className="pl-13 pt-8 flex justify-center">
+                    {/* <div className="pl-13 pt-8 flex justify-center">
                 {M && (
                   <GatsbyImage
                     image={M}
@@ -507,7 +526,7 @@ const machinery = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
 
                 <p className="mb-4">
                   [Above is the{" "}
@@ -557,7 +576,7 @@ const machinery = () => {
                     </span>{" "}
                     field: Enter in the Serial Number of the Machinery.
                   </li>
-                      <div className="pl-13 pt-8 flex justify-center">
+                      {/* <div className="pl-13 pt-8 flex justify-center">
                 {M && (
                   <GatsbyImage
                     image={M}
@@ -565,7 +584,7 @@ const machinery = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
 
                 </ul>
                 <p className="mb-4">
@@ -609,7 +628,7 @@ const machinery = () => {
                     </span>{" "}
                     field: Enter in the Serial Number of the Machinery.
                   </li>
-                      <div className="pl-13 pt-8 flex justify-center">
+                      {/* <div className="pl-13 pt-8 flex justify-center">
                 {M && (
                   <GatsbyImage
                     image={M}
@@ -617,7 +636,7 @@ const machinery = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
 
                 </ul>
                 <p className="mb-4">
@@ -687,7 +706,7 @@ const machinery = () => {
                   </span>{" "}
                   step:
                 </p>
-                    <div className="pl-13 pt-8 flex justify-center">
+                    {/* <div className="pl-13 pt-8 flex justify-center">
                 {M && (
                   <GatsbyImage
                     image={M}
@@ -695,7 +714,7 @@ const machinery = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
 
                 <p className="mb-4">
                   The{" "}
@@ -752,7 +771,7 @@ const machinery = () => {
                   </span>{" "}
                   step:
                 </p>
-                    <div className="pl-13 pt-8 flex justify-center">
+                    {/* <div className="pl-13 pt-8 flex justify-center">
                 {M && (
                   <GatsbyImage
                     image={M}
@@ -760,7 +779,7 @@ const machinery = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
 
                 <p className="mb-4">
                   The{" "}
@@ -813,7 +832,7 @@ const machinery = () => {
                   </span>
                   :
                 </p>
-                    <div className="pl-13 pt-8 flex justify-center">
+                    {/* <div className="pl-13 pt-8 flex justify-center">
                 {M && (
                   <GatsbyImage
                     image={M}
@@ -821,7 +840,7 @@ const machinery = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
 
                 <ul className="list-disc ml-6 mb-4">
                   <li className="mb-2">
@@ -924,7 +943,7 @@ const machinery = () => {
                   </span>
                   :
                 </p>
-                    <div className="pl-13 pt-8 flex justify-center">
+                    {/* <div className="pl-13 pt-8 flex justify-center">
                 {M && (
                   <GatsbyImage
                     image={M}
@@ -932,7 +951,7 @@ const machinery = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
 
                 <ul className="list-disc ml-6 mb-4">
                   <li className="mb-2">
@@ -981,7 +1000,7 @@ const machinery = () => {
                   </span>{" "}
                   step:
                 </p>
-                    <div className="pl-13 pt-8 flex justify-center">
+                    {/* <div className="pl-13 pt-8 flex justify-center">
                 {M && (
                   <GatsbyImage
                     image={M}
@@ -989,7 +1008,7 @@ const machinery = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
 
                 <p className="mb-4">
                   The{" "}
@@ -1034,7 +1053,7 @@ const machinery = () => {
                   </span>{" "}
                   table!
                 </p>
-                    <div className="pl-13 pt-8 flex justify-center">
+                    {/* <div className="pl-13 pt-8 flex justify-center">
                 {M && (
                   <GatsbyImage
                     image={M}
@@ -1042,7 +1061,7 @@ const machinery = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
 
                 <p className="mb-4">
                   Now that you have covered how to add an Equipment entry into{" "}
@@ -1089,7 +1108,7 @@ const machinery = () => {
                   </span>
                   .
                 </p>
-                    <div className="pl-13 pt-8 flex justify-center">
+                    {/* <div className="pl-13 pt-8 flex justify-center">
                 {M && (
                   <GatsbyImage
                     image={M}
@@ -1097,7 +1116,7 @@ const machinery = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
 
                 <p className="mb-4">
                   Here you can see the{" "}
@@ -1137,7 +1156,7 @@ const machinery = () => {
                     , above the page select options, and is on the bottom left
                     of the page.
                   </li>
-                      <div className="pl-13 pt-8 flex justify-center">
+                      {/* <div className="pl-13 pt-8 flex justify-center">
                 {M && (
                   <GatsbyImage
                     image={M}
@@ -1145,7 +1164,7 @@ const machinery = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
 
                   <li className="mb-2">
                     The{" "}
@@ -1162,7 +1181,7 @@ const machinery = () => {
                     , above the page select options, and is to the bottom right
                     of the page.
                   </li>
-                      <div className="pl-13 pt-8 flex justify-center">
+                      {/* <div className="pl-13 pt-8 flex justify-center">
                 {M && (
                   <GatsbyImage
                     image={M}
@@ -1170,7 +1189,7 @@ const machinery = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
 
                   <li className="mb-2">
                     The{" "}
@@ -1198,9 +1217,9 @@ const machinery = () => {
                     , and is on the bottom middle of the page.
                   </li>
                       <div className="pl-13 pt-8 flex justify-center">
-                {M && (
+                {ps && (
                   <GatsbyImage
-                    image={M}
+                    image={ps}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -1217,9 +1236,9 @@ const machinery = () => {
                     with the page number shown as well.
                   </li>
                       <div className="pl-13 pt-8 flex justify-center">
-                {M && (
+                {gtp && (
                   <GatsbyImage
-                    image={M}
+                    image={gtp}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -1267,9 +1286,9 @@ const machinery = () => {
                   and above the table.
                 </p>
                     <div className="pl-13 pt-8 flex justify-center">
-                {M && (
+                {sfe && (
                   <GatsbyImage
-                    image={M}
+                    image={sfe}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -1388,9 +1407,9 @@ const machinery = () => {
                     <span className="font-bold">“Search”</span> button.
                   </li>
                       <div className="pl-13 pt-8 flex justify-center">
-                {M && (
+                {dtm && (
                   <GatsbyImage
-                    image={M}
+                    image={dtm}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -1403,9 +1422,9 @@ const machinery = () => {
                   asking where to put the file in.
                 </p>
                     <div className="pl-13 pt-8 flex justify-center">
-                {M && (
+                {few && (
                   <GatsbyImage
-                    image={M}
+                    image={few}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -1438,7 +1457,7 @@ const machinery = () => {
                 <p className="mb-4">
                   Provided below is an example of what it should look like:
                 </p>
-                    <div className="pl-13 pt-8 flex justify-center">
+                    {/* <div className="pl-13 pt-8 flex justify-center">
                 {M && (
                   <GatsbyImage
                     image={M}
@@ -1446,7 +1465,7 @@ const machinery = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
 
               </div>
               <div className="flex items-center pt-5 space-x-4">
@@ -1473,9 +1492,9 @@ const machinery = () => {
                     options you can go to.
                   </li>
                       <div className="pl-13 pt-8 flex justify-center">
-                {M && (
+                {vte && (
                   <GatsbyImage
-                    image={M}
+                    image={vte}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -1487,7 +1506,7 @@ const machinery = () => {
                     button which will be first on the list, above the{" "}
                     <span className="font-bold">“View Details”</span> button.
                   </li>
-                      <div className="pl-13 pt-8 flex justify-center">
+                      {/* <div className="pl-13 pt-8 flex justify-center">
                 {M && (
                   <GatsbyImage
                     image={M}
@@ -1495,7 +1514,7 @@ const machinery = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
 
                 </ol>
                 <p className="mb-4">
@@ -1505,7 +1524,7 @@ const machinery = () => {
                   </span>{" "}
                   page.
                 </p>
-                    <div className="pl-13 pt-8 flex justify-center">
+                    {/* <div className="pl-13 pt-8 flex justify-center">
                 {M && (
                   <GatsbyImage
                     image={M}
@@ -1513,7 +1532,7 @@ const machinery = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
 
                 <p className="mb-4">
                   Listed here should all the tasks that are in relation to the
@@ -1560,7 +1579,7 @@ const machinery = () => {
                     </span>{" "}
                     of the Equipment you want to view.
                   </li>
-                      <div className="pl-13 pt-8 flex justify-center">
+                      {/* <div className="pl-13 pt-8 flex justify-center">
                 {M && (
                   <GatsbyImage
                     image={M}
@@ -1568,7 +1587,7 @@ const machinery = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
 
                 </ol>
                 <p className="mb-4">
@@ -1579,9 +1598,9 @@ const machinery = () => {
                   page of the Equipment you selected.
                 </p>
                     <div className="pl-13 pt-8 flex justify-center">
-                {M && (
+                {ve && (
                   <GatsbyImage
-                    image={M}
+                    image={ve}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -1602,7 +1621,7 @@ const machinery = () => {
                     look like this <span className="font-bold">“⋮“</span>],
                     located on the right side of the Equipment you wish to view.
                   </li>
-                      <div className="pl-13 pt-8 flex justify-center">
+                      {/* <div className="pl-13 pt-8 flex justify-center">
                 {M && (
                   <GatsbyImage
                     image={M}
@@ -1610,7 +1629,7 @@ const machinery = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
 
                   <li className="mb-2">
                     You will then see the{" "}
@@ -1623,7 +1642,7 @@ const machinery = () => {
                     <span className="font-bold">“Tasks”</span> button and above
                     the <span className="font-bold">“Maintenance”</span> button.
                   </li>
-                      <div className="pl-13 pt-8 flex justify-center">
+                      {/* <div className="pl-13 pt-8 flex justify-center">
                 {M && (
                   <GatsbyImage
                     image={M}
@@ -1631,7 +1650,7 @@ const machinery = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
 
                 </ol>
                 <p className="mb-4">
@@ -1642,9 +1661,9 @@ const machinery = () => {
                   page of the Equipment you selected.
                 </p>
                     <div className="pl-13 pt-8 flex justify-center">
-                {M && (
+                {ve && (
                   <GatsbyImage
-                    image={M}
+                    image={ve}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -1688,9 +1707,9 @@ const machinery = () => {
                     edit.
                   </li>
                       <div className="pl-13 pt-8 flex justify-center">
-                {M && (
+                {eae && (
                   <GatsbyImage
-                    image={M}
+                    image={eae}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -1708,7 +1727,7 @@ const machinery = () => {
                     <span className="font-bold">“Tasks”</span> button and above
                     the <span className="font-bold">“Maintenance”</span> button.
                   </li>
-                      <div className="pl-13 pt-8 flex justify-center">
+                      {/* <div className="pl-13 pt-8 flex justify-center">
                 {M && (
                   <GatsbyImage
                     image={M}
@@ -1716,7 +1735,7 @@ const machinery = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
 
                   <li className="mb-2">
                     You will then be taken to the{" "}
@@ -1726,9 +1745,9 @@ const machinery = () => {
                     page of the Equipment you selected.
                   </li>
                       <div className="pl-13 pt-8 flex justify-center">
-                {M && (
+                {ve && (
                   <GatsbyImage
-                    image={M}
+                    image={ve}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -1754,9 +1773,9 @@ const machinery = () => {
                     button.
                   </li>
                       <div className="pl-13 pt-8 flex justify-center">
-                {M && (
+                {ve && (
                   <GatsbyImage
-                    image={M}
+                    image={ve}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -1771,7 +1790,7 @@ const machinery = () => {
                   </span>{" "}
                   page.
                 </p>
-                    <div className="pl-13 pt-8 flex justify-center">
+                    {/* <div className="pl-13 pt-8 flex justify-center">
                 {M && (
                   <GatsbyImage
                     image={M}
@@ -1779,7 +1798,7 @@ const machinery = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
 
                 <p className="mb-4">
                   Here you can change and update any of the fields you need to
@@ -1798,9 +1817,9 @@ const machinery = () => {
                   changes and edits.
                 </p>
                     <div className="pl-13 pt-8 flex justify-center">
-                {M && (
+                {ve && (
                   <GatsbyImage
-                    image={M}
+                    image={ve}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -1810,8 +1829,14 @@ const machinery = () => {
                 <p className="mb-4">
                   Now that you know how to edit your Equipment, now let’s check
                   out how to download your Equipment.
-                </p>
-
+                </p></div>
+<div className="flex items-center pt-5 space-x-4">
+                <h2 className="text-primary-activelink dark:text-primary-pheading font-bold font-montserrat font-semibold text-[22px] lg:pl-10">
+                  Step 6
+                </h2>
+                <div className="flex-1 h-px bg-primary-line"></div>
+              </div>
+              <div className="lg:pl-10">
                 <h3 className="text-xl font-semibold mb-3 text-primary-activelink font-bold">
                   Downloading an Equipment
                 </h3>
@@ -1832,9 +1857,9 @@ const machinery = () => {
                     download the details of.
                   </li>
                       <div className="pl-13 pt-8 flex justify-center">
-                {M && (
+                {dae && (
                   <GatsbyImage
-                    image={M}
+                    image={dae}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -1846,7 +1871,7 @@ const machinery = () => {
                     <span className="font-bold">“extra options”</span> menu
                     show.
                   </li>
-                      <div className="pl-13 pt-8 flex justify-center">
+                      {/* <div className="pl-13 pt-8 flex justify-center">
                 {M && (
                   <GatsbyImage
                     image={M}
@@ -1854,7 +1879,7 @@ const machinery = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
 
                   <li className="mb-2">
                     Select the <span className="font-bold">“View Details”</span>{" "}
@@ -1862,7 +1887,7 @@ const machinery = () => {
                     <span className="font-bold">“Tasks”</span> button and above
                     the <span className="font-bold">“Maintenance”</span> button.
                   </li>
-                      <div className="pl-13 pt-8 flex justify-center">
+                      {/* <div className="pl-13 pt-8 flex justify-center">
                 {M && (
                   <GatsbyImage
                     image={M}
@@ -1870,7 +1895,7 @@ const machinery = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
 
                   <li className="mb-2">
                     You will then be taken to the{" "}
@@ -1880,9 +1905,9 @@ const machinery = () => {
                     page of the Equipment you selected.
                   </li>
                       <div className="pl-13 pt-8 flex justify-center">
-                {M && (
+                {ve && (
                   <GatsbyImage
-                    image={M}
+                    image={ve}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -1907,7 +1932,7 @@ const machinery = () => {
                     </span>{" "}
                     button.
                   </li>
-                      <div className="pl-13 pt-8 flex justify-center">
+                      {/* <div className="pl-13 pt-8 flex justify-center">
                 {M && (
                   <GatsbyImage
                     image={M}
@@ -1915,7 +1940,7 @@ const machinery = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
 
                 </ol>
                 <p className="mb-4">
@@ -1926,7 +1951,7 @@ const machinery = () => {
                   The PDF file will contain only the details related to the
                   Equipment you selected for download.
                 </p>
-                    <div className="pl-13 pt-8 flex justify-center">
+                    {/* <div className="pl-13 pt-8 flex justify-center">
                 {M && (
                   <GatsbyImage
                     image={M}
@@ -1934,7 +1959,7 @@ const machinery = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
 
                 <p className="mb-4">
                   When you have found a suitable place for your PDF file, then
@@ -1955,7 +1980,7 @@ const machinery = () => {
                 <p className="mb-4">
                   Provided below is an example of what it should look like:
                 </p>
-                    <div className="pl-13 pt-8 flex justify-center">
+                    {/* <div className="pl-13 pt-8 flex justify-center">
                 {M && (
                   <GatsbyImage
                     image={M}
@@ -1963,7 +1988,7 @@ const machinery = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
 
                 <p className="mb-4">
                   Now that you know how to download your Equipment, now let’s
@@ -1973,7 +1998,7 @@ const machinery = () => {
 
               <div className="flex items-center pt-5 space-x-4">
                 <h2 className="text-primary-activelink dark:text-primary-pheading font-bold font-montserrat font-semibold text-[22px] lg:pl-10">
-                  Step 6
+                  Step 7
                 </h2>
                 <div className="flex-1 h-px bg-primary-line"></div>
               </div>
@@ -1996,9 +2021,9 @@ const machinery = () => {
                     delete.
                   </li>
                       <div className="pl-13 pt-8 flex justify-center">
-                {M && (
+                {dele && (
                   <GatsbyImage
-                    image={M}
+                    image={dele}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -2010,7 +2035,7 @@ const machinery = () => {
                     <span className="font-bold">“extra options”</span> menu
                     show.
                   </li>
-                      <div className="pl-13 pt-8 flex justify-center">
+                      {/* <div className="pl-13 pt-8 flex justify-center">
                 {M && (
                   <GatsbyImage
                     image={M}
@@ -2018,7 +2043,7 @@ const machinery = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
 
                   <li className="mb-2">
                     Click the <span className="font-bold">“View”</span> button,
@@ -2032,9 +2057,9 @@ const machinery = () => {
                     page of the Equipment you selected.
                   </li>
                       <div className="pl-13 pt-8 flex justify-center">
-                {M && (
+                {ve && (
                   <GatsbyImage
-                    image={M}
+                    image={ve}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -2059,7 +2084,7 @@ const machinery = () => {
                     </span>{" "}
                     button.
                   </li>
-                      <div className="pl-13 pt-8 flex justify-center">
+                      {/* <div className="pl-13 pt-8 flex justify-center">
                 {M && (
                   <GatsbyImage
                     image={M}
@@ -2067,16 +2092,16 @@ const machinery = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
 
                   <li className="mb-2">
                     A dialogue box will appear to confirm whether you want to
                     delete the Equipment or not.
                   </li>
                       <div className="pl-13 pt-8 flex justify-center">
-                {M && (
+                {db && (
                   <GatsbyImage
-                    image={M}
+                    image={db}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -2096,7 +2121,7 @@ const machinery = () => {
                   page where the Equipment entry will then be deleted from the
                   table.
                 </p>
-                    <div className="pl-13 pt-8 flex justify-center">
+                    {/* <div className="pl-13 pt-8 flex justify-center">
                 {M && (
                   <GatsbyImage
                     image={M}
@@ -2104,7 +2129,7 @@ const machinery = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
 
                 <p className="mb-4">
                   Now that we have shown how to delete an entry from the{" "}

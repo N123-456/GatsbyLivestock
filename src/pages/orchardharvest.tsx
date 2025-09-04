@@ -6,46 +6,101 @@ import { graphql, useStaticQuery } from "gatsby";
 import TextToSpeech from "../components/TextToSpeech";
 
 const orchardharvest = () => {
-  const data = useStaticQuery(graphql`
+   const data = useStaticQuery(graphql`
     query {
-      fertilizer: file(relativePath: { eq: "fertilizer.png" }) {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
-        }
-      }
-      AF: file(relativePath: { eq: "AF.png" }) {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
-        }
-      }
-      AF1: file(relativePath: { eq: "AF1.png" }) {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
-        }
-      }
-      SF: file(relativePath: { eq: "SF.png" }) {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
-        }
-      }
-      DF: file(relativePath: { eq: "DF.png" }) {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
-        }
-      }
-      VF: file(relativePath: { eq: "VF.png" }) {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
-        }
-      }
-    }
-  `);
-  const fertilizer = getImage(data.fertilizer);
-  const AF = getImage(data.AF);
-  const AF1 = getImage(data.AF1);
-  const SF = getImage(data.SF);
-  const DF = getImage(data.DF);
-  const VF = getImage(data.VF);
+         dat: file(relativePath: { eq: "dat.png" }) {
+           childImageSharp {
+             gatsbyImageData(placeholder: BLURRED)
+           }
+         }
+         lot: file(relativePath: { eq: "lot.png" }) {
+           childImageSharp {
+             gatsbyImageData(placeholder: BLURRED)
+           }
+         }
+         qap: file(relativePath: { eq: "qap.png" }) {
+           childImageSharp {
+             gatsbyImageData(placeholder: BLURRED)
+           }
+         }
+         apqp: file(relativePath: { eq: "ps.apqp" }) {
+           childImageSharp {
+             gatsbyImageData(placeholder: BLURRED)
+           }
+         }
+         inven: file(relativePath: { eq: "ao.inven" }) {
+           childImageSharp {
+             gatsbyImageData(placeholder: BLURRED)
+           }
+         }
+         ain: file(relativePath: { eq: "ain.png" }) {
+           childImageSharp {
+             gatsbyImageData(placeholder: BLURRED)
+           }
+         }
+         submit: file(relativePath: { eq: "submit.png" }) {
+           childImageSharp {
+             gatsbyImageData(placeholder: BLURRED)
+           }
+         }
+         ma: file(relativePath: { eq: "ma.png" }) {
+           childImageSharp {
+             gatsbyImageData(placeholder: BLURRED)
+           }
+         }
+         rs: file(relativePath: { eq: "rs.png" }) {
+           childImageSharp {
+             gatsbyImageData(placeholder: BLURRED)
+           }
+         }
+   
+         ps: file(relativePath: { eq: "ps.png" }) {
+           childImageSharp {
+             gatsbyImageData(placeholder: BLURRED)
+           }
+         }
+         gtp: file(relativePath: { eq: "gtp.png" }) {
+           childImageSharp {
+             gatsbyImageData(placeholder: BLURRED)
+           }
+         }
+         dao: file(relativePath: { eq: "dao.png" }) {
+           childImageSharp {
+             gatsbyImageData(placeholder: BLURRED)
+           }
+         }
+         db: file(relativePath: { eq: "db.png" }) {
+           childImageSharp {
+             gatsbyImageData(placeholder: BLURRED)
+           }
+         }
+         few: file(relativePath: { eq: "few.png" }) {
+           childImageSharp {
+             gatsbyImageData(placeholder: BLURRED)
+           }
+         }
+         toto: file(relativePath: { eq: "toto.png" }) {
+           childImageSharp {
+             gatsbyImageData(placeholder: BLURRED)
+           }
+         }
+       }
+     `);
+     const dat = getImage(data.dat);
+     const lot = getImage(data.lot);
+     const qap = getImage(data.qap);
+     const ps = getImage(data.ps);
+     const gtp = getImage(data.gtp);
+     const apqp = getImage(data.apqp);
+     const inven = getImage(data.inven);
+     const ain = getImage(data.submit);
+     const submit = getImage(data.vo);
+     const ma = getImage(data.ma);
+     const rs = getImage(data.rs);
+     const db = getImage(data.db);
+     const ao = getImage(data.ao);
+     const few = getImage(data.few);
+     const toto = getImage(data.toto);
   return (
     <AppLayout>
       <PrivateRoute>
@@ -258,9 +313,9 @@ const orchardharvest = () => {
                   step:
                 </p>
                  <div className="pl-13 pt-8 flex justify-center">
-                          {VF && (
+                          {dat && (
                                           <GatsbyImage
-                                            image={VF}
+                                            image={dat}
                                             alt="Startups illustration"
                                             className="border border-gray-200 shadow-lg w-[1000.58px] "
                                           />
@@ -310,7 +365,7 @@ const orchardharvest = () => {
                       harvest
                     </span>
                     . Select 1 of 3 options:
-                     <div className="pl-13 pt-8 flex justify-center">
+                     {/* <div className="pl-13 pt-8 flex justify-center">
                               {VF && (
                                               <GatsbyImage
                                                 image={VF}
@@ -320,7 +375,7 @@ const orchardharvest = () => {
                                             )}
                                           </div>
                                           <br />
-                                          <br />
+                                          <br /> */}
                     <ul className="list-disc ml-6 mt-2">
                       <li className="mb-2">
                         <span className="text-primary-pheading font-bold">
@@ -377,7 +432,7 @@ const orchardharvest = () => {
                             field. You can go to the third step for more
                             details.
                           </li>
-                           <div className="pl-13 pt-8 flex justify-center">
+                           {/* <div className="pl-13 pt-8 flex justify-center">
                                     {VF && (
                                                     <GatsbyImage
                                                       image={VF}
@@ -387,7 +442,7 @@ const orchardharvest = () => {
                                                   )}
                                                 </div>
                                                 <br />
-                                                <br />
+                                                <br /> */}
                         </ul>
                       </li>
                       <li className="mb-2">
@@ -452,7 +507,7 @@ const orchardharvest = () => {
                             field. You can go to the third step for more
                             details.
                           </li>
-                           <div className="pl-13 pt-8 flex justify-center">
+                           {/* <div className="pl-13 pt-8 flex justify-center">
                                     {VF && (
                                                     <GatsbyImage
                                                       image={VF}
@@ -462,7 +517,7 @@ const orchardharvest = () => {
                                                   )}
                                                 </div>
                                                 <br />
-                                                <br />
+                                                <br /> */}
                         </ul>
                       </li>
                       <li className="mb-2">
@@ -559,9 +614,9 @@ const orchardharvest = () => {
                   step:
                 </p>
                  <div className="pl-13 pt-8 flex justify-center">
-                          {VF && (
+                          {lot && (
                                           <GatsbyImage
-                                            image={VF}
+                                            image={lot}
                                             alt="Startups illustration"
                                             className="border border-gray-200 shadow-lg w-[1000.58px] "
                                           />
@@ -645,17 +700,8 @@ const orchardharvest = () => {
                   </span>{" "}
                   step and all its fields.
                 </p>
-                 <div className="pl-13 pt-8 flex justify-center">
-                          {VF && (
-                                          <GatsbyImage
-                                            image={VF}
-                                            alt="Startups illustration"
-                                            className="border border-gray-200 shadow-lg w-[1000.58px] "
-                                          />
-                                        )}
-                                      </div>
-                                      <br />
-                                      <br />
+                
+                 
                 <p className="mb-4">
                   The{" "}
                   <span className="text-primary-activelink font-bold">
@@ -663,6 +709,17 @@ const orchardharvest = () => {
                   </span>{" "}
                   step:
                 </p>
+                 <div className="pl-13 pt-8 flex justify-center">
+                         {qap && (
+                                          <GatsbyImage
+                                            image={qap}
+                                            alt="Startups illustration"
+                                            className="border border-gray-200 shadow-lg w-[1000.58px] "
+                                          />
+                                        )}
+                                      </div>
+                                      <br />
+                                      <br />
                 <p className="mb-4">
                   The{" "}
                   <span className="text-primary-activelink font-bold">
@@ -787,9 +844,9 @@ const orchardharvest = () => {
                   step:
                 </p>
                  <div className="pl-13 pt-8 flex justify-center">
-                          {VF && (
+                          {apqp && (
                                           <GatsbyImage
-                                            image={VF}
+                                            image={apqp}
                                             alt="Startups illustration"
                                             className="border border-gray-200 shadow-lg w-[1000.58px] "
                                           />
@@ -956,9 +1013,9 @@ const orchardharvest = () => {
                   step:
                 </p>
                  <div className="pl-13 pt-8 flex justify-center">
-                          {VF && (
+                          {inven && (
                                           <GatsbyImage
-                                            image={VF}
+                                            image={inven}
                                             alt="Startups illustration"
                                             className="border border-gray-200 shadow-lg w-[1000.58px] "
                                           />
@@ -1087,9 +1144,9 @@ const orchardharvest = () => {
                   step:
                 </p>
                  <div className="pl-13 pt-8 flex justify-center">
-                          {VF && (
+                          {ain && (
                                           <GatsbyImage
-                                            image={VF}
+                                            image={ain}
                                             alt="Startups illustration"
                                             className="border border-gray-200 shadow-lg w-[1000.58px] "
                                           />
@@ -1139,9 +1196,9 @@ const orchardharvest = () => {
                   click the <span className="font-bold">“Submit”</span> button.
                 </p>
                  <div className="pl-13 pt-8 flex justify-center">
-                          {VF && (
+                          {submit && (
                                           <GatsbyImage
-                                            image={VF}
+                                            image={submit}
                                             alt="Startups illustration"
                                             className="border border-gray-200 shadow-lg w-[1000.58px] "
                                           />
@@ -1317,11 +1374,11 @@ const orchardharvest = () => {
                     , and is on the bottom middle of the page.
                   </li>
                    <div className="pl-13 pt-8 flex justify-center">
-                            {VF && (
+                            {ps && (
                                             <GatsbyImage
-                                              image={VF}
+                                              image={ps}
                                               alt="Startups illustration"
-                                              className="border border-gray-200 shadow-lg w-[1000.58px] "
+                                              className="border border-gray-200 shadow-lg "
                                             />
                                           )}
                                         </div>
@@ -1340,11 +1397,11 @@ const orchardharvest = () => {
                     page with the page number shown as well.
                   </li>
                    <div className="pl-13 pt-8 flex justify-center">
-                            {VF && (
+                            {gtp && (
                                             <GatsbyImage
-                                              image={VF}
+                                              image={gtp}
                                               alt="Startups illustration"
-                                              className="border border-gray-200 shadow-lg w-[1000.58px] "
+                                              className="border border-gray-200 shadow-lg "
                                             />
                                           )}
                                         </div>

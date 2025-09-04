@@ -22,43 +22,110 @@ const harvest = () => {
   //   if (isCheckingAuth) return null;
   const data = useStaticQuery(graphql`
     query {
-      W: file(relativePath: { eq: "W.png" }) {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
-        }
-      }
-      shed: file(relativePath: { eq: "shed.png" }) {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
-        }
-      }
-      swa: file(relativePath: { eq: "swa.png" }) {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
-        }
-      }
-      dwa: file(relativePath: { eq: "dwa.png" }) {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
-        }
-      }
-      vwa: file(relativePath: { eq: "vwa.png" }) {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
-        }
-      }
-    }
-  `);
-  const W = getImage(data.W);
-  const shed = getImage(data.shed);
-  const swa = getImage(data.swa);
-  const dwa = getImage(data.dwa);
-  const vwa = getImage(data.vwa);
-
+            ware: file(relativePath: { eq: "ware.png" }) {
+              childImageSharp {
+                gatsbyImageData(placeholder: BLURRED)
+              }
+            }
+            aaw: file(relativePath: { eq: "aaw.png" }) {
+              childImageSharp {
+                gatsbyImageData(placeholder: BLURRED)
+              }
+            }
+            awp: file(relativePath: { eq: "awp.png" }) {
+              childImageSharp {
+                gatsbyImageData(placeholder: BLURRED)
+              }
+            }
+            bfw: file(relativePath: { eq: "ps.bfw" }) {
+              childImageSharp {
+                gatsbyImageData(placeholder: BLURRED)
+              }
+            }
+            sfw: file(relativePath: { eq: "sfw.inven" }) {
+              childImageSharp {
+                gatsbyImageData(placeholder: BLURRED)
+              }
+            }
+            vttw: file(relativePath: { eq: "vttw.png" }) {
+              childImageSharp {
+                gatsbyImageData(placeholder: BLURRED)
+              }
+            }
+            totw: file(relativePath: { eq: "totw.png" }) {
+              childImageSharp {
+                gatsbyImageData(placeholder: BLURRED)
+              }
+            }
+            vware: file(relativePath: { eq: "vware.png" }) {
+              childImageSharp {
+                gatsbyImageData(placeholder: BLURRED)
+              }
+            }
+            rs: file(relativePath: { eq: "rs.png" }) {
+              childImageSharp {
+                gatsbyImageData(placeholder: BLURRED)
+              }
+            }
+      
+            ps: file(relativePath: { eq: "ps.png" }) {
+              childImageSharp {
+                gatsbyImageData(placeholder: BLURRED)
+              }
+            }
+            gtp: file(relativePath: { eq: "gtp.png" }) {
+              childImageSharp {
+                gatsbyImageData(placeholder: BLURRED)
+              }
+            }
+            ma: file(relativePath: { eq: "ma.png" }) {
+              childImageSharp {
+                gatsbyImageData(placeholder: BLURRED)
+              }
+            }
+            db: file(relativePath: { eq: "db.png" }) {
+              childImageSharp {
+                gatsbyImageData(placeholder: BLURRED)
+              }
+            }
+            eaw: file(relativePath: { eq: "eaw.png" }) {
+              childImageSharp {
+                gatsbyImageData(placeholder: BLURRED)
+              }
+            }
+            daw: file(relativePath: { eq: "daw.png" }) {
+              childImageSharp {
+                gatsbyImageData(placeholder: BLURRED)
+              }
+            }
+                  delaw: file(relativePath: { eq: "delaw.png" }) {
+              childImageSharp {
+                gatsbyImageData(placeholder: BLURRED)
+              }
+            }
+          }
+        `);
+        const ware = getImage(data.ware);
+        const aaw = getImage(data.aaw);
+        const awp = getImage(data.awp);
+        const bfw = getImage(data.bfw);
+           const ps = getImage(data.ps);
+        const gtp = getImage(data.gtp);
+        const sfw = getImage(data.sfw);
+        const vttw = getImage(data.vttw);
+        const delaw = getImage(data.delaw);
+        const totw = getImage(data.totw);
+        const ma = getImage(data.ma);
+        const rs = getImage(data.rs);
+        const daw = getImage(data.db);
+        const db = getImage(data.db);
+        const eaw = getImage(data.eaw);
+        const few = getImage(data.few);
+        const vware = getImage(data.vware);
   return (
     <AppLayout>
       <PrivateRoute>
-        <div>
+      
           <div className="flex flex-col justify-center ">
             <div className="acu lg:pr-4 text-justify font-montserrat text-[18px] text-primary-paragraph2">
               <div className="flex items-center">
@@ -115,9 +182,9 @@ const harvest = () => {
                 </p>
 
                 <div className="pl-13 pt-8 flex justify-center">
-                  {W && (
+                  {ware && (
                     <GatsbyImage
-                      image={W}
+                      image={ware}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -182,9 +249,9 @@ const harvest = () => {
                     button and to the top of the search options.
                   </li>
                      <div className="pl-13 pt-8 flex justify-center">
-                  {W && (
+                  {aaw && (
                     <GatsbyImage
-                      image={W}
+                      image={aaw}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -199,9 +266,9 @@ const harvest = () => {
                   page.
                 </p>
                    <div className="pl-13 pt-8 flex justify-center">
-                  {W && (
+                  {awp && (
                     <GatsbyImage
-                      image={W}
+                      image={awp}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -218,7 +285,7 @@ const harvest = () => {
                   </span>{" "}
                   step:
                 </p>
-                   <div className="pl-13 pt-8 flex justify-center">
+                   {/* <div className="pl-13 pt-8 flex justify-center">
                   {W && (
                     <GatsbyImage
                       image={W}
@@ -226,7 +293,7 @@ const harvest = () => {
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div><br/><br/>
+                </div><br/><br/> */}
                 <p className="mb-4">
                   The{" "}
                   <span className="text-primary-activelink font-bold">
@@ -319,7 +386,7 @@ const harvest = () => {
                   </span>{" "}
                   step:
                 </p>
-                   <div className="pl-13 pt-8 flex justify-center">
+                   {/* <div className="pl-13 pt-8 flex justify-center">
                   {W && (
                     <GatsbyImage
                       image={W}
@@ -327,7 +394,7 @@ const harvest = () => {
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div><br/><br/>
+                </div><br/><br/> */}
                 <p className="mb-4">
                   The{" "}
                   <span className="text-primary-activelink font-bold">
@@ -343,7 +410,7 @@ const harvest = () => {
                   </span>
                   .
                 </p>
-                   <div className="pl-13 pt-8 flex justify-center">
+                   {/* <div className="pl-13 pt-8 flex justify-center">
                   {W && (
                     <GatsbyImage
                       image={W}
@@ -351,7 +418,7 @@ const harvest = () => {
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div><br/><br/>
+                </div><br/><br/> */}
                 <p className="mb-4">
                   We will first start with the first section, the{" "}
                   <span className="text-primary-activelink font-bold">
@@ -359,7 +426,7 @@ const harvest = () => {
                   </span>{" "}
                   section.
                 </p>
-                   <div className="pl-13 pt-8 flex justify-center">
+                   {/* <div className="pl-13 pt-8 flex justify-center">
                   {W && (
                     <GatsbyImage
                       image={W}
@@ -367,7 +434,7 @@ const harvest = () => {
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div><br/><br/>
+                </div><br/><br/> */}
                 <h3 className="text-xl font-semibold mb-3 text-primary-activelink font-bold">
                   The “Shed” Section
                 </h3>
@@ -380,14 +447,14 @@ const harvest = () => {
                   operation and organizes them into 4 different sub-sections:
                 </p>
                    <div className="pl-13 pt-8 flex justify-center">
-                  {W && (
+                  {/* {W && (
                     <GatsbyImage
                       image={W}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div><br/><br/>
+                </div><br/><br/> */}
                 <ul className="list-disc ml-6 mb-4">
                   <li className="mb-2">
                     The{" "}
@@ -399,7 +466,7 @@ const harvest = () => {
                     fluid, Carburetor fluid, Engine oil fluids, etc) for
                     repairing those machinery’s.
                   </li>
-                     <div className="pl-13 pt-8 flex justify-center">
+                     {/* <div className="pl-13 pt-8 flex justify-center">
                   {W && (
                     <GatsbyImage
                       image={W}
@@ -407,8 +474,8 @@ const harvest = () => {
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div><br/><br/>
-                   <div className="pl-13 pt-8 flex justify-center">
+                </div><br/><br/> */}
+                   {/* <div className="pl-13 pt-8 flex justify-center">
                   {W && (
                     <GatsbyImage
                       image={W}
@@ -416,7 +483,7 @@ const harvest = () => {
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div><br/><br/>
+                </div><br/><br/> */}
                   <p className="mb-4">
                     If you need to make space for a set of mechanical fluids or
                     for the oil fuel for your machinery’s, you can press the{" "}
@@ -482,7 +549,7 @@ const harvest = () => {
                       <span className="font-bold">“Remove”</span> button to have
                       the rack space removed from the sub-section.
                     </li>
-                       <div className="pl-13 pt-8 flex justify-center">
+                       {/* <div className="pl-13 pt-8 flex justify-center">
                   {W && (
                     <GatsbyImage
                       image={W}
@@ -490,7 +557,7 @@ const harvest = () => {
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div><br/><br/>
+                </div><br/><br/> */}
                   </ul>
                   <li className="mb-2">
                     The{" "}
@@ -502,7 +569,7 @@ const harvest = () => {
                     machinery’s or tools, it can be spare brake discs, spark
                     plugs, headlight, etc.
                   </li>
-                     <div className="pl-13 pt-8 flex justify-center">
+                     {/* <div className="pl-13 pt-8 flex justify-center">
                   {W && (
                     <GatsbyImage
                       image={W}
@@ -510,8 +577,8 @@ const harvest = () => {
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div><br/><br/>
-                   <div className="pl-13 pt-8 flex justify-center">
+                </div><br/><br/> */}
+                   {/* <div className="pl-13 pt-8 flex justify-center">
                   {W && (
                     <GatsbyImage
                       image={W}
@@ -519,7 +586,7 @@ const harvest = () => {
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div><br/><br/>
+                </div><br/><br/> */}
                   <p className="mb-4">
                     If you need to make space for a set of parts for a
                     particular machinery or tool, you can press the{" "}
@@ -584,7 +651,7 @@ const harvest = () => {
                       <span className="font-bold">“Remove”</span> button to have
                       the rack space removed from the sub-section.
                     </li>
-                       <div className="pl-13 pt-8 flex justify-center">
+                       {/* <div className="pl-13 pt-8 flex justify-center">
                   {W && (
                     <GatsbyImage
                       image={W}
@@ -592,7 +659,7 @@ const harvest = () => {
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div><br/><br/>
+                </div><br/><br/> */}
                   </ul>
                   <li className="mb-2">
                     The{" "}
@@ -604,7 +671,7 @@ const harvest = () => {
                     Chisels, Rakes, Watering equipment, Wheat straw choppers,
                     Wagons, etc.
                   </li>
-                     <div className="pl-13 pt-8 flex justify-center">
+                     {/* <div className="pl-13 pt-8 flex justify-center">
                   {W && (
                     <GatsbyImage
                       image={W}
@@ -621,7 +688,7 @@ const harvest = () => {
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div><br/><br/>
+                </div><br/><br/> */}
                   <p className="mb-4">
                     If you need to make space for a particular type or set of
                     tools, you can press the{" "}
@@ -697,7 +764,7 @@ const harvest = () => {
                     chemicals application sprayers, etc) that are solely
                     important to the farm operation.
                   </li>
-                     <div className="pl-13 pt-8 flex justify-center">
+                     {/* <div className="pl-13 pt-8 flex justify-center">
                   {W && (
                     <GatsbyImage
                       image={W}
@@ -705,8 +772,8 @@ const harvest = () => {
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div><br/><br/>
-                   <div className="pl-13 pt-8 flex justify-center">
+                </div><br/><br/> */}
+                   {/* <div className="pl-13 pt-8 flex justify-center">
                   {W && (
                     <GatsbyImage
                       image={W}
@@ -714,7 +781,7 @@ const harvest = () => {
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div><br/><br/>
+                </div><br/><br/> */}
                   <p className="mb-4">
                     If you need to make space for a machinery or type of
                     machinery, you can press the{" "}
@@ -797,7 +864,7 @@ const harvest = () => {
                   </span>{" "}
                   section.
                 </p>
-                   <div className="pl-13 pt-8 flex justify-center">
+                   {/* <div className="pl-13 pt-8 flex justify-center">
                   {W && (
                     <GatsbyImage
                       image={W}
@@ -805,7 +872,7 @@ const harvest = () => {
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div><br/><br/>
+                </div><br/><br/> */}
                 <h3 className="text-xl font-semibold mb-3 text-primary-activelink font-bold">
                   The “Input/Technologies” Section
                 </h3>
@@ -819,7 +886,7 @@ const harvest = () => {
                   Application equipment assets of your farm operation and
                   organizes them into 4 different sub-sections:
                 </p>
-                   <div className="pl-13 pt-8 flex justify-center">
+                   {/* <div className="pl-13 pt-8 flex justify-center">
                   {W && (
                     <GatsbyImage
                       image={W}
@@ -827,7 +894,7 @@ const harvest = () => {
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div><br/><br/>
+                </div><br/><br/> */}
                 <ul className="list-disc ml-6 mb-4">
                   <li className="mb-2">
                     The{" "}
@@ -838,7 +905,7 @@ const harvest = () => {
                     micro-nutrients products that are solely important for the
                     farm operation.
                   </li>
-                     <div className="pl-13 pt-8 flex justify-center">
+                     {/* <div className="pl-13 pt-8 flex justify-center">
                   {W && (
                     <GatsbyImage
                       image={W}
@@ -855,7 +922,7 @@ const harvest = () => {
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div><br/><br/>
+                </div><br/><br/> */}
                   <p className="mb-4">
                     If you need to make space for a large purchase of a
                     fertilizer or a large purchase of a micro-nutrients, you can
@@ -920,7 +987,7 @@ const harvest = () => {
                       <span className="font-bold">“Remove”</span> button to have
                       the rack space removed from the sub-section.
                     </li>
-                       <div className="pl-13 pt-8 flex justify-center">
+                       {/* <div className="pl-13 pt-8 flex justify-center">
                   {W && (
                     <GatsbyImage
                       image={W}
@@ -928,7 +995,7 @@ const harvest = () => {
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div><br/><br/>
+                </div><br/><br/> */}
                   </ul>
                   <li className="mb-2">
                     The{" "}
@@ -940,7 +1007,7 @@ const harvest = () => {
                     can include Pesticides, Herbicides, Weedicides,
                     Insecticides, Acids, Bases, etc.
                   </li>
-                     <div className="pl-13 pt-8 flex justify-center">
+                     {/* <div className="pl-13 pt-8 flex justify-center">
                   {W && (
                     <GatsbyImage
                       image={W}
@@ -957,7 +1024,7 @@ const harvest = () => {
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div><br/><br/>
+                </div><br/><br/> */}
                   <p className="mb-4">
                     If you need to add space for a large purchase of a Pesticide
                     or a large purchase of a Acids, you can press the{" "}
@@ -1022,7 +1089,7 @@ const harvest = () => {
                       <span className="font-bold">“Remove”</span> button to have
                       the rack space removed from the sub-section.
                     </li>
-                       <div className="pl-13 pt-8 flex justify-center">
+                       {/* <div className="pl-13 pt-8 flex justify-center">
                   {W && (
                     <GatsbyImage
                       image={W}
@@ -1030,7 +1097,7 @@ const harvest = () => {
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div><br/><br/>
+                </div><br/><br/> */}
                   </ul>
                   <li className="mb-2">
                     The{" "}
@@ -1043,7 +1110,7 @@ const harvest = () => {
                     that require either careful storage or need proper care when
                     handling.
                   </li>
-                     <div className="pl-13 pt-8 flex justify-center">
+                     {/* <div className="pl-13 pt-8 flex justify-center">
                   {W && (
                     <GatsbyImage
                       image={W}
@@ -1060,7 +1127,7 @@ const harvest = () => {
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div><br/><br/>
+                </div><br/><br/> */}
                   <p className="mb-4">
                     If you need to add space for a large purchase of Wheat seeds
                     or a large purchase of grafted Mango saplings, you can press
@@ -1125,7 +1192,7 @@ const harvest = () => {
                       <span className="font-bold">“Remove”</span> button to have
                       the rack space removed from the sub-section.
                     </li>
-                       <div className="pl-13 pt-8 flex justify-center">
+                       {/* <div className="pl-13 pt-8 flex justify-center">
                   {W && (
                     <GatsbyImage
                       image={W}
@@ -1133,7 +1200,7 @@ const harvest = () => {
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div><br/><br/>
+                </div><br/><br/> */}
                   </ul>
                   <li className="mb-2">
                     The{" "}
@@ -1145,7 +1212,7 @@ const harvest = () => {
                     or Seeds. This can include Tractor seed drills, Manual Hand
                     Sprayer, Hand-driven seed drills.
                   </li>
-                     <div className="pl-13 pt-8 flex justify-center">
+                     {/* <div className="pl-13 pt-8 flex justify-center">
                   {W && (
                     <GatsbyImage
                       image={W}
@@ -1162,7 +1229,7 @@ const harvest = () => {
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div><br/><br/>
+                </div><br/><br/> */}
                   <p className="mb-4">
                     If you need to add space for a large purchase of Wheat seeds
                     or a large purchase of grafted Mango saplings, you can press
@@ -1243,7 +1310,7 @@ const harvest = () => {
                   </span>{" "}
                   section.
                 </p>
-                   <div className="pl-13 pt-8 flex justify-center">
+                   {/* <div className="pl-13 pt-8 flex justify-center">
                   {W && (
                     <GatsbyImage
                       image={W}
@@ -1251,7 +1318,7 @@ const harvest = () => {
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div><br/><br/>
+                </div><br/><br/> */}
                 <h3 className="text-xl font-semibold mb-3 text-primary-activelink font-bold">
                   The “Vaccination Center” Section
                 </h3>
@@ -1264,7 +1331,7 @@ const harvest = () => {
                   the Livestock of your farm operation and organizes them into 2
                   different sub-sections:
                 </p>
-                   <div className="pl-13 pt-8 flex justify-center">
+                   {/* <div className="pl-13 pt-8 flex justify-center">
                   {W && (
                     <GatsbyImage
                       image={W}
@@ -1272,7 +1339,7 @@ const harvest = () => {
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div><br/><br/>
+                </div><br/><br/> */}
                 <ul className="list-disc ml-6 mb-4">
                   <li className="mb-2">
                     The{" "}
@@ -1283,7 +1350,7 @@ const harvest = () => {
                     equipment and medicines that do not require a temperature
                     controlled environment when storing them.
                   </li>
-                     <div className="pl-13 pt-8 flex justify-center">
+                     {/* <div className="pl-13 pt-8 flex justify-center">
                   {W && (
                     <GatsbyImage
                       image={W}
@@ -1300,7 +1367,7 @@ const harvest = () => {
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div><br/><br/>
+                </div><br/><br/> */}
                   <p className="mb-4">
                     If you need to add space for a large purchase of
                     non-environment controlled medications or a large purchase
@@ -1366,7 +1433,7 @@ const harvest = () => {
                       <span className="font-bold">“Remove”</span> button to have
                       the rack space removed from the sub-section.
                     </li>
-                       <div className="pl-13 pt-8 flex justify-center">
+                       {/* <div className="pl-13 pt-8 flex justify-center">
                   {W && (
                     <GatsbyImage
                       image={W}
@@ -1374,7 +1441,7 @@ const harvest = () => {
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div><br/><br/>
+                </div><br/><br/> */}
                   </ul>
                   <li className="mb-2">
                     The{" "}
@@ -1386,7 +1453,7 @@ const harvest = () => {
                     controlled environment when storing them, such as a freezer
                     or a refrigerator.
                   </li>
-                     <div className="pl-13 pt-8 flex justify-center">
+                     {/* <div className="pl-13 pt-8 flex justify-center">
                   {W && (
                     <GatsbyImage
                       image={W}
@@ -1403,7 +1470,7 @@ const harvest = () => {
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div><br/><br/>
+                </div><br/><br/> */}
                   <p className="mb-4">
                     If you need to add space for a large purchase of environment
                     controlled medications or a large purchase of Medical
@@ -1488,7 +1555,7 @@ const harvest = () => {
                   </span>{" "}
                   section.
                 </p>
-                   <div className="pl-13 pt-8 flex justify-center">
+                   {/* <div className="pl-13 pt-8 flex justify-center">
                   {W && (
                     <GatsbyImage
                       image={W}
@@ -1496,7 +1563,7 @@ const harvest = () => {
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div><br/><br/>
+                </div><br/><br/> */}
                 <h3 className="text-xl font-semibold mb-3 text-primary-activelink font-bold">
                   The “Feed/Forage” Section
                 </h3>
@@ -1509,7 +1576,7 @@ const harvest = () => {
                   Forage/Harvests of your farm operation and organizes them into
                   2 different sub-sections:
                 </p>
-                   <div className="pl-13 pt-8 flex justify-center">
+                   {/* <div className="pl-13 pt-8 flex justify-center">
                   {W && (
                     <GatsbyImage
                       image={W}
@@ -1517,7 +1584,7 @@ const harvest = () => {
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div><br/><br/>
+                </div><br/><br/> */}
                 <ul className="list-disc ml-6 mb-4">
                   <li className="mb-2">
                     The{" "}
@@ -1528,7 +1595,7 @@ const harvest = () => {
                     for the Livestock that are in your farm operation when you
                     are storing them.
                   </li>
-                     <div className="pl-13 pt-8 flex justify-center">
+                     {/* <div className="pl-13 pt-8 flex justify-center">
                   {W && (
                     <GatsbyImage
                       image={W}
@@ -1545,7 +1612,7 @@ const harvest = () => {
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div><br/><br/>
+                </div><br/><br/> */}
                   <p className="mb-4">
                     If you need to add space for a large purchase of Cow Feed or
                     a large purchase of Chicken Feed, you can press the{" "}
@@ -1610,7 +1677,7 @@ const harvest = () => {
                       <span className="font-bold">“Remove”</span> button to have
                       the rack space removed from the sub-section.
                     </li>
-                       <div className="pl-13 pt-8 flex justify-center">
+                       {/* <div className="pl-13 pt-8 flex justify-center">
                   {W && (
                     <GatsbyImage
                       image={W}
@@ -1618,7 +1685,7 @@ const harvest = () => {
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div><br/><br/>
+                </div><br/><br/> */}
                   </ul>
                   <li className="mb-2">
                     The{" "}
@@ -1630,7 +1697,7 @@ const harvest = () => {
                     also store harvests that need to be stored for
                     pre-processing.
                   </li>
-                     <div className="pl-13 pt-8 flex justify-center">
+                     {/* <div className="pl-13 pt-8 flex justify-center">
                   {W && (
                     <GatsbyImage
                       image={W}
@@ -1647,7 +1714,7 @@ const harvest = () => {
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div><br/><br/>
+                </div><br/><br/> */}
                   <p className="mb-4">
                     If you need to add space for a large harvest produce of
                     Wheat or a large harvest produce of Chilli to be
@@ -1751,7 +1818,7 @@ const harvest = () => {
                   </span>{" "}
                   entry added to the Warehouses table!
                 </p>
-                   <div className="pl-13 pt-8 flex justify-center">
+                   {/* <div className="pl-13 pt-8 flex justify-center">
                   {W && (
                     <GatsbyImage
                       image={W}
@@ -1759,7 +1826,7 @@ const harvest = () => {
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div><br/><br/>
+                </div><br/><br/> */}
                 <p className="mb-4">
                   Now that you have covered how to add a{" "}
                   <span className="text-primary-activelink font-bold">
@@ -1813,9 +1880,9 @@ const harvest = () => {
                   table.
                 </p>
                    <div className="pl-13 pt-8 flex justify-center">
-                  {W && (
+                  {bfw && (
                     <GatsbyImage
-                      image={W}
+                      image={bfw}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -1862,7 +1929,7 @@ const harvest = () => {
                     table, above the page select options and is on the bottom
                     left of the page.
                   </li>
-                     <div className="pl-13 pt-8 flex justify-center">
+                     {/* <div className="pl-13 pt-8 flex justify-center">
                   {W && (
                     <GatsbyImage
                       image={W}
@@ -1870,7 +1937,7 @@ const harvest = () => {
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div><br/><br/>
+                </div><br/><br/> */}
                   <li className="mb-2">
                     The{" "}
                     <span className="text-primary-activelink font-bold">
@@ -1886,7 +1953,7 @@ const harvest = () => {
                     table, above the page select options and is to the bottom
                     right of the page.
                   </li>
-                     <div className="pl-13 pt-8 flex justify-center">
+                     {/* <div className="pl-13 pt-8 flex justify-center">
                   {W && (
                     <GatsbyImage
                       image={W}
@@ -1894,7 +1961,7 @@ const harvest = () => {
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div><br/><br/>
+                </div><br/><br/> */}
                   <li className="mb-2">
                     The{" "}
                     <span className="text-primary-activelink font-bold">
@@ -1921,11 +1988,11 @@ const harvest = () => {
                     and is on the bottom middle of the page.
                   </li>
                      <div className="pl-13 pt-8 flex justify-center">
-                  {W && (
+                  {ps && (
                     <GatsbyImage
-                      image={W}
+                      image={ps}
                       alt="Startups illustration"
-                      className="border border-gray-200 shadow-lg w-[1000.58px] "
+                      className="border border-gray-200 shadow-lg"
                     />
                   )}
                 </div><br/><br/>
@@ -1939,11 +2006,11 @@ const harvest = () => {
                     page with the page number shown as well.
                   </li>
                      <div className="pl-13 pt-8 flex justify-center">
-                  {W && (
+                  {gtp && (
                     <GatsbyImage
-                      image={W}
+                      image={gtp}
                       alt="Startups illustration"
-                      className="border border-gray-200 shadow-lg w-[1000.58px] "
+                      className="border border-gray-200 shadow-lg"
                     />
                   )}
                 </div><br/><br/>
@@ -1989,9 +2056,9 @@ const harvest = () => {
                   button, and above the table.
                 </p>
                    <div className="pl-13 pt-8 flex justify-center">
-                  {W && (
+                  {sfw && (
                     <GatsbyImage
-                      image={W}
+                      image={sfw}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -2064,9 +2131,9 @@ const harvest = () => {
                   </li>
                 </ol>
                    <div className="pl-13 pt-8 flex justify-center">
-                  {W && (
+                  {few && (
                     <GatsbyImage
-                      image={W}
+                      image={few}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -2094,7 +2161,7 @@ const harvest = () => {
                 <p className="mb-4">
                   Provided below is an example of what it should look like:
                 </p>
-                   <div className="pl-13 pt-8 flex justify-center">
+                   {/* <div className="pl-13 pt-8 flex justify-center">
                   {W && (
                     <GatsbyImage
                       image={W}
@@ -2102,7 +2169,7 @@ const harvest = () => {
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div><br/><br/>
+                </div><br/><br/> */}
                 <p className="mb-4">
                   [Placeholder for Warehouse table PDF example image]
                 </p>
@@ -2137,9 +2204,9 @@ const harvest = () => {
                     up with a list of options you can go to.
                   </li>
                      <div className="pl-13 pt-8 flex justify-center">
-                  {W && (
+                  {vttw && (
                     <GatsbyImage
-                      image={W}
+                      image={vttw}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -2151,9 +2218,9 @@ const harvest = () => {
                     <span className="font-bold">“View”</span> button.
                   </li>
                      <div className="pl-13 pt-8 flex justify-center">
-                  {W && (
+                  {vttw && (
                     <GatsbyImage
-                      image={W}
+                      image={vttw}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -2167,9 +2234,9 @@ const harvest = () => {
                     page.
                   </li>
                      <div className="pl-13 pt-8 flex justify-center">
-                  {W && (
+                  {totw && (
                     <GatsbyImage
-                      image={W}
+                      image={totw}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -2247,7 +2314,7 @@ const harvest = () => {
                     </span>{" "}
                     you want to view.
                   </li>
-                     <div className="pl-13 pt-8 flex justify-center">
+                     {/* <div className="pl-13 pt-8 flex justify-center">
                   {W && (
                     <GatsbyImage
                       image={W}
@@ -2255,7 +2322,7 @@ const harvest = () => {
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div><br/><br/>
+                </div><br/><br/> */}
                   <li className="mb-2">
                     You will then be taken to a{" "}
                     <span className="text-primary-activelink font-bold">
@@ -2268,9 +2335,9 @@ const harvest = () => {
                     you selected.
                   </li>
                      <div className="pl-13 pt-8 flex justify-center">
-                  {W && (
+                  {ware && (
                     <GatsbyImage
-                      image={W}
+                      image={ware}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -2298,7 +2365,7 @@ const harvest = () => {
                     </span>{" "}
                     you wish to view.
                   </li>
-                     <div className="pl-13 pt-8 flex justify-center">
+                     {/* <div className="pl-13 pt-8 flex justify-center">
                   {W && (
                     <GatsbyImage
                       image={W}
@@ -2306,7 +2373,7 @@ const harvest = () => {
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div><br/><br/>
+                </div><br/><br/> */}
                   <li className="mb-2">
                     You will then see the{" "}
                     <span className="text-primary-activelink font-bold">
@@ -2318,7 +2385,7 @@ const harvest = () => {
                     Select the <span className="font-bold">“View”</span> button,
                     located at the top of the list in the menu.
                   </li>
-                     <div className="pl-13 pt-8 flex justify-center">
+                     {/* <div className="pl-13 pt-8 flex justify-center">
                   {W && (
                     <GatsbyImage
                       image={W}
@@ -2326,7 +2393,7 @@ const harvest = () => {
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div><br/><br/>
+                </div><br/><br/> */}
                   <li className="mb-2">
                     You will then be taken to the{" "}
                     <span className="text-primary-activelink font-bold">
@@ -2339,9 +2406,9 @@ const harvest = () => {
                     you selected.
                   </li>
                      <div className="pl-13 pt-8 flex justify-center">
-                  {W && (
+                  {vware && (
                     <GatsbyImage
-                      image={W}
+                      image={vware}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -2396,9 +2463,9 @@ const harvest = () => {
                     that you want to edit.
                   </li>
                      <div className="pl-13 pt-8 flex justify-center">
-                  {W && (
+                  {eaw && (
                     <GatsbyImage
-                      image={W}
+                      image={eaw}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -2415,7 +2482,7 @@ const harvest = () => {
                     Click the <span className="font-bold">“View”</span> button,
                     located at the top of the list in the menu.
                   </li>
-                     <div className="pl-13 pt-8 flex justify-center">
+                     {/* <div className="pl-13 pt-8 flex justify-center">
                   {W && (
                     <GatsbyImage
                       image={W}
@@ -2423,7 +2490,7 @@ const harvest = () => {
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div><br/><br/>
+                </div><br/><br/> */}
                   <li className="mb-2">
                     You will then be taken to the{" "}
                     <span className="text-primary-activelink font-bold">
@@ -2436,9 +2503,9 @@ const harvest = () => {
                     you selected.
                   </li>
                      <div className="pl-13 pt-8 flex justify-center">
-                  {W && (
+                  {vware && (
                     <GatsbyImage
-                      image={W}
+                      image={vware}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -2466,9 +2533,9 @@ const harvest = () => {
                     button.
                   </li>
                      <div className="pl-13 pt-8 flex justify-center">
-                  {W && (
+                  {ware && (
                     <GatsbyImage
-                      image={W}
+                      image={ware}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -2481,7 +2548,7 @@ const harvest = () => {
                     </span>{" "}
                     page.
                   </li>
-                     <div className="pl-13 pt-8 flex justify-center">
+                     {/* <div className="pl-13 pt-8 flex justify-center">
                   {W && (
                     <GatsbyImage
                       image={W}
@@ -2489,7 +2556,7 @@ const harvest = () => {
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div><br/><br/>
+                </div><br/><br/> */}
                   <li className="mb-2">
                     Here you can change and update any of the fields you need to
                     edit.
@@ -2511,9 +2578,9 @@ const harvest = () => {
                     you edited so you can review your changes and edits.
                   </li>
                      <div className="pl-13 pt-8 flex justify-center">
-                  {W && (
+                  {vware && (
                     <GatsbyImage
-                      image={W}
+                      image={vware}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -2562,9 +2629,9 @@ const harvest = () => {
                     that you want to download the details of.
                   </li>
                      <div className="pl-13 pt-8 flex justify-center">
-                  {W && (
+                  {daw && (
                     <GatsbyImage
-                      image={W}
+                      image={daw}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -2577,7 +2644,7 @@ const harvest = () => {
                     </span>{" "}
                     menu show.
                   </li>
-                     <div className="pl-13 pt-8 flex justify-center">
+                     {/* <div className="pl-13 pt-8 flex justify-center">
                   {W && (
                     <GatsbyImage
                       image={W}
@@ -2585,7 +2652,7 @@ const harvest = () => {
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div><br/><br/>
+                </div><br/><br/> */}
                   <li className="mb-2">
                     Click the <span className="font-bold">“View”</span> button,
                     located at the top of the list in the menu.
@@ -2602,9 +2669,9 @@ const harvest = () => {
                     you selected.
                   </li>
                      <div className="pl-13 pt-8 flex justify-center">
-                  {W && (
+                  {ware && (
                     <GatsbyImage
-                      image={W}
+                      image={ware}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -2632,9 +2699,9 @@ const harvest = () => {
                     button.
                   </li>
                      <div className="pl-13 pt-8 flex justify-center">
-                  {W && (
+                  {vware && (
                     <GatsbyImage
-                      image={W}
+                      image={vware}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -2649,7 +2716,7 @@ const harvest = () => {
                     </span>{" "}
                     you selected for download.
                   </li>
-                     <div className="pl-13 pt-8 flex justify-center">
+                     {/* <div className="pl-13 pt-8 flex justify-center">
                   {W && (
                     <GatsbyImage
                       image={W}
@@ -2657,7 +2724,7 @@ const harvest = () => {
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div><br/><br/>
+                </div><br/><br/> */}
                   <li className="mb-2">
                     When you have found a suitable place for your PDF file, then
                     you can press the <span className="font-bold">“Save”</span>{" "}
@@ -2674,7 +2741,7 @@ const harvest = () => {
                 <p className="mb-4">
                   Provided below is an example of what it should look like:
                 </p>
-                   <div className="pl-13 pt-8 flex justify-center">
+                   {/* <div className="pl-13 pt-8 flex justify-center">
                   {W && (
                     <GatsbyImage
                       image={W}
@@ -2682,7 +2749,7 @@ const harvest = () => {
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div><br/><br/>
+                </div><br/><br/> */}
                 <p className="mb-4">
                   [Placeholder for Warehouse PDF example image]
                 </p>
@@ -2718,9 +2785,9 @@ const harvest = () => {
                     that you want to delete.
                   </li>
                      <div className="pl-13 pt-8 flex justify-center">
-                  {W && (
+                  {delaw && (
                     <GatsbyImage
-                      image={W}
+                      image={delaw}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -2733,7 +2800,7 @@ const harvest = () => {
                     </span>{" "}
                     menu show.
                   </li>
-                     <div className="pl-13 pt-8 flex justify-center">
+                     {/* <div className="pl-13 pt-8 flex justify-center">
                   {W && (
                     <GatsbyImage
                       image={W}
@@ -2741,7 +2808,7 @@ const harvest = () => {
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div><br/><br/>
+                </div><br/><br/> */}
                   <li className="mb-2">
                     Click the <span className="font-bold">“View”</span> button,
                     located at the top of the list in the menu.
@@ -2758,9 +2825,9 @@ const harvest = () => {
                     you selected.
                   </li>
                      <div className="pl-13 pt-8 flex justify-center">
-                  {W && (
+                  {vware && (
                     <GatsbyImage
-                      image={W}
+                      image={vware}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -2788,9 +2855,9 @@ const harvest = () => {
                     button.
                   </li>
                      <div className="pl-13 pt-8 flex justify-center">
-                  {W && (
+                  {vware && (
                     <GatsbyImage
-                      image={W}
+                      image={vware}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -2805,9 +2872,9 @@ const harvest = () => {
                     or not.
                   </li>
                      <div className="pl-13 pt-8 flex justify-center">
-                  {W && (
+                  {db && (
                     <GatsbyImage
-                      image={W}
+                      image={db}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -2829,9 +2896,9 @@ const harvest = () => {
                     entry will then be deleted from the table.
                   </li>
                      <div className="pl-13 pt-8 flex justify-center">
-                  {W && (
+                  {ware && (
                     <GatsbyImage
-                      image={W}
+                      image={ware}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -2856,7 +2923,7 @@ const harvest = () => {
               </div>
             </div>
           </div>
-        </div>
+     </div>
       </PrivateRoute>
     </AppLayout>
   );
