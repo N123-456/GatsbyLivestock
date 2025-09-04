@@ -138,7 +138,7 @@ const machinery = () => {
                 </div>
               </div>
 
-              <p className="text-primary-paragraph dark:text-[#D5D5D5] text-[18px] font-montserrat font-normal lg:px-10">
+              <p className=" dark:text-[#D5D5D5] text-[18px] font-montserrat font-normal lg:px-10">
                 In the{" "}
                 <span className="text-primary-activelink font-bold">
                   “Machinery/Tools”
@@ -151,7 +151,7 @@ const machinery = () => {
                 , which enables you to operate more efficiently and accomplish
                 more of your farm-related tasks.
               </p>
-              <p className="mb-4">
+              <p className="mb-4 lg:pl-10">
                 Regular maintenance is essential to preventing malfunctions and
                 keeping everything functioning properly. With its ability to log
                 hours, maintenance history, and expenses,{" "}

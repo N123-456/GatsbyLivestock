@@ -20,40 +20,105 @@ const maintenance = () => {
 
   //   // ⛔ Don't render anything while checking auth
   //   if (isCheckingAuth) return null;
-  const data = useStaticQuery(graphql`
-    query {
-      main: file(relativePath: { eq: "main.png" }) {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
-        }
-      }
-      amain: file(relativePath: { eq: "amain.png" }) {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
-        }
-      }
-      smain: file(relativePath: { eq: "smain.png" }) {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
-        }
-      }
-      dmain: file(relativePath: { eq: "dmain.png" }) {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
-        }
-      }
-      vmain: file(relativePath: { eq: "vmain.png" }) {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
-        }
-      }
-    }
-  `);
+   const data = useStaticQuery(graphql`
+     query {
+       maint: file(relativePath: { eq: "maint.png" }) {
+         childImageSharp {
+           gatsbyImageData(placeholder: BLURRED)
+         }
+       }
+       aaww: file(relativePath: { eq: "aaww.png" }) {
+         childImageSharp {
+           gatsbyImageData(placeholder: BLURRED)
+         }
+       }
+       bfm: file(relativePath: { eq: "bfm.png" }) {
+         childImageSharp {
+           gatsbyImageData(placeholder: BLURRED)
+         }
+       }
+       ps: file(relativePath: { eq: "ps.png" }) {
+         childImageSharp {
+           gatsbyImageData(placeholder: BLURRED)
+         }
+       }
+       gtp: file(relativePath: { eq: "gtp.png" }) {
+         childImageSharp {
+           gatsbyImageData(placeholder: BLURRED)
+         }
+       }
+       sfmain: file(relativePath: { eq: "sfmain.png" }) {
+         childImageSharp {
+           gatsbyImageData(placeholder: BLURRED)
+         }
+       }
+       vmaint: file(relativePath: { eq: "vmaint.png" }) {
+         childImageSharp {
+           gatsbyImageData(placeholder: BLURRED)
+         }
+       }
+       few: file(relativePath: { eq: "few.png" }) {
+         childImageSharp {
+           gatsbyImageData(placeholder: BLURRED)
+         }
+       }
+       emain: file(relativePath: { eq: "emain.png" }) {
+         childImageSharp {
+           gatsbyImageData(placeholder: BLURRED)
+         }
+       }
+       mp: file(relativePath: { eq: "mp.png" }) {
+         childImageSharp {
+           gatsbyImageData(placeholder: BLURRED)
+         }
+       }
+       delmain: file(relativePath: { eq: "delmain.png" }) {
+         childImageSharp {
+           gatsbyImageData(placeholder: BLURRED)
+         }
+       }
+       eae: file(relativePath: { eq: "eae.png" }) {
+         childImageSharp {
+           gatsbyImageData(placeholder: BLURRED)
+         }
+       }
+           dae: file(relativePath: { eq: "dae.png" }) {
+         childImageSharp {
+           gatsbyImageData(placeholder: BLURRED)
+         }
+       }
+           main: file(relativePath: { eq: "main.png" }) {
+         childImageSharp {
+           gatsbyImageData(placeholder: BLURRED)
+         }
+       }
+              db: file(relativePath: { eq: "db.png" }) {
+         childImageSharp {
+           gatsbyImageData(placeholder: BLURRED)
+         }
+       }
+     }
+   `);
+   const maint = getImage(data.maint);
+   const aaww = getImage(data.aaww);
+   const bfm = getImage(data.bfm);
+   const dae = getImage(data.dae);
+   const dele = getImage(data.dele);
+   const dtm = getImage(data.dtm);
+   const eae = getImage(data.eae);
+   const  delmain = getImage(data. delmain);
+   const sfmain = getImage(data.sfmain);
+   const mp= getImage(data.mp);
+   const vmaint = getImage(data.vmaint);
+   const emain = getImage(data.emain);
+    const db = getImage(data.db);
+     const gtp = getImage(data.gtp);
+      const ps = getImage(data.ps);
+       const few = getImage(data.few);
+
+
   const main = getImage(data.main);
-  const amain = getImage(data.amain);
-  const smain = getImage(data.smain);
-  const dmain = getImage(data.dmain);
-  const vmain = getImage(data.vmain);
+
 
   return (
     <AppLayout>
@@ -132,9 +197,9 @@ const maintenance = () => {
               </div>
 
               <div className="pl-13 pt-8 flex justify-center">
-                {main && (
+                {maint && (
                   <GatsbyImage
-                    image={main}
+                    image={maint}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -232,9 +297,9 @@ const maintenance = () => {
                     you wish to view.
                   </li>
                   <div className="pl-13 pt-8 flex justify-center">
-                {main && (
+                {aaww && (
                   <GatsbyImage
-                    image={main}
+                    image={aaww}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -253,7 +318,7 @@ const maintenance = () => {
                     above the <span className="font-bold">“Track Usage”</span>{" "}
                     button.
                   </li>
-                  <div className="pl-13 pt-8 flex justify-center">
+                  {/* <div className="pl-13 pt-8 flex justify-center">
                 {main && (
                   <GatsbyImage
                     image={main}
@@ -261,7 +326,7 @@ const maintenance = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
 
                 </ol>
                 <p className="mb-4">
@@ -276,9 +341,9 @@ const maintenance = () => {
                   you selected.
                 </p>
                 <div className="pl-13 pt-8 flex justify-center">
-                {main && (
+                {mp && (
                   <GatsbyImage
-                    image={main}
+                    image={mp}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -330,7 +395,7 @@ const maintenance = () => {
                     button, located on the top-left corner of the page and above
                     the search options.
                   </li>
-                  <div className="pl-13 pt-8 flex justify-center">
+                  {/* <div className="pl-13 pt-8 flex justify-center">
                 {main && (
                   <GatsbyImage
                     image={main}
@@ -338,7 +403,7 @@ const maintenance = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
 
                 </ol>
                 <p className="mb-4">
@@ -348,7 +413,7 @@ const maintenance = () => {
                   </span>{" "}
                   page.
                 </p>
-                <div className="pl-13 pt-8 flex justify-center">
+                {/* <div className="pl-13 pt-8 flex justify-center">
                 {main && (
                   <GatsbyImage
                     image={main}
@@ -356,7 +421,7 @@ const maintenance = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
 
                 <p className="mb-4">
                   Please keep in mind, all the details of each step must be
@@ -369,7 +434,7 @@ const maintenance = () => {
                   </span>{" "}
                   step:
                 </p>
-                <div className="pl-13 pt-8 flex justify-center">
+                {/* <div className="pl-13 pt-8 flex justify-center">
                 {main && (
                   <GatsbyImage
                     image={main}
@@ -377,7 +442,7 @@ const maintenance = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
 
                 <p className="mb-4">
                   The{" "}
@@ -575,7 +640,7 @@ const maintenance = () => {
                   </span>{" "}
                   step.
                 </p>
-                <div className="pl-13 pt-8 flex justify-center">
+                {/* <div className="pl-13 pt-8 flex justify-center">
                 {main && (
                   <GatsbyImage
                     image={main}
@@ -583,7 +648,7 @@ const maintenance = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
 
                 <p className="mb-4">
                   The{" "}
@@ -819,15 +884,15 @@ const maintenance = () => {
                   </span>{" "}
                   step.
                 </p>
-                <div className="pl-13 pt-8 flex justify-center">
-                {main && (
+                {/* <div className="pl-13 pt-8 flex justify-center"> */}
+                {/* {main && (
                   <GatsbyImage
                     image={main}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
 
                 <p className="mb-4">
                   The{" "}
@@ -1081,15 +1146,15 @@ const maintenance = () => {
                   </span>{" "}
                   Maintenance entry.
                 </p>
-                <div className="pl-13 pt-8 flex justify-center">
-                {main && (
+                {/* <div className="pl-13 pt-8 flex justify-center"> */}
+                {/* {main && (
                   <GatsbyImage
                     image={main}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
 
                 <p className="mb-4">
                   Now that you have covered how to add a Maintenance entry into{" "}
@@ -1138,9 +1203,9 @@ const maintenance = () => {
                   .
                 </p>
                 <div className="pl-13 pt-8 flex justify-center">
-                {main && (
+                {bfm && (
                   <GatsbyImage
-                    image={main}
+                    image={bfm}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -1186,15 +1251,15 @@ const maintenance = () => {
                     , above the page select options, and is on the bottom left
                     of the page.
                   </li>
-                  <div className="pl-13 pt-8 flex justify-center">
-                {main && (
+                  {/* <div className="pl-13 pt-8 flex justify-center"> */}
+                {/* {main && (
                   <GatsbyImage
                     image={main}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
 
                   <li className="mb-2">
                     The{" "}
@@ -1211,15 +1276,15 @@ const maintenance = () => {
                     , above the page select options, and is to the bottom right
                     of the page.
                   </li>
-                  <div className="pl-13 pt-8 flex justify-center">
-                {main && (
+                  {/* <div className="pl-13 pt-8 flex justify-center"> */}
+                {/* {main && (
                   <GatsbyImage
                     image={main}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
 
                   <li className="mb-2">
                     The{" "}
@@ -1247,11 +1312,11 @@ const maintenance = () => {
                     , and is on the bottom middle of the page.
                   </li>
                   <div className="pl-13 pt-8 flex justify-center">
-                {main && (
+                {ps && (
                   <GatsbyImage
-                    image={main}
+                    image={ps}
                     alt="Startups illustration"
-                    className="border border-gray-200 shadow-lg w-[1000.58px] "
+                    className="border border-gray-200 "
                   />
                 )}
               </div><br/><br/>
@@ -1269,11 +1334,11 @@ const maintenance = () => {
                     page with the page number shown as well.
                   </li>
                   <div className="pl-13 pt-8 flex justify-center">
-                {main && (
+                {gtp && (
                   <GatsbyImage
-                    image={main}
+                    image={gtp}
                     alt="Startups illustration"
-                    className="border border-gray-200 shadow-lg w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg "
                   />
                 )}
               </div><br/><br/>
@@ -1330,9 +1395,9 @@ const maintenance = () => {
                     white box will show up with a list of options you can go to.
                   </li>
                   <div className="pl-13 pt-8 flex justify-center">
-                {main && (
+                {sfmain && (
                   <GatsbyImage
-                    image={main}
+                    image={sfmain}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -1346,7 +1411,7 @@ const maintenance = () => {
                     above the <span className="font-bold">“Track Usage”</span>{" "}
                     button.
                   </li>
-                  <div className="pl-13 pt-8 flex justify-center">
+                  {/* <div className="pl-13 pt-8 flex justify-center">
                 {main && (
                   <GatsbyImage
                     image={main}
@@ -1354,7 +1419,7 @@ const maintenance = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
 
                 </ol>
                 <p className="mb-4">
@@ -1369,9 +1434,9 @@ const maintenance = () => {
                   you selected.
                 </p>
                 <div className="pl-13 pt-8 flex justify-center">
-                {main && (
+                {mp && (
                   <GatsbyImage
-                    image={main}
+                    image={mp}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -1392,9 +1457,9 @@ const maintenance = () => {
                   Provided below is where the search options are:
                 </p>
                 <div className="pl-13 pt-8 flex justify-center">
-                {main && (
+                {mp && (
                   <GatsbyImage
-                    image={main}
+                    image={mp}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -1509,9 +1574,9 @@ const maintenance = () => {
                     show up with a list of options you can go to.
                   </li>
                   <div className="pl-13 pt-8 flex justify-center">
-                {main && (
+                {vmaint && (
                   <GatsbyImage
-                    image={main}
+                    image={vmaint}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -1525,7 +1590,7 @@ const maintenance = () => {
                     above the <span className="font-bold">“Track Usage”</span>{" "}
                     button.
                   </li>
-                  <div className="pl-13 pt-8 flex justify-center">
+                  {/* <div className="pl-13 pt-8 flex justify-center">
                 {main && (
                   <GatsbyImage
                     image={main}
@@ -1533,7 +1598,7 @@ const maintenance = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
 
                 </ol>
                 <p className="mb-4">
@@ -1548,9 +1613,9 @@ const maintenance = () => {
                   you selected.
                 </p>
                 <div className="pl-13 pt-8 flex justify-center">
-                {main && (
+                {mp && (
                   <GatsbyImage
-                    image={main}
+                    image={mp}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -1674,9 +1739,9 @@ const maintenance = () => {
                     you can go to.
                   </li>
                   <div className="pl-13 pt-8 flex justify-center">
-                {main && (
+                {emain && (
                   <GatsbyImage
-                    image={main}
+                    image={emain}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -1690,15 +1755,15 @@ const maintenance = () => {
                     above the <span className="font-bold">“Track Usage”</span>{" "}
                     button.
                   </li>
-                  <div className="pl-13 pt-8 flex justify-center">
-                {main && (
+                  {/* <div className="pl-13 pt-8 flex justify-center"> */}
+                {/* {main && (
                   <GatsbyImage
                     image={main}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
 
                   <li className="mb-2">
                     It will take you to the{" "}
@@ -1712,9 +1777,9 @@ const maintenance = () => {
                     you selected.
                   </li>
                   <div className="pl-13 pt-8 flex justify-center">
-                {main && (
+                {mp && (
                   <GatsbyImage
-                    image={main}
+                    image={mp}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -1837,9 +1902,9 @@ const maintenance = () => {
                     you can go to.
                   </li>
                   <div className="pl-13 pt-8 flex justify-center">
-                {main && (
+                {delmain && (
                   <GatsbyImage
-                    image={main}
+                    image={delmain}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -1853,15 +1918,15 @@ const maintenance = () => {
                     above the <span className="font-bold">“Track Usage”</span>{" "}
                     button.
                   </li>
-                  <div className="pl-13 pt-8 flex justify-center">
-                {main && (
+                  {/* <div className="pl-13 pt-8 flex justify-center"> */}
+                {/* {main && (
                   <GatsbyImage
                     image={main}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
 
                   <li className="mb-2">
                     It will take you to the{" "}
@@ -1875,9 +1940,9 @@ const maintenance = () => {
                     you selected.
                   </li>
                   <div className="pl-13 pt-8 flex justify-center">
-                {main && (
+                {mp && (
                   <GatsbyImage
-                    image={main}
+                    image={mp}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -2007,9 +2072,9 @@ const maintenance = () => {
                     you can go to.
                   </li>
                   <div className="pl-13 pt-8 flex justify-center">
-                {main && (
+                {delmain && (
                   <GatsbyImage
-                    image={main}
+                    image={delmain}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -2022,7 +2087,7 @@ const maintenance = () => {
                     <span className="font-bold">“Tasks”</span> button and above
                     the <span className="font-bold">“Chemicals”</span> button.
                   </li>
-                  <div className="pl-13 pt-8 flex justify-center">
+                  {/* <div className="pl-13 pt-8 flex justify-center">
                 {main && (
                   <GatsbyImage
                     image={main}
@@ -2030,7 +2095,7 @@ const maintenance = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
 
                   <li className="mb-2">
                     It will take you to the{" "}
@@ -2044,9 +2109,9 @@ const maintenance = () => {
                     you selected.
                   </li>
                   <div className="pl-13 pt-8 flex justify-center">
-                {main && (
+                {mp && (
                   <GatsbyImage
-                    image={main}
+                    image={mp}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -2137,10 +2202,10 @@ const maintenance = () => {
                   </span>{" "}
                   page.
                 </p>
-              </div>
+              
             </div>
           </div>
-        </div>
+        </div></div>
       </PrivateRoute>
     </AppLayout>
   );

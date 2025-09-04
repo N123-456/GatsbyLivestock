@@ -22,33 +22,104 @@ const maintenance = () => {
   //   if (isCheckingAuth) return null;
   const data = useStaticQuery(graphql`
     query {
-      acu: file(relativePath: { eq: "acu.png" }) {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
+          maint: file(relativePath: { eq: "maint.png" }) {
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED)
+            }
+          }
+          aaww: file(relativePath: { eq: "aaww.png" }) {
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED)
+            }
+          }
+          bfm: file(relativePath: { eq: "bfm.png" }) {
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED)
+            }
+          }
+          ps: file(relativePath: { eq: "ps.png" }) {
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED)
+            }
+          }
+          gtp: file(relativePath: { eq: "gtp.png" }) {
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED)
+            }
+          }
+          sfmain: file(relativePath: { eq: "sfmain.png" }) {
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED)
+            }
+          }
+          vmaint: file(relativePath: { eq: "vmaint.png" }) {
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED)
+            }
+          }
+          few: file(relativePath: { eq: "few.png" }) {
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED)
+            }
+          }
+          emain: file(relativePath: { eq: "emain.png" }) {
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED)
+            }
+          }
+          mp: file(relativePath: { eq: "mp.png" }) {
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED)
+            }
+          }
+          delmain: file(relativePath: { eq: "delmain.png" }) {
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED)
+            }
+          }
+          eae: file(relativePath: { eq: "eae.png" }) {
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED)
+            }
+          }
+              acu: file(relativePath: { eq: "acu.png" }) {
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED)
+            }
+          }
+              main: file(relativePath: { eq: "main.png" }) {
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED)
+            }
+          }
+                 db: file(relativePath: { eq: "db.png" }) {
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED)
+            }
+          }
         }
-      }
-      aci: file(relativePath: { eq: "aci.png" }) {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
-        }
-      }
-      acou: file(relativePath: { eq: "acou.png" }) {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
-        }
-      }
-      acou1: file(relativePath: { eq: "acou1.png" }) {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
-        }
-      }
-    }
-  `);
-  const acu = getImage(data.acu);
-  const aci = getImage(data.aci);
-  const acou = getImage(data.acou);
-  const acou1 = getImage(data.acou1);
+      `);
+      const maint = getImage(data.maint);
+      const aaww = getImage(data.aaww);
+      const bfm = getImage(data.bfm);
+      const dae = getImage(data.dae);
+      const dele = getImage(data.dele);
+      const dtm = getImage(data.dtm);
+      const eae = getImage(data.eae);
+      const  delmain = getImage(data. delmain);
+      const sfmain = getImage(data.sfmain);
+      const mp= getImage(data.mp);
+      const vmaint = getImage(data.vmaint);
+      const emain = getImage(data.emain);
+       const db = getImage(data.db);
+        const gtp = getImage(data.gtp);
+         const ps = getImage(data.ps);
+          const few = getImage(data.few);
+   
 
+
+  const acu = getImage(data.acu);
+ 
   return (
     <AppLayout>
       <PrivateRoute>
