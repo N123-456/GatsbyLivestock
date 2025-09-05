@@ -22,20 +22,26 @@ const contact = () => {
   //   if (isCheckingAuth) return null;
   const data = useStaticQuery(graphql`
     query {
-      f: file(relativePath: { eq: "f.png" }) {
+      finance: file(relativePath: { eq: "finance.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      glr: file(relativePath: { eq: "glr.png" }) {
+      anah: file(relativePath: { eq: "anah.png" }) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED)
+        }
+      }
+           aane: file(relativePath: { eq: "aane.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
     }
   `);
-  const f = getImage(data.f);
-  const glr = getImage(data.glr);
+  const finance = getImage(data.finance);
+  const anah = getImage(data.anah);
+  const aane = getImage(data.aane);
 
   return (
     <AppLayout>
@@ -194,9 +200,9 @@ const contact = () => {
                   Against every head of account is a general ledger report.
                 </p>
                     <div className="pl-13 pt-8 flex justify-center">
-                {f && (
+                {finance && (
                   <GatsbyImage
-                    image={f}
+                    image={finance}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -242,7 +248,7 @@ const contact = () => {
                     <span className="text-primary-pheading font-bold">“’+’ Create Expense”</span>{" "}
                     button and to the top of the search options.
                   </li>
-                       <div className="pl-13 pt-8 flex justify-center">
+                       {/* <div className="pl-13 pt-8 flex justify-center">
                 {f && (
                   <GatsbyImage
                     image={f}
@@ -252,7 +258,7 @@ const contact = () => {
                 )}
               </div>
 
-              <br /><br/>
+              <br /><br/> */}
                 </ol>
                 <p className="text-justify mb-4">
                   It will open the{" "}
@@ -261,7 +267,7 @@ const contact = () => {
                   </span>{" "}
                   page.
                 </p>
-                     <div className="pl-13 pt-8 flex justify-center">
+                     {/* <div className="pl-13 pt-8 flex justify-center">
                 {f && (
                   <GatsbyImage
                     image={f}
@@ -271,13 +277,13 @@ const contact = () => {
                 )}
               </div>
 
-              <br /><br/>
+              <br /><br/> */}
                 <p className="text-justify mb-4">
                   Please keep in mind, all the fields in the single step must be
                   filled properly. Now, let us begin with the first step, the{" "}
                   <span className="text-primary-pheading font-bold">“Transaction”</span> step:
                 </p>
-                     <div className="pl-13 pt-8 flex justify-center">
+                     {/* <div className="pl-13 pt-8 flex justify-center">
                 {f && (
                   <GatsbyImage
                     image={f}
@@ -287,7 +293,7 @@ const contact = () => {
                 )}
               </div>
 
-              <br /><br/>
+              <br /><br/> */}
                 <p className="text-justify mb-4">
                   The <span className="font-bold">“Transaction”</span> step
                   is where you enter all the relevant and required information
@@ -436,7 +442,7 @@ const contact = () => {
                   <span className="font-bold">“Transaction Detail”</span>{" "}
                   step:
                 </p>
-                     <div className="pl-13 pt-8 flex justify-center">
+                     {/* <div className="pl-13 pt-8 flex justify-center">
                 {f && (
                   <GatsbyImage
                     image={f}
@@ -446,7 +452,7 @@ const contact = () => {
                 )}
               </div>
 
-              <br /><br/>
+              <br /><br/> */}
                 <p className="text-justify mb-4">
                   The{" "}
                   <span className="font-bold">“Transaction Detail”</span>{" "}
@@ -519,7 +525,7 @@ const contact = () => {
                   Next is the third step, the{" "}
                   <span className="font-bold">“Associated To”</span> step:
                 </p>
-                     <div className="pl-13 pt-8 flex justify-center">
+                     {/* <div className="pl-13 pt-8 flex justify-center">
                 {f && (
                   <GatsbyImage
                     image={f}
@@ -529,7 +535,7 @@ const contact = () => {
                 )}
               </div>
 
-              <br /><br/>
+              <br /><br/> */}
                 <p className="text-justify mb-4">
                   The <span className="text-primary-activelink font-bold">“Associated To”</span>{" "}
                   step is where you enter the association that the transaction
@@ -656,7 +662,7 @@ const contact = () => {
                   <span className="font-bold">“Additional Info”</span>{" "}
                   step:
                 </p>
-                     <div className="pl-13 pt-8 flex justify-center">
+                     {/* <div className="pl-13 pt-8 flex justify-center">
                 {f && (
                   <GatsbyImage
                     image={f}
@@ -666,7 +672,7 @@ const contact = () => {
                 )}
               </div>
 
-              <br /><br/>
+              <br /><br/> */}
                 <p className="text-justify mb-4">
                   The <span className=" font-bold">“Additional Info”</span>{" "}
                   step is where you enter any additional Information regarding
@@ -706,9 +712,9 @@ const contact = () => {
                   table!
                 </p>
                      <div className="pl-13 pt-8 flex justify-center">
-                {f && (
+                {finance && (
                   <GatsbyImage
-                    image={f}
+                    image={finance}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -744,9 +750,9 @@ const contact = () => {
                     button and to the top of the search options.
                   </li>
                        <div className="pl-13 pt-8 flex justify-center">
-                {f && (
+                {anah && (
                   <GatsbyImage
-                    image={f}
+                    image={anah}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -760,7 +766,7 @@ const contact = () => {
                   <span className="text-primary-activelink font-bold">“Add Expense Type”</span>{" "}
                   dialog box.
                 </p>
-                     <div className="pl-13 pt-8 flex justify-center">
+                     {/* <div className="pl-13 pt-8 flex justify-center">
                 {f && (
                   <GatsbyImage
                     image={f}
@@ -770,12 +776,12 @@ const contact = () => {
                 )}
               </div>
 
-              <br /><br/>
+              <br /><br/> */}
                 <p className="text-justify mb-4">
                   Within the Dialog box is 1 field, the{" "}
                   <span className="text-primary-pheading font-bold">“Expense Type”</span> field:
                 </p>
-                     <div className="pl-13 pt-8 flex justify-center">
+                     {/* <div className="pl-13 pt-8 flex justify-center">
                 {f && (
                   <GatsbyImage
                     image={f}
@@ -785,7 +791,7 @@ const contact = () => {
                 )}
               </div>
 
-              <br /><br/>
+              <br /><br/> */}
                 <ul className="list-disc pl-6 mb-4 text-justify">
                   <li>
                     The <span className="text-primary-activelink font-bold">“Expense Type”</span>{" "}
@@ -798,7 +804,7 @@ const contact = () => {
                   you can select the{" "}
                   <span className="text-primary-pheading font-bold">“Submit”</span> button.
                 </p>
-                     <div className="pl-13 pt-8 flex justify-center">
+                     {/* <div className="pl-13 pt-8 flex justify-center">
                 {f && (
                   <GatsbyImage
                     image={f}
@@ -808,7 +814,7 @@ const contact = () => {
                 )}
               </div>
 
-              <br /><br/>
+              <br /><br/> */}
                 <p className="text-justify mb-4">
                   You will then be taken to the{" "}
                   <span className="text-primary-activelink font-bold">“General Ledger”</span> page
@@ -857,9 +863,9 @@ const contact = () => {
                     button, and to the top of the search options.
                   </li>
                        <div className="pl-13 pt-8 flex justify-center">
-                {f && (
+                {aane && (
                   <GatsbyImage
-                    image={f}
+                    image={aane}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -872,7 +878,7 @@ const contact = () => {
                   It will open the{" "}
                   <span className="text-primary-activelink font-bold">“New Expense”</span> page.
                 </p>
-                     <div className="pl-13 pt-8 flex justify-center">
+                     {/* <div className="pl-13 pt-8 flex justify-center">
                 {f && (
                   <GatsbyImage
                     image={f}
@@ -882,14 +888,14 @@ const contact = () => {
                 )}
               </div>
 
-              <br /><br/>
+              <br /><br/> */}
                 <p className="text-justify mb-4">
                   Please keep in mind, all the fields in the single step must be
                   filled properly. Now, let us begin with the first step, the{" "}
                   <span className="text-primary-pheading font-bold">“Expense Information”</span>{" "}
                   step:
                 </p>
-                     <div className="pl-13 pt-8 flex justify-center">
+                     {/* <div className="pl-13 pt-8 flex justify-center">
                 {f && (
                   <GatsbyImage
                     image={f}
@@ -899,7 +905,7 @@ const contact = () => {
                 )}
               </div>
 
-              <br /><br/>
+              <br /><br/> */}
                 <p className="text-justify mb-4">
                   The{" "}
                   <span className=" font-bold">“Expense Information”</span>{" "}
@@ -994,9 +1000,9 @@ const contact = () => {
                   table!
                 </p>
                      <div className="pl-13 pt-8 flex justify-center">
-                {f && (
+                {finance && (
                   <GatsbyImage
-                    image={f}
+                    image={finance}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />

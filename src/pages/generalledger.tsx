@@ -8,20 +8,20 @@ import { graphql, useStaticQuery } from "gatsby";
 const generalledger = () => {
      const data = useStaticQuery(graphql`
         query {
-          f: file(relativePath: { eq: "f.png" }) {
+          gl: file(relativePath: { eq: "gl.png" }) {
             childImageSharp {
               gatsbyImageData(placeholder: BLURRED)
             }
           }
-          glr: file(relativePath: { eq: "glr.png" }) {
+          dgl: file(relativePath: { eq: "dgl.png" }) {
             childImageSharp {
               gatsbyImageData(placeholder: BLURRED)
             }
           }
         }
       `);
-      const f = getImage(data.f);
-      const glr = getImage(data.glr);
+      const gl = getImage(data.gl);
+      const dgl = getImage(data.dgl);
   return (
     <AppLayout>
       <PrivateRoute>
@@ -82,9 +82,9 @@ const generalledger = () => {
                   <span className="text-primary-pheading font-bold">Balance amount</span>.
                 </p>
     <div className="pl-13 pt-8 flex justify-center">
-                {f && (
+                {gl && (
                   <GatsbyImage
-                    image={f}
+                    image={gl}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -198,9 +198,9 @@ const generalledger = () => {
                   </li>
                 </ol>
  <div className="pl-13 pt-8 flex justify-center">
-                {f && (
+                {dgl && (
                   <GatsbyImage
-                    image={f}
+                    image={dgl}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -210,7 +210,7 @@ const generalledger = () => {
                   Once you select it, it will open a file explorer window,
                   asking where to put the file in.
                 </p>
-                 <div className="pl-13 pt-8 flex justify-center">
+                 {/* <div className="pl-13 pt-8 flex justify-center">
                 {f && (
                   <GatsbyImage
                     image={f}
@@ -218,7 +218,7 @@ const generalledger = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
                 <p className="mb-4">
                   This file contains the current view of the{" "}
                   <span className="text-primary-activelink font-bold">“General Ledger”</span> table
@@ -238,10 +238,10 @@ const generalledger = () => {
                   location where you uploaded the PDF file and open it to view
                   it as well.
                 </p>
-                <p className="mb-4">
+                {/* <p className="mb-4">
                   Provided below is an example of what it should look like:
-                </p>
-                  <div className="pl-13 pt-8 flex justify-center">
+                </p> */}
+                  {/* <div className="pl-13 pt-8 flex justify-center">
                 {f && (
                   <GatsbyImage
                     image={f}
@@ -249,7 +249,7 @@ const generalledger = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
                 <p className="mb-4">
                   Now we have covered how to download the{" "}
                   <span className="text-primary-activelink font-bold">“General Ledger”</span>{" "}

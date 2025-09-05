@@ -22,14 +22,32 @@ const trialbalance = () => {
   //   if (isCheckingAuth) return null;
   const data = useStaticQuery(graphql`
     query {
-      tbr: file(relativePath: { eq: "tbr.png" }) {
+      tr: file(relativePath: { eq: "tr.png" }) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED)
+        }
+      }
+          gtr: file(relativePath: { eq: "gtr.png" }) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED)
+        }
+      }
+          dtr: file(relativePath: { eq: "dtr.png" }) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED)
+        }
+      }
+        gl: file(relativePath: { eq: "gl.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
     }
   `);
-  const tbr = getImage(data.tbr);
+  const tr = getImage(data.tr);
+   const gtr = getImage(data.gtr);
+    const dtr = getImage(data.dtr);
+    const gl = getImage(data.gl);
   return (
     <AppLayout>
       <PrivateRoute>
@@ -96,9 +114,9 @@ const trialbalance = () => {
                 of the financial records.
               </p>
                  <div className="pl-13 pt-8 flex justify-center">
-                                {tbr && (
+                                {tr && (
                                 <GatsbyImage
-                                  image={tbr}
+                                  image={tr}
                                   alt="Startups illustration"
                                   className="border border-gray-200 shadow-lg w-[1000.58px] "
                                 />
@@ -163,9 +181,9 @@ const trialbalance = () => {
                     .
                   </li>
                    <div className="pl-13 pt-8 flex justify-center">
-                                {tbr && (
+                                {tr && (
                                 <GatsbyImage
-                                  image={tbr}
+                                  image={tr}
                                   alt="Startups illustration"
                                   className="border border-gray-200 shadow-lg w-[1000.58px] "
                                 />
@@ -189,9 +207,9 @@ const trialbalance = () => {
                     button.
                   </li>
                    <div className="pl-13 pt-8 flex justify-center">
-                                {tbr && (
+                                {gtr && (
                                 <GatsbyImage
-                                  image={tbr}
+                                  image={gtr}
                                   alt="Startups illustration"
                                   className="border border-gray-200 shadow-lg w-[1000.58px] "
                                 />
@@ -205,7 +223,7 @@ const trialbalance = () => {
                   </span>{" "}
                   page.
                 </p>
-                 <div className="pl-13 pt-8 flex justify-center">
+                 {/* <div className="pl-13 pt-8 flex justify-center">
                                 {tbr && (
                                 <GatsbyImage
                                   image={tbr}
@@ -213,7 +231,7 @@ const trialbalance = () => {
                                   className="border border-gray-200 shadow-lg w-[1000.58px] "
                                 />
                               )}
-                            </div><br/><br/>
+                            </div><br/><br/> */}
                 <p className="mb-4">
                   You can then review your{" "}
                   <span className="text-primary-pheading font-bold">
@@ -240,7 +258,7 @@ const trialbalance = () => {
                   <span className="text-black">“Go Back?”</span> button, located
                   to the left of the header bar of the page.
                 </p>
-                 <div className="pl-13 pt-8 flex justify-center">
+                 {/* <div className="pl-13 pt-8 flex justify-center">
                                 {tbr && (
                                 <GatsbyImage
                                   image={tbr}
@@ -248,7 +266,7 @@ const trialbalance = () => {
                                   className="border border-gray-200 shadow-lg w-[1000.58px] "
                                 />
                               )}
-                            </div><br/><br/>
+                            </div><br/><br/> */}
                 <p className="mb-4">
                   You will then be taken back to the{" "}
                   <span className="text-primary-activelink font-bold">
@@ -257,9 +275,9 @@ const trialbalance = () => {
                   page.
                 </p>
                  <div className="pl-13 pt-8 flex justify-center">
-                                {tbr && (
+                                {gl && (
                                 <GatsbyImage
-                                  image={tbr}
+                                  image={gl}
                                   alt="Startups illustration"
                                   className="border border-gray-200 shadow-lg w-[1000.58px] "
                                 />
@@ -306,9 +324,9 @@ const trialbalance = () => {
                     button.
                   </li>
                    <div className="pl-13 pt-8 flex justify-center">
-                                {tbr && (
+                                {dtr && (
                                 <GatsbyImage
-                                  image={tbr}
+                                  image={dtr}
                                   alt="Startups illustration"
                                   className="border border-gray-200 shadow-lg w-[1000.58px] "
                                 />
@@ -322,7 +340,7 @@ const trialbalance = () => {
                   </span>{" "}
                   page.
                 </p>
-                 <div className="pl-13 pt-8 flex justify-center">
+                 {/* <div className="pl-13 pt-8 flex justify-center">
                                 {tbr && (
                                 <GatsbyImage
                                   image={tbr}
@@ -330,7 +348,7 @@ const trialbalance = () => {
                                   className="border border-gray-200 shadow-lg w-[1000.58px] "
                                 />
                               )}
-                            </div><br/><br/>
+                            </div><br/><br/> */}
                 <p className="mb-4">
                   You can then download your{" "}
                   <span className="text-primary-activelink font-bold">
@@ -341,7 +359,7 @@ const trialbalance = () => {
                   the top-right of the page, below the{" "}
                   <span className="text-black">“Logout”</span> button.
                 </p>
-                 <div className="pl-13 pt-8 flex justify-center">
+                 {/* <div className="pl-13 pt-8 flex justify-center">
                                 {tbr && (
                                 <GatsbyImage
                                   image={tbr}
@@ -349,12 +367,12 @@ const trialbalance = () => {
                                   className="border border-gray-200 shadow-lg w-[1000.58px] "
                                 />
                               )}
-                            </div><br/><br/>
+                            </div><br/><br/> */}
                 <p className="mb-4">
                   Once you select it, it will open a file explorer window,
                   asking where to put the file in.
                 </p>
-                 <div className="pl-13 pt-8 flex justify-center">
+                 {/* <div className="pl-13 pt-8 flex justify-center">
                                 {tbr && (
                                 <GatsbyImage
                                   image={tbr}
@@ -362,7 +380,7 @@ const trialbalance = () => {
                                   className="border border-gray-200 shadow-lg w-[1000.58px] "
                                 />
                               )}
-                            </div><br/><br/>
+                            </div><br/><br/> */}
                 <p className="mb-4">
                   This file contains the current view of the{" "}
                   <span className="text-primary-activelink font-bold">
@@ -386,7 +404,7 @@ const trialbalance = () => {
                   explorer location where you uploaded the PDF file and open it
                   to view it as well.
                 </p>
-                <p className="mb-4">
+                {/* <p className="mb-4">
                   Provided below is an example of what it should look like:
                 </p>
                  <div className="pl-13 pt-8 flex justify-center">
@@ -397,7 +415,7 @@ const trialbalance = () => {
                                   className="border border-gray-200 shadow-lg w-[1000.58px] "
                                 />
                               )}
-                            </div><br/><br/>
+                            </div><br/><br/> */}
                 <p className="mb-4">
                   Now that we have covered how to download the{" "}
                   <span className="text-primary-activelink font-bold">

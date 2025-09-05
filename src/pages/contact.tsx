@@ -6,6 +6,7 @@ import PrivateRoute from "../components/Privateroute/PrivateRoute";
 import { isLoggedIn } from "../utils/auth";
 import TextToSpeech from "../components/TextToSpeech";
 import DarkModeToggle from "../components/DarkModeToggle/DarkModeToggle";
+import { getPrimaryContrastColor } from "@mantine/core";
 
 const contact = () => {
   // const [isCheckingAuth, setIsCheckingAuth] = useState(true);
@@ -23,39 +24,74 @@ const contact = () => {
   //   if (isCheckingAuth) return null;
   const data = useStaticQuery(graphql`
     query {
-      cont: file(relativePath: { eq: "cont.png" }) {
+      contac: file(relativePath: { eq: "contac.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      anc: file(relativePath: { eq: "anc.png" }) {
+      acontac: file(relativePath: { eq: "acontac.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      sc: file(relativePath: { eq: "sc.png" }) {
+      bfc: file(relativePath: { eq: "bfc.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      dc: file(relativePath: { eq: "dc.png" }) {
+      dcon: file(relativePath: { eq: "dcon.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      vc: file(relativePath: { eq: "vc.png" }) {
+      delcon: file(relativePath: { eq: "delcon.png" }) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED)
+        }
+      }
+          dtcontac: file(relativePath: { eq: "dtcontac.png" }) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED)
+        }
+      }
+          con: file(relativePath: { eq: "con.png" }) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED)
+        }
+      }
+          sfc: file(relativePath: { eq: "sfc.png" }) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED)
+        }
+      }
+          vcon: file(relativePath: { eq: "vcon.png" }) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED)
+        }
+      }
+            ps: file(relativePath: { eq: "ps.png" }) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED)
+        }
+      }
+            gtp: file(relativePath: { eq: "gtp.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
     }
   `);
-  const cont = getImage(data.cont);
-  const anc = getImage(data.anc);
-  const sc = getImage(data.sc);
-  const dc = getImage(data.dc);
-  const vc = getImage(data.vc);
-
+     const ps = getImage(data.ps);
+          const gtp = getImage(data.gtp);
+  const contac = getImage(data.contac);
+  const dtcontac = getImage(data.dtcontac);
+  const econ = getImage(data.econ);
+  const sfc = getImage(data.sfc);
+  const vcon = getImage(data.vcon);
+const delcon = getImage(data.delcon);
+const dcon = getImage(data.dcon);
+const bfc = getImage(data.bfc);
+const acontac = getImage(data.acontac);
   return (
     <AppLayout>
       <PrivateRoute>
@@ -121,9 +157,9 @@ const contact = () => {
               </p>
 
               <div className="pl-13 pt-8 flex justify-center">
-                {cont && (
+                {contac && (
                   <GatsbyImage
-                    image={cont}
+                    image={contac}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -170,14 +206,14 @@ const contact = () => {
                   </li>
                 </ol>
                 <div className="pl-13 pt-8 flex justify-center">
-                  {cont && (
+                  {acontac && (
                     <GatsbyImage
-                      image={cont}
+                      image={acontac}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div>
+                </div><br/><br/>
                 <p className="mb-4">
                   It will open the{" "}
                   <span className="text-primary-activelink font-bold">
@@ -185,7 +221,7 @@ const contact = () => {
                   </span>{" "}
                   page.
                 </p>
-                <div className="pl-13 pt-8 flex justify-center">
+                {/* <div className="pl-13 pt-8 flex justify-center">
                   {cont && (
                     <GatsbyImage
                       image={cont}
@@ -193,7 +229,7 @@ const contact = () => {
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div>
+                </div> */}
                 <p className="mb-4">
                   Please keep in mind, all the fields in the single step must be
                   filled properly.
@@ -205,7 +241,7 @@ const contact = () => {
                   </span>{" "}
                   step:
                 </p>
-                <div className="pl-13 pt-8 flex justify-center">
+                {/* <div className="pl-13 pt-8 flex justify-center">
                   {cont && (
                     <GatsbyImage
                       image={cont}
@@ -213,7 +249,7 @@ const contact = () => {
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
                   )}
-                </div>
+                </div> */}
                 <p className="mb-4">
                   The{" "}
                   <span className="text-primary-activelink font-bold">
@@ -428,9 +464,9 @@ const contact = () => {
                   page.
                 </p>
                 <div className="pl-13 pt-8 flex justify-center">
-                  {cont && (
+                  {contac && (
                     <GatsbyImage
-                      image={cont}
+                      image={contac}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -474,9 +510,9 @@ const contact = () => {
                   .
                 </p>
                 <div className="pl-13 pt-8 flex justify-center">
-                  {cont && (
+                  {bfc && (
                     <GatsbyImage
-                      image={cont}
+                      image={bfc}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -522,7 +558,7 @@ const contact = () => {
                     , above the page select options, and is on the bottom left
                     of the page.
                   </li>
-                  <div className="pl-13 pt-8 flex justify-center">
+                  {/* <div className="pl-13 pt-8 flex justify-center">
                     {cont && (
                       <GatsbyImage
                         image={cont}
@@ -532,7 +568,7 @@ const contact = () => {
                     )}
                   </div>
                   <br />
-                  <br />
+                  <br /> */}
                   <li className="mb-2">
                     The{" "}
                     <span className="text-primary-activelink font-bold">
@@ -548,7 +584,7 @@ const contact = () => {
                     , above the page select options, and is to the bottom right
                     of the page.
                   </li>
-                  <div className="pl-13 pt-8 flex justify-center">
+                  {/* <div className="pl-13 pt-8 flex justify-center">
                     {cont && (
                       <GatsbyImage
                         image={cont}
@@ -558,7 +594,7 @@ const contact = () => {
                     )}
                   </div>
                   <br />
-                  <br />
+                  <br /> */}
                   <li className="mb-2">
                     The{" "}
                     <span className="text-primary-activelink font-bold">
@@ -585,11 +621,11 @@ const contact = () => {
                     , and is on the bottom middle of the page.
                   </li>
                   <div className="pl-13 pt-8 flex justify-center">
-                    {cont && (
+                    {ps && (
                       <GatsbyImage
-                        image={cont}
+                        image={ps}
                         alt="Startups illustration"
-                        className="border border-gray-200 shadow-lg w-[1000.58px] "
+                        className="border border-gray-200 shadow-lg"
                       />
                     )}
                   </div>
@@ -605,11 +641,11 @@ const contact = () => {
                     with the page number shown as well.
                   </li>
                   <div className="pl-13 pt-8 flex justify-center">
-                    {cont && (
+                    {gtp && (
                       <GatsbyImage
-                        image={cont}
+                        image={gtp}
                         alt="Startups illustration"
-                        className="border border-gray-200 shadow-lg w-[1000.58px] "
+                        className="border border-gray-200 shadow-lg"
                       />
                     )}
                   </div>
@@ -651,9 +687,9 @@ const contact = () => {
                   above the table.
                 </p>
                 <div className="pl-13 pt-8 flex justify-center">
-                  {cont && (
+                  {sfc && (
                     <GatsbyImage
-                      image={cont}
+                      image={sfc}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -769,7 +805,7 @@ const contact = () => {
                     located on the far-right of the page, to the left of the{" "}
                     <span className=" font-bold">“Search”</span> button.
                   </li>
-                  <div className="pl-13 pt-8 flex justify-center">
+                  {/* <div className="pl-13 pt-8 flex justify-center">
                     {cont && (
                       <GatsbyImage
                         image={cont}
@@ -779,13 +815,13 @@ const contact = () => {
                     )}
                   </div>
                   <br />
-                  <br />
+                  <br /> */}
                 </ol>
                 <p className="mb-4">
                   Once you select it, it will open a file explorer window,
                   asking where to put the file in.
                 </p>
-                <div className="pl-13 pt-8 flex justify-center">
+                {/* <div className="pl-13 pt-8 flex justify-center">
                   {cont && (
                     <GatsbyImage
                       image={cont}
@@ -795,7 +831,7 @@ const contact = () => {
                   )}
                 </div>
                 <br />
-                <br />
+                <br /> */}
                 <p className="mb-4">
                   This file contains the current view of the{" "}
                   <span className="text-primary-activelink font-bold">
@@ -819,7 +855,7 @@ const contact = () => {
                   explorer location where you uploaded the PDF file and open it
                   to view it as well.
                 </p>
-                <p className="mb-4">
+                {/* <p className="mb-4">
                   Provided below is an example of what it should look like:
                 </p>
                 <div className="pl-13 pt-8 flex justify-center">
@@ -832,7 +868,7 @@ const contact = () => {
                   )}
                 </div>
                 <br />
-                <br />
+                <br /> */}
               </div>
 
               <div className="flex items-center pt-5 space-x-4">
@@ -873,9 +909,9 @@ const contact = () => {
                     of the Contact you want to view.
                   </li>
                   <div className="pl-13 pt-8 flex justify-center">
-                    {cont && (
+                    {vcon && (
                       <GatsbyImage
-                        image={cont}
+                        image={vcon}
                         alt="Startups illustration"
                         className="border border-gray-200 shadow-lg w-[1000.58px] "
                       />
@@ -891,7 +927,7 @@ const contact = () => {
                   </span>{" "}
                   page of the Contact you selected.
                 </p>
-                <div className="pl-13 pt-8 flex justify-center">
+                {/* <div className="pl-13 pt-8 flex justify-center">
                   {cont && (
                     <GatsbyImage
                       image={cont}
@@ -901,7 +937,7 @@ const contact = () => {
                   )}
                 </div>
                 <br />
-                <br />
+                <br /> */}
                 <p className="mb-4">
                   The second method to view a Contact entry in the table, is
                   just by selecting the{" "}
@@ -917,7 +953,7 @@ const contact = () => {
                     look like this <span className=" font-bold">“⋮“</span>],
                     located on the right side of the Contact you wish to view.
                   </li>
-                  <div className="pl-13 pt-8 flex justify-center">
+                  {/* <div className="pl-13 pt-8 flex justify-center">
                     {cont && (
                       <GatsbyImage
                         image={cont}
@@ -927,7 +963,7 @@ const contact = () => {
                     )}
                   </div>
                   <br />
-                  <br />
+                  <br /> */}
                   <li className="mb-2">
                     You will then see the{" "}
                     <span className=" font-bold">“extra options”</span> menu
@@ -937,7 +973,7 @@ const contact = () => {
                     Select the <span className=" font-bold">“View”</span>{" "}
                     button, which will be the only button in the list.
                   </li>
-                  <div className="pl-13 pt-8 flex justify-center">
+                  {/* <div className="pl-13 pt-8 flex justify-center">
                     {cont && (
                       <GatsbyImage
                         image={cont}
@@ -947,7 +983,7 @@ const contact = () => {
                     )}
                   </div>
                   <br />
-                  <br />
+                  <br /> */}
                 </ol>
                 <p className="mb-4">
                   You will then be taken to the{" "}
@@ -957,9 +993,9 @@ const contact = () => {
                   page of the Contact you selected.
                 </p>
                 <div className="pl-13 pt-8 flex justify-center">
-                  {cont && (
+                  {vcon && (
                     <GatsbyImage
-                      image={cont}
+                      image={vcon}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -1004,9 +1040,9 @@ const contact = () => {
                     edit.
                   </li>
                   <div className="pl-13 pt-8 flex justify-center">
-                    {cont && (
+                    {econ && (
                       <GatsbyImage
-                        image={cont}
+                        image={econ}
                         alt="Startups illustration"
                         className="border border-gray-200 shadow-lg w-[1000.58px] "
                       />
@@ -1023,7 +1059,7 @@ const contact = () => {
                     Select the <span className=" font-bold">“View”</span>{" "}
                     button, which will be the only button in the list.
                   </li>
-                  <div className="pl-13 pt-8 flex justify-center">
+                  {/* <div className="pl-13 pt-8 flex justify-center">
                     {cont && (
                       <GatsbyImage
                         image={cont}
@@ -1033,7 +1069,7 @@ const contact = () => {
                     )}
                   </div>
                   <br />
-                  <br />
+                  <br /> */}
                   <li className="mb-2">
                     You will then be taken to the{" "}
                     <span className="text-primary-activelink font-bold">
@@ -1042,9 +1078,9 @@ const contact = () => {
                     page of the Contact you selected.
                   </li>
                   <div className="pl-13 pt-8 flex justify-center">
-                    {cont && (
+                    {vcon && (
                       <GatsbyImage
-                        image={cont}
+                        image={vcon}
                         alt="Startups illustration"
                         className="border border-gray-200 shadow-lg w-[1000.58px] "
                       />
@@ -1070,7 +1106,7 @@ const contact = () => {
                     </span>{" "}
                     button.
                   </li>
-                  <div className="pl-13 pt-8 flex justify-center">
+                  {/* <div className="pl-13 pt-8 flex justify-center">
                     {cont && (
                       <GatsbyImage
                         image={cont}
@@ -1080,7 +1116,7 @@ const contact = () => {
                     )}
                   </div>
                   <br />
-                  <br />
+                  <br /> */}
                 </ol>
                 <p className="mb-4">
                   You will then be taken to the{" "}
@@ -1090,9 +1126,9 @@ const contact = () => {
                   page.
                 </p>
                 <div className="pl-13 pt-8 flex justify-center">
-                  {cont && (
+                  {econ && (
                     <GatsbyImage
-                      image={cont}
+                      image={econ}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -1116,7 +1152,7 @@ const contact = () => {
                   page of the Contact you edited so you can review your changes
                   and edits.
                 </p>
-                <div className="pl-13 pt-8 flex justify-center">
+                {/* <div className="pl-13 pt-8 flex justify-center">
                   {cont && (
                     <GatsbyImage
                       image={cont}
@@ -1126,7 +1162,7 @@ const contact = () => {
                   )}
                 </div>
                 <br />
-                <br />
+                <br /> */}
                 <p className="mb-4">
                   Now that you know how to edit your Contact, now let’s check
                   out how to download your Contact.
@@ -1160,9 +1196,9 @@ const contact = () => {
                     download the details of.
                   </li>
                   <div className="pl-13 pt-8 flex justify-center">
-                    {cont && (
+                    {dcon && (
                       <GatsbyImage
-                        image={cont}
+                        image={dcon}
                         alt="Startups illustration"
                         className="border border-gray-200 shadow-lg w-[1000.58px] "
                       />
@@ -1175,7 +1211,7 @@ const contact = () => {
                     <span className=" font-bold">“extra options”</span> menu
                     show.
                   </li>
-                  <div className="pl-13 pt-8 flex justify-center">
+                  {/* <div className="pl-13 pt-8 flex justify-center">
                     {cont && (
                       <GatsbyImage
                         image={cont}
@@ -1185,7 +1221,7 @@ const contact = () => {
                     )}
                   </div>
                   <br />
-                  <br />
+                  <br /> */}
                   <li className="mb-2">
                     Select the <span className=" font-bold">“View”</span>{" "}
                     button, which will be the only button in the list.
@@ -1215,7 +1251,7 @@ const contact = () => {
                     </span>{" "}
                     button.
                   </li>
-                  <div className="pl-13 pt-8 flex justify-center">
+                  {/* <div className="pl-13 pt-8 flex justify-center">
                     {cont && (
                       <GatsbyImage
                         image={cont}
@@ -1225,7 +1261,7 @@ const contact = () => {
                     )}
                   </div>
                   <br />
-                  <br />
+                  <br /> */}
                 </ol>
                 <p className="mb-4">
                   It will then open a file explorer window, asking you where to
@@ -1235,7 +1271,7 @@ const contact = () => {
                   The PDF file will contain only the details related to the
                   Contact you selected for download.
                 </p>
-                <div className="pl-13 pt-8 flex justify-center">
+                {/* <div className="pl-13 pt-8 flex justify-center">
                   {cont && (
                     <GatsbyImage
                       image={cont}
@@ -1245,7 +1281,7 @@ const contact = () => {
                   )}
                 </div>
                 <br />
-                <br />
+                <br /> */}
                 <p className="mb-4">
                   When you have found a suitable place for your PDF file, then
                   you can press the <span className=" font-bold">“Save”</span>{" "}
@@ -1262,7 +1298,7 @@ const contact = () => {
                   explorer location where you uploaded the PDF file and open it
                   to view it as well.
                 </p>
-                <p className="mb-4">
+                {/* <p className="mb-4">
                   Provided below is an example of what it should look like:
                 </p>
                 <div className="pl-13 pt-8 flex justify-center">
@@ -1275,7 +1311,7 @@ const contact = () => {
                   )}
                 </div>
                 <br />
-                <br />
+                <br /> */}
                 <p className="mb-4">
                   Now that you know how to download your Contact, now let’s
                   check out how to delete your Contact.
@@ -1308,9 +1344,9 @@ const contact = () => {
                     delete.
                   </li>
                   <div className="pl-13 pt-8 flex justify-center">
-                    {cont && (
+                    {delcon && (
                       <GatsbyImage
-                        image={cont}
+                        image={delcon}
                         alt="Startups illustration"
                         className="border border-gray-200 shadow-lg w-[1000.58px] "
                       />
@@ -1323,7 +1359,7 @@ const contact = () => {
                     <span className=" font-bold">“extra options”</span> menu
                     show.
                   </li>
-                  <div className="pl-13 pt-8 flex justify-center">
+                  {/* <div className="pl-13 pt-8 flex justify-center">
                     {cont && (
                       <GatsbyImage
                         image={cont}
@@ -1333,7 +1369,7 @@ const contact = () => {
                     )}
                   </div>
                   <br />
-                  <br />
+                  <br /> */}
                   <li className="mb-2">
                     Click the <span className=" font-bold">“View”</span> button,
                     located at the top of the list in the menu.
@@ -1346,9 +1382,9 @@ const contact = () => {
                     page of the Contact you selected.
                   </li>
                   <div className="pl-13 pt-8 flex justify-center">
-                    {cont && (
+                    {vcon && (
                       <GatsbyImage
-                        image={cont}
+                        image={vcon}
                         alt="Startups illustration"
                         className="border border-gray-200 shadow-lg w-[1000.58px] "
                       />
@@ -1374,7 +1410,7 @@ const contact = () => {
                     </span>{" "}
                     button.
                   </li>
-                  <div className="pl-13 pt-8 flex justify-center">
+                  {/* <div className="pl-13 pt-8 flex justify-center">
                     {cont && (
                       <GatsbyImage
                         image={cont}
@@ -1384,12 +1420,12 @@ const contact = () => {
                     )}
                   </div>
                   <br />
-                  <br />
+                  <br /> */}
                   <li className="mb-2">
                     A dialogue box will appear to confirm whether you want to
                     delete the Contact or not.
                   </li>
-                  <div className="pl-13 pt-8 flex justify-center">
+                  {/* <div className="pl-13 pt-8 flex justify-center">
                     {cont && (
                       <GatsbyImage
                         image={cont}
@@ -1399,7 +1435,7 @@ const contact = () => {
                     )}
                   </div>
                   <br />
-                  <br />
+                  <br /> */}
                   <li className="mb-2">
                     Then click the <span className=" font-bold">“Delete”</span>{" "}
                     button in the dialogue box to confirm.
