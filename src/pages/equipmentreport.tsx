@@ -8,12 +8,12 @@ import TextToSpeech from "../components/TextToSpeech";
 const equipmentreport = () => {
   const data = useStaticQuery(graphql`
     query {
-      fl: file(relativePath: { eq: "fl.png" }) {
+      eqre: file(relativePath: { eq: "eqre.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      AL: file(relativePath: { eq: "AL.png" }) {
+      deqre: file(relativePath: { eq: "deqre.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
@@ -60,8 +60,8 @@ const equipmentreport = () => {
       }
     }
   `);
-  const fl = getImage(data.fl);
-  const AL = getImage(data.AL);
+  const eqre = getImage(data.eqre);
+  const deqre = getImage(data.deqre);
   const LD = getImage(data.LD);
   const LI = getImage(data.LI);
   const MB = getImage(data.MB);
@@ -132,9 +132,9 @@ const equipmentreport = () => {
                   button.
                 </li>
                 <div className="pl-13 pt-8 flex justify-center">
-                  {fl && (
+                  {eqre && (
                     <GatsbyImage
-                      image={fl}
+                      image={eqre}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -150,9 +150,9 @@ const equipmentreport = () => {
                   page
                 </li>
                 <div className="pl-13 pt-8 flex justify-center">
-                  {fl && (
+                  {eqre && (
                     <GatsbyImage
-                      image={fl}
+                      image={eqre}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -179,7 +179,7 @@ const equipmentreport = () => {
                   </span>{" "}
                   button located to the left of the header of the page.
                 </li>
-                <div className="pl-13 pt-8 flex justify-center">
+                {/* <div className="pl-13 pt-8 flex justify-center">
                   {fl && (
                     <GatsbyImage
                       image={fl}
@@ -189,7 +189,7 @@ const equipmentreport = () => {
                   )}
                 </div>
                 <br />
-                <br />
+                <br /> */}
                 <p>
                   Now that you know how to open the{" "}
                   <span className="text-primary-pheading font-bold">
@@ -238,9 +238,9 @@ const equipmentreport = () => {
                 page look like:
               </p>
               <div className="pl-13 pt-8 flex justify-center">
-                {fl && (
+                {eqre && (
                   <GatsbyImage
-                    image={fl}
+                    image={eqre}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -267,7 +267,7 @@ const equipmentreport = () => {
                 This Table is where you can view a list of Equipments and their
                 details that are under the Date range you set.
               </p>
-              <div className="pl-13 pt-8 flex justify-center">
+              {/* <div className="pl-13 pt-8 flex justify-center">
                 {fl && (
                   <GatsbyImage
                     image={fl}
@@ -277,7 +277,7 @@ const equipmentreport = () => {
                 )}
               </div>
               <br />
-              <br />
+              <br /> */}
               <p className="text-[18px] dark:text-[#D5D5D5]">
                 Next is the{" "}
                 <span className="text-primary-pheading font-extrabold">
@@ -293,7 +293,7 @@ const equipmentreport = () => {
                 This Table is where you can view a list of Equipments that have
                 had scheduled maintenance’s, under the Date range you set.
               </p>
-              <div className="pl-13 pt-8 flex justify-center">
+              {/* <div className="pl-13 pt-8 flex justify-center">
                 {fl && (
                   <GatsbyImage
                     image={fl}
@@ -303,7 +303,7 @@ const equipmentreport = () => {
                 )}
               </div>
               <br />
-              <br />
+              <br /> */}
               <p className="text-[18px] dark:text-[#D5D5D5]">
                 Next is the{" "}
                 <span className="text-primary-pheading font-extrabold">
@@ -320,7 +320,7 @@ const equipmentreport = () => {
                 This Table is where you can view a list of Equipments that have
                 had unscheduled maintenance’s, under the Date range you set.
               </p>
-              <div className="pl-13 pt-8 flex justify-center">
+              {/* <div className="pl-13 pt-8 flex justify-center">
                 {fl && (
                   <GatsbyImage
                     image={fl}
@@ -330,7 +330,7 @@ const equipmentreport = () => {
                 )}
               </div>
               <br />
-              <br />
+              <br /> */}
               <p className="text-[18px] dark:text-[#D5D5D5]">
                 Next is the{" "}
                 <span className="text-primary-pheading font-extrabold">
@@ -347,7 +347,7 @@ const equipmentreport = () => {
                 This Table is where you can view a list of the statuses of the
                 equipment’s, under the Date range you set.
               </p>
-              <div className="pl-13 pt-8 flex justify-center">
+              {/* <div className="pl-13 pt-8 flex justify-center">
                 {fl && (
                   <GatsbyImage
                     image={fl}
@@ -357,7 +357,7 @@ const equipmentreport = () => {
                 )}
               </div>
               <br />
-              <br />
+              <br /> */}
               <p className="text-[18px] dark:text-[#D5D5D5]">
                 Now that we have covered the sections, we are now going to cover
                 the features, starting with the{" "}
@@ -402,7 +402,7 @@ const equipmentreport = () => {
                   </span>{" "}
                   button.
                 </li>
-                <div className="pl-13 pt-8 flex justify-center">
+                {/* <div className="pl-13 pt-8 flex justify-center">
                   {fl && (
                     <GatsbyImage
                       image={fl}
@@ -412,7 +412,7 @@ const equipmentreport = () => {
                   )}
                 </div>
                 <br />
-                <br />
+                <br /> */}
                 <li>
                   It will then take you to the{" "}
                   <span className="text-primary-pheading font-bold">
@@ -421,9 +421,9 @@ const equipmentreport = () => {
                   page
                 </li>
                 <div className="pl-13 pt-8 flex justify-center">
-                  {fl && (
+                  {eqre && (
                     <GatsbyImage
-                      image={fl}
+                      image={eqre}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -444,7 +444,7 @@ const equipmentreport = () => {
                   </span>{" "}
                   button.
                 </li>
-                <div className="pl-13 pt-8 flex justify-center">
+                {/* <div className="pl-13 pt-8 flex justify-center">
                   {fl && (
                     <GatsbyImage
                       image={fl}
@@ -454,13 +454,13 @@ const equipmentreport = () => {
                   )}
                 </div>
                 <br />
-                <br />
+                <br /> */}
                 <li>
                   You will then see a window open below the field, showing a{" "}
                   <span className=" font-bold">Date Range</span> select option.
                   Set your custom date range and then close it.
                 </li>
-                <div className="pl-13 pt-8 flex justify-center">
+                {/* <div className="pl-13 pt-8 flex justify-center">
                   {fl && (
                     <GatsbyImage
                       image={fl}
@@ -470,7 +470,7 @@ const equipmentreport = () => {
                   )}
                 </div>
                 <br />
-                <br />
+                <br /> */}
                 <li>
                   After selecting the date range, you can then see the{" "}
                   <span className="text-primary-pheading font-bold">
@@ -479,9 +479,9 @@ const equipmentreport = () => {
                   page update with the date range you selected in mind.
                 </li>
                 <div className="pl-13 pt-8 flex justify-center">
-                  {fl && (
+                  {eqre && (
                     <GatsbyImage
-                      image={fl}
+                      image={eqre}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -538,9 +538,9 @@ const equipmentreport = () => {
                   button.
                 </li>
                 <div className="pl-13 pt-8 flex justify-center">
-                  {fl && (
+                  {deqre && (
                     <GatsbyImage
-                      image={fl}
+                      image={deqre}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -556,9 +556,9 @@ const equipmentreport = () => {
                   page
                 </li>
                 <div className="pl-13 pt-8 flex justify-center">
-                  {fl && (
+                  {eqre && (
                     <GatsbyImage
-                      image={fl}
+                      image={eqre}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -584,7 +584,7 @@ const equipmentreport = () => {
                   Once you select it, it will open a file explorer window,
                   asking where to put the file in.
                 </li>
-                <div className="pl-13 pt-8 flex justify-center">
+                {/* <div className="pl-13 pt-8 flex justify-center">
                   {fl && (
                     <GatsbyImage
                       image={fl}
@@ -594,7 +594,7 @@ const equipmentreport = () => {
                   )}
                 </div>
                 <br />
-                <br />
+                <br /> */}
                 <ul className="list-disc">
                   <li>
                     This file contains the current view of the Equipment Report
@@ -616,7 +616,7 @@ const equipmentreport = () => {
                   the PDF file and open it to view it as well.
                 </li>
                 <br />
-                <li>
+                {/* <li>
                   Provided below is an example of what it should look like:
                 </li>
                 <br />
@@ -630,7 +630,7 @@ const equipmentreport = () => {
                   )}
                 </div>
                 <br />
-                <br />
+                <br /> */}
                 <li>Now you know how to download an Equipment Report!</li>
                 <br />
                 <p>

@@ -22,32 +22,74 @@ const user = () => {
   //   if (isCheckingAuth) return null;
   const data = useStaticQuery(graphql`
     query {
-      um: file(relativePath: { eq: "um.png" }) {
+      manus: file(relativePath: { eq: "manus.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      anu: file(relativePath: { eq: "anu.png" }) {
+      adus: file(relativePath: { eq: "adus.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      su: file(relativePath: { eq: "su.png" }) {
+      blus: file(relativePath: { eq: "blus.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      vud: file(relativePath: { eq: "vud.png" }) {
+      brus: file(relativePath: { eq: "brus.png" }) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED)
+        }
+      }
+        dous: file(relativePath: { eq: "dous.png" }) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED)
+        }
+      }
+        dowuser: file(relativePath: { eq: "dowuser.png" }) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED)
+        }
+      }
+         edus: file(relativePath: { eq: "edus.png" }) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED)
+        }
+      }
+         srus: file(relativePath: { eq: "srus.png" }) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED)
+        }
+      }
+          vius: file(relativePath: { eq: "vius.png" }) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED)
+        }
+      }
+          ps: file(relativePath: { eq: "ps.png" }) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED)
+        }
+      }
+          gtp: file(relativePath: { eq: "gtp.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
     }
   `);
-  const um = getImage(data.um);
-  const anu = getImage(data.anu);
-  const su = getImage(data.su);
-  const vud = getImage(data.vud);
+  const manus = getImage(data.manus);
+  const adus = getImage(data.adus);
+  const blus= getImage(data.blus);
+  const brus = getImage(data.brus);
+   const dous = getImage(data.dous);
+  const dowuser = getImage(data.dowuser);
+  const edus = getImage(data.edus);
+ const srus = getImage(data.srus);
+  const vius = getImage(data.vius);
+  const ps = getImage(data.ps);
+   const gtp = getImage(data.gtp);
 
   return (
     <AppLayout>
@@ -84,9 +126,9 @@ const user = () => {
               </p>
 
               <div className="pl-13 pt-8 flex justify-center">
-                {um && (
+                {manus && (
                   <GatsbyImage
-                    image={um}
+                    image={manus}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -133,9 +175,9 @@ const user = () => {
                     button and to the top of the search options.
                   </li>
                    <div className="pl-13 pt-8 flex justify-center">
-                {um && (
+                {adus && (
                   <GatsbyImage
-                    image={um}
+                    image={adus}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -149,7 +191,7 @@ const user = () => {
                   </span>{" "}
                   page.
                 </p>
-                  <div className="pl-13 pt-8 flex justify-center">
+                  {/* <div className="pl-13 pt-8 flex justify-center">
                   {um && (
                   <GatsbyImage
                     image={um}
@@ -157,7 +199,7 @@ const user = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
                 <p className="text-justify mb-4">
                   Please keep in mind, all the fields in the single step must be
                   filled properly. Now, let us begin with the first and only
@@ -167,7 +209,7 @@ const user = () => {
                   </span>{" "}
                   step:
                 </p>
-                 <div className="pl-13 pt-8 flex justify-center">
+                 {/* <div className="pl-13 pt-8 flex justify-center">
                   {um && (
                   <GatsbyImage
                     image={um}
@@ -175,7 +217,7 @@ const user = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
                 <p className="text-justify mb-4">
                   The{" "}
                   <span className="text-primary-activelink font-bold">
@@ -294,9 +336,9 @@ const user = () => {
                   page with your User entry added to the Manage Users table!
                 </p>
  <div className="pl-13 pt-8 flex justify-center">
-                  {um && (
+                  {manus && (
                   <GatsbyImage
-                    image={um}
+                    image={manus}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -331,9 +373,9 @@ const user = () => {
                   table.
                 </p>
                  <div className="pl-13 pt-8 flex justify-center">
-                  {um && (
+                  {brus && (
                   <GatsbyImage
-                    image={um}
+                    image={brus}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -372,7 +414,7 @@ const user = () => {
                     table, above the page select options, and is on the bottom
                     left of the page.
                   </li>
-                   <div className="pl-13 pt-8 flex justify-center">
+                   {/* <div className="pl-13 pt-8 flex justify-center">
                   {um && (
                   <GatsbyImage
                     image={um}
@@ -380,7 +422,7 @@ const user = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
                   <li>
                     The{" "}
                     <span className="text-primary-activelink font-bold">
@@ -396,7 +438,7 @@ const user = () => {
                     table, above the page select options, and is to the bottom
                     right of the page.
                   </li>
-                   <div className="pl-13 pt-8 flex justify-center">
+                   {/* <div className="pl-13 pt-8 flex justify-center">
                   {um && (
                   <GatsbyImage
                     image={um}
@@ -404,7 +446,7 @@ const user = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
                   <li>
                     The{" "}
                     <span className="text-primary-pheading font-bold">
@@ -431,11 +473,11 @@ const user = () => {
                     , and is on the bottom middle of the page.
                   </li>
                    <div className="pl-13 pt-8 flex justify-center">
-                  {um && (
+                  {ps && (
                   <GatsbyImage
-                    image={um}
+                    image={ps}
                     alt="Startups illustration"
-                    className="border border-gray-200 shadow-lg w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg"
                   />
                 )}
               </div><br/><br/>
@@ -449,11 +491,11 @@ const user = () => {
                     with the page number shown as well.
                   </li>
                    <div className="pl-13 pt-8 flex justify-center">
-                  {um && (
+                  {gtp && (
                   <GatsbyImage
-                    image={um}
+                    image={gtp}
                     alt="Startups illustration"
-                    className="border border-gray-200 shadow-lg w-[1000.58px] "
+                    className="border border-gray-200 shadow-lg"
                   />
                 )}
               </div><br/><br/>
@@ -492,9 +534,9 @@ const user = () => {
                   button and above the table.
                 </p>
                   <div className="pl-13 pt-8 flex justify-center">
-                  {um && (
+                  {srus && (
                   <GatsbyImage
-                    image={um}
+                    image={srus}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -616,9 +658,9 @@ const user = () => {
                     button and above the search options.
                   </li>
                     <div className="pl-13 pt-8 flex justify-center">
-                  {um && (
+                  {dous && (
                   <GatsbyImage
-                    image={um}
+                    image={dous}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -629,15 +671,15 @@ const user = () => {
                   Once you select it, it will open a file explorer window,
                   asking where to put the file in.
                 </p>
-                  <div className="pl-13 pt-8 flex justify-center">
-                  {um && (
+                  {/* <div className="pl-13 pt-8 flex justify-center"> */}
+                  {/* {um && (
                   <GatsbyImage
                     image={um}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
                 <p className="text-justify mb-4">
                   This file contains the current view of the{" "}
                   <span className="text-primary-activelink font-bold">
@@ -661,7 +703,7 @@ const user = () => {
                   explorer location where you uploaded the PDF file and open it
                   to view it as well.
                 </p>
-                <p>Provided below is an example of what it should look like:</p>
+                {/* <p>Provided below is an example of what it should look like:</p>
   <div className="pl-13 pt-8 flex justify-center">
                   {um && (
                   <GatsbyImage
@@ -670,7 +712,7 @@ const user = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
 
 </div>
               <div className="flex items-center space-x-4 pt-5">
@@ -698,9 +740,9 @@ const user = () => {
                     ], located on the right side of the User you wish to block.
                   </li>
                     <div className="pl-13 pt-8 flex justify-center">
-                  {um && (
+                  {blus && (
                   <GatsbyImage
-                    image={um}
+                    image={blus}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -724,7 +766,7 @@ const user = () => {
                     </span>{" "}
                     button.
                   </li>
-                    <div className="pl-13 pt-8 flex justify-center">
+                    {/* <div className="pl-13 pt-8 flex justify-center">
                   {um && (
                   <GatsbyImage
                     image={um}
@@ -732,7 +774,7 @@ const user = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
                 </ol>
                 <p className="text-justify mb-4">
                   You can then see the Table refresh itself and change the user
@@ -742,7 +784,7 @@ const user = () => {
                   </span>
                   .
                 </p>
-                  <div className="pl-13 pt-8 flex justify-center">
+                  {/* <div className="pl-13 pt-8 flex justify-center">
                   {um && (
                   <GatsbyImage
                     image={um}
@@ -750,7 +792,7 @@ const user = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
                 <p className="text-justify mb-4">
                   That is how you can block a user from the Farm Management
                   System. Now we have covered all the features of the{" "}
@@ -798,9 +840,9 @@ const user = () => {
                     of the User you want to view.
                   </li>
                     <div className="pl-13 pt-8 flex justify-center">
-                  {um && (
+                  {vius && (
                   <GatsbyImage
-                    image={um}
+                    image={vius}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -813,7 +855,7 @@ const user = () => {
                     </span>{" "}
                     page of the User you selected.
                   </li>
-                    <div className="pl-13 pt-8 flex justify-center">
+                    {/* <div className="pl-13 pt-8 flex justify-center">
                   {um && (
                   <GatsbyImage
                     image={um}
@@ -821,7 +863,7 @@ const user = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
                 </ol>
                 <p className="text-justify mb-4">
                   The second method to view a User entry in the table is by
@@ -845,7 +887,7 @@ const user = () => {
                     <span className="text-primary-pheading font-bold">"⋮"</span>
                     ], located on the right side of the User you wish to view.
                   </li>
-                    <div className="pl-13 pt-8 flex justify-center">
+                    {/* <div className="pl-13 pt-8 flex justify-center">
                   {um && (
                   <GatsbyImage
                     image={um}
@@ -853,7 +895,7 @@ const user = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
                   <li>
                     You will then see the{" "}
                     <span className="text-primary-activelink font-bold">
@@ -872,7 +914,7 @@ const user = () => {
                     </span>{" "}
                     button.
                   </li>
-                    <div className="pl-13 pt-8 flex justify-center">
+                    {/* <div className="pl-13 pt-8 flex justify-center">
                   {um && (
                   <GatsbyImage
                     image={um}
@@ -880,7 +922,7 @@ const user = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
                   <li>
                     You will then be taken to the{" "}
                     <span className="text-primary-activelink font-bold">
@@ -889,9 +931,9 @@ const user = () => {
                     page of the User you selected.
                   </li>
                     <div className="pl-13 pt-8 flex justify-center">
-                  {um && (
+                  {vius && (
                   <GatsbyImage
-                    image={um}
+                    image={vius}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -933,9 +975,9 @@ const user = () => {
                       edit.
                     </li>
                      <div className="pl-13 pt-8 flex justify-center">
-                  {um && (
+                  {edus && (
                   <GatsbyImage
-                    image={um}
+                    image={edus}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -960,7 +1002,7 @@ const user = () => {
                       </span>{" "}
                       button.
                     </li>
-                     <div className="pl-13 pt-8 flex justify-center">
+                     {/* <div className="pl-13 pt-8 flex justify-center">
                   {um && (
                   <GatsbyImage
                     image={um}
@@ -968,7 +1010,7 @@ const user = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
                     <li>
                       You will then be taken to the{" "}
                       <span className="text-primary-activelink font-bold">
@@ -977,9 +1019,9 @@ const user = () => {
                       page of the User you selected.
                     </li>
                      <div className="pl-13 pt-8 flex justify-center">
-                  {um && (
+                  {vius && (
                   <GatsbyImage
-                    image={um}
+                    image={vius}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -1001,7 +1043,7 @@ const user = () => {
                       </span>{" "}
                       button.
                     </li>
-                     <div className="pl-13 pt-8 flex justify-center">
+                     {/* <div className="pl-13 pt-8 flex justify-center">
                   {um && (
                   <GatsbyImage
                     image={um}
@@ -1009,7 +1051,7 @@ const user = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
                     <li>
                       You will then be taken to the{" "}
                       <span className="text-primary-activelink font-bold">
@@ -1017,7 +1059,7 @@ const user = () => {
                       </span>{" "}
                       page.
                     </li>
-                     <div className="pl-13 pt-8 flex justify-center">
+                     {/* <div className="pl-13 pt-8 flex justify-center">
                   {um && (
                   <GatsbyImage
                     image={um}
@@ -1025,7 +1067,7 @@ const user = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
                   </ol>
                   <p>
                     Here you can change and update any of the fields you need to
@@ -1035,9 +1077,9 @@ const user = () => {
                     review your changes and edits.
                   </p>
                    <div className="pl-13 pt-8 flex justify-center">
-                  {um && (
+                  {vius && (
                   <GatsbyImage
-                    image={um}
+                    image={vius}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -1086,9 +1128,9 @@ const user = () => {
                       download the details of.
                     </li>
                         <div className="pl-13 pt-8 flex justify-center">
-                  {um && (
+                  {dowuser && (
                   <GatsbyImage
-                    image={um}
+                    image={dowuser}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -1101,7 +1143,7 @@ const user = () => {
                       </span>{" "}
                       menu show.
                     </li>
-                        <div className="pl-13 pt-8 flex justify-center">
+                        {/* <div className="pl-13 pt-8 flex justify-center">
                   {um && (
                   <GatsbyImage
                     image={um}
@@ -1109,7 +1151,7 @@ const user = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
                     <li>
                       Select the{" "}
                       <span className="text-primary-pheading font-bold">
@@ -1130,9 +1172,9 @@ const user = () => {
                       page of the User you selected.
                     </li>
                         <div className="pl-13 pt-8 flex justify-center">
-                  {um && (
+                  {vius && (
                   <GatsbyImage
-                    image={um}
+                    image={vius}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -1155,7 +1197,7 @@ const user = () => {
                       </span>{" "}
                       button.
                     </li>
-                        <div className="pl-13 pt-8 flex justify-center">
+                        {/* <div className="pl-13 pt-8 flex justify-center">
                   {um && (
                   <GatsbyImage
                     image={um}
@@ -1163,14 +1205,14 @@ const user = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
                   </ol>
                   <p className="text-justify mb-4">
                     It will then open a file explorer window, asking you where
                     to download the PDF file. The PDF file will contain only the
                     details related to the User you selected for download.
                   </p>
-                      <div className="pl-13 pt-8 flex justify-center">
+                      {/* <div className="pl-13 pt-8 flex justify-center">
                   {um && (
                   <GatsbyImage
                     image={um}
@@ -1178,7 +1220,7 @@ const user = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
                   <p className="text-justify mb-4">
                     When you have found a suitable place for your PDF file, then
                     you can press the{" "}
@@ -1198,7 +1240,7 @@ const user = () => {
                     explorer location where you uploaded the PDF file and open
                     it to view it as well.
                   </p>
-                      <div className="pl-13 pt-8 flex justify-center">
+                      {/* <div className="pl-13 pt-8 flex justify-center">
                   {um && (
                   <GatsbyImage
                     image={um}
@@ -1206,7 +1248,7 @@ const user = () => {
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
                 )}
-              </div><br/><br/>
+              </div><br/><br/> */}
                   <p className="text-justify mb-4">
                     Now that you know how to download your User, we have now
                     covered the entire{" "}

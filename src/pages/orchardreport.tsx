@@ -18,12 +18,12 @@ const orchardreport = () => {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      LD: file(relativePath: { eq: "LD.png" }) {
+      orre: file(relativePath: { eq: " orre.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      LI: file(relativePath: { eq: "LI.png" }) {
+      dorre: file(relativePath: { eq: "dorre.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
@@ -62,8 +62,8 @@ const orchardreport = () => {
   `);
   const fl = getImage(data.fl);
   const AL = getImage(data.AL);
-  const LD = getImage(data.LD);
-  const LI = getImage(data.LI);
+  const orre = getImage(data.orre);
+  const dorre = getImage(data.dorre);
   const MB = getImage(data.MB);
   const UI = getImage(data.UI);
   const SL = getImage(data.SL);
@@ -128,9 +128,9 @@ const orchardreport = () => {
                   button.
                 </li>
                 <div className="pl-13 pt-8 flex justify-center">
-                  {fl && (
+                  {orre && (
                     <GatsbyImage
-                      image={fl}
+                      image={orre}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -146,9 +146,9 @@ const orchardreport = () => {
                   page.
                 </li>
                 <div className="pl-13 pt-8 flex justify-center">
-                  {fl && (
+                  {orre && (
                     <GatsbyImage
-                      image={fl}
+                      image={orre}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -175,7 +175,7 @@ const orchardreport = () => {
                   </span>{" "}
                   button located to the left of the header of the page.
                 </li>
-                <div className="pl-13 pt-8 flex justify-center">
+                {/* <div className="pl-13 pt-8 flex justify-center">
                   {fl && (
                     <GatsbyImage
                       image={fl}
@@ -185,7 +185,7 @@ const orchardreport = () => {
                   )}
                 </div>
                 <br />
-                <br />
+                <br /> */}
                 <p>
                   Now that you know how to open the{" "}
                   <span className="text-primary-pheading font-bold">
@@ -237,7 +237,7 @@ const orchardreport = () => {
                 </span>{" "}
                 page look like:
               </p>
-              <div className="pl-13 pt-8 flex justify-center">
+              {/* <div className="pl-13 pt-8 flex justify-center">
                 {fl && (
                   <GatsbyImage
                     image={fl}
@@ -247,7 +247,7 @@ const orchardreport = () => {
                 )}
               </div>
               <br />
-              <br />
+              <br /> */}
               <p className=" text-[18px] dark:text-[#D5D5D5]">
                 We are now going to cover each section of the{" "}
                 <span className="text-primary-pheading font-bold">
@@ -267,7 +267,7 @@ const orchardreport = () => {
                 This Table is where you can view a list of Tasks of the Orchard
                 Plants that are under the Orchard and Date range you set.
               </p>
-              <div className="pl-13 pt-8 flex justify-center">
+              {/* <div className="pl-13 pt-8 flex justify-center">
                 {fl && (
                   <GatsbyImage
                     image={fl}
@@ -277,7 +277,7 @@ const orchardreport = () => {
                 )}
               </div>
               <br />
-              <br />
+              <br /> */}
               <p className="text-[18px] dark:text-[#D5D5D5]">
                 Next is the{" "}
                 <span className="text-primary-pheading font-extrabold">
@@ -294,7 +294,7 @@ const orchardreport = () => {
                 Orchard Plants that are under the Orchard and Date range you
                 set.
               </p>
-              <div className="pl-13 pt-8 flex justify-center">
+              {/* <div className="pl-13 pt-8 flex justify-center">
                 {fl && (
                   <GatsbyImage
                     image={fl}
@@ -304,7 +304,7 @@ const orchardreport = () => {
                 )}
               </div>
               <br />
-              <br />
+              <br /> */}
               <p className="text-[18px] dark:text-[#D5D5D5]">
                 Next is the{" "}
                 <span className="text-primary-pheading font-extrabold">
@@ -322,7 +322,7 @@ const orchardreport = () => {
                 Orchard Plants that are under the Orchard and Date range you
                 set.
               </p>
-              <div className="pl-13 pt-8 flex justify-center">
+              {/* <div className="pl-13 pt-8 flex justify-center">
                 {fl && (
                   <GatsbyImage
                     image={fl}
@@ -332,7 +332,7 @@ const orchardreport = () => {
                 )}
               </div>
               <br />
-              <br />
+              <br /> */}
               <p className="text-[18px] dark:text-[#D5D5D5]">
                 Next is the{" "}
                 <span className="text-primary-pheading font-extrabold">
@@ -350,7 +350,7 @@ const orchardreport = () => {
                 the Orchard Plants that are under the Orchard and Date range you
                 set.
               </p>
-              <div className="pl-13 pt-8 flex justify-center">
+              {/* <div className="pl-13 pt-8 flex justify-center">
                 {fl && (
                   <GatsbyImage
                     image={fl}
@@ -360,7 +360,7 @@ const orchardreport = () => {
                 )}
               </div>
               <br />
-              <br />
+              <br /> */}
               <p className="text-[18px] dark:text-[#D5D5D5]">
                 Next is the{" "}
                 <span className="text-primary-pheading font-extrabold">
@@ -378,7 +378,7 @@ const orchardreport = () => {
                 Orchard Plants that are under the Orchard and Date range you
                 set.
               </p>
-              <div className="pl-13 pt-8 flex justify-center">
+              {/* <div className="pl-13 pt-8 flex justify-center">
                 {fl && (
                   <GatsbyImage
                     image={fl}
@@ -388,7 +388,7 @@ const orchardreport = () => {
                 )}
               </div>
               <br />
-              <br />
+              <br /> */}
               <p className="text-[18px] dark:text-[#D5D5D5]">
                 Now that we have covered the sections, we are now going to cover
                 the features, starting with the{" "}
@@ -430,7 +430,7 @@ const orchardreport = () => {
                   </span>{" "}
                   button.
                 </li>
-                <div className="pl-13 pt-8 flex justify-center">
+                {/* <div className="pl-13 pt-8 flex justify-center">
                   {fl && (
                     <GatsbyImage
                       image={fl}
@@ -440,7 +440,7 @@ const orchardreport = () => {
                   )}
                 </div>
                 <br />
-                <br />
+                <br /> */}
                 <li>
                   It will then take you to the{" "}
                   <span className="text-primary-pheading font-bold">
@@ -449,9 +449,9 @@ const orchardreport = () => {
                   page.
                 </li>
                 <div className="pl-13 pt-8 flex justify-center">
-                  {fl && (
+                  {orre && (
                     <GatsbyImage
-                      image={fl}
+                      image={orre}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -491,7 +491,7 @@ const orchardreport = () => {
                     </span>{" "}
                     page.
                   </li>
-                  <div className="pl-13 pt-8 flex justify-center">
+                  {/* <div className="pl-13 pt-8 flex justify-center">
                     {fl && (
                       <GatsbyImage
                         image={fl}
@@ -501,12 +501,12 @@ const orchardreport = () => {
                     )}
                   </div>
                   <br />
-                  <br />
+                  <br /> */}
                   <li>
                     You can then click the crop you want to view the report from
                     this list. It will have the “tick mark” to the left of it.
                   </li>
-                  <div className="pl-13 pt-8 flex justify-center">
+                  {/* <div className="pl-13 pt-8 flex justify-center">
                     {fl && (
                       <GatsbyImage
                         image={fl}
@@ -516,7 +516,7 @@ const orchardreport = () => {
                     )}
                   </div>
                   <br />
-                  <br />
+                  <br /> */}
                   <li>
                     It will then change the{" "}
                     <span className="text-primary-pheading font-bold">
@@ -525,7 +525,7 @@ const orchardreport = () => {
                     page to show the Orchard Plants you selected and its details
                     as well as its Orchard Reports.
                   </li>
-                  <div className="pl-13 pt-8 flex justify-center">
+                  {/* <div className="pl-13 pt-8 flex justify-center">
                     {fl && (
                       <GatsbyImage
                         image={fl}
@@ -535,7 +535,7 @@ const orchardreport = () => {
                     )}
                   </div>
                   <br />
-                  <br />
+                  <br /> */}
                 </ul>
 
                 <li>
@@ -582,9 +582,9 @@ const orchardreport = () => {
                   button.
                 </li>
                 <div className="pl-13 pt-8 flex justify-center">
-                  {fl && (
+                  {dorre && (
                     <GatsbyImage
-                      image={fl}
+                      image={dorre}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -599,7 +599,7 @@ const orchardreport = () => {
                   </span>{" "}
                   page.
                 </li>
-                <div className="pl-13 pt-8 flex justify-center">
+                {/* <div className="pl-13 pt-8 flex justify-center">
                   {fl && (
                     <GatsbyImage
                       image={fl}
@@ -609,7 +609,7 @@ const orchardreport = () => {
                   )}
                 </div>
                 <br />
-                <br />
+                <br /> */}
                 <li>
                   Now first if you want to download a different Orchard plant
                   instead of the default orchard plant, then please choose a
@@ -632,7 +632,7 @@ const orchardreport = () => {
                   Once you select it, it will open a file explorer window,
                   asking where to put the file in.
                 </li>
-                <div className="pl-13 pt-8 flex justify-center">
+                {/* <div className="pl-13 pt-8 flex justify-center">
                   {fl && (
                     <GatsbyImage
                       image={fl}
@@ -642,7 +642,7 @@ const orchardreport = () => {
                   )}
                 </div>
                 <br />
-                <br />
+                <br /> */}
                 <ul className="list-disc">
                   <li>
                     This file contains the current view of the Orchard Report
@@ -664,7 +664,7 @@ const orchardreport = () => {
                   the PDF file and open it to view it as well.
                 </li>
                 <br />
-                <li>
+                {/* <li>
                   Provided below is an example of what it should look like:
                 </li>
                 <br />
@@ -678,7 +678,7 @@ const orchardreport = () => {
                   )}
                 </div>
                 <br />
-                <br />
+                <br /> */}
                 <li>
                   Now you know how to{" "}
                   <span className="text-primary-activelink font-bold">

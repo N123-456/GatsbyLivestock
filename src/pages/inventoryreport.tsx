@@ -8,7 +8,7 @@ import TextToSpeech from '../components/TextToSpeech';
 const inventoryreport = () => {
       const data = useStaticQuery(graphql`
         query {
-          fl: file(relativePath: { eq: "fl.png" }) {
+          inre: file(relativePath: { eq: "inre.png" }) {
             childImageSharp {
               gatsbyImageData(placeholder: BLURRED)
             }
@@ -60,7 +60,7 @@ const inventoryreport = () => {
           }
         }
       `);
-      const fl = getImage(data.fl);
+      const inre = getImage(data.inre);
       const AL = getImage(data.AL);
       const LD = getImage(data.LD);
       const LI = getImage(data.LI);
@@ -122,9 +122,9 @@ const inventoryreport = () => {
                         button.
                       </li>
                       <div className="pl-13 pt-8 flex justify-center">
-                        {fl && (
+                        {inre && (
                           <GatsbyImage
-                            image={fl}
+                            image={inre}
                             alt="Startups illustration"
                             className="border border-gray-200 shadow-lg w-[1000.58px] "
                           />
@@ -140,9 +140,9 @@ const inventoryreport = () => {
                         page.
                       </li>
                       <div className="pl-13 pt-8 flex justify-center">
-                        {fl && (
+                        {inre && (
                           <GatsbyImage
-                            image={fl}
+                            image={inre}
                             alt="Startups illustration"
                             className="border border-gray-200 shadow-lg w-[1000.58px] "
                           />
@@ -169,7 +169,7 @@ const inventoryreport = () => {
                         </span>{" "}
                         button located to the left of the header of the page.
                       </li>
-                      <div className="pl-13 pt-8 flex justify-center">
+                      {/* <div className="pl-13 pt-8 flex justify-center">
                         {fl && (
                           <GatsbyImage
                             image={fl}
@@ -179,7 +179,7 @@ const inventoryreport = () => {
                         )}
                       </div>
                       <br />
-                      <br />
+                      <br /> */}
                       <p>
                         Now that you know how to open the{" "}
                         <span className="text-primary-pheading font-bold">
@@ -222,9 +222,9 @@ const inventoryreport = () => {
                     </p>
     
                     <div className="pl-13 pt-8 flex justify-center">
-                      {fl && (
+                      {inre && (
                         <GatsbyImage
-                          image={fl}
+                          image={inre}
                           alt="Startups illustration"
                           className="border border-gray-200 shadow-lg w-[1000.58px] "
                         />
@@ -250,7 +250,7 @@ const inventoryreport = () => {
                     <p className="text-[18px] dark:text-[#D5D5D5]">
                      This Table is where you can view a list of Inventory items and their details that are under the Date range you set.
                     </p>
-                    <div className="pl-13 pt-8 flex justify-center">
+                    {/* <div className="pl-13 pt-8 flex justify-center">
                       {fl && (
                         <GatsbyImage
                           image={fl}
@@ -260,7 +260,7 @@ const inventoryreport = () => {
                       )}
                     </div>
                     <br />
-                    <br />
+                    <br /> */}
                     <p className="text-[18px] dark:text-[#D5D5D5]">
                       Next is the{" "}
                       <span className="text-primary-pheading font-extrabold">
@@ -277,7 +277,7 @@ const inventoryreport = () => {
 
 
                     </p>
-                    <div className="pl-13 pt-8 flex justify-center">
+                    {/* <div className="pl-13 pt-8 flex justify-center">
                       {fl && (
                         <GatsbyImage
                           image={fl}
@@ -287,7 +287,7 @@ const inventoryreport = () => {
                       )}
                     </div>
                     <br />
-                    <br />
+                    <br /> */}
                     <p className="text-[18px] dark:text-[#D5D5D5]">
                       Next is the{" "}
                       <span className="text-primary-pheading font-extrabold">
@@ -303,7 +303,7 @@ const inventoryreport = () => {
                     <p>
                      This Table is where you can view a list of Inventory items that have been used and the usage details, under the Date range you set.
                     </p>
-                    <div className="pl-13 pt-8 flex justify-center">
+                    {/* <div className="pl-13 pt-8 flex justify-center">
                       {fl && (
                         <GatsbyImage
                           image={fl}
@@ -313,7 +313,7 @@ const inventoryreport = () => {
                       )}
                     </div>
                     <br />
-                    <br />
+                    <br /> */}
                     <p className="text-[18px] dark:text-[#D5D5D5]">
                       Next is the{" "}
                       <span className="text-primary-pheading font-extrabold">
@@ -329,7 +329,7 @@ const inventoryreport = () => {
                     <p className="text-[18px] dark:text-[#D5D5D5]">
                      This Table is where you can view a list of Inventory Items that have been transferred around and their transfer details, under the Date range you set.
                     </p>
-                    <div className="pl-13 pt-8 flex justify-center">
+                    {/* <div className="pl-13 pt-8 flex justify-center">
                       {fl && (
                         <GatsbyImage
                           image={fl}
@@ -339,7 +339,7 @@ const inventoryreport = () => {
                       )}
                     </div>
                     <br />
-                    <br />
+                    <br /> */}
                      <p className="text-[18px] dark:text-[#D5D5D5]">
                       Next is the{" "}
                       <span className="text-primary-pheading font-extrabold">
@@ -355,7 +355,7 @@ const inventoryreport = () => {
                     <p className="text-[18px] dark:text-[#D5D5D5]">
                      This Table is where you can view a list of inventory item’s that have needed maintenance or repairs and their details, under the Date range you set.
                     </p>
-                    <div className="pl-13 pt-8 flex justify-center">
+                    {/* <div className="pl-13 pt-8 flex justify-center">
                       {fl && (
                         <GatsbyImage
                           image={fl}
@@ -365,7 +365,7 @@ const inventoryreport = () => {
                       )}
                     </div>
                     <br />
-                    <br />
+                    <br /> */}
 
                      <p className="text-[18px] dark:text-[#D5D5D5]">
                       Next is the{" "}
@@ -382,7 +382,7 @@ const inventoryreport = () => {
                     <p className="text-[18px] dark:text-[#D5D5D5]">
                      This Table is where you can view a list of Inventory items that needed to be disposed and the disposal details, under the Date range you set.
                     </p>
-                    <div className="pl-13 pt-8 flex justify-center">
+                    {/* <div className="pl-13 pt-8 flex justify-center">
                       {fl && (
                         <GatsbyImage
                           image={fl}
@@ -392,7 +392,7 @@ const inventoryreport = () => {
                       )}
                     </div>
                     <br />
-                    <br />
+                    <br /> */}
 
                      <p className="text-[18px] dark:text-[#D5D5D5]">
                       Next is the{" "}
@@ -410,7 +410,7 @@ const inventoryreport = () => {
                      This Table is where you can view a list of Inventory items that have needed to be re-conciliated, under the Date range you set.
 
                     </p>
-                    <div className="pl-13 pt-8 flex justify-center">
+                    {/* <div className="pl-13 pt-8 flex justify-center">
                       {fl && (
                         <GatsbyImage
                           image={fl}
@@ -420,7 +420,7 @@ const inventoryreport = () => {
                       )}
                     </div>
                     <br />
-                    <br />
+                    <br /> */}
                     <p className="text-[18px] dark:text-[#D5D5D5]">
                       Now that we have covered the sections, we are now going to
                       cover the features, starting with the{" "}
@@ -456,9 +456,9 @@ const inventoryreport = () => {
                         button.
                       </li>
                       <div className="pl-13 pt-8 flex justify-center">
-                        {fl && (
+                        {inre && (
                           <GatsbyImage
-                            image={fl}
+                            image={inre}
                             alt="Startups illustration"
                             className="border border-gray-200 shadow-lg w-[1000.58px] "
                           />
@@ -473,7 +473,7 @@ const inventoryreport = () => {
                         </span>{" "}
                         page
                       </li>
-                      <div className="pl-13 pt-8 flex justify-center">
+                      {/* <div className="pl-13 pt-8 flex justify-center">
                         {fl && (
                           <GatsbyImage
                             image={fl}
@@ -483,7 +483,7 @@ const inventoryreport = () => {
                         )}
                       </div>
                       <br />
-                      <br />
+                      <br /> */}
                       <li>
                         You can then set the Date range by clicking the{" "}
                         <span className="font-bold">“Set Date Range”</span> field,
@@ -497,7 +497,7 @@ const inventoryreport = () => {
                         </span>{" "}
                         button.
                       </li>
-                      <div className="pl-13 pt-8 flex justify-center">
+                      {/* <div className="pl-13 pt-8 flex justify-center">
                         {fl && (
                           <GatsbyImage
                             image={fl}
@@ -508,12 +508,13 @@ const inventoryreport = () => {
                       </div>
                       <br />
                       <br />
+                      // <li> */}
                       <li>
                         You will then see a window open below the field, showing a{" "}
                         <span className=" font-bold">Date Range</span>{" "} select
                         option. Set your custom date range and then close it.
                       </li>
-                      <div className="pl-13 pt-8 flex justify-center">
+                      {/* <div className="pl-13 pt-8 flex justify-center">
                         {fl && (
                           <GatsbyImage
                             image={fl}
@@ -523,7 +524,7 @@ const inventoryreport = () => {
                         )}
                       </div>
                       <br />
-                      <br />
+                      <br /> */}
                       <li>
                         After selecting the date range, you can then see the{" "}
                         <span className="text-primary-pheading font-bold">
@@ -532,9 +533,9 @@ const inventoryreport = () => {
                         page update with the date range you selected in mind.
                       </li>
                       <div className="pl-13 pt-8 flex justify-center">
-                        {fl && (
+                        {inre && (
                           <GatsbyImage
-                            image={fl}
+                            image={inre}
                             alt="Startups illustration"
                             className="border border-gray-200 shadow-lg w-[1000.58px] "
                           />
@@ -582,9 +583,9 @@ const inventoryreport = () => {
                         button.
                       </li>
                       <div className="pl-13 pt-8 flex justify-center">
-                        {fl && (
+                        {inre && (
                           <GatsbyImage
-                            image={fl}
+                            image={inre}
                             alt="Startups illustration"
                             className="border border-gray-200 shadow-lg w-[1000.58px] "
                           />
@@ -599,7 +600,7 @@ const inventoryreport = () => {
                         </span>{" "}
                         page.
                       </li>
-                      <div className="pl-13 pt-8 flex justify-center">
+                      {/* <div className="pl-13 pt-8 flex justify-center">
                         {fl && (
                           <GatsbyImage
                             image={fl}
@@ -609,7 +610,7 @@ const inventoryreport = () => {
                         )}
                       </div>
                       <br />
-                      <br />
+                      <br /> */}
                       <li>
                         If you wish to set a custom Date range of the report then
                         please set a different date range. (as shown in Setting a
@@ -628,7 +629,7 @@ const inventoryreport = () => {
                         Once you select it, it will open a file explorer window,
                         asking where to put the file in.
                       </li>
-                      <div className="pl-13 pt-8 flex justify-center">
+                      {/* <div className="pl-13 pt-8 flex justify-center">
                         {fl && (
                           <GatsbyImage
                             image={fl}
@@ -638,7 +639,7 @@ const inventoryreport = () => {
                         )}
                       </div>
                       <br />
-                      <br />
+                      <br /> */}
                       <ul className="list-disc">
                         <li>
                           This file contains the current view of the Inventory
@@ -660,7 +661,7 @@ const inventoryreport = () => {
                         uploaded the PDF file and open it to view it as well.
                       </li>
                       <br />
-                      <li>
+                      {/* <li>
                         Provided below is an example of what it should look like:
                       </li><br />
                       <div className="pl-13 pt-8 flex justify-center">
@@ -673,7 +674,7 @@ const inventoryreport = () => {
                         )}
                       </div>
                       <br />
-                      <br />
+                      <br /> */}
                       <li>Now you know how to {" "}
                         <span className="text-primary-activelink font-bold">
                           download

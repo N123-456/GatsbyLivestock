@@ -8,12 +8,12 @@ import TextToSpeech from "../components/TextToSpeech";
 const plreport = () => {
   const data = useStaticQuery(graphql`
     query {
-      fl: file(relativePath: { eq: "fl.png" }) {
+      plre: file(relativePath: { eq: "plre.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      AL: file(relativePath: { eq: "AL.png" }) {
+      dplre: file(relativePath: { eq: "dplre.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
@@ -60,8 +60,8 @@ const plreport = () => {
       }
     }
   `);
-  const fl = getImage(data.fl);
-  const AL = getImage(data.AL);
+  const plre = getImage(data.plre);
+  const dplre = getImage(data.dplre);
   const LD = getImage(data.LD);
   const LI = getImage(data.LI);
   const MB = getImage(data.MB);
@@ -128,9 +128,9 @@ const plreport = () => {
                   button.
                 </li>
                 <div className="pl-13 pt-8 flex justify-center">
-                  {fl && (
+                  {plre && (
                     <GatsbyImage
-                      image={fl}
+                      image={plre}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -145,7 +145,7 @@ const plreport = () => {
                   </span>{" "}
                   page.
                 </li>
-                <div className="pl-13 pt-8 flex justify-center">
+                {/* <div className="pl-13 pt-8 flex justify-center">
                   {fl && (
                     <GatsbyImage
                       image={fl}
@@ -155,7 +155,7 @@ const plreport = () => {
                   )}
                 </div>
                 <br />
-                <br />
+                <br /> */}
                 <li>
                   From here you can continue to review the{" "}
                   <span className="text-primary-pheading font-bold">
@@ -175,7 +175,7 @@ const plreport = () => {
                   </span>{" "}
                   button located to the left of the header of the page.
                 </li>
-                <div className="pl-13 pt-8 flex justify-center">
+                {/* <div className="pl-13 pt-8 flex justify-center">
                   {fl && (
                     <GatsbyImage
                       image={fl}
@@ -185,7 +185,7 @@ const plreport = () => {
                   )}
                 </div>
                 <br />
-                <br />
+                <br /> */}
                 <p>
                   Now that you know how to open the{" "}
                   <span className="text-primary-pheading font-bold">
@@ -236,9 +236,9 @@ const plreport = () => {
                 page look like:
               </p>
               <div className="pl-13 pt-8 flex justify-center">
-                {fl && (
+                {plre && (
                   <GatsbyImage
-                    image={fl}
+                    image={plre}
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -265,7 +265,7 @@ const plreport = () => {
                 This Table is where you can view the Revenue sources and their
                 amounts as of the Date range that has been set.
               </p>
-              <div className="pl-13 pt-8 flex justify-center">
+              {/* <div className="pl-13 pt-8 flex justify-center">
                 {fl && (
                   <GatsbyImage
                     image={fl}
@@ -275,7 +275,7 @@ const plreport = () => {
                 )}
               </div>
               <br />
-              <br />
+              <br /> */}
               <p className="text-[18px] dark:text-[#D5D5D5]">
                 Next is the{" "}
                 <span className="text-primary-pheading font-extrabold">
@@ -291,7 +291,7 @@ const plreport = () => {
                 This Table is where you can view the costs of the Goods and
                 their amounts as of the Date range that has been set.
               </p>
-              <div className="pl-13 pt-8 flex justify-center">
+              {/* <div className="pl-13 pt-8 flex justify-center">
                 {fl && (
                   <GatsbyImage
                     image={fl}
@@ -301,7 +301,7 @@ const plreport = () => {
                 )}
               </div>
               <br />
-              <br />
+              <br /> */}
               <p className="text-[18px] dark:text-[#D5D5D5]">
                 Next is the{" "}
                 <span className="text-primary-pheading font-extrabold">
@@ -319,7 +319,7 @@ const plreport = () => {
                 of the Date range that has been set. The equation used to
                 calculate is shown below:
               </p>
-              <div className="pl-13 pt-8 flex justify-center">
+              {/* <div className="pl-13 pt-8 flex justify-center">
                 {fl && (
                   <GatsbyImage
                     image={fl}
@@ -329,11 +329,11 @@ const plreport = () => {
                 )}
               </div>
               <br />
-              <br />
-              <p className="text-[18px] dark:text-[#D5D5D5]">
+              <br /> */}
+              {/* <p className="text-[18px] dark:text-[#D5D5D5]">
                 Also shown below is what it looks like:
-              </p>
-              <div className="pl-13 pt-8 flex justify-center">
+              </p> */}
+              {/* <div className="pl-13 pt-8 flex justify-center">
                 {fl && (
                   <GatsbyImage
                     image={fl}
@@ -343,7 +343,7 @@ const plreport = () => {
                 )}
               </div>
               <br />
-              <br />
+              <br /> */}
               <p className="text-[18px] dark:text-[#D5D5D5]">
                 Next is the{" "}
                 <span className="text-primary-pheading font-extrabold">
@@ -361,7 +361,7 @@ const plreport = () => {
                 Management System and the Salaries for Management and
                 Operations, as of the Date range that has been set.
               </p>
-              <div className="pl-13 pt-8 flex justify-center">
+              {/* <div className="pl-13 pt-8 flex justify-center">
                 {fl && (
                   <GatsbyImage
                     image={fl}
@@ -371,7 +371,7 @@ const plreport = () => {
                 )}
               </div>
               <br />
-              <br />
+              <br /> */}
               <p className="text-[18px] dark:text-[#D5D5D5]">
                 Next is the{" "}
                 <span className="text-primary-pheading font-extrabold">
@@ -389,7 +389,7 @@ const plreport = () => {
                 Operation as of the Date range that has bee set. The equation
                 used to calculate is shown below:
               </p>
-              <div className="pl-13 pt-8 flex justify-center">
+              {/* <div className="pl-13 pt-8 flex justify-center">
                 {fl && (
                   <GatsbyImage
                     image={fl}
@@ -399,11 +399,11 @@ const plreport = () => {
                 )}
               </div>
               <br />
-              <br />
+              <br /> */}
               <p className="text-[18px] dark:text-[#D5D5D5]">
                 Also shown below is what it looks like:
               </p>
-              <div className="pl-13 pt-8 flex justify-center">
+              {/* <div className="pl-13 pt-8 flex justify-center">
                 {fl && (
                   <GatsbyImage
                     image={fl}
@@ -413,7 +413,7 @@ const plreport = () => {
                 )}
               </div>
               <br />
-              <br />
+              <br /> */}
               <p className="text-[18px] dark:text-[#D5D5D5]">
                 Next is the{" "}
                 <span className="text-primary-pheading font-extrabold">
@@ -432,7 +432,7 @@ const plreport = () => {
                 the Interest Expenses, as well as the added Total EBITDA, as of
                 the Date range that has been set.
               </p>
-              <div className="pl-13 pt-8 flex justify-center">
+              {/* <div className="pl-13 pt-8 flex justify-center">
                 {fl && (
                   <GatsbyImage
                     image={fl}
@@ -442,7 +442,7 @@ const plreport = () => {
                 )}
               </div>
               <br />
-              <br />
+              <br /> */}
               <p className="text-[18px] dark:text-[#D5D5D5]">
                 Next is the{" "}
                 <span className="text-primary-pheading font-extrabold">
@@ -460,7 +460,7 @@ const plreport = () => {
                 (such as equipments, Inventory items, etc) as well as their
                 Amortizations, as of the Date range that has been set.
               </p>
-              <div className="pl-13 pt-8 flex justify-center">
+              {/* <div className="pl-13 pt-8 flex justify-center">
                 {fl && (
                   <GatsbyImage
                     image={fl}
@@ -470,7 +470,7 @@ const plreport = () => {
                 )}
               </div>
               <br />
-              <br />
+              <br /> */}
               <p className="text-[18px] dark:text-[#D5D5D5]">
                 Next is the{" "}
                 <span className="text-primary-pheading font-extrabold">
@@ -487,7 +487,7 @@ const plreport = () => {
                 This Table is where you can view the Interest Expenses of the
                 Farm Operations, as of the Date range that has been set.
               </p>
-              <div className="pl-13 pt-8 flex justify-center">
+              {/* <div className="pl-13 pt-8 flex justify-center">
                 {fl && (
                   <GatsbyImage
                     image={fl}
@@ -497,7 +497,7 @@ const plreport = () => {
                 )}
               </div>
               <br />
-              <br />
+              <br /> */}
               <p className="text-[18px] dark:text-[#D5D5D5]">
                 Next is the{" "}
                 <span className="text-primary-pheading font-extrabold">
@@ -515,7 +515,7 @@ const plreport = () => {
                 the Date range that has been set. The equation used to calculate
                 is shown below:
               </p>
-              <div className="pl-13 pt-8 flex justify-center">
+              {/* <div className="pl-13 pt-8 flex justify-center">
                 {fl && (
                   <GatsbyImage
                     image={fl}
@@ -525,11 +525,11 @@ const plreport = () => {
                 )}
               </div>
               <br />
-              <br />
-              <p className="text-[18px] dark:text-[#D5D5D5]">
+              <br /> */}
+              {/* <p className="text-[18px] dark:text-[#D5D5D5]">
                 Also shown below is what it looks like:
-              </p>
-              <div className="pl-13 pt-8 flex justify-center">
+              </p> */}
+              {/* <div className="pl-13 pt-8 flex justify-center">
                 {fl && (
                   <GatsbyImage
                     image={fl}
@@ -539,7 +539,7 @@ const plreport = () => {
                 )}
               </div>
               <br />
-              <br />
+              <br /> */}
               <p className="text-[18px] dark:text-[#D5D5D5]">
                 Next is the{" "}
                 <span className="text-primary-pheading font-extrabold">
@@ -558,7 +558,7 @@ const plreport = () => {
                 the Date range that has been set. The equation used to calculate
                 is shown below:
               </p>
-              <div className="pl-13 pt-8 flex justify-center">
+              {/* <div className="pl-13 pt-8 flex justify-center">
                 {fl && (
                   <GatsbyImage
                     image={fl}
@@ -568,11 +568,11 @@ const plreport = () => {
                 )}
               </div>
               <br />
-              <br />
+              <br /> */}
               <p className="text-[18px] dark:text-[#D5D5D5]">
                 Also shown below is what it looks like:
               </p>
-              <div className="pl-13 pt-8 flex justify-center">
+              {/* <div className="pl-13 pt-8 flex justify-center">
                 {fl && (
                   <GatsbyImage
                     image={fl}
@@ -582,7 +582,7 @@ const plreport = () => {
                 )}
               </div>
               <br />
-              <br />
+              <br /> */}
               <p className="text-[18px] dark:text-[#D5D5D5]">
                 Now that we have covered the sections, we are now going to cover
                 the features, starting with the{" "}
@@ -624,7 +624,7 @@ const plreport = () => {
                   </span>{" "}
                   button.
                 </li>
-                <div className="pl-13 pt-8 flex justify-center">
+                {/* <div className="pl-13 pt-8 flex justify-center">
                   {fl && (
                     <GatsbyImage
                       image={fl}
@@ -634,7 +634,7 @@ const plreport = () => {
                   )}
                 </div>
                 <br />
-                <br />
+                <br /> */}
                 <li>
                   It will then take you to the{" "}
                   <span className="text-primary-pheading font-bold">
@@ -643,9 +643,9 @@ const plreport = () => {
                   page.
                 </li>
                 <div className="pl-13 pt-8 flex justify-center">
-                  {fl && (
+                  {plre && (
                     <GatsbyImage
-                      image={fl}
+                      image={plre}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -666,7 +666,7 @@ const plreport = () => {
                   </span>{" "}
                   button.
                 </li>
-                <div className="pl-13 pt-8 flex justify-center">
+                {/* <div className="pl-13 pt-8 flex justify-center">
                   {fl && (
                     <GatsbyImage
                       image={fl}
@@ -676,13 +676,13 @@ const plreport = () => {
                   )}
                 </div>
                 <br />
-                <br />
+                <br /> */}
                 <li>
                   You will then see a window open below the field, showing a{" "}
                   <span className=" font-bold">Date Range</span> select option.
                   Set your custom date range and then close it.
                 </li>
-                <div className="pl-13 pt-8 flex justify-center">
+                {/* <div className="pl-13 pt-8 flex justify-center">
                   {fl && (
                     <GatsbyImage
                       image={fl}
@@ -692,7 +692,7 @@ const plreport = () => {
                   )}
                 </div>
                 <br />
-                <br />
+                <br /> */}
                 <li>
                   After selecting the date range, you can then see the{" "}
                   <span className="text-primary-pheading font-bold">
@@ -701,9 +701,9 @@ const plreport = () => {
                   page update with the date range you selected in mind.
                 </li>
                 <div className="pl-13 pt-8 flex justify-center">
-                  {fl && (
+                  {plre && (
                     <GatsbyImage
-                      image={fl}
+                      image={plre}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -757,9 +757,9 @@ const plreport = () => {
                   button.
                 </li>
                 <div className="pl-13 pt-8 flex justify-center">
-                  {fl && (
+                  {dplre && (
                     <GatsbyImage
-                      image={fl}
+                      image={dplre}
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -774,7 +774,7 @@ const plreport = () => {
                   </span>{" "}
                   page.
                 </li>
-                <div className="pl-13 pt-8 flex justify-center">
+                {/* <div className="pl-13 pt-8 flex justify-center">
                   {fl && (
                     <GatsbyImage
                       image={fl}
@@ -784,7 +784,7 @@ const plreport = () => {
                   )}
                 </div>
                 <br />
-                <br />
+                <br /> */}
                 <li>
                   If you wish to set a custom Date range of the report then
                   please set a different date range. (as shown in Setting a Date
@@ -803,7 +803,7 @@ const plreport = () => {
                   Once you select it, it will open a file explorer window,
                   asking where to put the file in.
                 </li>
-                <div className="pl-13 pt-8 flex justify-center">
+                {/* <div className="pl-13 pt-8 flex justify-center">
                   {fl && (
                     <GatsbyImage
                       image={fl}
@@ -813,7 +813,7 @@ const plreport = () => {
                   )}
                 </div>
                 <br />
-                <br />
+                <br /> */}
                 <ul className="list-disc">
                   <li>
                     This file contains the current view of the P&L Report page
@@ -835,7 +835,7 @@ const plreport = () => {
                   the PDF file and open it to view it as well.
                 </li>
                 <br />
-                <li>
+                {/* <li>
                   Provided below is an example of what it should look like:
                 </li>
                 <br />
@@ -849,7 +849,7 @@ const plreport = () => {
                   )}
                 </div>
                 <br />
-                <br />
+                <br /> */}
                 <li>
                   Now you know how to{" "}
                   <span className="text-primary-activelink font-bold">

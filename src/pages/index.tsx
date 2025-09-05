@@ -254,7 +254,7 @@ const IndexPage = () => {
                     <GatsbyImage
                       image={s}
                       alt="Startups illustration"
-                      className="border border-gray-300  shadow-xl  "
+                      className="border border-gray-300  shadow-xl w-[1000.58px]"
                     />
                   )}
                 </div>
@@ -498,7 +498,7 @@ const IndexPage = () => {
                     <GatsbyImage
                       image={manu}
                       alt="Startups illustration"
-                      className="border border-gray-300  shadow-xl  "
+                      className="border border-gray-300 shadow-xl h-[1100px]  "
                     />
                   )}
                 </div>
@@ -553,7 +553,7 @@ const IndexPage = () => {
                         <GatsbyImage
                           image={ferm}
                           alt="Startups illustration"
-                          className="border border-gray-300  shadow-xl  "
+                          className="border border-gray-300 shadow-xl w-[1000.58px] "
                         />
                       )}
                     </div>
@@ -639,9 +639,9 @@ const IndexPage = () => {
                 )}
               </div>
 <br/><br/> */}
-                  <p className="mb-4">
+                  {/* <p className="mb-4">
                     [Placeholder for Go back? button image]
-                  </p>
+                  </p> */}
                   <p className="mb-4">
                     The{" "}
                     <span className="text-primary-activelink font-bold">
@@ -659,9 +659,9 @@ const IndexPage = () => {
                 )}
               </div>
 <br/><br/> */}
-                  <p className="mb-4">
+                  {/* <p className="mb-4">
                     [Placeholder for Dashboard button image]
-                  </p>
+                  </p> */}
                   <li className="mb-2">
                     <span className="text-primary-activelink font-bold">
                       Tasks
@@ -690,7 +690,7 @@ const IndexPage = () => {
                         <GatsbyImage
                           image={t}
                           alt="Startups illustration"
-                          className="border border-gray-300  shadow-xl  "
+                          className="border border-gray-300  shadow-xl h-[1100px]"
                         />
                       )}
                     </div>
@@ -910,9 +910,9 @@ const IndexPage = () => {
                 )}
               </div>
 <br/><br/> */}
-                  <p className="mb-4">
+                  {/* <p className="mb-4">
                     [Placeholder for Go back? button image]
-                  </p>
+                  </p> */}
                   {/* <div className="pl-13 pt-8 flex justify-center">
                 {Menu && (
                   <GatsbyImage
@@ -1873,7 +1873,7 @@ const IndexPage = () => {
                     <GatsbyImage
                       image={land}
                       alt="Startups illustration"
-                      className="border border-gray-300  shadow-xl  "
+                      className="border border-gray-300  shadow-xl w-[1000.58px] "
                     />
                   )}
                 </div>

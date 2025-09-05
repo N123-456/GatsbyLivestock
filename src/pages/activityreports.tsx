@@ -8,12 +8,12 @@ import TextToSpeech from "../components/TextToSpeech";
 const activityreports = () => {
   const data = useStaticQuery(graphql`
     query {
-      fl: file(relativePath: { eq: "fl.png" }) {
+      crre : file(relativePath: { eq: "crre.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
       }
-      AL: file(relativePath: { eq: "AL.png" }) {
+      dcrre : file(relativePath: { eq: "dcrre.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
@@ -60,8 +60,8 @@ const activityreports = () => {
       }
     }
   `);
-  const fl = getImage(data.fl);
-  const AL = getImage(data.AL);
+  const crre = getImage(data.crre);
+  const dcrre = getImage(data.dcrre);
   const LD = getImage(data.LD);
   const LI = getImage(data.LI);
   const MB = getImage(data.MB);
@@ -163,9 +163,9 @@ const activityreports = () => {
                   </span>
                 </li>
                 <div className="pl-13 pt-8 flex justify-center">
-                  {fl && (
+                  {crre  && (
                     <GatsbyImage
-                      image={fl}
+                      image={crre }
                       alt="Startups illustration"
                       className="border border-gray-200 shadow-lg w-[1000.58px] "
                     />
@@ -203,7 +203,7 @@ const activityreports = () => {
                     </span>{" "}
                     button.
                   </li>
-                  <div className="pl-13 pt-8 flex justify-center">
+                  {/* <div className="pl-13 pt-8 flex justify-center">
                     {fl && (
                       <GatsbyImage
                         image={fl}
@@ -211,7 +211,7 @@ const activityreports = () => {
                         className="border border-gray-200 shadow-lg w-[1000.58px] "
                       />
                     )}
-                  </div><br/><br/>
+                  </div><br/><br/> */}
                   <li>
                     It will then take you to the{" "}
                     <span className="text-primary-pheading font-bold">
@@ -220,9 +220,9 @@ const activityreports = () => {
                     page.
                   </li>
                   <div className="pl-13 pt-8 flex justify-center">
-                    {fl && (
+                    {crre  && (
                       <GatsbyImage
-                        image={fl}
+                        image={crre }
                         alt="Startups illustration"
                         className="border border-gray-200 shadow-lg w-[1000.58px] "
                       />
@@ -246,7 +246,7 @@ const activityreports = () => {
                     </span>{" "}
                     button located to the left of the header of the page.
                   </li>
-                  <div className="pl-13 pt-8 flex justify-center">
+                  {/* <div className="pl-13 pt-8 flex justify-center">
                     {fl && (
                       <GatsbyImage
                         image={fl}
@@ -256,7 +256,7 @@ const activityreports = () => {
                     )}
                   </div>
                   <br />
-                  <br />
+                  <br /> */}
                   <li>
                     Now that you know how to open the{" "}
                     <span className="text-primary-pheading font-bold">
@@ -287,9 +287,9 @@ const activityreports = () => {
                 what the “Crop Activity Reports” page look like:
               </p>
               <div className="pl-13 pt-8 flex justify-center">
-                {fl && (
+                {crre  && (
                   <GatsbyImage
-                    image={fl}
+                    image={crre }
                     alt="Startups illustration"
                     className="border border-gray-200 shadow-lg w-[1000.58px] "
                   />
@@ -309,7 +309,7 @@ const activityreports = () => {
                 Tasks of the Crop that are under the Crop and Date range you
                 set.
               </p>
-              <div className="pl-13 pt-8 flex justify-center">
+              {/* <div className="pl-13 pt-8 flex justify-center">
                 {fl && (
                   <GatsbyImage
                     image={fl}
@@ -319,7 +319,7 @@ const activityreports = () => {
                 )}
               </div>
               <br />
-              <br />
+              <br /> */}
               <p className="pl-10 text-[18px] dark:text-[#D5D5D5]">
                 Next is the{" "}
                 <span className="text-primary-pheading font-bold">
@@ -336,7 +336,7 @@ const activityreports = () => {
                 Fertilizers of the Crop that are under the Crop and Date range
                 you set.
               </p>
-              <div className="pl-13 pt-8 flex justify-center">
+              {/* <div className="pl-13 pt-8 flex justify-center">
                 {fl && (
                   <GatsbyImage
                     image={fl}
@@ -346,7 +346,7 @@ const activityreports = () => {
                 )}
               </div>
               <br />
-              <br />
+              <br /> */}
               <p className="pl-10 text-[18px] dark:text-[#D5D5D5]">
                 Next is the{" "}
                 <span className="text-primary-pheading font-bold">
@@ -364,7 +364,7 @@ const activityreports = () => {
                 Pesticides of the Crop that are under the Crop and Date range
                 you set.
               </p>
-              <div className="pl-13 pt-8 flex justify-center">
+              {/* <div className="pl-13 pt-8 flex justify-center">
                 {fl && (
                   <GatsbyImage
                     image={fl}
@@ -374,7 +374,7 @@ const activityreports = () => {
                 )}
               </div>
               <br />
-              <br />
+              <br /> */}
               <p className="pl-10 text-[18px] dark:text-[#D5D5D5]">
                 Next is the{" "}
                 <span className="text-primary-pheading font-bold">
@@ -392,7 +392,7 @@ const activityreports = () => {
                 harvests of the Crop that are under the Crop and Date range you
                 set.
               </p>
-              <div className="pl-13 pt-8 flex justify-center">
+              {/* <div className="pl-13 pt-8 flex justify-center">
                 {fl && (
                   <GatsbyImage
                     image={fl}
@@ -402,7 +402,7 @@ const activityreports = () => {
                 )}
               </div>
               <br />
-              <br />
+              <br /> */}
               <p className="pl-10 text-[18px] dark:text-[#D5D5D5]">
                 Now that we have covered the sections, we are now going to cover
                 the features, starting with the{" "}
@@ -437,7 +437,7 @@ const activityreports = () => {
                     </span>{" "}
                     button.
                   </li>
-                  <div className="pl-13 pt-8 flex justify-center">
+                  {/* <div className="pl-13 pt-8 flex justify-center">
                     {fl && (
                       <GatsbyImage
                         image={fl}
@@ -447,7 +447,7 @@ const activityreports = () => {
                     )}
                   </div>
                   <br />
-                  <br />
+                  <br /> */}
                   <li>
                     It will then take you to the{" "}
                     <span className="text-primary-pheading font-bold">
@@ -456,9 +456,9 @@ const activityreports = () => {
                     page.
                   </li>
                   <div className="pl-13 pt-8 flex justify-center">
-                    {fl && (
+                    {crre  && (
                       <GatsbyImage
-                        image={fl}
+                        image={crre }
                         alt="Startups illustration"
                         className="border border-gray-200 shadow-lg w-[1000.58px] "
                       />
@@ -477,7 +477,7 @@ const activityreports = () => {
                       field, located to the top-left of the page, above the
                       “Crop Location” text.
                     </li>
-                    <div className="pl-13 pt-8 flex justify-center">
+                    {/* <div className="pl-13 pt-8 flex justify-center">
                       {fl && (
                         <GatsbyImage
                           image={fl}
@@ -487,7 +487,7 @@ const activityreports = () => {
                       )}
                     </div>
                     <br />
-                    <br />
+                    <br /> */}
                     <li>
                       It will then show a list of all the Crops that have been
                       entered into the Farm Management System. The one that has
@@ -499,9 +499,9 @@ const activityreports = () => {
                       page.
                     </li>
                     <div className="pl-13 pt-8 flex justify-center">
-                      {fl && (
+                      {crre  && (
                         <GatsbyImage
-                          image={fl}
+                          image={crre }
                           alt="Startups illustration"
                           className="border border-gray-200 shadow-lg w-[1000.58px] "
                         />
@@ -514,7 +514,7 @@ const activityreports = () => {
                       from this list. It will have the “tick mark” to the left
                       of it.
                     </li>
-                    <div className="pl-13 pt-8 flex justify-center">
+                    {/* <div className="pl-13 pt-8 flex justify-center">
                       {fl && (
                         <GatsbyImage
                           image={fl}
@@ -524,7 +524,7 @@ const activityreports = () => {
                       )}
                     </div>
                     <br />
-                    <br />
+                    <br /> */}
                     <li>
                       It will then change the{" "}
                       <span className="text-primary-pheading font-bold">
@@ -534,7 +534,7 @@ const activityreports = () => {
                       as its Activity Reports.
                     </li>
                   </ul>
-                  <div className="pl-13 pt-8 flex justify-center">
+                  {/* <div className="pl-13 pt-8 flex justify-center">
                     {fl && (
                       <GatsbyImage
                         image={fl}
@@ -544,7 +544,7 @@ const activityreports = () => {
                     )}
                   </div>
                   <br />
-                  <br />
+                  <br /> */}
                   <li>
                     That is how you can select a crop to view its Activity
                     Report! Now that we have covered how to select a crop to
@@ -582,9 +582,9 @@ const activityreports = () => {
                     button.
                   </li>
                   <div className="pl-13 pt-8 flex justify-center">
-                    {fl && (
+                    {dcrre  && (
                       <GatsbyImage
-                        image={fl}
+                        image={dcrre}
                         alt="Startups illustration"
                         className="border border-gray-200 shadow-lg w-[1000.58px] "
                       />
@@ -600,9 +600,9 @@ const activityreports = () => {
                     page.
                   </li>
                   <div className="pl-13 pt-8 flex justify-center">
-                    {fl && (
+                    {crre  && (
                       <GatsbyImage
-                        image={fl}
+                        image={crre}
                         alt="Startups illustration"
                         className="border border-gray-200 shadow-lg w-[1000.58px] "
                       />
@@ -633,7 +633,7 @@ const activityreports = () => {
                     asking where to put the file in.
                   </li>
                   <ul className="list-disc pl-10">
-                    <div className="pl-13 pt-8 flex justify-center">
+                    {/* <div className="pl-13 pt-8 flex justify-center">
                       {fl && (
                         <GatsbyImage
                           image={fl}
@@ -643,7 +643,7 @@ const activityreports = () => {
                       )}
                     </div>
                     <br />
-                    <br />
+                    <br /> */}
                     <li>
                       This file contains the current view of the Crop Activity
                       Report page and their details.
